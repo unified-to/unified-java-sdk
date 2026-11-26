@@ -6,20 +6,30 @@ package to.unified.unified_java_sdk.models.operations.async;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.GetUcContactRequest;
 import to.unified.unified_java_sdk.operations.GetUcContact;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetUcContactRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private GetUcContactRequest request;
+    private final Options.Builder optionsBuilder;
 
     public GetUcContactRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public GetUcContactRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public GetUcContactRequestBuilder request(@Nonnull GetUcContactRequest request) {
@@ -44,8 +54,9 @@ public class GetUcContactRequestBuilder {
     * @return The response from the server.
     */
     public CompletableFuture<GetUcContactResponse> call() {
+        Options options = optionsBuilder.build();
         AsyncRequestOperation<GetUcContactRequest, GetUcContactResponse> operation
-              = new GetUcContact.Async(sdkConfiguration, _headers);
+              = new GetUcContact.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

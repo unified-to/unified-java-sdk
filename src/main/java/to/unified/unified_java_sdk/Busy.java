@@ -6,11 +6,13 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.ListCalendarBusiesRequest;
 import to.unified.unified_java_sdk.models.operations.ListCalendarBusiesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListCalendarBusiesResponse;
 import to.unified.unified_java_sdk.operations.ListCalendarBusies;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Busy {
@@ -63,8 +65,27 @@ public class Busy {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListCalendarBusiesResponse listCalendarBusies(@Nonnull ListCalendarBusiesRequest request) {
+        return listCalendarBusies(request, null);
+    }
+
+    /**
+     * List all busies
+     * 
+     * <p>Returns a list of CalendarBusies. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListCalendarBusiesResponse listCalendarBusies(@Nonnull ListCalendarBusiesRequest request, @Nullable Options options) {
         RequestOperation<ListCalendarBusiesRequest, ListCalendarBusiesResponse> operation
-              = new ListCalendarBusies.Sync(sdkConfiguration, _headers);
+              = new ListCalendarBusies.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

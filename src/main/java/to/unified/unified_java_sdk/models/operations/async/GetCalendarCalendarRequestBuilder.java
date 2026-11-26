@@ -6,20 +6,30 @@ package to.unified.unified_java_sdk.models.operations.async;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.GetCalendarCalendarRequest;
 import to.unified.unified_java_sdk.operations.GetCalendarCalendar;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetCalendarCalendarRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private GetCalendarCalendarRequest request;
+    private final Options.Builder optionsBuilder;
 
     public GetCalendarCalendarRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public GetCalendarCalendarRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public GetCalendarCalendarRequestBuilder request(@Nonnull GetCalendarCalendarRequest request) {
@@ -44,8 +54,9 @@ public class GetCalendarCalendarRequestBuilder {
     * @return The response from the server.
     */
     public CompletableFuture<GetCalendarCalendarResponse> call() {
+        Options options = optionsBuilder.build();
         AsyncRequestOperation<GetCalendarCalendarRequest, GetCalendarCalendarResponse> operation
-              = new GetCalendarCalendar.Async(sdkConfiguration, _headers);
+              = new GetCalendarCalendar.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

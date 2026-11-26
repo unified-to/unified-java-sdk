@@ -6,18 +6,28 @@ package to.unified.unified_java_sdk.models.operations;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.ListComputeVolumes;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListComputeVolumesRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private ListComputeVolumesRequest request;
+    private final Options.Builder optionsBuilder;
 
     public ListComputeVolumesRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public ListComputeVolumesRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public ListComputeVolumesRequestBuilder request(@Nonnull ListComputeVolumesRequest request) {
@@ -42,8 +52,9 @@ public class ListComputeVolumesRequestBuilder {
     * @return The response from the server.
     */
     public ListComputeVolumesResponse call() {
+        Options options = optionsBuilder.build();
         RequestOperation<ListComputeVolumesRequest, ListComputeVolumesResponse> operation
-              = new ListComputeVolumes.Sync(sdkConfiguration, _headers);
+              = new ListComputeVolumes.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

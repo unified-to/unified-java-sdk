@@ -6,20 +6,30 @@ package to.unified.unified_java_sdk.models.operations.async;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.PatchCrmEventRequest;
 import to.unified.unified_java_sdk.operations.PatchCrmEvent;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class PatchCrmEventRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private PatchCrmEventRequest request;
+    private final Options.Builder optionsBuilder;
 
     public PatchCrmEventRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public PatchCrmEventRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public PatchCrmEventRequestBuilder request(@Nonnull PatchCrmEventRequest request) {
@@ -44,8 +54,9 @@ public class PatchCrmEventRequestBuilder {
     * @return The response from the server.
     */
     public CompletableFuture<PatchCrmEventResponse> call() {
+        Options options = optionsBuilder.build();
         AsyncRequestOperation<PatchCrmEventRequest, PatchCrmEventResponse> operation
-              = new PatchCrmEvent.Async(sdkConfiguration, _headers);
+              = new PatchCrmEvent.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

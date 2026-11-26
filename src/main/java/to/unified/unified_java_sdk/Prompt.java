@@ -6,11 +6,13 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateGenaiPromptRequest;
 import to.unified.unified_java_sdk.models.operations.CreateGenaiPromptRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateGenaiPromptResponse;
 import to.unified.unified_java_sdk.operations.CreateGenaiPrompt;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Prompt {
@@ -55,8 +57,23 @@ public class Prompt {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateGenaiPromptResponse createGenaiPrompt(@Nonnull CreateGenaiPromptRequest request) {
+        return createGenaiPrompt(request, null);
+    }
+
+    /**
+     * Create a prompt
+     * 
+     * <p>Creates a GenaiPrompt. Provide the unified GenaiPrompt fields in the request body; they are mapped
+     * to the provider's API. Returns the created GenaiPrompt.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateGenaiPromptResponse createGenaiPrompt(@Nonnull CreateGenaiPromptRequest request, @Nullable Options options) {
         RequestOperation<CreateGenaiPromptRequest, CreateGenaiPromptResponse> operation
-              = new CreateGenaiPrompt.Sync(sdkConfiguration, _headers);
+              = new CreateGenaiPrompt.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

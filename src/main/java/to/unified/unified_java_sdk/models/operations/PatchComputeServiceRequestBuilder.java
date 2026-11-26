@@ -6,18 +6,28 @@ package to.unified.unified_java_sdk.models.operations;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.PatchComputeService;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class PatchComputeServiceRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private PatchComputeServiceRequest request;
+    private final Options.Builder optionsBuilder;
 
     public PatchComputeServiceRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public PatchComputeServiceRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public PatchComputeServiceRequestBuilder request(@Nonnull PatchComputeServiceRequest request) {
@@ -42,8 +52,9 @@ public class PatchComputeServiceRequestBuilder {
     * @return The response from the server.
     */
     public PatchComputeServiceResponse call() {
+        Options options = optionsBuilder.build();
         RequestOperation<PatchComputeServiceRequest, PatchComputeServiceResponse> operation
-              = new PatchComputeService.Sync(sdkConfiguration, _headers);
+              = new PatchComputeService.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

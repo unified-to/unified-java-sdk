@@ -6,20 +6,30 @@ package to.unified.unified_java_sdk.models.operations.async;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.ListAccountingCashflowsRequest;
 import to.unified.unified_java_sdk.operations.ListAccountingCashflows;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListAccountingCashflowsRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private ListAccountingCashflowsRequest request;
+    private final Options.Builder optionsBuilder;
 
     public ListAccountingCashflowsRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public ListAccountingCashflowsRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public ListAccountingCashflowsRequestBuilder request(@Nonnull ListAccountingCashflowsRequest request) {
@@ -44,8 +54,9 @@ public class ListAccountingCashflowsRequestBuilder {
     * @return The response from the server.
     */
     public CompletableFuture<ListAccountingCashflowsResponse> call() {
+        Options options = optionsBuilder.build();
         AsyncRequestOperation<ListAccountingCashflowsRequest, ListAccountingCashflowsResponse> operation
-              = new ListAccountingCashflows.Async(sdkConfiguration, _headers);
+              = new ListAccountingCashflows.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

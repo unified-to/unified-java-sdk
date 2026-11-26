@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreatePlmBomlineRequest;
 import to.unified.unified_java_sdk.models.operations.CreatePlmChangeRequest;
@@ -104,6 +105,7 @@ import to.unified.unified_java_sdk.operations.UpdatePlmChange;
 import to.unified.unified_java_sdk.operations.UpdatePlmDocument;
 import to.unified.unified_java_sdk.operations.UpdatePlmPart;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncPlm {
@@ -148,8 +150,22 @@ public class AsyncPlm {
      * @return {@code CompletableFuture<CreatePlmBomlineResponse>} - The async response
      */
     public CompletableFuture<CreatePlmBomlineResponse> createPlmBomline(@Nonnull CreatePlmBomlineRequest request) {
+        return createPlmBomline(request, null);
+    }
+
+    /**
+     * Create a bomline
+     * 
+     * <p>Creates a PlmBomline. Provide the unified PlmBomline fields in the request body; they are mapped to
+     * the provider's API. Returns the created PlmBomline.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreatePlmBomlineResponse>} - The async response
+     */
+    public CompletableFuture<CreatePlmBomlineResponse> createPlmBomline(@Nonnull CreatePlmBomlineRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreatePlmBomlineRequest, CreatePlmBomlineResponse> operation
-              = new CreatePlmBomline.Async(sdkConfiguration, _headers);
+              = new CreatePlmBomline.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -177,8 +193,22 @@ public class AsyncPlm {
      * @return {@code CompletableFuture<CreatePlmChangeResponse>} - The async response
      */
     public CompletableFuture<CreatePlmChangeResponse> createPlmChange(@Nonnull CreatePlmChangeRequest request) {
+        return createPlmChange(request, null);
+    }
+
+    /**
+     * Create a change
+     * 
+     * <p>Creates a PlmChange. Provide the unified PlmChange fields in the request body; they are mapped to
+     * the provider's API. Returns the created PlmChange.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreatePlmChangeResponse>} - The async response
+     */
+    public CompletableFuture<CreatePlmChangeResponse> createPlmChange(@Nonnull CreatePlmChangeRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreatePlmChangeRequest, CreatePlmChangeResponse> operation
-              = new CreatePlmChange.Async(sdkConfiguration, _headers);
+              = new CreatePlmChange.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -206,8 +236,22 @@ public class AsyncPlm {
      * @return {@code CompletableFuture<CreatePlmDocumentResponse>} - The async response
      */
     public CompletableFuture<CreatePlmDocumentResponse> createPlmDocument(@Nonnull CreatePlmDocumentRequest request) {
+        return createPlmDocument(request, null);
+    }
+
+    /**
+     * Create a document
+     * 
+     * <p>Creates a PlmDocument. Provide the unified PlmDocument fields in the request body; they are mapped
+     * to the provider's API. Returns the created PlmDocument.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreatePlmDocumentResponse>} - The async response
+     */
+    public CompletableFuture<CreatePlmDocumentResponse> createPlmDocument(@Nonnull CreatePlmDocumentRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreatePlmDocumentRequest, CreatePlmDocumentResponse> operation
-              = new CreatePlmDocument.Async(sdkConfiguration, _headers);
+              = new CreatePlmDocument.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -235,8 +279,22 @@ public class AsyncPlm {
      * @return {@code CompletableFuture<CreatePlmPartResponse>} - The async response
      */
     public CompletableFuture<CreatePlmPartResponse> createPlmPart(@Nonnull CreatePlmPartRequest request) {
+        return createPlmPart(request, null);
+    }
+
+    /**
+     * Create a part
+     * 
+     * <p>Creates a PlmPart. Provide the unified PlmPart fields in the request body; they are mapped to the
+     * provider's API. Returns the created PlmPart.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreatePlmPartResponse>} - The async response
+     */
+    public CompletableFuture<CreatePlmPartResponse> createPlmPart(@Nonnull CreatePlmPartRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreatePlmPartRequest, CreatePlmPartResponse> operation
-              = new CreatePlmPart.Async(sdkConfiguration, _headers);
+              = new CreatePlmPart.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -264,8 +322,22 @@ public class AsyncPlm {
      * @return {@code CompletableFuture<GetPlmBomlineResponse>} - The async response
      */
     public CompletableFuture<GetPlmBomlineResponse> getPlmBomline(@Nonnull GetPlmBomlineRequest request) {
+        return getPlmBomline(request, null);
+    }
+
+    /**
+     * Retrieve a bomline
+     * 
+     * <p>Retrieves a single PlmBomline by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetPlmBomlineResponse>} - The async response
+     */
+    public CompletableFuture<GetPlmBomlineResponse> getPlmBomline(@Nonnull GetPlmBomlineRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetPlmBomlineRequest, GetPlmBomlineResponse> operation
-              = new GetPlmBomline.Async(sdkConfiguration, _headers);
+              = new GetPlmBomline.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -293,8 +365,22 @@ public class AsyncPlm {
      * @return {@code CompletableFuture<GetPlmCategoryResponse>} - The async response
      */
     public CompletableFuture<GetPlmCategoryResponse> getPlmCategory(@Nonnull GetPlmCategoryRequest request) {
+        return getPlmCategory(request, null);
+    }
+
+    /**
+     * Retrieve a category
+     * 
+     * <p>Retrieves a single PlmCategory by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetPlmCategoryResponse>} - The async response
+     */
+    public CompletableFuture<GetPlmCategoryResponse> getPlmCategory(@Nonnull GetPlmCategoryRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetPlmCategoryRequest, GetPlmCategoryResponse> operation
-              = new GetPlmCategory.Async(sdkConfiguration, _headers);
+              = new GetPlmCategory.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -322,8 +408,22 @@ public class AsyncPlm {
      * @return {@code CompletableFuture<GetPlmChangeResponse>} - The async response
      */
     public CompletableFuture<GetPlmChangeResponse> getPlmChange(@Nonnull GetPlmChangeRequest request) {
+        return getPlmChange(request, null);
+    }
+
+    /**
+     * Retrieve a change
+     * 
+     * <p>Retrieves a single PlmChange by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetPlmChangeResponse>} - The async response
+     */
+    public CompletableFuture<GetPlmChangeResponse> getPlmChange(@Nonnull GetPlmChangeRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetPlmChangeRequest, GetPlmChangeResponse> operation
-              = new GetPlmChange.Async(sdkConfiguration, _headers);
+              = new GetPlmChange.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -351,8 +451,22 @@ public class AsyncPlm {
      * @return {@code CompletableFuture<GetPlmDocumentResponse>} - The async response
      */
     public CompletableFuture<GetPlmDocumentResponse> getPlmDocument(@Nonnull GetPlmDocumentRequest request) {
+        return getPlmDocument(request, null);
+    }
+
+    /**
+     * Retrieve a document
+     * 
+     * <p>Retrieves a single PlmDocument by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetPlmDocumentResponse>} - The async response
+     */
+    public CompletableFuture<GetPlmDocumentResponse> getPlmDocument(@Nonnull GetPlmDocumentRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetPlmDocumentRequest, GetPlmDocumentResponse> operation
-              = new GetPlmDocument.Async(sdkConfiguration, _headers);
+              = new GetPlmDocument.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -380,8 +494,22 @@ public class AsyncPlm {
      * @return {@code CompletableFuture<GetPlmPartResponse>} - The async response
      */
     public CompletableFuture<GetPlmPartResponse> getPlmPart(@Nonnull GetPlmPartRequest request) {
+        return getPlmPart(request, null);
+    }
+
+    /**
+     * Retrieve a part
+     * 
+     * <p>Retrieves a single PlmPart by its `id`. Obtain `id` values from the corresponding list endpoint. Use
+     * `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetPlmPartResponse>} - The async response
+     */
+    public CompletableFuture<GetPlmPartResponse> getPlmPart(@Nonnull GetPlmPartRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetPlmPartRequest, GetPlmPartResponse> operation
-              = new GetPlmPart.Async(sdkConfiguration, _headers);
+              = new GetPlmPart.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -417,8 +545,26 @@ public class AsyncPlm {
      * @return {@code CompletableFuture<ListPlmBomlinesResponse>} - The async response
      */
     public CompletableFuture<ListPlmBomlinesResponse> listPlmBomlines(@Nonnull ListPlmBomlinesRequest request) {
+        return listPlmBomlines(request, null);
+    }
+
+    /**
+     * List all bomlines
+     * 
+     * <p>Returns a list of PlmBomlines. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListPlmBomlinesResponse>} - The async response
+     */
+    public CompletableFuture<ListPlmBomlinesResponse> listPlmBomlines(@Nonnull ListPlmBomlinesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListPlmBomlinesRequest, ListPlmBomlinesResponse> operation
-              = new ListPlmBomlines.Async(sdkConfiguration, _headers);
+              = new ListPlmBomlines.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -454,8 +600,26 @@ public class AsyncPlm {
      * @return {@code CompletableFuture<ListPlmCategoriesResponse>} - The async response
      */
     public CompletableFuture<ListPlmCategoriesResponse> listPlmCategories(@Nonnull ListPlmCategoriesRequest request) {
+        return listPlmCategories(request, null);
+    }
+
+    /**
+     * List all categories
+     * 
+     * <p>Returns a list of PlmCategories. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListPlmCategoriesResponse>} - The async response
+     */
+    public CompletableFuture<ListPlmCategoriesResponse> listPlmCategories(@Nonnull ListPlmCategoriesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListPlmCategoriesRequest, ListPlmCategoriesResponse> operation
-              = new ListPlmCategories.Async(sdkConfiguration, _headers);
+              = new ListPlmCategories.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -491,8 +655,26 @@ public class AsyncPlm {
      * @return {@code CompletableFuture<ListPlmChangesResponse>} - The async response
      */
     public CompletableFuture<ListPlmChangesResponse> listPlmChanges(@Nonnull ListPlmChangesRequest request) {
+        return listPlmChanges(request, null);
+    }
+
+    /**
+     * List all changes
+     * 
+     * <p>Returns a list of PlmChanges. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListPlmChangesResponse>} - The async response
+     */
+    public CompletableFuture<ListPlmChangesResponse> listPlmChanges(@Nonnull ListPlmChangesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListPlmChangesRequest, ListPlmChangesResponse> operation
-              = new ListPlmChanges.Async(sdkConfiguration, _headers);
+              = new ListPlmChanges.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -528,8 +710,26 @@ public class AsyncPlm {
      * @return {@code CompletableFuture<ListPlmDocumentsResponse>} - The async response
      */
     public CompletableFuture<ListPlmDocumentsResponse> listPlmDocuments(@Nonnull ListPlmDocumentsRequest request) {
+        return listPlmDocuments(request, null);
+    }
+
+    /**
+     * List all documents
+     * 
+     * <p>Returns a list of PlmDocuments. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListPlmDocumentsResponse>} - The async response
+     */
+    public CompletableFuture<ListPlmDocumentsResponse> listPlmDocuments(@Nonnull ListPlmDocumentsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListPlmDocumentsRequest, ListPlmDocumentsResponse> operation
-              = new ListPlmDocuments.Async(sdkConfiguration, _headers);
+              = new ListPlmDocuments.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -565,8 +765,26 @@ public class AsyncPlm {
      * @return {@code CompletableFuture<ListPlmPartsResponse>} - The async response
      */
     public CompletableFuture<ListPlmPartsResponse> listPlmParts(@Nonnull ListPlmPartsRequest request) {
+        return listPlmParts(request, null);
+    }
+
+    /**
+     * List all parts
+     * 
+     * <p>Returns a list of PlmParts. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListPlmPartsResponse>} - The async response
+     */
+    public CompletableFuture<ListPlmPartsResponse> listPlmParts(@Nonnull ListPlmPartsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListPlmPartsRequest, ListPlmPartsResponse> operation
-              = new ListPlmParts.Async(sdkConfiguration, _headers);
+              = new ListPlmParts.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -594,8 +812,22 @@ public class AsyncPlm {
      * @return {@code CompletableFuture<PatchPlmBomlineResponse>} - The async response
      */
     public CompletableFuture<PatchPlmBomlineResponse> patchPlmBomline(@Nonnull PatchPlmBomlineRequest request) {
+        return patchPlmBomline(request, null);
+    }
+
+    /**
+     * Update a bomline
+     * 
+     * <p>Updates the PlmBomline identified by `id`. Provide the unified PlmBomline fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchPlmBomlineResponse>} - The async response
+     */
+    public CompletableFuture<PatchPlmBomlineResponse> patchPlmBomline(@Nonnull PatchPlmBomlineRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchPlmBomlineRequest, PatchPlmBomlineResponse> operation
-              = new PatchPlmBomline.Async(sdkConfiguration, _headers);
+              = new PatchPlmBomline.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -623,8 +855,22 @@ public class AsyncPlm {
      * @return {@code CompletableFuture<PatchPlmChangeResponse>} - The async response
      */
     public CompletableFuture<PatchPlmChangeResponse> patchPlmChange(@Nonnull PatchPlmChangeRequest request) {
+        return patchPlmChange(request, null);
+    }
+
+    /**
+     * Update a change
+     * 
+     * <p>Updates the PlmChange identified by `id`. Provide the unified PlmChange fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchPlmChangeResponse>} - The async response
+     */
+    public CompletableFuture<PatchPlmChangeResponse> patchPlmChange(@Nonnull PatchPlmChangeRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchPlmChangeRequest, PatchPlmChangeResponse> operation
-              = new PatchPlmChange.Async(sdkConfiguration, _headers);
+              = new PatchPlmChange.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -652,8 +898,22 @@ public class AsyncPlm {
      * @return {@code CompletableFuture<PatchPlmDocumentResponse>} - The async response
      */
     public CompletableFuture<PatchPlmDocumentResponse> patchPlmDocument(@Nonnull PatchPlmDocumentRequest request) {
+        return patchPlmDocument(request, null);
+    }
+
+    /**
+     * Update a document
+     * 
+     * <p>Updates the PlmDocument identified by `id`. Provide the unified PlmDocument fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchPlmDocumentResponse>} - The async response
+     */
+    public CompletableFuture<PatchPlmDocumentResponse> patchPlmDocument(@Nonnull PatchPlmDocumentRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchPlmDocumentRequest, PatchPlmDocumentResponse> operation
-              = new PatchPlmDocument.Async(sdkConfiguration, _headers);
+              = new PatchPlmDocument.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -681,8 +941,22 @@ public class AsyncPlm {
      * @return {@code CompletableFuture<PatchPlmPartResponse>} - The async response
      */
     public CompletableFuture<PatchPlmPartResponse> patchPlmPart(@Nonnull PatchPlmPartRequest request) {
+        return patchPlmPart(request, null);
+    }
+
+    /**
+     * Update a part
+     * 
+     * <p>Updates the PlmPart identified by `id`. Provide the unified PlmPart fields to change in the request
+     * body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchPlmPartResponse>} - The async response
+     */
+    public CompletableFuture<PatchPlmPartResponse> patchPlmPart(@Nonnull PatchPlmPartRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchPlmPartRequest, PatchPlmPartResponse> operation
-              = new PatchPlmPart.Async(sdkConfiguration, _headers);
+              = new PatchPlmPart.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -708,8 +982,21 @@ public class AsyncPlm {
      * @return {@code CompletableFuture<RemovePlmBomlineResponse>} - The async response
      */
     public CompletableFuture<RemovePlmBomlineResponse> removePlmBomline(@Nonnull RemovePlmBomlineRequest request) {
+        return removePlmBomline(request, null);
+    }
+
+    /**
+     * Remove a bomline
+     * 
+     * <p>Deletes the PlmBomline identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemovePlmBomlineResponse>} - The async response
+     */
+    public CompletableFuture<RemovePlmBomlineResponse> removePlmBomline(@Nonnull RemovePlmBomlineRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemovePlmBomlineRequest, RemovePlmBomlineResponse> operation
-              = new RemovePlmBomline.Async(sdkConfiguration, _headers);
+              = new RemovePlmBomline.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -735,8 +1022,21 @@ public class AsyncPlm {
      * @return {@code CompletableFuture<RemovePlmPartResponse>} - The async response
      */
     public CompletableFuture<RemovePlmPartResponse> removePlmPart(@Nonnull RemovePlmPartRequest request) {
+        return removePlmPart(request, null);
+    }
+
+    /**
+     * Remove a part
+     * 
+     * <p>Deletes the PlmPart identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemovePlmPartResponse>} - The async response
+     */
+    public CompletableFuture<RemovePlmPartResponse> removePlmPart(@Nonnull RemovePlmPartRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemovePlmPartRequest, RemovePlmPartResponse> operation
-              = new RemovePlmPart.Async(sdkConfiguration, _headers);
+              = new RemovePlmPart.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -764,8 +1064,22 @@ public class AsyncPlm {
      * @return {@code CompletableFuture<UpdatePlmBomlineResponse>} - The async response
      */
     public CompletableFuture<UpdatePlmBomlineResponse> updatePlmBomline(@Nonnull UpdatePlmBomlineRequest request) {
+        return updatePlmBomline(request, null);
+    }
+
+    /**
+     * Update a bomline
+     * 
+     * <p>Updates the PlmBomline identified by `id`. Provide the unified PlmBomline fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdatePlmBomlineResponse>} - The async response
+     */
+    public CompletableFuture<UpdatePlmBomlineResponse> updatePlmBomline(@Nonnull UpdatePlmBomlineRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdatePlmBomlineRequest, UpdatePlmBomlineResponse> operation
-              = new UpdatePlmBomline.Async(sdkConfiguration, _headers);
+              = new UpdatePlmBomline.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -793,8 +1107,22 @@ public class AsyncPlm {
      * @return {@code CompletableFuture<UpdatePlmChangeResponse>} - The async response
      */
     public CompletableFuture<UpdatePlmChangeResponse> updatePlmChange(@Nonnull UpdatePlmChangeRequest request) {
+        return updatePlmChange(request, null);
+    }
+
+    /**
+     * Update a change
+     * 
+     * <p>Updates the PlmChange identified by `id`. Provide the unified PlmChange fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdatePlmChangeResponse>} - The async response
+     */
+    public CompletableFuture<UpdatePlmChangeResponse> updatePlmChange(@Nonnull UpdatePlmChangeRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdatePlmChangeRequest, UpdatePlmChangeResponse> operation
-              = new UpdatePlmChange.Async(sdkConfiguration, _headers);
+              = new UpdatePlmChange.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -822,8 +1150,22 @@ public class AsyncPlm {
      * @return {@code CompletableFuture<UpdatePlmDocumentResponse>} - The async response
      */
     public CompletableFuture<UpdatePlmDocumentResponse> updatePlmDocument(@Nonnull UpdatePlmDocumentRequest request) {
+        return updatePlmDocument(request, null);
+    }
+
+    /**
+     * Update a document
+     * 
+     * <p>Updates the PlmDocument identified by `id`. Provide the unified PlmDocument fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdatePlmDocumentResponse>} - The async response
+     */
+    public CompletableFuture<UpdatePlmDocumentResponse> updatePlmDocument(@Nonnull UpdatePlmDocumentRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdatePlmDocumentRequest, UpdatePlmDocumentResponse> operation
-              = new UpdatePlmDocument.Async(sdkConfiguration, _headers);
+              = new UpdatePlmDocument.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -851,8 +1193,22 @@ public class AsyncPlm {
      * @return {@code CompletableFuture<UpdatePlmPartResponse>} - The async response
      */
     public CompletableFuture<UpdatePlmPartResponse> updatePlmPart(@Nonnull UpdatePlmPartRequest request) {
+        return updatePlmPart(request, null);
+    }
+
+    /**
+     * Update a part
+     * 
+     * <p>Updates the PlmPart identified by `id`. Provide the unified PlmPart fields to change in the request
+     * body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdatePlmPartResponse>} - The async response
+     */
+    public CompletableFuture<UpdatePlmPartResponse> updatePlmPart(@Nonnull UpdatePlmPartRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdatePlmPartRequest, UpdatePlmPartResponse> operation
-              = new UpdatePlmPart.Async(sdkConfiguration, _headers);
+              = new UpdatePlmPart.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

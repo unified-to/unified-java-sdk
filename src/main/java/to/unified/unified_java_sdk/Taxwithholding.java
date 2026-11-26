@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateHrisTaxwithholdingRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisTaxwithholdingRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateHrisTaxwithholdingResponse;
@@ -31,6 +32,7 @@ import to.unified.unified_java_sdk.operations.PatchHrisTaxwithholding;
 import to.unified.unified_java_sdk.operations.RemoveHrisTaxwithholding;
 import to.unified.unified_java_sdk.operations.UpdateHrisTaxwithholding;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Taxwithholding {
@@ -75,8 +77,23 @@ public class Taxwithholding {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateHrisTaxwithholdingResponse createHrisTaxwithholding(@Nonnull CreateHrisTaxwithholdingRequest request) {
+        return createHrisTaxwithholding(request, null);
+    }
+
+    /**
+     * Create a taxwithholding
+     * 
+     * <p>Creates a HrisTaxwithholding. Provide the unified HrisTaxwithholding fields in the request body;
+     * they are mapped to the provider's API. Returns the created HrisTaxwithholding.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateHrisTaxwithholdingResponse createHrisTaxwithholding(@Nonnull CreateHrisTaxwithholdingRequest request, @Nullable Options options) {
         RequestOperation<CreateHrisTaxwithholdingRequest, CreateHrisTaxwithholdingResponse> operation
-              = new CreateHrisTaxwithholding.Sync(sdkConfiguration, _headers);
+              = new CreateHrisTaxwithholding.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -103,8 +120,23 @@ public class Taxwithholding {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetHrisTaxwithholdingResponse getHrisTaxwithholding(@Nonnull GetHrisTaxwithholdingRequest request) {
+        return getHrisTaxwithholding(request, null);
+    }
+
+    /**
+     * Retrieve a taxwithholding
+     * 
+     * <p>Retrieves a single HrisTaxwithholding by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetHrisTaxwithholdingResponse getHrisTaxwithholding(@Nonnull GetHrisTaxwithholdingRequest request, @Nullable Options options) {
         RequestOperation<GetHrisTaxwithholdingRequest, GetHrisTaxwithholdingResponse> operation
-              = new GetHrisTaxwithholding.Sync(sdkConfiguration, _headers);
+              = new GetHrisTaxwithholding.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -139,8 +171,27 @@ public class Taxwithholding {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListHrisTaxwithholdingsResponse listHrisTaxwithholdings(@Nonnull ListHrisTaxwithholdingsRequest request) {
+        return listHrisTaxwithholdings(request, null);
+    }
+
+    /**
+     * List all taxwithholdings
+     * 
+     * <p>Returns a list of HrisTaxwithholdings. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListHrisTaxwithholdingsResponse listHrisTaxwithholdings(@Nonnull ListHrisTaxwithholdingsRequest request, @Nullable Options options) {
         RequestOperation<ListHrisTaxwithholdingsRequest, ListHrisTaxwithholdingsResponse> operation
-              = new ListHrisTaxwithholdings.Sync(sdkConfiguration, _headers);
+              = new ListHrisTaxwithholdings.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +218,23 @@ public class Taxwithholding {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchHrisTaxwithholdingResponse patchHrisTaxwithholding(@Nonnull PatchHrisTaxwithholdingRequest request) {
+        return patchHrisTaxwithholding(request, null);
+    }
+
+    /**
+     * Update a taxwithholding
+     * 
+     * <p>Updates the HrisTaxwithholding identified by `id`. Provide the unified HrisTaxwithholding fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchHrisTaxwithholdingResponse patchHrisTaxwithholding(@Nonnull PatchHrisTaxwithholdingRequest request, @Nullable Options options) {
         RequestOperation<PatchHrisTaxwithholdingRequest, PatchHrisTaxwithholdingResponse> operation
-              = new PatchHrisTaxwithholding.Sync(sdkConfiguration, _headers);
+              = new PatchHrisTaxwithholding.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -193,8 +259,22 @@ public class Taxwithholding {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveHrisTaxwithholdingResponse removeHrisTaxwithholding(@Nonnull RemoveHrisTaxwithholdingRequest request) {
+        return removeHrisTaxwithholding(request, null);
+    }
+
+    /**
+     * Remove a taxwithholding
+     * 
+     * <p>Deletes the HrisTaxwithholding identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveHrisTaxwithholdingResponse removeHrisTaxwithholding(@Nonnull RemoveHrisTaxwithholdingRequest request, @Nullable Options options) {
         RequestOperation<RemoveHrisTaxwithholdingRequest, RemoveHrisTaxwithholdingResponse> operation
-              = new RemoveHrisTaxwithholding.Sync(sdkConfiguration, _headers);
+              = new RemoveHrisTaxwithholding.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -221,8 +301,23 @@ public class Taxwithholding {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateHrisTaxwithholdingResponse updateHrisTaxwithholding(@Nonnull UpdateHrisTaxwithholdingRequest request) {
+        return updateHrisTaxwithholding(request, null);
+    }
+
+    /**
+     * Update a taxwithholding
+     * 
+     * <p>Updates the HrisTaxwithholding identified by `id`. Provide the unified HrisTaxwithholding fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateHrisTaxwithholdingResponse updateHrisTaxwithholding(@Nonnull UpdateHrisTaxwithholdingRequest request, @Nullable Options options) {
         RequestOperation<UpdateHrisTaxwithholdingRequest, UpdateHrisTaxwithholdingResponse> operation
-              = new UpdateHrisTaxwithholding.Sync(sdkConfiguration, _headers);
+              = new UpdateHrisTaxwithholding.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

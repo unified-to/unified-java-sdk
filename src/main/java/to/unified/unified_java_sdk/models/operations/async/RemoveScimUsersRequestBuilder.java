@@ -6,20 +6,30 @@ package to.unified.unified_java_sdk.models.operations.async;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.RemoveScimUsersRequest;
 import to.unified.unified_java_sdk.operations.RemoveScimUsers;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveScimUsersRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private RemoveScimUsersRequest request;
+    private final Options.Builder optionsBuilder;
 
     public RemoveScimUsersRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public RemoveScimUsersRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public RemoveScimUsersRequestBuilder request(@Nonnull RemoveScimUsersRequest request) {
@@ -44,8 +54,9 @@ public class RemoveScimUsersRequestBuilder {
     * @return The response from the server.
     */
     public CompletableFuture<RemoveScimUsersResponse> call() {
+        Options options = optionsBuilder.build();
         AsyncRequestOperation<RemoveScimUsersRequest, RemoveScimUsersResponse> operation
-              = new RemoveScimUsers.Async(sdkConfiguration, _headers);
+              = new RemoveScimUsers.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingCategoryRequest;
 import to.unified.unified_java_sdk.models.operations.CreateTicketingCategoryRequest;
@@ -64,6 +65,7 @@ import to.unified.unified_java_sdk.operations.RemoveTicketingCategory;
 import to.unified.unified_java_sdk.operations.UpdateAccountingCategory;
 import to.unified.unified_java_sdk.operations.UpdateTicketingCategory;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncCategory {
@@ -108,8 +110,22 @@ public class AsyncCategory {
      * @return {@code CompletableFuture<CreateAccountingCategoryResponse>} - The async response
      */
     public CompletableFuture<CreateAccountingCategoryResponse> createAccountingCategory(@Nonnull CreateAccountingCategoryRequest request) {
+        return createAccountingCategory(request, null);
+    }
+
+    /**
+     * Create a category
+     * 
+     * <p>Creates a AccountingCategory. Provide the unified AccountingCategory fields in the request body;
+     * they are mapped to the provider's API. Returns the created AccountingCategory.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateAccountingCategoryResponse>} - The async response
+     */
+    public CompletableFuture<CreateAccountingCategoryResponse> createAccountingCategory(@Nonnull CreateAccountingCategoryRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateAccountingCategoryRequest, CreateAccountingCategoryResponse> operation
-              = new CreateAccountingCategory.Async(sdkConfiguration, _headers);
+              = new CreateAccountingCategory.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -137,8 +153,22 @@ public class AsyncCategory {
      * @return {@code CompletableFuture<CreateTicketingCategoryResponse>} - The async response
      */
     public CompletableFuture<CreateTicketingCategoryResponse> createTicketingCategory(@Nonnull CreateTicketingCategoryRequest request) {
+        return createTicketingCategory(request, null);
+    }
+
+    /**
+     * Create a category
+     * 
+     * <p>Creates a TicketingCategory. Provide the unified TicketingCategory fields in the request body; they
+     * are mapped to the provider's API. Returns the created TicketingCategory.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateTicketingCategoryResponse>} - The async response
+     */
+    public CompletableFuture<CreateTicketingCategoryResponse> createTicketingCategory(@Nonnull CreateTicketingCategoryRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateTicketingCategoryRequest, CreateTicketingCategoryResponse> operation
-              = new CreateTicketingCategory.Async(sdkConfiguration, _headers);
+              = new CreateTicketingCategory.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -166,8 +196,22 @@ public class AsyncCategory {
      * @return {@code CompletableFuture<GetAccountingCategoryResponse>} - The async response
      */
     public CompletableFuture<GetAccountingCategoryResponse> getAccountingCategory(@Nonnull GetAccountingCategoryRequest request) {
+        return getAccountingCategory(request, null);
+    }
+
+    /**
+     * Retrieve a category
+     * 
+     * <p>Retrieves a single AccountingCategory by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetAccountingCategoryResponse>} - The async response
+     */
+    public CompletableFuture<GetAccountingCategoryResponse> getAccountingCategory(@Nonnull GetAccountingCategoryRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetAccountingCategoryRequest, GetAccountingCategoryResponse> operation
-              = new GetAccountingCategory.Async(sdkConfiguration, _headers);
+              = new GetAccountingCategory.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -195,8 +239,22 @@ public class AsyncCategory {
      * @return {@code CompletableFuture<GetPlmCategoryResponse>} - The async response
      */
     public CompletableFuture<GetPlmCategoryResponse> getPlmCategory(@Nonnull GetPlmCategoryRequest request) {
+        return getPlmCategory(request, null);
+    }
+
+    /**
+     * Retrieve a category
+     * 
+     * <p>Retrieves a single PlmCategory by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetPlmCategoryResponse>} - The async response
+     */
+    public CompletableFuture<GetPlmCategoryResponse> getPlmCategory(@Nonnull GetPlmCategoryRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetPlmCategoryRequest, GetPlmCategoryResponse> operation
-              = new GetPlmCategory.Async(sdkConfiguration, _headers);
+              = new GetPlmCategory.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -224,8 +282,22 @@ public class AsyncCategory {
      * @return {@code CompletableFuture<GetTicketingCategoryResponse>} - The async response
      */
     public CompletableFuture<GetTicketingCategoryResponse> getTicketingCategory(@Nonnull GetTicketingCategoryRequest request) {
+        return getTicketingCategory(request, null);
+    }
+
+    /**
+     * Retrieve a category
+     * 
+     * <p>Retrieves a single TicketingCategory by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetTicketingCategoryResponse>} - The async response
+     */
+    public CompletableFuture<GetTicketingCategoryResponse> getTicketingCategory(@Nonnull GetTicketingCategoryRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetTicketingCategoryRequest, GetTicketingCategoryResponse> operation
-              = new GetTicketingCategory.Async(sdkConfiguration, _headers);
+              = new GetTicketingCategory.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -261,8 +333,26 @@ public class AsyncCategory {
      * @return {@code CompletableFuture<ListAccountingCategoriesResponse>} - The async response
      */
     public CompletableFuture<ListAccountingCategoriesResponse> listAccountingCategories(@Nonnull ListAccountingCategoriesRequest request) {
+        return listAccountingCategories(request, null);
+    }
+
+    /**
+     * List all categories
+     * 
+     * <p>Returns a list of AccountingCategories. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListAccountingCategoriesResponse>} - The async response
+     */
+    public CompletableFuture<ListAccountingCategoriesResponse> listAccountingCategories(@Nonnull ListAccountingCategoriesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListAccountingCategoriesRequest, ListAccountingCategoriesResponse> operation
-              = new ListAccountingCategories.Async(sdkConfiguration, _headers);
+              = new ListAccountingCategories.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -298,8 +388,26 @@ public class AsyncCategory {
      * @return {@code CompletableFuture<ListPlmCategoriesResponse>} - The async response
      */
     public CompletableFuture<ListPlmCategoriesResponse> listPlmCategories(@Nonnull ListPlmCategoriesRequest request) {
+        return listPlmCategories(request, null);
+    }
+
+    /**
+     * List all categories
+     * 
+     * <p>Returns a list of PlmCategories. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListPlmCategoriesResponse>} - The async response
+     */
+    public CompletableFuture<ListPlmCategoriesResponse> listPlmCategories(@Nonnull ListPlmCategoriesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListPlmCategoriesRequest, ListPlmCategoriesResponse> operation
-              = new ListPlmCategories.Async(sdkConfiguration, _headers);
+              = new ListPlmCategories.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -335,8 +443,26 @@ public class AsyncCategory {
      * @return {@code CompletableFuture<ListTicketingCategoriesResponse>} - The async response
      */
     public CompletableFuture<ListTicketingCategoriesResponse> listTicketingCategories(@Nonnull ListTicketingCategoriesRequest request) {
+        return listTicketingCategories(request, null);
+    }
+
+    /**
+     * List all categories
+     * 
+     * <p>Returns a list of TicketingCategories. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListTicketingCategoriesResponse>} - The async response
+     */
+    public CompletableFuture<ListTicketingCategoriesResponse> listTicketingCategories(@Nonnull ListTicketingCategoriesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListTicketingCategoriesRequest, ListTicketingCategoriesResponse> operation
-              = new ListTicketingCategories.Async(sdkConfiguration, _headers);
+              = new ListTicketingCategories.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -364,8 +490,22 @@ public class AsyncCategory {
      * @return {@code CompletableFuture<PatchAccountingCategoryResponse>} - The async response
      */
     public CompletableFuture<PatchAccountingCategoryResponse> patchAccountingCategory(@Nonnull PatchAccountingCategoryRequest request) {
+        return patchAccountingCategory(request, null);
+    }
+
+    /**
+     * Update a category
+     * 
+     * <p>Updates the AccountingCategory identified by `id`. Provide the unified AccountingCategory fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchAccountingCategoryResponse>} - The async response
+     */
+    public CompletableFuture<PatchAccountingCategoryResponse> patchAccountingCategory(@Nonnull PatchAccountingCategoryRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchAccountingCategoryRequest, PatchAccountingCategoryResponse> operation
-              = new PatchAccountingCategory.Async(sdkConfiguration, _headers);
+              = new PatchAccountingCategory.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -393,8 +533,22 @@ public class AsyncCategory {
      * @return {@code CompletableFuture<PatchTicketingCategoryResponse>} - The async response
      */
     public CompletableFuture<PatchTicketingCategoryResponse> patchTicketingCategory(@Nonnull PatchTicketingCategoryRequest request) {
+        return patchTicketingCategory(request, null);
+    }
+
+    /**
+     * Update a category
+     * 
+     * <p>Updates the TicketingCategory identified by `id`. Provide the unified TicketingCategory fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchTicketingCategoryResponse>} - The async response
+     */
+    public CompletableFuture<PatchTicketingCategoryResponse> patchTicketingCategory(@Nonnull PatchTicketingCategoryRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchTicketingCategoryRequest, PatchTicketingCategoryResponse> operation
-              = new PatchTicketingCategory.Async(sdkConfiguration, _headers);
+              = new PatchTicketingCategory.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -420,8 +574,21 @@ public class AsyncCategory {
      * @return {@code CompletableFuture<RemoveAccountingCategoryResponse>} - The async response
      */
     public CompletableFuture<RemoveAccountingCategoryResponse> removeAccountingCategory(@Nonnull RemoveAccountingCategoryRequest request) {
+        return removeAccountingCategory(request, null);
+    }
+
+    /**
+     * Remove a category
+     * 
+     * <p>Deletes the AccountingCategory identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveAccountingCategoryResponse>} - The async response
+     */
+    public CompletableFuture<RemoveAccountingCategoryResponse> removeAccountingCategory(@Nonnull RemoveAccountingCategoryRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveAccountingCategoryRequest, RemoveAccountingCategoryResponse> operation
-              = new RemoveAccountingCategory.Async(sdkConfiguration, _headers);
+              = new RemoveAccountingCategory.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -447,8 +614,21 @@ public class AsyncCategory {
      * @return {@code CompletableFuture<RemoveTicketingCategoryResponse>} - The async response
      */
     public CompletableFuture<RemoveTicketingCategoryResponse> removeTicketingCategory(@Nonnull RemoveTicketingCategoryRequest request) {
+        return removeTicketingCategory(request, null);
+    }
+
+    /**
+     * Remove a category
+     * 
+     * <p>Deletes the TicketingCategory identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveTicketingCategoryResponse>} - The async response
+     */
+    public CompletableFuture<RemoveTicketingCategoryResponse> removeTicketingCategory(@Nonnull RemoveTicketingCategoryRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveTicketingCategoryRequest, RemoveTicketingCategoryResponse> operation
-              = new RemoveTicketingCategory.Async(sdkConfiguration, _headers);
+              = new RemoveTicketingCategory.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -476,8 +656,22 @@ public class AsyncCategory {
      * @return {@code CompletableFuture<UpdateAccountingCategoryResponse>} - The async response
      */
     public CompletableFuture<UpdateAccountingCategoryResponse> updateAccountingCategory(@Nonnull UpdateAccountingCategoryRequest request) {
+        return updateAccountingCategory(request, null);
+    }
+
+    /**
+     * Update a category
+     * 
+     * <p>Updates the AccountingCategory identified by `id`. Provide the unified AccountingCategory fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateAccountingCategoryResponse>} - The async response
+     */
+    public CompletableFuture<UpdateAccountingCategoryResponse> updateAccountingCategory(@Nonnull UpdateAccountingCategoryRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateAccountingCategoryRequest, UpdateAccountingCategoryResponse> operation
-              = new UpdateAccountingCategory.Async(sdkConfiguration, _headers);
+              = new UpdateAccountingCategory.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -505,8 +699,22 @@ public class AsyncCategory {
      * @return {@code CompletableFuture<UpdateTicketingCategoryResponse>} - The async response
      */
     public CompletableFuture<UpdateTicketingCategoryResponse> updateTicketingCategory(@Nonnull UpdateTicketingCategoryRequest request) {
+        return updateTicketingCategory(request, null);
+    }
+
+    /**
+     * Update a category
+     * 
+     * <p>Updates the TicketingCategory identified by `id`. Provide the unified TicketingCategory fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateTicketingCategoryResponse>} - The async response
+     */
+    public CompletableFuture<UpdateTicketingCategoryResponse> updateTicketingCategory(@Nonnull UpdateTicketingCategoryRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateTicketingCategoryRequest, UpdateTicketingCategoryResponse> operation
-              = new UpdateTicketingCategory.Async(sdkConfiguration, _headers);
+              = new UpdateTicketingCategory.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

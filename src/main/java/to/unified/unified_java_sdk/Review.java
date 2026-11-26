@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceReviewRequest;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceReviewRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceReviewResponse;
@@ -71,6 +72,7 @@ import to.unified.unified_java_sdk.operations.UpdateCommerceReview;
 import to.unified.unified_java_sdk.operations.UpdatePropertyReview;
 import to.unified.unified_java_sdk.operations.UpdateSocialReview;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Review {
@@ -115,8 +117,23 @@ public class Review {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateCommerceReviewResponse createCommerceReview(@Nonnull CreateCommerceReviewRequest request) {
+        return createCommerceReview(request, null);
+    }
+
+    /**
+     * Create a review
+     * 
+     * <p>Creates a CommerceReview. Provide the unified CommerceReview fields in the request body; they are
+     * mapped to the provider's API. Returns the created CommerceReview.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateCommerceReviewResponse createCommerceReview(@Nonnull CreateCommerceReviewRequest request, @Nullable Options options) {
         RequestOperation<CreateCommerceReviewRequest, CreateCommerceReviewResponse> operation
-              = new CreateCommerceReview.Sync(sdkConfiguration, _headers);
+              = new CreateCommerceReview.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -143,8 +160,23 @@ public class Review {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetCommerceReviewResponse getCommerceReview(@Nonnull GetCommerceReviewRequest request) {
+        return getCommerceReview(request, null);
+    }
+
+    /**
+     * Retrieve a review
+     * 
+     * <p>Retrieves a single CommerceReview by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetCommerceReviewResponse getCommerceReview(@Nonnull GetCommerceReviewRequest request, @Nullable Options options) {
         RequestOperation<GetCommerceReviewRequest, GetCommerceReviewResponse> operation
-              = new GetCommerceReview.Sync(sdkConfiguration, _headers);
+              = new GetCommerceReview.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -171,8 +203,23 @@ public class Review {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetPerformanceReviewResponse getPerformanceReview(@Nonnull GetPerformanceReviewRequest request) {
+        return getPerformanceReview(request, null);
+    }
+
+    /**
+     * Retrieve a review
+     * 
+     * <p>Retrieves a single PerformanceReview by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetPerformanceReviewResponse getPerformanceReview(@Nonnull GetPerformanceReviewRequest request, @Nullable Options options) {
         RequestOperation<GetPerformanceReviewRequest, GetPerformanceReviewResponse> operation
-              = new GetPerformanceReview.Sync(sdkConfiguration, _headers);
+              = new GetPerformanceReview.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -199,8 +246,23 @@ public class Review {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetPropertyReviewResponse getPropertyReview(@Nonnull GetPropertyReviewRequest request) {
+        return getPropertyReview(request, null);
+    }
+
+    /**
+     * Retrieve a review
+     * 
+     * <p>Retrieves a single PropertyReview by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetPropertyReviewResponse getPropertyReview(@Nonnull GetPropertyReviewRequest request, @Nullable Options options) {
         RequestOperation<GetPropertyReviewRequest, GetPropertyReviewResponse> operation
-              = new GetPropertyReview.Sync(sdkConfiguration, _headers);
+              = new GetPropertyReview.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -227,8 +289,23 @@ public class Review {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetSocialReviewResponse getSocialReview(@Nonnull GetSocialReviewRequest request) {
+        return getSocialReview(request, null);
+    }
+
+    /**
+     * Retrieve a review
+     * 
+     * <p>Retrieves a single SocialReview by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetSocialReviewResponse getSocialReview(@Nonnull GetSocialReviewRequest request, @Nullable Options options) {
         RequestOperation<GetSocialReviewRequest, GetSocialReviewResponse> operation
-              = new GetSocialReview.Sync(sdkConfiguration, _headers);
+              = new GetSocialReview.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -263,8 +340,27 @@ public class Review {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListCommerceReviewsResponse listCommerceReviews(@Nonnull ListCommerceReviewsRequest request) {
+        return listCommerceReviews(request, null);
+    }
+
+    /**
+     * List all reviews
+     * 
+     * <p>Returns a list of CommerceReviews. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListCommerceReviewsResponse listCommerceReviews(@Nonnull ListCommerceReviewsRequest request, @Nullable Options options) {
         RequestOperation<ListCommerceReviewsRequest, ListCommerceReviewsResponse> operation
-              = new ListCommerceReviews.Sync(sdkConfiguration, _headers);
+              = new ListCommerceReviews.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -299,8 +395,27 @@ public class Review {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListPerformanceReviewsResponse listPerformanceReviews(@Nonnull ListPerformanceReviewsRequest request) {
+        return listPerformanceReviews(request, null);
+    }
+
+    /**
+     * List all reviews
+     * 
+     * <p>Returns a list of PerformanceReviews. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListPerformanceReviewsResponse listPerformanceReviews(@Nonnull ListPerformanceReviewsRequest request, @Nullable Options options) {
         RequestOperation<ListPerformanceReviewsRequest, ListPerformanceReviewsResponse> operation
-              = new ListPerformanceReviews.Sync(sdkConfiguration, _headers);
+              = new ListPerformanceReviews.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -335,8 +450,27 @@ public class Review {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListPropertyReviewsResponse listPropertyReviews(@Nonnull ListPropertyReviewsRequest request) {
+        return listPropertyReviews(request, null);
+    }
+
+    /**
+     * List all reviews
+     * 
+     * <p>Returns a list of PropertyReviews. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListPropertyReviewsResponse listPropertyReviews(@Nonnull ListPropertyReviewsRequest request, @Nullable Options options) {
         RequestOperation<ListPropertyReviewsRequest, ListPropertyReviewsResponse> operation
-              = new ListPropertyReviews.Sync(sdkConfiguration, _headers);
+              = new ListPropertyReviews.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -371,8 +505,27 @@ public class Review {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListSocialReviewsResponse listSocialReviews(@Nonnull ListSocialReviewsRequest request) {
+        return listSocialReviews(request, null);
+    }
+
+    /**
+     * List all reviews
+     * 
+     * <p>Returns a list of SocialReviews. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListSocialReviewsResponse listSocialReviews(@Nonnull ListSocialReviewsRequest request, @Nullable Options options) {
         RequestOperation<ListSocialReviewsRequest, ListSocialReviewsResponse> operation
-              = new ListSocialReviews.Sync(sdkConfiguration, _headers);
+              = new ListSocialReviews.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -399,8 +552,23 @@ public class Review {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchCommerceReviewResponse patchCommerceReview(@Nonnull PatchCommerceReviewRequest request) {
+        return patchCommerceReview(request, null);
+    }
+
+    /**
+     * Update a review
+     * 
+     * <p>Updates the CommerceReview identified by `id`. Provide the unified CommerceReview fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchCommerceReviewResponse patchCommerceReview(@Nonnull PatchCommerceReviewRequest request, @Nullable Options options) {
         RequestOperation<PatchCommerceReviewRequest, PatchCommerceReviewResponse> operation
-              = new PatchCommerceReview.Sync(sdkConfiguration, _headers);
+              = new PatchCommerceReview.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -427,8 +595,23 @@ public class Review {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchPropertyReviewResponse patchPropertyReview(@Nonnull PatchPropertyReviewRequest request) {
+        return patchPropertyReview(request, null);
+    }
+
+    /**
+     * Update a review
+     * 
+     * <p>Updates the PropertyReview identified by `id`. Provide the unified PropertyReview fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchPropertyReviewResponse patchPropertyReview(@Nonnull PatchPropertyReviewRequest request, @Nullable Options options) {
         RequestOperation<PatchPropertyReviewRequest, PatchPropertyReviewResponse> operation
-              = new PatchPropertyReview.Sync(sdkConfiguration, _headers);
+              = new PatchPropertyReview.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -455,8 +638,23 @@ public class Review {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchSocialReviewResponse patchSocialReview(@Nonnull PatchSocialReviewRequest request) {
+        return patchSocialReview(request, null);
+    }
+
+    /**
+     * Update a review
+     * 
+     * <p>Updates the SocialReview identified by `id`. Provide the unified SocialReview fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchSocialReviewResponse patchSocialReview(@Nonnull PatchSocialReviewRequest request, @Nullable Options options) {
         RequestOperation<PatchSocialReviewRequest, PatchSocialReviewResponse> operation
-              = new PatchSocialReview.Sync(sdkConfiguration, _headers);
+              = new PatchSocialReview.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -481,8 +679,22 @@ public class Review {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveCommerceReviewResponse removeCommerceReview(@Nonnull RemoveCommerceReviewRequest request) {
+        return removeCommerceReview(request, null);
+    }
+
+    /**
+     * Remove a review
+     * 
+     * <p>Deletes the CommerceReview identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveCommerceReviewResponse removeCommerceReview(@Nonnull RemoveCommerceReviewRequest request, @Nullable Options options) {
         RequestOperation<RemoveCommerceReviewRequest, RemoveCommerceReviewResponse> operation
-              = new RemoveCommerceReview.Sync(sdkConfiguration, _headers);
+              = new RemoveCommerceReview.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -509,8 +721,23 @@ public class Review {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateCommerceReviewResponse updateCommerceReview(@Nonnull UpdateCommerceReviewRequest request) {
+        return updateCommerceReview(request, null);
+    }
+
+    /**
+     * Update a review
+     * 
+     * <p>Updates the CommerceReview identified by `id`. Provide the unified CommerceReview fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateCommerceReviewResponse updateCommerceReview(@Nonnull UpdateCommerceReviewRequest request, @Nullable Options options) {
         RequestOperation<UpdateCommerceReviewRequest, UpdateCommerceReviewResponse> operation
-              = new UpdateCommerceReview.Sync(sdkConfiguration, _headers);
+              = new UpdateCommerceReview.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -537,8 +764,23 @@ public class Review {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdatePropertyReviewResponse updatePropertyReview(@Nonnull UpdatePropertyReviewRequest request) {
+        return updatePropertyReview(request, null);
+    }
+
+    /**
+     * Update a review
+     * 
+     * <p>Updates the PropertyReview identified by `id`. Provide the unified PropertyReview fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdatePropertyReviewResponse updatePropertyReview(@Nonnull UpdatePropertyReviewRequest request, @Nullable Options options) {
         RequestOperation<UpdatePropertyReviewRequest, UpdatePropertyReviewResponse> operation
-              = new UpdatePropertyReview.Sync(sdkConfiguration, _headers);
+              = new UpdatePropertyReview.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -565,8 +807,23 @@ public class Review {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateSocialReviewResponse updateSocialReview(@Nonnull UpdateSocialReviewRequest request) {
+        return updateSocialReview(request, null);
+    }
+
+    /**
+     * Update a review
+     * 
+     * <p>Updates the SocialReview identified by `id`. Provide the unified SocialReview fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateSocialReviewResponse updateSocialReview(@Nonnull UpdateSocialReviewRequest request, @Nullable Options options) {
         RequestOperation<UpdateSocialReviewRequest, UpdateSocialReviewResponse> operation
-              = new UpdateSocialReview.Sync(sdkConfiguration, _headers);
+              = new UpdateSocialReview.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

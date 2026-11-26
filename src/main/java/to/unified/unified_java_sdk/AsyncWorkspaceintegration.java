@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.GetUnifiedWorkspaceintegrationRequest;
 import to.unified.unified_java_sdk.models.operations.ListUnifiedWorkspaceintegrationsRequest;
@@ -32,6 +33,7 @@ import to.unified.unified_java_sdk.operations.PatchUnifiedWorkspaceintegration;
 import to.unified.unified_java_sdk.operations.RemoveUnifiedWorkspaceintegration;
 import to.unified.unified_java_sdk.operations.UpdateUnifiedWorkspaceintegration;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncWorkspaceintegration {
@@ -70,8 +72,19 @@ public class AsyncWorkspaceintegration {
      * @return {@code CompletableFuture<CreateUnifiedWorkspaceintegrationResponse>} - The async response
      */
     public CompletableFuture<CreateUnifiedWorkspaceintegrationResponse> createUnifiedWorkspaceintegration(@Nonnull WorkspaceIntegration request) {
+        return createUnifiedWorkspaceintegration(request, null);
+    }
+
+    /**
+     * Create workspace integration
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateUnifiedWorkspaceintegrationResponse>} - The async response
+     */
+    public CompletableFuture<CreateUnifiedWorkspaceintegrationResponse> createUnifiedWorkspaceintegration(@Nonnull WorkspaceIntegration request, @Nullable Options options) {
         AsyncRequestOperation<WorkspaceIntegration, CreateUnifiedWorkspaceintegrationResponse> operation
-              = new CreateUnifiedWorkspaceintegration.Async(sdkConfiguration, _headers);
+              = new CreateUnifiedWorkspaceintegration.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -93,8 +106,19 @@ public class AsyncWorkspaceintegration {
      * @return {@code CompletableFuture<GetUnifiedWorkspaceintegrationResponse>} - The async response
      */
     public CompletableFuture<GetUnifiedWorkspaceintegrationResponse> getUnifiedWorkspaceintegration(@Nonnull GetUnifiedWorkspaceintegrationRequest request) {
+        return getUnifiedWorkspaceintegration(request, null);
+    }
+
+    /**
+     * Retrieve workspace integration
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetUnifiedWorkspaceintegrationResponse>} - The async response
+     */
+    public CompletableFuture<GetUnifiedWorkspaceintegrationResponse> getUnifiedWorkspaceintegration(@Nonnull GetUnifiedWorkspaceintegrationRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetUnifiedWorkspaceintegrationRequest, GetUnifiedWorkspaceintegrationResponse> operation
-              = new GetUnifiedWorkspaceintegration.Async(sdkConfiguration, _headers);
+              = new GetUnifiedWorkspaceintegration.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -116,8 +140,19 @@ public class AsyncWorkspaceintegration {
      * @return {@code CompletableFuture<ListUnifiedWorkspaceintegrationsResponse>} - The async response
      */
     public CompletableFuture<ListUnifiedWorkspaceintegrationsResponse> listUnifiedWorkspaceintegrations(@Nonnull ListUnifiedWorkspaceintegrationsRequest request) {
+        return listUnifiedWorkspaceintegrations(request, null);
+    }
+
+    /**
+     * List workspace integrations
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListUnifiedWorkspaceintegrationsResponse>} - The async response
+     */
+    public CompletableFuture<ListUnifiedWorkspaceintegrationsResponse> listUnifiedWorkspaceintegrations(@Nonnull ListUnifiedWorkspaceintegrationsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListUnifiedWorkspaceintegrationsRequest, ListUnifiedWorkspaceintegrationsResponse> operation
-              = new ListUnifiedWorkspaceintegrations.Async(sdkConfiguration, _headers);
+              = new ListUnifiedWorkspaceintegrations.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -139,8 +174,19 @@ public class AsyncWorkspaceintegration {
      * @return {@code CompletableFuture<PatchUnifiedWorkspaceintegrationResponse>} - The async response
      */
     public CompletableFuture<PatchUnifiedWorkspaceintegrationResponse> patchUnifiedWorkspaceintegration(@Nonnull PatchUnifiedWorkspaceintegrationRequest request) {
+        return patchUnifiedWorkspaceintegration(request, null);
+    }
+
+    /**
+     * Update workspace integration
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchUnifiedWorkspaceintegrationResponse>} - The async response
+     */
+    public CompletableFuture<PatchUnifiedWorkspaceintegrationResponse> patchUnifiedWorkspaceintegration(@Nonnull PatchUnifiedWorkspaceintegrationRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchUnifiedWorkspaceintegrationRequest, PatchUnifiedWorkspaceintegrationResponse> operation
-              = new PatchUnifiedWorkspaceintegration.Async(sdkConfiguration, _headers);
+              = new PatchUnifiedWorkspaceintegration.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -162,8 +208,19 @@ public class AsyncWorkspaceintegration {
      * @return {@code CompletableFuture<RemoveUnifiedWorkspaceintegrationResponse>} - The async response
      */
     public CompletableFuture<RemoveUnifiedWorkspaceintegrationResponse> removeUnifiedWorkspaceintegration(@Nonnull RemoveUnifiedWorkspaceintegrationRequest request) {
+        return removeUnifiedWorkspaceintegration(request, null);
+    }
+
+    /**
+     * Remove workspace integration
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveUnifiedWorkspaceintegrationResponse>} - The async response
+     */
+    public CompletableFuture<RemoveUnifiedWorkspaceintegrationResponse> removeUnifiedWorkspaceintegration(@Nonnull RemoveUnifiedWorkspaceintegrationRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveUnifiedWorkspaceintegrationRequest, RemoveUnifiedWorkspaceintegrationResponse> operation
-              = new RemoveUnifiedWorkspaceintegration.Async(sdkConfiguration, _headers);
+              = new RemoveUnifiedWorkspaceintegration.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -185,8 +242,19 @@ public class AsyncWorkspaceintegration {
      * @return {@code CompletableFuture<UpdateUnifiedWorkspaceintegrationResponse>} - The async response
      */
     public CompletableFuture<UpdateUnifiedWorkspaceintegrationResponse> updateUnifiedWorkspaceintegration(@Nonnull UpdateUnifiedWorkspaceintegrationRequest request) {
+        return updateUnifiedWorkspaceintegration(request, null);
+    }
+
+    /**
+     * Update workspace integration
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateUnifiedWorkspaceintegrationResponse>} - The async response
+     */
+    public CompletableFuture<UpdateUnifiedWorkspaceintegrationResponse> updateUnifiedWorkspaceintegration(@Nonnull UpdateUnifiedWorkspaceintegrationRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateUnifiedWorkspaceintegrationRequest, UpdateUnifiedWorkspaceintegrationResponse> operation
-              = new UpdateUnifiedWorkspaceintegration.Async(sdkConfiguration, _headers);
+              = new UpdateUnifiedWorkspaceintegration.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

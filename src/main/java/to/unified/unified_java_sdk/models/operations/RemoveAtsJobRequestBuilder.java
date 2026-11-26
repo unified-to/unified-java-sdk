@@ -6,18 +6,28 @@ package to.unified.unified_java_sdk.models.operations;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.RemoveAtsJob;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveAtsJobRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private RemoveAtsJobRequest request;
+    private final Options.Builder optionsBuilder;
 
     public RemoveAtsJobRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public RemoveAtsJobRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public RemoveAtsJobRequestBuilder request(@Nonnull RemoveAtsJobRequest request) {
@@ -42,8 +52,9 @@ public class RemoveAtsJobRequestBuilder {
     * @return The response from the server.
     */
     public RemoveAtsJobResponse call() {
+        Options options = optionsBuilder.build();
         RequestOperation<RemoveAtsJobRequest, RemoveAtsJobResponse> operation
-              = new RemoveAtsJob.Sync(sdkConfiguration, _headers);
+              = new RemoveAtsJob.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

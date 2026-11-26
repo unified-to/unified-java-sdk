@@ -6,20 +6,30 @@ package to.unified.unified_java_sdk.models.operations.async;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.CreateQmsIssueRequest;
 import to.unified.unified_java_sdk.operations.CreateQmsIssue;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class CreateQmsIssueRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private CreateQmsIssueRequest request;
+    private final Options.Builder optionsBuilder;
 
     public CreateQmsIssueRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public CreateQmsIssueRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public CreateQmsIssueRequestBuilder request(@Nonnull CreateQmsIssueRequest request) {
@@ -44,8 +54,9 @@ public class CreateQmsIssueRequestBuilder {
     * @return The response from the server.
     */
     public CompletableFuture<CreateQmsIssueResponse> call() {
+        Options options = optionsBuilder.build();
         AsyncRequestOperation<CreateQmsIssueRequest, CreateQmsIssueResponse> operation
-              = new CreateQmsIssue.Async(sdkConfiguration, _headers);
+              = new CreateQmsIssue.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

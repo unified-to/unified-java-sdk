@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.GetHrisPayrollRequest;
 import to.unified.unified_java_sdk.models.operations.ListHrisPayrollsRequest;
@@ -16,6 +17,7 @@ import to.unified.unified_java_sdk.models.operations.async.ListHrisPayrollsRespo
 import to.unified.unified_java_sdk.operations.GetHrisPayroll;
 import to.unified.unified_java_sdk.operations.ListHrisPayrolls;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncPayroll {
@@ -60,8 +62,22 @@ public class AsyncPayroll {
      * @return {@code CompletableFuture<GetHrisPayrollResponse>} - The async response
      */
     public CompletableFuture<GetHrisPayrollResponse> getHrisPayroll(@Nonnull GetHrisPayrollRequest request) {
+        return getHrisPayroll(request, null);
+    }
+
+    /**
+     * Retrieve a payroll
+     * 
+     * <p>Retrieves a single HrisPayroll by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetHrisPayrollResponse>} - The async response
+     */
+    public CompletableFuture<GetHrisPayrollResponse> getHrisPayroll(@Nonnull GetHrisPayrollRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetHrisPayrollRequest, GetHrisPayrollResponse> operation
-              = new GetHrisPayroll.Async(sdkConfiguration, _headers);
+              = new GetHrisPayroll.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -97,8 +113,26 @@ public class AsyncPayroll {
      * @return {@code CompletableFuture<ListHrisPayrollsResponse>} - The async response
      */
     public CompletableFuture<ListHrisPayrollsResponse> listHrisPayrolls(@Nonnull ListHrisPayrollsRequest request) {
+        return listHrisPayrolls(request, null);
+    }
+
+    /**
+     * List all payrolls
+     * 
+     * <p>Returns a list of HrisPayrolls. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListHrisPayrollsResponse>} - The async response
+     */
+    public CompletableFuture<ListHrisPayrollsResponse> listHrisPayrolls(@Nonnull ListHrisPayrollsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListHrisPayrollsRequest, ListHrisPayrollsResponse> operation
-              = new ListHrisPayrolls.Async(sdkConfiguration, _headers);
+              = new ListHrisPayrolls.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

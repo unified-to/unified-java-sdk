@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingProjectRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingProjectRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingProjectResponse;
@@ -55,6 +56,7 @@ import to.unified.unified_java_sdk.operations.RemoveTaskProject;
 import to.unified.unified_java_sdk.operations.UpdateAccountingProject;
 import to.unified.unified_java_sdk.operations.UpdateTaskProject;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Project {
@@ -99,8 +101,23 @@ public class Project {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateAccountingProjectResponse createAccountingProject(@Nonnull CreateAccountingProjectRequest request) {
+        return createAccountingProject(request, null);
+    }
+
+    /**
+     * Create a project
+     * 
+     * <p>Creates a AccountingProject. Provide the unified AccountingProject fields in the request body; they
+     * are mapped to the provider's API. Returns the created AccountingProject.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateAccountingProjectResponse createAccountingProject(@Nonnull CreateAccountingProjectRequest request, @Nullable Options options) {
         RequestOperation<CreateAccountingProjectRequest, CreateAccountingProjectResponse> operation
-              = new CreateAccountingProject.Sync(sdkConfiguration, _headers);
+              = new CreateAccountingProject.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -127,8 +144,23 @@ public class Project {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateTaskProjectResponse createTaskProject(@Nonnull CreateTaskProjectRequest request) {
+        return createTaskProject(request, null);
+    }
+
+    /**
+     * Create a project
+     * 
+     * <p>Creates a TaskProject. Provide the unified TaskProject fields in the request body; they are mapped
+     * to the provider's API. Returns the created TaskProject.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateTaskProjectResponse createTaskProject(@Nonnull CreateTaskProjectRequest request, @Nullable Options options) {
         RequestOperation<CreateTaskProjectRequest, CreateTaskProjectResponse> operation
-              = new CreateTaskProject.Sync(sdkConfiguration, _headers);
+              = new CreateTaskProject.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -155,8 +187,23 @@ public class Project {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAccountingProjectResponse getAccountingProject(@Nonnull GetAccountingProjectRequest request) {
+        return getAccountingProject(request, null);
+    }
+
+    /**
+     * Retrieve a project
+     * 
+     * <p>Retrieves a single AccountingProject by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAccountingProjectResponse getAccountingProject(@Nonnull GetAccountingProjectRequest request, @Nullable Options options) {
         RequestOperation<GetAccountingProjectRequest, GetAccountingProjectResponse> operation
-              = new GetAccountingProject.Sync(sdkConfiguration, _headers);
+              = new GetAccountingProject.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -183,8 +230,23 @@ public class Project {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetTaskProjectResponse getTaskProject(@Nonnull GetTaskProjectRequest request) {
+        return getTaskProject(request, null);
+    }
+
+    /**
+     * Retrieve a project
+     * 
+     * <p>Retrieves a single TaskProject by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetTaskProjectResponse getTaskProject(@Nonnull GetTaskProjectRequest request, @Nullable Options options) {
         RequestOperation<GetTaskProjectRequest, GetTaskProjectResponse> operation
-              = new GetTaskProject.Sync(sdkConfiguration, _headers);
+              = new GetTaskProject.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -219,8 +281,27 @@ public class Project {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAccountingProjectsResponse listAccountingProjects(@Nonnull ListAccountingProjectsRequest request) {
+        return listAccountingProjects(request, null);
+    }
+
+    /**
+     * List all projects
+     * 
+     * <p>Returns a list of AccountingProjects. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAccountingProjectsResponse listAccountingProjects(@Nonnull ListAccountingProjectsRequest request, @Nullable Options options) {
         RequestOperation<ListAccountingProjectsRequest, ListAccountingProjectsResponse> operation
-              = new ListAccountingProjects.Sync(sdkConfiguration, _headers);
+              = new ListAccountingProjects.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -255,8 +336,27 @@ public class Project {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListTaskProjectsResponse listTaskProjects(@Nonnull ListTaskProjectsRequest request) {
+        return listTaskProjects(request, null);
+    }
+
+    /**
+     * List all projects
+     * 
+     * <p>Returns a list of TaskProjects. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListTaskProjectsResponse listTaskProjects(@Nonnull ListTaskProjectsRequest request, @Nullable Options options) {
         RequestOperation<ListTaskProjectsRequest, ListTaskProjectsResponse> operation
-              = new ListTaskProjects.Sync(sdkConfiguration, _headers);
+              = new ListTaskProjects.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -283,8 +383,23 @@ public class Project {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchAccountingProjectResponse patchAccountingProject(@Nonnull PatchAccountingProjectRequest request) {
+        return patchAccountingProject(request, null);
+    }
+
+    /**
+     * Update a project
+     * 
+     * <p>Updates the AccountingProject identified by `id`. Provide the unified AccountingProject fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchAccountingProjectResponse patchAccountingProject(@Nonnull PatchAccountingProjectRequest request, @Nullable Options options) {
         RequestOperation<PatchAccountingProjectRequest, PatchAccountingProjectResponse> operation
-              = new PatchAccountingProject.Sync(sdkConfiguration, _headers);
+              = new PatchAccountingProject.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -311,8 +426,23 @@ public class Project {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchTaskProjectResponse patchTaskProject(@Nonnull PatchTaskProjectRequest request) {
+        return patchTaskProject(request, null);
+    }
+
+    /**
+     * Update a project
+     * 
+     * <p>Updates the TaskProject identified by `id`. Provide the unified TaskProject fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchTaskProjectResponse patchTaskProject(@Nonnull PatchTaskProjectRequest request, @Nullable Options options) {
         RequestOperation<PatchTaskProjectRequest, PatchTaskProjectResponse> operation
-              = new PatchTaskProject.Sync(sdkConfiguration, _headers);
+              = new PatchTaskProject.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -337,8 +467,22 @@ public class Project {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveAccountingProjectResponse removeAccountingProject(@Nonnull RemoveAccountingProjectRequest request) {
+        return removeAccountingProject(request, null);
+    }
+
+    /**
+     * Remove a project
+     * 
+     * <p>Deletes the AccountingProject identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveAccountingProjectResponse removeAccountingProject(@Nonnull RemoveAccountingProjectRequest request, @Nullable Options options) {
         RequestOperation<RemoveAccountingProjectRequest, RemoveAccountingProjectResponse> operation
-              = new RemoveAccountingProject.Sync(sdkConfiguration, _headers);
+              = new RemoveAccountingProject.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -363,8 +507,22 @@ public class Project {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveTaskProjectResponse removeTaskProject(@Nonnull RemoveTaskProjectRequest request) {
+        return removeTaskProject(request, null);
+    }
+
+    /**
+     * Remove a project
+     * 
+     * <p>Deletes the TaskProject identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveTaskProjectResponse removeTaskProject(@Nonnull RemoveTaskProjectRequest request, @Nullable Options options) {
         RequestOperation<RemoveTaskProjectRequest, RemoveTaskProjectResponse> operation
-              = new RemoveTaskProject.Sync(sdkConfiguration, _headers);
+              = new RemoveTaskProject.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -391,8 +549,23 @@ public class Project {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateAccountingProjectResponse updateAccountingProject(@Nonnull UpdateAccountingProjectRequest request) {
+        return updateAccountingProject(request, null);
+    }
+
+    /**
+     * Update a project
+     * 
+     * <p>Updates the AccountingProject identified by `id`. Provide the unified AccountingProject fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateAccountingProjectResponse updateAccountingProject(@Nonnull UpdateAccountingProjectRequest request, @Nullable Options options) {
         RequestOperation<UpdateAccountingProjectRequest, UpdateAccountingProjectResponse> operation
-              = new UpdateAccountingProject.Sync(sdkConfiguration, _headers);
+              = new UpdateAccountingProject.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -419,8 +592,23 @@ public class Project {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateTaskProjectResponse updateTaskProject(@Nonnull UpdateTaskProjectRequest request) {
+        return updateTaskProject(request, null);
+    }
+
+    /**
+     * Update a project
+     * 
+     * <p>Updates the TaskProject identified by `id`. Provide the unified TaskProject fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateTaskProjectResponse updateTaskProject(@Nonnull UpdateTaskProjectRequest request, @Nullable Options options) {
         RequestOperation<UpdateTaskProjectRequest, UpdateTaskProjectResponse> operation
-              = new UpdateTaskProject.Sync(sdkConfiguration, _headers);
+              = new UpdateTaskProject.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

@@ -6,18 +6,28 @@ package to.unified.unified_java_sdk.models.operations;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.RemoveAdsCampaign;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveAdsCampaignRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private RemoveAdsCampaignRequest request;
+    private final Options.Builder optionsBuilder;
 
     public RemoveAdsCampaignRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public RemoveAdsCampaignRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public RemoveAdsCampaignRequestBuilder request(@Nonnull RemoveAdsCampaignRequest request) {
@@ -42,8 +52,9 @@ public class RemoveAdsCampaignRequestBuilder {
     * @return The response from the server.
     */
     public RemoveAdsCampaignResponse call() {
+        Options options = optionsBuilder.build();
         RequestOperation<RemoveAdsCampaignRequest, RemoveAdsCampaignResponse> operation
-              = new RemoveAdsCampaign.Sync(sdkConfiguration, _headers);
+              = new RemoveAdsCampaign.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

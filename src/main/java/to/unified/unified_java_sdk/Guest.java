@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreatePropertyGuestRequest;
 import to.unified.unified_java_sdk.models.operations.CreatePropertyGuestRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreatePropertyGuestResponse;
@@ -31,6 +32,7 @@ import to.unified.unified_java_sdk.operations.PatchPropertyGuest;
 import to.unified.unified_java_sdk.operations.RemovePropertyGuest;
 import to.unified.unified_java_sdk.operations.UpdatePropertyGuest;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Guest {
@@ -75,8 +77,23 @@ public class Guest {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreatePropertyGuestResponse createPropertyGuest(@Nonnull CreatePropertyGuestRequest request) {
+        return createPropertyGuest(request, null);
+    }
+
+    /**
+     * Create a guest
+     * 
+     * <p>Creates a PropertyGuest. Provide the unified PropertyGuest fields in the request body; they are
+     * mapped to the provider's API. Returns the created PropertyGuest.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreatePropertyGuestResponse createPropertyGuest(@Nonnull CreatePropertyGuestRequest request, @Nullable Options options) {
         RequestOperation<CreatePropertyGuestRequest, CreatePropertyGuestResponse> operation
-              = new CreatePropertyGuest.Sync(sdkConfiguration, _headers);
+              = new CreatePropertyGuest.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -103,8 +120,23 @@ public class Guest {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetPropertyGuestResponse getPropertyGuest(@Nonnull GetPropertyGuestRequest request) {
+        return getPropertyGuest(request, null);
+    }
+
+    /**
+     * Retrieve a guest
+     * 
+     * <p>Retrieves a single PropertyGuest by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetPropertyGuestResponse getPropertyGuest(@Nonnull GetPropertyGuestRequest request, @Nullable Options options) {
         RequestOperation<GetPropertyGuestRequest, GetPropertyGuestResponse> operation
-              = new GetPropertyGuest.Sync(sdkConfiguration, _headers);
+              = new GetPropertyGuest.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -139,8 +171,27 @@ public class Guest {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListPropertyGuestsResponse listPropertyGuests(@Nonnull ListPropertyGuestsRequest request) {
+        return listPropertyGuests(request, null);
+    }
+
+    /**
+     * List all guests
+     * 
+     * <p>Returns a list of PropertyGuests. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListPropertyGuestsResponse listPropertyGuests(@Nonnull ListPropertyGuestsRequest request, @Nullable Options options) {
         RequestOperation<ListPropertyGuestsRequest, ListPropertyGuestsResponse> operation
-              = new ListPropertyGuests.Sync(sdkConfiguration, _headers);
+              = new ListPropertyGuests.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +218,23 @@ public class Guest {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchPropertyGuestResponse patchPropertyGuest(@Nonnull PatchPropertyGuestRequest request) {
+        return patchPropertyGuest(request, null);
+    }
+
+    /**
+     * Update a guest
+     * 
+     * <p>Updates the PropertyGuest identified by `id`. Provide the unified PropertyGuest fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchPropertyGuestResponse patchPropertyGuest(@Nonnull PatchPropertyGuestRequest request, @Nullable Options options) {
         RequestOperation<PatchPropertyGuestRequest, PatchPropertyGuestResponse> operation
-              = new PatchPropertyGuest.Sync(sdkConfiguration, _headers);
+              = new PatchPropertyGuest.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -193,8 +259,22 @@ public class Guest {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemovePropertyGuestResponse removePropertyGuest(@Nonnull RemovePropertyGuestRequest request) {
+        return removePropertyGuest(request, null);
+    }
+
+    /**
+     * Remove a guest
+     * 
+     * <p>Deletes the PropertyGuest identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemovePropertyGuestResponse removePropertyGuest(@Nonnull RemovePropertyGuestRequest request, @Nullable Options options) {
         RequestOperation<RemovePropertyGuestRequest, RemovePropertyGuestResponse> operation
-              = new RemovePropertyGuest.Sync(sdkConfiguration, _headers);
+              = new RemovePropertyGuest.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -221,8 +301,23 @@ public class Guest {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdatePropertyGuestResponse updatePropertyGuest(@Nonnull UpdatePropertyGuestRequest request) {
+        return updatePropertyGuest(request, null);
+    }
+
+    /**
+     * Update a guest
+     * 
+     * <p>Updates the PropertyGuest identified by `id`. Provide the unified PropertyGuest fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdatePropertyGuestResponse updatePropertyGuest(@Nonnull UpdatePropertyGuestRequest request, @Nullable Options options) {
         RequestOperation<UpdatePropertyGuestRequest, UpdatePropertyGuestResponse> operation
-              = new UpdatePropertyGuest.Sync(sdkConfiguration, _headers);
+              = new UpdatePropertyGuest.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

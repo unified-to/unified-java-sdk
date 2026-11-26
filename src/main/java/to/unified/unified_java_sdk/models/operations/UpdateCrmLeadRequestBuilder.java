@@ -6,18 +6,28 @@ package to.unified.unified_java_sdk.models.operations;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.UpdateCrmLead;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class UpdateCrmLeadRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private UpdateCrmLeadRequest request;
+    private final Options.Builder optionsBuilder;
 
     public UpdateCrmLeadRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public UpdateCrmLeadRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public UpdateCrmLeadRequestBuilder request(@Nonnull UpdateCrmLeadRequest request) {
@@ -42,8 +52,9 @@ public class UpdateCrmLeadRequestBuilder {
     * @return The response from the server.
     */
     public UpdateCrmLeadResponse call() {
+        Options options = optionsBuilder.build();
         RequestOperation<UpdateCrmLeadRequest, UpdateCrmLeadResponse> operation
-              = new UpdateCrmLead.Sync(sdkConfiguration, _headers);
+              = new UpdateCrmLead.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceItemvariantRequest;
 import to.unified.unified_java_sdk.models.operations.GetCommerceItemvariantRequest;
@@ -32,6 +33,7 @@ import to.unified.unified_java_sdk.operations.PatchCommerceItemvariant;
 import to.unified.unified_java_sdk.operations.RemoveCommerceItemvariant;
 import to.unified.unified_java_sdk.operations.UpdateCommerceItemvariant;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncItemvariant {
@@ -76,8 +78,22 @@ public class AsyncItemvariant {
      * @return {@code CompletableFuture<CreateCommerceItemvariantResponse>} - The async response
      */
     public CompletableFuture<CreateCommerceItemvariantResponse> createCommerceItemvariant(@Nonnull CreateCommerceItemvariantRequest request) {
+        return createCommerceItemvariant(request, null);
+    }
+
+    /**
+     * Create an itemvariant
+     * 
+     * <p>Creates a CommerceItemvariant. Provide the unified CommerceItemvariant fields in the request body;
+     * they are mapped to the provider's API. Returns the created CommerceItemvariant.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateCommerceItemvariantResponse>} - The async response
+     */
+    public CompletableFuture<CreateCommerceItemvariantResponse> createCommerceItemvariant(@Nonnull CreateCommerceItemvariantRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateCommerceItemvariantRequest, CreateCommerceItemvariantResponse> operation
-              = new CreateCommerceItemvariant.Async(sdkConfiguration, _headers);
+              = new CreateCommerceItemvariant.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -105,8 +121,22 @@ public class AsyncItemvariant {
      * @return {@code CompletableFuture<GetCommerceItemvariantResponse>} - The async response
      */
     public CompletableFuture<GetCommerceItemvariantResponse> getCommerceItemvariant(@Nonnull GetCommerceItemvariantRequest request) {
+        return getCommerceItemvariant(request, null);
+    }
+
+    /**
+     * Retrieve an itemvariant
+     * 
+     * <p>Retrieves a single CommerceItemvariant by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetCommerceItemvariantResponse>} - The async response
+     */
+    public CompletableFuture<GetCommerceItemvariantResponse> getCommerceItemvariant(@Nonnull GetCommerceItemvariantRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetCommerceItemvariantRequest, GetCommerceItemvariantResponse> operation
-              = new GetCommerceItemvariant.Async(sdkConfiguration, _headers);
+              = new GetCommerceItemvariant.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -142,8 +172,26 @@ public class AsyncItemvariant {
      * @return {@code CompletableFuture<ListCommerceItemvariantsResponse>} - The async response
      */
     public CompletableFuture<ListCommerceItemvariantsResponse> listCommerceItemvariants(@Nonnull ListCommerceItemvariantsRequest request) {
+        return listCommerceItemvariants(request, null);
+    }
+
+    /**
+     * List all itemvariants
+     * 
+     * <p>Returns a list of CommerceItemvariants. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListCommerceItemvariantsResponse>} - The async response
+     */
+    public CompletableFuture<ListCommerceItemvariantsResponse> listCommerceItemvariants(@Nonnull ListCommerceItemvariantsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListCommerceItemvariantsRequest, ListCommerceItemvariantsResponse> operation
-              = new ListCommerceItemvariants.Async(sdkConfiguration, _headers);
+              = new ListCommerceItemvariants.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -171,8 +219,22 @@ public class AsyncItemvariant {
      * @return {@code CompletableFuture<PatchCommerceItemvariantResponse>} - The async response
      */
     public CompletableFuture<PatchCommerceItemvariantResponse> patchCommerceItemvariant(@Nonnull PatchCommerceItemvariantRequest request) {
+        return patchCommerceItemvariant(request, null);
+    }
+
+    /**
+     * Update an itemvariant
+     * 
+     * <p>Updates the CommerceItemvariant identified by `id`. Provide the unified CommerceItemvariant fields
+     * to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchCommerceItemvariantResponse>} - The async response
+     */
+    public CompletableFuture<PatchCommerceItemvariantResponse> patchCommerceItemvariant(@Nonnull PatchCommerceItemvariantRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchCommerceItemvariantRequest, PatchCommerceItemvariantResponse> operation
-              = new PatchCommerceItemvariant.Async(sdkConfiguration, _headers);
+              = new PatchCommerceItemvariant.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -198,8 +260,21 @@ public class AsyncItemvariant {
      * @return {@code CompletableFuture<RemoveCommerceItemvariantResponse>} - The async response
      */
     public CompletableFuture<RemoveCommerceItemvariantResponse> removeCommerceItemvariant(@Nonnull RemoveCommerceItemvariantRequest request) {
+        return removeCommerceItemvariant(request, null);
+    }
+
+    /**
+     * Remove an itemvariant
+     * 
+     * <p>Deletes the CommerceItemvariant identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveCommerceItemvariantResponse>} - The async response
+     */
+    public CompletableFuture<RemoveCommerceItemvariantResponse> removeCommerceItemvariant(@Nonnull RemoveCommerceItemvariantRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveCommerceItemvariantRequest, RemoveCommerceItemvariantResponse> operation
-              = new RemoveCommerceItemvariant.Async(sdkConfiguration, _headers);
+              = new RemoveCommerceItemvariant.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -227,8 +302,22 @@ public class AsyncItemvariant {
      * @return {@code CompletableFuture<UpdateCommerceItemvariantResponse>} - The async response
      */
     public CompletableFuture<UpdateCommerceItemvariantResponse> updateCommerceItemvariant(@Nonnull UpdateCommerceItemvariantRequest request) {
+        return updateCommerceItemvariant(request, null);
+    }
+
+    /**
+     * Update an itemvariant
+     * 
+     * <p>Updates the CommerceItemvariant identified by `id`. Provide the unified CommerceItemvariant fields
+     * to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateCommerceItemvariantResponse>} - The async response
+     */
+    public CompletableFuture<UpdateCommerceItemvariantResponse> updateCommerceItemvariant(@Nonnull UpdateCommerceItemvariantRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateCommerceItemvariantRequest, UpdateCommerceItemvariantResponse> operation
-              = new UpdateCommerceItemvariant.Async(sdkConfiguration, _headers);
+              = new UpdateCommerceItemvariant.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

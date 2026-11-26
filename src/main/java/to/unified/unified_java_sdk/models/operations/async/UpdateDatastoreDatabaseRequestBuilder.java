@@ -6,20 +6,30 @@ package to.unified.unified_java_sdk.models.operations.async;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.UpdateDatastoreDatabaseRequest;
 import to.unified.unified_java_sdk.operations.UpdateDatastoreDatabase;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class UpdateDatastoreDatabaseRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private UpdateDatastoreDatabaseRequest request;
+    private final Options.Builder optionsBuilder;
 
     public UpdateDatastoreDatabaseRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public UpdateDatastoreDatabaseRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public UpdateDatastoreDatabaseRequestBuilder request(@Nonnull UpdateDatastoreDatabaseRequest request) {
@@ -44,8 +54,9 @@ public class UpdateDatastoreDatabaseRequestBuilder {
     * @return The response from the server.
     */
     public CompletableFuture<UpdateDatastoreDatabaseResponse> call() {
+        Options options = optionsBuilder.build();
         AsyncRequestOperation<UpdateDatastoreDatabaseRequest, UpdateDatastoreDatabaseResponse> operation
-              = new UpdateDatastoreDatabase.Async(sdkConfiguration, _headers);
+              = new UpdateDatastoreDatabase.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

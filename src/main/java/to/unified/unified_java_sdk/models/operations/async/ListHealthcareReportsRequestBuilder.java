@@ -6,20 +6,30 @@ package to.unified.unified_java_sdk.models.operations.async;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.ListHealthcareReportsRequest;
 import to.unified.unified_java_sdk.operations.ListHealthcareReports;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListHealthcareReportsRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private ListHealthcareReportsRequest request;
+    private final Options.Builder optionsBuilder;
 
     public ListHealthcareReportsRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public ListHealthcareReportsRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public ListHealthcareReportsRequestBuilder request(@Nonnull ListHealthcareReportsRequest request) {
@@ -44,8 +54,9 @@ public class ListHealthcareReportsRequestBuilder {
     * @return The response from the server.
     */
     public CompletableFuture<ListHealthcareReportsResponse> call() {
+        Options options = optionsBuilder.build();
         AsyncRequestOperation<ListHealthcareReportsRequest, ListHealthcareReportsResponse> operation
-              = new ListHealthcareReports.Async(sdkConfiguration, _headers);
+              = new ListHealthcareReports.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

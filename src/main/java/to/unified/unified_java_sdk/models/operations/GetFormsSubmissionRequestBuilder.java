@@ -6,18 +6,28 @@ package to.unified.unified_java_sdk.models.operations;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.GetFormsSubmission;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetFormsSubmissionRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private GetFormsSubmissionRequest request;
+    private final Options.Builder optionsBuilder;
 
     public GetFormsSubmissionRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public GetFormsSubmissionRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public GetFormsSubmissionRequestBuilder request(@Nonnull GetFormsSubmissionRequest request) {
@@ -42,8 +52,9 @@ public class GetFormsSubmissionRequestBuilder {
     * @return The response from the server.
     */
     public GetFormsSubmissionResponse call() {
+        Options options = optionsBuilder.build();
         RequestOperation<GetFormsSubmissionRequest, GetFormsSubmissionResponse> operation
-              = new GetFormsSubmission.Sync(sdkConfiguration, _headers);
+              = new GetFormsSubmission.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

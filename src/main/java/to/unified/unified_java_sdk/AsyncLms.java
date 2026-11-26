@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateLmsActivityRequest;
 import to.unified.unified_java_sdk.models.operations.CreateLmsClassRequest;
@@ -176,6 +177,7 @@ import to.unified.unified_java_sdk.operations.UpdateLmsCourse;
 import to.unified.unified_java_sdk.operations.UpdateLmsInstructor;
 import to.unified.unified_java_sdk.operations.UpdateLmsStudent;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncLms {
@@ -220,8 +222,22 @@ public class AsyncLms {
      * @return {@code CompletableFuture<CreateLmsActivityResponse>} - The async response
      */
     public CompletableFuture<CreateLmsActivityResponse> createLmsActivity(@Nonnull CreateLmsActivityRequest request) {
+        return createLmsActivity(request, null);
+    }
+
+    /**
+     * Create an activity
+     * 
+     * <p>Creates a LmsActivity. Provide the unified LmsActivity fields in the request body; they are mapped
+     * to the provider's API. Returns the created LmsActivity.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateLmsActivityResponse>} - The async response
+     */
+    public CompletableFuture<CreateLmsActivityResponse> createLmsActivity(@Nonnull CreateLmsActivityRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateLmsActivityRequest, CreateLmsActivityResponse> operation
-              = new CreateLmsActivity.Async(sdkConfiguration, _headers);
+              = new CreateLmsActivity.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -249,8 +265,22 @@ public class AsyncLms {
      * @return {@code CompletableFuture<CreateLmsClassResponse>} - The async response
      */
     public CompletableFuture<CreateLmsClassResponse> createLmsClass(@Nonnull CreateLmsClassRequest request) {
+        return createLmsClass(request, null);
+    }
+
+    /**
+     * Create a class
+     * 
+     * <p>Creates a LmsClass. Provide the unified LmsClass fields in the request body; they are mapped to the
+     * provider's API. Returns the created LmsClass.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateLmsClassResponse>} - The async response
+     */
+    public CompletableFuture<CreateLmsClassResponse> createLmsClass(@Nonnull CreateLmsClassRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateLmsClassRequest, CreateLmsClassResponse> operation
-              = new CreateLmsClass.Async(sdkConfiguration, _headers);
+              = new CreateLmsClass.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -278,8 +308,22 @@ public class AsyncLms {
      * @return {@code CompletableFuture<CreateLmsCollectionResponse>} - The async response
      */
     public CompletableFuture<CreateLmsCollectionResponse> createLmsCollection(@Nonnull CreateLmsCollectionRequest request) {
+        return createLmsCollection(request, null);
+    }
+
+    /**
+     * Create a collection
+     * 
+     * <p>Creates a LmsCollection. Provide the unified LmsCollection fields in the request body; they are
+     * mapped to the provider's API. Returns the created LmsCollection.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateLmsCollectionResponse>} - The async response
+     */
+    public CompletableFuture<CreateLmsCollectionResponse> createLmsCollection(@Nonnull CreateLmsCollectionRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateLmsCollectionRequest, CreateLmsCollectionResponse> operation
-              = new CreateLmsCollection.Async(sdkConfiguration, _headers);
+              = new CreateLmsCollection.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -307,8 +351,22 @@ public class AsyncLms {
      * @return {@code CompletableFuture<CreateLmsContentResponse>} - The async response
      */
     public CompletableFuture<CreateLmsContentResponse> createLmsContent(@Nonnull CreateLmsContentRequest request) {
+        return createLmsContent(request, null);
+    }
+
+    /**
+     * Create a content
+     * 
+     * <p>Creates a LmsContent. Provide the unified LmsContent fields in the request body; they are mapped to
+     * the provider's API. Returns the created LmsContent.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateLmsContentResponse>} - The async response
+     */
+    public CompletableFuture<CreateLmsContentResponse> createLmsContent(@Nonnull CreateLmsContentRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateLmsContentRequest, CreateLmsContentResponse> operation
-              = new CreateLmsContent.Async(sdkConfiguration, _headers);
+              = new CreateLmsContent.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -336,8 +394,22 @@ public class AsyncLms {
      * @return {@code CompletableFuture<CreateLmsCourseResponse>} - The async response
      */
     public CompletableFuture<CreateLmsCourseResponse> createLmsCourse(@Nonnull CreateLmsCourseRequest request) {
+        return createLmsCourse(request, null);
+    }
+
+    /**
+     * Create a course
+     * 
+     * <p>Creates a LmsCourse. Provide the unified LmsCourse fields in the request body; they are mapped to
+     * the provider's API. Returns the created LmsCourse.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateLmsCourseResponse>} - The async response
+     */
+    public CompletableFuture<CreateLmsCourseResponse> createLmsCourse(@Nonnull CreateLmsCourseRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateLmsCourseRequest, CreateLmsCourseResponse> operation
-              = new CreateLmsCourse.Async(sdkConfiguration, _headers);
+              = new CreateLmsCourse.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -365,8 +437,22 @@ public class AsyncLms {
      * @return {@code CompletableFuture<CreateLmsInstructorResponse>} - The async response
      */
     public CompletableFuture<CreateLmsInstructorResponse> createLmsInstructor(@Nonnull CreateLmsInstructorRequest request) {
+        return createLmsInstructor(request, null);
+    }
+
+    /**
+     * Create an instructor
+     * 
+     * <p>Creates a LmsInstructor. Provide the unified LmsInstructor fields in the request body; they are
+     * mapped to the provider's API. Returns the created LmsInstructor.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateLmsInstructorResponse>} - The async response
+     */
+    public CompletableFuture<CreateLmsInstructorResponse> createLmsInstructor(@Nonnull CreateLmsInstructorRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateLmsInstructorRequest, CreateLmsInstructorResponse> operation
-              = new CreateLmsInstructor.Async(sdkConfiguration, _headers);
+              = new CreateLmsInstructor.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -394,8 +480,22 @@ public class AsyncLms {
      * @return {@code CompletableFuture<CreateLmsStudentResponse>} - The async response
      */
     public CompletableFuture<CreateLmsStudentResponse> createLmsStudent(@Nonnull CreateLmsStudentRequest request) {
+        return createLmsStudent(request, null);
+    }
+
+    /**
+     * Create a student
+     * 
+     * <p>Creates a LmsStudent. Provide the unified LmsStudent fields in the request body; they are mapped to
+     * the provider's API. Returns the created LmsStudent.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateLmsStudentResponse>} - The async response
+     */
+    public CompletableFuture<CreateLmsStudentResponse> createLmsStudent(@Nonnull CreateLmsStudentRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateLmsStudentRequest, CreateLmsStudentResponse> operation
-              = new CreateLmsStudent.Async(sdkConfiguration, _headers);
+              = new CreateLmsStudent.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -423,8 +523,22 @@ public class AsyncLms {
      * @return {@code CompletableFuture<GetLmsActivityResponse>} - The async response
      */
     public CompletableFuture<GetLmsActivityResponse> getLmsActivity(@Nonnull GetLmsActivityRequest request) {
+        return getLmsActivity(request, null);
+    }
+
+    /**
+     * Retrieve an activity
+     * 
+     * <p>Retrieves a single LmsActivity by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetLmsActivityResponse>} - The async response
+     */
+    public CompletableFuture<GetLmsActivityResponse> getLmsActivity(@Nonnull GetLmsActivityRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetLmsActivityRequest, GetLmsActivityResponse> operation
-              = new GetLmsActivity.Async(sdkConfiguration, _headers);
+              = new GetLmsActivity.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -452,8 +566,22 @@ public class AsyncLms {
      * @return {@code CompletableFuture<GetLmsClassResponse>} - The async response
      */
     public CompletableFuture<GetLmsClassResponse> getLmsClass(@Nonnull GetLmsClassRequest request) {
+        return getLmsClass(request, null);
+    }
+
+    /**
+     * Retrieve a class
+     * 
+     * <p>Retrieves a single LmsClass by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetLmsClassResponse>} - The async response
+     */
+    public CompletableFuture<GetLmsClassResponse> getLmsClass(@Nonnull GetLmsClassRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetLmsClassRequest, GetLmsClassResponse> operation
-              = new GetLmsClass.Async(sdkConfiguration, _headers);
+              = new GetLmsClass.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -481,8 +609,22 @@ public class AsyncLms {
      * @return {@code CompletableFuture<GetLmsCollectionResponse>} - The async response
      */
     public CompletableFuture<GetLmsCollectionResponse> getLmsCollection(@Nonnull GetLmsCollectionRequest request) {
+        return getLmsCollection(request, null);
+    }
+
+    /**
+     * Retrieve a collection
+     * 
+     * <p>Retrieves a single LmsCollection by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetLmsCollectionResponse>} - The async response
+     */
+    public CompletableFuture<GetLmsCollectionResponse> getLmsCollection(@Nonnull GetLmsCollectionRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetLmsCollectionRequest, GetLmsCollectionResponse> operation
-              = new GetLmsCollection.Async(sdkConfiguration, _headers);
+              = new GetLmsCollection.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -510,8 +652,22 @@ public class AsyncLms {
      * @return {@code CompletableFuture<GetLmsContentResponse>} - The async response
      */
     public CompletableFuture<GetLmsContentResponse> getLmsContent(@Nonnull GetLmsContentRequest request) {
+        return getLmsContent(request, null);
+    }
+
+    /**
+     * Retrieve a content
+     * 
+     * <p>Retrieves a single LmsContent by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetLmsContentResponse>} - The async response
+     */
+    public CompletableFuture<GetLmsContentResponse> getLmsContent(@Nonnull GetLmsContentRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetLmsContentRequest, GetLmsContentResponse> operation
-              = new GetLmsContent.Async(sdkConfiguration, _headers);
+              = new GetLmsContent.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -539,8 +695,22 @@ public class AsyncLms {
      * @return {@code CompletableFuture<GetLmsCourseResponse>} - The async response
      */
     public CompletableFuture<GetLmsCourseResponse> getLmsCourse(@Nonnull GetLmsCourseRequest request) {
+        return getLmsCourse(request, null);
+    }
+
+    /**
+     * Retrieve a course
+     * 
+     * <p>Retrieves a single LmsCourse by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetLmsCourseResponse>} - The async response
+     */
+    public CompletableFuture<GetLmsCourseResponse> getLmsCourse(@Nonnull GetLmsCourseRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetLmsCourseRequest, GetLmsCourseResponse> operation
-              = new GetLmsCourse.Async(sdkConfiguration, _headers);
+              = new GetLmsCourse.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -568,8 +738,22 @@ public class AsyncLms {
      * @return {@code CompletableFuture<GetLmsInstructorResponse>} - The async response
      */
     public CompletableFuture<GetLmsInstructorResponse> getLmsInstructor(@Nonnull GetLmsInstructorRequest request) {
+        return getLmsInstructor(request, null);
+    }
+
+    /**
+     * Retrieve an instructor
+     * 
+     * <p>Retrieves a single LmsInstructor by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetLmsInstructorResponse>} - The async response
+     */
+    public CompletableFuture<GetLmsInstructorResponse> getLmsInstructor(@Nonnull GetLmsInstructorRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetLmsInstructorRequest, GetLmsInstructorResponse> operation
-              = new GetLmsInstructor.Async(sdkConfiguration, _headers);
+              = new GetLmsInstructor.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -597,8 +781,22 @@ public class AsyncLms {
      * @return {@code CompletableFuture<GetLmsStudentResponse>} - The async response
      */
     public CompletableFuture<GetLmsStudentResponse> getLmsStudent(@Nonnull GetLmsStudentRequest request) {
+        return getLmsStudent(request, null);
+    }
+
+    /**
+     * Retrieve a student
+     * 
+     * <p>Retrieves a single LmsStudent by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetLmsStudentResponse>} - The async response
+     */
+    public CompletableFuture<GetLmsStudentResponse> getLmsStudent(@Nonnull GetLmsStudentRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetLmsStudentRequest, GetLmsStudentResponse> operation
-              = new GetLmsStudent.Async(sdkConfiguration, _headers);
+              = new GetLmsStudent.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -634,8 +832,26 @@ public class AsyncLms {
      * @return {@code CompletableFuture<ListLmsActivitiesResponse>} - The async response
      */
     public CompletableFuture<ListLmsActivitiesResponse> listLmsActivities(@Nonnull ListLmsActivitiesRequest request) {
+        return listLmsActivities(request, null);
+    }
+
+    /**
+     * List all activities
+     * 
+     * <p>Returns a list of LmsActivities. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListLmsActivitiesResponse>} - The async response
+     */
+    public CompletableFuture<ListLmsActivitiesResponse> listLmsActivities(@Nonnull ListLmsActivitiesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListLmsActivitiesRequest, ListLmsActivitiesResponse> operation
-              = new ListLmsActivities.Async(sdkConfiguration, _headers);
+              = new ListLmsActivities.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -671,8 +887,26 @@ public class AsyncLms {
      * @return {@code CompletableFuture<ListLmsClassesResponse>} - The async response
      */
     public CompletableFuture<ListLmsClassesResponse> listLmsClasses(@Nonnull ListLmsClassesRequest request) {
+        return listLmsClasses(request, null);
+    }
+
+    /**
+     * List all classes
+     * 
+     * <p>Returns a list of LmsClasses. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListLmsClassesResponse>} - The async response
+     */
+    public CompletableFuture<ListLmsClassesResponse> listLmsClasses(@Nonnull ListLmsClassesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListLmsClassesRequest, ListLmsClassesResponse> operation
-              = new ListLmsClasses.Async(sdkConfiguration, _headers);
+              = new ListLmsClasses.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -708,8 +942,26 @@ public class AsyncLms {
      * @return {@code CompletableFuture<ListLmsCollectionsResponse>} - The async response
      */
     public CompletableFuture<ListLmsCollectionsResponse> listLmsCollections(@Nonnull ListLmsCollectionsRequest request) {
+        return listLmsCollections(request, null);
+    }
+
+    /**
+     * List all collections
+     * 
+     * <p>Returns a list of LmsCollections. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListLmsCollectionsResponse>} - The async response
+     */
+    public CompletableFuture<ListLmsCollectionsResponse> listLmsCollections(@Nonnull ListLmsCollectionsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListLmsCollectionsRequest, ListLmsCollectionsResponse> operation
-              = new ListLmsCollections.Async(sdkConfiguration, _headers);
+              = new ListLmsCollections.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -745,8 +997,26 @@ public class AsyncLms {
      * @return {@code CompletableFuture<ListLmsContentsResponse>} - The async response
      */
     public CompletableFuture<ListLmsContentsResponse> listLmsContents(@Nonnull ListLmsContentsRequest request) {
+        return listLmsContents(request, null);
+    }
+
+    /**
+     * List all contents
+     * 
+     * <p>Returns a list of LmsContents. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListLmsContentsResponse>} - The async response
+     */
+    public CompletableFuture<ListLmsContentsResponse> listLmsContents(@Nonnull ListLmsContentsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListLmsContentsRequest, ListLmsContentsResponse> operation
-              = new ListLmsContents.Async(sdkConfiguration, _headers);
+              = new ListLmsContents.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -782,8 +1052,26 @@ public class AsyncLms {
      * @return {@code CompletableFuture<ListLmsCoursesResponse>} - The async response
      */
     public CompletableFuture<ListLmsCoursesResponse> listLmsCourses(@Nonnull ListLmsCoursesRequest request) {
+        return listLmsCourses(request, null);
+    }
+
+    /**
+     * List all courses
+     * 
+     * <p>Returns a list of LmsCourses. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListLmsCoursesResponse>} - The async response
+     */
+    public CompletableFuture<ListLmsCoursesResponse> listLmsCourses(@Nonnull ListLmsCoursesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListLmsCoursesRequest, ListLmsCoursesResponse> operation
-              = new ListLmsCourses.Async(sdkConfiguration, _headers);
+              = new ListLmsCourses.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -819,8 +1107,26 @@ public class AsyncLms {
      * @return {@code CompletableFuture<ListLmsInstructorsResponse>} - The async response
      */
     public CompletableFuture<ListLmsInstructorsResponse> listLmsInstructors(@Nonnull ListLmsInstructorsRequest request) {
+        return listLmsInstructors(request, null);
+    }
+
+    /**
+     * List all instructors
+     * 
+     * <p>Returns a list of LmsInstructors. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListLmsInstructorsResponse>} - The async response
+     */
+    public CompletableFuture<ListLmsInstructorsResponse> listLmsInstructors(@Nonnull ListLmsInstructorsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListLmsInstructorsRequest, ListLmsInstructorsResponse> operation
-              = new ListLmsInstructors.Async(sdkConfiguration, _headers);
+              = new ListLmsInstructors.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -856,8 +1162,26 @@ public class AsyncLms {
      * @return {@code CompletableFuture<ListLmsStudentsResponse>} - The async response
      */
     public CompletableFuture<ListLmsStudentsResponse> listLmsStudents(@Nonnull ListLmsStudentsRequest request) {
+        return listLmsStudents(request, null);
+    }
+
+    /**
+     * List all students
+     * 
+     * <p>Returns a list of LmsStudents. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListLmsStudentsResponse>} - The async response
+     */
+    public CompletableFuture<ListLmsStudentsResponse> listLmsStudents(@Nonnull ListLmsStudentsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListLmsStudentsRequest, ListLmsStudentsResponse> operation
-              = new ListLmsStudents.Async(sdkConfiguration, _headers);
+              = new ListLmsStudents.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -885,8 +1209,22 @@ public class AsyncLms {
      * @return {@code CompletableFuture<PatchLmsActivityResponse>} - The async response
      */
     public CompletableFuture<PatchLmsActivityResponse> patchLmsActivity(@Nonnull PatchLmsActivityRequest request) {
+        return patchLmsActivity(request, null);
+    }
+
+    /**
+     * Update an activity
+     * 
+     * <p>Updates the LmsActivity identified by `id`. Provide the unified LmsActivity fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchLmsActivityResponse>} - The async response
+     */
+    public CompletableFuture<PatchLmsActivityResponse> patchLmsActivity(@Nonnull PatchLmsActivityRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchLmsActivityRequest, PatchLmsActivityResponse> operation
-              = new PatchLmsActivity.Async(sdkConfiguration, _headers);
+              = new PatchLmsActivity.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -914,8 +1252,22 @@ public class AsyncLms {
      * @return {@code CompletableFuture<PatchLmsClassResponse>} - The async response
      */
     public CompletableFuture<PatchLmsClassResponse> patchLmsClass(@Nonnull PatchLmsClassRequest request) {
+        return patchLmsClass(request, null);
+    }
+
+    /**
+     * Update a class
+     * 
+     * <p>Updates the LmsClass identified by `id`. Provide the unified LmsClass fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchLmsClassResponse>} - The async response
+     */
+    public CompletableFuture<PatchLmsClassResponse> patchLmsClass(@Nonnull PatchLmsClassRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchLmsClassRequest, PatchLmsClassResponse> operation
-              = new PatchLmsClass.Async(sdkConfiguration, _headers);
+              = new PatchLmsClass.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -943,8 +1295,22 @@ public class AsyncLms {
      * @return {@code CompletableFuture<PatchLmsCollectionResponse>} - The async response
      */
     public CompletableFuture<PatchLmsCollectionResponse> patchLmsCollection(@Nonnull PatchLmsCollectionRequest request) {
+        return patchLmsCollection(request, null);
+    }
+
+    /**
+     * Update a collection
+     * 
+     * <p>Updates the LmsCollection identified by `id`. Provide the unified LmsCollection fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchLmsCollectionResponse>} - The async response
+     */
+    public CompletableFuture<PatchLmsCollectionResponse> patchLmsCollection(@Nonnull PatchLmsCollectionRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchLmsCollectionRequest, PatchLmsCollectionResponse> operation
-              = new PatchLmsCollection.Async(sdkConfiguration, _headers);
+              = new PatchLmsCollection.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -972,8 +1338,22 @@ public class AsyncLms {
      * @return {@code CompletableFuture<PatchLmsContentResponse>} - The async response
      */
     public CompletableFuture<PatchLmsContentResponse> patchLmsContent(@Nonnull PatchLmsContentRequest request) {
+        return patchLmsContent(request, null);
+    }
+
+    /**
+     * Update a content
+     * 
+     * <p>Updates the LmsContent identified by `id`. Provide the unified LmsContent fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchLmsContentResponse>} - The async response
+     */
+    public CompletableFuture<PatchLmsContentResponse> patchLmsContent(@Nonnull PatchLmsContentRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchLmsContentRequest, PatchLmsContentResponse> operation
-              = new PatchLmsContent.Async(sdkConfiguration, _headers);
+              = new PatchLmsContent.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1001,8 +1381,22 @@ public class AsyncLms {
      * @return {@code CompletableFuture<PatchLmsCourseResponse>} - The async response
      */
     public CompletableFuture<PatchLmsCourseResponse> patchLmsCourse(@Nonnull PatchLmsCourseRequest request) {
+        return patchLmsCourse(request, null);
+    }
+
+    /**
+     * Update a course
+     * 
+     * <p>Updates the LmsCourse identified by `id`. Provide the unified LmsCourse fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchLmsCourseResponse>} - The async response
+     */
+    public CompletableFuture<PatchLmsCourseResponse> patchLmsCourse(@Nonnull PatchLmsCourseRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchLmsCourseRequest, PatchLmsCourseResponse> operation
-              = new PatchLmsCourse.Async(sdkConfiguration, _headers);
+              = new PatchLmsCourse.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1030,8 +1424,22 @@ public class AsyncLms {
      * @return {@code CompletableFuture<PatchLmsInstructorResponse>} - The async response
      */
     public CompletableFuture<PatchLmsInstructorResponse> patchLmsInstructor(@Nonnull PatchLmsInstructorRequest request) {
+        return patchLmsInstructor(request, null);
+    }
+
+    /**
+     * Update an instructor
+     * 
+     * <p>Updates the LmsInstructor identified by `id`. Provide the unified LmsInstructor fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchLmsInstructorResponse>} - The async response
+     */
+    public CompletableFuture<PatchLmsInstructorResponse> patchLmsInstructor(@Nonnull PatchLmsInstructorRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchLmsInstructorRequest, PatchLmsInstructorResponse> operation
-              = new PatchLmsInstructor.Async(sdkConfiguration, _headers);
+              = new PatchLmsInstructor.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1059,8 +1467,22 @@ public class AsyncLms {
      * @return {@code CompletableFuture<PatchLmsStudentResponse>} - The async response
      */
     public CompletableFuture<PatchLmsStudentResponse> patchLmsStudent(@Nonnull PatchLmsStudentRequest request) {
+        return patchLmsStudent(request, null);
+    }
+
+    /**
+     * Update a student
+     * 
+     * <p>Updates the LmsStudent identified by `id`. Provide the unified LmsStudent fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchLmsStudentResponse>} - The async response
+     */
+    public CompletableFuture<PatchLmsStudentResponse> patchLmsStudent(@Nonnull PatchLmsStudentRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchLmsStudentRequest, PatchLmsStudentResponse> operation
-              = new PatchLmsStudent.Async(sdkConfiguration, _headers);
+              = new PatchLmsStudent.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1086,8 +1508,21 @@ public class AsyncLms {
      * @return {@code CompletableFuture<RemoveLmsActivityResponse>} - The async response
      */
     public CompletableFuture<RemoveLmsActivityResponse> removeLmsActivity(@Nonnull RemoveLmsActivityRequest request) {
+        return removeLmsActivity(request, null);
+    }
+
+    /**
+     * Remove an activity
+     * 
+     * <p>Deletes the LmsActivity identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveLmsActivityResponse>} - The async response
+     */
+    public CompletableFuture<RemoveLmsActivityResponse> removeLmsActivity(@Nonnull RemoveLmsActivityRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveLmsActivityRequest, RemoveLmsActivityResponse> operation
-              = new RemoveLmsActivity.Async(sdkConfiguration, _headers);
+              = new RemoveLmsActivity.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1113,8 +1548,21 @@ public class AsyncLms {
      * @return {@code CompletableFuture<RemoveLmsClassResponse>} - The async response
      */
     public CompletableFuture<RemoveLmsClassResponse> removeLmsClass(@Nonnull RemoveLmsClassRequest request) {
+        return removeLmsClass(request, null);
+    }
+
+    /**
+     * Remove a class
+     * 
+     * <p>Deletes the LmsClass identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveLmsClassResponse>} - The async response
+     */
+    public CompletableFuture<RemoveLmsClassResponse> removeLmsClass(@Nonnull RemoveLmsClassRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveLmsClassRequest, RemoveLmsClassResponse> operation
-              = new RemoveLmsClass.Async(sdkConfiguration, _headers);
+              = new RemoveLmsClass.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1140,8 +1588,21 @@ public class AsyncLms {
      * @return {@code CompletableFuture<RemoveLmsCollectionResponse>} - The async response
      */
     public CompletableFuture<RemoveLmsCollectionResponse> removeLmsCollection(@Nonnull RemoveLmsCollectionRequest request) {
+        return removeLmsCollection(request, null);
+    }
+
+    /**
+     * Remove a collection
+     * 
+     * <p>Deletes the LmsCollection identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveLmsCollectionResponse>} - The async response
+     */
+    public CompletableFuture<RemoveLmsCollectionResponse> removeLmsCollection(@Nonnull RemoveLmsCollectionRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveLmsCollectionRequest, RemoveLmsCollectionResponse> operation
-              = new RemoveLmsCollection.Async(sdkConfiguration, _headers);
+              = new RemoveLmsCollection.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1167,8 +1628,21 @@ public class AsyncLms {
      * @return {@code CompletableFuture<RemoveLmsContentResponse>} - The async response
      */
     public CompletableFuture<RemoveLmsContentResponse> removeLmsContent(@Nonnull RemoveLmsContentRequest request) {
+        return removeLmsContent(request, null);
+    }
+
+    /**
+     * Remove a content
+     * 
+     * <p>Deletes the LmsContent identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveLmsContentResponse>} - The async response
+     */
+    public CompletableFuture<RemoveLmsContentResponse> removeLmsContent(@Nonnull RemoveLmsContentRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveLmsContentRequest, RemoveLmsContentResponse> operation
-              = new RemoveLmsContent.Async(sdkConfiguration, _headers);
+              = new RemoveLmsContent.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1194,8 +1668,21 @@ public class AsyncLms {
      * @return {@code CompletableFuture<RemoveLmsCourseResponse>} - The async response
      */
     public CompletableFuture<RemoveLmsCourseResponse> removeLmsCourse(@Nonnull RemoveLmsCourseRequest request) {
+        return removeLmsCourse(request, null);
+    }
+
+    /**
+     * Remove a course
+     * 
+     * <p>Deletes the LmsCourse identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveLmsCourseResponse>} - The async response
+     */
+    public CompletableFuture<RemoveLmsCourseResponse> removeLmsCourse(@Nonnull RemoveLmsCourseRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveLmsCourseRequest, RemoveLmsCourseResponse> operation
-              = new RemoveLmsCourse.Async(sdkConfiguration, _headers);
+              = new RemoveLmsCourse.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1221,8 +1708,21 @@ public class AsyncLms {
      * @return {@code CompletableFuture<RemoveLmsInstructorResponse>} - The async response
      */
     public CompletableFuture<RemoveLmsInstructorResponse> removeLmsInstructor(@Nonnull RemoveLmsInstructorRequest request) {
+        return removeLmsInstructor(request, null);
+    }
+
+    /**
+     * Remove an instructor
+     * 
+     * <p>Deletes the LmsInstructor identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveLmsInstructorResponse>} - The async response
+     */
+    public CompletableFuture<RemoveLmsInstructorResponse> removeLmsInstructor(@Nonnull RemoveLmsInstructorRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveLmsInstructorRequest, RemoveLmsInstructorResponse> operation
-              = new RemoveLmsInstructor.Async(sdkConfiguration, _headers);
+              = new RemoveLmsInstructor.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1248,8 +1748,21 @@ public class AsyncLms {
      * @return {@code CompletableFuture<RemoveLmsStudentResponse>} - The async response
      */
     public CompletableFuture<RemoveLmsStudentResponse> removeLmsStudent(@Nonnull RemoveLmsStudentRequest request) {
+        return removeLmsStudent(request, null);
+    }
+
+    /**
+     * Remove a student
+     * 
+     * <p>Deletes the LmsStudent identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveLmsStudentResponse>} - The async response
+     */
+    public CompletableFuture<RemoveLmsStudentResponse> removeLmsStudent(@Nonnull RemoveLmsStudentRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveLmsStudentRequest, RemoveLmsStudentResponse> operation
-              = new RemoveLmsStudent.Async(sdkConfiguration, _headers);
+              = new RemoveLmsStudent.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1277,8 +1790,22 @@ public class AsyncLms {
      * @return {@code CompletableFuture<UpdateLmsActivityResponse>} - The async response
      */
     public CompletableFuture<UpdateLmsActivityResponse> updateLmsActivity(@Nonnull UpdateLmsActivityRequest request) {
+        return updateLmsActivity(request, null);
+    }
+
+    /**
+     * Update an activity
+     * 
+     * <p>Updates the LmsActivity identified by `id`. Provide the unified LmsActivity fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateLmsActivityResponse>} - The async response
+     */
+    public CompletableFuture<UpdateLmsActivityResponse> updateLmsActivity(@Nonnull UpdateLmsActivityRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateLmsActivityRequest, UpdateLmsActivityResponse> operation
-              = new UpdateLmsActivity.Async(sdkConfiguration, _headers);
+              = new UpdateLmsActivity.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1306,8 +1833,22 @@ public class AsyncLms {
      * @return {@code CompletableFuture<UpdateLmsClassResponse>} - The async response
      */
     public CompletableFuture<UpdateLmsClassResponse> updateLmsClass(@Nonnull UpdateLmsClassRequest request) {
+        return updateLmsClass(request, null);
+    }
+
+    /**
+     * Update a class
+     * 
+     * <p>Updates the LmsClass identified by `id`. Provide the unified LmsClass fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateLmsClassResponse>} - The async response
+     */
+    public CompletableFuture<UpdateLmsClassResponse> updateLmsClass(@Nonnull UpdateLmsClassRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateLmsClassRequest, UpdateLmsClassResponse> operation
-              = new UpdateLmsClass.Async(sdkConfiguration, _headers);
+              = new UpdateLmsClass.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1335,8 +1876,22 @@ public class AsyncLms {
      * @return {@code CompletableFuture<UpdateLmsCollectionResponse>} - The async response
      */
     public CompletableFuture<UpdateLmsCollectionResponse> updateLmsCollection(@Nonnull UpdateLmsCollectionRequest request) {
+        return updateLmsCollection(request, null);
+    }
+
+    /**
+     * Update a collection
+     * 
+     * <p>Updates the LmsCollection identified by `id`. Provide the unified LmsCollection fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateLmsCollectionResponse>} - The async response
+     */
+    public CompletableFuture<UpdateLmsCollectionResponse> updateLmsCollection(@Nonnull UpdateLmsCollectionRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateLmsCollectionRequest, UpdateLmsCollectionResponse> operation
-              = new UpdateLmsCollection.Async(sdkConfiguration, _headers);
+              = new UpdateLmsCollection.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1364,8 +1919,22 @@ public class AsyncLms {
      * @return {@code CompletableFuture<UpdateLmsContentResponse>} - The async response
      */
     public CompletableFuture<UpdateLmsContentResponse> updateLmsContent(@Nonnull UpdateLmsContentRequest request) {
+        return updateLmsContent(request, null);
+    }
+
+    /**
+     * Update a content
+     * 
+     * <p>Updates the LmsContent identified by `id`. Provide the unified LmsContent fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateLmsContentResponse>} - The async response
+     */
+    public CompletableFuture<UpdateLmsContentResponse> updateLmsContent(@Nonnull UpdateLmsContentRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateLmsContentRequest, UpdateLmsContentResponse> operation
-              = new UpdateLmsContent.Async(sdkConfiguration, _headers);
+              = new UpdateLmsContent.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1393,8 +1962,22 @@ public class AsyncLms {
      * @return {@code CompletableFuture<UpdateLmsCourseResponse>} - The async response
      */
     public CompletableFuture<UpdateLmsCourseResponse> updateLmsCourse(@Nonnull UpdateLmsCourseRequest request) {
+        return updateLmsCourse(request, null);
+    }
+
+    /**
+     * Update a course
+     * 
+     * <p>Updates the LmsCourse identified by `id`. Provide the unified LmsCourse fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateLmsCourseResponse>} - The async response
+     */
+    public CompletableFuture<UpdateLmsCourseResponse> updateLmsCourse(@Nonnull UpdateLmsCourseRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateLmsCourseRequest, UpdateLmsCourseResponse> operation
-              = new UpdateLmsCourse.Async(sdkConfiguration, _headers);
+              = new UpdateLmsCourse.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1422,8 +2005,22 @@ public class AsyncLms {
      * @return {@code CompletableFuture<UpdateLmsInstructorResponse>} - The async response
      */
     public CompletableFuture<UpdateLmsInstructorResponse> updateLmsInstructor(@Nonnull UpdateLmsInstructorRequest request) {
+        return updateLmsInstructor(request, null);
+    }
+
+    /**
+     * Update an instructor
+     * 
+     * <p>Updates the LmsInstructor identified by `id`. Provide the unified LmsInstructor fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateLmsInstructorResponse>} - The async response
+     */
+    public CompletableFuture<UpdateLmsInstructorResponse> updateLmsInstructor(@Nonnull UpdateLmsInstructorRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateLmsInstructorRequest, UpdateLmsInstructorResponse> operation
-              = new UpdateLmsInstructor.Async(sdkConfiguration, _headers);
+              = new UpdateLmsInstructor.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1451,8 +2048,22 @@ public class AsyncLms {
      * @return {@code CompletableFuture<UpdateLmsStudentResponse>} - The async response
      */
     public CompletableFuture<UpdateLmsStudentResponse> updateLmsStudent(@Nonnull UpdateLmsStudentRequest request) {
+        return updateLmsStudent(request, null);
+    }
+
+    /**
+     * Update a student
+     * 
+     * <p>Updates the LmsStudent identified by `id`. Provide the unified LmsStudent fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateLmsStudentResponse>} - The async response
+     */
+    public CompletableFuture<UpdateLmsStudentResponse> updateLmsStudent(@Nonnull UpdateLmsStudentRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateLmsStudentRequest, UpdateLmsStudentResponse> operation
-              = new UpdateLmsStudent.Async(sdkConfiguration, _headers);
+              = new UpdateLmsStudent.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingPaymenttermRequest;
 import to.unified.unified_java_sdk.models.operations.GetAccountingPaymenttermRequest;
@@ -32,6 +33,7 @@ import to.unified.unified_java_sdk.operations.PatchAccountingPaymentterm;
 import to.unified.unified_java_sdk.operations.RemoveAccountingPaymentterm;
 import to.unified.unified_java_sdk.operations.UpdateAccountingPaymentterm;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncPaymentterm {
@@ -76,8 +78,22 @@ public class AsyncPaymentterm {
      * @return {@code CompletableFuture<CreateAccountingPaymenttermResponse>} - The async response
      */
     public CompletableFuture<CreateAccountingPaymenttermResponse> createAccountingPaymentterm(@Nonnull CreateAccountingPaymenttermRequest request) {
+        return createAccountingPaymentterm(request, null);
+    }
+
+    /**
+     * Create a paymentterm
+     * 
+     * <p>Creates a AccountingPaymentterm. Provide the unified AccountingPaymentterm fields in the request
+     * body; they are mapped to the provider's API. Returns the created AccountingPaymentterm.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateAccountingPaymenttermResponse>} - The async response
+     */
+    public CompletableFuture<CreateAccountingPaymenttermResponse> createAccountingPaymentterm(@Nonnull CreateAccountingPaymenttermRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateAccountingPaymenttermRequest, CreateAccountingPaymenttermResponse> operation
-              = new CreateAccountingPaymentterm.Async(sdkConfiguration, _headers);
+              = new CreateAccountingPaymentterm.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -105,8 +121,22 @@ public class AsyncPaymentterm {
      * @return {@code CompletableFuture<GetAccountingPaymenttermResponse>} - The async response
      */
     public CompletableFuture<GetAccountingPaymenttermResponse> getAccountingPaymentterm(@Nonnull GetAccountingPaymenttermRequest request) {
+        return getAccountingPaymentterm(request, null);
+    }
+
+    /**
+     * Retrieve a paymentterm
+     * 
+     * <p>Retrieves a single AccountingPaymentterm by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetAccountingPaymenttermResponse>} - The async response
+     */
+    public CompletableFuture<GetAccountingPaymenttermResponse> getAccountingPaymentterm(@Nonnull GetAccountingPaymenttermRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetAccountingPaymenttermRequest, GetAccountingPaymenttermResponse> operation
-              = new GetAccountingPaymentterm.Async(sdkConfiguration, _headers);
+              = new GetAccountingPaymentterm.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -142,8 +172,26 @@ public class AsyncPaymentterm {
      * @return {@code CompletableFuture<ListAccountingPaymenttermsResponse>} - The async response
      */
     public CompletableFuture<ListAccountingPaymenttermsResponse> listAccountingPaymentterms(@Nonnull ListAccountingPaymenttermsRequest request) {
+        return listAccountingPaymentterms(request, null);
+    }
+
+    /**
+     * List all paymentterms
+     * 
+     * <p>Returns a list of AccountingPaymentterms. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListAccountingPaymenttermsResponse>} - The async response
+     */
+    public CompletableFuture<ListAccountingPaymenttermsResponse> listAccountingPaymentterms(@Nonnull ListAccountingPaymenttermsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListAccountingPaymenttermsRequest, ListAccountingPaymenttermsResponse> operation
-              = new ListAccountingPaymentterms.Async(sdkConfiguration, _headers);
+              = new ListAccountingPaymentterms.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -171,8 +219,22 @@ public class AsyncPaymentterm {
      * @return {@code CompletableFuture<PatchAccountingPaymenttermResponse>} - The async response
      */
     public CompletableFuture<PatchAccountingPaymenttermResponse> patchAccountingPaymentterm(@Nonnull PatchAccountingPaymenttermRequest request) {
+        return patchAccountingPaymentterm(request, null);
+    }
+
+    /**
+     * Update a paymentterm
+     * 
+     * <p>Updates the AccountingPaymentterm identified by `id`. Provide the unified AccountingPaymentterm
+     * fields to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchAccountingPaymenttermResponse>} - The async response
+     */
+    public CompletableFuture<PatchAccountingPaymenttermResponse> patchAccountingPaymentterm(@Nonnull PatchAccountingPaymenttermRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchAccountingPaymenttermRequest, PatchAccountingPaymenttermResponse> operation
-              = new PatchAccountingPaymentterm.Async(sdkConfiguration, _headers);
+              = new PatchAccountingPaymentterm.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -198,8 +260,21 @@ public class AsyncPaymentterm {
      * @return {@code CompletableFuture<RemoveAccountingPaymenttermResponse>} - The async response
      */
     public CompletableFuture<RemoveAccountingPaymenttermResponse> removeAccountingPaymentterm(@Nonnull RemoveAccountingPaymenttermRequest request) {
+        return removeAccountingPaymentterm(request, null);
+    }
+
+    /**
+     * Remove a paymentterm
+     * 
+     * <p>Deletes the AccountingPaymentterm identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveAccountingPaymenttermResponse>} - The async response
+     */
+    public CompletableFuture<RemoveAccountingPaymenttermResponse> removeAccountingPaymentterm(@Nonnull RemoveAccountingPaymenttermRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveAccountingPaymenttermRequest, RemoveAccountingPaymenttermResponse> operation
-              = new RemoveAccountingPaymentterm.Async(sdkConfiguration, _headers);
+              = new RemoveAccountingPaymentterm.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -227,8 +302,22 @@ public class AsyncPaymentterm {
      * @return {@code CompletableFuture<UpdateAccountingPaymenttermResponse>} - The async response
      */
     public CompletableFuture<UpdateAccountingPaymenttermResponse> updateAccountingPaymentterm(@Nonnull UpdateAccountingPaymenttermRequest request) {
+        return updateAccountingPaymentterm(request, null);
+    }
+
+    /**
+     * Update a paymentterm
+     * 
+     * <p>Updates the AccountingPaymentterm identified by `id`. Provide the unified AccountingPaymentterm
+     * fields to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateAccountingPaymenttermResponse>} - The async response
+     */
+    public CompletableFuture<UpdateAccountingPaymenttermResponse> updateAccountingPaymentterm(@Nonnull UpdateAccountingPaymenttermRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateAccountingPaymenttermRequest, UpdateAccountingPaymenttermResponse> operation
-              = new UpdateAccountingPaymentterm.Async(sdkConfiguration, _headers);
+              = new UpdateAccountingPaymentterm.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

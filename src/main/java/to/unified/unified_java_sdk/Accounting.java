@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Deprecated;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingAccountRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingAccountRequestBuilder;
@@ -560,6 +561,7 @@ import to.unified.unified_java_sdk.operations.UpdateAccountingTaxrate;
 import to.unified.unified_java_sdk.operations.UpdateAccountingTransaction;
 import to.unified.unified_java_sdk.operations.UpdateAccountingVendorcredit;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Accounting {
@@ -604,8 +606,23 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateAccountingAccountResponse createAccountingAccount(@Nonnull CreateAccountingAccountRequest request) {
+        return createAccountingAccount(request, null);
+    }
+
+    /**
+     * Create an account
+     * 
+     * <p>Creates a AccountingAccount. Provide the unified AccountingAccount fields in the request body; they
+     * are mapped to the provider's API. Returns the created AccountingAccount.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateAccountingAccountResponse createAccountingAccount(@Nonnull CreateAccountingAccountRequest request, @Nullable Options options) {
         RequestOperation<CreateAccountingAccountRequest, CreateAccountingAccountResponse> operation
-              = new CreateAccountingAccount.Sync(sdkConfiguration, _headers);
+              = new CreateAccountingAccount.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -632,8 +649,23 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateAccountingBankfeedaccountResponse createAccountingBankfeedaccount(@Nonnull CreateAccountingBankfeedaccountRequest request) {
+        return createAccountingBankfeedaccount(request, null);
+    }
+
+    /**
+     * Create a bankfeedaccount
+     * 
+     * <p>Creates a AccountingBankfeedaccount. Provide the unified AccountingBankfeedaccount fields in the
+     * request body; they are mapped to the provider's API. Returns the created AccountingBankfeedaccount.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateAccountingBankfeedaccountResponse createAccountingBankfeedaccount(@Nonnull CreateAccountingBankfeedaccountRequest request, @Nullable Options options) {
         RequestOperation<CreateAccountingBankfeedaccountRequest, CreateAccountingBankfeedaccountResponse> operation
-              = new CreateAccountingBankfeedaccount.Sync(sdkConfiguration, _headers);
+              = new CreateAccountingBankfeedaccount.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -662,8 +694,24 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateAccountingBankfeedtransactionResponse createAccountingBankfeedtransaction(@Nonnull CreateAccountingBankfeedtransactionRequest request) {
+        return createAccountingBankfeedtransaction(request, null);
+    }
+
+    /**
+     * Create a bankfeedtransaction
+     * 
+     * <p>Creates a AccountingBankfeedtransaction. Provide the unified AccountingBankfeedtransaction fields in
+     * the request body; they are mapped to the provider's API. Returns the created
+     * AccountingBankfeedtransaction.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateAccountingBankfeedtransactionResponse createAccountingBankfeedtransaction(@Nonnull CreateAccountingBankfeedtransactionRequest request, @Nullable Options options) {
         RequestOperation<CreateAccountingBankfeedtransactionRequest, CreateAccountingBankfeedtransactionResponse> operation
-              = new CreateAccountingBankfeedtransaction.Sync(sdkConfiguration, _headers);
+              = new CreateAccountingBankfeedtransaction.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -690,8 +738,23 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateAccountingBillResponse createAccountingBill(@Nonnull CreateAccountingBillRequest request) {
+        return createAccountingBill(request, null);
+    }
+
+    /**
+     * Create a bill
+     * 
+     * <p>Creates a AccountingBill. Provide the unified AccountingBill fields in the request body; they are
+     * mapped to the provider's API. Returns the created AccountingBill.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateAccountingBillResponse createAccountingBill(@Nonnull CreateAccountingBillRequest request, @Nullable Options options) {
         RequestOperation<CreateAccountingBillRequest, CreateAccountingBillResponse> operation
-              = new CreateAccountingBill.Sync(sdkConfiguration, _headers);
+              = new CreateAccountingBill.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -718,8 +781,23 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateAccountingCategoryResponse createAccountingCategory(@Nonnull CreateAccountingCategoryRequest request) {
+        return createAccountingCategory(request, null);
+    }
+
+    /**
+     * Create a category
+     * 
+     * <p>Creates a AccountingCategory. Provide the unified AccountingCategory fields in the request body;
+     * they are mapped to the provider's API. Returns the created AccountingCategory.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateAccountingCategoryResponse createAccountingCategory(@Nonnull CreateAccountingCategoryRequest request, @Nullable Options options) {
         RequestOperation<CreateAccountingCategoryRequest, CreateAccountingCategoryResponse> operation
-              = new CreateAccountingCategory.Sync(sdkConfiguration, _headers);
+              = new CreateAccountingCategory.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -746,8 +824,23 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateAccountingContactResponse createAccountingContact(@Nonnull CreateAccountingContactRequest request) {
+        return createAccountingContact(request, null);
+    }
+
+    /**
+     * Create a contact
+     * 
+     * <p>Creates a AccountingContact. Provide the unified AccountingContact fields in the request body; they
+     * are mapped to the provider's API. Returns the created AccountingContact.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateAccountingContactResponse createAccountingContact(@Nonnull CreateAccountingContactRequest request, @Nullable Options options) {
         RequestOperation<CreateAccountingContactRequest, CreateAccountingContactResponse> operation
-              = new CreateAccountingContact.Sync(sdkConfiguration, _headers);
+              = new CreateAccountingContact.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -774,8 +867,23 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateAccountingCreditmemoResponse createAccountingCreditmemo(@Nonnull CreateAccountingCreditmemoRequest request) {
+        return createAccountingCreditmemo(request, null);
+    }
+
+    /**
+     * Create a creditmemo
+     * 
+     * <p>Creates a AccountingCreditmemo. Provide the unified AccountingCreditmemo fields in the request body;
+     * they are mapped to the provider's API. Returns the created AccountingCreditmemo.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateAccountingCreditmemoResponse createAccountingCreditmemo(@Nonnull CreateAccountingCreditmemoRequest request, @Nullable Options options) {
         RequestOperation<CreateAccountingCreditmemoRequest, CreateAccountingCreditmemoResponse> operation
-              = new CreateAccountingCreditmemo.Sync(sdkConfiguration, _headers);
+              = new CreateAccountingCreditmemo.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -802,8 +910,23 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateAccountingExpenseResponse createAccountingExpense(@Nonnull CreateAccountingExpenseRequest request) {
+        return createAccountingExpense(request, null);
+    }
+
+    /**
+     * Create an expense
+     * 
+     * <p>Creates a AccountingExpense. Provide the unified AccountingExpense fields in the request body; they
+     * are mapped to the provider's API. Returns the created AccountingExpense.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateAccountingExpenseResponse createAccountingExpense(@Nonnull CreateAccountingExpenseRequest request, @Nullable Options options) {
         RequestOperation<CreateAccountingExpenseRequest, CreateAccountingExpenseResponse> operation
-              = new CreateAccountingExpense.Sync(sdkConfiguration, _headers);
+              = new CreateAccountingExpense.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -830,8 +953,23 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateAccountingExpensereportResponse createAccountingExpensereport(@Nonnull CreateAccountingExpensereportRequest request) {
+        return createAccountingExpensereport(request, null);
+    }
+
+    /**
+     * Create an expensereport
+     * 
+     * <p>Creates a AccountingExpensereport. Provide the unified AccountingExpensereport fields in the request
+     * body; they are mapped to the provider's API. Returns the created AccountingExpensereport.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateAccountingExpensereportResponse createAccountingExpensereport(@Nonnull CreateAccountingExpensereportRequest request, @Nullable Options options) {
         RequestOperation<CreateAccountingExpensereportRequest, CreateAccountingExpensereportResponse> operation
-              = new CreateAccountingExpensereport.Sync(sdkConfiguration, _headers);
+              = new CreateAccountingExpensereport.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -858,8 +996,23 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateAccountingInvoiceResponse createAccountingInvoice(@Nonnull CreateAccountingInvoiceRequest request) {
+        return createAccountingInvoice(request, null);
+    }
+
+    /**
+     * Create an invoice
+     * 
+     * <p>Creates a AccountingInvoice. Provide the unified AccountingInvoice fields in the request body; they
+     * are mapped to the provider's API. Returns the created AccountingInvoice.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateAccountingInvoiceResponse createAccountingInvoice(@Nonnull CreateAccountingInvoiceRequest request, @Nullable Options options) {
         RequestOperation<CreateAccountingInvoiceRequest, CreateAccountingInvoiceResponse> operation
-              = new CreateAccountingInvoice.Sync(sdkConfiguration, _headers);
+              = new CreateAccountingInvoice.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -886,8 +1039,23 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateAccountingJournalResponse createAccountingJournal(@Nonnull CreateAccountingJournalRequest request) {
+        return createAccountingJournal(request, null);
+    }
+
+    /**
+     * Create a journal
+     * 
+     * <p>Creates a AccountingJournal. Provide the unified AccountingJournal fields in the request body; they
+     * are mapped to the provider's API. Returns the created AccountingJournal.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateAccountingJournalResponse createAccountingJournal(@Nonnull CreateAccountingJournalRequest request, @Nullable Options options) {
         RequestOperation<CreateAccountingJournalRequest, CreateAccountingJournalResponse> operation
-              = new CreateAccountingJournal.Sync(sdkConfiguration, _headers);
+              = new CreateAccountingJournal.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -918,8 +1086,25 @@ public class Accounting {
      */
     @Deprecated
     public CreateAccountingOrderResponse createAccountingOrder(@Nonnull CreateAccountingOrderRequest request) {
+        return createAccountingOrder(request, null);
+    }
+
+    /**
+     * Create an order
+     * 
+     * <p>Creates a AccountingOrder. Provide the unified AccountingOrder fields in the request body; they are
+     * mapped to the provider's API. Returns the created AccountingOrder.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     * @deprecated method: This will be removed in a future release, please migrate away from it as soon as possible.
+     */
+    @Deprecated
+    public CreateAccountingOrderResponse createAccountingOrder(@Nonnull CreateAccountingOrderRequest request, @Nullable Options options) {
         RequestOperation<CreateAccountingOrderRequest, CreateAccountingOrderResponse> operation
-              = new CreateAccountingOrder.Sync(sdkConfiguration, _headers);
+              = new CreateAccountingOrder.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -946,8 +1131,23 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateAccountingPaymenttermResponse createAccountingPaymentterm(@Nonnull CreateAccountingPaymenttermRequest request) {
+        return createAccountingPaymentterm(request, null);
+    }
+
+    /**
+     * Create a paymentterm
+     * 
+     * <p>Creates a AccountingPaymentterm. Provide the unified AccountingPaymentterm fields in the request
+     * body; they are mapped to the provider's API. Returns the created AccountingPaymentterm.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateAccountingPaymenttermResponse createAccountingPaymentterm(@Nonnull CreateAccountingPaymenttermRequest request, @Nullable Options options) {
         RequestOperation<CreateAccountingPaymenttermRequest, CreateAccountingPaymenttermResponse> operation
-              = new CreateAccountingPaymentterm.Sync(sdkConfiguration, _headers);
+              = new CreateAccountingPaymentterm.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -974,8 +1174,23 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateAccountingProjectResponse createAccountingProject(@Nonnull CreateAccountingProjectRequest request) {
+        return createAccountingProject(request, null);
+    }
+
+    /**
+     * Create a project
+     * 
+     * <p>Creates a AccountingProject. Provide the unified AccountingProject fields in the request body; they
+     * are mapped to the provider's API. Returns the created AccountingProject.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateAccountingProjectResponse createAccountingProject(@Nonnull CreateAccountingProjectRequest request, @Nullable Options options) {
         RequestOperation<CreateAccountingProjectRequest, CreateAccountingProjectResponse> operation
-              = new CreateAccountingProject.Sync(sdkConfiguration, _headers);
+              = new CreateAccountingProject.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1002,8 +1217,23 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateAccountingPurchaseorderResponse createAccountingPurchaseorder(@Nonnull CreateAccountingPurchaseorderRequest request) {
+        return createAccountingPurchaseorder(request, null);
+    }
+
+    /**
+     * Create a purchaseorder
+     * 
+     * <p>Creates a AccountingPurchaseorder. Provide the unified AccountingPurchaseorder fields in the request
+     * body; they are mapped to the provider's API. Returns the created AccountingPurchaseorder.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateAccountingPurchaseorderResponse createAccountingPurchaseorder(@Nonnull CreateAccountingPurchaseorderRequest request, @Nullable Options options) {
         RequestOperation<CreateAccountingPurchaseorderRequest, CreateAccountingPurchaseorderResponse> operation
-              = new CreateAccountingPurchaseorder.Sync(sdkConfiguration, _headers);
+              = new CreateAccountingPurchaseorder.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1030,8 +1260,23 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateAccountingQuoteResponse createAccountingQuote(@Nonnull CreateAccountingQuoteRequest request) {
+        return createAccountingQuote(request, null);
+    }
+
+    /**
+     * Create a quote
+     * 
+     * <p>Creates a AccountingQuote. Provide the unified AccountingQuote fields in the request body; they are
+     * mapped to the provider's API. Returns the created AccountingQuote.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateAccountingQuoteResponse createAccountingQuote(@Nonnull CreateAccountingQuoteRequest request, @Nullable Options options) {
         RequestOperation<CreateAccountingQuoteRequest, CreateAccountingQuoteResponse> operation
-              = new CreateAccountingQuote.Sync(sdkConfiguration, _headers);
+              = new CreateAccountingQuote.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1058,8 +1303,23 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateAccountingSalesorderResponse createAccountingSalesorder(@Nonnull CreateAccountingSalesorderRequest request) {
+        return createAccountingSalesorder(request, null);
+    }
+
+    /**
+     * Create a salesorder
+     * 
+     * <p>Creates a AccountingSalesorder. Provide the unified AccountingSalesorder fields in the request body;
+     * they are mapped to the provider's API. Returns the created AccountingSalesorder.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateAccountingSalesorderResponse createAccountingSalesorder(@Nonnull CreateAccountingSalesorderRequest request, @Nullable Options options) {
         RequestOperation<CreateAccountingSalesorderRequest, CreateAccountingSalesorderResponse> operation
-              = new CreateAccountingSalesorder.Sync(sdkConfiguration, _headers);
+              = new CreateAccountingSalesorder.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1086,8 +1346,23 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateAccountingTaxrateResponse createAccountingTaxrate(@Nonnull CreateAccountingTaxrateRequest request) {
+        return createAccountingTaxrate(request, null);
+    }
+
+    /**
+     * Create a taxrate
+     * 
+     * <p>Creates a AccountingTaxrate. Provide the unified AccountingTaxrate fields in the request body; they
+     * are mapped to the provider's API. Returns the created AccountingTaxrate.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateAccountingTaxrateResponse createAccountingTaxrate(@Nonnull CreateAccountingTaxrateRequest request, @Nullable Options options) {
         RequestOperation<CreateAccountingTaxrateRequest, CreateAccountingTaxrateResponse> operation
-              = new CreateAccountingTaxrate.Sync(sdkConfiguration, _headers);
+              = new CreateAccountingTaxrate.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1114,8 +1389,23 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateAccountingTransactionResponse createAccountingTransaction(@Nonnull CreateAccountingTransactionRequest request) {
+        return createAccountingTransaction(request, null);
+    }
+
+    /**
+     * Create a transaction
+     * 
+     * <p>Creates a AccountingTransaction. Provide the unified AccountingTransaction fields in the request
+     * body; they are mapped to the provider's API. Returns the created AccountingTransaction.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateAccountingTransactionResponse createAccountingTransaction(@Nonnull CreateAccountingTransactionRequest request, @Nullable Options options) {
         RequestOperation<CreateAccountingTransactionRequest, CreateAccountingTransactionResponse> operation
-              = new CreateAccountingTransaction.Sync(sdkConfiguration, _headers);
+              = new CreateAccountingTransaction.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1142,8 +1432,23 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateAccountingVendorcreditResponse createAccountingVendorcredit(@Nonnull CreateAccountingVendorcreditRequest request) {
+        return createAccountingVendorcredit(request, null);
+    }
+
+    /**
+     * Create a vendorcredit
+     * 
+     * <p>Creates a AccountingVendorcredit. Provide the unified AccountingVendorcredit fields in the request
+     * body; they are mapped to the provider's API. Returns the created AccountingVendorcredit.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateAccountingVendorcreditResponse createAccountingVendorcredit(@Nonnull CreateAccountingVendorcreditRequest request, @Nullable Options options) {
         RequestOperation<CreateAccountingVendorcreditRequest, CreateAccountingVendorcreditResponse> operation
-              = new CreateAccountingVendorcredit.Sync(sdkConfiguration, _headers);
+              = new CreateAccountingVendorcredit.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1170,8 +1475,23 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAccountingAccountResponse getAccountingAccount(@Nonnull GetAccountingAccountRequest request) {
+        return getAccountingAccount(request, null);
+    }
+
+    /**
+     * Retrieve an account
+     * 
+     * <p>Retrieves a single AccountingAccount by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAccountingAccountResponse getAccountingAccount(@Nonnull GetAccountingAccountRequest request, @Nullable Options options) {
         RequestOperation<GetAccountingAccountRequest, GetAccountingAccountResponse> operation
-              = new GetAccountingAccount.Sync(sdkConfiguration, _headers);
+              = new GetAccountingAccount.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1198,8 +1518,23 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAccountingAgedpayableResponse getAccountingAgedpayable(@Nonnull GetAccountingAgedpayableRequest request) {
+        return getAccountingAgedpayable(request, null);
+    }
+
+    /**
+     * Retrieve an agedpayable
+     * 
+     * <p>Retrieves a single AccountingAgedpayable by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAccountingAgedpayableResponse getAccountingAgedpayable(@Nonnull GetAccountingAgedpayableRequest request, @Nullable Options options) {
         RequestOperation<GetAccountingAgedpayableRequest, GetAccountingAgedpayableResponse> operation
-              = new GetAccountingAgedpayable.Sync(sdkConfiguration, _headers);
+              = new GetAccountingAgedpayable.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1226,8 +1561,23 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAccountingAgedreceivableResponse getAccountingAgedreceivable(@Nonnull GetAccountingAgedreceivableRequest request) {
+        return getAccountingAgedreceivable(request, null);
+    }
+
+    /**
+     * Retrieve an agedreceivable
+     * 
+     * <p>Retrieves a single AccountingAgedreceivable by its `id`. Obtain `id` values from the corresponding
+     * list endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAccountingAgedreceivableResponse getAccountingAgedreceivable(@Nonnull GetAccountingAgedreceivableRequest request, @Nullable Options options) {
         RequestOperation<GetAccountingAgedreceivableRequest, GetAccountingAgedreceivableResponse> operation
-              = new GetAccountingAgedreceivable.Sync(sdkConfiguration, _headers);
+              = new GetAccountingAgedreceivable.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1254,8 +1604,23 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAccountingBalancesheetResponse getAccountingBalancesheet(@Nonnull GetAccountingBalancesheetRequest request) {
+        return getAccountingBalancesheet(request, null);
+    }
+
+    /**
+     * Retrieve a balancesheet
+     * 
+     * <p>Retrieves a single AccountingBalancesheet by its `id`. Obtain `id` values from the corresponding
+     * list endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAccountingBalancesheetResponse getAccountingBalancesheet(@Nonnull GetAccountingBalancesheetRequest request, @Nullable Options options) {
         RequestOperation<GetAccountingBalancesheetRequest, GetAccountingBalancesheetResponse> operation
-              = new GetAccountingBalancesheet.Sync(sdkConfiguration, _headers);
+              = new GetAccountingBalancesheet.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1282,8 +1647,23 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAccountingBankfeedaccountResponse getAccountingBankfeedaccount(@Nonnull GetAccountingBankfeedaccountRequest request) {
+        return getAccountingBankfeedaccount(request, null);
+    }
+
+    /**
+     * Retrieve a bankfeedaccount
+     * 
+     * <p>Retrieves a single AccountingBankfeedaccount by its `id`. Obtain `id` values from the corresponding
+     * list endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAccountingBankfeedaccountResponse getAccountingBankfeedaccount(@Nonnull GetAccountingBankfeedaccountRequest request, @Nullable Options options) {
         RequestOperation<GetAccountingBankfeedaccountRequest, GetAccountingBankfeedaccountResponse> operation
-              = new GetAccountingBankfeedaccount.Sync(sdkConfiguration, _headers);
+              = new GetAccountingBankfeedaccount.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1310,8 +1690,23 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAccountingBankfeedtransactionResponse getAccountingBankfeedtransaction(@Nonnull GetAccountingBankfeedtransactionRequest request) {
+        return getAccountingBankfeedtransaction(request, null);
+    }
+
+    /**
+     * Retrieve a bankfeedtransaction
+     * 
+     * <p>Retrieves a single AccountingBankfeedtransaction by its `id`. Obtain `id` values from the
+     * corresponding list endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAccountingBankfeedtransactionResponse getAccountingBankfeedtransaction(@Nonnull GetAccountingBankfeedtransactionRequest request, @Nullable Options options) {
         RequestOperation<GetAccountingBankfeedtransactionRequest, GetAccountingBankfeedtransactionResponse> operation
-              = new GetAccountingBankfeedtransaction.Sync(sdkConfiguration, _headers);
+              = new GetAccountingBankfeedtransaction.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1338,8 +1733,23 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAccountingBillResponse getAccountingBill(@Nonnull GetAccountingBillRequest request) {
+        return getAccountingBill(request, null);
+    }
+
+    /**
+     * Retrieve a bill
+     * 
+     * <p>Retrieves a single AccountingBill by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAccountingBillResponse getAccountingBill(@Nonnull GetAccountingBillRequest request, @Nullable Options options) {
         RequestOperation<GetAccountingBillRequest, GetAccountingBillResponse> operation
-              = new GetAccountingBill.Sync(sdkConfiguration, _headers);
+              = new GetAccountingBill.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1366,8 +1776,23 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAccountingCashflowResponse getAccountingCashflow(@Nonnull GetAccountingCashflowRequest request) {
+        return getAccountingCashflow(request, null);
+    }
+
+    /**
+     * Retrieve a cashflow
+     * 
+     * <p>Retrieves a single AccountingCashflow by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAccountingCashflowResponse getAccountingCashflow(@Nonnull GetAccountingCashflowRequest request, @Nullable Options options) {
         RequestOperation<GetAccountingCashflowRequest, GetAccountingCashflowResponse> operation
-              = new GetAccountingCashflow.Sync(sdkConfiguration, _headers);
+              = new GetAccountingCashflow.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1394,8 +1819,23 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAccountingCategoryResponse getAccountingCategory(@Nonnull GetAccountingCategoryRequest request) {
+        return getAccountingCategory(request, null);
+    }
+
+    /**
+     * Retrieve a category
+     * 
+     * <p>Retrieves a single AccountingCategory by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAccountingCategoryResponse getAccountingCategory(@Nonnull GetAccountingCategoryRequest request, @Nullable Options options) {
         RequestOperation<GetAccountingCategoryRequest, GetAccountingCategoryResponse> operation
-              = new GetAccountingCategory.Sync(sdkConfiguration, _headers);
+              = new GetAccountingCategory.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1422,8 +1862,23 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAccountingContactResponse getAccountingContact(@Nonnull GetAccountingContactRequest request) {
+        return getAccountingContact(request, null);
+    }
+
+    /**
+     * Retrieve a contact
+     * 
+     * <p>Retrieves a single AccountingContact by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAccountingContactResponse getAccountingContact(@Nonnull GetAccountingContactRequest request, @Nullable Options options) {
         RequestOperation<GetAccountingContactRequest, GetAccountingContactResponse> operation
-              = new GetAccountingContact.Sync(sdkConfiguration, _headers);
+              = new GetAccountingContact.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1450,8 +1905,23 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAccountingCreditmemoResponse getAccountingCreditmemo(@Nonnull GetAccountingCreditmemoRequest request) {
+        return getAccountingCreditmemo(request, null);
+    }
+
+    /**
+     * Retrieve a creditmemo
+     * 
+     * <p>Retrieves a single AccountingCreditmemo by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAccountingCreditmemoResponse getAccountingCreditmemo(@Nonnull GetAccountingCreditmemoRequest request, @Nullable Options options) {
         RequestOperation<GetAccountingCreditmemoRequest, GetAccountingCreditmemoResponse> operation
-              = new GetAccountingCreditmemo.Sync(sdkConfiguration, _headers);
+              = new GetAccountingCreditmemo.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1478,8 +1948,23 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAccountingExpenseResponse getAccountingExpense(@Nonnull GetAccountingExpenseRequest request) {
+        return getAccountingExpense(request, null);
+    }
+
+    /**
+     * Retrieve an expense
+     * 
+     * <p>Retrieves a single AccountingExpense by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAccountingExpenseResponse getAccountingExpense(@Nonnull GetAccountingExpenseRequest request, @Nullable Options options) {
         RequestOperation<GetAccountingExpenseRequest, GetAccountingExpenseResponse> operation
-              = new GetAccountingExpense.Sync(sdkConfiguration, _headers);
+              = new GetAccountingExpense.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1506,8 +1991,23 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAccountingExpensereportResponse getAccountingExpensereport(@Nonnull GetAccountingExpensereportRequest request) {
+        return getAccountingExpensereport(request, null);
+    }
+
+    /**
+     * Retrieve an expensereport
+     * 
+     * <p>Retrieves a single AccountingExpensereport by its `id`. Obtain `id` values from the corresponding
+     * list endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAccountingExpensereportResponse getAccountingExpensereport(@Nonnull GetAccountingExpensereportRequest request, @Nullable Options options) {
         RequestOperation<GetAccountingExpensereportRequest, GetAccountingExpensereportResponse> operation
-              = new GetAccountingExpensereport.Sync(sdkConfiguration, _headers);
+              = new GetAccountingExpensereport.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1534,8 +2034,23 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAccountingInvoiceResponse getAccountingInvoice(@Nonnull GetAccountingInvoiceRequest request) {
+        return getAccountingInvoice(request, null);
+    }
+
+    /**
+     * Retrieve an invoice
+     * 
+     * <p>Retrieves a single AccountingInvoice by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAccountingInvoiceResponse getAccountingInvoice(@Nonnull GetAccountingInvoiceRequest request, @Nullable Options options) {
         RequestOperation<GetAccountingInvoiceRequest, GetAccountingInvoiceResponse> operation
-              = new GetAccountingInvoice.Sync(sdkConfiguration, _headers);
+              = new GetAccountingInvoice.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1562,8 +2077,23 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAccountingJournalResponse getAccountingJournal(@Nonnull GetAccountingJournalRequest request) {
+        return getAccountingJournal(request, null);
+    }
+
+    /**
+     * Retrieve a journal
+     * 
+     * <p>Retrieves a single AccountingJournal by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAccountingJournalResponse getAccountingJournal(@Nonnull GetAccountingJournalRequest request, @Nullable Options options) {
         RequestOperation<GetAccountingJournalRequest, GetAccountingJournalResponse> operation
-              = new GetAccountingJournal.Sync(sdkConfiguration, _headers);
+              = new GetAccountingJournal.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1594,8 +2124,25 @@ public class Accounting {
      */
     @Deprecated
     public GetAccountingOrderResponse getAccountingOrder(@Nonnull GetAccountingOrderRequest request) {
+        return getAccountingOrder(request, null);
+    }
+
+    /**
+     * Retrieve an order
+     * 
+     * <p>Retrieves a single AccountingOrder by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     * @deprecated method: This will be removed in a future release, please migrate away from it as soon as possible.
+     */
+    @Deprecated
+    public GetAccountingOrderResponse getAccountingOrder(@Nonnull GetAccountingOrderRequest request, @Nullable Options options) {
         RequestOperation<GetAccountingOrderRequest, GetAccountingOrderResponse> operation
-              = new GetAccountingOrder.Sync(sdkConfiguration, _headers);
+              = new GetAccountingOrder.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1622,8 +2169,23 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAccountingOrganizationResponse getAccountingOrganization(@Nonnull GetAccountingOrganizationRequest request) {
+        return getAccountingOrganization(request, null);
+    }
+
+    /**
+     * Retrieve an organization
+     * 
+     * <p>Retrieves a single AccountingOrganization by its `id`. Obtain `id` values from the corresponding
+     * list endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAccountingOrganizationResponse getAccountingOrganization(@Nonnull GetAccountingOrganizationRequest request, @Nullable Options options) {
         RequestOperation<GetAccountingOrganizationRequest, GetAccountingOrganizationResponse> operation
-              = new GetAccountingOrganization.Sync(sdkConfiguration, _headers);
+              = new GetAccountingOrganization.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1650,8 +2212,23 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAccountingPaymenttermResponse getAccountingPaymentterm(@Nonnull GetAccountingPaymenttermRequest request) {
+        return getAccountingPaymentterm(request, null);
+    }
+
+    /**
+     * Retrieve a paymentterm
+     * 
+     * <p>Retrieves a single AccountingPaymentterm by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAccountingPaymenttermResponse getAccountingPaymentterm(@Nonnull GetAccountingPaymenttermRequest request, @Nullable Options options) {
         RequestOperation<GetAccountingPaymenttermRequest, GetAccountingPaymenttermResponse> operation
-              = new GetAccountingPaymentterm.Sync(sdkConfiguration, _headers);
+              = new GetAccountingPaymentterm.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1678,8 +2255,23 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAccountingProfitlossResponse getAccountingProfitloss(@Nonnull GetAccountingProfitlossRequest request) {
+        return getAccountingProfitloss(request, null);
+    }
+
+    /**
+     * Retrieve a profitloss
+     * 
+     * <p>Retrieves a single AccountingProfitloss by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAccountingProfitlossResponse getAccountingProfitloss(@Nonnull GetAccountingProfitlossRequest request, @Nullable Options options) {
         RequestOperation<GetAccountingProfitlossRequest, GetAccountingProfitlossResponse> operation
-              = new GetAccountingProfitloss.Sync(sdkConfiguration, _headers);
+              = new GetAccountingProfitloss.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1706,8 +2298,23 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAccountingProjectResponse getAccountingProject(@Nonnull GetAccountingProjectRequest request) {
+        return getAccountingProject(request, null);
+    }
+
+    /**
+     * Retrieve a project
+     * 
+     * <p>Retrieves a single AccountingProject by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAccountingProjectResponse getAccountingProject(@Nonnull GetAccountingProjectRequest request, @Nullable Options options) {
         RequestOperation<GetAccountingProjectRequest, GetAccountingProjectResponse> operation
-              = new GetAccountingProject.Sync(sdkConfiguration, _headers);
+              = new GetAccountingProject.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1734,8 +2341,23 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAccountingPurchaseorderResponse getAccountingPurchaseorder(@Nonnull GetAccountingPurchaseorderRequest request) {
+        return getAccountingPurchaseorder(request, null);
+    }
+
+    /**
+     * Retrieve a purchaseorder
+     * 
+     * <p>Retrieves a single AccountingPurchaseorder by its `id`. Obtain `id` values from the corresponding
+     * list endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAccountingPurchaseorderResponse getAccountingPurchaseorder(@Nonnull GetAccountingPurchaseorderRequest request, @Nullable Options options) {
         RequestOperation<GetAccountingPurchaseorderRequest, GetAccountingPurchaseorderResponse> operation
-              = new GetAccountingPurchaseorder.Sync(sdkConfiguration, _headers);
+              = new GetAccountingPurchaseorder.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1762,8 +2384,23 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAccountingPurchasereceiptResponse getAccountingPurchasereceipt(@Nonnull GetAccountingPurchasereceiptRequest request) {
+        return getAccountingPurchasereceipt(request, null);
+    }
+
+    /**
+     * Retrieve a purchasereceipt
+     * 
+     * <p>Retrieves a single AccountingPurchasereceipt by its `id`. Obtain `id` values from the corresponding
+     * list endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAccountingPurchasereceiptResponse getAccountingPurchasereceipt(@Nonnull GetAccountingPurchasereceiptRequest request, @Nullable Options options) {
         RequestOperation<GetAccountingPurchasereceiptRequest, GetAccountingPurchasereceiptResponse> operation
-              = new GetAccountingPurchasereceipt.Sync(sdkConfiguration, _headers);
+              = new GetAccountingPurchasereceipt.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1790,8 +2427,23 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAccountingQuoteResponse getAccountingQuote(@Nonnull GetAccountingQuoteRequest request) {
+        return getAccountingQuote(request, null);
+    }
+
+    /**
+     * Retrieve a quote
+     * 
+     * <p>Retrieves a single AccountingQuote by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAccountingQuoteResponse getAccountingQuote(@Nonnull GetAccountingQuoteRequest request, @Nullable Options options) {
         RequestOperation<GetAccountingQuoteRequest, GetAccountingQuoteResponse> operation
-              = new GetAccountingQuote.Sync(sdkConfiguration, _headers);
+              = new GetAccountingQuote.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1818,8 +2470,23 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAccountingSalesorderResponse getAccountingSalesorder(@Nonnull GetAccountingSalesorderRequest request) {
+        return getAccountingSalesorder(request, null);
+    }
+
+    /**
+     * Retrieve a salesorder
+     * 
+     * <p>Retrieves a single AccountingSalesorder by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAccountingSalesorderResponse getAccountingSalesorder(@Nonnull GetAccountingSalesorderRequest request, @Nullable Options options) {
         RequestOperation<GetAccountingSalesorderRequest, GetAccountingSalesorderResponse> operation
-              = new GetAccountingSalesorder.Sync(sdkConfiguration, _headers);
+              = new GetAccountingSalesorder.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1846,8 +2513,23 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAccountingSalesreceiptResponse getAccountingSalesreceipt(@Nonnull GetAccountingSalesreceiptRequest request) {
+        return getAccountingSalesreceipt(request, null);
+    }
+
+    /**
+     * Retrieve a salesreceipt
+     * 
+     * <p>Retrieves a single AccountingSalesreceipt by its `id`. Obtain `id` values from the corresponding
+     * list endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAccountingSalesreceiptResponse getAccountingSalesreceipt(@Nonnull GetAccountingSalesreceiptRequest request, @Nullable Options options) {
         RequestOperation<GetAccountingSalesreceiptRequest, GetAccountingSalesreceiptResponse> operation
-              = new GetAccountingSalesreceipt.Sync(sdkConfiguration, _headers);
+              = new GetAccountingSalesreceipt.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1874,8 +2556,23 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAccountingTaxrateResponse getAccountingTaxrate(@Nonnull GetAccountingTaxrateRequest request) {
+        return getAccountingTaxrate(request, null);
+    }
+
+    /**
+     * Retrieve a taxrate
+     * 
+     * <p>Retrieves a single AccountingTaxrate by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAccountingTaxrateResponse getAccountingTaxrate(@Nonnull GetAccountingTaxrateRequest request, @Nullable Options options) {
         RequestOperation<GetAccountingTaxrateRequest, GetAccountingTaxrateResponse> operation
-              = new GetAccountingTaxrate.Sync(sdkConfiguration, _headers);
+              = new GetAccountingTaxrate.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1902,8 +2599,23 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAccountingTransactionResponse getAccountingTransaction(@Nonnull GetAccountingTransactionRequest request) {
+        return getAccountingTransaction(request, null);
+    }
+
+    /**
+     * Retrieve a transaction
+     * 
+     * <p>Retrieves a single AccountingTransaction by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAccountingTransactionResponse getAccountingTransaction(@Nonnull GetAccountingTransactionRequest request, @Nullable Options options) {
         RequestOperation<GetAccountingTransactionRequest, GetAccountingTransactionResponse> operation
-              = new GetAccountingTransaction.Sync(sdkConfiguration, _headers);
+              = new GetAccountingTransaction.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1930,8 +2642,23 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAccountingTrialbalanceResponse getAccountingTrialbalance(@Nonnull GetAccountingTrialbalanceRequest request) {
+        return getAccountingTrialbalance(request, null);
+    }
+
+    /**
+     * Retrieve a trialbalance
+     * 
+     * <p>Retrieves a single AccountingTrialbalance by its `id`. Obtain `id` values from the corresponding
+     * list endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAccountingTrialbalanceResponse getAccountingTrialbalance(@Nonnull GetAccountingTrialbalanceRequest request, @Nullable Options options) {
         RequestOperation<GetAccountingTrialbalanceRequest, GetAccountingTrialbalanceResponse> operation
-              = new GetAccountingTrialbalance.Sync(sdkConfiguration, _headers);
+              = new GetAccountingTrialbalance.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1958,8 +2685,23 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAccountingVendorcreditResponse getAccountingVendorcredit(@Nonnull GetAccountingVendorcreditRequest request) {
+        return getAccountingVendorcredit(request, null);
+    }
+
+    /**
+     * Retrieve a vendorcredit
+     * 
+     * <p>Retrieves a single AccountingVendorcredit by its `id`. Obtain `id` values from the corresponding
+     * list endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAccountingVendorcreditResponse getAccountingVendorcredit(@Nonnull GetAccountingVendorcreditRequest request, @Nullable Options options) {
         RequestOperation<GetAccountingVendorcreditRequest, GetAccountingVendorcreditResponse> operation
-              = new GetAccountingVendorcredit.Sync(sdkConfiguration, _headers);
+              = new GetAccountingVendorcredit.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1994,8 +2736,27 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAccountingAccountsResponse listAccountingAccounts(@Nonnull ListAccountingAccountsRequest request) {
+        return listAccountingAccounts(request, null);
+    }
+
+    /**
+     * List all accounts
+     * 
+     * <p>Returns a list of AccountingAccounts. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAccountingAccountsResponse listAccountingAccounts(@Nonnull ListAccountingAccountsRequest request, @Nullable Options options) {
         RequestOperation<ListAccountingAccountsRequest, ListAccountingAccountsResponse> operation
-              = new ListAccountingAccounts.Sync(sdkConfiguration, _headers);
+              = new ListAccountingAccounts.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -2030,8 +2791,27 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAccountingAgedpayablesResponse listAccountingAgedpayables(@Nonnull ListAccountingAgedpayablesRequest request) {
+        return listAccountingAgedpayables(request, null);
+    }
+
+    /**
+     * List all agedpayables
+     * 
+     * <p>Returns a list of AccountingAgedpayables. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAccountingAgedpayablesResponse listAccountingAgedpayables(@Nonnull ListAccountingAgedpayablesRequest request, @Nullable Options options) {
         RequestOperation<ListAccountingAgedpayablesRequest, ListAccountingAgedpayablesResponse> operation
-              = new ListAccountingAgedpayables.Sync(sdkConfiguration, _headers);
+              = new ListAccountingAgedpayables.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -2066,8 +2846,27 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAccountingAgedreceivablesResponse listAccountingAgedreceivables(@Nonnull ListAccountingAgedreceivablesRequest request) {
+        return listAccountingAgedreceivables(request, null);
+    }
+
+    /**
+     * List all agedreceivables
+     * 
+     * <p>Returns a list of AccountingAgedreceivables. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAccountingAgedreceivablesResponse listAccountingAgedreceivables(@Nonnull ListAccountingAgedreceivablesRequest request, @Nullable Options options) {
         RequestOperation<ListAccountingAgedreceivablesRequest, ListAccountingAgedreceivablesResponse> operation
-              = new ListAccountingAgedreceivables.Sync(sdkConfiguration, _headers);
+              = new ListAccountingAgedreceivables.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -2102,8 +2901,27 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAccountingBalancesheetsResponse listAccountingBalancesheets(@Nonnull ListAccountingBalancesheetsRequest request) {
+        return listAccountingBalancesheets(request, null);
+    }
+
+    /**
+     * List all balancesheets
+     * 
+     * <p>Returns a list of AccountingBalancesheets. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAccountingBalancesheetsResponse listAccountingBalancesheets(@Nonnull ListAccountingBalancesheetsRequest request, @Nullable Options options) {
         RequestOperation<ListAccountingBalancesheetsRequest, ListAccountingBalancesheetsResponse> operation
-              = new ListAccountingBalancesheets.Sync(sdkConfiguration, _headers);
+              = new ListAccountingBalancesheets.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -2138,8 +2956,27 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAccountingBankfeedaccountsResponse listAccountingBankfeedaccounts(@Nonnull ListAccountingBankfeedaccountsRequest request) {
+        return listAccountingBankfeedaccounts(request, null);
+    }
+
+    /**
+     * List all bankfeedaccounts
+     * 
+     * <p>Returns a list of AccountingBankfeedaccounts. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAccountingBankfeedaccountsResponse listAccountingBankfeedaccounts(@Nonnull ListAccountingBankfeedaccountsRequest request, @Nullable Options options) {
         RequestOperation<ListAccountingBankfeedaccountsRequest, ListAccountingBankfeedaccountsResponse> operation
-              = new ListAccountingBankfeedaccounts.Sync(sdkConfiguration, _headers);
+              = new ListAccountingBankfeedaccounts.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -2176,8 +3013,28 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAccountingBankfeedtransactionsResponse listAccountingBankfeedtransactions(@Nonnull ListAccountingBankfeedtransactionsRequest request) {
+        return listAccountingBankfeedtransactions(request, null);
+    }
+
+    /**
+     * List all bankfeedtransactions
+     * 
+     * <p>Returns a list of AccountingBankfeedtransactions. Narrow the results with the query parameters
+     * before paging, then page through them with `limit` and `offset` (the default and maximum page size
+     * depend on the integration). Use `fields` to return only the fields you need and reduce the response
+     * size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAccountingBankfeedtransactionsResponse listAccountingBankfeedtransactions(@Nonnull ListAccountingBankfeedtransactionsRequest request, @Nullable Options options) {
         RequestOperation<ListAccountingBankfeedtransactionsRequest, ListAccountingBankfeedtransactionsResponse> operation
-              = new ListAccountingBankfeedtransactions.Sync(sdkConfiguration, _headers);
+              = new ListAccountingBankfeedtransactions.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -2212,8 +3069,27 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAccountingBillsResponse listAccountingBills(@Nonnull ListAccountingBillsRequest request) {
+        return listAccountingBills(request, null);
+    }
+
+    /**
+     * List all bills
+     * 
+     * <p>Returns a list of AccountingBills. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAccountingBillsResponse listAccountingBills(@Nonnull ListAccountingBillsRequest request, @Nullable Options options) {
         RequestOperation<ListAccountingBillsRequest, ListAccountingBillsResponse> operation
-              = new ListAccountingBills.Sync(sdkConfiguration, _headers);
+              = new ListAccountingBills.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -2248,8 +3124,27 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAccountingCashflowsResponse listAccountingCashflows(@Nonnull ListAccountingCashflowsRequest request) {
+        return listAccountingCashflows(request, null);
+    }
+
+    /**
+     * List all cashflows
+     * 
+     * <p>Returns a list of AccountingCashflows. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAccountingCashflowsResponse listAccountingCashflows(@Nonnull ListAccountingCashflowsRequest request, @Nullable Options options) {
         RequestOperation<ListAccountingCashflowsRequest, ListAccountingCashflowsResponse> operation
-              = new ListAccountingCashflows.Sync(sdkConfiguration, _headers);
+              = new ListAccountingCashflows.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -2284,8 +3179,27 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAccountingCategoriesResponse listAccountingCategories(@Nonnull ListAccountingCategoriesRequest request) {
+        return listAccountingCategories(request, null);
+    }
+
+    /**
+     * List all categories
+     * 
+     * <p>Returns a list of AccountingCategories. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAccountingCategoriesResponse listAccountingCategories(@Nonnull ListAccountingCategoriesRequest request, @Nullable Options options) {
         RequestOperation<ListAccountingCategoriesRequest, ListAccountingCategoriesResponse> operation
-              = new ListAccountingCategories.Sync(sdkConfiguration, _headers);
+              = new ListAccountingCategories.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -2320,8 +3234,27 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAccountingContactsResponse listAccountingContacts(@Nonnull ListAccountingContactsRequest request) {
+        return listAccountingContacts(request, null);
+    }
+
+    /**
+     * List all contacts
+     * 
+     * <p>Returns a list of AccountingContacts. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAccountingContactsResponse listAccountingContacts(@Nonnull ListAccountingContactsRequest request, @Nullable Options options) {
         RequestOperation<ListAccountingContactsRequest, ListAccountingContactsResponse> operation
-              = new ListAccountingContacts.Sync(sdkConfiguration, _headers);
+              = new ListAccountingContacts.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -2356,8 +3289,27 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAccountingCreditmemoesResponse listAccountingCreditmemoes(@Nonnull ListAccountingCreditmemoesRequest request) {
+        return listAccountingCreditmemoes(request, null);
+    }
+
+    /**
+     * List all creditmemoes
+     * 
+     * <p>Returns a list of AccountingCreditmemoes. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAccountingCreditmemoesResponse listAccountingCreditmemoes(@Nonnull ListAccountingCreditmemoesRequest request, @Nullable Options options) {
         RequestOperation<ListAccountingCreditmemoesRequest, ListAccountingCreditmemoesResponse> operation
-              = new ListAccountingCreditmemoes.Sync(sdkConfiguration, _headers);
+              = new ListAccountingCreditmemoes.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -2392,8 +3344,27 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAccountingExpensereportsResponse listAccountingExpensereports(@Nonnull ListAccountingExpensereportsRequest request) {
+        return listAccountingExpensereports(request, null);
+    }
+
+    /**
+     * List all expensereports
+     * 
+     * <p>Returns a list of AccountingExpensereports. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAccountingExpensereportsResponse listAccountingExpensereports(@Nonnull ListAccountingExpensereportsRequest request, @Nullable Options options) {
         RequestOperation<ListAccountingExpensereportsRequest, ListAccountingExpensereportsResponse> operation
-              = new ListAccountingExpensereports.Sync(sdkConfiguration, _headers);
+              = new ListAccountingExpensereports.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -2428,8 +3399,27 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAccountingExpensesResponse listAccountingExpenses(@Nonnull ListAccountingExpensesRequest request) {
+        return listAccountingExpenses(request, null);
+    }
+
+    /**
+     * List all expenses
+     * 
+     * <p>Returns a list of AccountingExpenses. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAccountingExpensesResponse listAccountingExpenses(@Nonnull ListAccountingExpensesRequest request, @Nullable Options options) {
         RequestOperation<ListAccountingExpensesRequest, ListAccountingExpensesResponse> operation
-              = new ListAccountingExpenses.Sync(sdkConfiguration, _headers);
+              = new ListAccountingExpenses.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -2464,8 +3454,27 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAccountingInvoicesResponse listAccountingInvoices(@Nonnull ListAccountingInvoicesRequest request) {
+        return listAccountingInvoices(request, null);
+    }
+
+    /**
+     * List all invoices
+     * 
+     * <p>Returns a list of AccountingInvoices. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAccountingInvoicesResponse listAccountingInvoices(@Nonnull ListAccountingInvoicesRequest request, @Nullable Options options) {
         RequestOperation<ListAccountingInvoicesRequest, ListAccountingInvoicesResponse> operation
-              = new ListAccountingInvoices.Sync(sdkConfiguration, _headers);
+              = new ListAccountingInvoices.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -2500,8 +3509,27 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAccountingJournalsResponse listAccountingJournals(@Nonnull ListAccountingJournalsRequest request) {
+        return listAccountingJournals(request, null);
+    }
+
+    /**
+     * List all journals
+     * 
+     * <p>Returns a list of AccountingJournals. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAccountingJournalsResponse listAccountingJournals(@Nonnull ListAccountingJournalsRequest request, @Nullable Options options) {
         RequestOperation<ListAccountingJournalsRequest, ListAccountingJournalsResponse> operation
-              = new ListAccountingJournals.Sync(sdkConfiguration, _headers);
+              = new ListAccountingJournals.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -2540,8 +3568,29 @@ public class Accounting {
      */
     @Deprecated
     public ListAccountingOrdersResponse listAccountingOrders(@Nonnull ListAccountingOrdersRequest request) {
+        return listAccountingOrders(request, null);
+    }
+
+    /**
+     * List all orders
+     * 
+     * <p>Returns a list of AccountingOrders. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     * @deprecated method: This will be removed in a future release, please migrate away from it as soon as possible.
+     */
+    @Deprecated
+    public ListAccountingOrdersResponse listAccountingOrders(@Nonnull ListAccountingOrdersRequest request, @Nullable Options options) {
         RequestOperation<ListAccountingOrdersRequest, ListAccountingOrdersResponse> operation
-              = new ListAccountingOrders.Sync(sdkConfiguration, _headers);
+              = new ListAccountingOrders.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -2576,8 +3625,27 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAccountingOrganizationsResponse listAccountingOrganizations(@Nonnull ListAccountingOrganizationsRequest request) {
+        return listAccountingOrganizations(request, null);
+    }
+
+    /**
+     * List all organizations
+     * 
+     * <p>Returns a list of AccountingOrganizations. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAccountingOrganizationsResponse listAccountingOrganizations(@Nonnull ListAccountingOrganizationsRequest request, @Nullable Options options) {
         RequestOperation<ListAccountingOrganizationsRequest, ListAccountingOrganizationsResponse> operation
-              = new ListAccountingOrganizations.Sync(sdkConfiguration, _headers);
+              = new ListAccountingOrganizations.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -2612,8 +3680,27 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAccountingPaymenttermsResponse listAccountingPaymentterms(@Nonnull ListAccountingPaymenttermsRequest request) {
+        return listAccountingPaymentterms(request, null);
+    }
+
+    /**
+     * List all paymentterms
+     * 
+     * <p>Returns a list of AccountingPaymentterms. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAccountingPaymenttermsResponse listAccountingPaymentterms(@Nonnull ListAccountingPaymenttermsRequest request, @Nullable Options options) {
         RequestOperation<ListAccountingPaymenttermsRequest, ListAccountingPaymenttermsResponse> operation
-              = new ListAccountingPaymentterms.Sync(sdkConfiguration, _headers);
+              = new ListAccountingPaymentterms.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -2648,8 +3735,27 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAccountingProfitlossesResponse listAccountingProfitlosses(@Nonnull ListAccountingProfitlossesRequest request) {
+        return listAccountingProfitlosses(request, null);
+    }
+
+    /**
+     * List all profitlosses
+     * 
+     * <p>Returns a list of AccountingProfitlosses. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAccountingProfitlossesResponse listAccountingProfitlosses(@Nonnull ListAccountingProfitlossesRequest request, @Nullable Options options) {
         RequestOperation<ListAccountingProfitlossesRequest, ListAccountingProfitlossesResponse> operation
-              = new ListAccountingProfitlosses.Sync(sdkConfiguration, _headers);
+              = new ListAccountingProfitlosses.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -2684,8 +3790,27 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAccountingProjectsResponse listAccountingProjects(@Nonnull ListAccountingProjectsRequest request) {
+        return listAccountingProjects(request, null);
+    }
+
+    /**
+     * List all projects
+     * 
+     * <p>Returns a list of AccountingProjects. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAccountingProjectsResponse listAccountingProjects(@Nonnull ListAccountingProjectsRequest request, @Nullable Options options) {
         RequestOperation<ListAccountingProjectsRequest, ListAccountingProjectsResponse> operation
-              = new ListAccountingProjects.Sync(sdkConfiguration, _headers);
+              = new ListAccountingProjects.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -2720,8 +3845,27 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAccountingPurchaseordersResponse listAccountingPurchaseorders(@Nonnull ListAccountingPurchaseordersRequest request) {
+        return listAccountingPurchaseorders(request, null);
+    }
+
+    /**
+     * List all purchaseorders
+     * 
+     * <p>Returns a list of AccountingPurchaseorders. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAccountingPurchaseordersResponse listAccountingPurchaseorders(@Nonnull ListAccountingPurchaseordersRequest request, @Nullable Options options) {
         RequestOperation<ListAccountingPurchaseordersRequest, ListAccountingPurchaseordersResponse> operation
-              = new ListAccountingPurchaseorders.Sync(sdkConfiguration, _headers);
+              = new ListAccountingPurchaseorders.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -2756,8 +3900,27 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAccountingPurchasereceiptsResponse listAccountingPurchasereceipts(@Nonnull ListAccountingPurchasereceiptsRequest request) {
+        return listAccountingPurchasereceipts(request, null);
+    }
+
+    /**
+     * List all purchasereceipts
+     * 
+     * <p>Returns a list of AccountingPurchasereceipts. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAccountingPurchasereceiptsResponse listAccountingPurchasereceipts(@Nonnull ListAccountingPurchasereceiptsRequest request, @Nullable Options options) {
         RequestOperation<ListAccountingPurchasereceiptsRequest, ListAccountingPurchasereceiptsResponse> operation
-              = new ListAccountingPurchasereceipts.Sync(sdkConfiguration, _headers);
+              = new ListAccountingPurchasereceipts.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -2792,8 +3955,27 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAccountingQuotesResponse listAccountingQuotes(@Nonnull ListAccountingQuotesRequest request) {
+        return listAccountingQuotes(request, null);
+    }
+
+    /**
+     * List all quotes
+     * 
+     * <p>Returns a list of AccountingQuotes. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAccountingQuotesResponse listAccountingQuotes(@Nonnull ListAccountingQuotesRequest request, @Nullable Options options) {
         RequestOperation<ListAccountingQuotesRequest, ListAccountingQuotesResponse> operation
-              = new ListAccountingQuotes.Sync(sdkConfiguration, _headers);
+              = new ListAccountingQuotes.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -2828,8 +4010,27 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAccountingSalesordersResponse listAccountingSalesorders(@Nonnull ListAccountingSalesordersRequest request) {
+        return listAccountingSalesorders(request, null);
+    }
+
+    /**
+     * List all salesorders
+     * 
+     * <p>Returns a list of AccountingSalesorders. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAccountingSalesordersResponse listAccountingSalesorders(@Nonnull ListAccountingSalesordersRequest request, @Nullable Options options) {
         RequestOperation<ListAccountingSalesordersRequest, ListAccountingSalesordersResponse> operation
-              = new ListAccountingSalesorders.Sync(sdkConfiguration, _headers);
+              = new ListAccountingSalesorders.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -2864,8 +4065,27 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAccountingSalesreceiptsResponse listAccountingSalesreceipts(@Nonnull ListAccountingSalesreceiptsRequest request) {
+        return listAccountingSalesreceipts(request, null);
+    }
+
+    /**
+     * List all salesreceipts
+     * 
+     * <p>Returns a list of AccountingSalesreceipts. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAccountingSalesreceiptsResponse listAccountingSalesreceipts(@Nonnull ListAccountingSalesreceiptsRequest request, @Nullable Options options) {
         RequestOperation<ListAccountingSalesreceiptsRequest, ListAccountingSalesreceiptsResponse> operation
-              = new ListAccountingSalesreceipts.Sync(sdkConfiguration, _headers);
+              = new ListAccountingSalesreceipts.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -2900,8 +4120,27 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAccountingTaxratesResponse listAccountingTaxrates(@Nonnull ListAccountingTaxratesRequest request) {
+        return listAccountingTaxrates(request, null);
+    }
+
+    /**
+     * List all taxrates
+     * 
+     * <p>Returns a list of AccountingTaxrates. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAccountingTaxratesResponse listAccountingTaxrates(@Nonnull ListAccountingTaxratesRequest request, @Nullable Options options) {
         RequestOperation<ListAccountingTaxratesRequest, ListAccountingTaxratesResponse> operation
-              = new ListAccountingTaxrates.Sync(sdkConfiguration, _headers);
+              = new ListAccountingTaxrates.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -2936,8 +4175,27 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAccountingTransactionsResponse listAccountingTransactions(@Nonnull ListAccountingTransactionsRequest request) {
+        return listAccountingTransactions(request, null);
+    }
+
+    /**
+     * List all transactions
+     * 
+     * <p>Returns a list of AccountingTransactions. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAccountingTransactionsResponse listAccountingTransactions(@Nonnull ListAccountingTransactionsRequest request, @Nullable Options options) {
         RequestOperation<ListAccountingTransactionsRequest, ListAccountingTransactionsResponse> operation
-              = new ListAccountingTransactions.Sync(sdkConfiguration, _headers);
+              = new ListAccountingTransactions.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -2972,8 +4230,27 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAccountingTrialbalancesResponse listAccountingTrialbalances(@Nonnull ListAccountingTrialbalancesRequest request) {
+        return listAccountingTrialbalances(request, null);
+    }
+
+    /**
+     * List all trialbalances
+     * 
+     * <p>Returns a list of AccountingTrialbalances. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAccountingTrialbalancesResponse listAccountingTrialbalances(@Nonnull ListAccountingTrialbalancesRequest request, @Nullable Options options) {
         RequestOperation<ListAccountingTrialbalancesRequest, ListAccountingTrialbalancesResponse> operation
-              = new ListAccountingTrialbalances.Sync(sdkConfiguration, _headers);
+              = new ListAccountingTrialbalances.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -3008,8 +4285,27 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAccountingVendorcreditsResponse listAccountingVendorcredits(@Nonnull ListAccountingVendorcreditsRequest request) {
+        return listAccountingVendorcredits(request, null);
+    }
+
+    /**
+     * List all vendorcredits
+     * 
+     * <p>Returns a list of AccountingVendorcredits. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAccountingVendorcreditsResponse listAccountingVendorcredits(@Nonnull ListAccountingVendorcreditsRequest request, @Nullable Options options) {
         RequestOperation<ListAccountingVendorcreditsRequest, ListAccountingVendorcreditsResponse> operation
-              = new ListAccountingVendorcredits.Sync(sdkConfiguration, _headers);
+              = new ListAccountingVendorcredits.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -3036,8 +4332,23 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchAccountingAccountResponse patchAccountingAccount(@Nonnull PatchAccountingAccountRequest request) {
+        return patchAccountingAccount(request, null);
+    }
+
+    /**
+     * Update an account
+     * 
+     * <p>Updates the AccountingAccount identified by `id`. Provide the unified AccountingAccount fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchAccountingAccountResponse patchAccountingAccount(@Nonnull PatchAccountingAccountRequest request, @Nullable Options options) {
         RequestOperation<PatchAccountingAccountRequest, PatchAccountingAccountResponse> operation
-              = new PatchAccountingAccount.Sync(sdkConfiguration, _headers);
+              = new PatchAccountingAccount.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -3064,8 +4375,23 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchAccountingBankfeedaccountResponse patchAccountingBankfeedaccount(@Nonnull PatchAccountingBankfeedaccountRequest request) {
+        return patchAccountingBankfeedaccount(request, null);
+    }
+
+    /**
+     * Update a bankfeedaccount
+     * 
+     * <p>Updates the AccountingBankfeedaccount identified by `id`. Provide the unified
+     * AccountingBankfeedaccount fields to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchAccountingBankfeedaccountResponse patchAccountingBankfeedaccount(@Nonnull PatchAccountingBankfeedaccountRequest request, @Nullable Options options) {
         RequestOperation<PatchAccountingBankfeedaccountRequest, PatchAccountingBankfeedaccountResponse> operation
-              = new PatchAccountingBankfeedaccount.Sync(sdkConfiguration, _headers);
+              = new PatchAccountingBankfeedaccount.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -3092,8 +4418,23 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchAccountingBankfeedtransactionResponse patchAccountingBankfeedtransaction(@Nonnull PatchAccountingBankfeedtransactionRequest request) {
+        return patchAccountingBankfeedtransaction(request, null);
+    }
+
+    /**
+     * Update a bankfeedtransaction
+     * 
+     * <p>Updates the AccountingBankfeedtransaction identified by `id`. Provide the unified
+     * AccountingBankfeedtransaction fields to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchAccountingBankfeedtransactionResponse patchAccountingBankfeedtransaction(@Nonnull PatchAccountingBankfeedtransactionRequest request, @Nullable Options options) {
         RequestOperation<PatchAccountingBankfeedtransactionRequest, PatchAccountingBankfeedtransactionResponse> operation
-              = new PatchAccountingBankfeedtransaction.Sync(sdkConfiguration, _headers);
+              = new PatchAccountingBankfeedtransaction.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -3120,8 +4461,23 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchAccountingBillResponse patchAccountingBill(@Nonnull PatchAccountingBillRequest request) {
+        return patchAccountingBill(request, null);
+    }
+
+    /**
+     * Update a bill
+     * 
+     * <p>Updates the AccountingBill identified by `id`. Provide the unified AccountingBill fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchAccountingBillResponse patchAccountingBill(@Nonnull PatchAccountingBillRequest request, @Nullable Options options) {
         RequestOperation<PatchAccountingBillRequest, PatchAccountingBillResponse> operation
-              = new PatchAccountingBill.Sync(sdkConfiguration, _headers);
+              = new PatchAccountingBill.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -3148,8 +4504,23 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchAccountingCategoryResponse patchAccountingCategory(@Nonnull PatchAccountingCategoryRequest request) {
+        return patchAccountingCategory(request, null);
+    }
+
+    /**
+     * Update a category
+     * 
+     * <p>Updates the AccountingCategory identified by `id`. Provide the unified AccountingCategory fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchAccountingCategoryResponse patchAccountingCategory(@Nonnull PatchAccountingCategoryRequest request, @Nullable Options options) {
         RequestOperation<PatchAccountingCategoryRequest, PatchAccountingCategoryResponse> operation
-              = new PatchAccountingCategory.Sync(sdkConfiguration, _headers);
+              = new PatchAccountingCategory.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -3176,8 +4547,23 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchAccountingContactResponse patchAccountingContact(@Nonnull PatchAccountingContactRequest request) {
+        return patchAccountingContact(request, null);
+    }
+
+    /**
+     * Update a contact
+     * 
+     * <p>Updates the AccountingContact identified by `id`. Provide the unified AccountingContact fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchAccountingContactResponse patchAccountingContact(@Nonnull PatchAccountingContactRequest request, @Nullable Options options) {
         RequestOperation<PatchAccountingContactRequest, PatchAccountingContactResponse> operation
-              = new PatchAccountingContact.Sync(sdkConfiguration, _headers);
+              = new PatchAccountingContact.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -3204,8 +4590,23 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchAccountingCreditmemoResponse patchAccountingCreditmemo(@Nonnull PatchAccountingCreditmemoRequest request) {
+        return patchAccountingCreditmemo(request, null);
+    }
+
+    /**
+     * Update a creditmemo
+     * 
+     * <p>Updates the AccountingCreditmemo identified by `id`. Provide the unified AccountingCreditmemo fields
+     * to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchAccountingCreditmemoResponse patchAccountingCreditmemo(@Nonnull PatchAccountingCreditmemoRequest request, @Nullable Options options) {
         RequestOperation<PatchAccountingCreditmemoRequest, PatchAccountingCreditmemoResponse> operation
-              = new PatchAccountingCreditmemo.Sync(sdkConfiguration, _headers);
+              = new PatchAccountingCreditmemo.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -3232,8 +4633,23 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchAccountingExpenseResponse patchAccountingExpense(@Nonnull PatchAccountingExpenseRequest request) {
+        return patchAccountingExpense(request, null);
+    }
+
+    /**
+     * Update an expense
+     * 
+     * <p>Updates the AccountingExpense identified by `id`. Provide the unified AccountingExpense fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchAccountingExpenseResponse patchAccountingExpense(@Nonnull PatchAccountingExpenseRequest request, @Nullable Options options) {
         RequestOperation<PatchAccountingExpenseRequest, PatchAccountingExpenseResponse> operation
-              = new PatchAccountingExpense.Sync(sdkConfiguration, _headers);
+              = new PatchAccountingExpense.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -3260,8 +4676,23 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchAccountingExpensereportResponse patchAccountingExpensereport(@Nonnull PatchAccountingExpensereportRequest request) {
+        return patchAccountingExpensereport(request, null);
+    }
+
+    /**
+     * Update an expensereport
+     * 
+     * <p>Updates the AccountingExpensereport identified by `id`. Provide the unified AccountingExpensereport
+     * fields to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchAccountingExpensereportResponse patchAccountingExpensereport(@Nonnull PatchAccountingExpensereportRequest request, @Nullable Options options) {
         RequestOperation<PatchAccountingExpensereportRequest, PatchAccountingExpensereportResponse> operation
-              = new PatchAccountingExpensereport.Sync(sdkConfiguration, _headers);
+              = new PatchAccountingExpensereport.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -3288,8 +4719,23 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchAccountingInvoiceResponse patchAccountingInvoice(@Nonnull PatchAccountingInvoiceRequest request) {
+        return patchAccountingInvoice(request, null);
+    }
+
+    /**
+     * Update an invoice
+     * 
+     * <p>Updates the AccountingInvoice identified by `id`. Provide the unified AccountingInvoice fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchAccountingInvoiceResponse patchAccountingInvoice(@Nonnull PatchAccountingInvoiceRequest request, @Nullable Options options) {
         RequestOperation<PatchAccountingInvoiceRequest, PatchAccountingInvoiceResponse> operation
-              = new PatchAccountingInvoice.Sync(sdkConfiguration, _headers);
+              = new PatchAccountingInvoice.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -3316,8 +4762,23 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchAccountingJournalResponse patchAccountingJournal(@Nonnull PatchAccountingJournalRequest request) {
+        return patchAccountingJournal(request, null);
+    }
+
+    /**
+     * Update a journal
+     * 
+     * <p>Updates the AccountingJournal identified by `id`. Provide the unified AccountingJournal fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchAccountingJournalResponse patchAccountingJournal(@Nonnull PatchAccountingJournalRequest request, @Nullable Options options) {
         RequestOperation<PatchAccountingJournalRequest, PatchAccountingJournalResponse> operation
-              = new PatchAccountingJournal.Sync(sdkConfiguration, _headers);
+              = new PatchAccountingJournal.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -3348,8 +4809,25 @@ public class Accounting {
      */
     @Deprecated
     public PatchAccountingOrderResponse patchAccountingOrder(@Nonnull PatchAccountingOrderRequest request) {
+        return patchAccountingOrder(request, null);
+    }
+
+    /**
+     * Update an order
+     * 
+     * <p>Updates the AccountingOrder identified by `id`. Provide the unified AccountingOrder fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     * @deprecated method: This will be removed in a future release, please migrate away from it as soon as possible.
+     */
+    @Deprecated
+    public PatchAccountingOrderResponse patchAccountingOrder(@Nonnull PatchAccountingOrderRequest request, @Nullable Options options) {
         RequestOperation<PatchAccountingOrderRequest, PatchAccountingOrderResponse> operation
-              = new PatchAccountingOrder.Sync(sdkConfiguration, _headers);
+              = new PatchAccountingOrder.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -3376,8 +4854,23 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchAccountingPaymenttermResponse patchAccountingPaymentterm(@Nonnull PatchAccountingPaymenttermRequest request) {
+        return patchAccountingPaymentterm(request, null);
+    }
+
+    /**
+     * Update a paymentterm
+     * 
+     * <p>Updates the AccountingPaymentterm identified by `id`. Provide the unified AccountingPaymentterm
+     * fields to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchAccountingPaymenttermResponse patchAccountingPaymentterm(@Nonnull PatchAccountingPaymenttermRequest request, @Nullable Options options) {
         RequestOperation<PatchAccountingPaymenttermRequest, PatchAccountingPaymenttermResponse> operation
-              = new PatchAccountingPaymentterm.Sync(sdkConfiguration, _headers);
+              = new PatchAccountingPaymentterm.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -3404,8 +4897,23 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchAccountingProjectResponse patchAccountingProject(@Nonnull PatchAccountingProjectRequest request) {
+        return patchAccountingProject(request, null);
+    }
+
+    /**
+     * Update a project
+     * 
+     * <p>Updates the AccountingProject identified by `id`. Provide the unified AccountingProject fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchAccountingProjectResponse patchAccountingProject(@Nonnull PatchAccountingProjectRequest request, @Nullable Options options) {
         RequestOperation<PatchAccountingProjectRequest, PatchAccountingProjectResponse> operation
-              = new PatchAccountingProject.Sync(sdkConfiguration, _headers);
+              = new PatchAccountingProject.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -3432,8 +4940,23 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchAccountingPurchaseorderResponse patchAccountingPurchaseorder(@Nonnull PatchAccountingPurchaseorderRequest request) {
+        return patchAccountingPurchaseorder(request, null);
+    }
+
+    /**
+     * Update a purchaseorder
+     * 
+     * <p>Updates the AccountingPurchaseorder identified by `id`. Provide the unified AccountingPurchaseorder
+     * fields to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchAccountingPurchaseorderResponse patchAccountingPurchaseorder(@Nonnull PatchAccountingPurchaseorderRequest request, @Nullable Options options) {
         RequestOperation<PatchAccountingPurchaseorderRequest, PatchAccountingPurchaseorderResponse> operation
-              = new PatchAccountingPurchaseorder.Sync(sdkConfiguration, _headers);
+              = new PatchAccountingPurchaseorder.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -3460,8 +4983,23 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchAccountingQuoteResponse patchAccountingQuote(@Nonnull PatchAccountingQuoteRequest request) {
+        return patchAccountingQuote(request, null);
+    }
+
+    /**
+     * Update a quote
+     * 
+     * <p>Updates the AccountingQuote identified by `id`. Provide the unified AccountingQuote fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchAccountingQuoteResponse patchAccountingQuote(@Nonnull PatchAccountingQuoteRequest request, @Nullable Options options) {
         RequestOperation<PatchAccountingQuoteRequest, PatchAccountingQuoteResponse> operation
-              = new PatchAccountingQuote.Sync(sdkConfiguration, _headers);
+              = new PatchAccountingQuote.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -3488,8 +5026,23 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchAccountingSalesorderResponse patchAccountingSalesorder(@Nonnull PatchAccountingSalesorderRequest request) {
+        return patchAccountingSalesorder(request, null);
+    }
+
+    /**
+     * Update a salesorder
+     * 
+     * <p>Updates the AccountingSalesorder identified by `id`. Provide the unified AccountingSalesorder fields
+     * to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchAccountingSalesorderResponse patchAccountingSalesorder(@Nonnull PatchAccountingSalesorderRequest request, @Nullable Options options) {
         RequestOperation<PatchAccountingSalesorderRequest, PatchAccountingSalesorderResponse> operation
-              = new PatchAccountingSalesorder.Sync(sdkConfiguration, _headers);
+              = new PatchAccountingSalesorder.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -3516,8 +5069,23 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchAccountingTaxrateResponse patchAccountingTaxrate(@Nonnull PatchAccountingTaxrateRequest request) {
+        return patchAccountingTaxrate(request, null);
+    }
+
+    /**
+     * Update a taxrate
+     * 
+     * <p>Updates the AccountingTaxrate identified by `id`. Provide the unified AccountingTaxrate fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchAccountingTaxrateResponse patchAccountingTaxrate(@Nonnull PatchAccountingTaxrateRequest request, @Nullable Options options) {
         RequestOperation<PatchAccountingTaxrateRequest, PatchAccountingTaxrateResponse> operation
-              = new PatchAccountingTaxrate.Sync(sdkConfiguration, _headers);
+              = new PatchAccountingTaxrate.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -3544,8 +5112,23 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchAccountingTransactionResponse patchAccountingTransaction(@Nonnull PatchAccountingTransactionRequest request) {
+        return patchAccountingTransaction(request, null);
+    }
+
+    /**
+     * Update a transaction
+     * 
+     * <p>Updates the AccountingTransaction identified by `id`. Provide the unified AccountingTransaction
+     * fields to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchAccountingTransactionResponse patchAccountingTransaction(@Nonnull PatchAccountingTransactionRequest request, @Nullable Options options) {
         RequestOperation<PatchAccountingTransactionRequest, PatchAccountingTransactionResponse> operation
-              = new PatchAccountingTransaction.Sync(sdkConfiguration, _headers);
+              = new PatchAccountingTransaction.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -3572,8 +5155,23 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchAccountingVendorcreditResponse patchAccountingVendorcredit(@Nonnull PatchAccountingVendorcreditRequest request) {
+        return patchAccountingVendorcredit(request, null);
+    }
+
+    /**
+     * Update a vendorcredit
+     * 
+     * <p>Updates the AccountingVendorcredit identified by `id`. Provide the unified AccountingVendorcredit
+     * fields to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchAccountingVendorcreditResponse patchAccountingVendorcredit(@Nonnull PatchAccountingVendorcreditRequest request, @Nullable Options options) {
         RequestOperation<PatchAccountingVendorcreditRequest, PatchAccountingVendorcreditResponse> operation
-              = new PatchAccountingVendorcredit.Sync(sdkConfiguration, _headers);
+              = new PatchAccountingVendorcredit.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -3598,8 +5196,22 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveAccountingAccountResponse removeAccountingAccount(@Nonnull RemoveAccountingAccountRequest request) {
+        return removeAccountingAccount(request, null);
+    }
+
+    /**
+     * Remove an account
+     * 
+     * <p>Deletes the AccountingAccount identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveAccountingAccountResponse removeAccountingAccount(@Nonnull RemoveAccountingAccountRequest request, @Nullable Options options) {
         RequestOperation<RemoveAccountingAccountRequest, RemoveAccountingAccountResponse> operation
-              = new RemoveAccountingAccount.Sync(sdkConfiguration, _headers);
+              = new RemoveAccountingAccount.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -3624,8 +5236,22 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveAccountingBankfeedaccountResponse removeAccountingBankfeedaccount(@Nonnull RemoveAccountingBankfeedaccountRequest request) {
+        return removeAccountingBankfeedaccount(request, null);
+    }
+
+    /**
+     * Remove a bankfeedaccount
+     * 
+     * <p>Deletes the AccountingBankfeedaccount identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveAccountingBankfeedaccountResponse removeAccountingBankfeedaccount(@Nonnull RemoveAccountingBankfeedaccountRequest request, @Nullable Options options) {
         RequestOperation<RemoveAccountingBankfeedaccountRequest, RemoveAccountingBankfeedaccountResponse> operation
-              = new RemoveAccountingBankfeedaccount.Sync(sdkConfiguration, _headers);
+              = new RemoveAccountingBankfeedaccount.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -3650,8 +5276,22 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveAccountingBankfeedtransactionResponse removeAccountingBankfeedtransaction(@Nonnull RemoveAccountingBankfeedtransactionRequest request) {
+        return removeAccountingBankfeedtransaction(request, null);
+    }
+
+    /**
+     * Remove a bankfeedtransaction
+     * 
+     * <p>Deletes the AccountingBankfeedtransaction identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveAccountingBankfeedtransactionResponse removeAccountingBankfeedtransaction(@Nonnull RemoveAccountingBankfeedtransactionRequest request, @Nullable Options options) {
         RequestOperation<RemoveAccountingBankfeedtransactionRequest, RemoveAccountingBankfeedtransactionResponse> operation
-              = new RemoveAccountingBankfeedtransaction.Sync(sdkConfiguration, _headers);
+              = new RemoveAccountingBankfeedtransaction.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -3676,8 +5316,22 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveAccountingBillResponse removeAccountingBill(@Nonnull RemoveAccountingBillRequest request) {
+        return removeAccountingBill(request, null);
+    }
+
+    /**
+     * Remove a bill
+     * 
+     * <p>Deletes the AccountingBill identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveAccountingBillResponse removeAccountingBill(@Nonnull RemoveAccountingBillRequest request, @Nullable Options options) {
         RequestOperation<RemoveAccountingBillRequest, RemoveAccountingBillResponse> operation
-              = new RemoveAccountingBill.Sync(sdkConfiguration, _headers);
+              = new RemoveAccountingBill.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -3702,8 +5356,22 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveAccountingCategoryResponse removeAccountingCategory(@Nonnull RemoveAccountingCategoryRequest request) {
+        return removeAccountingCategory(request, null);
+    }
+
+    /**
+     * Remove a category
+     * 
+     * <p>Deletes the AccountingCategory identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveAccountingCategoryResponse removeAccountingCategory(@Nonnull RemoveAccountingCategoryRequest request, @Nullable Options options) {
         RequestOperation<RemoveAccountingCategoryRequest, RemoveAccountingCategoryResponse> operation
-              = new RemoveAccountingCategory.Sync(sdkConfiguration, _headers);
+              = new RemoveAccountingCategory.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -3728,8 +5396,22 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveAccountingContactResponse removeAccountingContact(@Nonnull RemoveAccountingContactRequest request) {
+        return removeAccountingContact(request, null);
+    }
+
+    /**
+     * Remove a contact
+     * 
+     * <p>Deletes the AccountingContact identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveAccountingContactResponse removeAccountingContact(@Nonnull RemoveAccountingContactRequest request, @Nullable Options options) {
         RequestOperation<RemoveAccountingContactRequest, RemoveAccountingContactResponse> operation
-              = new RemoveAccountingContact.Sync(sdkConfiguration, _headers);
+              = new RemoveAccountingContact.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -3754,8 +5436,22 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveAccountingCreditmemoResponse removeAccountingCreditmemo(@Nonnull RemoveAccountingCreditmemoRequest request) {
+        return removeAccountingCreditmemo(request, null);
+    }
+
+    /**
+     * Remove a creditmemo
+     * 
+     * <p>Deletes the AccountingCreditmemo identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveAccountingCreditmemoResponse removeAccountingCreditmemo(@Nonnull RemoveAccountingCreditmemoRequest request, @Nullable Options options) {
         RequestOperation<RemoveAccountingCreditmemoRequest, RemoveAccountingCreditmemoResponse> operation
-              = new RemoveAccountingCreditmemo.Sync(sdkConfiguration, _headers);
+              = new RemoveAccountingCreditmemo.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -3780,8 +5476,22 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveAccountingExpenseResponse removeAccountingExpense(@Nonnull RemoveAccountingExpenseRequest request) {
+        return removeAccountingExpense(request, null);
+    }
+
+    /**
+     * Remove an expense
+     * 
+     * <p>Deletes the AccountingExpense identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveAccountingExpenseResponse removeAccountingExpense(@Nonnull RemoveAccountingExpenseRequest request, @Nullable Options options) {
         RequestOperation<RemoveAccountingExpenseRequest, RemoveAccountingExpenseResponse> operation
-              = new RemoveAccountingExpense.Sync(sdkConfiguration, _headers);
+              = new RemoveAccountingExpense.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -3806,8 +5516,22 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveAccountingExpensereportResponse removeAccountingExpensereport(@Nonnull RemoveAccountingExpensereportRequest request) {
+        return removeAccountingExpensereport(request, null);
+    }
+
+    /**
+     * Remove an expensereport
+     * 
+     * <p>Deletes the AccountingExpensereport identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveAccountingExpensereportResponse removeAccountingExpensereport(@Nonnull RemoveAccountingExpensereportRequest request, @Nullable Options options) {
         RequestOperation<RemoveAccountingExpensereportRequest, RemoveAccountingExpensereportResponse> operation
-              = new RemoveAccountingExpensereport.Sync(sdkConfiguration, _headers);
+              = new RemoveAccountingExpensereport.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -3832,8 +5556,22 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveAccountingInvoiceResponse removeAccountingInvoice(@Nonnull RemoveAccountingInvoiceRequest request) {
+        return removeAccountingInvoice(request, null);
+    }
+
+    /**
+     * Remove an invoice
+     * 
+     * <p>Deletes the AccountingInvoice identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveAccountingInvoiceResponse removeAccountingInvoice(@Nonnull RemoveAccountingInvoiceRequest request, @Nullable Options options) {
         RequestOperation<RemoveAccountingInvoiceRequest, RemoveAccountingInvoiceResponse> operation
-              = new RemoveAccountingInvoice.Sync(sdkConfiguration, _headers);
+              = new RemoveAccountingInvoice.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -3858,8 +5596,22 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveAccountingJournalResponse removeAccountingJournal(@Nonnull RemoveAccountingJournalRequest request) {
+        return removeAccountingJournal(request, null);
+    }
+
+    /**
+     * Remove a journal
+     * 
+     * <p>Deletes the AccountingJournal identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveAccountingJournalResponse removeAccountingJournal(@Nonnull RemoveAccountingJournalRequest request, @Nullable Options options) {
         RequestOperation<RemoveAccountingJournalRequest, RemoveAccountingJournalResponse> operation
-              = new RemoveAccountingJournal.Sync(sdkConfiguration, _headers);
+              = new RemoveAccountingJournal.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -3888,8 +5640,24 @@ public class Accounting {
      */
     @Deprecated
     public RemoveAccountingOrderResponse removeAccountingOrder(@Nonnull RemoveAccountingOrderRequest request) {
+        return removeAccountingOrder(request, null);
+    }
+
+    /**
+     * Remove an order
+     * 
+     * <p>Deletes the AccountingOrder identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     * @deprecated method: This will be removed in a future release, please migrate away from it as soon as possible.
+     */
+    @Deprecated
+    public RemoveAccountingOrderResponse removeAccountingOrder(@Nonnull RemoveAccountingOrderRequest request, @Nullable Options options) {
         RequestOperation<RemoveAccountingOrderRequest, RemoveAccountingOrderResponse> operation
-              = new RemoveAccountingOrder.Sync(sdkConfiguration, _headers);
+              = new RemoveAccountingOrder.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -3914,8 +5682,22 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveAccountingPaymenttermResponse removeAccountingPaymentterm(@Nonnull RemoveAccountingPaymenttermRequest request) {
+        return removeAccountingPaymentterm(request, null);
+    }
+
+    /**
+     * Remove a paymentterm
+     * 
+     * <p>Deletes the AccountingPaymentterm identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveAccountingPaymenttermResponse removeAccountingPaymentterm(@Nonnull RemoveAccountingPaymenttermRequest request, @Nullable Options options) {
         RequestOperation<RemoveAccountingPaymenttermRequest, RemoveAccountingPaymenttermResponse> operation
-              = new RemoveAccountingPaymentterm.Sync(sdkConfiguration, _headers);
+              = new RemoveAccountingPaymentterm.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -3940,8 +5722,22 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveAccountingProjectResponse removeAccountingProject(@Nonnull RemoveAccountingProjectRequest request) {
+        return removeAccountingProject(request, null);
+    }
+
+    /**
+     * Remove a project
+     * 
+     * <p>Deletes the AccountingProject identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveAccountingProjectResponse removeAccountingProject(@Nonnull RemoveAccountingProjectRequest request, @Nullable Options options) {
         RequestOperation<RemoveAccountingProjectRequest, RemoveAccountingProjectResponse> operation
-              = new RemoveAccountingProject.Sync(sdkConfiguration, _headers);
+              = new RemoveAccountingProject.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -3966,8 +5762,22 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveAccountingPurchaseorderResponse removeAccountingPurchaseorder(@Nonnull RemoveAccountingPurchaseorderRequest request) {
+        return removeAccountingPurchaseorder(request, null);
+    }
+
+    /**
+     * Remove a purchaseorder
+     * 
+     * <p>Deletes the AccountingPurchaseorder identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveAccountingPurchaseorderResponse removeAccountingPurchaseorder(@Nonnull RemoveAccountingPurchaseorderRequest request, @Nullable Options options) {
         RequestOperation<RemoveAccountingPurchaseorderRequest, RemoveAccountingPurchaseorderResponse> operation
-              = new RemoveAccountingPurchaseorder.Sync(sdkConfiguration, _headers);
+              = new RemoveAccountingPurchaseorder.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -3992,8 +5802,22 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveAccountingQuoteResponse removeAccountingQuote(@Nonnull RemoveAccountingQuoteRequest request) {
+        return removeAccountingQuote(request, null);
+    }
+
+    /**
+     * Remove a quote
+     * 
+     * <p>Deletes the AccountingQuote identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveAccountingQuoteResponse removeAccountingQuote(@Nonnull RemoveAccountingQuoteRequest request, @Nullable Options options) {
         RequestOperation<RemoveAccountingQuoteRequest, RemoveAccountingQuoteResponse> operation
-              = new RemoveAccountingQuote.Sync(sdkConfiguration, _headers);
+              = new RemoveAccountingQuote.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -4018,8 +5842,22 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveAccountingSalesorderResponse removeAccountingSalesorder(@Nonnull RemoveAccountingSalesorderRequest request) {
+        return removeAccountingSalesorder(request, null);
+    }
+
+    /**
+     * Remove a salesorder
+     * 
+     * <p>Deletes the AccountingSalesorder identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveAccountingSalesorderResponse removeAccountingSalesorder(@Nonnull RemoveAccountingSalesorderRequest request, @Nullable Options options) {
         RequestOperation<RemoveAccountingSalesorderRequest, RemoveAccountingSalesorderResponse> operation
-              = new RemoveAccountingSalesorder.Sync(sdkConfiguration, _headers);
+              = new RemoveAccountingSalesorder.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -4044,8 +5882,22 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveAccountingTaxrateResponse removeAccountingTaxrate(@Nonnull RemoveAccountingTaxrateRequest request) {
+        return removeAccountingTaxrate(request, null);
+    }
+
+    /**
+     * Remove a taxrate
+     * 
+     * <p>Deletes the AccountingTaxrate identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveAccountingTaxrateResponse removeAccountingTaxrate(@Nonnull RemoveAccountingTaxrateRequest request, @Nullable Options options) {
         RequestOperation<RemoveAccountingTaxrateRequest, RemoveAccountingTaxrateResponse> operation
-              = new RemoveAccountingTaxrate.Sync(sdkConfiguration, _headers);
+              = new RemoveAccountingTaxrate.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -4070,8 +5922,22 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveAccountingTransactionResponse removeAccountingTransaction(@Nonnull RemoveAccountingTransactionRequest request) {
+        return removeAccountingTransaction(request, null);
+    }
+
+    /**
+     * Remove a transaction
+     * 
+     * <p>Deletes the AccountingTransaction identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveAccountingTransactionResponse removeAccountingTransaction(@Nonnull RemoveAccountingTransactionRequest request, @Nullable Options options) {
         RequestOperation<RemoveAccountingTransactionRequest, RemoveAccountingTransactionResponse> operation
-              = new RemoveAccountingTransaction.Sync(sdkConfiguration, _headers);
+              = new RemoveAccountingTransaction.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -4096,8 +5962,22 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveAccountingVendorcreditResponse removeAccountingVendorcredit(@Nonnull RemoveAccountingVendorcreditRequest request) {
+        return removeAccountingVendorcredit(request, null);
+    }
+
+    /**
+     * Remove a vendorcredit
+     * 
+     * <p>Deletes the AccountingVendorcredit identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveAccountingVendorcreditResponse removeAccountingVendorcredit(@Nonnull RemoveAccountingVendorcreditRequest request, @Nullable Options options) {
         RequestOperation<RemoveAccountingVendorcreditRequest, RemoveAccountingVendorcreditResponse> operation
-              = new RemoveAccountingVendorcredit.Sync(sdkConfiguration, _headers);
+              = new RemoveAccountingVendorcredit.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -4124,8 +6004,23 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateAccountingAccountResponse updateAccountingAccount(@Nonnull UpdateAccountingAccountRequest request) {
+        return updateAccountingAccount(request, null);
+    }
+
+    /**
+     * Update an account
+     * 
+     * <p>Updates the AccountingAccount identified by `id`. Provide the unified AccountingAccount fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateAccountingAccountResponse updateAccountingAccount(@Nonnull UpdateAccountingAccountRequest request, @Nullable Options options) {
         RequestOperation<UpdateAccountingAccountRequest, UpdateAccountingAccountResponse> operation
-              = new UpdateAccountingAccount.Sync(sdkConfiguration, _headers);
+              = new UpdateAccountingAccount.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -4152,8 +6047,23 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateAccountingBankfeedaccountResponse updateAccountingBankfeedaccount(@Nonnull UpdateAccountingBankfeedaccountRequest request) {
+        return updateAccountingBankfeedaccount(request, null);
+    }
+
+    /**
+     * Update a bankfeedaccount
+     * 
+     * <p>Updates the AccountingBankfeedaccount identified by `id`. Provide the unified
+     * AccountingBankfeedaccount fields to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateAccountingBankfeedaccountResponse updateAccountingBankfeedaccount(@Nonnull UpdateAccountingBankfeedaccountRequest request, @Nullable Options options) {
         RequestOperation<UpdateAccountingBankfeedaccountRequest, UpdateAccountingBankfeedaccountResponse> operation
-              = new UpdateAccountingBankfeedaccount.Sync(sdkConfiguration, _headers);
+              = new UpdateAccountingBankfeedaccount.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -4180,8 +6090,23 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateAccountingBankfeedtransactionResponse updateAccountingBankfeedtransaction(@Nonnull UpdateAccountingBankfeedtransactionRequest request) {
+        return updateAccountingBankfeedtransaction(request, null);
+    }
+
+    /**
+     * Update a bankfeedtransaction
+     * 
+     * <p>Updates the AccountingBankfeedtransaction identified by `id`. Provide the unified
+     * AccountingBankfeedtransaction fields to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateAccountingBankfeedtransactionResponse updateAccountingBankfeedtransaction(@Nonnull UpdateAccountingBankfeedtransactionRequest request, @Nullable Options options) {
         RequestOperation<UpdateAccountingBankfeedtransactionRequest, UpdateAccountingBankfeedtransactionResponse> operation
-              = new UpdateAccountingBankfeedtransaction.Sync(sdkConfiguration, _headers);
+              = new UpdateAccountingBankfeedtransaction.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -4208,8 +6133,23 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateAccountingBillResponse updateAccountingBill(@Nonnull UpdateAccountingBillRequest request) {
+        return updateAccountingBill(request, null);
+    }
+
+    /**
+     * Update a bill
+     * 
+     * <p>Updates the AccountingBill identified by `id`. Provide the unified AccountingBill fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateAccountingBillResponse updateAccountingBill(@Nonnull UpdateAccountingBillRequest request, @Nullable Options options) {
         RequestOperation<UpdateAccountingBillRequest, UpdateAccountingBillResponse> operation
-              = new UpdateAccountingBill.Sync(sdkConfiguration, _headers);
+              = new UpdateAccountingBill.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -4236,8 +6176,23 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateAccountingCategoryResponse updateAccountingCategory(@Nonnull UpdateAccountingCategoryRequest request) {
+        return updateAccountingCategory(request, null);
+    }
+
+    /**
+     * Update a category
+     * 
+     * <p>Updates the AccountingCategory identified by `id`. Provide the unified AccountingCategory fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateAccountingCategoryResponse updateAccountingCategory(@Nonnull UpdateAccountingCategoryRequest request, @Nullable Options options) {
         RequestOperation<UpdateAccountingCategoryRequest, UpdateAccountingCategoryResponse> operation
-              = new UpdateAccountingCategory.Sync(sdkConfiguration, _headers);
+              = new UpdateAccountingCategory.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -4264,8 +6219,23 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateAccountingContactResponse updateAccountingContact(@Nonnull UpdateAccountingContactRequest request) {
+        return updateAccountingContact(request, null);
+    }
+
+    /**
+     * Update a contact
+     * 
+     * <p>Updates the AccountingContact identified by `id`. Provide the unified AccountingContact fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateAccountingContactResponse updateAccountingContact(@Nonnull UpdateAccountingContactRequest request, @Nullable Options options) {
         RequestOperation<UpdateAccountingContactRequest, UpdateAccountingContactResponse> operation
-              = new UpdateAccountingContact.Sync(sdkConfiguration, _headers);
+              = new UpdateAccountingContact.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -4292,8 +6262,23 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateAccountingCreditmemoResponse updateAccountingCreditmemo(@Nonnull UpdateAccountingCreditmemoRequest request) {
+        return updateAccountingCreditmemo(request, null);
+    }
+
+    /**
+     * Update a creditmemo
+     * 
+     * <p>Updates the AccountingCreditmemo identified by `id`. Provide the unified AccountingCreditmemo fields
+     * to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateAccountingCreditmemoResponse updateAccountingCreditmemo(@Nonnull UpdateAccountingCreditmemoRequest request, @Nullable Options options) {
         RequestOperation<UpdateAccountingCreditmemoRequest, UpdateAccountingCreditmemoResponse> operation
-              = new UpdateAccountingCreditmemo.Sync(sdkConfiguration, _headers);
+              = new UpdateAccountingCreditmemo.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -4320,8 +6305,23 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateAccountingExpenseResponse updateAccountingExpense(@Nonnull UpdateAccountingExpenseRequest request) {
+        return updateAccountingExpense(request, null);
+    }
+
+    /**
+     * Update an expense
+     * 
+     * <p>Updates the AccountingExpense identified by `id`. Provide the unified AccountingExpense fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateAccountingExpenseResponse updateAccountingExpense(@Nonnull UpdateAccountingExpenseRequest request, @Nullable Options options) {
         RequestOperation<UpdateAccountingExpenseRequest, UpdateAccountingExpenseResponse> operation
-              = new UpdateAccountingExpense.Sync(sdkConfiguration, _headers);
+              = new UpdateAccountingExpense.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -4348,8 +6348,23 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateAccountingExpensereportResponse updateAccountingExpensereport(@Nonnull UpdateAccountingExpensereportRequest request) {
+        return updateAccountingExpensereport(request, null);
+    }
+
+    /**
+     * Update an expensereport
+     * 
+     * <p>Updates the AccountingExpensereport identified by `id`. Provide the unified AccountingExpensereport
+     * fields to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateAccountingExpensereportResponse updateAccountingExpensereport(@Nonnull UpdateAccountingExpensereportRequest request, @Nullable Options options) {
         RequestOperation<UpdateAccountingExpensereportRequest, UpdateAccountingExpensereportResponse> operation
-              = new UpdateAccountingExpensereport.Sync(sdkConfiguration, _headers);
+              = new UpdateAccountingExpensereport.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -4376,8 +6391,23 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateAccountingInvoiceResponse updateAccountingInvoice(@Nonnull UpdateAccountingInvoiceRequest request) {
+        return updateAccountingInvoice(request, null);
+    }
+
+    /**
+     * Update an invoice
+     * 
+     * <p>Updates the AccountingInvoice identified by `id`. Provide the unified AccountingInvoice fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateAccountingInvoiceResponse updateAccountingInvoice(@Nonnull UpdateAccountingInvoiceRequest request, @Nullable Options options) {
         RequestOperation<UpdateAccountingInvoiceRequest, UpdateAccountingInvoiceResponse> operation
-              = new UpdateAccountingInvoice.Sync(sdkConfiguration, _headers);
+              = new UpdateAccountingInvoice.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -4404,8 +6434,23 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateAccountingJournalResponse updateAccountingJournal(@Nonnull UpdateAccountingJournalRequest request) {
+        return updateAccountingJournal(request, null);
+    }
+
+    /**
+     * Update a journal
+     * 
+     * <p>Updates the AccountingJournal identified by `id`. Provide the unified AccountingJournal fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateAccountingJournalResponse updateAccountingJournal(@Nonnull UpdateAccountingJournalRequest request, @Nullable Options options) {
         RequestOperation<UpdateAccountingJournalRequest, UpdateAccountingJournalResponse> operation
-              = new UpdateAccountingJournal.Sync(sdkConfiguration, _headers);
+              = new UpdateAccountingJournal.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -4436,8 +6481,25 @@ public class Accounting {
      */
     @Deprecated
     public UpdateAccountingOrderResponse updateAccountingOrder(@Nonnull UpdateAccountingOrderRequest request) {
+        return updateAccountingOrder(request, null);
+    }
+
+    /**
+     * Update an order
+     * 
+     * <p>Updates the AccountingOrder identified by `id`. Provide the unified AccountingOrder fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     * @deprecated method: This will be removed in a future release, please migrate away from it as soon as possible.
+     */
+    @Deprecated
+    public UpdateAccountingOrderResponse updateAccountingOrder(@Nonnull UpdateAccountingOrderRequest request, @Nullable Options options) {
         RequestOperation<UpdateAccountingOrderRequest, UpdateAccountingOrderResponse> operation
-              = new UpdateAccountingOrder.Sync(sdkConfiguration, _headers);
+              = new UpdateAccountingOrder.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -4464,8 +6526,23 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateAccountingPaymenttermResponse updateAccountingPaymentterm(@Nonnull UpdateAccountingPaymenttermRequest request) {
+        return updateAccountingPaymentterm(request, null);
+    }
+
+    /**
+     * Update a paymentterm
+     * 
+     * <p>Updates the AccountingPaymentterm identified by `id`. Provide the unified AccountingPaymentterm
+     * fields to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateAccountingPaymenttermResponse updateAccountingPaymentterm(@Nonnull UpdateAccountingPaymenttermRequest request, @Nullable Options options) {
         RequestOperation<UpdateAccountingPaymenttermRequest, UpdateAccountingPaymenttermResponse> operation
-              = new UpdateAccountingPaymentterm.Sync(sdkConfiguration, _headers);
+              = new UpdateAccountingPaymentterm.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -4492,8 +6569,23 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateAccountingProjectResponse updateAccountingProject(@Nonnull UpdateAccountingProjectRequest request) {
+        return updateAccountingProject(request, null);
+    }
+
+    /**
+     * Update a project
+     * 
+     * <p>Updates the AccountingProject identified by `id`. Provide the unified AccountingProject fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateAccountingProjectResponse updateAccountingProject(@Nonnull UpdateAccountingProjectRequest request, @Nullable Options options) {
         RequestOperation<UpdateAccountingProjectRequest, UpdateAccountingProjectResponse> operation
-              = new UpdateAccountingProject.Sync(sdkConfiguration, _headers);
+              = new UpdateAccountingProject.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -4520,8 +6612,23 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateAccountingPurchaseorderResponse updateAccountingPurchaseorder(@Nonnull UpdateAccountingPurchaseorderRequest request) {
+        return updateAccountingPurchaseorder(request, null);
+    }
+
+    /**
+     * Update a purchaseorder
+     * 
+     * <p>Updates the AccountingPurchaseorder identified by `id`. Provide the unified AccountingPurchaseorder
+     * fields to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateAccountingPurchaseorderResponse updateAccountingPurchaseorder(@Nonnull UpdateAccountingPurchaseorderRequest request, @Nullable Options options) {
         RequestOperation<UpdateAccountingPurchaseorderRequest, UpdateAccountingPurchaseorderResponse> operation
-              = new UpdateAccountingPurchaseorder.Sync(sdkConfiguration, _headers);
+              = new UpdateAccountingPurchaseorder.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -4548,8 +6655,23 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateAccountingQuoteResponse updateAccountingQuote(@Nonnull UpdateAccountingQuoteRequest request) {
+        return updateAccountingQuote(request, null);
+    }
+
+    /**
+     * Update a quote
+     * 
+     * <p>Updates the AccountingQuote identified by `id`. Provide the unified AccountingQuote fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateAccountingQuoteResponse updateAccountingQuote(@Nonnull UpdateAccountingQuoteRequest request, @Nullable Options options) {
         RequestOperation<UpdateAccountingQuoteRequest, UpdateAccountingQuoteResponse> operation
-              = new UpdateAccountingQuote.Sync(sdkConfiguration, _headers);
+              = new UpdateAccountingQuote.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -4576,8 +6698,23 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateAccountingSalesorderResponse updateAccountingSalesorder(@Nonnull UpdateAccountingSalesorderRequest request) {
+        return updateAccountingSalesorder(request, null);
+    }
+
+    /**
+     * Update a salesorder
+     * 
+     * <p>Updates the AccountingSalesorder identified by `id`. Provide the unified AccountingSalesorder fields
+     * to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateAccountingSalesorderResponse updateAccountingSalesorder(@Nonnull UpdateAccountingSalesorderRequest request, @Nullable Options options) {
         RequestOperation<UpdateAccountingSalesorderRequest, UpdateAccountingSalesorderResponse> operation
-              = new UpdateAccountingSalesorder.Sync(sdkConfiguration, _headers);
+              = new UpdateAccountingSalesorder.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -4604,8 +6741,23 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateAccountingTaxrateResponse updateAccountingTaxrate(@Nonnull UpdateAccountingTaxrateRequest request) {
+        return updateAccountingTaxrate(request, null);
+    }
+
+    /**
+     * Update a taxrate
+     * 
+     * <p>Updates the AccountingTaxrate identified by `id`. Provide the unified AccountingTaxrate fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateAccountingTaxrateResponse updateAccountingTaxrate(@Nonnull UpdateAccountingTaxrateRequest request, @Nullable Options options) {
         RequestOperation<UpdateAccountingTaxrateRequest, UpdateAccountingTaxrateResponse> operation
-              = new UpdateAccountingTaxrate.Sync(sdkConfiguration, _headers);
+              = new UpdateAccountingTaxrate.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -4632,8 +6784,23 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateAccountingTransactionResponse updateAccountingTransaction(@Nonnull UpdateAccountingTransactionRequest request) {
+        return updateAccountingTransaction(request, null);
+    }
+
+    /**
+     * Update a transaction
+     * 
+     * <p>Updates the AccountingTransaction identified by `id`. Provide the unified AccountingTransaction
+     * fields to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateAccountingTransactionResponse updateAccountingTransaction(@Nonnull UpdateAccountingTransactionRequest request, @Nullable Options options) {
         RequestOperation<UpdateAccountingTransactionRequest, UpdateAccountingTransactionResponse> operation
-              = new UpdateAccountingTransaction.Sync(sdkConfiguration, _headers);
+              = new UpdateAccountingTransaction.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -4660,8 +6827,23 @@ public class Accounting {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateAccountingVendorcreditResponse updateAccountingVendorcredit(@Nonnull UpdateAccountingVendorcreditRequest request) {
+        return updateAccountingVendorcredit(request, null);
+    }
+
+    /**
+     * Update a vendorcredit
+     * 
+     * <p>Updates the AccountingVendorcredit identified by `id`. Provide the unified AccountingVendorcredit
+     * fields to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateAccountingVendorcreditResponse updateAccountingVendorcredit(@Nonnull UpdateAccountingVendorcreditRequest request, @Nullable Options options) {
         RequestOperation<UpdateAccountingVendorcreditRequest, UpdateAccountingVendorcreditResponse> operation
-              = new UpdateAccountingVendorcredit.Sync(sdkConfiguration, _headers);
+              = new UpdateAccountingVendorcredit.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

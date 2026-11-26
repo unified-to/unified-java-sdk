@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateUcCallRequest;
 import to.unified.unified_java_sdk.models.operations.CreateUcCallRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateUcCallResponse;
@@ -131,6 +132,7 @@ import to.unified.unified_java_sdk.operations.UpdateUcComment;
 import to.unified.unified_java_sdk.operations.UpdateUcContact;
 import to.unified.unified_java_sdk.operations.UpdateUcRecording;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Uc {
@@ -175,8 +177,23 @@ public class Uc {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateUcCallResponse createUcCall(@Nonnull CreateUcCallRequest request) {
+        return createUcCall(request, null);
+    }
+
+    /**
+     * Create a call
+     * 
+     * <p>Creates a UcCall. Provide the unified UcCall fields in the request body; they are mapped to the
+     * provider's API. Returns the created UcCall.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateUcCallResponse createUcCall(@Nonnull CreateUcCallRequest request, @Nullable Options options) {
         RequestOperation<CreateUcCallRequest, CreateUcCallResponse> operation
-              = new CreateUcCall.Sync(sdkConfiguration, _headers);
+              = new CreateUcCall.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -203,8 +220,23 @@ public class Uc {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateUcCommentResponse createUcComment(@Nonnull CreateUcCommentRequest request) {
+        return createUcComment(request, null);
+    }
+
+    /**
+     * Create a comment
+     * 
+     * <p>Creates a UcComment. Provide the unified UcComment fields in the request body; they are mapped to
+     * the provider's API. Returns the created UcComment.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateUcCommentResponse createUcComment(@Nonnull CreateUcCommentRequest request, @Nullable Options options) {
         RequestOperation<CreateUcCommentRequest, CreateUcCommentResponse> operation
-              = new CreateUcComment.Sync(sdkConfiguration, _headers);
+              = new CreateUcComment.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -231,8 +263,23 @@ public class Uc {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateUcContactResponse createUcContact(@Nonnull CreateUcContactRequest request) {
+        return createUcContact(request, null);
+    }
+
+    /**
+     * Create a contact
+     * 
+     * <p>Creates a UcContact. Provide the unified UcContact fields in the request body; they are mapped to
+     * the provider's API. Returns the created UcContact.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateUcContactResponse createUcContact(@Nonnull CreateUcContactRequest request, @Nullable Options options) {
         RequestOperation<CreateUcContactRequest, CreateUcContactResponse> operation
-              = new CreateUcContact.Sync(sdkConfiguration, _headers);
+              = new CreateUcContact.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -259,8 +306,23 @@ public class Uc {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateUcFaxResponse createUcFax(@Nonnull CreateUcFaxRequest request) {
+        return createUcFax(request, null);
+    }
+
+    /**
+     * Create a fax
+     * 
+     * <p>Creates a UcFax. Provide the unified UcFax fields in the request body; they are mapped to the
+     * provider's API. Returns the created UcFax.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateUcFaxResponse createUcFax(@Nonnull CreateUcFaxRequest request, @Nullable Options options) {
         RequestOperation<CreateUcFaxRequest, CreateUcFaxResponse> operation
-              = new CreateUcFax.Sync(sdkConfiguration, _headers);
+              = new CreateUcFax.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -287,8 +349,23 @@ public class Uc {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateUcRecordingResponse createUcRecording(@Nonnull CreateUcRecordingRequest request) {
+        return createUcRecording(request, null);
+    }
+
+    /**
+     * Create a recording
+     * 
+     * <p>Creates a UcRecording. Provide the unified UcRecording fields in the request body; they are mapped
+     * to the provider's API. Returns the created UcRecording.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateUcRecordingResponse createUcRecording(@Nonnull CreateUcRecordingRequest request, @Nullable Options options) {
         RequestOperation<CreateUcRecordingRequest, CreateUcRecordingResponse> operation
-              = new CreateUcRecording.Sync(sdkConfiguration, _headers);
+              = new CreateUcRecording.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -315,8 +392,23 @@ public class Uc {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetUcCallResponse getUcCall(@Nonnull GetUcCallRequest request) {
+        return getUcCall(request, null);
+    }
+
+    /**
+     * Retrieve a call
+     * 
+     * <p>Retrieves a single UcCall by its `id`. Obtain `id` values from the corresponding list endpoint. Use
+     * `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetUcCallResponse getUcCall(@Nonnull GetUcCallRequest request, @Nullable Options options) {
         RequestOperation<GetUcCallRequest, GetUcCallResponse> operation
-              = new GetUcCall.Sync(sdkConfiguration, _headers);
+              = new GetUcCall.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -343,8 +435,23 @@ public class Uc {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetUcCommentResponse getUcComment(@Nonnull GetUcCommentRequest request) {
+        return getUcComment(request, null);
+    }
+
+    /**
+     * Retrieve a comment
+     * 
+     * <p>Retrieves a single UcComment by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetUcCommentResponse getUcComment(@Nonnull GetUcCommentRequest request, @Nullable Options options) {
         RequestOperation<GetUcCommentRequest, GetUcCommentResponse> operation
-              = new GetUcComment.Sync(sdkConfiguration, _headers);
+              = new GetUcComment.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -371,8 +478,23 @@ public class Uc {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetUcContactResponse getUcContact(@Nonnull GetUcContactRequest request) {
+        return getUcContact(request, null);
+    }
+
+    /**
+     * Retrieve a contact
+     * 
+     * <p>Retrieves a single UcContact by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetUcContactResponse getUcContact(@Nonnull GetUcContactRequest request, @Nullable Options options) {
         RequestOperation<GetUcContactRequest, GetUcContactResponse> operation
-              = new GetUcContact.Sync(sdkConfiguration, _headers);
+              = new GetUcContact.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -399,8 +521,23 @@ public class Uc {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetUcFaxResponse getUcFax(@Nonnull GetUcFaxRequest request) {
+        return getUcFax(request, null);
+    }
+
+    /**
+     * Retrieve a fax
+     * 
+     * <p>Retrieves a single UcFax by its `id`. Obtain `id` values from the corresponding list endpoint. Use
+     * `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetUcFaxResponse getUcFax(@Nonnull GetUcFaxRequest request, @Nullable Options options) {
         RequestOperation<GetUcFaxRequest, GetUcFaxResponse> operation
-              = new GetUcFax.Sync(sdkConfiguration, _headers);
+              = new GetUcFax.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -427,8 +564,23 @@ public class Uc {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetUcRecordingResponse getUcRecording(@Nonnull GetUcRecordingRequest request) {
+        return getUcRecording(request, null);
+    }
+
+    /**
+     * Retrieve a recording
+     * 
+     * <p>Retrieves a single UcRecording by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetUcRecordingResponse getUcRecording(@Nonnull GetUcRecordingRequest request, @Nullable Options options) {
         RequestOperation<GetUcRecordingRequest, GetUcRecordingResponse> operation
-              = new GetUcRecording.Sync(sdkConfiguration, _headers);
+              = new GetUcRecording.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -455,8 +607,23 @@ public class Uc {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetUcScorecardResponse getUcScorecard(@Nonnull GetUcScorecardRequest request) {
+        return getUcScorecard(request, null);
+    }
+
+    /**
+     * Retrieve a scorecard
+     * 
+     * <p>Retrieves a single UcScorecard by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetUcScorecardResponse getUcScorecard(@Nonnull GetUcScorecardRequest request, @Nullable Options options) {
         RequestOperation<GetUcScorecardRequest, GetUcScorecardResponse> operation
-              = new GetUcScorecard.Sync(sdkConfiguration, _headers);
+              = new GetUcScorecard.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -483,8 +650,23 @@ public class Uc {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetUcScorecardtemplateResponse getUcScorecardtemplate(@Nonnull GetUcScorecardtemplateRequest request) {
+        return getUcScorecardtemplate(request, null);
+    }
+
+    /**
+     * Retrieve a scorecardtemplate
+     * 
+     * <p>Retrieves a single UcScorecardtemplate by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetUcScorecardtemplateResponse getUcScorecardtemplate(@Nonnull GetUcScorecardtemplateRequest request, @Nullable Options options) {
         RequestOperation<GetUcScorecardtemplateRequest, GetUcScorecardtemplateResponse> operation
-              = new GetUcScorecardtemplate.Sync(sdkConfiguration, _headers);
+              = new GetUcScorecardtemplate.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -519,8 +701,27 @@ public class Uc {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListUcCallsResponse listUcCalls(@Nonnull ListUcCallsRequest request) {
+        return listUcCalls(request, null);
+    }
+
+    /**
+     * List all calls
+     * 
+     * <p>Returns a list of UcCalls. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListUcCallsResponse listUcCalls(@Nonnull ListUcCallsRequest request, @Nullable Options options) {
         RequestOperation<ListUcCallsRequest, ListUcCallsResponse> operation
-              = new ListUcCalls.Sync(sdkConfiguration, _headers);
+              = new ListUcCalls.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -555,8 +756,27 @@ public class Uc {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListUcCommentsResponse listUcComments(@Nonnull ListUcCommentsRequest request) {
+        return listUcComments(request, null);
+    }
+
+    /**
+     * List all comments
+     * 
+     * <p>Returns a list of UcComments. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListUcCommentsResponse listUcComments(@Nonnull ListUcCommentsRequest request, @Nullable Options options) {
         RequestOperation<ListUcCommentsRequest, ListUcCommentsResponse> operation
-              = new ListUcComments.Sync(sdkConfiguration, _headers);
+              = new ListUcComments.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -591,8 +811,27 @@ public class Uc {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListUcContactsResponse listUcContacts(@Nonnull ListUcContactsRequest request) {
+        return listUcContacts(request, null);
+    }
+
+    /**
+     * List all contacts
+     * 
+     * <p>Returns a list of UcContacts. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListUcContactsResponse listUcContacts(@Nonnull ListUcContactsRequest request, @Nullable Options options) {
         RequestOperation<ListUcContactsRequest, ListUcContactsResponse> operation
-              = new ListUcContacts.Sync(sdkConfiguration, _headers);
+              = new ListUcContacts.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -627,8 +866,27 @@ public class Uc {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListUcFaxesResponse listUcFaxes(@Nonnull ListUcFaxesRequest request) {
+        return listUcFaxes(request, null);
+    }
+
+    /**
+     * List all faxes
+     * 
+     * <p>Returns a list of UcFaxes. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListUcFaxesResponse listUcFaxes(@Nonnull ListUcFaxesRequest request, @Nullable Options options) {
         RequestOperation<ListUcFaxesRequest, ListUcFaxesResponse> operation
-              = new ListUcFaxes.Sync(sdkConfiguration, _headers);
+              = new ListUcFaxes.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -663,8 +921,27 @@ public class Uc {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListUcRecordingsResponse listUcRecordings(@Nonnull ListUcRecordingsRequest request) {
+        return listUcRecordings(request, null);
+    }
+
+    /**
+     * List all recordings
+     * 
+     * <p>Returns a list of UcRecordings. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListUcRecordingsResponse listUcRecordings(@Nonnull ListUcRecordingsRequest request, @Nullable Options options) {
         RequestOperation<ListUcRecordingsRequest, ListUcRecordingsResponse> operation
-              = new ListUcRecordings.Sync(sdkConfiguration, _headers);
+              = new ListUcRecordings.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -699,8 +976,27 @@ public class Uc {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListUcScorecardsResponse listUcScorecards(@Nonnull ListUcScorecardsRequest request) {
+        return listUcScorecards(request, null);
+    }
+
+    /**
+     * List all scorecards
+     * 
+     * <p>Returns a list of UcScorecards. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListUcScorecardsResponse listUcScorecards(@Nonnull ListUcScorecardsRequest request, @Nullable Options options) {
         RequestOperation<ListUcScorecardsRequest, ListUcScorecardsResponse> operation
-              = new ListUcScorecards.Sync(sdkConfiguration, _headers);
+              = new ListUcScorecards.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -735,8 +1031,27 @@ public class Uc {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListUcScorecardtemplatesResponse listUcScorecardtemplates(@Nonnull ListUcScorecardtemplatesRequest request) {
+        return listUcScorecardtemplates(request, null);
+    }
+
+    /**
+     * List all scorecardtemplates
+     * 
+     * <p>Returns a list of UcScorecardtemplates. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListUcScorecardtemplatesResponse listUcScorecardtemplates(@Nonnull ListUcScorecardtemplatesRequest request, @Nullable Options options) {
         RequestOperation<ListUcScorecardtemplatesRequest, ListUcScorecardtemplatesResponse> operation
-              = new ListUcScorecardtemplates.Sync(sdkConfiguration, _headers);
+              = new ListUcScorecardtemplates.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -763,8 +1078,23 @@ public class Uc {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchUcCallResponse patchUcCall(@Nonnull PatchUcCallRequest request) {
+        return patchUcCall(request, null);
+    }
+
+    /**
+     * Update a call
+     * 
+     * <p>Updates the UcCall identified by `id`. Provide the unified UcCall fields to change in the request
+     * body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchUcCallResponse patchUcCall(@Nonnull PatchUcCallRequest request, @Nullable Options options) {
         RequestOperation<PatchUcCallRequest, PatchUcCallResponse> operation
-              = new PatchUcCall.Sync(sdkConfiguration, _headers);
+              = new PatchUcCall.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -791,8 +1121,23 @@ public class Uc {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchUcCommentResponse patchUcComment(@Nonnull PatchUcCommentRequest request) {
+        return patchUcComment(request, null);
+    }
+
+    /**
+     * Update a comment
+     * 
+     * <p>Updates the UcComment identified by `id`. Provide the unified UcComment fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchUcCommentResponse patchUcComment(@Nonnull PatchUcCommentRequest request, @Nullable Options options) {
         RequestOperation<PatchUcCommentRequest, PatchUcCommentResponse> operation
-              = new PatchUcComment.Sync(sdkConfiguration, _headers);
+              = new PatchUcComment.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -819,8 +1164,23 @@ public class Uc {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchUcContactResponse patchUcContact(@Nonnull PatchUcContactRequest request) {
+        return patchUcContact(request, null);
+    }
+
+    /**
+     * Update a contact
+     * 
+     * <p>Updates the UcContact identified by `id`. Provide the unified UcContact fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchUcContactResponse patchUcContact(@Nonnull PatchUcContactRequest request, @Nullable Options options) {
         RequestOperation<PatchUcContactRequest, PatchUcContactResponse> operation
-              = new PatchUcContact.Sync(sdkConfiguration, _headers);
+              = new PatchUcContact.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -847,8 +1207,23 @@ public class Uc {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchUcRecordingResponse patchUcRecording(@Nonnull PatchUcRecordingRequest request) {
+        return patchUcRecording(request, null);
+    }
+
+    /**
+     * Update a recording
+     * 
+     * <p>Updates the UcRecording identified by `id`. Provide the unified UcRecording fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchUcRecordingResponse patchUcRecording(@Nonnull PatchUcRecordingRequest request, @Nullable Options options) {
         RequestOperation<PatchUcRecordingRequest, PatchUcRecordingResponse> operation
-              = new PatchUcRecording.Sync(sdkConfiguration, _headers);
+              = new PatchUcRecording.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -873,8 +1248,22 @@ public class Uc {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveUcCommentResponse removeUcComment(@Nonnull RemoveUcCommentRequest request) {
+        return removeUcComment(request, null);
+    }
+
+    /**
+     * Remove a comment
+     * 
+     * <p>Deletes the UcComment identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveUcCommentResponse removeUcComment(@Nonnull RemoveUcCommentRequest request, @Nullable Options options) {
         RequestOperation<RemoveUcCommentRequest, RemoveUcCommentResponse> operation
-              = new RemoveUcComment.Sync(sdkConfiguration, _headers);
+              = new RemoveUcComment.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -899,8 +1288,22 @@ public class Uc {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveUcContactResponse removeUcContact(@Nonnull RemoveUcContactRequest request) {
+        return removeUcContact(request, null);
+    }
+
+    /**
+     * Remove a contact
+     * 
+     * <p>Deletes the UcContact identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveUcContactResponse removeUcContact(@Nonnull RemoveUcContactRequest request, @Nullable Options options) {
         RequestOperation<RemoveUcContactRequest, RemoveUcContactResponse> operation
-              = new RemoveUcContact.Sync(sdkConfiguration, _headers);
+              = new RemoveUcContact.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -925,8 +1328,22 @@ public class Uc {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveUcFaxResponse removeUcFax(@Nonnull RemoveUcFaxRequest request) {
+        return removeUcFax(request, null);
+    }
+
+    /**
+     * Remove a fax
+     * 
+     * <p>Deletes the UcFax identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveUcFaxResponse removeUcFax(@Nonnull RemoveUcFaxRequest request, @Nullable Options options) {
         RequestOperation<RemoveUcFaxRequest, RemoveUcFaxResponse> operation
-              = new RemoveUcFax.Sync(sdkConfiguration, _headers);
+              = new RemoveUcFax.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -951,8 +1368,22 @@ public class Uc {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveUcRecordingResponse removeUcRecording(@Nonnull RemoveUcRecordingRequest request) {
+        return removeUcRecording(request, null);
+    }
+
+    /**
+     * Remove a recording
+     * 
+     * <p>Deletes the UcRecording identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveUcRecordingResponse removeUcRecording(@Nonnull RemoveUcRecordingRequest request, @Nullable Options options) {
         RequestOperation<RemoveUcRecordingRequest, RemoveUcRecordingResponse> operation
-              = new RemoveUcRecording.Sync(sdkConfiguration, _headers);
+              = new RemoveUcRecording.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -979,8 +1410,23 @@ public class Uc {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateUcCallResponse updateUcCall(@Nonnull UpdateUcCallRequest request) {
+        return updateUcCall(request, null);
+    }
+
+    /**
+     * Update a call
+     * 
+     * <p>Updates the UcCall identified by `id`. Provide the unified UcCall fields to change in the request
+     * body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateUcCallResponse updateUcCall(@Nonnull UpdateUcCallRequest request, @Nullable Options options) {
         RequestOperation<UpdateUcCallRequest, UpdateUcCallResponse> operation
-              = new UpdateUcCall.Sync(sdkConfiguration, _headers);
+              = new UpdateUcCall.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1007,8 +1453,23 @@ public class Uc {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateUcCommentResponse updateUcComment(@Nonnull UpdateUcCommentRequest request) {
+        return updateUcComment(request, null);
+    }
+
+    /**
+     * Update a comment
+     * 
+     * <p>Updates the UcComment identified by `id`. Provide the unified UcComment fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateUcCommentResponse updateUcComment(@Nonnull UpdateUcCommentRequest request, @Nullable Options options) {
         RequestOperation<UpdateUcCommentRequest, UpdateUcCommentResponse> operation
-              = new UpdateUcComment.Sync(sdkConfiguration, _headers);
+              = new UpdateUcComment.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1035,8 +1496,23 @@ public class Uc {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateUcContactResponse updateUcContact(@Nonnull UpdateUcContactRequest request) {
+        return updateUcContact(request, null);
+    }
+
+    /**
+     * Update a contact
+     * 
+     * <p>Updates the UcContact identified by `id`. Provide the unified UcContact fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateUcContactResponse updateUcContact(@Nonnull UpdateUcContactRequest request, @Nullable Options options) {
         RequestOperation<UpdateUcContactRequest, UpdateUcContactResponse> operation
-              = new UpdateUcContact.Sync(sdkConfiguration, _headers);
+              = new UpdateUcContact.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1063,8 +1539,23 @@ public class Uc {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateUcRecordingResponse updateUcRecording(@Nonnull UpdateUcRecordingRequest request) {
+        return updateUcRecording(request, null);
+    }
+
+    /**
+     * Update a recording
+     * 
+     * <p>Updates the UcRecording identified by `id`. Provide the unified UcRecording fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateUcRecordingResponse updateUcRecording(@Nonnull UpdateUcRecordingRequest request, @Nullable Options options) {
         RequestOperation<UpdateUcRecordingRequest, UpdateUcRecordingResponse> operation
-              = new UpdateUcRecording.Sync(sdkConfiguration, _headers);
+              = new UpdateUcRecording.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

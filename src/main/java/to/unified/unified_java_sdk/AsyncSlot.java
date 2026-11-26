@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.GetHealthcareSlotRequest;
 import to.unified.unified_java_sdk.models.operations.ListHealthcareSlotsRequest;
@@ -16,6 +17,7 @@ import to.unified.unified_java_sdk.models.operations.async.ListHealthcareSlotsRe
 import to.unified.unified_java_sdk.operations.GetHealthcareSlot;
 import to.unified.unified_java_sdk.operations.ListHealthcareSlots;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncSlot {
@@ -60,8 +62,22 @@ public class AsyncSlot {
      * @return {@code CompletableFuture<GetHealthcareSlotResponse>} - The async response
      */
     public CompletableFuture<GetHealthcareSlotResponse> getHealthcareSlot(@Nonnull GetHealthcareSlotRequest request) {
+        return getHealthcareSlot(request, null);
+    }
+
+    /**
+     * Retrieve a slot
+     * 
+     * <p>Retrieves a single HealthcareSlot by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetHealthcareSlotResponse>} - The async response
+     */
+    public CompletableFuture<GetHealthcareSlotResponse> getHealthcareSlot(@Nonnull GetHealthcareSlotRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetHealthcareSlotRequest, GetHealthcareSlotResponse> operation
-              = new GetHealthcareSlot.Async(sdkConfiguration, _headers);
+              = new GetHealthcareSlot.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -97,8 +113,26 @@ public class AsyncSlot {
      * @return {@code CompletableFuture<ListHealthcareSlotsResponse>} - The async response
      */
     public CompletableFuture<ListHealthcareSlotsResponse> listHealthcareSlots(@Nonnull ListHealthcareSlotsRequest request) {
+        return listHealthcareSlots(request, null);
+    }
+
+    /**
+     * List all slots
+     * 
+     * <p>Returns a list of HealthcareSlots. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListHealthcareSlotsResponse>} - The async response
+     */
+    public CompletableFuture<ListHealthcareSlotsResponse> listHealthcareSlots(@Nonnull ListHealthcareSlotsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListHealthcareSlotsRequest, ListHealthcareSlotsResponse> operation
-              = new ListHealthcareSlots.Async(sdkConfiguration, _headers);
+              = new ListHealthcareSlots.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

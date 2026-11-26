@@ -61,6 +61,9 @@ public class PropertyWorkspaceIntegrationPatchCategories {
     public static final PropertyWorkspaceIntegrationPatchCategories PROPERTY = new PropertyWorkspaceIntegrationPatchCategories("property");
     public static final PropertyWorkspaceIntegrationPatchCategories PLM = new PropertyWorkspaceIntegrationPatchCategories("plm");
     public static final PropertyWorkspaceIntegrationPatchCategories QMS = new PropertyWorkspaceIntegrationPatchCategories("qms");
+    public static final PropertyWorkspaceIntegrationPatchCategories DMS = new PropertyWorkspaceIntegrationPatchCategories("dms");
+    public static final PropertyWorkspaceIntegrationPatchCategories FHIR = new PropertyWorkspaceIntegrationPatchCategories("fhir");
+    public static final PropertyWorkspaceIntegrationPatchCategories PRINTING = new PropertyWorkspaceIntegrationPatchCategories("printing");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -175,6 +178,9 @@ public class PropertyWorkspaceIntegrationPatchCategories {
         map.put("property", PROPERTY);
         map.put("plm", PLM);
         map.put("qms", QMS);
+        map.put("dms", DMS);
+        map.put("fhir", FHIR);
+        map.put("printing", PRINTING);
         return map;
     }
 
@@ -221,6 +227,9 @@ public class PropertyWorkspaceIntegrationPatchCategories {
         map.put("property", PropertyWorkspaceIntegrationPatchCategoriesEnum.PROPERTY);
         map.put("plm", PropertyWorkspaceIntegrationPatchCategoriesEnum.PLM);
         map.put("qms", PropertyWorkspaceIntegrationPatchCategoriesEnum.QMS);
+        map.put("dms", PropertyWorkspaceIntegrationPatchCategoriesEnum.DMS);
+        map.put("fhir", PropertyWorkspaceIntegrationPatchCategoriesEnum.FHIR);
+        map.put("printing", PropertyWorkspaceIntegrationPatchCategoriesEnum.PRINTING);
         return map;
     }
     
@@ -267,7 +276,10 @@ public class PropertyWorkspaceIntegrationPatchCategories {
         HEALTHCARE("healthcare"),
         PROPERTY("property"),
         PLM("plm"),
-        QMS("qms"),;
+        QMS("qms"),
+        DMS("dms"),
+        FHIR("fhir"),
+        PRINTING("printing"),;
 
         private final String value;
 

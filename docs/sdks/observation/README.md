@@ -5,7 +5,9 @@
 ### Available Operations
 
 * [createHealthcareObservation](#createhealthcareobservation) - Create an observation
+* [getFhirObservation](#getfhirobservation) - Read a Observation
 * [getHealthcareObservation](#gethealthcareobservation) - Retrieve an observation
+* [listFhirObservations](#listfhirobservations) - Search Observation resources
 * [listHealthcareObservations](#listhealthcareobservations) - List all observations
 
 ## createHealthcareObservation
@@ -66,15 +68,15 @@ public class Application {
                             .valueUnit("mm[Hg]")
                             .build()))
                     .createdAt(OffsetDateTime.parse("2022-12-06T21:34:04.293Z"))
-                    .id("b97de041-c39b-488c-9736-99df0adb40e2")
+                    .id("eac67ec3-5bc8-49ef-a3d9-7bd3428149fe")
                     .interpretation(Interpretation.CRITICAL_HIGH)
-                    .issuedAt(OffsetDateTime.parse("2025-05-30T06:07:15.448Z"))
+                    .issuedAt(OffsetDateTime.parse("2025-06-02T23:26:26.767Z"))
                     .metadata(List.of())
                     .name("Blood pressure panel")
-                    .observedAt(OffsetDateTime.parse("2025-02-05T14:56:59.492Z"))
+                    .observedAt(OffsetDateTime.parse("2025-02-08T21:03:32.603Z"))
                     .status(HealthcareObservationStatus.CORRECTED)
                     .type(HealthcareObservationType.VITAL_SIGNS)
-                    .updatedAt(OffsetDateTime.parse("2026-04-18T19:26:35.114Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-04-23T20:41:02.026Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -99,6 +101,64 @@ public class Application {
 ### Response
 
 **[CreateHealthcareObservationResponse](../../models/operations/CreateHealthcareObservationResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## getFhirObservation
+
+Responses use the application/fhir+json media type; errors are OperationOutcome resources. Read-only (FHIR R4 4.0.1).
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="getFhirObservation" method="get" path="/fhir/{connection_id}/Observation/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetFhirObservationRequest;
+import to.unified.unified_java_sdk.models.operations.GetFhirObservationResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        GetFhirObservationRequest req = GetFhirObservationRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetFhirObservationResponse res = sdk.observation().getFhirObservation()
+                .request(req)
+                .call();
+
+        if (res.fhirObservation().isPresent()) {
+            System.out.println(res.fhirObservation().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [GetFhirObservationRequest](../../models/operations/GetFhirObservationRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+
+### Response
+
+**[GetFhirObservationResponse](../../models/operations/GetFhirObservationResponse.md)**
 
 ### Errors
 
@@ -157,6 +217,63 @@ public class Application {
 ### Response
 
 **[GetHealthcareObservationResponse](../../models/operations/GetHealthcareObservationResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## listFhirObservations
+
+Returns a searchset Bundle; follow its next link for more pages. Responses use the application/fhir+json media type; errors are OperationOutcome resources. Read-only (FHIR R4 4.0.1).
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listFhirObservations" method="get" path="/fhir/{connection_id}/Observation" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListFhirObservationsRequest;
+import to.unified.unified_java_sdk.models.operations.ListFhirObservationsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListFhirObservationsRequest req = ListFhirObservationsRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListFhirObservationsResponse res = sdk.observation().listFhirObservations()
+                .request(req)
+                .call();
+
+        if (res.fhirBundle().isPresent()) {
+            System.out.println(res.fhirBundle().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [ListFhirObservationsRequest](../../models/operations/ListFhirObservationsRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
+
+### Response
+
+**[ListFhirObservationsResponse](../../models/operations/ListFhirObservationsResponse.md)**
 
 ### Errors
 

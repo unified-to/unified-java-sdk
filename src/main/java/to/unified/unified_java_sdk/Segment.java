@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateCdpSegmentRequest;
 import to.unified.unified_java_sdk.models.operations.CreateCdpSegmentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateCdpSegmentResponse;
@@ -31,6 +32,7 @@ import to.unified.unified_java_sdk.operations.PatchCdpSegment;
 import to.unified.unified_java_sdk.operations.RemoveCdpSegment;
 import to.unified.unified_java_sdk.operations.UpdateCdpSegment;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Segment {
@@ -75,8 +77,23 @@ public class Segment {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateCdpSegmentResponse createCdpSegment(@Nonnull CreateCdpSegmentRequest request) {
+        return createCdpSegment(request, null);
+    }
+
+    /**
+     * Create a segment
+     * 
+     * <p>Creates a CdpSegment. Provide the unified CdpSegment fields in the request body; they are mapped to
+     * the provider's API. Returns the created CdpSegment.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateCdpSegmentResponse createCdpSegment(@Nonnull CreateCdpSegmentRequest request, @Nullable Options options) {
         RequestOperation<CreateCdpSegmentRequest, CreateCdpSegmentResponse> operation
-              = new CreateCdpSegment.Sync(sdkConfiguration, _headers);
+              = new CreateCdpSegment.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -103,8 +120,23 @@ public class Segment {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetCdpSegmentResponse getCdpSegment(@Nonnull GetCdpSegmentRequest request) {
+        return getCdpSegment(request, null);
+    }
+
+    /**
+     * Retrieve a segment
+     * 
+     * <p>Retrieves a single CdpSegment by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetCdpSegmentResponse getCdpSegment(@Nonnull GetCdpSegmentRequest request, @Nullable Options options) {
         RequestOperation<GetCdpSegmentRequest, GetCdpSegmentResponse> operation
-              = new GetCdpSegment.Sync(sdkConfiguration, _headers);
+              = new GetCdpSegment.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -139,8 +171,27 @@ public class Segment {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListCdpSegmentsResponse listCdpSegments(@Nonnull ListCdpSegmentsRequest request) {
+        return listCdpSegments(request, null);
+    }
+
+    /**
+     * List all segments
+     * 
+     * <p>Returns a list of CdpSegments. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListCdpSegmentsResponse listCdpSegments(@Nonnull ListCdpSegmentsRequest request, @Nullable Options options) {
         RequestOperation<ListCdpSegmentsRequest, ListCdpSegmentsResponse> operation
-              = new ListCdpSegments.Sync(sdkConfiguration, _headers);
+              = new ListCdpSegments.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +218,23 @@ public class Segment {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchCdpSegmentResponse patchCdpSegment(@Nonnull PatchCdpSegmentRequest request) {
+        return patchCdpSegment(request, null);
+    }
+
+    /**
+     * Update a segment
+     * 
+     * <p>Updates the CdpSegment identified by `id`. Provide the unified CdpSegment fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchCdpSegmentResponse patchCdpSegment(@Nonnull PatchCdpSegmentRequest request, @Nullable Options options) {
         RequestOperation<PatchCdpSegmentRequest, PatchCdpSegmentResponse> operation
-              = new PatchCdpSegment.Sync(sdkConfiguration, _headers);
+              = new PatchCdpSegment.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -193,8 +259,22 @@ public class Segment {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveCdpSegmentResponse removeCdpSegment(@Nonnull RemoveCdpSegmentRequest request) {
+        return removeCdpSegment(request, null);
+    }
+
+    /**
+     * Remove a segment
+     * 
+     * <p>Deletes the CdpSegment identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveCdpSegmentResponse removeCdpSegment(@Nonnull RemoveCdpSegmentRequest request, @Nullable Options options) {
         RequestOperation<RemoveCdpSegmentRequest, RemoveCdpSegmentResponse> operation
-              = new RemoveCdpSegment.Sync(sdkConfiguration, _headers);
+              = new RemoveCdpSegment.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -221,8 +301,23 @@ public class Segment {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateCdpSegmentResponse updateCdpSegment(@Nonnull UpdateCdpSegmentRequest request) {
+        return updateCdpSegment(request, null);
+    }
+
+    /**
+     * Update a segment
+     * 
+     * <p>Updates the CdpSegment identified by `id`. Provide the unified CdpSegment fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateCdpSegmentResponse updateCdpSegment(@Nonnull UpdateCdpSegmentRequest request, @Nullable Options options) {
         RequestOperation<UpdateCdpSegmentRequest, UpdateCdpSegmentResponse> operation
-              = new UpdateCdpSegment.Sync(sdkConfiguration, _headers);
+              = new UpdateCdpSegment.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

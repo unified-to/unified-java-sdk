@@ -6,18 +6,28 @@ package to.unified.unified_java_sdk.models.operations;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.ListDatastoreDatabases;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListDatastoreDatabasesRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private ListDatastoreDatabasesRequest request;
+    private final Options.Builder optionsBuilder;
 
     public ListDatastoreDatabasesRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public ListDatastoreDatabasesRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public ListDatastoreDatabasesRequestBuilder request(@Nonnull ListDatastoreDatabasesRequest request) {
@@ -42,8 +52,9 @@ public class ListDatastoreDatabasesRequestBuilder {
     * @return The response from the server.
     */
     public ListDatastoreDatabasesResponse call() {
+        Options options = optionsBuilder.build();
         RequestOperation<ListDatastoreDatabasesRequest, ListDatastoreDatabasesResponse> operation
-              = new ListDatastoreDatabases.Sync(sdkConfiguration, _headers);
+              = new ListDatastoreDatabases.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

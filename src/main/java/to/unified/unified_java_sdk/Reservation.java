@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceReservationRequest;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceReservationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceReservationResponse;
@@ -55,6 +56,7 @@ import to.unified.unified_java_sdk.operations.RemovePropertyReservation;
 import to.unified.unified_java_sdk.operations.UpdateCommerceReservation;
 import to.unified.unified_java_sdk.operations.UpdatePropertyReservation;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Reservation {
@@ -99,8 +101,23 @@ public class Reservation {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateCommerceReservationResponse createCommerceReservation(@Nonnull CreateCommerceReservationRequest request) {
+        return createCommerceReservation(request, null);
+    }
+
+    /**
+     * Create a reservation
+     * 
+     * <p>Creates a CommerceReservation. Provide the unified CommerceReservation fields in the request body;
+     * they are mapped to the provider's API. Returns the created CommerceReservation.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateCommerceReservationResponse createCommerceReservation(@Nonnull CreateCommerceReservationRequest request, @Nullable Options options) {
         RequestOperation<CreateCommerceReservationRequest, CreateCommerceReservationResponse> operation
-              = new CreateCommerceReservation.Sync(sdkConfiguration, _headers);
+              = new CreateCommerceReservation.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -127,8 +144,23 @@ public class Reservation {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreatePropertyReservationResponse createPropertyReservation(@Nonnull CreatePropertyReservationRequest request) {
+        return createPropertyReservation(request, null);
+    }
+
+    /**
+     * Create a reservation
+     * 
+     * <p>Creates a PropertyReservation. Provide the unified PropertyReservation fields in the request body;
+     * they are mapped to the provider's API. Returns the created PropertyReservation.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreatePropertyReservationResponse createPropertyReservation(@Nonnull CreatePropertyReservationRequest request, @Nullable Options options) {
         RequestOperation<CreatePropertyReservationRequest, CreatePropertyReservationResponse> operation
-              = new CreatePropertyReservation.Sync(sdkConfiguration, _headers);
+              = new CreatePropertyReservation.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -155,8 +187,23 @@ public class Reservation {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetCommerceReservationResponse getCommerceReservation(@Nonnull GetCommerceReservationRequest request) {
+        return getCommerceReservation(request, null);
+    }
+
+    /**
+     * Retrieve a reservation
+     * 
+     * <p>Retrieves a single CommerceReservation by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetCommerceReservationResponse getCommerceReservation(@Nonnull GetCommerceReservationRequest request, @Nullable Options options) {
         RequestOperation<GetCommerceReservationRequest, GetCommerceReservationResponse> operation
-              = new GetCommerceReservation.Sync(sdkConfiguration, _headers);
+              = new GetCommerceReservation.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -183,8 +230,23 @@ public class Reservation {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetPropertyReservationResponse getPropertyReservation(@Nonnull GetPropertyReservationRequest request) {
+        return getPropertyReservation(request, null);
+    }
+
+    /**
+     * Retrieve a reservation
+     * 
+     * <p>Retrieves a single PropertyReservation by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetPropertyReservationResponse getPropertyReservation(@Nonnull GetPropertyReservationRequest request, @Nullable Options options) {
         RequestOperation<GetPropertyReservationRequest, GetPropertyReservationResponse> operation
-              = new GetPropertyReservation.Sync(sdkConfiguration, _headers);
+              = new GetPropertyReservation.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -219,8 +281,27 @@ public class Reservation {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListCommerceReservationsResponse listCommerceReservations(@Nonnull ListCommerceReservationsRequest request) {
+        return listCommerceReservations(request, null);
+    }
+
+    /**
+     * List all reservations
+     * 
+     * <p>Returns a list of CommerceReservations. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListCommerceReservationsResponse listCommerceReservations(@Nonnull ListCommerceReservationsRequest request, @Nullable Options options) {
         RequestOperation<ListCommerceReservationsRequest, ListCommerceReservationsResponse> operation
-              = new ListCommerceReservations.Sync(sdkConfiguration, _headers);
+              = new ListCommerceReservations.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -255,8 +336,27 @@ public class Reservation {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListPropertyReservationsResponse listPropertyReservations(@Nonnull ListPropertyReservationsRequest request) {
+        return listPropertyReservations(request, null);
+    }
+
+    /**
+     * List all reservations
+     * 
+     * <p>Returns a list of PropertyReservations. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListPropertyReservationsResponse listPropertyReservations(@Nonnull ListPropertyReservationsRequest request, @Nullable Options options) {
         RequestOperation<ListPropertyReservationsRequest, ListPropertyReservationsResponse> operation
-              = new ListPropertyReservations.Sync(sdkConfiguration, _headers);
+              = new ListPropertyReservations.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -283,8 +383,23 @@ public class Reservation {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchCommerceReservationResponse patchCommerceReservation(@Nonnull PatchCommerceReservationRequest request) {
+        return patchCommerceReservation(request, null);
+    }
+
+    /**
+     * Update a reservation
+     * 
+     * <p>Updates the CommerceReservation identified by `id`. Provide the unified CommerceReservation fields
+     * to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchCommerceReservationResponse patchCommerceReservation(@Nonnull PatchCommerceReservationRequest request, @Nullable Options options) {
         RequestOperation<PatchCommerceReservationRequest, PatchCommerceReservationResponse> operation
-              = new PatchCommerceReservation.Sync(sdkConfiguration, _headers);
+              = new PatchCommerceReservation.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -311,8 +426,23 @@ public class Reservation {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchPropertyReservationResponse patchPropertyReservation(@Nonnull PatchPropertyReservationRequest request) {
+        return patchPropertyReservation(request, null);
+    }
+
+    /**
+     * Update a reservation
+     * 
+     * <p>Updates the PropertyReservation identified by `id`. Provide the unified PropertyReservation fields
+     * to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchPropertyReservationResponse patchPropertyReservation(@Nonnull PatchPropertyReservationRequest request, @Nullable Options options) {
         RequestOperation<PatchPropertyReservationRequest, PatchPropertyReservationResponse> operation
-              = new PatchPropertyReservation.Sync(sdkConfiguration, _headers);
+              = new PatchPropertyReservation.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -337,8 +467,22 @@ public class Reservation {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveCommerceReservationResponse removeCommerceReservation(@Nonnull RemoveCommerceReservationRequest request) {
+        return removeCommerceReservation(request, null);
+    }
+
+    /**
+     * Remove a reservation
+     * 
+     * <p>Deletes the CommerceReservation identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveCommerceReservationResponse removeCommerceReservation(@Nonnull RemoveCommerceReservationRequest request, @Nullable Options options) {
         RequestOperation<RemoveCommerceReservationRequest, RemoveCommerceReservationResponse> operation
-              = new RemoveCommerceReservation.Sync(sdkConfiguration, _headers);
+              = new RemoveCommerceReservation.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -363,8 +507,22 @@ public class Reservation {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemovePropertyReservationResponse removePropertyReservation(@Nonnull RemovePropertyReservationRequest request) {
+        return removePropertyReservation(request, null);
+    }
+
+    /**
+     * Remove a reservation
+     * 
+     * <p>Deletes the PropertyReservation identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemovePropertyReservationResponse removePropertyReservation(@Nonnull RemovePropertyReservationRequest request, @Nullable Options options) {
         RequestOperation<RemovePropertyReservationRequest, RemovePropertyReservationResponse> operation
-              = new RemovePropertyReservation.Sync(sdkConfiguration, _headers);
+              = new RemovePropertyReservation.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -391,8 +549,23 @@ public class Reservation {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateCommerceReservationResponse updateCommerceReservation(@Nonnull UpdateCommerceReservationRequest request) {
+        return updateCommerceReservation(request, null);
+    }
+
+    /**
+     * Update a reservation
+     * 
+     * <p>Updates the CommerceReservation identified by `id`. Provide the unified CommerceReservation fields
+     * to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateCommerceReservationResponse updateCommerceReservation(@Nonnull UpdateCommerceReservationRequest request, @Nullable Options options) {
         RequestOperation<UpdateCommerceReservationRequest, UpdateCommerceReservationResponse> operation
-              = new UpdateCommerceReservation.Sync(sdkConfiguration, _headers);
+              = new UpdateCommerceReservation.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -419,8 +592,23 @@ public class Reservation {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdatePropertyReservationResponse updatePropertyReservation(@Nonnull UpdatePropertyReservationRequest request) {
+        return updatePropertyReservation(request, null);
+    }
+
+    /**
+     * Update a reservation
+     * 
+     * <p>Updates the PropertyReservation identified by `id`. Provide the unified PropertyReservation fields
+     * to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdatePropertyReservationResponse updatePropertyReservation(@Nonnull UpdatePropertyReservationRequest request, @Nullable Options options) {
         RequestOperation<UpdatePropertyReservationRequest, UpdatePropertyReservationResponse> operation
-              = new UpdatePropertyReservation.Sync(sdkConfiguration, _headers);
+              = new UpdatePropertyReservation.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

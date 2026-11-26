@@ -6,18 +6,28 @@ package to.unified.unified_java_sdk.models.operations;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.ListAtsApplicationstatuses;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListAtsApplicationstatusesRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private ListAtsApplicationstatusesRequest request;
+    private final Options.Builder optionsBuilder;
 
     public ListAtsApplicationstatusesRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public ListAtsApplicationstatusesRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public ListAtsApplicationstatusesRequestBuilder request(@Nonnull ListAtsApplicationstatusesRequest request) {
@@ -42,8 +52,9 @@ public class ListAtsApplicationstatusesRequestBuilder {
     * @return The response from the server.
     */
     public ListAtsApplicationstatusesResponse call() {
+        Options options = optionsBuilder.build();
         RequestOperation<ListAtsApplicationstatusesRequest, ListAtsApplicationstatusesResponse> operation
-              = new ListAtsApplicationstatuses.Sync(sdkConfiguration, _headers);
+              = new ListAtsApplicationstatuses.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

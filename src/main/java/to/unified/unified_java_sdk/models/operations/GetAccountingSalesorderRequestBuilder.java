@@ -6,18 +6,28 @@ package to.unified.unified_java_sdk.models.operations;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.GetAccountingSalesorder;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetAccountingSalesorderRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private GetAccountingSalesorderRequest request;
+    private final Options.Builder optionsBuilder;
 
     public GetAccountingSalesorderRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public GetAccountingSalesorderRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public GetAccountingSalesorderRequestBuilder request(@Nonnull GetAccountingSalesorderRequest request) {
@@ -42,8 +52,9 @@ public class GetAccountingSalesorderRequestBuilder {
     * @return The response from the server.
     */
     public GetAccountingSalesorderResponse call() {
+        Options options = optionsBuilder.build();
         RequestOperation<GetAccountingSalesorderRequest, GetAccountingSalesorderResponse> operation
-              = new GetAccountingSalesorder.Sync(sdkConfiguration, _headers);
+              = new GetAccountingSalesorder.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

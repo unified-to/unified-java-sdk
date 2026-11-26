@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateLegalMatterRequest;
 import to.unified.unified_java_sdk.models.operations.GetLegalMatterRequest;
@@ -32,6 +33,7 @@ import to.unified.unified_java_sdk.operations.PatchLegalMatter;
 import to.unified.unified_java_sdk.operations.RemoveLegalMatter;
 import to.unified.unified_java_sdk.operations.UpdateLegalMatter;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncMatter {
@@ -76,8 +78,22 @@ public class AsyncMatter {
      * @return {@code CompletableFuture<CreateLegalMatterResponse>} - The async response
      */
     public CompletableFuture<CreateLegalMatterResponse> createLegalMatter(@Nonnull CreateLegalMatterRequest request) {
+        return createLegalMatter(request, null);
+    }
+
+    /**
+     * Create a matter
+     * 
+     * <p>Creates a LegalMatter. Provide the unified LegalMatter fields in the request body; they are mapped
+     * to the provider's API. Returns the created LegalMatter.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateLegalMatterResponse>} - The async response
+     */
+    public CompletableFuture<CreateLegalMatterResponse> createLegalMatter(@Nonnull CreateLegalMatterRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateLegalMatterRequest, CreateLegalMatterResponse> operation
-              = new CreateLegalMatter.Async(sdkConfiguration, _headers);
+              = new CreateLegalMatter.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -105,8 +121,22 @@ public class AsyncMatter {
      * @return {@code CompletableFuture<GetLegalMatterResponse>} - The async response
      */
     public CompletableFuture<GetLegalMatterResponse> getLegalMatter(@Nonnull GetLegalMatterRequest request) {
+        return getLegalMatter(request, null);
+    }
+
+    /**
+     * Retrieve a matter
+     * 
+     * <p>Retrieves a single LegalMatter by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetLegalMatterResponse>} - The async response
+     */
+    public CompletableFuture<GetLegalMatterResponse> getLegalMatter(@Nonnull GetLegalMatterRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetLegalMatterRequest, GetLegalMatterResponse> operation
-              = new GetLegalMatter.Async(sdkConfiguration, _headers);
+              = new GetLegalMatter.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -142,8 +172,26 @@ public class AsyncMatter {
      * @return {@code CompletableFuture<ListLegalMattersResponse>} - The async response
      */
     public CompletableFuture<ListLegalMattersResponse> listLegalMatters(@Nonnull ListLegalMattersRequest request) {
+        return listLegalMatters(request, null);
+    }
+
+    /**
+     * List all matters
+     * 
+     * <p>Returns a list of LegalMatters. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListLegalMattersResponse>} - The async response
+     */
+    public CompletableFuture<ListLegalMattersResponse> listLegalMatters(@Nonnull ListLegalMattersRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListLegalMattersRequest, ListLegalMattersResponse> operation
-              = new ListLegalMatters.Async(sdkConfiguration, _headers);
+              = new ListLegalMatters.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -171,8 +219,22 @@ public class AsyncMatter {
      * @return {@code CompletableFuture<PatchLegalMatterResponse>} - The async response
      */
     public CompletableFuture<PatchLegalMatterResponse> patchLegalMatter(@Nonnull PatchLegalMatterRequest request) {
+        return patchLegalMatter(request, null);
+    }
+
+    /**
+     * Update a matter
+     * 
+     * <p>Updates the LegalMatter identified by `id`. Provide the unified LegalMatter fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchLegalMatterResponse>} - The async response
+     */
+    public CompletableFuture<PatchLegalMatterResponse> patchLegalMatter(@Nonnull PatchLegalMatterRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchLegalMatterRequest, PatchLegalMatterResponse> operation
-              = new PatchLegalMatter.Async(sdkConfiguration, _headers);
+              = new PatchLegalMatter.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -198,8 +260,21 @@ public class AsyncMatter {
      * @return {@code CompletableFuture<RemoveLegalMatterResponse>} - The async response
      */
     public CompletableFuture<RemoveLegalMatterResponse> removeLegalMatter(@Nonnull RemoveLegalMatterRequest request) {
+        return removeLegalMatter(request, null);
+    }
+
+    /**
+     * Remove a matter
+     * 
+     * <p>Deletes the LegalMatter identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveLegalMatterResponse>} - The async response
+     */
+    public CompletableFuture<RemoveLegalMatterResponse> removeLegalMatter(@Nonnull RemoveLegalMatterRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveLegalMatterRequest, RemoveLegalMatterResponse> operation
-              = new RemoveLegalMatter.Async(sdkConfiguration, _headers);
+              = new RemoveLegalMatter.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -227,8 +302,22 @@ public class AsyncMatter {
      * @return {@code CompletableFuture<UpdateLegalMatterResponse>} - The async response
      */
     public CompletableFuture<UpdateLegalMatterResponse> updateLegalMatter(@Nonnull UpdateLegalMatterRequest request) {
+        return updateLegalMatter(request, null);
+    }
+
+    /**
+     * Update a matter
+     * 
+     * <p>Updates the LegalMatter identified by `id`. Provide the unified LegalMatter fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateLegalMatterResponse>} - The async response
+     */
+    public CompletableFuture<UpdateLegalMatterResponse> updateLegalMatter(@Nonnull UpdateLegalMatterRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateLegalMatterRequest, UpdateLegalMatterResponse> operation
-              = new UpdateLegalMatter.Async(sdkConfiguration, _headers);
+              = new UpdateLegalMatter.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

@@ -1,0 +1,17 @@
+# PrintingPlacement
+
+A print area on a product (eg. front, back, sleeve)
+
+
+## Fields
+
+| Field                                                                              | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `additionalPriceAmount`                                                            | *Optional\<Double>*                                                                | :heavy_minus_sign:                                                                 | Extra cost when this placement is printed                                          |
+| `code`                                                                             | *Optional\<String>*                                                                | :heavy_minus_sign:                                                                 | Placement key used when attaching a print file (eg. front, back)                   |
+| `dpi`                                                                              | *Optional\<Double>*                                                                | :heavy_minus_sign:                                                                 | Print resolution for the given width and height                                    |
+| `height`                                                                           | *Optional\<Double>*                                                                | :heavy_minus_sign:                                                                 | Height of the print area, in `unit`                                                |
+| `name`                                                                             | *Optional\<String>*                                                                | :heavy_minus_sign:                                                                 | Display name                                                                       |
+| `technique`                                                                        | *Optional\<String>*                                                                | :heavy_minus_sign:                                                                 | Print technique or decoration method code for this placement (eg. dtg, embroidery) |
+| `unit`                                                                             | [Optional\<PrintingPlacementUnit>](../../models/shared/PrintingPlacementUnit.md)   | :heavy_minus_sign:                                                                 | Unit of `width` and `height`                                                       |
+| `width`                                                                            | *Optional\<Double>*                                                                | :heavy_minus_sign:                                                                 | Width of the print area, in `unit`                                                 |

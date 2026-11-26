@@ -6,6 +6,7 @@
 
 * [createMetadataMetadata](#createmetadatametadata) - Create a metadata
 * [getMetadataMetadata](#getmetadatametadata) - Retrieve a metadata
+* [listFhirMetadatas](#listfhirmetadatas) - Get the CapabilityStatement
 * [listMetadataMetadatas](#listmetadatametadatas) - List all metadatas
 * [patchMetadataMetadata](#patchmetadatametadata) - Update a metadata
 * [removeMetadataMetadata](#removemetadatametadata) - Remove a metadata
@@ -42,18 +43,18 @@ public class Application {
 
         CreateMetadataMetadataRequest req = CreateMetadataMetadataRequest.builder()
                 .metadataMetadata(MetadataMetadata.builder()
-                    .name("autem")
-                    .objectType("healthcare_patient")
+                    .name("tollo")
+                    .objectType("healthcare_document")
                     .createdAt(OffsetDateTime.parse("2021-03-25T03:02:17.656Z"))
                     .format(MetadataMetadataFormat.PRICE)
-                    .id("d0b3e7c7-2df1-4005-b6a0-00d5175616bb")
+                    .id("d549759a-9238-4eb2-976f-cd18a2788ef7")
                     .isRequired(false)
                     .objects(Map.ofEntries(
                     ))
                     .options(List.of())
-                    .originalFormat("advoco")
-                    .slug("arbustum")
-                    .updatedAt(OffsetDateTime.parse("2025-04-12T11:02:32.403Z"))
+                    .originalFormat("deputo")
+                    .slug("acidus")
+                    .updatedAt(OffsetDateTime.parse("2025-04-16T17:03:47.508Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -136,6 +137,63 @@ public class Application {
 ### Response
 
 **[GetMetadataMetadataResponse](../../models/operations/GetMetadataMetadataResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## listFhirMetadatas
+
+The resources, interactions and search parameters this connection's integration supports. Responses use the application/fhir+json media type; errors are OperationOutcome resources. Read-only (FHIR R4 4.0.1).
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listFhirMetadatas" method="get" path="/fhir/{connection_id}/metadata" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListFhirMetadatasRequest;
+import to.unified.unified_java_sdk.models.operations.ListFhirMetadatasResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListFhirMetadatasRequest req = ListFhirMetadatasRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListFhirMetadatasResponse res = sdk.metadata().listFhirMetadatas()
+                .request(req)
+                .call();
+
+        if (res.fhirCapabilityStatement().isPresent()) {
+            System.out.println(res.fhirCapabilityStatement().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [ListFhirMetadatasRequest](../../models/operations/ListFhirMetadatasRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+
+### Response
+
+**[ListFhirMetadatasResponse](../../models/operations/ListFhirMetadatasResponse.md)**
 
 ### Errors
 
@@ -231,18 +289,18 @@ public class Application {
 
         PatchMetadataMetadataRequest req = PatchMetadataMetadataRequest.builder()
                 .metadataMetadata(MetadataMetadata.builder()
-                    .name("autem")
-                    .objectType("healthcare_patient")
+                    .name("tollo")
+                    .objectType("healthcare_document")
                     .createdAt(OffsetDateTime.parse("2021-03-25T03:02:17.656Z"))
                     .format(MetadataMetadataFormat.PRICE)
-                    .id("9c2088a6-1d63-46f6-a48b-4ea83ae51fbb")
+                    .id("ff1c1b3f-e090-4e41-9a27-649af870c4e7")
                     .isRequired(false)
                     .objects(Map.ofEntries(
                     ))
                     .options(List.of())
-                    .originalFormat("advoco")
-                    .slug("arbustum")
-                    .updatedAt(OffsetDateTime.parse("2025-04-12T11:02:32.416Z"))
+                    .originalFormat("deputo")
+                    .slug("acidus")
+                    .updatedAt(OffsetDateTime.parse("2025-04-16T17:03:47.515Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -362,18 +420,18 @@ public class Application {
 
         UpdateMetadataMetadataRequest req = UpdateMetadataMetadataRequest.builder()
                 .metadataMetadata(MetadataMetadata.builder()
-                    .name("autem")
-                    .objectType("healthcare_patient")
+                    .name("tollo")
+                    .objectType("healthcare_document")
                     .createdAt(OffsetDateTime.parse("2021-03-25T03:02:17.656Z"))
                     .format(MetadataMetadataFormat.PRICE)
-                    .id("9c2088a6-1d63-46f6-a48b-4ea83ae51fbb")
+                    .id("ff1c1b3f-e090-4e41-9a27-649af870c4e7")
                     .isRequired(false)
                     .objects(Map.ofEntries(
                     ))
                     .options(List.of())
-                    .originalFormat("advoco")
-                    .slug("arbustum")
-                    .updatedAt(OffsetDateTime.parse("2025-04-12T11:02:32.416Z"))
+                    .originalFormat("deputo")
+                    .slug("acidus")
+                    .updatedAt(OffsetDateTime.parse("2025-04-16T17:03:47.515Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

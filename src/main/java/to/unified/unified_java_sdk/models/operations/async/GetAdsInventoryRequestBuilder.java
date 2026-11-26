@@ -6,20 +6,30 @@ package to.unified.unified_java_sdk.models.operations.async;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.GetAdsInventoryRequest;
 import to.unified.unified_java_sdk.operations.GetAdsInventory;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetAdsInventoryRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private GetAdsInventoryRequest request;
+    private final Options.Builder optionsBuilder;
 
     public GetAdsInventoryRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public GetAdsInventoryRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public GetAdsInventoryRequestBuilder request(@Nonnull GetAdsInventoryRequest request) {
@@ -44,8 +54,9 @@ public class GetAdsInventoryRequestBuilder {
     * @return The response from the server.
     */
     public CompletableFuture<GetAdsInventoryResponse> call() {
+        Options options = optionsBuilder.build();
         AsyncRequestOperation<GetAdsInventoryRequest, GetAdsInventoryResponse> operation
-              = new GetAdsInventory.Async(sdkConfiguration, _headers);
+              = new GetAdsInventory.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

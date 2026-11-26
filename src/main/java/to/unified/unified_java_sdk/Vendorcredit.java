@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingVendorcreditRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingVendorcreditRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingVendorcreditResponse;
@@ -31,6 +32,7 @@ import to.unified.unified_java_sdk.operations.PatchAccountingVendorcredit;
 import to.unified.unified_java_sdk.operations.RemoveAccountingVendorcredit;
 import to.unified.unified_java_sdk.operations.UpdateAccountingVendorcredit;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Vendorcredit {
@@ -75,8 +77,23 @@ public class Vendorcredit {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateAccountingVendorcreditResponse createAccountingVendorcredit(@Nonnull CreateAccountingVendorcreditRequest request) {
+        return createAccountingVendorcredit(request, null);
+    }
+
+    /**
+     * Create a vendorcredit
+     * 
+     * <p>Creates a AccountingVendorcredit. Provide the unified AccountingVendorcredit fields in the request
+     * body; they are mapped to the provider's API. Returns the created AccountingVendorcredit.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateAccountingVendorcreditResponse createAccountingVendorcredit(@Nonnull CreateAccountingVendorcreditRequest request, @Nullable Options options) {
         RequestOperation<CreateAccountingVendorcreditRequest, CreateAccountingVendorcreditResponse> operation
-              = new CreateAccountingVendorcredit.Sync(sdkConfiguration, _headers);
+              = new CreateAccountingVendorcredit.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -103,8 +120,23 @@ public class Vendorcredit {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAccountingVendorcreditResponse getAccountingVendorcredit(@Nonnull GetAccountingVendorcreditRequest request) {
+        return getAccountingVendorcredit(request, null);
+    }
+
+    /**
+     * Retrieve a vendorcredit
+     * 
+     * <p>Retrieves a single AccountingVendorcredit by its `id`. Obtain `id` values from the corresponding
+     * list endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAccountingVendorcreditResponse getAccountingVendorcredit(@Nonnull GetAccountingVendorcreditRequest request, @Nullable Options options) {
         RequestOperation<GetAccountingVendorcreditRequest, GetAccountingVendorcreditResponse> operation
-              = new GetAccountingVendorcredit.Sync(sdkConfiguration, _headers);
+              = new GetAccountingVendorcredit.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -139,8 +171,27 @@ public class Vendorcredit {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAccountingVendorcreditsResponse listAccountingVendorcredits(@Nonnull ListAccountingVendorcreditsRequest request) {
+        return listAccountingVendorcredits(request, null);
+    }
+
+    /**
+     * List all vendorcredits
+     * 
+     * <p>Returns a list of AccountingVendorcredits. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAccountingVendorcreditsResponse listAccountingVendorcredits(@Nonnull ListAccountingVendorcreditsRequest request, @Nullable Options options) {
         RequestOperation<ListAccountingVendorcreditsRequest, ListAccountingVendorcreditsResponse> operation
-              = new ListAccountingVendorcredits.Sync(sdkConfiguration, _headers);
+              = new ListAccountingVendorcredits.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +218,23 @@ public class Vendorcredit {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchAccountingVendorcreditResponse patchAccountingVendorcredit(@Nonnull PatchAccountingVendorcreditRequest request) {
+        return patchAccountingVendorcredit(request, null);
+    }
+
+    /**
+     * Update a vendorcredit
+     * 
+     * <p>Updates the AccountingVendorcredit identified by `id`. Provide the unified AccountingVendorcredit
+     * fields to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchAccountingVendorcreditResponse patchAccountingVendorcredit(@Nonnull PatchAccountingVendorcreditRequest request, @Nullable Options options) {
         RequestOperation<PatchAccountingVendorcreditRequest, PatchAccountingVendorcreditResponse> operation
-              = new PatchAccountingVendorcredit.Sync(sdkConfiguration, _headers);
+              = new PatchAccountingVendorcredit.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -193,8 +259,22 @@ public class Vendorcredit {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveAccountingVendorcreditResponse removeAccountingVendorcredit(@Nonnull RemoveAccountingVendorcreditRequest request) {
+        return removeAccountingVendorcredit(request, null);
+    }
+
+    /**
+     * Remove a vendorcredit
+     * 
+     * <p>Deletes the AccountingVendorcredit identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveAccountingVendorcreditResponse removeAccountingVendorcredit(@Nonnull RemoveAccountingVendorcreditRequest request, @Nullable Options options) {
         RequestOperation<RemoveAccountingVendorcreditRequest, RemoveAccountingVendorcreditResponse> operation
-              = new RemoveAccountingVendorcredit.Sync(sdkConfiguration, _headers);
+              = new RemoveAccountingVendorcredit.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -221,8 +301,23 @@ public class Vendorcredit {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateAccountingVendorcreditResponse updateAccountingVendorcredit(@Nonnull UpdateAccountingVendorcreditRequest request) {
+        return updateAccountingVendorcredit(request, null);
+    }
+
+    /**
+     * Update a vendorcredit
+     * 
+     * <p>Updates the AccountingVendorcredit identified by `id`. Provide the unified AccountingVendorcredit
+     * fields to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateAccountingVendorcreditResponse updateAccountingVendorcredit(@Nonnull UpdateAccountingVendorcreditRequest request, @Nullable Options options) {
         RequestOperation<UpdateAccountingVendorcreditRequest, UpdateAccountingVendorcreditResponse> operation
-              = new UpdateAccountingVendorcredit.Sync(sdkConfiguration, _headers);
+              = new UpdateAccountingVendorcredit.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateLegalPracticeareaRequest;
 import to.unified.unified_java_sdk.models.operations.GetLegalPracticeareaRequest;
@@ -32,6 +33,7 @@ import to.unified.unified_java_sdk.operations.PatchLegalPracticearea;
 import to.unified.unified_java_sdk.operations.RemoveLegalPracticearea;
 import to.unified.unified_java_sdk.operations.UpdateLegalPracticearea;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncPracticearea {
@@ -76,8 +78,22 @@ public class AsyncPracticearea {
      * @return {@code CompletableFuture<CreateLegalPracticeareaResponse>} - The async response
      */
     public CompletableFuture<CreateLegalPracticeareaResponse> createLegalPracticearea(@Nonnull CreateLegalPracticeareaRequest request) {
+        return createLegalPracticearea(request, null);
+    }
+
+    /**
+     * Create a practicearea
+     * 
+     * <p>Creates a LegalPracticearea. Provide the unified LegalPracticearea fields in the request body; they
+     * are mapped to the provider's API. Returns the created LegalPracticearea.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateLegalPracticeareaResponse>} - The async response
+     */
+    public CompletableFuture<CreateLegalPracticeareaResponse> createLegalPracticearea(@Nonnull CreateLegalPracticeareaRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateLegalPracticeareaRequest, CreateLegalPracticeareaResponse> operation
-              = new CreateLegalPracticearea.Async(sdkConfiguration, _headers);
+              = new CreateLegalPracticearea.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -105,8 +121,22 @@ public class AsyncPracticearea {
      * @return {@code CompletableFuture<GetLegalPracticeareaResponse>} - The async response
      */
     public CompletableFuture<GetLegalPracticeareaResponse> getLegalPracticearea(@Nonnull GetLegalPracticeareaRequest request) {
+        return getLegalPracticearea(request, null);
+    }
+
+    /**
+     * Retrieve a practicearea
+     * 
+     * <p>Retrieves a single LegalPracticearea by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetLegalPracticeareaResponse>} - The async response
+     */
+    public CompletableFuture<GetLegalPracticeareaResponse> getLegalPracticearea(@Nonnull GetLegalPracticeareaRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetLegalPracticeareaRequest, GetLegalPracticeareaResponse> operation
-              = new GetLegalPracticearea.Async(sdkConfiguration, _headers);
+              = new GetLegalPracticearea.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -142,8 +172,26 @@ public class AsyncPracticearea {
      * @return {@code CompletableFuture<ListLegalPracticeareasResponse>} - The async response
      */
     public CompletableFuture<ListLegalPracticeareasResponse> listLegalPracticeareas(@Nonnull ListLegalPracticeareasRequest request) {
+        return listLegalPracticeareas(request, null);
+    }
+
+    /**
+     * List all practiceareas
+     * 
+     * <p>Returns a list of LegalPracticeareas. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListLegalPracticeareasResponse>} - The async response
+     */
+    public CompletableFuture<ListLegalPracticeareasResponse> listLegalPracticeareas(@Nonnull ListLegalPracticeareasRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListLegalPracticeareasRequest, ListLegalPracticeareasResponse> operation
-              = new ListLegalPracticeareas.Async(sdkConfiguration, _headers);
+              = new ListLegalPracticeareas.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -171,8 +219,22 @@ public class AsyncPracticearea {
      * @return {@code CompletableFuture<PatchLegalPracticeareaResponse>} - The async response
      */
     public CompletableFuture<PatchLegalPracticeareaResponse> patchLegalPracticearea(@Nonnull PatchLegalPracticeareaRequest request) {
+        return patchLegalPracticearea(request, null);
+    }
+
+    /**
+     * Update a practicearea
+     * 
+     * <p>Updates the LegalPracticearea identified by `id`. Provide the unified LegalPracticearea fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchLegalPracticeareaResponse>} - The async response
+     */
+    public CompletableFuture<PatchLegalPracticeareaResponse> patchLegalPracticearea(@Nonnull PatchLegalPracticeareaRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchLegalPracticeareaRequest, PatchLegalPracticeareaResponse> operation
-              = new PatchLegalPracticearea.Async(sdkConfiguration, _headers);
+              = new PatchLegalPracticearea.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -198,8 +260,21 @@ public class AsyncPracticearea {
      * @return {@code CompletableFuture<RemoveLegalPracticeareaResponse>} - The async response
      */
     public CompletableFuture<RemoveLegalPracticeareaResponse> removeLegalPracticearea(@Nonnull RemoveLegalPracticeareaRequest request) {
+        return removeLegalPracticearea(request, null);
+    }
+
+    /**
+     * Remove a practicearea
+     * 
+     * <p>Deletes the LegalPracticearea identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveLegalPracticeareaResponse>} - The async response
+     */
+    public CompletableFuture<RemoveLegalPracticeareaResponse> removeLegalPracticearea(@Nonnull RemoveLegalPracticeareaRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveLegalPracticeareaRequest, RemoveLegalPracticeareaResponse> operation
-              = new RemoveLegalPracticearea.Async(sdkConfiguration, _headers);
+              = new RemoveLegalPracticearea.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -227,8 +302,22 @@ public class AsyncPracticearea {
      * @return {@code CompletableFuture<UpdateLegalPracticeareaResponse>} - The async response
      */
     public CompletableFuture<UpdateLegalPracticeareaResponse> updateLegalPracticearea(@Nonnull UpdateLegalPracticeareaRequest request) {
+        return updateLegalPracticearea(request, null);
+    }
+
+    /**
+     * Update a practicearea
+     * 
+     * <p>Updates the LegalPracticearea identified by `id`. Provide the unified LegalPracticearea fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateLegalPracticeareaResponse>} - The async response
+     */
+    public CompletableFuture<UpdateLegalPracticeareaResponse> updateLegalPracticearea(@Nonnull UpdateLegalPracticeareaRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateLegalPracticeareaRequest, UpdateLegalPracticeareaResponse> operation
-              = new UpdateLegalPracticearea.Async(sdkConfiguration, _headers);
+              = new UpdateLegalPracticearea.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

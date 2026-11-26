@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateVerificationRequestRequest;
 import to.unified.unified_java_sdk.models.operations.GetVerificationPackageRequest;
@@ -40,6 +41,7 @@ import to.unified.unified_java_sdk.operations.PatchVerificationRequest;
 import to.unified.unified_java_sdk.operations.RemoveVerificationRequest;
 import to.unified.unified_java_sdk.operations.UpdateVerificationRequest;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncVerification {
@@ -84,8 +86,22 @@ public class AsyncVerification {
      * @return {@code CompletableFuture<CreateVerificationRequestResponse>} - The async response
      */
     public CompletableFuture<CreateVerificationRequestResponse> createVerificationRequest(@Nonnull CreateVerificationRequestRequest request) {
+        return createVerificationRequest(request, null);
+    }
+
+    /**
+     * Create a request
+     * 
+     * <p>Creates a VerificationRequest. Provide the unified VerificationRequest fields in the request body;
+     * they are mapped to the provider's API. Returns the created VerificationRequest.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateVerificationRequestResponse>} - The async response
+     */
+    public CompletableFuture<CreateVerificationRequestResponse> createVerificationRequest(@Nonnull CreateVerificationRequestRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateVerificationRequestRequest, CreateVerificationRequestResponse> operation
-              = new CreateVerificationRequest.Async(sdkConfiguration, _headers);
+              = new CreateVerificationRequest.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -113,8 +129,22 @@ public class AsyncVerification {
      * @return {@code CompletableFuture<GetVerificationPackageResponse>} - The async response
      */
     public CompletableFuture<GetVerificationPackageResponse> getVerificationPackage(@Nonnull GetVerificationPackageRequest request) {
+        return getVerificationPackage(request, null);
+    }
+
+    /**
+     * Retrieve a package
+     * 
+     * <p>Retrieves a single VerificationPackage by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetVerificationPackageResponse>} - The async response
+     */
+    public CompletableFuture<GetVerificationPackageResponse> getVerificationPackage(@Nonnull GetVerificationPackageRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetVerificationPackageRequest, GetVerificationPackageResponse> operation
-              = new GetVerificationPackage.Async(sdkConfiguration, _headers);
+              = new GetVerificationPackage.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -142,8 +172,22 @@ public class AsyncVerification {
      * @return {@code CompletableFuture<GetVerificationRequestResponse>} - The async response
      */
     public CompletableFuture<GetVerificationRequestResponse> getVerificationRequest(@Nonnull GetVerificationRequestRequest request) {
+        return getVerificationRequest(request, null);
+    }
+
+    /**
+     * Retrieve a request
+     * 
+     * <p>Retrieves a single VerificationRequest by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetVerificationRequestResponse>} - The async response
+     */
+    public CompletableFuture<GetVerificationRequestResponse> getVerificationRequest(@Nonnull GetVerificationRequestRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetVerificationRequestRequest, GetVerificationRequestResponse> operation
-              = new GetVerificationRequest.Async(sdkConfiguration, _headers);
+              = new GetVerificationRequest.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -179,8 +223,26 @@ public class AsyncVerification {
      * @return {@code CompletableFuture<ListVerificationPackagesResponse>} - The async response
      */
     public CompletableFuture<ListVerificationPackagesResponse> listVerificationPackages(@Nonnull ListVerificationPackagesRequest request) {
+        return listVerificationPackages(request, null);
+    }
+
+    /**
+     * List all packages
+     * 
+     * <p>Returns a list of VerificationPackages. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListVerificationPackagesResponse>} - The async response
+     */
+    public CompletableFuture<ListVerificationPackagesResponse> listVerificationPackages(@Nonnull ListVerificationPackagesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListVerificationPackagesRequest, ListVerificationPackagesResponse> operation
-              = new ListVerificationPackages.Async(sdkConfiguration, _headers);
+              = new ListVerificationPackages.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -216,8 +278,26 @@ public class AsyncVerification {
      * @return {@code CompletableFuture<ListVerificationRequestsResponse>} - The async response
      */
     public CompletableFuture<ListVerificationRequestsResponse> listVerificationRequests(@Nonnull ListVerificationRequestsRequest request) {
+        return listVerificationRequests(request, null);
+    }
+
+    /**
+     * List all requests
+     * 
+     * <p>Returns a list of VerificationRequests. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListVerificationRequestsResponse>} - The async response
+     */
+    public CompletableFuture<ListVerificationRequestsResponse> listVerificationRequests(@Nonnull ListVerificationRequestsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListVerificationRequestsRequest, ListVerificationRequestsResponse> operation
-              = new ListVerificationRequests.Async(sdkConfiguration, _headers);
+              = new ListVerificationRequests.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -245,8 +325,22 @@ public class AsyncVerification {
      * @return {@code CompletableFuture<PatchVerificationRequestResponse>} - The async response
      */
     public CompletableFuture<PatchVerificationRequestResponse> patchVerificationRequest(@Nonnull PatchVerificationRequestRequest request) {
+        return patchVerificationRequest(request, null);
+    }
+
+    /**
+     * Update a request
+     * 
+     * <p>Updates the VerificationRequest identified by `id`. Provide the unified VerificationRequest fields
+     * to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchVerificationRequestResponse>} - The async response
+     */
+    public CompletableFuture<PatchVerificationRequestResponse> patchVerificationRequest(@Nonnull PatchVerificationRequestRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchVerificationRequestRequest, PatchVerificationRequestResponse> operation
-              = new PatchVerificationRequest.Async(sdkConfiguration, _headers);
+              = new PatchVerificationRequest.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -272,8 +366,21 @@ public class AsyncVerification {
      * @return {@code CompletableFuture<RemoveVerificationRequestResponse>} - The async response
      */
     public CompletableFuture<RemoveVerificationRequestResponse> removeVerificationRequest(@Nonnull RemoveVerificationRequestRequest request) {
+        return removeVerificationRequest(request, null);
+    }
+
+    /**
+     * Remove a request
+     * 
+     * <p>Deletes the VerificationRequest identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveVerificationRequestResponse>} - The async response
+     */
+    public CompletableFuture<RemoveVerificationRequestResponse> removeVerificationRequest(@Nonnull RemoveVerificationRequestRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveVerificationRequestRequest, RemoveVerificationRequestResponse> operation
-              = new RemoveVerificationRequest.Async(sdkConfiguration, _headers);
+              = new RemoveVerificationRequest.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -301,8 +408,22 @@ public class AsyncVerification {
      * @return {@code CompletableFuture<UpdateVerificationRequestResponse>} - The async response
      */
     public CompletableFuture<UpdateVerificationRequestResponse> updateVerificationRequest(@Nonnull UpdateVerificationRequestRequest request) {
+        return updateVerificationRequest(request, null);
+    }
+
+    /**
+     * Update a request
+     * 
+     * <p>Updates the VerificationRequest identified by `id`. Provide the unified VerificationRequest fields
+     * to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateVerificationRequestResponse>} - The async response
+     */
+    public CompletableFuture<UpdateVerificationRequestResponse> updateVerificationRequest(@Nonnull UpdateVerificationRequestRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateVerificationRequestRequest, UpdateVerificationRequestResponse> operation
-              = new UpdateVerificationRequest.Async(sdkConfiguration, _headers);
+              = new UpdateVerificationRequest.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

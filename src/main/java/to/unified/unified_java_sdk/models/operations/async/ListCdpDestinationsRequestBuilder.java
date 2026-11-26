@@ -6,20 +6,30 @@ package to.unified.unified_java_sdk.models.operations.async;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.ListCdpDestinationsRequest;
 import to.unified.unified_java_sdk.operations.ListCdpDestinations;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListCdpDestinationsRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private ListCdpDestinationsRequest request;
+    private final Options.Builder optionsBuilder;
 
     public ListCdpDestinationsRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public ListCdpDestinationsRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public ListCdpDestinationsRequestBuilder request(@Nonnull ListCdpDestinationsRequest request) {
@@ -44,8 +54,9 @@ public class ListCdpDestinationsRequestBuilder {
     * @return The response from the server.
     */
     public CompletableFuture<ListCdpDestinationsResponse> call() {
+        Options options = optionsBuilder.build();
         AsyncRequestOperation<ListCdpDestinationsRequest, ListCdpDestinationsResponse> operation
-              = new ListCdpDestinations.Async(sdkConfiguration, _headers);
+              = new ListCdpDestinations.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

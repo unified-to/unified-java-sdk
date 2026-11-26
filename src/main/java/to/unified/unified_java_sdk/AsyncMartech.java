@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateMartechCampaignRequest;
 import to.unified.unified_java_sdk.models.operations.CreateMartechListRequest;
@@ -84,6 +85,7 @@ import to.unified.unified_java_sdk.operations.UpdateMartechCampaign;
 import to.unified.unified_java_sdk.operations.UpdateMartechList;
 import to.unified.unified_java_sdk.operations.UpdateMartechMember;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncMartech {
@@ -128,8 +130,22 @@ public class AsyncMartech {
      * @return {@code CompletableFuture<CreateMartechCampaignResponse>} - The async response
      */
     public CompletableFuture<CreateMartechCampaignResponse> createMartechCampaign(@Nonnull CreateMartechCampaignRequest request) {
+        return createMartechCampaign(request, null);
+    }
+
+    /**
+     * Create a campaign
+     * 
+     * <p>Creates a MarketingCampaign. Provide the unified MarketingCampaign fields in the request body; they
+     * are mapped to the provider's API. Returns the created MarketingCampaign.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateMartechCampaignResponse>} - The async response
+     */
+    public CompletableFuture<CreateMartechCampaignResponse> createMartechCampaign(@Nonnull CreateMartechCampaignRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateMartechCampaignRequest, CreateMartechCampaignResponse> operation
-              = new CreateMartechCampaign.Async(sdkConfiguration, _headers);
+              = new CreateMartechCampaign.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -157,8 +173,22 @@ public class AsyncMartech {
      * @return {@code CompletableFuture<CreateMartechListResponse>} - The async response
      */
     public CompletableFuture<CreateMartechListResponse> createMartechList(@Nonnull CreateMartechListRequest request) {
+        return createMartechList(request, null);
+    }
+
+    /**
+     * Create a list
+     * 
+     * <p>Creates a MarketingList. Provide the unified MarketingList fields in the request body; they are
+     * mapped to the provider's API. Returns the created MarketingList.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateMartechListResponse>} - The async response
+     */
+    public CompletableFuture<CreateMartechListResponse> createMartechList(@Nonnull CreateMartechListRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateMartechListRequest, CreateMartechListResponse> operation
-              = new CreateMartechList.Async(sdkConfiguration, _headers);
+              = new CreateMartechList.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -186,8 +216,22 @@ public class AsyncMartech {
      * @return {@code CompletableFuture<CreateMartechMemberResponse>} - The async response
      */
     public CompletableFuture<CreateMartechMemberResponse> createMartechMember(@Nonnull CreateMartechMemberRequest request) {
+        return createMartechMember(request, null);
+    }
+
+    /**
+     * Create a member
+     * 
+     * <p>Creates a MarketingMember. Provide the unified MarketingMember fields in the request body; they are
+     * mapped to the provider's API. Returns the created MarketingMember.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateMartechMemberResponse>} - The async response
+     */
+    public CompletableFuture<CreateMartechMemberResponse> createMartechMember(@Nonnull CreateMartechMemberRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateMartechMemberRequest, CreateMartechMemberResponse> operation
-              = new CreateMartechMember.Async(sdkConfiguration, _headers);
+              = new CreateMartechMember.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -215,8 +259,22 @@ public class AsyncMartech {
      * @return {@code CompletableFuture<GetMartechCampaignResponse>} - The async response
      */
     public CompletableFuture<GetMartechCampaignResponse> getMartechCampaign(@Nonnull GetMartechCampaignRequest request) {
+        return getMartechCampaign(request, null);
+    }
+
+    /**
+     * Retrieve a campaign
+     * 
+     * <p>Retrieves a single MarketingCampaign by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetMartechCampaignResponse>} - The async response
+     */
+    public CompletableFuture<GetMartechCampaignResponse> getMartechCampaign(@Nonnull GetMartechCampaignRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetMartechCampaignRequest, GetMartechCampaignResponse> operation
-              = new GetMartechCampaign.Async(sdkConfiguration, _headers);
+              = new GetMartechCampaign.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -244,8 +302,22 @@ public class AsyncMartech {
      * @return {@code CompletableFuture<GetMartechListResponse>} - The async response
      */
     public CompletableFuture<GetMartechListResponse> getMartechList(@Nonnull GetMartechListRequest request) {
+        return getMartechList(request, null);
+    }
+
+    /**
+     * Retrieve a list
+     * 
+     * <p>Retrieves a single MarketingList by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetMartechListResponse>} - The async response
+     */
+    public CompletableFuture<GetMartechListResponse> getMartechList(@Nonnull GetMartechListRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetMartechListRequest, GetMartechListResponse> operation
-              = new GetMartechList.Async(sdkConfiguration, _headers);
+              = new GetMartechList.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -273,8 +345,22 @@ public class AsyncMartech {
      * @return {@code CompletableFuture<GetMartechMemberResponse>} - The async response
      */
     public CompletableFuture<GetMartechMemberResponse> getMartechMember(@Nonnull GetMartechMemberRequest request) {
+        return getMartechMember(request, null);
+    }
+
+    /**
+     * Retrieve a member
+     * 
+     * <p>Retrieves a single MarketingMember by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetMartechMemberResponse>} - The async response
+     */
+    public CompletableFuture<GetMartechMemberResponse> getMartechMember(@Nonnull GetMartechMemberRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetMartechMemberRequest, GetMartechMemberResponse> operation
-              = new GetMartechMember.Async(sdkConfiguration, _headers);
+              = new GetMartechMember.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -310,8 +396,26 @@ public class AsyncMartech {
      * @return {@code CompletableFuture<ListMartechCampaignsResponse>} - The async response
      */
     public CompletableFuture<ListMartechCampaignsResponse> listMartechCampaigns(@Nonnull ListMartechCampaignsRequest request) {
+        return listMartechCampaigns(request, null);
+    }
+
+    /**
+     * List all campaigns
+     * 
+     * <p>Returns a list of MarketingCampaigns. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListMartechCampaignsResponse>} - The async response
+     */
+    public CompletableFuture<ListMartechCampaignsResponse> listMartechCampaigns(@Nonnull ListMartechCampaignsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListMartechCampaignsRequest, ListMartechCampaignsResponse> operation
-              = new ListMartechCampaigns.Async(sdkConfiguration, _headers);
+              = new ListMartechCampaigns.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -347,8 +451,26 @@ public class AsyncMartech {
      * @return {@code CompletableFuture<ListMartechListsResponse>} - The async response
      */
     public CompletableFuture<ListMartechListsResponse> listMartechLists(@Nonnull ListMartechListsRequest request) {
+        return listMartechLists(request, null);
+    }
+
+    /**
+     * List all lists
+     * 
+     * <p>Returns a list of MarketingLists. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListMartechListsResponse>} - The async response
+     */
+    public CompletableFuture<ListMartechListsResponse> listMartechLists(@Nonnull ListMartechListsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListMartechListsRequest, ListMartechListsResponse> operation
-              = new ListMartechLists.Async(sdkConfiguration, _headers);
+              = new ListMartechLists.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -384,8 +506,26 @@ public class AsyncMartech {
      * @return {@code CompletableFuture<ListMartechMembersResponse>} - The async response
      */
     public CompletableFuture<ListMartechMembersResponse> listMartechMembers(@Nonnull ListMartechMembersRequest request) {
+        return listMartechMembers(request, null);
+    }
+
+    /**
+     * List all members
+     * 
+     * <p>Returns a list of MarketingMembers. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListMartechMembersResponse>} - The async response
+     */
+    public CompletableFuture<ListMartechMembersResponse> listMartechMembers(@Nonnull ListMartechMembersRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListMartechMembersRequest, ListMartechMembersResponse> operation
-              = new ListMartechMembers.Async(sdkConfiguration, _headers);
+              = new ListMartechMembers.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -421,8 +561,26 @@ public class AsyncMartech {
      * @return {@code CompletableFuture<ListMartechReportsResponse>} - The async response
      */
     public CompletableFuture<ListMartechReportsResponse> listMartechReports(@Nonnull ListMartechReportsRequest request) {
+        return listMartechReports(request, null);
+    }
+
+    /**
+     * List all reports
+     * 
+     * <p>Returns a list of MarketingReports. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListMartechReportsResponse>} - The async response
+     */
+    public CompletableFuture<ListMartechReportsResponse> listMartechReports(@Nonnull ListMartechReportsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListMartechReportsRequest, ListMartechReportsResponse> operation
-              = new ListMartechReports.Async(sdkConfiguration, _headers);
+              = new ListMartechReports.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -450,8 +608,22 @@ public class AsyncMartech {
      * @return {@code CompletableFuture<PatchMartechCampaignResponse>} - The async response
      */
     public CompletableFuture<PatchMartechCampaignResponse> patchMartechCampaign(@Nonnull PatchMartechCampaignRequest request) {
+        return patchMartechCampaign(request, null);
+    }
+
+    /**
+     * Update a campaign
+     * 
+     * <p>Updates the MarketingCampaign identified by `id`. Provide the unified MarketingCampaign fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchMartechCampaignResponse>} - The async response
+     */
+    public CompletableFuture<PatchMartechCampaignResponse> patchMartechCampaign(@Nonnull PatchMartechCampaignRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchMartechCampaignRequest, PatchMartechCampaignResponse> operation
-              = new PatchMartechCampaign.Async(sdkConfiguration, _headers);
+              = new PatchMartechCampaign.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -479,8 +651,22 @@ public class AsyncMartech {
      * @return {@code CompletableFuture<PatchMartechListResponse>} - The async response
      */
     public CompletableFuture<PatchMartechListResponse> patchMartechList(@Nonnull PatchMartechListRequest request) {
+        return patchMartechList(request, null);
+    }
+
+    /**
+     * Update a list
+     * 
+     * <p>Updates the MarketingList identified by `id`. Provide the unified MarketingList fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchMartechListResponse>} - The async response
+     */
+    public CompletableFuture<PatchMartechListResponse> patchMartechList(@Nonnull PatchMartechListRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchMartechListRequest, PatchMartechListResponse> operation
-              = new PatchMartechList.Async(sdkConfiguration, _headers);
+              = new PatchMartechList.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -508,8 +694,22 @@ public class AsyncMartech {
      * @return {@code CompletableFuture<PatchMartechMemberResponse>} - The async response
      */
     public CompletableFuture<PatchMartechMemberResponse> patchMartechMember(@Nonnull PatchMartechMemberRequest request) {
+        return patchMartechMember(request, null);
+    }
+
+    /**
+     * Update a member
+     * 
+     * <p>Updates the MarketingMember identified by `id`. Provide the unified MarketingMember fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchMartechMemberResponse>} - The async response
+     */
+    public CompletableFuture<PatchMartechMemberResponse> patchMartechMember(@Nonnull PatchMartechMemberRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchMartechMemberRequest, PatchMartechMemberResponse> operation
-              = new PatchMartechMember.Async(sdkConfiguration, _headers);
+              = new PatchMartechMember.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -535,8 +735,21 @@ public class AsyncMartech {
      * @return {@code CompletableFuture<RemoveMartechCampaignResponse>} - The async response
      */
     public CompletableFuture<RemoveMartechCampaignResponse> removeMartechCampaign(@Nonnull RemoveMartechCampaignRequest request) {
+        return removeMartechCampaign(request, null);
+    }
+
+    /**
+     * Remove a campaign
+     * 
+     * <p>Deletes the MarketingCampaign identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveMartechCampaignResponse>} - The async response
+     */
+    public CompletableFuture<RemoveMartechCampaignResponse> removeMartechCampaign(@Nonnull RemoveMartechCampaignRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveMartechCampaignRequest, RemoveMartechCampaignResponse> operation
-              = new RemoveMartechCampaign.Async(sdkConfiguration, _headers);
+              = new RemoveMartechCampaign.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -562,8 +775,21 @@ public class AsyncMartech {
      * @return {@code CompletableFuture<RemoveMartechListResponse>} - The async response
      */
     public CompletableFuture<RemoveMartechListResponse> removeMartechList(@Nonnull RemoveMartechListRequest request) {
+        return removeMartechList(request, null);
+    }
+
+    /**
+     * Remove a list
+     * 
+     * <p>Deletes the MarketingList identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveMartechListResponse>} - The async response
+     */
+    public CompletableFuture<RemoveMartechListResponse> removeMartechList(@Nonnull RemoveMartechListRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveMartechListRequest, RemoveMartechListResponse> operation
-              = new RemoveMartechList.Async(sdkConfiguration, _headers);
+              = new RemoveMartechList.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -589,8 +815,21 @@ public class AsyncMartech {
      * @return {@code CompletableFuture<RemoveMartechMemberResponse>} - The async response
      */
     public CompletableFuture<RemoveMartechMemberResponse> removeMartechMember(@Nonnull RemoveMartechMemberRequest request) {
+        return removeMartechMember(request, null);
+    }
+
+    /**
+     * Remove a member
+     * 
+     * <p>Deletes the MarketingMember identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveMartechMemberResponse>} - The async response
+     */
+    public CompletableFuture<RemoveMartechMemberResponse> removeMartechMember(@Nonnull RemoveMartechMemberRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveMartechMemberRequest, RemoveMartechMemberResponse> operation
-              = new RemoveMartechMember.Async(sdkConfiguration, _headers);
+              = new RemoveMartechMember.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -618,8 +857,22 @@ public class AsyncMartech {
      * @return {@code CompletableFuture<UpdateMartechCampaignResponse>} - The async response
      */
     public CompletableFuture<UpdateMartechCampaignResponse> updateMartechCampaign(@Nonnull UpdateMartechCampaignRequest request) {
+        return updateMartechCampaign(request, null);
+    }
+
+    /**
+     * Update a campaign
+     * 
+     * <p>Updates the MarketingCampaign identified by `id`. Provide the unified MarketingCampaign fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateMartechCampaignResponse>} - The async response
+     */
+    public CompletableFuture<UpdateMartechCampaignResponse> updateMartechCampaign(@Nonnull UpdateMartechCampaignRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateMartechCampaignRequest, UpdateMartechCampaignResponse> operation
-              = new UpdateMartechCampaign.Async(sdkConfiguration, _headers);
+              = new UpdateMartechCampaign.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -647,8 +900,22 @@ public class AsyncMartech {
      * @return {@code CompletableFuture<UpdateMartechListResponse>} - The async response
      */
     public CompletableFuture<UpdateMartechListResponse> updateMartechList(@Nonnull UpdateMartechListRequest request) {
+        return updateMartechList(request, null);
+    }
+
+    /**
+     * Update a list
+     * 
+     * <p>Updates the MarketingList identified by `id`. Provide the unified MarketingList fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateMartechListResponse>} - The async response
+     */
+    public CompletableFuture<UpdateMartechListResponse> updateMartechList(@Nonnull UpdateMartechListRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateMartechListRequest, UpdateMartechListResponse> operation
-              = new UpdateMartechList.Async(sdkConfiguration, _headers);
+              = new UpdateMartechList.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -676,8 +943,22 @@ public class AsyncMartech {
      * @return {@code CompletableFuture<UpdateMartechMemberResponse>} - The async response
      */
     public CompletableFuture<UpdateMartechMemberResponse> updateMartechMember(@Nonnull UpdateMartechMemberRequest request) {
+        return updateMartechMember(request, null);
+    }
+
+    /**
+     * Update a member
+     * 
+     * <p>Updates the MarketingMember identified by `id`. Provide the unified MarketingMember fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateMartechMemberResponse>} - The async response
+     */
+    public CompletableFuture<UpdateMartechMemberResponse> updateMartechMember(@Nonnull UpdateMartechMemberRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateMartechMemberRequest, UpdateMartechMemberResponse> operation
-              = new UpdateMartechMember.Async(sdkConfiguration, _headers);
+              = new UpdateMartechMember.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

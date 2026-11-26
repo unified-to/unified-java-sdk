@@ -6,20 +6,30 @@ package to.unified.unified_java_sdk.models.operations.async;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.PatchPlmChangeRequest;
 import to.unified.unified_java_sdk.operations.PatchPlmChange;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class PatchPlmChangeRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private PatchPlmChangeRequest request;
+    private final Options.Builder optionsBuilder;
 
     public PatchPlmChangeRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public PatchPlmChangeRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public PatchPlmChangeRequestBuilder request(@Nonnull PatchPlmChangeRequest request) {
@@ -44,8 +54,9 @@ public class PatchPlmChangeRequestBuilder {
     * @return The response from the server.
     */
     public CompletableFuture<PatchPlmChangeResponse> call() {
+        Options options = optionsBuilder.build();
         AsyncRequestOperation<PatchPlmChangeRequest, PatchPlmChangeResponse> operation
-              = new PatchPlmChange.Async(sdkConfiguration, _headers);
+              = new PatchPlmChange.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

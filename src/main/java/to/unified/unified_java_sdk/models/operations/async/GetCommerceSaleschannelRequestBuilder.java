@@ -6,20 +6,30 @@ package to.unified.unified_java_sdk.models.operations.async;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.GetCommerceSaleschannelRequest;
 import to.unified.unified_java_sdk.operations.GetCommerceSaleschannel;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetCommerceSaleschannelRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private GetCommerceSaleschannelRequest request;
+    private final Options.Builder optionsBuilder;
 
     public GetCommerceSaleschannelRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public GetCommerceSaleschannelRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public GetCommerceSaleschannelRequestBuilder request(@Nonnull GetCommerceSaleschannelRequest request) {
@@ -44,8 +54,9 @@ public class GetCommerceSaleschannelRequestBuilder {
     * @return The response from the server.
     */
     public CompletableFuture<GetCommerceSaleschannelResponse> call() {
+        Options options = optionsBuilder.build();
         AsyncRequestOperation<GetCommerceSaleschannelRequest, GetCommerceSaleschannelResponse> operation
-              = new GetCommerceSaleschannel.Async(sdkConfiguration, _headers);
+              = new GetCommerceSaleschannel.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

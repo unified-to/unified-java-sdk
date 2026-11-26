@@ -6,18 +6,28 @@ package to.unified.unified_java_sdk.models.operations;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.RemoveCalendarWebinar;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveCalendarWebinarRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private RemoveCalendarWebinarRequest request;
+    private final Options.Builder optionsBuilder;
 
     public RemoveCalendarWebinarRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public RemoveCalendarWebinarRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public RemoveCalendarWebinarRequestBuilder request(@Nonnull RemoveCalendarWebinarRequest request) {
@@ -42,8 +52,9 @@ public class RemoveCalendarWebinarRequestBuilder {
     * @return The response from the server.
     */
     public RemoveCalendarWebinarResponse call() {
+        Options options = optionsBuilder.build();
         RequestOperation<RemoveCalendarWebinarRequest, RemoveCalendarWebinarResponse> operation
-              = new RemoveCalendarWebinar.Sync(sdkConfiguration, _headers);
+              = new RemoveCalendarWebinar.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

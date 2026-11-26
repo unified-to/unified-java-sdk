@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateHrisAttendanceRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisAttendanceRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateHrisAttendanceResponse;
@@ -415,6 +416,7 @@ import to.unified.unified_java_sdk.operations.UpdateHrisTaxwithholding;
 import to.unified.unified_java_sdk.operations.UpdateHrisTimeoff;
 import to.unified.unified_java_sdk.operations.UpdateHrisTimeshift;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Hris {
@@ -459,8 +461,23 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateHrisAttendanceResponse createHrisAttendance(@Nonnull CreateHrisAttendanceRequest request) {
+        return createHrisAttendance(request, null);
+    }
+
+    /**
+     * Create an attendance
+     * 
+     * <p>Creates a HrisAttendance. Provide the unified HrisAttendance fields in the request body; they are
+     * mapped to the provider's API. Returns the created HrisAttendance.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateHrisAttendanceResponse createHrisAttendance(@Nonnull CreateHrisAttendanceRequest request, @Nullable Options options) {
         RequestOperation<CreateHrisAttendanceRequest, CreateHrisAttendanceResponse> operation
-              = new CreateHrisAttendance.Sync(sdkConfiguration, _headers);
+              = new CreateHrisAttendance.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -487,8 +504,23 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateHrisBankaccountResponse createHrisBankaccount(@Nonnull CreateHrisBankaccountRequest request) {
+        return createHrisBankaccount(request, null);
+    }
+
+    /**
+     * Create a bankaccount
+     * 
+     * <p>Creates a HrisBankaccount. Provide the unified HrisBankaccount fields in the request body; they are
+     * mapped to the provider's API. Returns the created HrisBankaccount.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateHrisBankaccountResponse createHrisBankaccount(@Nonnull CreateHrisBankaccountRequest request, @Nullable Options options) {
         RequestOperation<CreateHrisBankaccountRequest, CreateHrisBankaccountResponse> operation
-              = new CreateHrisBankaccount.Sync(sdkConfiguration, _headers);
+              = new CreateHrisBankaccount.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -515,8 +547,23 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateHrisBenefitResponse createHrisBenefit(@Nonnull CreateHrisBenefitRequest request) {
+        return createHrisBenefit(request, null);
+    }
+
+    /**
+     * Create a benefit
+     * 
+     * <p>Creates a HrisBenefit. Provide the unified HrisBenefit fields in the request body; they are mapped
+     * to the provider's API. Returns the created HrisBenefit.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateHrisBenefitResponse createHrisBenefit(@Nonnull CreateHrisBenefitRequest request, @Nullable Options options) {
         RequestOperation<CreateHrisBenefitRequest, CreateHrisBenefitResponse> operation
-              = new CreateHrisBenefit.Sync(sdkConfiguration, _headers);
+              = new CreateHrisBenefit.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -543,8 +590,23 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateHrisCompanyResponse createHrisCompany(@Nonnull CreateHrisCompanyRequest request) {
+        return createHrisCompany(request, null);
+    }
+
+    /**
+     * Create a company
+     * 
+     * <p>Creates a HrisCompany. Provide the unified HrisCompany fields in the request body; they are mapped
+     * to the provider's API. Returns the created HrisCompany.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateHrisCompanyResponse createHrisCompany(@Nonnull CreateHrisCompanyRequest request, @Nullable Options options) {
         RequestOperation<CreateHrisCompanyRequest, CreateHrisCompanyResponse> operation
-              = new CreateHrisCompany.Sync(sdkConfiguration, _headers);
+              = new CreateHrisCompany.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -571,8 +633,23 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateHrisDeductionResponse createHrisDeduction(@Nonnull CreateHrisDeductionRequest request) {
+        return createHrisDeduction(request, null);
+    }
+
+    /**
+     * Create a deduction
+     * 
+     * <p>Creates a HrisDeduction. Provide the unified HrisDeduction fields in the request body; they are
+     * mapped to the provider's API. Returns the created HrisDeduction.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateHrisDeductionResponse createHrisDeduction(@Nonnull CreateHrisDeductionRequest request, @Nullable Options options) {
         RequestOperation<CreateHrisDeductionRequest, CreateHrisDeductionResponse> operation
-              = new CreateHrisDeduction.Sync(sdkConfiguration, _headers);
+              = new CreateHrisDeduction.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -599,8 +676,23 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateHrisDeviceResponse createHrisDevice(@Nonnull CreateHrisDeviceRequest request) {
+        return createHrisDevice(request, null);
+    }
+
+    /**
+     * Create a device
+     * 
+     * <p>Creates a HrisDevice. Provide the unified HrisDevice fields in the request body; they are mapped to
+     * the provider's API. Returns the created HrisDevice.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateHrisDeviceResponse createHrisDevice(@Nonnull CreateHrisDeviceRequest request, @Nullable Options options) {
         RequestOperation<CreateHrisDeviceRequest, CreateHrisDeviceResponse> operation
-              = new CreateHrisDevice.Sync(sdkConfiguration, _headers);
+              = new CreateHrisDevice.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -627,8 +719,23 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateHrisDocumentResponse createHrisDocument(@Nonnull CreateHrisDocumentRequest request) {
+        return createHrisDocument(request, null);
+    }
+
+    /**
+     * Create a document
+     * 
+     * <p>Creates a HrisDocument. Provide the unified HrisDocument fields in the request body; they are mapped
+     * to the provider's API. Returns the created HrisDocument.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateHrisDocumentResponse createHrisDocument(@Nonnull CreateHrisDocumentRequest request, @Nullable Options options) {
         RequestOperation<CreateHrisDocumentRequest, CreateHrisDocumentResponse> operation
-              = new CreateHrisDocument.Sync(sdkConfiguration, _headers);
+              = new CreateHrisDocument.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -655,8 +762,23 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateHrisEarningResponse createHrisEarning(@Nonnull CreateHrisEarningRequest request) {
+        return createHrisEarning(request, null);
+    }
+
+    /**
+     * Create an earning
+     * 
+     * <p>Creates a HrisEarning. Provide the unified HrisEarning fields in the request body; they are mapped
+     * to the provider's API. Returns the created HrisEarning.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateHrisEarningResponse createHrisEarning(@Nonnull CreateHrisEarningRequest request, @Nullable Options options) {
         RequestOperation<CreateHrisEarningRequest, CreateHrisEarningResponse> operation
-              = new CreateHrisEarning.Sync(sdkConfiguration, _headers);
+              = new CreateHrisEarning.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -683,8 +805,23 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateHrisEmployeeResponse createHrisEmployee(@Nonnull CreateHrisEmployeeRequest request) {
+        return createHrisEmployee(request, null);
+    }
+
+    /**
+     * Create an employee
+     * 
+     * <p>Creates a HrisEmployee. Provide the unified HrisEmployee fields in the request body; they are mapped
+     * to the provider's API. Returns the created HrisEmployee.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateHrisEmployeeResponse createHrisEmployee(@Nonnull CreateHrisEmployeeRequest request, @Nullable Options options) {
         RequestOperation<CreateHrisEmployeeRequest, CreateHrisEmployeeResponse> operation
-              = new CreateHrisEmployee.Sync(sdkConfiguration, _headers);
+              = new CreateHrisEmployee.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -711,8 +848,23 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateHrisGroupResponse createHrisGroup(@Nonnull CreateHrisGroupRequest request) {
+        return createHrisGroup(request, null);
+    }
+
+    /**
+     * Create a group
+     * 
+     * <p>Creates a HrisGroup. Provide the unified HrisGroup fields in the request body; they are mapped to
+     * the provider's API. Returns the created HrisGroup.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateHrisGroupResponse createHrisGroup(@Nonnull CreateHrisGroupRequest request, @Nullable Options options) {
         RequestOperation<CreateHrisGroupRequest, CreateHrisGroupResponse> operation
-              = new CreateHrisGroup.Sync(sdkConfiguration, _headers);
+              = new CreateHrisGroup.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -739,8 +891,23 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateHrisJobResponse createHrisJob(@Nonnull CreateHrisJobRequest request) {
+        return createHrisJob(request, null);
+    }
+
+    /**
+     * Create a job
+     * 
+     * <p>Creates a HrisJob. Provide the unified HrisJob fields in the request body; they are mapped to the
+     * provider's API. Returns the created HrisJob.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateHrisJobResponse createHrisJob(@Nonnull CreateHrisJobRequest request, @Nullable Options options) {
         RequestOperation<CreateHrisJobRequest, CreateHrisJobResponse> operation
-              = new CreateHrisJob.Sync(sdkConfiguration, _headers);
+              = new CreateHrisJob.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -767,8 +934,23 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateHrisLocationResponse createHrisLocation(@Nonnull CreateHrisLocationRequest request) {
+        return createHrisLocation(request, null);
+    }
+
+    /**
+     * Create a location
+     * 
+     * <p>Creates a HrisLocation. Provide the unified HrisLocation fields in the request body; they are mapped
+     * to the provider's API. Returns the created HrisLocation.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateHrisLocationResponse createHrisLocation(@Nonnull CreateHrisLocationRequest request, @Nullable Options options) {
         RequestOperation<CreateHrisLocationRequest, CreateHrisLocationResponse> operation
-              = new CreateHrisLocation.Sync(sdkConfiguration, _headers);
+              = new CreateHrisLocation.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -795,8 +977,23 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateHrisTaxonomyResponse createHrisTaxonomy(@Nonnull CreateHrisTaxonomyRequest request) {
+        return createHrisTaxonomy(request, null);
+    }
+
+    /**
+     * Create a taxonomy
+     * 
+     * <p>Creates a HrisTaxonomy. Provide the unified HrisTaxonomy fields in the request body; they are mapped
+     * to the provider's API. Returns the created HrisTaxonomy.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateHrisTaxonomyResponse createHrisTaxonomy(@Nonnull CreateHrisTaxonomyRequest request, @Nullable Options options) {
         RequestOperation<CreateHrisTaxonomyRequest, CreateHrisTaxonomyResponse> operation
-              = new CreateHrisTaxonomy.Sync(sdkConfiguration, _headers);
+              = new CreateHrisTaxonomy.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -823,8 +1020,23 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateHrisTaxwithholdingResponse createHrisTaxwithholding(@Nonnull CreateHrisTaxwithholdingRequest request) {
+        return createHrisTaxwithholding(request, null);
+    }
+
+    /**
+     * Create a taxwithholding
+     * 
+     * <p>Creates a HrisTaxwithholding. Provide the unified HrisTaxwithholding fields in the request body;
+     * they are mapped to the provider's API. Returns the created HrisTaxwithholding.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateHrisTaxwithholdingResponse createHrisTaxwithholding(@Nonnull CreateHrisTaxwithholdingRequest request, @Nullable Options options) {
         RequestOperation<CreateHrisTaxwithholdingRequest, CreateHrisTaxwithholdingResponse> operation
-              = new CreateHrisTaxwithholding.Sync(sdkConfiguration, _headers);
+              = new CreateHrisTaxwithholding.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -851,8 +1063,23 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateHrisTimeoffResponse createHrisTimeoff(@Nonnull CreateHrisTimeoffRequest request) {
+        return createHrisTimeoff(request, null);
+    }
+
+    /**
+     * Create a timeoff
+     * 
+     * <p>Creates a HrisTimeoff. Provide the unified HrisTimeoff fields in the request body; they are mapped
+     * to the provider's API. Returns the created HrisTimeoff.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateHrisTimeoffResponse createHrisTimeoff(@Nonnull CreateHrisTimeoffRequest request, @Nullable Options options) {
         RequestOperation<CreateHrisTimeoffRequest, CreateHrisTimeoffResponse> operation
-              = new CreateHrisTimeoff.Sync(sdkConfiguration, _headers);
+              = new CreateHrisTimeoff.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -879,8 +1106,23 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateHrisTimeshiftResponse createHrisTimeshift(@Nonnull CreateHrisTimeshiftRequest request) {
+        return createHrisTimeshift(request, null);
+    }
+
+    /**
+     * Create a timeshift
+     * 
+     * <p>Creates a HrisTimeshift. Provide the unified HrisTimeshift fields in the request body; they are
+     * mapped to the provider's API. Returns the created HrisTimeshift.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateHrisTimeshiftResponse createHrisTimeshift(@Nonnull CreateHrisTimeshiftRequest request, @Nullable Options options) {
         RequestOperation<CreateHrisTimeshiftRequest, CreateHrisTimeshiftResponse> operation
-              = new CreateHrisTimeshift.Sync(sdkConfiguration, _headers);
+              = new CreateHrisTimeshift.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -907,8 +1149,23 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetHrisAttendanceResponse getHrisAttendance(@Nonnull GetHrisAttendanceRequest request) {
+        return getHrisAttendance(request, null);
+    }
+
+    /**
+     * Retrieve an attendance
+     * 
+     * <p>Retrieves a single HrisAttendance by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetHrisAttendanceResponse getHrisAttendance(@Nonnull GetHrisAttendanceRequest request, @Nullable Options options) {
         RequestOperation<GetHrisAttendanceRequest, GetHrisAttendanceResponse> operation
-              = new GetHrisAttendance.Sync(sdkConfiguration, _headers);
+              = new GetHrisAttendance.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -935,8 +1192,23 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetHrisBankaccountResponse getHrisBankaccount(@Nonnull GetHrisBankaccountRequest request) {
+        return getHrisBankaccount(request, null);
+    }
+
+    /**
+     * Retrieve a bankaccount
+     * 
+     * <p>Retrieves a single HrisBankaccount by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetHrisBankaccountResponse getHrisBankaccount(@Nonnull GetHrisBankaccountRequest request, @Nullable Options options) {
         RequestOperation<GetHrisBankaccountRequest, GetHrisBankaccountResponse> operation
-              = new GetHrisBankaccount.Sync(sdkConfiguration, _headers);
+              = new GetHrisBankaccount.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -963,8 +1235,23 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetHrisBenefitResponse getHrisBenefit(@Nonnull GetHrisBenefitRequest request) {
+        return getHrisBenefit(request, null);
+    }
+
+    /**
+     * Retrieve a benefit
+     * 
+     * <p>Retrieves a single HrisBenefit by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetHrisBenefitResponse getHrisBenefit(@Nonnull GetHrisBenefitRequest request, @Nullable Options options) {
         RequestOperation<GetHrisBenefitRequest, GetHrisBenefitResponse> operation
-              = new GetHrisBenefit.Sync(sdkConfiguration, _headers);
+              = new GetHrisBenefit.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -991,8 +1278,23 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetHrisCompanyResponse getHrisCompany(@Nonnull GetHrisCompanyRequest request) {
+        return getHrisCompany(request, null);
+    }
+
+    /**
+     * Retrieve a company
+     * 
+     * <p>Retrieves a single HrisCompany by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetHrisCompanyResponse getHrisCompany(@Nonnull GetHrisCompanyRequest request, @Nullable Options options) {
         RequestOperation<GetHrisCompanyRequest, GetHrisCompanyResponse> operation
-              = new GetHrisCompany.Sync(sdkConfiguration, _headers);
+              = new GetHrisCompany.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1019,8 +1321,23 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetHrisDeductionResponse getHrisDeduction(@Nonnull GetHrisDeductionRequest request) {
+        return getHrisDeduction(request, null);
+    }
+
+    /**
+     * Retrieve a deduction
+     * 
+     * <p>Retrieves a single HrisDeduction by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetHrisDeductionResponse getHrisDeduction(@Nonnull GetHrisDeductionRequest request, @Nullable Options options) {
         RequestOperation<GetHrisDeductionRequest, GetHrisDeductionResponse> operation
-              = new GetHrisDeduction.Sync(sdkConfiguration, _headers);
+              = new GetHrisDeduction.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1047,8 +1364,23 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetHrisDeviceResponse getHrisDevice(@Nonnull GetHrisDeviceRequest request) {
+        return getHrisDevice(request, null);
+    }
+
+    /**
+     * Retrieve a device
+     * 
+     * <p>Retrieves a single HrisDevice by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetHrisDeviceResponse getHrisDevice(@Nonnull GetHrisDeviceRequest request, @Nullable Options options) {
         RequestOperation<GetHrisDeviceRequest, GetHrisDeviceResponse> operation
-              = new GetHrisDevice.Sync(sdkConfiguration, _headers);
+              = new GetHrisDevice.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1075,8 +1407,23 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetHrisDocumentResponse getHrisDocument(@Nonnull GetHrisDocumentRequest request) {
+        return getHrisDocument(request, null);
+    }
+
+    /**
+     * Retrieve a document
+     * 
+     * <p>Retrieves a single HrisDocument by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetHrisDocumentResponse getHrisDocument(@Nonnull GetHrisDocumentRequest request, @Nullable Options options) {
         RequestOperation<GetHrisDocumentRequest, GetHrisDocumentResponse> operation
-              = new GetHrisDocument.Sync(sdkConfiguration, _headers);
+              = new GetHrisDocument.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1103,8 +1450,23 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetHrisEarningResponse getHrisEarning(@Nonnull GetHrisEarningRequest request) {
+        return getHrisEarning(request, null);
+    }
+
+    /**
+     * Retrieve an earning
+     * 
+     * <p>Retrieves a single HrisEarning by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetHrisEarningResponse getHrisEarning(@Nonnull GetHrisEarningRequest request, @Nullable Options options) {
         RequestOperation<GetHrisEarningRequest, GetHrisEarningResponse> operation
-              = new GetHrisEarning.Sync(sdkConfiguration, _headers);
+              = new GetHrisEarning.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1131,8 +1493,23 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetHrisEmployeeResponse getHrisEmployee(@Nonnull GetHrisEmployeeRequest request) {
+        return getHrisEmployee(request, null);
+    }
+
+    /**
+     * Retrieve an employee
+     * 
+     * <p>Retrieves a single HrisEmployee by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetHrisEmployeeResponse getHrisEmployee(@Nonnull GetHrisEmployeeRequest request, @Nullable Options options) {
         RequestOperation<GetHrisEmployeeRequest, GetHrisEmployeeResponse> operation
-              = new GetHrisEmployee.Sync(sdkConfiguration, _headers);
+              = new GetHrisEmployee.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1159,8 +1536,23 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetHrisGroupResponse getHrisGroup(@Nonnull GetHrisGroupRequest request) {
+        return getHrisGroup(request, null);
+    }
+
+    /**
+     * Retrieve a group
+     * 
+     * <p>Retrieves a single HrisGroup by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetHrisGroupResponse getHrisGroup(@Nonnull GetHrisGroupRequest request, @Nullable Options options) {
         RequestOperation<GetHrisGroupRequest, GetHrisGroupResponse> operation
-              = new GetHrisGroup.Sync(sdkConfiguration, _headers);
+              = new GetHrisGroup.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1187,8 +1579,23 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetHrisJobResponse getHrisJob(@Nonnull GetHrisJobRequest request) {
+        return getHrisJob(request, null);
+    }
+
+    /**
+     * Retrieve a job
+     * 
+     * <p>Retrieves a single HrisJob by its `id`. Obtain `id` values from the corresponding list endpoint. Use
+     * `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetHrisJobResponse getHrisJob(@Nonnull GetHrisJobRequest request, @Nullable Options options) {
         RequestOperation<GetHrisJobRequest, GetHrisJobResponse> operation
-              = new GetHrisJob.Sync(sdkConfiguration, _headers);
+              = new GetHrisJob.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1215,8 +1622,23 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetHrisLocationResponse getHrisLocation(@Nonnull GetHrisLocationRequest request) {
+        return getHrisLocation(request, null);
+    }
+
+    /**
+     * Retrieve a location
+     * 
+     * <p>Retrieves a single HrisLocation by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetHrisLocationResponse getHrisLocation(@Nonnull GetHrisLocationRequest request, @Nullable Options options) {
         RequestOperation<GetHrisLocationRequest, GetHrisLocationResponse> operation
-              = new GetHrisLocation.Sync(sdkConfiguration, _headers);
+              = new GetHrisLocation.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1243,8 +1665,23 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetHrisPaycodeResponse getHrisPaycode(@Nonnull GetHrisPaycodeRequest request) {
+        return getHrisPaycode(request, null);
+    }
+
+    /**
+     * Retrieve a paycode
+     * 
+     * <p>Retrieves a single HrisPaycode by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetHrisPaycodeResponse getHrisPaycode(@Nonnull GetHrisPaycodeRequest request, @Nullable Options options) {
         RequestOperation<GetHrisPaycodeRequest, GetHrisPaycodeResponse> operation
-              = new GetHrisPaycode.Sync(sdkConfiguration, _headers);
+              = new GetHrisPaycode.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1271,8 +1708,23 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetHrisPayrollResponse getHrisPayroll(@Nonnull GetHrisPayrollRequest request) {
+        return getHrisPayroll(request, null);
+    }
+
+    /**
+     * Retrieve a payroll
+     * 
+     * <p>Retrieves a single HrisPayroll by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetHrisPayrollResponse getHrisPayroll(@Nonnull GetHrisPayrollRequest request, @Nullable Options options) {
         RequestOperation<GetHrisPayrollRequest, GetHrisPayrollResponse> operation
-              = new GetHrisPayroll.Sync(sdkConfiguration, _headers);
+              = new GetHrisPayroll.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1299,8 +1751,23 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetHrisPayslipResponse getHrisPayslip(@Nonnull GetHrisPayslipRequest request) {
+        return getHrisPayslip(request, null);
+    }
+
+    /**
+     * Retrieve a payslip
+     * 
+     * <p>Retrieves a single HrisPayslip by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetHrisPayslipResponse getHrisPayslip(@Nonnull GetHrisPayslipRequest request, @Nullable Options options) {
         RequestOperation<GetHrisPayslipRequest, GetHrisPayslipResponse> operation
-              = new GetHrisPayslip.Sync(sdkConfiguration, _headers);
+              = new GetHrisPayslip.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1327,8 +1794,23 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetHrisTaxonomyResponse getHrisTaxonomy(@Nonnull GetHrisTaxonomyRequest request) {
+        return getHrisTaxonomy(request, null);
+    }
+
+    /**
+     * Retrieve a taxonomy
+     * 
+     * <p>Retrieves a single HrisTaxonomy by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetHrisTaxonomyResponse getHrisTaxonomy(@Nonnull GetHrisTaxonomyRequest request, @Nullable Options options) {
         RequestOperation<GetHrisTaxonomyRequest, GetHrisTaxonomyResponse> operation
-              = new GetHrisTaxonomy.Sync(sdkConfiguration, _headers);
+              = new GetHrisTaxonomy.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1355,8 +1837,23 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetHrisTaxwithholdingResponse getHrisTaxwithholding(@Nonnull GetHrisTaxwithholdingRequest request) {
+        return getHrisTaxwithholding(request, null);
+    }
+
+    /**
+     * Retrieve a taxwithholding
+     * 
+     * <p>Retrieves a single HrisTaxwithholding by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetHrisTaxwithholdingResponse getHrisTaxwithholding(@Nonnull GetHrisTaxwithholdingRequest request, @Nullable Options options) {
         RequestOperation<GetHrisTaxwithholdingRequest, GetHrisTaxwithholdingResponse> operation
-              = new GetHrisTaxwithholding.Sync(sdkConfiguration, _headers);
+              = new GetHrisTaxwithholding.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1383,8 +1880,23 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetHrisTimeoffResponse getHrisTimeoff(@Nonnull GetHrisTimeoffRequest request) {
+        return getHrisTimeoff(request, null);
+    }
+
+    /**
+     * Retrieve a timeoff
+     * 
+     * <p>Retrieves a single HrisTimeoff by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetHrisTimeoffResponse getHrisTimeoff(@Nonnull GetHrisTimeoffRequest request, @Nullable Options options) {
         RequestOperation<GetHrisTimeoffRequest, GetHrisTimeoffResponse> operation
-              = new GetHrisTimeoff.Sync(sdkConfiguration, _headers);
+              = new GetHrisTimeoff.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1411,8 +1923,23 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetHrisTimeshiftResponse getHrisTimeshift(@Nonnull GetHrisTimeshiftRequest request) {
+        return getHrisTimeshift(request, null);
+    }
+
+    /**
+     * Retrieve a timeshift
+     * 
+     * <p>Retrieves a single HrisTimeshift by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetHrisTimeshiftResponse getHrisTimeshift(@Nonnull GetHrisTimeshiftRequest request, @Nullable Options options) {
         RequestOperation<GetHrisTimeshiftRequest, GetHrisTimeshiftResponse> operation
-              = new GetHrisTimeshift.Sync(sdkConfiguration, _headers);
+              = new GetHrisTimeshift.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1447,8 +1974,27 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListHrisAttendancesResponse listHrisAttendances(@Nonnull ListHrisAttendancesRequest request) {
+        return listHrisAttendances(request, null);
+    }
+
+    /**
+     * List all attendances
+     * 
+     * <p>Returns a list of HrisAttendances. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListHrisAttendancesResponse listHrisAttendances(@Nonnull ListHrisAttendancesRequest request, @Nullable Options options) {
         RequestOperation<ListHrisAttendancesRequest, ListHrisAttendancesResponse> operation
-              = new ListHrisAttendances.Sync(sdkConfiguration, _headers);
+              = new ListHrisAttendances.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1483,8 +2029,27 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListHrisBankaccountsResponse listHrisBankaccounts(@Nonnull ListHrisBankaccountsRequest request) {
+        return listHrisBankaccounts(request, null);
+    }
+
+    /**
+     * List all bankaccounts
+     * 
+     * <p>Returns a list of HrisBankaccounts. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListHrisBankaccountsResponse listHrisBankaccounts(@Nonnull ListHrisBankaccountsRequest request, @Nullable Options options) {
         RequestOperation<ListHrisBankaccountsRequest, ListHrisBankaccountsResponse> operation
-              = new ListHrisBankaccounts.Sync(sdkConfiguration, _headers);
+              = new ListHrisBankaccounts.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1519,8 +2084,27 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListHrisBenefitsResponse listHrisBenefits(@Nonnull ListHrisBenefitsRequest request) {
+        return listHrisBenefits(request, null);
+    }
+
+    /**
+     * List all benefits
+     * 
+     * <p>Returns a list of HrisBenefits. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListHrisBenefitsResponse listHrisBenefits(@Nonnull ListHrisBenefitsRequest request, @Nullable Options options) {
         RequestOperation<ListHrisBenefitsRequest, ListHrisBenefitsResponse> operation
-              = new ListHrisBenefits.Sync(sdkConfiguration, _headers);
+              = new ListHrisBenefits.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1555,8 +2139,27 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListHrisCompaniesResponse listHrisCompanies(@Nonnull ListHrisCompaniesRequest request) {
+        return listHrisCompanies(request, null);
+    }
+
+    /**
+     * List all companies
+     * 
+     * <p>Returns a list of HrisCompanies. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListHrisCompaniesResponse listHrisCompanies(@Nonnull ListHrisCompaniesRequest request, @Nullable Options options) {
         RequestOperation<ListHrisCompaniesRequest, ListHrisCompaniesResponse> operation
-              = new ListHrisCompanies.Sync(sdkConfiguration, _headers);
+              = new ListHrisCompanies.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1591,8 +2194,27 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListHrisDeductionsResponse listHrisDeductions(@Nonnull ListHrisDeductionsRequest request) {
+        return listHrisDeductions(request, null);
+    }
+
+    /**
+     * List all deductions
+     * 
+     * <p>Returns a list of HrisDeductions. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListHrisDeductionsResponse listHrisDeductions(@Nonnull ListHrisDeductionsRequest request, @Nullable Options options) {
         RequestOperation<ListHrisDeductionsRequest, ListHrisDeductionsResponse> operation
-              = new ListHrisDeductions.Sync(sdkConfiguration, _headers);
+              = new ListHrisDeductions.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1627,8 +2249,27 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListHrisDevicesResponse listHrisDevices(@Nonnull ListHrisDevicesRequest request) {
+        return listHrisDevices(request, null);
+    }
+
+    /**
+     * List all devices
+     * 
+     * <p>Returns a list of HrisDevices. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListHrisDevicesResponse listHrisDevices(@Nonnull ListHrisDevicesRequest request, @Nullable Options options) {
         RequestOperation<ListHrisDevicesRequest, ListHrisDevicesResponse> operation
-              = new ListHrisDevices.Sync(sdkConfiguration, _headers);
+              = new ListHrisDevices.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1663,8 +2304,27 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListHrisDocumentsResponse listHrisDocuments(@Nonnull ListHrisDocumentsRequest request) {
+        return listHrisDocuments(request, null);
+    }
+
+    /**
+     * List all documents
+     * 
+     * <p>Returns a list of HrisDocuments. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListHrisDocumentsResponse listHrisDocuments(@Nonnull ListHrisDocumentsRequest request, @Nullable Options options) {
         RequestOperation<ListHrisDocumentsRequest, ListHrisDocumentsResponse> operation
-              = new ListHrisDocuments.Sync(sdkConfiguration, _headers);
+              = new ListHrisDocuments.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1699,8 +2359,27 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListHrisEarningsResponse listHrisEarnings(@Nonnull ListHrisEarningsRequest request) {
+        return listHrisEarnings(request, null);
+    }
+
+    /**
+     * List all earnings
+     * 
+     * <p>Returns a list of HrisEarnings. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListHrisEarningsResponse listHrisEarnings(@Nonnull ListHrisEarningsRequest request, @Nullable Options options) {
         RequestOperation<ListHrisEarningsRequest, ListHrisEarningsResponse> operation
-              = new ListHrisEarnings.Sync(sdkConfiguration, _headers);
+              = new ListHrisEarnings.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1735,8 +2414,27 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListHrisEmployeesResponse listHrisEmployees(@Nonnull ListHrisEmployeesRequest request) {
+        return listHrisEmployees(request, null);
+    }
+
+    /**
+     * List all employees
+     * 
+     * <p>Returns a list of HrisEmployees. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListHrisEmployeesResponse listHrisEmployees(@Nonnull ListHrisEmployeesRequest request, @Nullable Options options) {
         RequestOperation<ListHrisEmployeesRequest, ListHrisEmployeesResponse> operation
-              = new ListHrisEmployees.Sync(sdkConfiguration, _headers);
+              = new ListHrisEmployees.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1771,8 +2469,27 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListHrisGroupsResponse listHrisGroups(@Nonnull ListHrisGroupsRequest request) {
+        return listHrisGroups(request, null);
+    }
+
+    /**
+     * List all groups
+     * 
+     * <p>Returns a list of HrisGroups. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListHrisGroupsResponse listHrisGroups(@Nonnull ListHrisGroupsRequest request, @Nullable Options options) {
         RequestOperation<ListHrisGroupsRequest, ListHrisGroupsResponse> operation
-              = new ListHrisGroups.Sync(sdkConfiguration, _headers);
+              = new ListHrisGroups.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1807,8 +2524,27 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListHrisJobsResponse listHrisJobs(@Nonnull ListHrisJobsRequest request) {
+        return listHrisJobs(request, null);
+    }
+
+    /**
+     * List all jobs
+     * 
+     * <p>Returns a list of HrisJobs. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListHrisJobsResponse listHrisJobs(@Nonnull ListHrisJobsRequest request, @Nullable Options options) {
         RequestOperation<ListHrisJobsRequest, ListHrisJobsResponse> operation
-              = new ListHrisJobs.Sync(sdkConfiguration, _headers);
+              = new ListHrisJobs.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1843,8 +2579,27 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListHrisLocationsResponse listHrisLocations(@Nonnull ListHrisLocationsRequest request) {
+        return listHrisLocations(request, null);
+    }
+
+    /**
+     * List all locations
+     * 
+     * <p>Returns a list of HrisLocations. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListHrisLocationsResponse listHrisLocations(@Nonnull ListHrisLocationsRequest request, @Nullable Options options) {
         RequestOperation<ListHrisLocationsRequest, ListHrisLocationsResponse> operation
-              = new ListHrisLocations.Sync(sdkConfiguration, _headers);
+              = new ListHrisLocations.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1879,8 +2634,27 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListHrisPaycodesResponse listHrisPaycodes(@Nonnull ListHrisPaycodesRequest request) {
+        return listHrisPaycodes(request, null);
+    }
+
+    /**
+     * List all paycodes
+     * 
+     * <p>Returns a list of HrisPaycodes. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListHrisPaycodesResponse listHrisPaycodes(@Nonnull ListHrisPaycodesRequest request, @Nullable Options options) {
         RequestOperation<ListHrisPaycodesRequest, ListHrisPaycodesResponse> operation
-              = new ListHrisPaycodes.Sync(sdkConfiguration, _headers);
+              = new ListHrisPaycodes.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1915,8 +2689,27 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListHrisPayrollsResponse listHrisPayrolls(@Nonnull ListHrisPayrollsRequest request) {
+        return listHrisPayrolls(request, null);
+    }
+
+    /**
+     * List all payrolls
+     * 
+     * <p>Returns a list of HrisPayrolls. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListHrisPayrollsResponse listHrisPayrolls(@Nonnull ListHrisPayrollsRequest request, @Nullable Options options) {
         RequestOperation<ListHrisPayrollsRequest, ListHrisPayrollsResponse> operation
-              = new ListHrisPayrolls.Sync(sdkConfiguration, _headers);
+              = new ListHrisPayrolls.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1951,8 +2744,27 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListHrisPayslipsResponse listHrisPayslips(@Nonnull ListHrisPayslipsRequest request) {
+        return listHrisPayslips(request, null);
+    }
+
+    /**
+     * List all payslips
+     * 
+     * <p>Returns a list of HrisPayslips. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListHrisPayslipsResponse listHrisPayslips(@Nonnull ListHrisPayslipsRequest request, @Nullable Options options) {
         RequestOperation<ListHrisPayslipsRequest, ListHrisPayslipsResponse> operation
-              = new ListHrisPayslips.Sync(sdkConfiguration, _headers);
+              = new ListHrisPayslips.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1987,8 +2799,27 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListHrisTaxonomiesResponse listHrisTaxonomies(@Nonnull ListHrisTaxonomiesRequest request) {
+        return listHrisTaxonomies(request, null);
+    }
+
+    /**
+     * List all taxonomies
+     * 
+     * <p>Returns a list of HrisTaxonomies. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListHrisTaxonomiesResponse listHrisTaxonomies(@Nonnull ListHrisTaxonomiesRequest request, @Nullable Options options) {
         RequestOperation<ListHrisTaxonomiesRequest, ListHrisTaxonomiesResponse> operation
-              = new ListHrisTaxonomies.Sync(sdkConfiguration, _headers);
+              = new ListHrisTaxonomies.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -2023,8 +2854,27 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListHrisTaxwithholdingsResponse listHrisTaxwithholdings(@Nonnull ListHrisTaxwithholdingsRequest request) {
+        return listHrisTaxwithholdings(request, null);
+    }
+
+    /**
+     * List all taxwithholdings
+     * 
+     * <p>Returns a list of HrisTaxwithholdings. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListHrisTaxwithholdingsResponse listHrisTaxwithholdings(@Nonnull ListHrisTaxwithholdingsRequest request, @Nullable Options options) {
         RequestOperation<ListHrisTaxwithholdingsRequest, ListHrisTaxwithholdingsResponse> operation
-              = new ListHrisTaxwithholdings.Sync(sdkConfiguration, _headers);
+              = new ListHrisTaxwithholdings.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -2059,8 +2909,27 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListHrisTimeoffsResponse listHrisTimeoffs(@Nonnull ListHrisTimeoffsRequest request) {
+        return listHrisTimeoffs(request, null);
+    }
+
+    /**
+     * List all timeoffs
+     * 
+     * <p>Returns a list of HrisTimeoffs. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListHrisTimeoffsResponse listHrisTimeoffs(@Nonnull ListHrisTimeoffsRequest request, @Nullable Options options) {
         RequestOperation<ListHrisTimeoffsRequest, ListHrisTimeoffsResponse> operation
-              = new ListHrisTimeoffs.Sync(sdkConfiguration, _headers);
+              = new ListHrisTimeoffs.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -2095,8 +2964,27 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListHrisTimeshiftsResponse listHrisTimeshifts(@Nonnull ListHrisTimeshiftsRequest request) {
+        return listHrisTimeshifts(request, null);
+    }
+
+    /**
+     * List all timeshifts
+     * 
+     * <p>Returns a list of HrisTimeshifts. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListHrisTimeshiftsResponse listHrisTimeshifts(@Nonnull ListHrisTimeshiftsRequest request, @Nullable Options options) {
         RequestOperation<ListHrisTimeshiftsRequest, ListHrisTimeshiftsResponse> operation
-              = new ListHrisTimeshifts.Sync(sdkConfiguration, _headers);
+              = new ListHrisTimeshifts.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -2123,8 +3011,23 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchHrisAttendanceResponse patchHrisAttendance(@Nonnull PatchHrisAttendanceRequest request) {
+        return patchHrisAttendance(request, null);
+    }
+
+    /**
+     * Update an attendance
+     * 
+     * <p>Updates the HrisAttendance identified by `id`. Provide the unified HrisAttendance fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchHrisAttendanceResponse patchHrisAttendance(@Nonnull PatchHrisAttendanceRequest request, @Nullable Options options) {
         RequestOperation<PatchHrisAttendanceRequest, PatchHrisAttendanceResponse> operation
-              = new PatchHrisAttendance.Sync(sdkConfiguration, _headers);
+              = new PatchHrisAttendance.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -2151,8 +3054,23 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchHrisBankaccountResponse patchHrisBankaccount(@Nonnull PatchHrisBankaccountRequest request) {
+        return patchHrisBankaccount(request, null);
+    }
+
+    /**
+     * Update a bankaccount
+     * 
+     * <p>Updates the HrisBankaccount identified by `id`. Provide the unified HrisBankaccount fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchHrisBankaccountResponse patchHrisBankaccount(@Nonnull PatchHrisBankaccountRequest request, @Nullable Options options) {
         RequestOperation<PatchHrisBankaccountRequest, PatchHrisBankaccountResponse> operation
-              = new PatchHrisBankaccount.Sync(sdkConfiguration, _headers);
+              = new PatchHrisBankaccount.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -2179,8 +3097,23 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchHrisBenefitResponse patchHrisBenefit(@Nonnull PatchHrisBenefitRequest request) {
+        return patchHrisBenefit(request, null);
+    }
+
+    /**
+     * Update a benefit
+     * 
+     * <p>Updates the HrisBenefit identified by `id`. Provide the unified HrisBenefit fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchHrisBenefitResponse patchHrisBenefit(@Nonnull PatchHrisBenefitRequest request, @Nullable Options options) {
         RequestOperation<PatchHrisBenefitRequest, PatchHrisBenefitResponse> operation
-              = new PatchHrisBenefit.Sync(sdkConfiguration, _headers);
+              = new PatchHrisBenefit.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -2207,8 +3140,23 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchHrisCompanyResponse patchHrisCompany(@Nonnull PatchHrisCompanyRequest request) {
+        return patchHrisCompany(request, null);
+    }
+
+    /**
+     * Update a company
+     * 
+     * <p>Updates the HrisCompany identified by `id`. Provide the unified HrisCompany fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchHrisCompanyResponse patchHrisCompany(@Nonnull PatchHrisCompanyRequest request, @Nullable Options options) {
         RequestOperation<PatchHrisCompanyRequest, PatchHrisCompanyResponse> operation
-              = new PatchHrisCompany.Sync(sdkConfiguration, _headers);
+              = new PatchHrisCompany.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -2235,8 +3183,23 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchHrisDeductionResponse patchHrisDeduction(@Nonnull PatchHrisDeductionRequest request) {
+        return patchHrisDeduction(request, null);
+    }
+
+    /**
+     * Update a deduction
+     * 
+     * <p>Updates the HrisDeduction identified by `id`. Provide the unified HrisDeduction fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchHrisDeductionResponse patchHrisDeduction(@Nonnull PatchHrisDeductionRequest request, @Nullable Options options) {
         RequestOperation<PatchHrisDeductionRequest, PatchHrisDeductionResponse> operation
-              = new PatchHrisDeduction.Sync(sdkConfiguration, _headers);
+              = new PatchHrisDeduction.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -2263,8 +3226,23 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchHrisDeviceResponse patchHrisDevice(@Nonnull PatchHrisDeviceRequest request) {
+        return patchHrisDevice(request, null);
+    }
+
+    /**
+     * Update a device
+     * 
+     * <p>Updates the HrisDevice identified by `id`. Provide the unified HrisDevice fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchHrisDeviceResponse patchHrisDevice(@Nonnull PatchHrisDeviceRequest request, @Nullable Options options) {
         RequestOperation<PatchHrisDeviceRequest, PatchHrisDeviceResponse> operation
-              = new PatchHrisDevice.Sync(sdkConfiguration, _headers);
+              = new PatchHrisDevice.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -2291,8 +3269,23 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchHrisDocumentResponse patchHrisDocument(@Nonnull PatchHrisDocumentRequest request) {
+        return patchHrisDocument(request, null);
+    }
+
+    /**
+     * Update a document
+     * 
+     * <p>Updates the HrisDocument identified by `id`. Provide the unified HrisDocument fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchHrisDocumentResponse patchHrisDocument(@Nonnull PatchHrisDocumentRequest request, @Nullable Options options) {
         RequestOperation<PatchHrisDocumentRequest, PatchHrisDocumentResponse> operation
-              = new PatchHrisDocument.Sync(sdkConfiguration, _headers);
+              = new PatchHrisDocument.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -2319,8 +3312,23 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchHrisEarningResponse patchHrisEarning(@Nonnull PatchHrisEarningRequest request) {
+        return patchHrisEarning(request, null);
+    }
+
+    /**
+     * Update an earning
+     * 
+     * <p>Updates the HrisEarning identified by `id`. Provide the unified HrisEarning fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchHrisEarningResponse patchHrisEarning(@Nonnull PatchHrisEarningRequest request, @Nullable Options options) {
         RequestOperation<PatchHrisEarningRequest, PatchHrisEarningResponse> operation
-              = new PatchHrisEarning.Sync(sdkConfiguration, _headers);
+              = new PatchHrisEarning.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -2347,8 +3355,23 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchHrisEmployeeResponse patchHrisEmployee(@Nonnull PatchHrisEmployeeRequest request) {
+        return patchHrisEmployee(request, null);
+    }
+
+    /**
+     * Update an employee
+     * 
+     * <p>Updates the HrisEmployee identified by `id`. Provide the unified HrisEmployee fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchHrisEmployeeResponse patchHrisEmployee(@Nonnull PatchHrisEmployeeRequest request, @Nullable Options options) {
         RequestOperation<PatchHrisEmployeeRequest, PatchHrisEmployeeResponse> operation
-              = new PatchHrisEmployee.Sync(sdkConfiguration, _headers);
+              = new PatchHrisEmployee.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -2375,8 +3398,23 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchHrisGroupResponse patchHrisGroup(@Nonnull PatchHrisGroupRequest request) {
+        return patchHrisGroup(request, null);
+    }
+
+    /**
+     * Update a group
+     * 
+     * <p>Updates the HrisGroup identified by `id`. Provide the unified HrisGroup fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchHrisGroupResponse patchHrisGroup(@Nonnull PatchHrisGroupRequest request, @Nullable Options options) {
         RequestOperation<PatchHrisGroupRequest, PatchHrisGroupResponse> operation
-              = new PatchHrisGroup.Sync(sdkConfiguration, _headers);
+              = new PatchHrisGroup.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -2403,8 +3441,23 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchHrisJobResponse patchHrisJob(@Nonnull PatchHrisJobRequest request) {
+        return patchHrisJob(request, null);
+    }
+
+    /**
+     * Update a job
+     * 
+     * <p>Updates the HrisJob identified by `id`. Provide the unified HrisJob fields to change in the request
+     * body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchHrisJobResponse patchHrisJob(@Nonnull PatchHrisJobRequest request, @Nullable Options options) {
         RequestOperation<PatchHrisJobRequest, PatchHrisJobResponse> operation
-              = new PatchHrisJob.Sync(sdkConfiguration, _headers);
+              = new PatchHrisJob.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -2431,8 +3484,23 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchHrisLocationResponse patchHrisLocation(@Nonnull PatchHrisLocationRequest request) {
+        return patchHrisLocation(request, null);
+    }
+
+    /**
+     * Update a location
+     * 
+     * <p>Updates the HrisLocation identified by `id`. Provide the unified HrisLocation fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchHrisLocationResponse patchHrisLocation(@Nonnull PatchHrisLocationRequest request, @Nullable Options options) {
         RequestOperation<PatchHrisLocationRequest, PatchHrisLocationResponse> operation
-              = new PatchHrisLocation.Sync(sdkConfiguration, _headers);
+              = new PatchHrisLocation.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -2459,8 +3527,23 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchHrisTaxonomyResponse patchHrisTaxonomy(@Nonnull PatchHrisTaxonomyRequest request) {
+        return patchHrisTaxonomy(request, null);
+    }
+
+    /**
+     * Update a taxonomy
+     * 
+     * <p>Updates the HrisTaxonomy identified by `id`. Provide the unified HrisTaxonomy fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchHrisTaxonomyResponse patchHrisTaxonomy(@Nonnull PatchHrisTaxonomyRequest request, @Nullable Options options) {
         RequestOperation<PatchHrisTaxonomyRequest, PatchHrisTaxonomyResponse> operation
-              = new PatchHrisTaxonomy.Sync(sdkConfiguration, _headers);
+              = new PatchHrisTaxonomy.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -2487,8 +3570,23 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchHrisTaxwithholdingResponse patchHrisTaxwithholding(@Nonnull PatchHrisTaxwithholdingRequest request) {
+        return patchHrisTaxwithholding(request, null);
+    }
+
+    /**
+     * Update a taxwithholding
+     * 
+     * <p>Updates the HrisTaxwithholding identified by `id`. Provide the unified HrisTaxwithholding fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchHrisTaxwithholdingResponse patchHrisTaxwithholding(@Nonnull PatchHrisTaxwithholdingRequest request, @Nullable Options options) {
         RequestOperation<PatchHrisTaxwithholdingRequest, PatchHrisTaxwithholdingResponse> operation
-              = new PatchHrisTaxwithholding.Sync(sdkConfiguration, _headers);
+              = new PatchHrisTaxwithholding.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -2515,8 +3613,23 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchHrisTimeoffResponse patchHrisTimeoff(@Nonnull PatchHrisTimeoffRequest request) {
+        return patchHrisTimeoff(request, null);
+    }
+
+    /**
+     * Update a timeoff
+     * 
+     * <p>Updates the HrisTimeoff identified by `id`. Provide the unified HrisTimeoff fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchHrisTimeoffResponse patchHrisTimeoff(@Nonnull PatchHrisTimeoffRequest request, @Nullable Options options) {
         RequestOperation<PatchHrisTimeoffRequest, PatchHrisTimeoffResponse> operation
-              = new PatchHrisTimeoff.Sync(sdkConfiguration, _headers);
+              = new PatchHrisTimeoff.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -2543,8 +3656,23 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchHrisTimeshiftResponse patchHrisTimeshift(@Nonnull PatchHrisTimeshiftRequest request) {
+        return patchHrisTimeshift(request, null);
+    }
+
+    /**
+     * Update a timeshift
+     * 
+     * <p>Updates the HrisTimeshift identified by `id`. Provide the unified HrisTimeshift fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchHrisTimeshiftResponse patchHrisTimeshift(@Nonnull PatchHrisTimeshiftRequest request, @Nullable Options options) {
         RequestOperation<PatchHrisTimeshiftRequest, PatchHrisTimeshiftResponse> operation
-              = new PatchHrisTimeshift.Sync(sdkConfiguration, _headers);
+              = new PatchHrisTimeshift.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -2569,8 +3697,22 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveHrisAttendanceResponse removeHrisAttendance(@Nonnull RemoveHrisAttendanceRequest request) {
+        return removeHrisAttendance(request, null);
+    }
+
+    /**
+     * Remove an attendance
+     * 
+     * <p>Deletes the HrisAttendance identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveHrisAttendanceResponse removeHrisAttendance(@Nonnull RemoveHrisAttendanceRequest request, @Nullable Options options) {
         RequestOperation<RemoveHrisAttendanceRequest, RemoveHrisAttendanceResponse> operation
-              = new RemoveHrisAttendance.Sync(sdkConfiguration, _headers);
+              = new RemoveHrisAttendance.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -2595,8 +3737,22 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveHrisBankaccountResponse removeHrisBankaccount(@Nonnull RemoveHrisBankaccountRequest request) {
+        return removeHrisBankaccount(request, null);
+    }
+
+    /**
+     * Remove a bankaccount
+     * 
+     * <p>Deletes the HrisBankaccount identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveHrisBankaccountResponse removeHrisBankaccount(@Nonnull RemoveHrisBankaccountRequest request, @Nullable Options options) {
         RequestOperation<RemoveHrisBankaccountRequest, RemoveHrisBankaccountResponse> operation
-              = new RemoveHrisBankaccount.Sync(sdkConfiguration, _headers);
+              = new RemoveHrisBankaccount.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -2621,8 +3777,22 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveHrisBenefitResponse removeHrisBenefit(@Nonnull RemoveHrisBenefitRequest request) {
+        return removeHrisBenefit(request, null);
+    }
+
+    /**
+     * Remove a benefit
+     * 
+     * <p>Deletes the HrisBenefit identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveHrisBenefitResponse removeHrisBenefit(@Nonnull RemoveHrisBenefitRequest request, @Nullable Options options) {
         RequestOperation<RemoveHrisBenefitRequest, RemoveHrisBenefitResponse> operation
-              = new RemoveHrisBenefit.Sync(sdkConfiguration, _headers);
+              = new RemoveHrisBenefit.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -2647,8 +3817,22 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveHrisCompanyResponse removeHrisCompany(@Nonnull RemoveHrisCompanyRequest request) {
+        return removeHrisCompany(request, null);
+    }
+
+    /**
+     * Remove a company
+     * 
+     * <p>Deletes the HrisCompany identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveHrisCompanyResponse removeHrisCompany(@Nonnull RemoveHrisCompanyRequest request, @Nullable Options options) {
         RequestOperation<RemoveHrisCompanyRequest, RemoveHrisCompanyResponse> operation
-              = new RemoveHrisCompany.Sync(sdkConfiguration, _headers);
+              = new RemoveHrisCompany.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -2673,8 +3857,22 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveHrisDeductionResponse removeHrisDeduction(@Nonnull RemoveHrisDeductionRequest request) {
+        return removeHrisDeduction(request, null);
+    }
+
+    /**
+     * Remove a deduction
+     * 
+     * <p>Deletes the HrisDeduction identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveHrisDeductionResponse removeHrisDeduction(@Nonnull RemoveHrisDeductionRequest request, @Nullable Options options) {
         RequestOperation<RemoveHrisDeductionRequest, RemoveHrisDeductionResponse> operation
-              = new RemoveHrisDeduction.Sync(sdkConfiguration, _headers);
+              = new RemoveHrisDeduction.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -2699,8 +3897,22 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveHrisDeviceResponse removeHrisDevice(@Nonnull RemoveHrisDeviceRequest request) {
+        return removeHrisDevice(request, null);
+    }
+
+    /**
+     * Remove a device
+     * 
+     * <p>Deletes the HrisDevice identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveHrisDeviceResponse removeHrisDevice(@Nonnull RemoveHrisDeviceRequest request, @Nullable Options options) {
         RequestOperation<RemoveHrisDeviceRequest, RemoveHrisDeviceResponse> operation
-              = new RemoveHrisDevice.Sync(sdkConfiguration, _headers);
+              = new RemoveHrisDevice.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -2725,8 +3937,22 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveHrisDocumentResponse removeHrisDocument(@Nonnull RemoveHrisDocumentRequest request) {
+        return removeHrisDocument(request, null);
+    }
+
+    /**
+     * Remove a document
+     * 
+     * <p>Deletes the HrisDocument identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveHrisDocumentResponse removeHrisDocument(@Nonnull RemoveHrisDocumentRequest request, @Nullable Options options) {
         RequestOperation<RemoveHrisDocumentRequest, RemoveHrisDocumentResponse> operation
-              = new RemoveHrisDocument.Sync(sdkConfiguration, _headers);
+              = new RemoveHrisDocument.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -2751,8 +3977,22 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveHrisEarningResponse removeHrisEarning(@Nonnull RemoveHrisEarningRequest request) {
+        return removeHrisEarning(request, null);
+    }
+
+    /**
+     * Remove an earning
+     * 
+     * <p>Deletes the HrisEarning identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveHrisEarningResponse removeHrisEarning(@Nonnull RemoveHrisEarningRequest request, @Nullable Options options) {
         RequestOperation<RemoveHrisEarningRequest, RemoveHrisEarningResponse> operation
-              = new RemoveHrisEarning.Sync(sdkConfiguration, _headers);
+              = new RemoveHrisEarning.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -2777,8 +4017,22 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveHrisEmployeeResponse removeHrisEmployee(@Nonnull RemoveHrisEmployeeRequest request) {
+        return removeHrisEmployee(request, null);
+    }
+
+    /**
+     * Remove an employee
+     * 
+     * <p>Deletes the HrisEmployee identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveHrisEmployeeResponse removeHrisEmployee(@Nonnull RemoveHrisEmployeeRequest request, @Nullable Options options) {
         RequestOperation<RemoveHrisEmployeeRequest, RemoveHrisEmployeeResponse> operation
-              = new RemoveHrisEmployee.Sync(sdkConfiguration, _headers);
+              = new RemoveHrisEmployee.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -2803,8 +4057,22 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveHrisGroupResponse removeHrisGroup(@Nonnull RemoveHrisGroupRequest request) {
+        return removeHrisGroup(request, null);
+    }
+
+    /**
+     * Remove a group
+     * 
+     * <p>Deletes the HrisGroup identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveHrisGroupResponse removeHrisGroup(@Nonnull RemoveHrisGroupRequest request, @Nullable Options options) {
         RequestOperation<RemoveHrisGroupRequest, RemoveHrisGroupResponse> operation
-              = new RemoveHrisGroup.Sync(sdkConfiguration, _headers);
+              = new RemoveHrisGroup.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -2829,8 +4097,22 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveHrisJobResponse removeHrisJob(@Nonnull RemoveHrisJobRequest request) {
+        return removeHrisJob(request, null);
+    }
+
+    /**
+     * Remove a job
+     * 
+     * <p>Deletes the HrisJob identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveHrisJobResponse removeHrisJob(@Nonnull RemoveHrisJobRequest request, @Nullable Options options) {
         RequestOperation<RemoveHrisJobRequest, RemoveHrisJobResponse> operation
-              = new RemoveHrisJob.Sync(sdkConfiguration, _headers);
+              = new RemoveHrisJob.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -2855,8 +4137,22 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveHrisLocationResponse removeHrisLocation(@Nonnull RemoveHrisLocationRequest request) {
+        return removeHrisLocation(request, null);
+    }
+
+    /**
+     * Remove a location
+     * 
+     * <p>Deletes the HrisLocation identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveHrisLocationResponse removeHrisLocation(@Nonnull RemoveHrisLocationRequest request, @Nullable Options options) {
         RequestOperation<RemoveHrisLocationRequest, RemoveHrisLocationResponse> operation
-              = new RemoveHrisLocation.Sync(sdkConfiguration, _headers);
+              = new RemoveHrisLocation.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -2881,8 +4177,22 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveHrisTaxonomyResponse removeHrisTaxonomy(@Nonnull RemoveHrisTaxonomyRequest request) {
+        return removeHrisTaxonomy(request, null);
+    }
+
+    /**
+     * Remove a taxonomy
+     * 
+     * <p>Deletes the HrisTaxonomy identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveHrisTaxonomyResponse removeHrisTaxonomy(@Nonnull RemoveHrisTaxonomyRequest request, @Nullable Options options) {
         RequestOperation<RemoveHrisTaxonomyRequest, RemoveHrisTaxonomyResponse> operation
-              = new RemoveHrisTaxonomy.Sync(sdkConfiguration, _headers);
+              = new RemoveHrisTaxonomy.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -2907,8 +4217,22 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveHrisTaxwithholdingResponse removeHrisTaxwithholding(@Nonnull RemoveHrisTaxwithholdingRequest request) {
+        return removeHrisTaxwithholding(request, null);
+    }
+
+    /**
+     * Remove a taxwithholding
+     * 
+     * <p>Deletes the HrisTaxwithholding identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveHrisTaxwithholdingResponse removeHrisTaxwithholding(@Nonnull RemoveHrisTaxwithholdingRequest request, @Nullable Options options) {
         RequestOperation<RemoveHrisTaxwithholdingRequest, RemoveHrisTaxwithholdingResponse> operation
-              = new RemoveHrisTaxwithholding.Sync(sdkConfiguration, _headers);
+              = new RemoveHrisTaxwithholding.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -2933,8 +4257,22 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveHrisTimeoffResponse removeHrisTimeoff(@Nonnull RemoveHrisTimeoffRequest request) {
+        return removeHrisTimeoff(request, null);
+    }
+
+    /**
+     * Remove a timeoff
+     * 
+     * <p>Deletes the HrisTimeoff identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveHrisTimeoffResponse removeHrisTimeoff(@Nonnull RemoveHrisTimeoffRequest request, @Nullable Options options) {
         RequestOperation<RemoveHrisTimeoffRequest, RemoveHrisTimeoffResponse> operation
-              = new RemoveHrisTimeoff.Sync(sdkConfiguration, _headers);
+              = new RemoveHrisTimeoff.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -2959,8 +4297,22 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveHrisTimeshiftResponse removeHrisTimeshift(@Nonnull RemoveHrisTimeshiftRequest request) {
+        return removeHrisTimeshift(request, null);
+    }
+
+    /**
+     * Remove a timeshift
+     * 
+     * <p>Deletes the HrisTimeshift identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveHrisTimeshiftResponse removeHrisTimeshift(@Nonnull RemoveHrisTimeshiftRequest request, @Nullable Options options) {
         RequestOperation<RemoveHrisTimeshiftRequest, RemoveHrisTimeshiftResponse> operation
-              = new RemoveHrisTimeshift.Sync(sdkConfiguration, _headers);
+              = new RemoveHrisTimeshift.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -2987,8 +4339,23 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateHrisAttendanceResponse updateHrisAttendance(@Nonnull UpdateHrisAttendanceRequest request) {
+        return updateHrisAttendance(request, null);
+    }
+
+    /**
+     * Update an attendance
+     * 
+     * <p>Updates the HrisAttendance identified by `id`. Provide the unified HrisAttendance fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateHrisAttendanceResponse updateHrisAttendance(@Nonnull UpdateHrisAttendanceRequest request, @Nullable Options options) {
         RequestOperation<UpdateHrisAttendanceRequest, UpdateHrisAttendanceResponse> operation
-              = new UpdateHrisAttendance.Sync(sdkConfiguration, _headers);
+              = new UpdateHrisAttendance.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -3015,8 +4382,23 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateHrisBankaccountResponse updateHrisBankaccount(@Nonnull UpdateHrisBankaccountRequest request) {
+        return updateHrisBankaccount(request, null);
+    }
+
+    /**
+     * Update a bankaccount
+     * 
+     * <p>Updates the HrisBankaccount identified by `id`. Provide the unified HrisBankaccount fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateHrisBankaccountResponse updateHrisBankaccount(@Nonnull UpdateHrisBankaccountRequest request, @Nullable Options options) {
         RequestOperation<UpdateHrisBankaccountRequest, UpdateHrisBankaccountResponse> operation
-              = new UpdateHrisBankaccount.Sync(sdkConfiguration, _headers);
+              = new UpdateHrisBankaccount.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -3043,8 +4425,23 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateHrisBenefitResponse updateHrisBenefit(@Nonnull UpdateHrisBenefitRequest request) {
+        return updateHrisBenefit(request, null);
+    }
+
+    /**
+     * Update a benefit
+     * 
+     * <p>Updates the HrisBenefit identified by `id`. Provide the unified HrisBenefit fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateHrisBenefitResponse updateHrisBenefit(@Nonnull UpdateHrisBenefitRequest request, @Nullable Options options) {
         RequestOperation<UpdateHrisBenefitRequest, UpdateHrisBenefitResponse> operation
-              = new UpdateHrisBenefit.Sync(sdkConfiguration, _headers);
+              = new UpdateHrisBenefit.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -3071,8 +4468,23 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateHrisCompanyResponse updateHrisCompany(@Nonnull UpdateHrisCompanyRequest request) {
+        return updateHrisCompany(request, null);
+    }
+
+    /**
+     * Update a company
+     * 
+     * <p>Updates the HrisCompany identified by `id`. Provide the unified HrisCompany fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateHrisCompanyResponse updateHrisCompany(@Nonnull UpdateHrisCompanyRequest request, @Nullable Options options) {
         RequestOperation<UpdateHrisCompanyRequest, UpdateHrisCompanyResponse> operation
-              = new UpdateHrisCompany.Sync(sdkConfiguration, _headers);
+              = new UpdateHrisCompany.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -3099,8 +4511,23 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateHrisDeductionResponse updateHrisDeduction(@Nonnull UpdateHrisDeductionRequest request) {
+        return updateHrisDeduction(request, null);
+    }
+
+    /**
+     * Update a deduction
+     * 
+     * <p>Updates the HrisDeduction identified by `id`. Provide the unified HrisDeduction fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateHrisDeductionResponse updateHrisDeduction(@Nonnull UpdateHrisDeductionRequest request, @Nullable Options options) {
         RequestOperation<UpdateHrisDeductionRequest, UpdateHrisDeductionResponse> operation
-              = new UpdateHrisDeduction.Sync(sdkConfiguration, _headers);
+              = new UpdateHrisDeduction.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -3127,8 +4554,23 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateHrisDeviceResponse updateHrisDevice(@Nonnull UpdateHrisDeviceRequest request) {
+        return updateHrisDevice(request, null);
+    }
+
+    /**
+     * Update a device
+     * 
+     * <p>Updates the HrisDevice identified by `id`. Provide the unified HrisDevice fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateHrisDeviceResponse updateHrisDevice(@Nonnull UpdateHrisDeviceRequest request, @Nullable Options options) {
         RequestOperation<UpdateHrisDeviceRequest, UpdateHrisDeviceResponse> operation
-              = new UpdateHrisDevice.Sync(sdkConfiguration, _headers);
+              = new UpdateHrisDevice.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -3155,8 +4597,23 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateHrisDocumentResponse updateHrisDocument(@Nonnull UpdateHrisDocumentRequest request) {
+        return updateHrisDocument(request, null);
+    }
+
+    /**
+     * Update a document
+     * 
+     * <p>Updates the HrisDocument identified by `id`. Provide the unified HrisDocument fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateHrisDocumentResponse updateHrisDocument(@Nonnull UpdateHrisDocumentRequest request, @Nullable Options options) {
         RequestOperation<UpdateHrisDocumentRequest, UpdateHrisDocumentResponse> operation
-              = new UpdateHrisDocument.Sync(sdkConfiguration, _headers);
+              = new UpdateHrisDocument.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -3183,8 +4640,23 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateHrisEarningResponse updateHrisEarning(@Nonnull UpdateHrisEarningRequest request) {
+        return updateHrisEarning(request, null);
+    }
+
+    /**
+     * Update an earning
+     * 
+     * <p>Updates the HrisEarning identified by `id`. Provide the unified HrisEarning fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateHrisEarningResponse updateHrisEarning(@Nonnull UpdateHrisEarningRequest request, @Nullable Options options) {
         RequestOperation<UpdateHrisEarningRequest, UpdateHrisEarningResponse> operation
-              = new UpdateHrisEarning.Sync(sdkConfiguration, _headers);
+              = new UpdateHrisEarning.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -3211,8 +4683,23 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateHrisEmployeeResponse updateHrisEmployee(@Nonnull UpdateHrisEmployeeRequest request) {
+        return updateHrisEmployee(request, null);
+    }
+
+    /**
+     * Update an employee
+     * 
+     * <p>Updates the HrisEmployee identified by `id`. Provide the unified HrisEmployee fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateHrisEmployeeResponse updateHrisEmployee(@Nonnull UpdateHrisEmployeeRequest request, @Nullable Options options) {
         RequestOperation<UpdateHrisEmployeeRequest, UpdateHrisEmployeeResponse> operation
-              = new UpdateHrisEmployee.Sync(sdkConfiguration, _headers);
+              = new UpdateHrisEmployee.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -3239,8 +4726,23 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateHrisGroupResponse updateHrisGroup(@Nonnull UpdateHrisGroupRequest request) {
+        return updateHrisGroup(request, null);
+    }
+
+    /**
+     * Update a group
+     * 
+     * <p>Updates the HrisGroup identified by `id`. Provide the unified HrisGroup fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateHrisGroupResponse updateHrisGroup(@Nonnull UpdateHrisGroupRequest request, @Nullable Options options) {
         RequestOperation<UpdateHrisGroupRequest, UpdateHrisGroupResponse> operation
-              = new UpdateHrisGroup.Sync(sdkConfiguration, _headers);
+              = new UpdateHrisGroup.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -3267,8 +4769,23 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateHrisJobResponse updateHrisJob(@Nonnull UpdateHrisJobRequest request) {
+        return updateHrisJob(request, null);
+    }
+
+    /**
+     * Update a job
+     * 
+     * <p>Updates the HrisJob identified by `id`. Provide the unified HrisJob fields to change in the request
+     * body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateHrisJobResponse updateHrisJob(@Nonnull UpdateHrisJobRequest request, @Nullable Options options) {
         RequestOperation<UpdateHrisJobRequest, UpdateHrisJobResponse> operation
-              = new UpdateHrisJob.Sync(sdkConfiguration, _headers);
+              = new UpdateHrisJob.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -3295,8 +4812,23 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateHrisLocationResponse updateHrisLocation(@Nonnull UpdateHrisLocationRequest request) {
+        return updateHrisLocation(request, null);
+    }
+
+    /**
+     * Update a location
+     * 
+     * <p>Updates the HrisLocation identified by `id`. Provide the unified HrisLocation fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateHrisLocationResponse updateHrisLocation(@Nonnull UpdateHrisLocationRequest request, @Nullable Options options) {
         RequestOperation<UpdateHrisLocationRequest, UpdateHrisLocationResponse> operation
-              = new UpdateHrisLocation.Sync(sdkConfiguration, _headers);
+              = new UpdateHrisLocation.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -3323,8 +4855,23 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateHrisTaxonomyResponse updateHrisTaxonomy(@Nonnull UpdateHrisTaxonomyRequest request) {
+        return updateHrisTaxonomy(request, null);
+    }
+
+    /**
+     * Update a taxonomy
+     * 
+     * <p>Updates the HrisTaxonomy identified by `id`. Provide the unified HrisTaxonomy fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateHrisTaxonomyResponse updateHrisTaxonomy(@Nonnull UpdateHrisTaxonomyRequest request, @Nullable Options options) {
         RequestOperation<UpdateHrisTaxonomyRequest, UpdateHrisTaxonomyResponse> operation
-              = new UpdateHrisTaxonomy.Sync(sdkConfiguration, _headers);
+              = new UpdateHrisTaxonomy.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -3351,8 +4898,23 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateHrisTaxwithholdingResponse updateHrisTaxwithholding(@Nonnull UpdateHrisTaxwithholdingRequest request) {
+        return updateHrisTaxwithholding(request, null);
+    }
+
+    /**
+     * Update a taxwithholding
+     * 
+     * <p>Updates the HrisTaxwithholding identified by `id`. Provide the unified HrisTaxwithholding fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateHrisTaxwithholdingResponse updateHrisTaxwithholding(@Nonnull UpdateHrisTaxwithholdingRequest request, @Nullable Options options) {
         RequestOperation<UpdateHrisTaxwithholdingRequest, UpdateHrisTaxwithholdingResponse> operation
-              = new UpdateHrisTaxwithholding.Sync(sdkConfiguration, _headers);
+              = new UpdateHrisTaxwithholding.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -3379,8 +4941,23 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateHrisTimeoffResponse updateHrisTimeoff(@Nonnull UpdateHrisTimeoffRequest request) {
+        return updateHrisTimeoff(request, null);
+    }
+
+    /**
+     * Update a timeoff
+     * 
+     * <p>Updates the HrisTimeoff identified by `id`. Provide the unified HrisTimeoff fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateHrisTimeoffResponse updateHrisTimeoff(@Nonnull UpdateHrisTimeoffRequest request, @Nullable Options options) {
         RequestOperation<UpdateHrisTimeoffRequest, UpdateHrisTimeoffResponse> operation
-              = new UpdateHrisTimeoff.Sync(sdkConfiguration, _headers);
+              = new UpdateHrisTimeoff.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -3407,8 +4984,23 @@ public class Hris {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateHrisTimeshiftResponse updateHrisTimeshift(@Nonnull UpdateHrisTimeshiftRequest request) {
+        return updateHrisTimeshift(request, null);
+    }
+
+    /**
+     * Update a timeshift
+     * 
+     * <p>Updates the HrisTimeshift identified by `id`. Provide the unified HrisTimeshift fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateHrisTimeshiftResponse updateHrisTimeshift(@Nonnull UpdateHrisTimeshiftRequest request, @Nullable Options options) {
         RequestOperation<UpdateHrisTimeshiftRequest, UpdateHrisTimeshiftResponse> operation
-              = new UpdateHrisTimeshift.Sync(sdkConfiguration, _headers);
+              = new UpdateHrisTimeshift.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateScimUsersRequest;
 import to.unified.unified_java_sdk.models.operations.GetScimUsersRequest;
@@ -32,6 +33,7 @@ import to.unified.unified_java_sdk.operations.PatchScimUsers;
 import to.unified.unified_java_sdk.operations.RemoveScimUsers;
 import to.unified.unified_java_sdk.operations.UpdateScimUsers;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncUser {
@@ -70,8 +72,19 @@ public class AsyncUser {
      * @return {@code CompletableFuture<CreateScimUsersResponse>} - The async response
      */
     public CompletableFuture<CreateScimUsersResponse> createScimUsers(@Nonnull CreateScimUsersRequest request) {
+        return createScimUsers(request, null);
+    }
+
+    /**
+     * Create user
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateScimUsersResponse>} - The async response
+     */
+    public CompletableFuture<CreateScimUsersResponse> createScimUsers(@Nonnull CreateScimUsersRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateScimUsersRequest, CreateScimUsersResponse> operation
-              = new CreateScimUsers.Async(sdkConfiguration, _headers);
+              = new CreateScimUsers.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -93,8 +106,19 @@ public class AsyncUser {
      * @return {@code CompletableFuture<GetScimUsersResponse>} - The async response
      */
     public CompletableFuture<GetScimUsersResponse> getScimUsers(@Nonnull GetScimUsersRequest request) {
+        return getScimUsers(request, null);
+    }
+
+    /**
+     * Get user
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetScimUsersResponse>} - The async response
+     */
+    public CompletableFuture<GetScimUsersResponse> getScimUsers(@Nonnull GetScimUsersRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetScimUsersRequest, GetScimUsersResponse> operation
-              = new GetScimUsers.Async(sdkConfiguration, _headers);
+              = new GetScimUsers.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -116,8 +140,19 @@ public class AsyncUser {
      * @return {@code CompletableFuture<ListScimUsersResponse>} - The async response
      */
     public CompletableFuture<ListScimUsersResponse> listScimUsers(@Nonnull ListScimUsersRequest request) {
+        return listScimUsers(request, null);
+    }
+
+    /**
+     * List users
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListScimUsersResponse>} - The async response
+     */
+    public CompletableFuture<ListScimUsersResponse> listScimUsers(@Nonnull ListScimUsersRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListScimUsersRequest, ListScimUsersResponse> operation
-              = new ListScimUsers.Async(sdkConfiguration, _headers);
+              = new ListScimUsers.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -139,8 +174,19 @@ public class AsyncUser {
      * @return {@code CompletableFuture<PatchScimUsersResponse>} - The async response
      */
     public CompletableFuture<PatchScimUsersResponse> patchScimUsers(@Nonnull PatchScimUsersRequest request) {
+        return patchScimUsers(request, null);
+    }
+
+    /**
+     * Update user
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchScimUsersResponse>} - The async response
+     */
+    public CompletableFuture<PatchScimUsersResponse> patchScimUsers(@Nonnull PatchScimUsersRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchScimUsersRequest, PatchScimUsersResponse> operation
-              = new PatchScimUsers.Async(sdkConfiguration, _headers);
+              = new PatchScimUsers.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -162,8 +208,19 @@ public class AsyncUser {
      * @return {@code CompletableFuture<RemoveScimUsersResponse>} - The async response
      */
     public CompletableFuture<RemoveScimUsersResponse> removeScimUsers(@Nonnull RemoveScimUsersRequest request) {
+        return removeScimUsers(request, null);
+    }
+
+    /**
+     * Delete user
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveScimUsersResponse>} - The async response
+     */
+    public CompletableFuture<RemoveScimUsersResponse> removeScimUsers(@Nonnull RemoveScimUsersRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveScimUsersRequest, RemoveScimUsersResponse> operation
-              = new RemoveScimUsers.Async(sdkConfiguration, _headers);
+              = new RemoveScimUsers.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -185,8 +242,19 @@ public class AsyncUser {
      * @return {@code CompletableFuture<UpdateScimUsersResponse>} - The async response
      */
     public CompletableFuture<UpdateScimUsersResponse> updateScimUsers(@Nonnull UpdateScimUsersRequest request) {
+        return updateScimUsers(request, null);
+    }
+
+    /**
+     * Update user
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateScimUsersResponse>} - The async response
+     */
+    public CompletableFuture<UpdateScimUsersResponse> updateScimUsers(@Nonnull UpdateScimUsersRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateScimUsersRequest, UpdateScimUsersResponse> operation
-              = new UpdateScimUsers.Async(sdkConfiguration, _headers);
+              = new UpdateScimUsers.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

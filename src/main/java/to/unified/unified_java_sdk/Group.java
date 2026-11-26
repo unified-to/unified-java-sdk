@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateAdsGroupRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAdsGroupRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateAdsGroupResponse;
@@ -87,6 +88,7 @@ import to.unified.unified_java_sdk.operations.UpdateAdsGroup;
 import to.unified.unified_java_sdk.operations.UpdateHrisGroup;
 import to.unified.unified_java_sdk.operations.UpdateScimGroups;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Group {
@@ -131,8 +133,23 @@ public class Group {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateAdsGroupResponse createAdsGroup(@Nonnull CreateAdsGroupRequest request) {
+        return createAdsGroup(request, null);
+    }
+
+    /**
+     * Create a group
+     * 
+     * <p>Creates a AdsGroup. Provide the unified AdsGroup fields in the request body; they are mapped to the
+     * provider's API. Returns the created AdsGroup.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateAdsGroupResponse createAdsGroup(@Nonnull CreateAdsGroupRequest request, @Nullable Options options) {
         RequestOperation<CreateAdsGroupRequest, CreateAdsGroupResponse> operation
-              = new CreateAdsGroup.Sync(sdkConfiguration, _headers);
+              = new CreateAdsGroup.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -159,8 +176,23 @@ public class Group {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateHrisGroupResponse createHrisGroup(@Nonnull CreateHrisGroupRequest request) {
+        return createHrisGroup(request, null);
+    }
+
+    /**
+     * Create a group
+     * 
+     * <p>Creates a HrisGroup. Provide the unified HrisGroup fields in the request body; they are mapped to
+     * the provider's API. Returns the created HrisGroup.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateHrisGroupResponse createHrisGroup(@Nonnull CreateHrisGroupRequest request, @Nullable Options options) {
         RequestOperation<CreateHrisGroupRequest, CreateHrisGroupResponse> operation
-              = new CreateHrisGroup.Sync(sdkConfiguration, _headers);
+              = new CreateHrisGroup.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -181,8 +213,20 @@ public class Group {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateScimGroupsResponse createScimGroups(@Nonnull CreateScimGroupsRequest request) {
+        return createScimGroups(request, null);
+    }
+
+    /**
+     * Create group
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateScimGroupsResponse createScimGroups(@Nonnull CreateScimGroupsRequest request, @Nullable Options options) {
         RequestOperation<CreateScimGroupsRequest, CreateScimGroupsResponse> operation
-              = new CreateScimGroups.Sync(sdkConfiguration, _headers);
+              = new CreateScimGroups.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -209,8 +253,23 @@ public class Group {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAdsGroupResponse getAdsGroup(@Nonnull GetAdsGroupRequest request) {
+        return getAdsGroup(request, null);
+    }
+
+    /**
+     * Retrieve a group
+     * 
+     * <p>Retrieves a single AdsGroup by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAdsGroupResponse getAdsGroup(@Nonnull GetAdsGroupRequest request, @Nullable Options options) {
         RequestOperation<GetAdsGroupRequest, GetAdsGroupResponse> operation
-              = new GetAdsGroup.Sync(sdkConfiguration, _headers);
+              = new GetAdsGroup.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -237,8 +296,23 @@ public class Group {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetClubsGroupResponse getClubsGroup(@Nonnull GetClubsGroupRequest request) {
+        return getClubsGroup(request, null);
+    }
+
+    /**
+     * Retrieve a group
+     * 
+     * <p>Retrieves a single ClubsGroup by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetClubsGroupResponse getClubsGroup(@Nonnull GetClubsGroupRequest request, @Nullable Options options) {
         RequestOperation<GetClubsGroupRequest, GetClubsGroupResponse> operation
-              = new GetClubsGroup.Sync(sdkConfiguration, _headers);
+              = new GetClubsGroup.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -265,8 +339,23 @@ public class Group {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetHrisGroupResponse getHrisGroup(@Nonnull GetHrisGroupRequest request) {
+        return getHrisGroup(request, null);
+    }
+
+    /**
+     * Retrieve a group
+     * 
+     * <p>Retrieves a single HrisGroup by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetHrisGroupResponse getHrisGroup(@Nonnull GetHrisGroupRequest request, @Nullable Options options) {
         RequestOperation<GetHrisGroupRequest, GetHrisGroupResponse> operation
-              = new GetHrisGroup.Sync(sdkConfiguration, _headers);
+              = new GetHrisGroup.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -287,8 +376,20 @@ public class Group {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetScimGroupsResponse getScimGroups(@Nonnull GetScimGroupsRequest request) {
+        return getScimGroups(request, null);
+    }
+
+    /**
+     * Get group
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetScimGroupsResponse getScimGroups(@Nonnull GetScimGroupsRequest request, @Nullable Options options) {
         RequestOperation<GetScimGroupsRequest, GetScimGroupsResponse> operation
-              = new GetScimGroups.Sync(sdkConfiguration, _headers);
+              = new GetScimGroups.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -323,8 +424,27 @@ public class Group {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAdsGroupsResponse listAdsGroups(@Nonnull ListAdsGroupsRequest request) {
+        return listAdsGroups(request, null);
+    }
+
+    /**
+     * List all groups
+     * 
+     * <p>Returns a list of AdsGroups. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAdsGroupsResponse listAdsGroups(@Nonnull ListAdsGroupsRequest request, @Nullable Options options) {
         RequestOperation<ListAdsGroupsRequest, ListAdsGroupsResponse> operation
-              = new ListAdsGroups.Sync(sdkConfiguration, _headers);
+              = new ListAdsGroups.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -359,8 +479,27 @@ public class Group {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListClubsGroupsResponse listClubsGroups(@Nonnull ListClubsGroupsRequest request) {
+        return listClubsGroups(request, null);
+    }
+
+    /**
+     * List all groups
+     * 
+     * <p>Returns a list of ClubsGroups. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListClubsGroupsResponse listClubsGroups(@Nonnull ListClubsGroupsRequest request, @Nullable Options options) {
         RequestOperation<ListClubsGroupsRequest, ListClubsGroupsResponse> operation
-              = new ListClubsGroups.Sync(sdkConfiguration, _headers);
+              = new ListClubsGroups.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -395,8 +534,27 @@ public class Group {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListHrisGroupsResponse listHrisGroups(@Nonnull ListHrisGroupsRequest request) {
+        return listHrisGroups(request, null);
+    }
+
+    /**
+     * List all groups
+     * 
+     * <p>Returns a list of HrisGroups. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListHrisGroupsResponse listHrisGroups(@Nonnull ListHrisGroupsRequest request, @Nullable Options options) {
         RequestOperation<ListHrisGroupsRequest, ListHrisGroupsResponse> operation
-              = new ListHrisGroups.Sync(sdkConfiguration, _headers);
+              = new ListHrisGroups.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -417,8 +575,20 @@ public class Group {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListScimGroupsResponse listScimGroups(@Nonnull ListScimGroupsRequest request) {
+        return listScimGroups(request, null);
+    }
+
+    /**
+     * List groups
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListScimGroupsResponse listScimGroups(@Nonnull ListScimGroupsRequest request, @Nullable Options options) {
         RequestOperation<ListScimGroupsRequest, ListScimGroupsResponse> operation
-              = new ListScimGroups.Sync(sdkConfiguration, _headers);
+              = new ListScimGroups.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -445,8 +615,23 @@ public class Group {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchAdsGroupResponse patchAdsGroup(@Nonnull PatchAdsGroupRequest request) {
+        return patchAdsGroup(request, null);
+    }
+
+    /**
+     * Update a group
+     * 
+     * <p>Updates the AdsGroup identified by `id`. Provide the unified AdsGroup fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchAdsGroupResponse patchAdsGroup(@Nonnull PatchAdsGroupRequest request, @Nullable Options options) {
         RequestOperation<PatchAdsGroupRequest, PatchAdsGroupResponse> operation
-              = new PatchAdsGroup.Sync(sdkConfiguration, _headers);
+              = new PatchAdsGroup.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -473,8 +658,23 @@ public class Group {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchHrisGroupResponse patchHrisGroup(@Nonnull PatchHrisGroupRequest request) {
+        return patchHrisGroup(request, null);
+    }
+
+    /**
+     * Update a group
+     * 
+     * <p>Updates the HrisGroup identified by `id`. Provide the unified HrisGroup fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchHrisGroupResponse patchHrisGroup(@Nonnull PatchHrisGroupRequest request, @Nullable Options options) {
         RequestOperation<PatchHrisGroupRequest, PatchHrisGroupResponse> operation
-              = new PatchHrisGroup.Sync(sdkConfiguration, _headers);
+              = new PatchHrisGroup.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -495,8 +695,20 @@ public class Group {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchScimGroupsResponse patchScimGroups(@Nonnull PatchScimGroupsRequest request) {
+        return patchScimGroups(request, null);
+    }
+
+    /**
+     * Update group
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchScimGroupsResponse patchScimGroups(@Nonnull PatchScimGroupsRequest request, @Nullable Options options) {
         RequestOperation<PatchScimGroupsRequest, PatchScimGroupsResponse> operation
-              = new PatchScimGroups.Sync(sdkConfiguration, _headers);
+              = new PatchScimGroups.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -521,8 +733,22 @@ public class Group {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveAdsGroupResponse removeAdsGroup(@Nonnull RemoveAdsGroupRequest request) {
+        return removeAdsGroup(request, null);
+    }
+
+    /**
+     * Remove a group
+     * 
+     * <p>Deletes the AdsGroup identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveAdsGroupResponse removeAdsGroup(@Nonnull RemoveAdsGroupRequest request, @Nullable Options options) {
         RequestOperation<RemoveAdsGroupRequest, RemoveAdsGroupResponse> operation
-              = new RemoveAdsGroup.Sync(sdkConfiguration, _headers);
+              = new RemoveAdsGroup.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -547,8 +773,22 @@ public class Group {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveHrisGroupResponse removeHrisGroup(@Nonnull RemoveHrisGroupRequest request) {
+        return removeHrisGroup(request, null);
+    }
+
+    /**
+     * Remove a group
+     * 
+     * <p>Deletes the HrisGroup identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveHrisGroupResponse removeHrisGroup(@Nonnull RemoveHrisGroupRequest request, @Nullable Options options) {
         RequestOperation<RemoveHrisGroupRequest, RemoveHrisGroupResponse> operation
-              = new RemoveHrisGroup.Sync(sdkConfiguration, _headers);
+              = new RemoveHrisGroup.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -569,8 +809,20 @@ public class Group {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveScimGroupsResponse removeScimGroups(@Nonnull RemoveScimGroupsRequest request) {
+        return removeScimGroups(request, null);
+    }
+
+    /**
+     * Delete group
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveScimGroupsResponse removeScimGroups(@Nonnull RemoveScimGroupsRequest request, @Nullable Options options) {
         RequestOperation<RemoveScimGroupsRequest, RemoveScimGroupsResponse> operation
-              = new RemoveScimGroups.Sync(sdkConfiguration, _headers);
+              = new RemoveScimGroups.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -597,8 +849,23 @@ public class Group {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateAdsGroupResponse updateAdsGroup(@Nonnull UpdateAdsGroupRequest request) {
+        return updateAdsGroup(request, null);
+    }
+
+    /**
+     * Update a group
+     * 
+     * <p>Updates the AdsGroup identified by `id`. Provide the unified AdsGroup fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateAdsGroupResponse updateAdsGroup(@Nonnull UpdateAdsGroupRequest request, @Nullable Options options) {
         RequestOperation<UpdateAdsGroupRequest, UpdateAdsGroupResponse> operation
-              = new UpdateAdsGroup.Sync(sdkConfiguration, _headers);
+              = new UpdateAdsGroup.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -625,8 +892,23 @@ public class Group {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateHrisGroupResponse updateHrisGroup(@Nonnull UpdateHrisGroupRequest request) {
+        return updateHrisGroup(request, null);
+    }
+
+    /**
+     * Update a group
+     * 
+     * <p>Updates the HrisGroup identified by `id`. Provide the unified HrisGroup fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateHrisGroupResponse updateHrisGroup(@Nonnull UpdateHrisGroupRequest request, @Nullable Options options) {
         RequestOperation<UpdateHrisGroupRequest, UpdateHrisGroupResponse> operation
-              = new UpdateHrisGroup.Sync(sdkConfiguration, _headers);
+              = new UpdateHrisGroup.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -647,8 +929,20 @@ public class Group {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateScimGroupsResponse updateScimGroups(@Nonnull UpdateScimGroupsRequest request) {
+        return updateScimGroups(request, null);
+    }
+
+    /**
+     * Update group
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateScimGroupsResponse updateScimGroups(@Nonnull UpdateScimGroupsRequest request, @Nullable Options options) {
         RequestOperation<UpdateScimGroupsRequest, UpdateScimGroupsResponse> operation
-              = new UpdateScimGroups.Sync(sdkConfiguration, _headers);
+              = new UpdateScimGroups.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

@@ -6,20 +6,30 @@ package to.unified.unified_java_sdk.models.operations.async;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.GetLegalTimeentryRequest;
 import to.unified.unified_java_sdk.operations.GetLegalTimeentry;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetLegalTimeentryRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private GetLegalTimeentryRequest request;
+    private final Options.Builder optionsBuilder;
 
     public GetLegalTimeentryRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public GetLegalTimeentryRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public GetLegalTimeentryRequestBuilder request(@Nonnull GetLegalTimeentryRequest request) {
@@ -44,8 +54,9 @@ public class GetLegalTimeentryRequestBuilder {
     * @return The response from the server.
     */
     public CompletableFuture<GetLegalTimeentryResponse> call() {
+        Options options = optionsBuilder.build();
         AsyncRequestOperation<GetLegalTimeentryRequest, GetLegalTimeentryResponse> operation
-              = new GetLegalTimeentry.Async(sdkConfiguration, _headers);
+              = new GetLegalTimeentry.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

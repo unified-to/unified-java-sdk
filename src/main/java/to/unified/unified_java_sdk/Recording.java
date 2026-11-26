@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateUcRecordingRequest;
 import to.unified.unified_java_sdk.models.operations.CreateUcRecordingRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateUcRecordingResponse;
@@ -39,6 +40,7 @@ import to.unified.unified_java_sdk.operations.PatchUcRecording;
 import to.unified.unified_java_sdk.operations.RemoveUcRecording;
 import to.unified.unified_java_sdk.operations.UpdateUcRecording;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Recording {
@@ -83,8 +85,23 @@ public class Recording {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateUcRecordingResponse createUcRecording(@Nonnull CreateUcRecordingRequest request) {
+        return createUcRecording(request, null);
+    }
+
+    /**
+     * Create a recording
+     * 
+     * <p>Creates a UcRecording. Provide the unified UcRecording fields in the request body; they are mapped
+     * to the provider's API. Returns the created UcRecording.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateUcRecordingResponse createUcRecording(@Nonnull CreateUcRecordingRequest request, @Nullable Options options) {
         RequestOperation<CreateUcRecordingRequest, CreateUcRecordingResponse> operation
-              = new CreateUcRecording.Sync(sdkConfiguration, _headers);
+              = new CreateUcRecording.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -111,8 +128,23 @@ public class Recording {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetCalendarRecordingResponse getCalendarRecording(@Nonnull GetCalendarRecordingRequest request) {
+        return getCalendarRecording(request, null);
+    }
+
+    /**
+     * Retrieve a recording
+     * 
+     * <p>Retrieves a single CalendarRecording by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetCalendarRecordingResponse getCalendarRecording(@Nonnull GetCalendarRecordingRequest request, @Nullable Options options) {
         RequestOperation<GetCalendarRecordingRequest, GetCalendarRecordingResponse> operation
-              = new GetCalendarRecording.Sync(sdkConfiguration, _headers);
+              = new GetCalendarRecording.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -139,8 +171,23 @@ public class Recording {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetUcRecordingResponse getUcRecording(@Nonnull GetUcRecordingRequest request) {
+        return getUcRecording(request, null);
+    }
+
+    /**
+     * Retrieve a recording
+     * 
+     * <p>Retrieves a single UcRecording by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetUcRecordingResponse getUcRecording(@Nonnull GetUcRecordingRequest request, @Nullable Options options) {
         RequestOperation<GetUcRecordingRequest, GetUcRecordingResponse> operation
-              = new GetUcRecording.Sync(sdkConfiguration, _headers);
+              = new GetUcRecording.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -175,8 +222,27 @@ public class Recording {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListCalendarRecordingsResponse listCalendarRecordings(@Nonnull ListCalendarRecordingsRequest request) {
+        return listCalendarRecordings(request, null);
+    }
+
+    /**
+     * List all recordings
+     * 
+     * <p>Returns a list of CalendarRecordings. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListCalendarRecordingsResponse listCalendarRecordings(@Nonnull ListCalendarRecordingsRequest request, @Nullable Options options) {
         RequestOperation<ListCalendarRecordingsRequest, ListCalendarRecordingsResponse> operation
-              = new ListCalendarRecordings.Sync(sdkConfiguration, _headers);
+              = new ListCalendarRecordings.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -211,8 +277,27 @@ public class Recording {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListUcRecordingsResponse listUcRecordings(@Nonnull ListUcRecordingsRequest request) {
+        return listUcRecordings(request, null);
+    }
+
+    /**
+     * List all recordings
+     * 
+     * <p>Returns a list of UcRecordings. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListUcRecordingsResponse listUcRecordings(@Nonnull ListUcRecordingsRequest request, @Nullable Options options) {
         RequestOperation<ListUcRecordingsRequest, ListUcRecordingsResponse> operation
-              = new ListUcRecordings.Sync(sdkConfiguration, _headers);
+              = new ListUcRecordings.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -239,8 +324,23 @@ public class Recording {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchUcRecordingResponse patchUcRecording(@Nonnull PatchUcRecordingRequest request) {
+        return patchUcRecording(request, null);
+    }
+
+    /**
+     * Update a recording
+     * 
+     * <p>Updates the UcRecording identified by `id`. Provide the unified UcRecording fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchUcRecordingResponse patchUcRecording(@Nonnull PatchUcRecordingRequest request, @Nullable Options options) {
         RequestOperation<PatchUcRecordingRequest, PatchUcRecordingResponse> operation
-              = new PatchUcRecording.Sync(sdkConfiguration, _headers);
+              = new PatchUcRecording.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -265,8 +365,22 @@ public class Recording {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveUcRecordingResponse removeUcRecording(@Nonnull RemoveUcRecordingRequest request) {
+        return removeUcRecording(request, null);
+    }
+
+    /**
+     * Remove a recording
+     * 
+     * <p>Deletes the UcRecording identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveUcRecordingResponse removeUcRecording(@Nonnull RemoveUcRecordingRequest request, @Nullable Options options) {
         RequestOperation<RemoveUcRecordingRequest, RemoveUcRecordingResponse> operation
-              = new RemoveUcRecording.Sync(sdkConfiguration, _headers);
+              = new RemoveUcRecording.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -293,8 +407,23 @@ public class Recording {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateUcRecordingResponse updateUcRecording(@Nonnull UpdateUcRecordingRequest request) {
+        return updateUcRecording(request, null);
+    }
+
+    /**
+     * Update a recording
+     * 
+     * <p>Updates the UcRecording identified by `id`. Provide the unified UcRecording fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateUcRecordingResponse updateUcRecording(@Nonnull UpdateUcRecordingRequest request, @Nullable Options options) {
         RequestOperation<UpdateUcRecordingRequest, UpdateUcRecordingResponse> operation
-              = new UpdateUcRecording.Sync(sdkConfiguration, _headers);
+              = new UpdateUcRecording.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

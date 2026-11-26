@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.GetGenaiSkillRequest;
 import to.unified.unified_java_sdk.models.operations.GetGenaiSkillRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetGenaiSkillResponse;
@@ -19,6 +20,7 @@ import to.unified.unified_java_sdk.operations.GetGenaiSkill;
 import to.unified.unified_java_sdk.operations.ListGenaiSkills;
 import to.unified.unified_java_sdk.operations.RemoveGenaiSkill;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Skill {
@@ -63,8 +65,23 @@ public class Skill {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetGenaiSkillResponse getGenaiSkill(@Nonnull GetGenaiSkillRequest request) {
+        return getGenaiSkill(request, null);
+    }
+
+    /**
+     * Retrieve a skill
+     * 
+     * <p>Retrieves a single GenaiSkill by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetGenaiSkillResponse getGenaiSkill(@Nonnull GetGenaiSkillRequest request, @Nullable Options options) {
         RequestOperation<GetGenaiSkillRequest, GetGenaiSkillResponse> operation
-              = new GetGenaiSkill.Sync(sdkConfiguration, _headers);
+              = new GetGenaiSkill.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -99,8 +116,27 @@ public class Skill {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListGenaiSkillsResponse listGenaiSkills(@Nonnull ListGenaiSkillsRequest request) {
+        return listGenaiSkills(request, null);
+    }
+
+    /**
+     * List all skills
+     * 
+     * <p>Returns a list of GenaiSkills. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListGenaiSkillsResponse listGenaiSkills(@Nonnull ListGenaiSkillsRequest request, @Nullable Options options) {
         RequestOperation<ListGenaiSkillsRequest, ListGenaiSkillsResponse> operation
-              = new ListGenaiSkills.Sync(sdkConfiguration, _headers);
+              = new ListGenaiSkills.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -125,8 +161,22 @@ public class Skill {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveGenaiSkillResponse removeGenaiSkill(@Nonnull RemoveGenaiSkillRequest request) {
+        return removeGenaiSkill(request, null);
+    }
+
+    /**
+     * Remove a skill
+     * 
+     * <p>Deletes the GenaiSkill identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveGenaiSkillResponse removeGenaiSkill(@Nonnull RemoveGenaiSkillRequest request, @Nullable Options options) {
         RequestOperation<RemoveGenaiSkillRequest, RemoveGenaiSkillResponse> operation
-              = new RemoveGenaiSkill.Sync(sdkConfiguration, _headers);
+              = new RemoveGenaiSkill.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

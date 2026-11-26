@@ -6,18 +6,28 @@ package to.unified.unified_java_sdk.models.operations;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.GetQmsInspection;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetQmsInspectionRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private GetQmsInspectionRequest request;
+    private final Options.Builder optionsBuilder;
 
     public GetQmsInspectionRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public GetQmsInspectionRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public GetQmsInspectionRequestBuilder request(@Nonnull GetQmsInspectionRequest request) {
@@ -42,8 +52,9 @@ public class GetQmsInspectionRequestBuilder {
     * @return The response from the server.
     */
     public GetQmsInspectionResponse call() {
+        Options options = optionsBuilder.build();
         RequestOperation<GetQmsInspectionRequest, GetQmsInspectionResponse> operation
-              = new GetQmsInspection.Sync(sdkConfiguration, _headers);
+              = new GetQmsInspection.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

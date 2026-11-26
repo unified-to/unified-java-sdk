@@ -6,18 +6,28 @@ package to.unified.unified_java_sdk.models.operations;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.CreateHrisEmployee;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class CreateHrisEmployeeRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private CreateHrisEmployeeRequest request;
+    private final Options.Builder optionsBuilder;
 
     public CreateHrisEmployeeRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public CreateHrisEmployeeRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public CreateHrisEmployeeRequestBuilder request(@Nonnull CreateHrisEmployeeRequest request) {
@@ -42,8 +52,9 @@ public class CreateHrisEmployeeRequestBuilder {
     * @return The response from the server.
     */
     public CreateHrisEmployeeResponse call() {
+        Options options = optionsBuilder.build();
         RequestOperation<CreateHrisEmployeeRequest, CreateHrisEmployeeResponse> operation
-              = new CreateHrisEmployee.Sync(sdkConfiguration, _headers);
+              = new CreateHrisEmployee.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

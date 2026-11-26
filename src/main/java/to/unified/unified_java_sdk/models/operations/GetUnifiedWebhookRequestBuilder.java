@@ -6,18 +6,28 @@ package to.unified.unified_java_sdk.models.operations;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.GetUnifiedWebhook;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetUnifiedWebhookRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private GetUnifiedWebhookRequest request;
+    private final Options.Builder optionsBuilder;
 
     public GetUnifiedWebhookRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public GetUnifiedWebhookRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public GetUnifiedWebhookRequestBuilder request(@Nonnull GetUnifiedWebhookRequest request) {
@@ -42,8 +52,9 @@ public class GetUnifiedWebhookRequestBuilder {
     * @return The response from the server.
     */
     public GetUnifiedWebhookResponse call() {
+        Options options = optionsBuilder.build();
         RequestOperation<GetUnifiedWebhookRequest, GetUnifiedWebhookResponse> operation
-              = new GetUnifiedWebhook.Sync(sdkConfiguration, _headers);
+              = new GetUnifiedWebhook.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateTicketingNoteRequest;
 import to.unified.unified_java_sdk.models.operations.CreateTicketingNoteRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateTicketingNoteResponse;
@@ -31,6 +32,7 @@ import to.unified.unified_java_sdk.operations.PatchTicketingNote;
 import to.unified.unified_java_sdk.operations.RemoveTicketingNote;
 import to.unified.unified_java_sdk.operations.UpdateTicketingNote;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Note {
@@ -75,8 +77,23 @@ public class Note {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateTicketingNoteResponse createTicketingNote(@Nonnull CreateTicketingNoteRequest request) {
+        return createTicketingNote(request, null);
+    }
+
+    /**
+     * Create a note
+     * 
+     * <p>Creates a TicketingNote. Provide the unified TicketingNote fields in the request body; they are
+     * mapped to the provider's API. Returns the created TicketingNote.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateTicketingNoteResponse createTicketingNote(@Nonnull CreateTicketingNoteRequest request, @Nullable Options options) {
         RequestOperation<CreateTicketingNoteRequest, CreateTicketingNoteResponse> operation
-              = new CreateTicketingNote.Sync(sdkConfiguration, _headers);
+              = new CreateTicketingNote.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -103,8 +120,23 @@ public class Note {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetTicketingNoteResponse getTicketingNote(@Nonnull GetTicketingNoteRequest request) {
+        return getTicketingNote(request, null);
+    }
+
+    /**
+     * Retrieve a note
+     * 
+     * <p>Retrieves a single TicketingNote by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetTicketingNoteResponse getTicketingNote(@Nonnull GetTicketingNoteRequest request, @Nullable Options options) {
         RequestOperation<GetTicketingNoteRequest, GetTicketingNoteResponse> operation
-              = new GetTicketingNote.Sync(sdkConfiguration, _headers);
+              = new GetTicketingNote.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -139,8 +171,27 @@ public class Note {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListTicketingNotesResponse listTicketingNotes(@Nonnull ListTicketingNotesRequest request) {
+        return listTicketingNotes(request, null);
+    }
+
+    /**
+     * List all notes
+     * 
+     * <p>Returns a list of TicketingNotes. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListTicketingNotesResponse listTicketingNotes(@Nonnull ListTicketingNotesRequest request, @Nullable Options options) {
         RequestOperation<ListTicketingNotesRequest, ListTicketingNotesResponse> operation
-              = new ListTicketingNotes.Sync(sdkConfiguration, _headers);
+              = new ListTicketingNotes.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +218,23 @@ public class Note {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchTicketingNoteResponse patchTicketingNote(@Nonnull PatchTicketingNoteRequest request) {
+        return patchTicketingNote(request, null);
+    }
+
+    /**
+     * Update a note
+     * 
+     * <p>Updates the TicketingNote identified by `id`. Provide the unified TicketingNote fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchTicketingNoteResponse patchTicketingNote(@Nonnull PatchTicketingNoteRequest request, @Nullable Options options) {
         RequestOperation<PatchTicketingNoteRequest, PatchTicketingNoteResponse> operation
-              = new PatchTicketingNote.Sync(sdkConfiguration, _headers);
+              = new PatchTicketingNote.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -193,8 +259,22 @@ public class Note {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveTicketingNoteResponse removeTicketingNote(@Nonnull RemoveTicketingNoteRequest request) {
+        return removeTicketingNote(request, null);
+    }
+
+    /**
+     * Remove a note
+     * 
+     * <p>Deletes the TicketingNote identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveTicketingNoteResponse removeTicketingNote(@Nonnull RemoveTicketingNoteRequest request, @Nullable Options options) {
         RequestOperation<RemoveTicketingNoteRequest, RemoveTicketingNoteResponse> operation
-              = new RemoveTicketingNote.Sync(sdkConfiguration, _headers);
+              = new RemoveTicketingNote.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -221,8 +301,23 @@ public class Note {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateTicketingNoteResponse updateTicketingNote(@Nonnull UpdateTicketingNoteRequest request) {
+        return updateTicketingNote(request, null);
+    }
+
+    /**
+     * Update a note
+     * 
+     * <p>Updates the TicketingNote identified by `id`. Provide the unified TicketingNote fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateTicketingNoteResponse updateTicketingNote(@Nonnull UpdateTicketingNoteRequest request, @Nullable Options options) {
         RequestOperation<UpdateTicketingNoteRequest, UpdateTicketingNoteResponse> operation
-              = new UpdateTicketingNote.Sync(sdkConfiguration, _headers);
+              = new UpdateTicketingNote.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

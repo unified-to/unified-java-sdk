@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateUnifiedConnectionReauthRequest;
 import to.unified.unified_java_sdk.models.operations.CreateUnifiedConnectionReauthRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateUnifiedConnectionReauthResponse;
@@ -34,6 +35,7 @@ import to.unified.unified_java_sdk.operations.PatchUnifiedConnection;
 import to.unified.unified_java_sdk.operations.RemoveUnifiedConnection;
 import to.unified.unified_java_sdk.operations.UpdateUnifiedConnection;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Connection {
@@ -80,8 +82,24 @@ public class Connection {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateUnifiedConnectionResponse createUnifiedConnection(@Nonnull to.unified.unified_java_sdk.models.shared.Connection request) {
+        return createUnifiedConnection(request, null);
+    }
+
+    /**
+     * Create connection
+     * 
+     * <p>Used only to import existing customer credentials. To connect a new account, use the "Authorize or
+     * re-authorize a connection" auth URL instead. To change credentials on an existing connection, use
+     * "Update connection".
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateUnifiedConnectionResponse createUnifiedConnection(@Nonnull to.unified.unified_java_sdk.models.shared.Connection request, @Nullable Options options) {
         RequestOperation<to.unified.unified_java_sdk.models.shared.Connection, CreateUnifiedConnectionResponse> operation
-              = new CreateUnifiedConnection.Sync(sdkConfiguration, _headers);
+              = new CreateUnifiedConnection.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -110,8 +128,24 @@ public class Connection {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateUnifiedConnectionReauthResponse createUnifiedConnectionReauth(@Nonnull CreateUnifiedConnectionReauthRequest request) {
+        return createUnifiedConnectionReauth(request, null);
+    }
+
+    /**
+     * Create a re-authorization token for a connection
+     * 
+     * <p>Returns a short-lived, single-use token that lets your end-user re-authorize this existing
+     * connection in place via the "Authorize or re-authorize a connection" URL with connection_id and
+     * reauth_token.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateUnifiedConnectionReauthResponse createUnifiedConnectionReauth(@Nonnull CreateUnifiedConnectionReauthRequest request, @Nullable Options options) {
         RequestOperation<CreateUnifiedConnectionReauthRequest, CreateUnifiedConnectionReauthResponse> operation
-              = new CreateUnifiedConnectionReauth.Sync(sdkConfiguration, _headers);
+              = new CreateUnifiedConnectionReauth.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -132,8 +166,20 @@ public class Connection {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetUnifiedConnectionResponse getUnifiedConnection(@Nonnull GetUnifiedConnectionRequest request) {
+        return getUnifiedConnection(request, null);
+    }
+
+    /**
+     * Retrieve connection
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetUnifiedConnectionResponse getUnifiedConnection(@Nonnull GetUnifiedConnectionRequest request, @Nullable Options options) {
         RequestOperation<GetUnifiedConnectionRequest, GetUnifiedConnectionResponse> operation
-              = new GetUnifiedConnection.Sync(sdkConfiguration, _headers);
+              = new GetUnifiedConnection.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -154,8 +200,20 @@ public class Connection {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListUnifiedConnectionsResponse listUnifiedConnections(@Nonnull ListUnifiedConnectionsRequest request) {
+        return listUnifiedConnections(request, null);
+    }
+
+    /**
+     * List all connections
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListUnifiedConnectionsResponse listUnifiedConnections(@Nonnull ListUnifiedConnectionsRequest request, @Nullable Options options) {
         RequestOperation<ListUnifiedConnectionsRequest, ListUnifiedConnectionsResponse> operation
-              = new ListUnifiedConnections.Sync(sdkConfiguration, _headers);
+              = new ListUnifiedConnections.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -176,8 +234,20 @@ public class Connection {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchUnifiedConnectionResponse patchUnifiedConnection(@Nonnull PatchUnifiedConnectionRequest request) {
+        return patchUnifiedConnection(request, null);
+    }
+
+    /**
+     * Update connection
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchUnifiedConnectionResponse patchUnifiedConnection(@Nonnull PatchUnifiedConnectionRequest request, @Nullable Options options) {
         RequestOperation<PatchUnifiedConnectionRequest, PatchUnifiedConnectionResponse> operation
-              = new PatchUnifiedConnection.Sync(sdkConfiguration, _headers);
+              = new PatchUnifiedConnection.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -198,8 +268,20 @@ public class Connection {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveUnifiedConnectionResponse removeUnifiedConnection(@Nonnull RemoveUnifiedConnectionRequest request) {
+        return removeUnifiedConnection(request, null);
+    }
+
+    /**
+     * Remove connection
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveUnifiedConnectionResponse removeUnifiedConnection(@Nonnull RemoveUnifiedConnectionRequest request, @Nullable Options options) {
         RequestOperation<RemoveUnifiedConnectionRequest, RemoveUnifiedConnectionResponse> operation
-              = new RemoveUnifiedConnection.Sync(sdkConfiguration, _headers);
+              = new RemoveUnifiedConnection.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -220,8 +302,20 @@ public class Connection {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateUnifiedConnectionResponse updateUnifiedConnection(@Nonnull UpdateUnifiedConnectionRequest request) {
+        return updateUnifiedConnection(request, null);
+    }
+
+    /**
+     * Update connection
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateUnifiedConnectionResponse updateUnifiedConnection(@Nonnull UpdateUnifiedConnectionRequest request, @Nullable Options options) {
         RequestOperation<UpdateUnifiedConnectionRequest, UpdateUnifiedConnectionResponse> operation
-              = new UpdateUnifiedConnection.Sync(sdkConfiguration, _headers);
+              = new UpdateUnifiedConnection.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

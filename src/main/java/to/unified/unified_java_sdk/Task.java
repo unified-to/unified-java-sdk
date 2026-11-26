@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateGenaiTaskRequest;
 import to.unified.unified_java_sdk.models.operations.CreateGenaiTaskRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateGenaiTaskResponse;
@@ -111,6 +112,7 @@ import to.unified.unified_java_sdk.operations.UpdateTaskComment;
 import to.unified.unified_java_sdk.operations.UpdateTaskProject;
 import to.unified.unified_java_sdk.operations.UpdateTaskTask;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Task {
@@ -155,8 +157,23 @@ public class Task {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateGenaiTaskResponse createGenaiTask(@Nonnull CreateGenaiTaskRequest request) {
+        return createGenaiTask(request, null);
+    }
+
+    /**
+     * Create a task
+     * 
+     * <p>Creates a GenaiTask. Provide the unified GenaiTask fields in the request body; they are mapped to
+     * the provider's API. Returns the created GenaiTask.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateGenaiTaskResponse createGenaiTask(@Nonnull CreateGenaiTaskRequest request, @Nullable Options options) {
         RequestOperation<CreateGenaiTaskRequest, CreateGenaiTaskResponse> operation
-              = new CreateGenaiTask.Sync(sdkConfiguration, _headers);
+              = new CreateGenaiTask.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -183,8 +200,23 @@ public class Task {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateTaskCommentResponse createTaskComment(@Nonnull CreateTaskCommentRequest request) {
+        return createTaskComment(request, null);
+    }
+
+    /**
+     * Create a comment
+     * 
+     * <p>Creates a TaskComment. Provide the unified TaskComment fields in the request body; they are mapped
+     * to the provider's API. Returns the created TaskComment.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateTaskCommentResponse createTaskComment(@Nonnull CreateTaskCommentRequest request, @Nullable Options options) {
         RequestOperation<CreateTaskCommentRequest, CreateTaskCommentResponse> operation
-              = new CreateTaskComment.Sync(sdkConfiguration, _headers);
+              = new CreateTaskComment.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -211,8 +243,23 @@ public class Task {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateTaskProjectResponse createTaskProject(@Nonnull CreateTaskProjectRequest request) {
+        return createTaskProject(request, null);
+    }
+
+    /**
+     * Create a project
+     * 
+     * <p>Creates a TaskProject. Provide the unified TaskProject fields in the request body; they are mapped
+     * to the provider's API. Returns the created TaskProject.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateTaskProjectResponse createTaskProject(@Nonnull CreateTaskProjectRequest request, @Nullable Options options) {
         RequestOperation<CreateTaskProjectRequest, CreateTaskProjectResponse> operation
-              = new CreateTaskProject.Sync(sdkConfiguration, _headers);
+              = new CreateTaskProject.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -239,8 +286,23 @@ public class Task {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateTaskTaskResponse createTaskTask(@Nonnull CreateTaskTaskRequest request) {
+        return createTaskTask(request, null);
+    }
+
+    /**
+     * Create a task
+     * 
+     * <p>Creates a TaskTask. Provide the unified TaskTask fields in the request body; they are mapped to the
+     * provider's API. Returns the created TaskTask.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateTaskTaskResponse createTaskTask(@Nonnull CreateTaskTaskRequest request, @Nullable Options options) {
         RequestOperation<CreateTaskTaskRequest, CreateTaskTaskResponse> operation
-              = new CreateTaskTask.Sync(sdkConfiguration, _headers);
+              = new CreateTaskTask.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -267,8 +329,23 @@ public class Task {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetGenaiTaskResponse getGenaiTask(@Nonnull GetGenaiTaskRequest request) {
+        return getGenaiTask(request, null);
+    }
+
+    /**
+     * Retrieve a task
+     * 
+     * <p>Retrieves a single GenaiTask by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetGenaiTaskResponse getGenaiTask(@Nonnull GetGenaiTaskRequest request, @Nullable Options options) {
         RequestOperation<GetGenaiTaskRequest, GetGenaiTaskResponse> operation
-              = new GetGenaiTask.Sync(sdkConfiguration, _headers);
+              = new GetGenaiTask.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -295,8 +372,23 @@ public class Task {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetTaskChangeResponse getTaskChange(@Nonnull GetTaskChangeRequest request) {
+        return getTaskChange(request, null);
+    }
+
+    /**
+     * Retrieve a change
+     * 
+     * <p>Retrieves a single TaskChange by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetTaskChangeResponse getTaskChange(@Nonnull GetTaskChangeRequest request, @Nullable Options options) {
         RequestOperation<GetTaskChangeRequest, GetTaskChangeResponse> operation
-              = new GetTaskChange.Sync(sdkConfiguration, _headers);
+              = new GetTaskChange.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -323,8 +415,23 @@ public class Task {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetTaskCommentResponse getTaskComment(@Nonnull GetTaskCommentRequest request) {
+        return getTaskComment(request, null);
+    }
+
+    /**
+     * Retrieve a comment
+     * 
+     * <p>Retrieves a single TaskComment by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetTaskCommentResponse getTaskComment(@Nonnull GetTaskCommentRequest request, @Nullable Options options) {
         RequestOperation<GetTaskCommentRequest, GetTaskCommentResponse> operation
-              = new GetTaskComment.Sync(sdkConfiguration, _headers);
+              = new GetTaskComment.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -351,8 +458,23 @@ public class Task {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetTaskProjectResponse getTaskProject(@Nonnull GetTaskProjectRequest request) {
+        return getTaskProject(request, null);
+    }
+
+    /**
+     * Retrieve a project
+     * 
+     * <p>Retrieves a single TaskProject by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetTaskProjectResponse getTaskProject(@Nonnull GetTaskProjectRequest request, @Nullable Options options) {
         RequestOperation<GetTaskProjectRequest, GetTaskProjectResponse> operation
-              = new GetTaskProject.Sync(sdkConfiguration, _headers);
+              = new GetTaskProject.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -379,8 +501,23 @@ public class Task {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetTaskTaskResponse getTaskTask(@Nonnull GetTaskTaskRequest request) {
+        return getTaskTask(request, null);
+    }
+
+    /**
+     * Retrieve a task
+     * 
+     * <p>Retrieves a single TaskTask by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetTaskTaskResponse getTaskTask(@Nonnull GetTaskTaskRequest request, @Nullable Options options) {
         RequestOperation<GetTaskTaskRequest, GetTaskTaskResponse> operation
-              = new GetTaskTask.Sync(sdkConfiguration, _headers);
+              = new GetTaskTask.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -415,8 +552,27 @@ public class Task {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListGenaiTasksResponse listGenaiTasks(@Nonnull ListGenaiTasksRequest request) {
+        return listGenaiTasks(request, null);
+    }
+
+    /**
+     * List all tasks
+     * 
+     * <p>Returns a list of GenaiTasks. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListGenaiTasksResponse listGenaiTasks(@Nonnull ListGenaiTasksRequest request, @Nullable Options options) {
         RequestOperation<ListGenaiTasksRequest, ListGenaiTasksResponse> operation
-              = new ListGenaiTasks.Sync(sdkConfiguration, _headers);
+              = new ListGenaiTasks.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -451,8 +607,27 @@ public class Task {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListTaskChangesResponse listTaskChanges(@Nonnull ListTaskChangesRequest request) {
+        return listTaskChanges(request, null);
+    }
+
+    /**
+     * List all changes
+     * 
+     * <p>Returns a list of TaskChanges. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListTaskChangesResponse listTaskChanges(@Nonnull ListTaskChangesRequest request, @Nullable Options options) {
         RequestOperation<ListTaskChangesRequest, ListTaskChangesResponse> operation
-              = new ListTaskChanges.Sync(sdkConfiguration, _headers);
+              = new ListTaskChanges.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -487,8 +662,27 @@ public class Task {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListTaskCommentsResponse listTaskComments(@Nonnull ListTaskCommentsRequest request) {
+        return listTaskComments(request, null);
+    }
+
+    /**
+     * List all comments
+     * 
+     * <p>Returns a list of TaskComments. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListTaskCommentsResponse listTaskComments(@Nonnull ListTaskCommentsRequest request, @Nullable Options options) {
         RequestOperation<ListTaskCommentsRequest, ListTaskCommentsResponse> operation
-              = new ListTaskComments.Sync(sdkConfiguration, _headers);
+              = new ListTaskComments.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -523,8 +717,27 @@ public class Task {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListTaskProjectsResponse listTaskProjects(@Nonnull ListTaskProjectsRequest request) {
+        return listTaskProjects(request, null);
+    }
+
+    /**
+     * List all projects
+     * 
+     * <p>Returns a list of TaskProjects. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListTaskProjectsResponse listTaskProjects(@Nonnull ListTaskProjectsRequest request, @Nullable Options options) {
         RequestOperation<ListTaskProjectsRequest, ListTaskProjectsResponse> operation
-              = new ListTaskProjects.Sync(sdkConfiguration, _headers);
+              = new ListTaskProjects.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -559,8 +772,27 @@ public class Task {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListTaskTasksResponse listTaskTasks(@Nonnull ListTaskTasksRequest request) {
+        return listTaskTasks(request, null);
+    }
+
+    /**
+     * List all tasks
+     * 
+     * <p>Returns a list of TaskTasks. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListTaskTasksResponse listTaskTasks(@Nonnull ListTaskTasksRequest request, @Nullable Options options) {
         RequestOperation<ListTaskTasksRequest, ListTaskTasksResponse> operation
-              = new ListTaskTasks.Sync(sdkConfiguration, _headers);
+              = new ListTaskTasks.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -587,8 +819,23 @@ public class Task {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchGenaiTaskResponse patchGenaiTask(@Nonnull PatchGenaiTaskRequest request) {
+        return patchGenaiTask(request, null);
+    }
+
+    /**
+     * Update a task
+     * 
+     * <p>Updates the GenaiTask identified by `id`. Provide the unified GenaiTask fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchGenaiTaskResponse patchGenaiTask(@Nonnull PatchGenaiTaskRequest request, @Nullable Options options) {
         RequestOperation<PatchGenaiTaskRequest, PatchGenaiTaskResponse> operation
-              = new PatchGenaiTask.Sync(sdkConfiguration, _headers);
+              = new PatchGenaiTask.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -615,8 +862,23 @@ public class Task {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchTaskCommentResponse patchTaskComment(@Nonnull PatchTaskCommentRequest request) {
+        return patchTaskComment(request, null);
+    }
+
+    /**
+     * Update a comment
+     * 
+     * <p>Updates the TaskComment identified by `id`. Provide the unified TaskComment fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchTaskCommentResponse patchTaskComment(@Nonnull PatchTaskCommentRequest request, @Nullable Options options) {
         RequestOperation<PatchTaskCommentRequest, PatchTaskCommentResponse> operation
-              = new PatchTaskComment.Sync(sdkConfiguration, _headers);
+              = new PatchTaskComment.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -643,8 +905,23 @@ public class Task {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchTaskProjectResponse patchTaskProject(@Nonnull PatchTaskProjectRequest request) {
+        return patchTaskProject(request, null);
+    }
+
+    /**
+     * Update a project
+     * 
+     * <p>Updates the TaskProject identified by `id`. Provide the unified TaskProject fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchTaskProjectResponse patchTaskProject(@Nonnull PatchTaskProjectRequest request, @Nullable Options options) {
         RequestOperation<PatchTaskProjectRequest, PatchTaskProjectResponse> operation
-              = new PatchTaskProject.Sync(sdkConfiguration, _headers);
+              = new PatchTaskProject.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -671,8 +948,23 @@ public class Task {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchTaskTaskResponse patchTaskTask(@Nonnull PatchTaskTaskRequest request) {
+        return patchTaskTask(request, null);
+    }
+
+    /**
+     * Update a task
+     * 
+     * <p>Updates the TaskTask identified by `id`. Provide the unified TaskTask fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchTaskTaskResponse patchTaskTask(@Nonnull PatchTaskTaskRequest request, @Nullable Options options) {
         RequestOperation<PatchTaskTaskRequest, PatchTaskTaskResponse> operation
-              = new PatchTaskTask.Sync(sdkConfiguration, _headers);
+              = new PatchTaskTask.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -697,8 +989,22 @@ public class Task {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveGenaiTaskResponse removeGenaiTask(@Nonnull RemoveGenaiTaskRequest request) {
+        return removeGenaiTask(request, null);
+    }
+
+    /**
+     * Remove a task
+     * 
+     * <p>Deletes the GenaiTask identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveGenaiTaskResponse removeGenaiTask(@Nonnull RemoveGenaiTaskRequest request, @Nullable Options options) {
         RequestOperation<RemoveGenaiTaskRequest, RemoveGenaiTaskResponse> operation
-              = new RemoveGenaiTask.Sync(sdkConfiguration, _headers);
+              = new RemoveGenaiTask.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -723,8 +1029,22 @@ public class Task {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveTaskCommentResponse removeTaskComment(@Nonnull RemoveTaskCommentRequest request) {
+        return removeTaskComment(request, null);
+    }
+
+    /**
+     * Remove a comment
+     * 
+     * <p>Deletes the TaskComment identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveTaskCommentResponse removeTaskComment(@Nonnull RemoveTaskCommentRequest request, @Nullable Options options) {
         RequestOperation<RemoveTaskCommentRequest, RemoveTaskCommentResponse> operation
-              = new RemoveTaskComment.Sync(sdkConfiguration, _headers);
+              = new RemoveTaskComment.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -749,8 +1069,22 @@ public class Task {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveTaskProjectResponse removeTaskProject(@Nonnull RemoveTaskProjectRequest request) {
+        return removeTaskProject(request, null);
+    }
+
+    /**
+     * Remove a project
+     * 
+     * <p>Deletes the TaskProject identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveTaskProjectResponse removeTaskProject(@Nonnull RemoveTaskProjectRequest request, @Nullable Options options) {
         RequestOperation<RemoveTaskProjectRequest, RemoveTaskProjectResponse> operation
-              = new RemoveTaskProject.Sync(sdkConfiguration, _headers);
+              = new RemoveTaskProject.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -775,8 +1109,22 @@ public class Task {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveTaskTaskResponse removeTaskTask(@Nonnull RemoveTaskTaskRequest request) {
+        return removeTaskTask(request, null);
+    }
+
+    /**
+     * Remove a task
+     * 
+     * <p>Deletes the TaskTask identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveTaskTaskResponse removeTaskTask(@Nonnull RemoveTaskTaskRequest request, @Nullable Options options) {
         RequestOperation<RemoveTaskTaskRequest, RemoveTaskTaskResponse> operation
-              = new RemoveTaskTask.Sync(sdkConfiguration, _headers);
+              = new RemoveTaskTask.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -803,8 +1151,23 @@ public class Task {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateGenaiTaskResponse updateGenaiTask(@Nonnull UpdateGenaiTaskRequest request) {
+        return updateGenaiTask(request, null);
+    }
+
+    /**
+     * Update a task
+     * 
+     * <p>Updates the GenaiTask identified by `id`. Provide the unified GenaiTask fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateGenaiTaskResponse updateGenaiTask(@Nonnull UpdateGenaiTaskRequest request, @Nullable Options options) {
         RequestOperation<UpdateGenaiTaskRequest, UpdateGenaiTaskResponse> operation
-              = new UpdateGenaiTask.Sync(sdkConfiguration, _headers);
+              = new UpdateGenaiTask.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -831,8 +1194,23 @@ public class Task {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateTaskCommentResponse updateTaskComment(@Nonnull UpdateTaskCommentRequest request) {
+        return updateTaskComment(request, null);
+    }
+
+    /**
+     * Update a comment
+     * 
+     * <p>Updates the TaskComment identified by `id`. Provide the unified TaskComment fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateTaskCommentResponse updateTaskComment(@Nonnull UpdateTaskCommentRequest request, @Nullable Options options) {
         RequestOperation<UpdateTaskCommentRequest, UpdateTaskCommentResponse> operation
-              = new UpdateTaskComment.Sync(sdkConfiguration, _headers);
+              = new UpdateTaskComment.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -859,8 +1237,23 @@ public class Task {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateTaskProjectResponse updateTaskProject(@Nonnull UpdateTaskProjectRequest request) {
+        return updateTaskProject(request, null);
+    }
+
+    /**
+     * Update a project
+     * 
+     * <p>Updates the TaskProject identified by `id`. Provide the unified TaskProject fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateTaskProjectResponse updateTaskProject(@Nonnull UpdateTaskProjectRequest request, @Nullable Options options) {
         RequestOperation<UpdateTaskProjectRequest, UpdateTaskProjectResponse> operation
-              = new UpdateTaskProject.Sync(sdkConfiguration, _headers);
+              = new UpdateTaskProject.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -887,8 +1280,23 @@ public class Task {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateTaskTaskResponse updateTaskTask(@Nonnull UpdateTaskTaskRequest request) {
+        return updateTaskTask(request, null);
+    }
+
+    /**
+     * Update a task
+     * 
+     * <p>Updates the TaskTask identified by `id`. Provide the unified TaskTask fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateTaskTaskResponse updateTaskTask(@Nonnull UpdateTaskTaskRequest request, @Nullable Options options) {
         RequestOperation<UpdateTaskTaskRequest, UpdateTaskTaskResponse> operation
-              = new UpdateTaskTask.Sync(sdkConfiguration, _headers);
+              = new UpdateTaskTask.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

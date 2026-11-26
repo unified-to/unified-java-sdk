@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateHrisEarningRequest;
 import to.unified.unified_java_sdk.models.operations.GetHrisEarningRequest;
@@ -32,6 +33,7 @@ import to.unified.unified_java_sdk.operations.PatchHrisEarning;
 import to.unified.unified_java_sdk.operations.RemoveHrisEarning;
 import to.unified.unified_java_sdk.operations.UpdateHrisEarning;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncEarning {
@@ -76,8 +78,22 @@ public class AsyncEarning {
      * @return {@code CompletableFuture<CreateHrisEarningResponse>} - The async response
      */
     public CompletableFuture<CreateHrisEarningResponse> createHrisEarning(@Nonnull CreateHrisEarningRequest request) {
+        return createHrisEarning(request, null);
+    }
+
+    /**
+     * Create an earning
+     * 
+     * <p>Creates a HrisEarning. Provide the unified HrisEarning fields in the request body; they are mapped
+     * to the provider's API. Returns the created HrisEarning.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateHrisEarningResponse>} - The async response
+     */
+    public CompletableFuture<CreateHrisEarningResponse> createHrisEarning(@Nonnull CreateHrisEarningRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateHrisEarningRequest, CreateHrisEarningResponse> operation
-              = new CreateHrisEarning.Async(sdkConfiguration, _headers);
+              = new CreateHrisEarning.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -105,8 +121,22 @@ public class AsyncEarning {
      * @return {@code CompletableFuture<GetHrisEarningResponse>} - The async response
      */
     public CompletableFuture<GetHrisEarningResponse> getHrisEarning(@Nonnull GetHrisEarningRequest request) {
+        return getHrisEarning(request, null);
+    }
+
+    /**
+     * Retrieve an earning
+     * 
+     * <p>Retrieves a single HrisEarning by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetHrisEarningResponse>} - The async response
+     */
+    public CompletableFuture<GetHrisEarningResponse> getHrisEarning(@Nonnull GetHrisEarningRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetHrisEarningRequest, GetHrisEarningResponse> operation
-              = new GetHrisEarning.Async(sdkConfiguration, _headers);
+              = new GetHrisEarning.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -142,8 +172,26 @@ public class AsyncEarning {
      * @return {@code CompletableFuture<ListHrisEarningsResponse>} - The async response
      */
     public CompletableFuture<ListHrisEarningsResponse> listHrisEarnings(@Nonnull ListHrisEarningsRequest request) {
+        return listHrisEarnings(request, null);
+    }
+
+    /**
+     * List all earnings
+     * 
+     * <p>Returns a list of HrisEarnings. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListHrisEarningsResponse>} - The async response
+     */
+    public CompletableFuture<ListHrisEarningsResponse> listHrisEarnings(@Nonnull ListHrisEarningsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListHrisEarningsRequest, ListHrisEarningsResponse> operation
-              = new ListHrisEarnings.Async(sdkConfiguration, _headers);
+              = new ListHrisEarnings.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -171,8 +219,22 @@ public class AsyncEarning {
      * @return {@code CompletableFuture<PatchHrisEarningResponse>} - The async response
      */
     public CompletableFuture<PatchHrisEarningResponse> patchHrisEarning(@Nonnull PatchHrisEarningRequest request) {
+        return patchHrisEarning(request, null);
+    }
+
+    /**
+     * Update an earning
+     * 
+     * <p>Updates the HrisEarning identified by `id`. Provide the unified HrisEarning fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchHrisEarningResponse>} - The async response
+     */
+    public CompletableFuture<PatchHrisEarningResponse> patchHrisEarning(@Nonnull PatchHrisEarningRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchHrisEarningRequest, PatchHrisEarningResponse> operation
-              = new PatchHrisEarning.Async(sdkConfiguration, _headers);
+              = new PatchHrisEarning.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -198,8 +260,21 @@ public class AsyncEarning {
      * @return {@code CompletableFuture<RemoveHrisEarningResponse>} - The async response
      */
     public CompletableFuture<RemoveHrisEarningResponse> removeHrisEarning(@Nonnull RemoveHrisEarningRequest request) {
+        return removeHrisEarning(request, null);
+    }
+
+    /**
+     * Remove an earning
+     * 
+     * <p>Deletes the HrisEarning identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveHrisEarningResponse>} - The async response
+     */
+    public CompletableFuture<RemoveHrisEarningResponse> removeHrisEarning(@Nonnull RemoveHrisEarningRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveHrisEarningRequest, RemoveHrisEarningResponse> operation
-              = new RemoveHrisEarning.Async(sdkConfiguration, _headers);
+              = new RemoveHrisEarning.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -227,8 +302,22 @@ public class AsyncEarning {
      * @return {@code CompletableFuture<UpdateHrisEarningResponse>} - The async response
      */
     public CompletableFuture<UpdateHrisEarningResponse> updateHrisEarning(@Nonnull UpdateHrisEarningRequest request) {
+        return updateHrisEarning(request, null);
+    }
+
+    /**
+     * Update an earning
+     * 
+     * <p>Updates the HrisEarning identified by `id`. Provide the unified HrisEarning fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateHrisEarningResponse>} - The async response
+     */
+    public CompletableFuture<UpdateHrisEarningResponse> updateHrisEarning(@Nonnull UpdateHrisEarningRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateHrisEarningRequest, UpdateHrisEarningResponse> operation
-              = new UpdateHrisEarning.Async(sdkConfiguration, _headers);
+              = new UpdateHrisEarning.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.GetHealthcareProcedureRequest;
 import to.unified.unified_java_sdk.models.operations.GetHealthcareProcedureRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetHealthcareProcedureResponse;
@@ -15,6 +16,7 @@ import to.unified.unified_java_sdk.models.operations.ListHealthcareProceduresRes
 import to.unified.unified_java_sdk.operations.GetHealthcareProcedure;
 import to.unified.unified_java_sdk.operations.ListHealthcareProcedures;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Procedure {
@@ -59,8 +61,23 @@ public class Procedure {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetHealthcareProcedureResponse getHealthcareProcedure(@Nonnull GetHealthcareProcedureRequest request) {
+        return getHealthcareProcedure(request, null);
+    }
+
+    /**
+     * Retrieve a procedure
+     * 
+     * <p>Retrieves a single HealthcareProcedure by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetHealthcareProcedureResponse getHealthcareProcedure(@Nonnull GetHealthcareProcedureRequest request, @Nullable Options options) {
         RequestOperation<GetHealthcareProcedureRequest, GetHealthcareProcedureResponse> operation
-              = new GetHealthcareProcedure.Sync(sdkConfiguration, _headers);
+              = new GetHealthcareProcedure.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -95,8 +112,27 @@ public class Procedure {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListHealthcareProceduresResponse listHealthcareProcedures(@Nonnull ListHealthcareProceduresRequest request) {
+        return listHealthcareProcedures(request, null);
+    }
+
+    /**
+     * List all procedures
+     * 
+     * <p>Returns a list of HealthcareProcedures. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListHealthcareProceduresResponse listHealthcareProcedures(@Nonnull ListHealthcareProceduresRequest request, @Nullable Options options) {
         RequestOperation<ListHealthcareProceduresRequest, ListHealthcareProceduresResponse> operation
-              = new ListHealthcareProcedures.Sync(sdkConfiguration, _headers);
+              = new ListHealthcareProcedures.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

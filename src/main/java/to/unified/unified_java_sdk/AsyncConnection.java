@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateUnifiedConnectionReauthRequest;
 import to.unified.unified_java_sdk.models.operations.GetUnifiedConnectionRequest;
@@ -35,6 +36,7 @@ import to.unified.unified_java_sdk.operations.PatchUnifiedConnection;
 import to.unified.unified_java_sdk.operations.RemoveUnifiedConnection;
 import to.unified.unified_java_sdk.operations.UpdateUnifiedConnection;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncConnection {
@@ -81,8 +83,23 @@ public class AsyncConnection {
      * @return {@code CompletableFuture<CreateUnifiedConnectionResponse>} - The async response
      */
     public CompletableFuture<CreateUnifiedConnectionResponse> createUnifiedConnection(@Nonnull to.unified.unified_java_sdk.models.shared.Connection request) {
+        return createUnifiedConnection(request, null);
+    }
+
+    /**
+     * Create connection
+     * 
+     * <p>Used only to import existing customer credentials. To connect a new account, use the "Authorize or
+     * re-authorize a connection" auth URL instead. To change credentials on an existing connection, use
+     * "Update connection".
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateUnifiedConnectionResponse>} - The async response
+     */
+    public CompletableFuture<CreateUnifiedConnectionResponse> createUnifiedConnection(@Nonnull to.unified.unified_java_sdk.models.shared.Connection request, @Nullable Options options) {
         AsyncRequestOperation<to.unified.unified_java_sdk.models.shared.Connection, CreateUnifiedConnectionResponse> operation
-              = new CreateUnifiedConnection.Async(sdkConfiguration, _headers);
+              = new CreateUnifiedConnection.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -112,8 +129,23 @@ public class AsyncConnection {
      * @return {@code CompletableFuture<CreateUnifiedConnectionReauthResponse>} - The async response
      */
     public CompletableFuture<CreateUnifiedConnectionReauthResponse> createUnifiedConnectionReauth(@Nonnull CreateUnifiedConnectionReauthRequest request) {
+        return createUnifiedConnectionReauth(request, null);
+    }
+
+    /**
+     * Create a re-authorization token for a connection
+     * 
+     * <p>Returns a short-lived, single-use token that lets your end-user re-authorize this existing
+     * connection in place via the "Authorize or re-authorize a connection" URL with connection_id and
+     * reauth_token.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateUnifiedConnectionReauthResponse>} - The async response
+     */
+    public CompletableFuture<CreateUnifiedConnectionReauthResponse> createUnifiedConnectionReauth(@Nonnull CreateUnifiedConnectionReauthRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateUnifiedConnectionReauthRequest, CreateUnifiedConnectionReauthResponse> operation
-              = new CreateUnifiedConnectionReauth.Async(sdkConfiguration, _headers);
+              = new CreateUnifiedConnectionReauth.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -135,8 +167,19 @@ public class AsyncConnection {
      * @return {@code CompletableFuture<GetUnifiedConnectionResponse>} - The async response
      */
     public CompletableFuture<GetUnifiedConnectionResponse> getUnifiedConnection(@Nonnull GetUnifiedConnectionRequest request) {
+        return getUnifiedConnection(request, null);
+    }
+
+    /**
+     * Retrieve connection
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetUnifiedConnectionResponse>} - The async response
+     */
+    public CompletableFuture<GetUnifiedConnectionResponse> getUnifiedConnection(@Nonnull GetUnifiedConnectionRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetUnifiedConnectionRequest, GetUnifiedConnectionResponse> operation
-              = new GetUnifiedConnection.Async(sdkConfiguration, _headers);
+              = new GetUnifiedConnection.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -158,8 +201,19 @@ public class AsyncConnection {
      * @return {@code CompletableFuture<ListUnifiedConnectionsResponse>} - The async response
      */
     public CompletableFuture<ListUnifiedConnectionsResponse> listUnifiedConnections(@Nonnull ListUnifiedConnectionsRequest request) {
+        return listUnifiedConnections(request, null);
+    }
+
+    /**
+     * List all connections
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListUnifiedConnectionsResponse>} - The async response
+     */
+    public CompletableFuture<ListUnifiedConnectionsResponse> listUnifiedConnections(@Nonnull ListUnifiedConnectionsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListUnifiedConnectionsRequest, ListUnifiedConnectionsResponse> operation
-              = new ListUnifiedConnections.Async(sdkConfiguration, _headers);
+              = new ListUnifiedConnections.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -181,8 +235,19 @@ public class AsyncConnection {
      * @return {@code CompletableFuture<PatchUnifiedConnectionResponse>} - The async response
      */
     public CompletableFuture<PatchUnifiedConnectionResponse> patchUnifiedConnection(@Nonnull PatchUnifiedConnectionRequest request) {
+        return patchUnifiedConnection(request, null);
+    }
+
+    /**
+     * Update connection
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchUnifiedConnectionResponse>} - The async response
+     */
+    public CompletableFuture<PatchUnifiedConnectionResponse> patchUnifiedConnection(@Nonnull PatchUnifiedConnectionRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchUnifiedConnectionRequest, PatchUnifiedConnectionResponse> operation
-              = new PatchUnifiedConnection.Async(sdkConfiguration, _headers);
+              = new PatchUnifiedConnection.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -204,8 +269,19 @@ public class AsyncConnection {
      * @return {@code CompletableFuture<RemoveUnifiedConnectionResponse>} - The async response
      */
     public CompletableFuture<RemoveUnifiedConnectionResponse> removeUnifiedConnection(@Nonnull RemoveUnifiedConnectionRequest request) {
+        return removeUnifiedConnection(request, null);
+    }
+
+    /**
+     * Remove connection
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveUnifiedConnectionResponse>} - The async response
+     */
+    public CompletableFuture<RemoveUnifiedConnectionResponse> removeUnifiedConnection(@Nonnull RemoveUnifiedConnectionRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveUnifiedConnectionRequest, RemoveUnifiedConnectionResponse> operation
-              = new RemoveUnifiedConnection.Async(sdkConfiguration, _headers);
+              = new RemoveUnifiedConnection.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -227,8 +303,19 @@ public class AsyncConnection {
      * @return {@code CompletableFuture<UpdateUnifiedConnectionResponse>} - The async response
      */
     public CompletableFuture<UpdateUnifiedConnectionResponse> updateUnifiedConnection(@Nonnull UpdateUnifiedConnectionRequest request) {
+        return updateUnifiedConnection(request, null);
+    }
+
+    /**
+     * Update connection
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateUnifiedConnectionResponse>} - The async response
+     */
+    public CompletableFuture<UpdateUnifiedConnectionResponse> updateUnifiedConnection(@Nonnull UpdateUnifiedConnectionRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateUnifiedConnectionRequest, UpdateUnifiedConnectionResponse> operation
-              = new UpdateUnifiedConnection.Async(sdkConfiguration, _headers);
+              = new UpdateUnifiedConnection.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

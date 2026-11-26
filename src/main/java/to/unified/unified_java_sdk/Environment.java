@@ -7,6 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 import static to.unified.unified_java_sdk.operations.Operations.RequestlessOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.String;
 import java.util.List;
 import to.unified.unified_java_sdk.models.operations.CreateUnifiedEnvironmentRequestBuilder;
@@ -20,6 +21,7 @@ import to.unified.unified_java_sdk.operations.CreateUnifiedEnvironment;
 import to.unified.unified_java_sdk.operations.ListUnifiedEnvironments;
 import to.unified.unified_java_sdk.operations.RemoveUnifiedEnvironment;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Environment {
@@ -58,8 +60,20 @@ public class Environment {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateUnifiedEnvironmentResponse createUnifiedEnvironment(@Nonnull List<String> request) {
+        return createUnifiedEnvironment(request, null);
+    }
+
+    /**
+     * Create new environments
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateUnifiedEnvironmentResponse createUnifiedEnvironment(@Nonnull List<String> request, @Nullable Options options) {
         RequestOperation<List<String>, CreateUnifiedEnvironmentResponse> operation
-              = new CreateUnifiedEnvironment.Sync(sdkConfiguration, _headers);
+              = new CreateUnifiedEnvironment.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,8 +93,19 @@ public class Environment {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListUnifiedEnvironmentsResponse listUnifiedEnvironmentsDirect() {
+        return listUnifiedEnvironments(null);
+    }
+
+    /**
+     * Returns all environments
+     * 
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListUnifiedEnvironmentsResponse listUnifiedEnvironments(@Nullable Options options) {
         RequestlessOperation<ListUnifiedEnvironmentsResponse> operation
-            = new ListUnifiedEnvironments.Sync(sdkConfiguration, _headers);
+            = new ListUnifiedEnvironments.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest());
     }
 
@@ -101,8 +126,20 @@ public class Environment {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveUnifiedEnvironmentResponse removeUnifiedEnvironment(@Nonnull RemoveUnifiedEnvironmentRequest request) {
+        return removeUnifiedEnvironment(request, null);
+    }
+
+    /**
+     * Remove an environment
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveUnifiedEnvironmentResponse removeUnifiedEnvironment(@Nonnull RemoveUnifiedEnvironmentRequest request, @Nullable Options options) {
         RequestOperation<RemoveUnifiedEnvironmentRequest, RemoveUnifiedEnvironmentResponse> operation
-              = new RemoveUnifiedEnvironment.Sync(sdkConfiguration, _headers);
+              = new RemoveUnifiedEnvironment.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

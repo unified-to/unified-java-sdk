@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceItemRequest;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceItemRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceItemResponse;
@@ -31,6 +32,7 @@ import to.unified.unified_java_sdk.operations.PatchCommerceItem;
 import to.unified.unified_java_sdk.operations.RemoveCommerceItem;
 import to.unified.unified_java_sdk.operations.UpdateCommerceItem;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Item {
@@ -75,8 +77,23 @@ public class Item {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateCommerceItemResponse createCommerceItem(@Nonnull CreateCommerceItemRequest request) {
+        return createCommerceItem(request, null);
+    }
+
+    /**
+     * Create an item
+     * 
+     * <p>Creates a CommerceItem. Provide the unified CommerceItem fields in the request body; they are mapped
+     * to the provider's API. Returns the created CommerceItem.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateCommerceItemResponse createCommerceItem(@Nonnull CreateCommerceItemRequest request, @Nullable Options options) {
         RequestOperation<CreateCommerceItemRequest, CreateCommerceItemResponse> operation
-              = new CreateCommerceItem.Sync(sdkConfiguration, _headers);
+              = new CreateCommerceItem.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -103,8 +120,23 @@ public class Item {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetCommerceItemResponse getCommerceItem(@Nonnull GetCommerceItemRequest request) {
+        return getCommerceItem(request, null);
+    }
+
+    /**
+     * Retrieve an item
+     * 
+     * <p>Retrieves a single CommerceItem by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetCommerceItemResponse getCommerceItem(@Nonnull GetCommerceItemRequest request, @Nullable Options options) {
         RequestOperation<GetCommerceItemRequest, GetCommerceItemResponse> operation
-              = new GetCommerceItem.Sync(sdkConfiguration, _headers);
+              = new GetCommerceItem.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -139,8 +171,27 @@ public class Item {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListCommerceItemsResponse listCommerceItems(@Nonnull ListCommerceItemsRequest request) {
+        return listCommerceItems(request, null);
+    }
+
+    /**
+     * List all items
+     * 
+     * <p>Returns a list of CommerceItems. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListCommerceItemsResponse listCommerceItems(@Nonnull ListCommerceItemsRequest request, @Nullable Options options) {
         RequestOperation<ListCommerceItemsRequest, ListCommerceItemsResponse> operation
-              = new ListCommerceItems.Sync(sdkConfiguration, _headers);
+              = new ListCommerceItems.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +218,23 @@ public class Item {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchCommerceItemResponse patchCommerceItem(@Nonnull PatchCommerceItemRequest request) {
+        return patchCommerceItem(request, null);
+    }
+
+    /**
+     * Update an item
+     * 
+     * <p>Updates the CommerceItem identified by `id`. Provide the unified CommerceItem fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchCommerceItemResponse patchCommerceItem(@Nonnull PatchCommerceItemRequest request, @Nullable Options options) {
         RequestOperation<PatchCommerceItemRequest, PatchCommerceItemResponse> operation
-              = new PatchCommerceItem.Sync(sdkConfiguration, _headers);
+              = new PatchCommerceItem.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -193,8 +259,22 @@ public class Item {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveCommerceItemResponse removeCommerceItem(@Nonnull RemoveCommerceItemRequest request) {
+        return removeCommerceItem(request, null);
+    }
+
+    /**
+     * Remove an item
+     * 
+     * <p>Deletes the CommerceItem identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveCommerceItemResponse removeCommerceItem(@Nonnull RemoveCommerceItemRequest request, @Nullable Options options) {
         RequestOperation<RemoveCommerceItemRequest, RemoveCommerceItemResponse> operation
-              = new RemoveCommerceItem.Sync(sdkConfiguration, _headers);
+              = new RemoveCommerceItem.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -221,8 +301,23 @@ public class Item {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateCommerceItemResponse updateCommerceItem(@Nonnull UpdateCommerceItemRequest request) {
+        return updateCommerceItem(request, null);
+    }
+
+    /**
+     * Update an item
+     * 
+     * <p>Updates the CommerceItem identified by `id`. Provide the unified CommerceItem fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateCommerceItemResponse updateCommerceItem(@Nonnull UpdateCommerceItemRequest request, @Nullable Options options) {
         RequestOperation<UpdateCommerceItemRequest, UpdateCommerceItemResponse> operation
-              = new UpdateCommerceItem.Sync(sdkConfiguration, _headers);
+              = new UpdateCommerceItem.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

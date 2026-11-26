@@ -271,6 +271,18 @@ public class WebhookObjectType {
     public static final WebhookObjectType QMS_ACTION = new WebhookObjectType("qms_action");
     public static final WebhookObjectType QMS_INSPECTION = new WebhookObjectType("qms_inspection");
     public static final WebhookObjectType QMS_AUDIT = new WebhookObjectType("qms_audit");
+    public static final WebhookObjectType DMS_VEHICLE = new WebhookObjectType("dms_vehicle");
+    public static final WebhookObjectType DMS_VEHICLESALE = new WebhookObjectType("dms_vehiclesale");
+    public static final WebhookObjectType DMS_REPAIRORDER = new WebhookObjectType("dms_repairorder");
+    public static final WebhookObjectType DMS_APPOINTMENT = new WebhookObjectType("dms_appointment");
+    public static final WebhookObjectType DMS_PART = new WebhookObjectType("dms_part");
+    public static final WebhookObjectType DMS_PARTSALE = new WebhookObjectType("dms_partsale");
+    public static final WebhookObjectType DMS_OPCODE = new WebhookObjectType("dms_opcode");
+    public static final WebhookObjectType PRINTING_PRODUCT = new WebhookObjectType("printing_product");
+    public static final WebhookObjectType PRINTING_TEMPLATE = new WebhookObjectType("printing_template");
+    public static final WebhookObjectType PRINTING_FILE = new WebhookObjectType("printing_file");
+    public static final WebhookObjectType PRINTING_QUOTE = new WebhookObjectType("printing_quote");
+    public static final WebhookObjectType PRINTING_ORDER = new WebhookObjectType("printing_order");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -590,6 +602,18 @@ public class WebhookObjectType {
         map.put("qms_action", QMS_ACTION);
         map.put("qms_inspection", QMS_INSPECTION);
         map.put("qms_audit", QMS_AUDIT);
+        map.put("dms_vehicle", DMS_VEHICLE);
+        map.put("dms_vehiclesale", DMS_VEHICLESALE);
+        map.put("dms_repairorder", DMS_REPAIRORDER);
+        map.put("dms_appointment", DMS_APPOINTMENT);
+        map.put("dms_part", DMS_PART);
+        map.put("dms_partsale", DMS_PARTSALE);
+        map.put("dms_opcode", DMS_OPCODE);
+        map.put("printing_product", PRINTING_PRODUCT);
+        map.put("printing_template", PRINTING_TEMPLATE);
+        map.put("printing_file", PRINTING_FILE);
+        map.put("printing_quote", PRINTING_QUOTE);
+        map.put("printing_order", PRINTING_ORDER);
         return map;
     }
 
@@ -841,6 +865,18 @@ public class WebhookObjectType {
         map.put("qms_action", WebhookObjectTypeEnum.QMS_ACTION);
         map.put("qms_inspection", WebhookObjectTypeEnum.QMS_INSPECTION);
         map.put("qms_audit", WebhookObjectTypeEnum.QMS_AUDIT);
+        map.put("dms_vehicle", WebhookObjectTypeEnum.DMS_VEHICLE);
+        map.put("dms_vehiclesale", WebhookObjectTypeEnum.DMS_VEHICLESALE);
+        map.put("dms_repairorder", WebhookObjectTypeEnum.DMS_REPAIRORDER);
+        map.put("dms_appointment", WebhookObjectTypeEnum.DMS_APPOINTMENT);
+        map.put("dms_part", WebhookObjectTypeEnum.DMS_PART);
+        map.put("dms_partsale", WebhookObjectTypeEnum.DMS_PARTSALE);
+        map.put("dms_opcode", WebhookObjectTypeEnum.DMS_OPCODE);
+        map.put("printing_product", WebhookObjectTypeEnum.PRINTING_PRODUCT);
+        map.put("printing_template", WebhookObjectTypeEnum.PRINTING_TEMPLATE);
+        map.put("printing_file", WebhookObjectTypeEnum.PRINTING_FILE);
+        map.put("printing_quote", WebhookObjectTypeEnum.PRINTING_QUOTE);
+        map.put("printing_order", WebhookObjectTypeEnum.PRINTING_ORDER);
         return map;
     }
     
@@ -1092,7 +1128,19 @@ public class WebhookObjectType {
         QMS_ISSUE("qms_issue"),
         QMS_ACTION("qms_action"),
         QMS_INSPECTION("qms_inspection"),
-        QMS_AUDIT("qms_audit"),;
+        QMS_AUDIT("qms_audit"),
+        DMS_VEHICLE("dms_vehicle"),
+        DMS_VEHICLESALE("dms_vehiclesale"),
+        DMS_REPAIRORDER("dms_repairorder"),
+        DMS_APPOINTMENT("dms_appointment"),
+        DMS_PART("dms_part"),
+        DMS_PARTSALE("dms_partsale"),
+        DMS_OPCODE("dms_opcode"),
+        PRINTING_PRODUCT("printing_product"),
+        PRINTING_TEMPLATE("printing_template"),
+        PRINTING_FILE("printing_file"),
+        PRINTING_QUOTE("printing_quote"),
+        PRINTING_ORDER("printing_order"),;
 
         private final String value;
 

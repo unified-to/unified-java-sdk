@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateAtsInterviewRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAtsInterviewRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateAtsInterviewResponse;
@@ -31,6 +32,7 @@ import to.unified.unified_java_sdk.operations.PatchAtsInterview;
 import to.unified.unified_java_sdk.operations.RemoveAtsInterview;
 import to.unified.unified_java_sdk.operations.UpdateAtsInterview;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Interview {
@@ -75,8 +77,23 @@ public class Interview {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateAtsInterviewResponse createAtsInterview(@Nonnull CreateAtsInterviewRequest request) {
+        return createAtsInterview(request, null);
+    }
+
+    /**
+     * Create an interview
+     * 
+     * <p>Creates a AtsInterview. Provide the unified AtsInterview fields in the request body; they are mapped
+     * to the provider's API. Returns the created AtsInterview.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateAtsInterviewResponse createAtsInterview(@Nonnull CreateAtsInterviewRequest request, @Nullable Options options) {
         RequestOperation<CreateAtsInterviewRequest, CreateAtsInterviewResponse> operation
-              = new CreateAtsInterview.Sync(sdkConfiguration, _headers);
+              = new CreateAtsInterview.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -103,8 +120,23 @@ public class Interview {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAtsInterviewResponse getAtsInterview(@Nonnull GetAtsInterviewRequest request) {
+        return getAtsInterview(request, null);
+    }
+
+    /**
+     * Retrieve an interview
+     * 
+     * <p>Retrieves a single AtsInterview by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAtsInterviewResponse getAtsInterview(@Nonnull GetAtsInterviewRequest request, @Nullable Options options) {
         RequestOperation<GetAtsInterviewRequest, GetAtsInterviewResponse> operation
-              = new GetAtsInterview.Sync(sdkConfiguration, _headers);
+              = new GetAtsInterview.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -139,8 +171,27 @@ public class Interview {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAtsInterviewsResponse listAtsInterviews(@Nonnull ListAtsInterviewsRequest request) {
+        return listAtsInterviews(request, null);
+    }
+
+    /**
+     * List all interviews
+     * 
+     * <p>Returns a list of AtsInterviews. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAtsInterviewsResponse listAtsInterviews(@Nonnull ListAtsInterviewsRequest request, @Nullable Options options) {
         RequestOperation<ListAtsInterviewsRequest, ListAtsInterviewsResponse> operation
-              = new ListAtsInterviews.Sync(sdkConfiguration, _headers);
+              = new ListAtsInterviews.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +218,23 @@ public class Interview {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchAtsInterviewResponse patchAtsInterview(@Nonnull PatchAtsInterviewRequest request) {
+        return patchAtsInterview(request, null);
+    }
+
+    /**
+     * Update an interview
+     * 
+     * <p>Updates the AtsInterview identified by `id`. Provide the unified AtsInterview fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchAtsInterviewResponse patchAtsInterview(@Nonnull PatchAtsInterviewRequest request, @Nullable Options options) {
         RequestOperation<PatchAtsInterviewRequest, PatchAtsInterviewResponse> operation
-              = new PatchAtsInterview.Sync(sdkConfiguration, _headers);
+              = new PatchAtsInterview.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -193,8 +259,22 @@ public class Interview {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveAtsInterviewResponse removeAtsInterview(@Nonnull RemoveAtsInterviewRequest request) {
+        return removeAtsInterview(request, null);
+    }
+
+    /**
+     * Remove an interview
+     * 
+     * <p>Deletes the AtsInterview identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveAtsInterviewResponse removeAtsInterview(@Nonnull RemoveAtsInterviewRequest request, @Nullable Options options) {
         RequestOperation<RemoveAtsInterviewRequest, RemoveAtsInterviewResponse> operation
-              = new RemoveAtsInterview.Sync(sdkConfiguration, _headers);
+              = new RemoveAtsInterview.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -221,8 +301,23 @@ public class Interview {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateAtsInterviewResponse updateAtsInterview(@Nonnull UpdateAtsInterviewRequest request) {
+        return updateAtsInterview(request, null);
+    }
+
+    /**
+     * Update an interview
+     * 
+     * <p>Updates the AtsInterview identified by `id`. Provide the unified AtsInterview fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateAtsInterviewResponse updateAtsInterview(@Nonnull UpdateAtsInterviewRequest request, @Nullable Options options) {
         RequestOperation<UpdateAtsInterviewRequest, UpdateAtsInterviewResponse> operation
-              = new UpdateAtsInterview.Sync(sdkConfiguration, _headers);
+              = new UpdateAtsInterview.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

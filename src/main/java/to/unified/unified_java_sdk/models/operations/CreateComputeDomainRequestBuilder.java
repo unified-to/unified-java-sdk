@@ -6,18 +6,28 @@ package to.unified.unified_java_sdk.models.operations;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.CreateComputeDomain;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class CreateComputeDomainRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private CreateComputeDomainRequest request;
+    private final Options.Builder optionsBuilder;
 
     public CreateComputeDomainRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public CreateComputeDomainRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public CreateComputeDomainRequestBuilder request(@Nonnull CreateComputeDomainRequest request) {
@@ -42,8 +52,9 @@ public class CreateComputeDomainRequestBuilder {
     * @return The response from the server.
     */
     public CreateComputeDomainResponse call() {
+        Options options = optionsBuilder.build();
         RequestOperation<CreateComputeDomainRequest, CreateComputeDomainResponse> operation
-              = new CreateComputeDomain.Sync(sdkConfiguration, _headers);
+              = new CreateComputeDomain.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

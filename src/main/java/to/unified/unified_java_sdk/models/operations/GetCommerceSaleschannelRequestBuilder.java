@@ -6,18 +6,28 @@ package to.unified.unified_java_sdk.models.operations;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.GetCommerceSaleschannel;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetCommerceSaleschannelRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private GetCommerceSaleschannelRequest request;
+    private final Options.Builder optionsBuilder;
 
     public GetCommerceSaleschannelRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public GetCommerceSaleschannelRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public GetCommerceSaleschannelRequestBuilder request(@Nonnull GetCommerceSaleschannelRequest request) {
@@ -42,8 +52,9 @@ public class GetCommerceSaleschannelRequestBuilder {
     * @return The response from the server.
     */
     public GetCommerceSaleschannelResponse call() {
+        Options options = optionsBuilder.build();
         RequestOperation<GetCommerceSaleschannelRequest, GetCommerceSaleschannelResponse> operation
-              = new GetCommerceSaleschannel.Sync(sdkConfiguration, _headers);
+              = new GetCommerceSaleschannel.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

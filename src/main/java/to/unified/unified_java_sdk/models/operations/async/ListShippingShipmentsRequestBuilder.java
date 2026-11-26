@@ -6,20 +6,30 @@ package to.unified.unified_java_sdk.models.operations.async;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.ListShippingShipmentsRequest;
 import to.unified.unified_java_sdk.operations.ListShippingShipments;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListShippingShipmentsRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private ListShippingShipmentsRequest request;
+    private final Options.Builder optionsBuilder;
 
     public ListShippingShipmentsRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public ListShippingShipmentsRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public ListShippingShipmentsRequestBuilder request(@Nonnull ListShippingShipmentsRequest request) {
@@ -44,8 +54,9 @@ public class ListShippingShipmentsRequestBuilder {
     * @return The response from the server.
     */
     public CompletableFuture<ListShippingShipmentsResponse> call() {
+        Options options = optionsBuilder.build();
         AsyncRequestOperation<ListShippingShipmentsRequest, ListShippingShipmentsResponse> operation
-              = new ListShippingShipments.Async(sdkConfiguration, _headers);
+              = new ListShippingShipments.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

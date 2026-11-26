@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateShippingLabelRequest;
 import to.unified.unified_java_sdk.models.operations.CreateShippingRateRequest;
@@ -76,6 +77,7 @@ import to.unified.unified_java_sdk.operations.RemoveShippingShipment;
 import to.unified.unified_java_sdk.operations.UpdateShippingLabel;
 import to.unified.unified_java_sdk.operations.UpdateShippingShipment;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncShipping {
@@ -120,8 +122,22 @@ public class AsyncShipping {
      * @return {@code CompletableFuture<CreateShippingLabelResponse>} - The async response
      */
     public CompletableFuture<CreateShippingLabelResponse> createShippingLabel(@Nonnull CreateShippingLabelRequest request) {
+        return createShippingLabel(request, null);
+    }
+
+    /**
+     * Create a label
+     * 
+     * <p>Creates a ShippingLabel. Provide the unified ShippingLabel fields in the request body; they are
+     * mapped to the provider's API. Returns the created ShippingLabel.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateShippingLabelResponse>} - The async response
+     */
+    public CompletableFuture<CreateShippingLabelResponse> createShippingLabel(@Nonnull CreateShippingLabelRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateShippingLabelRequest, CreateShippingLabelResponse> operation
-              = new CreateShippingLabel.Async(sdkConfiguration, _headers);
+              = new CreateShippingLabel.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -149,8 +165,22 @@ public class AsyncShipping {
      * @return {@code CompletableFuture<CreateShippingRateResponse>} - The async response
      */
     public CompletableFuture<CreateShippingRateResponse> createShippingRate(@Nonnull CreateShippingRateRequest request) {
+        return createShippingRate(request, null);
+    }
+
+    /**
+     * Create a rate
+     * 
+     * <p>Creates a ShippingRate. Provide the unified ShippingRate fields in the request body; they are mapped
+     * to the provider's API. Returns the created ShippingRate.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateShippingRateResponse>} - The async response
+     */
+    public CompletableFuture<CreateShippingRateResponse> createShippingRate(@Nonnull CreateShippingRateRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateShippingRateRequest, CreateShippingRateResponse> operation
-              = new CreateShippingRate.Async(sdkConfiguration, _headers);
+              = new CreateShippingRate.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -178,8 +208,22 @@ public class AsyncShipping {
      * @return {@code CompletableFuture<CreateShippingShipmentResponse>} - The async response
      */
     public CompletableFuture<CreateShippingShipmentResponse> createShippingShipment(@Nonnull CreateShippingShipmentRequest request) {
+        return createShippingShipment(request, null);
+    }
+
+    /**
+     * Create a shipment
+     * 
+     * <p>Creates a ShippingShipment. Provide the unified ShippingShipment fields in the request body; they
+     * are mapped to the provider's API. Returns the created ShippingShipment.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateShippingShipmentResponse>} - The async response
+     */
+    public CompletableFuture<CreateShippingShipmentResponse> createShippingShipment(@Nonnull CreateShippingShipmentRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateShippingShipmentRequest, CreateShippingShipmentResponse> operation
-              = new CreateShippingShipment.Async(sdkConfiguration, _headers);
+              = new CreateShippingShipment.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -207,8 +251,22 @@ public class AsyncShipping {
      * @return {@code CompletableFuture<GetShippingCarrierResponse>} - The async response
      */
     public CompletableFuture<GetShippingCarrierResponse> getShippingCarrier(@Nonnull GetShippingCarrierRequest request) {
+        return getShippingCarrier(request, null);
+    }
+
+    /**
+     * Retrieve a carrier
+     * 
+     * <p>Retrieves a single ShippingCarrier by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetShippingCarrierResponse>} - The async response
+     */
+    public CompletableFuture<GetShippingCarrierResponse> getShippingCarrier(@Nonnull GetShippingCarrierRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetShippingCarrierRequest, GetShippingCarrierResponse> operation
-              = new GetShippingCarrier.Async(sdkConfiguration, _headers);
+              = new GetShippingCarrier.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -236,8 +294,22 @@ public class AsyncShipping {
      * @return {@code CompletableFuture<GetShippingLabelResponse>} - The async response
      */
     public CompletableFuture<GetShippingLabelResponse> getShippingLabel(@Nonnull GetShippingLabelRequest request) {
+        return getShippingLabel(request, null);
+    }
+
+    /**
+     * Retrieve a label
+     * 
+     * <p>Retrieves a single ShippingLabel by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetShippingLabelResponse>} - The async response
+     */
+    public CompletableFuture<GetShippingLabelResponse> getShippingLabel(@Nonnull GetShippingLabelRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetShippingLabelRequest, GetShippingLabelResponse> operation
-              = new GetShippingLabel.Async(sdkConfiguration, _headers);
+              = new GetShippingLabel.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -265,8 +337,22 @@ public class AsyncShipping {
      * @return {@code CompletableFuture<GetShippingShipmentResponse>} - The async response
      */
     public CompletableFuture<GetShippingShipmentResponse> getShippingShipment(@Nonnull GetShippingShipmentRequest request) {
+        return getShippingShipment(request, null);
+    }
+
+    /**
+     * Retrieve a shipment
+     * 
+     * <p>Retrieves a single ShippingShipment by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetShippingShipmentResponse>} - The async response
+     */
+    public CompletableFuture<GetShippingShipmentResponse> getShippingShipment(@Nonnull GetShippingShipmentRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetShippingShipmentRequest, GetShippingShipmentResponse> operation
-              = new GetShippingShipment.Async(sdkConfiguration, _headers);
+              = new GetShippingShipment.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -294,8 +380,22 @@ public class AsyncShipping {
      * @return {@code CompletableFuture<GetShippingTrackingResponse>} - The async response
      */
     public CompletableFuture<GetShippingTrackingResponse> getShippingTracking(@Nonnull GetShippingTrackingRequest request) {
+        return getShippingTracking(request, null);
+    }
+
+    /**
+     * Retrieve a tracking
+     * 
+     * <p>Retrieves a single ShippingTracking by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetShippingTrackingResponse>} - The async response
+     */
+    public CompletableFuture<GetShippingTrackingResponse> getShippingTracking(@Nonnull GetShippingTrackingRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetShippingTrackingRequest, GetShippingTrackingResponse> operation
-              = new GetShippingTracking.Async(sdkConfiguration, _headers);
+              = new GetShippingTracking.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -331,8 +431,26 @@ public class AsyncShipping {
      * @return {@code CompletableFuture<ListShippingCarriersResponse>} - The async response
      */
     public CompletableFuture<ListShippingCarriersResponse> listShippingCarriers(@Nonnull ListShippingCarriersRequest request) {
+        return listShippingCarriers(request, null);
+    }
+
+    /**
+     * List all carriers
+     * 
+     * <p>Returns a list of ShippingCarriers. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListShippingCarriersResponse>} - The async response
+     */
+    public CompletableFuture<ListShippingCarriersResponse> listShippingCarriers(@Nonnull ListShippingCarriersRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListShippingCarriersRequest, ListShippingCarriersResponse> operation
-              = new ListShippingCarriers.Async(sdkConfiguration, _headers);
+              = new ListShippingCarriers.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -368,8 +486,26 @@ public class AsyncShipping {
      * @return {@code CompletableFuture<ListShippingLabelsResponse>} - The async response
      */
     public CompletableFuture<ListShippingLabelsResponse> listShippingLabels(@Nonnull ListShippingLabelsRequest request) {
+        return listShippingLabels(request, null);
+    }
+
+    /**
+     * List all labels
+     * 
+     * <p>Returns a list of ShippingLabels. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListShippingLabelsResponse>} - The async response
+     */
+    public CompletableFuture<ListShippingLabelsResponse> listShippingLabels(@Nonnull ListShippingLabelsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListShippingLabelsRequest, ListShippingLabelsResponse> operation
-              = new ListShippingLabels.Async(sdkConfiguration, _headers);
+              = new ListShippingLabels.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -405,8 +541,26 @@ public class AsyncShipping {
      * @return {@code CompletableFuture<ListShippingShipmentsResponse>} - The async response
      */
     public CompletableFuture<ListShippingShipmentsResponse> listShippingShipments(@Nonnull ListShippingShipmentsRequest request) {
+        return listShippingShipments(request, null);
+    }
+
+    /**
+     * List all shipments
+     * 
+     * <p>Returns a list of ShippingShipments. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListShippingShipmentsResponse>} - The async response
+     */
+    public CompletableFuture<ListShippingShipmentsResponse> listShippingShipments(@Nonnull ListShippingShipmentsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListShippingShipmentsRequest, ListShippingShipmentsResponse> operation
-              = new ListShippingShipments.Async(sdkConfiguration, _headers);
+              = new ListShippingShipments.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -442,8 +596,26 @@ public class AsyncShipping {
      * @return {@code CompletableFuture<ListShippingTrackingsResponse>} - The async response
      */
     public CompletableFuture<ListShippingTrackingsResponse> listShippingTrackings(@Nonnull ListShippingTrackingsRequest request) {
+        return listShippingTrackings(request, null);
+    }
+
+    /**
+     * List all trackings
+     * 
+     * <p>Returns a list of ShippingTrackings. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListShippingTrackingsResponse>} - The async response
+     */
+    public CompletableFuture<ListShippingTrackingsResponse> listShippingTrackings(@Nonnull ListShippingTrackingsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListShippingTrackingsRequest, ListShippingTrackingsResponse> operation
-              = new ListShippingTrackings.Async(sdkConfiguration, _headers);
+              = new ListShippingTrackings.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -471,8 +643,22 @@ public class AsyncShipping {
      * @return {@code CompletableFuture<PatchShippingLabelResponse>} - The async response
      */
     public CompletableFuture<PatchShippingLabelResponse> patchShippingLabel(@Nonnull PatchShippingLabelRequest request) {
+        return patchShippingLabel(request, null);
+    }
+
+    /**
+     * Update a label
+     * 
+     * <p>Updates the ShippingLabel identified by `id`. Provide the unified ShippingLabel fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchShippingLabelResponse>} - The async response
+     */
+    public CompletableFuture<PatchShippingLabelResponse> patchShippingLabel(@Nonnull PatchShippingLabelRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchShippingLabelRequest, PatchShippingLabelResponse> operation
-              = new PatchShippingLabel.Async(sdkConfiguration, _headers);
+              = new PatchShippingLabel.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -500,8 +686,22 @@ public class AsyncShipping {
      * @return {@code CompletableFuture<PatchShippingShipmentResponse>} - The async response
      */
     public CompletableFuture<PatchShippingShipmentResponse> patchShippingShipment(@Nonnull PatchShippingShipmentRequest request) {
+        return patchShippingShipment(request, null);
+    }
+
+    /**
+     * Update a shipment
+     * 
+     * <p>Updates the ShippingShipment identified by `id`. Provide the unified ShippingShipment fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchShippingShipmentResponse>} - The async response
+     */
+    public CompletableFuture<PatchShippingShipmentResponse> patchShippingShipment(@Nonnull PatchShippingShipmentRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchShippingShipmentRequest, PatchShippingShipmentResponse> operation
-              = new PatchShippingShipment.Async(sdkConfiguration, _headers);
+              = new PatchShippingShipment.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -527,8 +727,21 @@ public class AsyncShipping {
      * @return {@code CompletableFuture<RemoveShippingLabelResponse>} - The async response
      */
     public CompletableFuture<RemoveShippingLabelResponse> removeShippingLabel(@Nonnull RemoveShippingLabelRequest request) {
+        return removeShippingLabel(request, null);
+    }
+
+    /**
+     * Remove a label
+     * 
+     * <p>Deletes the ShippingLabel identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveShippingLabelResponse>} - The async response
+     */
+    public CompletableFuture<RemoveShippingLabelResponse> removeShippingLabel(@Nonnull RemoveShippingLabelRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveShippingLabelRequest, RemoveShippingLabelResponse> operation
-              = new RemoveShippingLabel.Async(sdkConfiguration, _headers);
+              = new RemoveShippingLabel.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -554,8 +767,21 @@ public class AsyncShipping {
      * @return {@code CompletableFuture<RemoveShippingShipmentResponse>} - The async response
      */
     public CompletableFuture<RemoveShippingShipmentResponse> removeShippingShipment(@Nonnull RemoveShippingShipmentRequest request) {
+        return removeShippingShipment(request, null);
+    }
+
+    /**
+     * Remove a shipment
+     * 
+     * <p>Deletes the ShippingShipment identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveShippingShipmentResponse>} - The async response
+     */
+    public CompletableFuture<RemoveShippingShipmentResponse> removeShippingShipment(@Nonnull RemoveShippingShipmentRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveShippingShipmentRequest, RemoveShippingShipmentResponse> operation
-              = new RemoveShippingShipment.Async(sdkConfiguration, _headers);
+              = new RemoveShippingShipment.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -583,8 +809,22 @@ public class AsyncShipping {
      * @return {@code CompletableFuture<UpdateShippingLabelResponse>} - The async response
      */
     public CompletableFuture<UpdateShippingLabelResponse> updateShippingLabel(@Nonnull UpdateShippingLabelRequest request) {
+        return updateShippingLabel(request, null);
+    }
+
+    /**
+     * Update a label
+     * 
+     * <p>Updates the ShippingLabel identified by `id`. Provide the unified ShippingLabel fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateShippingLabelResponse>} - The async response
+     */
+    public CompletableFuture<UpdateShippingLabelResponse> updateShippingLabel(@Nonnull UpdateShippingLabelRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateShippingLabelRequest, UpdateShippingLabelResponse> operation
-              = new UpdateShippingLabel.Async(sdkConfiguration, _headers);
+              = new UpdateShippingLabel.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -612,8 +852,22 @@ public class AsyncShipping {
      * @return {@code CompletableFuture<UpdateShippingShipmentResponse>} - The async response
      */
     public CompletableFuture<UpdateShippingShipmentResponse> updateShippingShipment(@Nonnull UpdateShippingShipmentRequest request) {
+        return updateShippingShipment(request, null);
+    }
+
+    /**
+     * Update a shipment
+     * 
+     * <p>Updates the ShippingShipment identified by `id`. Provide the unified ShippingShipment fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateShippingShipmentResponse>} - The async response
+     */
+    public CompletableFuture<UpdateShippingShipmentResponse> updateShippingShipment(@Nonnull UpdateShippingShipmentRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateShippingShipmentRequest, UpdateShippingShipmentResponse> operation
-              = new UpdateShippingShipment.Async(sdkConfiguration, _headers);
+              = new UpdateShippingShipment.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

@@ -6,20 +6,30 @@ package to.unified.unified_java_sdk.models.operations.async;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.GetAdsOrganizationRequest;
 import to.unified.unified_java_sdk.operations.GetAdsOrganization;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetAdsOrganizationRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private GetAdsOrganizationRequest request;
+    private final Options.Builder optionsBuilder;
 
     public GetAdsOrganizationRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public GetAdsOrganizationRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public GetAdsOrganizationRequestBuilder request(@Nonnull GetAdsOrganizationRequest request) {
@@ -44,8 +54,9 @@ public class GetAdsOrganizationRequestBuilder {
     * @return The response from the server.
     */
     public CompletableFuture<GetAdsOrganizationResponse> call() {
+        Options options = optionsBuilder.build();
         AsyncRequestOperation<GetAdsOrganizationRequest, GetAdsOrganizationResponse> operation
-              = new GetAdsOrganization.Async(sdkConfiguration, _headers);
+              = new GetAdsOrganization.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

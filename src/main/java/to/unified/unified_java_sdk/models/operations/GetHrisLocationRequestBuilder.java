@@ -6,18 +6,28 @@ package to.unified.unified_java_sdk.models.operations;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.GetHrisLocation;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetHrisLocationRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private GetHrisLocationRequest request;
+    private final Options.Builder optionsBuilder;
 
     public GetHrisLocationRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public GetHrisLocationRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public GetHrisLocationRequestBuilder request(@Nonnull GetHrisLocationRequest request) {
@@ -42,8 +52,9 @@ public class GetHrisLocationRequestBuilder {
     * @return The response from the server.
     */
     public GetHrisLocationResponse call() {
+        Options options = optionsBuilder.build();
         RequestOperation<GetHrisLocationRequest, GetHrisLocationResponse> operation
-              = new GetHrisLocation.Sync(sdkConfiguration, _headers);
+              = new GetHrisLocation.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

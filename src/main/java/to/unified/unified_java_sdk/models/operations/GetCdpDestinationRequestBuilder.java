@@ -6,18 +6,28 @@ package to.unified.unified_java_sdk.models.operations;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.GetCdpDestination;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetCdpDestinationRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private GetCdpDestinationRequest request;
+    private final Options.Builder optionsBuilder;
 
     public GetCdpDestinationRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public GetCdpDestinationRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public GetCdpDestinationRequestBuilder request(@Nonnull GetCdpDestinationRequest request) {
@@ -42,8 +52,9 @@ public class GetCdpDestinationRequestBuilder {
     * @return The response from the server.
     */
     public GetCdpDestinationResponse call() {
+        Options options = optionsBuilder.build();
         RequestOperation<GetCdpDestinationRequest, GetCdpDestinationResponse> operation
-              = new GetCdpDestination.Sync(sdkConfiguration, _headers);
+              = new GetCdpDestination.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateAtsApplicationRequest;
 import to.unified.unified_java_sdk.models.operations.GetAtsApplicationRequest;
@@ -32,6 +33,7 @@ import to.unified.unified_java_sdk.operations.PatchAtsApplication;
 import to.unified.unified_java_sdk.operations.RemoveAtsApplication;
 import to.unified.unified_java_sdk.operations.UpdateAtsApplication;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncApplication {
@@ -76,8 +78,22 @@ public class AsyncApplication {
      * @return {@code CompletableFuture<CreateAtsApplicationResponse>} - The async response
      */
     public CompletableFuture<CreateAtsApplicationResponse> createAtsApplication(@Nonnull CreateAtsApplicationRequest request) {
+        return createAtsApplication(request, null);
+    }
+
+    /**
+     * Create an application
+     * 
+     * <p>Creates a AtsApplication. Provide the unified AtsApplication fields in the request body; they are
+     * mapped to the provider's API. Returns the created AtsApplication.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateAtsApplicationResponse>} - The async response
+     */
+    public CompletableFuture<CreateAtsApplicationResponse> createAtsApplication(@Nonnull CreateAtsApplicationRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateAtsApplicationRequest, CreateAtsApplicationResponse> operation
-              = new CreateAtsApplication.Async(sdkConfiguration, _headers);
+              = new CreateAtsApplication.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -105,8 +121,22 @@ public class AsyncApplication {
      * @return {@code CompletableFuture<GetAtsApplicationResponse>} - The async response
      */
     public CompletableFuture<GetAtsApplicationResponse> getAtsApplication(@Nonnull GetAtsApplicationRequest request) {
+        return getAtsApplication(request, null);
+    }
+
+    /**
+     * Retrieve an application
+     * 
+     * <p>Retrieves a single AtsApplication by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetAtsApplicationResponse>} - The async response
+     */
+    public CompletableFuture<GetAtsApplicationResponse> getAtsApplication(@Nonnull GetAtsApplicationRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetAtsApplicationRequest, GetAtsApplicationResponse> operation
-              = new GetAtsApplication.Async(sdkConfiguration, _headers);
+              = new GetAtsApplication.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -142,8 +172,26 @@ public class AsyncApplication {
      * @return {@code CompletableFuture<ListAtsApplicationsResponse>} - The async response
      */
     public CompletableFuture<ListAtsApplicationsResponse> listAtsApplications(@Nonnull ListAtsApplicationsRequest request) {
+        return listAtsApplications(request, null);
+    }
+
+    /**
+     * List all applications
+     * 
+     * <p>Returns a list of AtsApplications. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListAtsApplicationsResponse>} - The async response
+     */
+    public CompletableFuture<ListAtsApplicationsResponse> listAtsApplications(@Nonnull ListAtsApplicationsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListAtsApplicationsRequest, ListAtsApplicationsResponse> operation
-              = new ListAtsApplications.Async(sdkConfiguration, _headers);
+              = new ListAtsApplications.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -171,8 +219,22 @@ public class AsyncApplication {
      * @return {@code CompletableFuture<PatchAtsApplicationResponse>} - The async response
      */
     public CompletableFuture<PatchAtsApplicationResponse> patchAtsApplication(@Nonnull PatchAtsApplicationRequest request) {
+        return patchAtsApplication(request, null);
+    }
+
+    /**
+     * Update an application
+     * 
+     * <p>Updates the AtsApplication identified by `id`. Provide the unified AtsApplication fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchAtsApplicationResponse>} - The async response
+     */
+    public CompletableFuture<PatchAtsApplicationResponse> patchAtsApplication(@Nonnull PatchAtsApplicationRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchAtsApplicationRequest, PatchAtsApplicationResponse> operation
-              = new PatchAtsApplication.Async(sdkConfiguration, _headers);
+              = new PatchAtsApplication.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -198,8 +260,21 @@ public class AsyncApplication {
      * @return {@code CompletableFuture<RemoveAtsApplicationResponse>} - The async response
      */
     public CompletableFuture<RemoveAtsApplicationResponse> removeAtsApplication(@Nonnull RemoveAtsApplicationRequest request) {
+        return removeAtsApplication(request, null);
+    }
+
+    /**
+     * Remove an application
+     * 
+     * <p>Deletes the AtsApplication identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveAtsApplicationResponse>} - The async response
+     */
+    public CompletableFuture<RemoveAtsApplicationResponse> removeAtsApplication(@Nonnull RemoveAtsApplicationRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveAtsApplicationRequest, RemoveAtsApplicationResponse> operation
-              = new RemoveAtsApplication.Async(sdkConfiguration, _headers);
+              = new RemoveAtsApplication.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -227,8 +302,22 @@ public class AsyncApplication {
      * @return {@code CompletableFuture<UpdateAtsApplicationResponse>} - The async response
      */
     public CompletableFuture<UpdateAtsApplicationResponse> updateAtsApplication(@Nonnull UpdateAtsApplicationRequest request) {
+        return updateAtsApplication(request, null);
+    }
+
+    /**
+     * Update an application
+     * 
+     * <p>Updates the AtsApplication identified by `id`. Provide the unified AtsApplication fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateAtsApplicationResponse>} - The async response
+     */
+    public CompletableFuture<UpdateAtsApplicationResponse> updateAtsApplication(@Nonnull UpdateAtsApplicationRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateAtsApplicationRequest, UpdateAtsApplicationResponse> operation
-              = new UpdateAtsApplication.Async(sdkConfiguration, _headers);
+              = new UpdateAtsApplication.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

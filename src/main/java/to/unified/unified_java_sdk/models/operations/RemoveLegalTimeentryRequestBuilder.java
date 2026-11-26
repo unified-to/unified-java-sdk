@@ -6,18 +6,28 @@ package to.unified.unified_java_sdk.models.operations;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.RemoveLegalTimeentry;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveLegalTimeentryRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private RemoveLegalTimeentryRequest request;
+    private final Options.Builder optionsBuilder;
 
     public RemoveLegalTimeentryRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public RemoveLegalTimeentryRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public RemoveLegalTimeentryRequestBuilder request(@Nonnull RemoveLegalTimeentryRequest request) {
@@ -42,8 +52,9 @@ public class RemoveLegalTimeentryRequestBuilder {
     * @return The response from the server.
     */
     public RemoveLegalTimeentryResponse call() {
+        Options options = optionsBuilder.build();
         RequestOperation<RemoveLegalTimeentryRequest, RemoveLegalTimeentryResponse> operation
-              = new RemoveLegalTimeentry.Sync(sdkConfiguration, _headers);
+              = new RemoveLegalTimeentry.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

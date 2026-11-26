@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.GetShippingCarrierRequest;
 import to.unified.unified_java_sdk.models.operations.GetShippingCarrierRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetShippingCarrierResponse;
@@ -15,6 +16,7 @@ import to.unified.unified_java_sdk.models.operations.ListShippingCarriersRespons
 import to.unified.unified_java_sdk.operations.GetShippingCarrier;
 import to.unified.unified_java_sdk.operations.ListShippingCarriers;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Carrier {
@@ -59,8 +61,23 @@ public class Carrier {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetShippingCarrierResponse getShippingCarrier(@Nonnull GetShippingCarrierRequest request) {
+        return getShippingCarrier(request, null);
+    }
+
+    /**
+     * Retrieve a carrier
+     * 
+     * <p>Retrieves a single ShippingCarrier by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetShippingCarrierResponse getShippingCarrier(@Nonnull GetShippingCarrierRequest request, @Nullable Options options) {
         RequestOperation<GetShippingCarrierRequest, GetShippingCarrierResponse> operation
-              = new GetShippingCarrier.Sync(sdkConfiguration, _headers);
+              = new GetShippingCarrier.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -95,8 +112,27 @@ public class Carrier {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListShippingCarriersResponse listShippingCarriers(@Nonnull ListShippingCarriersRequest request) {
+        return listShippingCarriers(request, null);
+    }
+
+    /**
+     * List all carriers
+     * 
+     * <p>Returns a list of ShippingCarriers. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListShippingCarriersResponse listShippingCarriers(@Nonnull ListShippingCarriersRequest request, @Nullable Options options) {
         RequestOperation<ListShippingCarriersRequest, ListShippingCarriersResponse> operation
-              = new ListShippingCarriers.Sync(sdkConfiguration, _headers);
+              = new ListShippingCarriers.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

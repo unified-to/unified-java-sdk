@@ -6,18 +6,28 @@ package to.unified.unified_java_sdk.models.operations;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.RemoveAnalyticsProperty;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveAnalyticsPropertyRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private RemoveAnalyticsPropertyRequest request;
+    private final Options.Builder optionsBuilder;
 
     public RemoveAnalyticsPropertyRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public RemoveAnalyticsPropertyRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public RemoveAnalyticsPropertyRequestBuilder request(@Nonnull RemoveAnalyticsPropertyRequest request) {
@@ -42,8 +52,9 @@ public class RemoveAnalyticsPropertyRequestBuilder {
     * @return The response from the server.
     */
     public RemoveAnalyticsPropertyResponse call() {
+        Options options = optionsBuilder.build();
         RequestOperation<RemoveAnalyticsPropertyRequest, RemoveAnalyticsPropertyResponse> operation
-              = new RemoveAnalyticsProperty.Sync(sdkConfiguration, _headers);
+              = new RemoveAnalyticsProperty.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

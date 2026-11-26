@@ -6,18 +6,28 @@ package to.unified.unified_java_sdk.models.operations;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.RemoveCommerceItemvariant;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveCommerceItemvariantRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private RemoveCommerceItemvariantRequest request;
+    private final Options.Builder optionsBuilder;
 
     public RemoveCommerceItemvariantRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public RemoveCommerceItemvariantRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public RemoveCommerceItemvariantRequestBuilder request(@Nonnull RemoveCommerceItemvariantRequest request) {
@@ -42,8 +52,9 @@ public class RemoveCommerceItemvariantRequestBuilder {
     * @return The response from the server.
     */
     public RemoveCommerceItemvariantResponse call() {
+        Options options = optionsBuilder.build();
         RequestOperation<RemoveCommerceItemvariantRequest, RemoveCommerceItemvariantResponse> operation
-              = new RemoveCommerceItemvariant.Sync(sdkConfiguration, _headers);
+              = new RemoveCommerceItemvariant.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

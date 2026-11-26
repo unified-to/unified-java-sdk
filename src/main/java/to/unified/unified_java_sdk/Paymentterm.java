@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingPaymenttermRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingPaymenttermRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingPaymenttermResponse;
@@ -31,6 +32,7 @@ import to.unified.unified_java_sdk.operations.PatchAccountingPaymentterm;
 import to.unified.unified_java_sdk.operations.RemoveAccountingPaymentterm;
 import to.unified.unified_java_sdk.operations.UpdateAccountingPaymentterm;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Paymentterm {
@@ -75,8 +77,23 @@ public class Paymentterm {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateAccountingPaymenttermResponse createAccountingPaymentterm(@Nonnull CreateAccountingPaymenttermRequest request) {
+        return createAccountingPaymentterm(request, null);
+    }
+
+    /**
+     * Create a paymentterm
+     * 
+     * <p>Creates a AccountingPaymentterm. Provide the unified AccountingPaymentterm fields in the request
+     * body; they are mapped to the provider's API. Returns the created AccountingPaymentterm.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateAccountingPaymenttermResponse createAccountingPaymentterm(@Nonnull CreateAccountingPaymenttermRequest request, @Nullable Options options) {
         RequestOperation<CreateAccountingPaymenttermRequest, CreateAccountingPaymenttermResponse> operation
-              = new CreateAccountingPaymentterm.Sync(sdkConfiguration, _headers);
+              = new CreateAccountingPaymentterm.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -103,8 +120,23 @@ public class Paymentterm {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAccountingPaymenttermResponse getAccountingPaymentterm(@Nonnull GetAccountingPaymenttermRequest request) {
+        return getAccountingPaymentterm(request, null);
+    }
+
+    /**
+     * Retrieve a paymentterm
+     * 
+     * <p>Retrieves a single AccountingPaymentterm by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAccountingPaymenttermResponse getAccountingPaymentterm(@Nonnull GetAccountingPaymenttermRequest request, @Nullable Options options) {
         RequestOperation<GetAccountingPaymenttermRequest, GetAccountingPaymenttermResponse> operation
-              = new GetAccountingPaymentterm.Sync(sdkConfiguration, _headers);
+              = new GetAccountingPaymentterm.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -139,8 +171,27 @@ public class Paymentterm {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAccountingPaymenttermsResponse listAccountingPaymentterms(@Nonnull ListAccountingPaymenttermsRequest request) {
+        return listAccountingPaymentterms(request, null);
+    }
+
+    /**
+     * List all paymentterms
+     * 
+     * <p>Returns a list of AccountingPaymentterms. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAccountingPaymenttermsResponse listAccountingPaymentterms(@Nonnull ListAccountingPaymenttermsRequest request, @Nullable Options options) {
         RequestOperation<ListAccountingPaymenttermsRequest, ListAccountingPaymenttermsResponse> operation
-              = new ListAccountingPaymentterms.Sync(sdkConfiguration, _headers);
+              = new ListAccountingPaymentterms.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +218,23 @@ public class Paymentterm {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchAccountingPaymenttermResponse patchAccountingPaymentterm(@Nonnull PatchAccountingPaymenttermRequest request) {
+        return patchAccountingPaymentterm(request, null);
+    }
+
+    /**
+     * Update a paymentterm
+     * 
+     * <p>Updates the AccountingPaymentterm identified by `id`. Provide the unified AccountingPaymentterm
+     * fields to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchAccountingPaymenttermResponse patchAccountingPaymentterm(@Nonnull PatchAccountingPaymenttermRequest request, @Nullable Options options) {
         RequestOperation<PatchAccountingPaymenttermRequest, PatchAccountingPaymenttermResponse> operation
-              = new PatchAccountingPaymentterm.Sync(sdkConfiguration, _headers);
+              = new PatchAccountingPaymentterm.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -193,8 +259,22 @@ public class Paymentterm {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveAccountingPaymenttermResponse removeAccountingPaymentterm(@Nonnull RemoveAccountingPaymenttermRequest request) {
+        return removeAccountingPaymentterm(request, null);
+    }
+
+    /**
+     * Remove a paymentterm
+     * 
+     * <p>Deletes the AccountingPaymentterm identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveAccountingPaymenttermResponse removeAccountingPaymentterm(@Nonnull RemoveAccountingPaymenttermRequest request, @Nullable Options options) {
         RequestOperation<RemoveAccountingPaymenttermRequest, RemoveAccountingPaymenttermResponse> operation
-              = new RemoveAccountingPaymentterm.Sync(sdkConfiguration, _headers);
+              = new RemoveAccountingPaymentterm.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -221,8 +301,23 @@ public class Paymentterm {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateAccountingPaymenttermResponse updateAccountingPaymentterm(@Nonnull UpdateAccountingPaymenttermRequest request) {
+        return updateAccountingPaymentterm(request, null);
+    }
+
+    /**
+     * Update a paymentterm
+     * 
+     * <p>Updates the AccountingPaymentterm identified by `id`. Provide the unified AccountingPaymentterm
+     * fields to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateAccountingPaymenttermResponse updateAccountingPaymentterm(@Nonnull UpdateAccountingPaymenttermRequest request, @Nullable Options options) {
         RequestOperation<UpdateAccountingPaymenttermRequest, UpdateAccountingPaymenttermResponse> operation
-              = new UpdateAccountingPaymentterm.Sync(sdkConfiguration, _headers);
+              = new UpdateAccountingPaymentterm.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

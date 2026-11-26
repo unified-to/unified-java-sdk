@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateLmsActivityRequest;
 import to.unified.unified_java_sdk.models.operations.CreateLmsActivityRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateLmsActivityResponse;
@@ -175,6 +176,7 @@ import to.unified.unified_java_sdk.operations.UpdateLmsCourse;
 import to.unified.unified_java_sdk.operations.UpdateLmsInstructor;
 import to.unified.unified_java_sdk.operations.UpdateLmsStudent;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Lms {
@@ -219,8 +221,23 @@ public class Lms {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateLmsActivityResponse createLmsActivity(@Nonnull CreateLmsActivityRequest request) {
+        return createLmsActivity(request, null);
+    }
+
+    /**
+     * Create an activity
+     * 
+     * <p>Creates a LmsActivity. Provide the unified LmsActivity fields in the request body; they are mapped
+     * to the provider's API. Returns the created LmsActivity.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateLmsActivityResponse createLmsActivity(@Nonnull CreateLmsActivityRequest request, @Nullable Options options) {
         RequestOperation<CreateLmsActivityRequest, CreateLmsActivityResponse> operation
-              = new CreateLmsActivity.Sync(sdkConfiguration, _headers);
+              = new CreateLmsActivity.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -247,8 +264,23 @@ public class Lms {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateLmsClassResponse createLmsClass(@Nonnull CreateLmsClassRequest request) {
+        return createLmsClass(request, null);
+    }
+
+    /**
+     * Create a class
+     * 
+     * <p>Creates a LmsClass. Provide the unified LmsClass fields in the request body; they are mapped to the
+     * provider's API. Returns the created LmsClass.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateLmsClassResponse createLmsClass(@Nonnull CreateLmsClassRequest request, @Nullable Options options) {
         RequestOperation<CreateLmsClassRequest, CreateLmsClassResponse> operation
-              = new CreateLmsClass.Sync(sdkConfiguration, _headers);
+              = new CreateLmsClass.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -275,8 +307,23 @@ public class Lms {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateLmsCollectionResponse createLmsCollection(@Nonnull CreateLmsCollectionRequest request) {
+        return createLmsCollection(request, null);
+    }
+
+    /**
+     * Create a collection
+     * 
+     * <p>Creates a LmsCollection. Provide the unified LmsCollection fields in the request body; they are
+     * mapped to the provider's API. Returns the created LmsCollection.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateLmsCollectionResponse createLmsCollection(@Nonnull CreateLmsCollectionRequest request, @Nullable Options options) {
         RequestOperation<CreateLmsCollectionRequest, CreateLmsCollectionResponse> operation
-              = new CreateLmsCollection.Sync(sdkConfiguration, _headers);
+              = new CreateLmsCollection.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -303,8 +350,23 @@ public class Lms {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateLmsContentResponse createLmsContent(@Nonnull CreateLmsContentRequest request) {
+        return createLmsContent(request, null);
+    }
+
+    /**
+     * Create a content
+     * 
+     * <p>Creates a LmsContent. Provide the unified LmsContent fields in the request body; they are mapped to
+     * the provider's API. Returns the created LmsContent.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateLmsContentResponse createLmsContent(@Nonnull CreateLmsContentRequest request, @Nullable Options options) {
         RequestOperation<CreateLmsContentRequest, CreateLmsContentResponse> operation
-              = new CreateLmsContent.Sync(sdkConfiguration, _headers);
+              = new CreateLmsContent.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -331,8 +393,23 @@ public class Lms {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateLmsCourseResponse createLmsCourse(@Nonnull CreateLmsCourseRequest request) {
+        return createLmsCourse(request, null);
+    }
+
+    /**
+     * Create a course
+     * 
+     * <p>Creates a LmsCourse. Provide the unified LmsCourse fields in the request body; they are mapped to
+     * the provider's API. Returns the created LmsCourse.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateLmsCourseResponse createLmsCourse(@Nonnull CreateLmsCourseRequest request, @Nullable Options options) {
         RequestOperation<CreateLmsCourseRequest, CreateLmsCourseResponse> operation
-              = new CreateLmsCourse.Sync(sdkConfiguration, _headers);
+              = new CreateLmsCourse.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -359,8 +436,23 @@ public class Lms {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateLmsInstructorResponse createLmsInstructor(@Nonnull CreateLmsInstructorRequest request) {
+        return createLmsInstructor(request, null);
+    }
+
+    /**
+     * Create an instructor
+     * 
+     * <p>Creates a LmsInstructor. Provide the unified LmsInstructor fields in the request body; they are
+     * mapped to the provider's API. Returns the created LmsInstructor.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateLmsInstructorResponse createLmsInstructor(@Nonnull CreateLmsInstructorRequest request, @Nullable Options options) {
         RequestOperation<CreateLmsInstructorRequest, CreateLmsInstructorResponse> operation
-              = new CreateLmsInstructor.Sync(sdkConfiguration, _headers);
+              = new CreateLmsInstructor.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -387,8 +479,23 @@ public class Lms {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateLmsStudentResponse createLmsStudent(@Nonnull CreateLmsStudentRequest request) {
+        return createLmsStudent(request, null);
+    }
+
+    /**
+     * Create a student
+     * 
+     * <p>Creates a LmsStudent. Provide the unified LmsStudent fields in the request body; they are mapped to
+     * the provider's API. Returns the created LmsStudent.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateLmsStudentResponse createLmsStudent(@Nonnull CreateLmsStudentRequest request, @Nullable Options options) {
         RequestOperation<CreateLmsStudentRequest, CreateLmsStudentResponse> operation
-              = new CreateLmsStudent.Sync(sdkConfiguration, _headers);
+              = new CreateLmsStudent.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -415,8 +522,23 @@ public class Lms {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetLmsActivityResponse getLmsActivity(@Nonnull GetLmsActivityRequest request) {
+        return getLmsActivity(request, null);
+    }
+
+    /**
+     * Retrieve an activity
+     * 
+     * <p>Retrieves a single LmsActivity by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetLmsActivityResponse getLmsActivity(@Nonnull GetLmsActivityRequest request, @Nullable Options options) {
         RequestOperation<GetLmsActivityRequest, GetLmsActivityResponse> operation
-              = new GetLmsActivity.Sync(sdkConfiguration, _headers);
+              = new GetLmsActivity.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -443,8 +565,23 @@ public class Lms {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetLmsClassResponse getLmsClass(@Nonnull GetLmsClassRequest request) {
+        return getLmsClass(request, null);
+    }
+
+    /**
+     * Retrieve a class
+     * 
+     * <p>Retrieves a single LmsClass by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetLmsClassResponse getLmsClass(@Nonnull GetLmsClassRequest request, @Nullable Options options) {
         RequestOperation<GetLmsClassRequest, GetLmsClassResponse> operation
-              = new GetLmsClass.Sync(sdkConfiguration, _headers);
+              = new GetLmsClass.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -471,8 +608,23 @@ public class Lms {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetLmsCollectionResponse getLmsCollection(@Nonnull GetLmsCollectionRequest request) {
+        return getLmsCollection(request, null);
+    }
+
+    /**
+     * Retrieve a collection
+     * 
+     * <p>Retrieves a single LmsCollection by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetLmsCollectionResponse getLmsCollection(@Nonnull GetLmsCollectionRequest request, @Nullable Options options) {
         RequestOperation<GetLmsCollectionRequest, GetLmsCollectionResponse> operation
-              = new GetLmsCollection.Sync(sdkConfiguration, _headers);
+              = new GetLmsCollection.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -499,8 +651,23 @@ public class Lms {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetLmsContentResponse getLmsContent(@Nonnull GetLmsContentRequest request) {
+        return getLmsContent(request, null);
+    }
+
+    /**
+     * Retrieve a content
+     * 
+     * <p>Retrieves a single LmsContent by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetLmsContentResponse getLmsContent(@Nonnull GetLmsContentRequest request, @Nullable Options options) {
         RequestOperation<GetLmsContentRequest, GetLmsContentResponse> operation
-              = new GetLmsContent.Sync(sdkConfiguration, _headers);
+              = new GetLmsContent.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -527,8 +694,23 @@ public class Lms {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetLmsCourseResponse getLmsCourse(@Nonnull GetLmsCourseRequest request) {
+        return getLmsCourse(request, null);
+    }
+
+    /**
+     * Retrieve a course
+     * 
+     * <p>Retrieves a single LmsCourse by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetLmsCourseResponse getLmsCourse(@Nonnull GetLmsCourseRequest request, @Nullable Options options) {
         RequestOperation<GetLmsCourseRequest, GetLmsCourseResponse> operation
-              = new GetLmsCourse.Sync(sdkConfiguration, _headers);
+              = new GetLmsCourse.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -555,8 +737,23 @@ public class Lms {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetLmsInstructorResponse getLmsInstructor(@Nonnull GetLmsInstructorRequest request) {
+        return getLmsInstructor(request, null);
+    }
+
+    /**
+     * Retrieve an instructor
+     * 
+     * <p>Retrieves a single LmsInstructor by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetLmsInstructorResponse getLmsInstructor(@Nonnull GetLmsInstructorRequest request, @Nullable Options options) {
         RequestOperation<GetLmsInstructorRequest, GetLmsInstructorResponse> operation
-              = new GetLmsInstructor.Sync(sdkConfiguration, _headers);
+              = new GetLmsInstructor.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -583,8 +780,23 @@ public class Lms {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetLmsStudentResponse getLmsStudent(@Nonnull GetLmsStudentRequest request) {
+        return getLmsStudent(request, null);
+    }
+
+    /**
+     * Retrieve a student
+     * 
+     * <p>Retrieves a single LmsStudent by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetLmsStudentResponse getLmsStudent(@Nonnull GetLmsStudentRequest request, @Nullable Options options) {
         RequestOperation<GetLmsStudentRequest, GetLmsStudentResponse> operation
-              = new GetLmsStudent.Sync(sdkConfiguration, _headers);
+              = new GetLmsStudent.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -619,8 +831,27 @@ public class Lms {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListLmsActivitiesResponse listLmsActivities(@Nonnull ListLmsActivitiesRequest request) {
+        return listLmsActivities(request, null);
+    }
+
+    /**
+     * List all activities
+     * 
+     * <p>Returns a list of LmsActivities. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListLmsActivitiesResponse listLmsActivities(@Nonnull ListLmsActivitiesRequest request, @Nullable Options options) {
         RequestOperation<ListLmsActivitiesRequest, ListLmsActivitiesResponse> operation
-              = new ListLmsActivities.Sync(sdkConfiguration, _headers);
+              = new ListLmsActivities.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -655,8 +886,27 @@ public class Lms {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListLmsClassesResponse listLmsClasses(@Nonnull ListLmsClassesRequest request) {
+        return listLmsClasses(request, null);
+    }
+
+    /**
+     * List all classes
+     * 
+     * <p>Returns a list of LmsClasses. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListLmsClassesResponse listLmsClasses(@Nonnull ListLmsClassesRequest request, @Nullable Options options) {
         RequestOperation<ListLmsClassesRequest, ListLmsClassesResponse> operation
-              = new ListLmsClasses.Sync(sdkConfiguration, _headers);
+              = new ListLmsClasses.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -691,8 +941,27 @@ public class Lms {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListLmsCollectionsResponse listLmsCollections(@Nonnull ListLmsCollectionsRequest request) {
+        return listLmsCollections(request, null);
+    }
+
+    /**
+     * List all collections
+     * 
+     * <p>Returns a list of LmsCollections. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListLmsCollectionsResponse listLmsCollections(@Nonnull ListLmsCollectionsRequest request, @Nullable Options options) {
         RequestOperation<ListLmsCollectionsRequest, ListLmsCollectionsResponse> operation
-              = new ListLmsCollections.Sync(sdkConfiguration, _headers);
+              = new ListLmsCollections.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -727,8 +996,27 @@ public class Lms {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListLmsContentsResponse listLmsContents(@Nonnull ListLmsContentsRequest request) {
+        return listLmsContents(request, null);
+    }
+
+    /**
+     * List all contents
+     * 
+     * <p>Returns a list of LmsContents. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListLmsContentsResponse listLmsContents(@Nonnull ListLmsContentsRequest request, @Nullable Options options) {
         RequestOperation<ListLmsContentsRequest, ListLmsContentsResponse> operation
-              = new ListLmsContents.Sync(sdkConfiguration, _headers);
+              = new ListLmsContents.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -763,8 +1051,27 @@ public class Lms {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListLmsCoursesResponse listLmsCourses(@Nonnull ListLmsCoursesRequest request) {
+        return listLmsCourses(request, null);
+    }
+
+    /**
+     * List all courses
+     * 
+     * <p>Returns a list of LmsCourses. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListLmsCoursesResponse listLmsCourses(@Nonnull ListLmsCoursesRequest request, @Nullable Options options) {
         RequestOperation<ListLmsCoursesRequest, ListLmsCoursesResponse> operation
-              = new ListLmsCourses.Sync(sdkConfiguration, _headers);
+              = new ListLmsCourses.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -799,8 +1106,27 @@ public class Lms {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListLmsInstructorsResponse listLmsInstructors(@Nonnull ListLmsInstructorsRequest request) {
+        return listLmsInstructors(request, null);
+    }
+
+    /**
+     * List all instructors
+     * 
+     * <p>Returns a list of LmsInstructors. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListLmsInstructorsResponse listLmsInstructors(@Nonnull ListLmsInstructorsRequest request, @Nullable Options options) {
         RequestOperation<ListLmsInstructorsRequest, ListLmsInstructorsResponse> operation
-              = new ListLmsInstructors.Sync(sdkConfiguration, _headers);
+              = new ListLmsInstructors.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -835,8 +1161,27 @@ public class Lms {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListLmsStudentsResponse listLmsStudents(@Nonnull ListLmsStudentsRequest request) {
+        return listLmsStudents(request, null);
+    }
+
+    /**
+     * List all students
+     * 
+     * <p>Returns a list of LmsStudents. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListLmsStudentsResponse listLmsStudents(@Nonnull ListLmsStudentsRequest request, @Nullable Options options) {
         RequestOperation<ListLmsStudentsRequest, ListLmsStudentsResponse> operation
-              = new ListLmsStudents.Sync(sdkConfiguration, _headers);
+              = new ListLmsStudents.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -863,8 +1208,23 @@ public class Lms {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchLmsActivityResponse patchLmsActivity(@Nonnull PatchLmsActivityRequest request) {
+        return patchLmsActivity(request, null);
+    }
+
+    /**
+     * Update an activity
+     * 
+     * <p>Updates the LmsActivity identified by `id`. Provide the unified LmsActivity fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchLmsActivityResponse patchLmsActivity(@Nonnull PatchLmsActivityRequest request, @Nullable Options options) {
         RequestOperation<PatchLmsActivityRequest, PatchLmsActivityResponse> operation
-              = new PatchLmsActivity.Sync(sdkConfiguration, _headers);
+              = new PatchLmsActivity.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -891,8 +1251,23 @@ public class Lms {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchLmsClassResponse patchLmsClass(@Nonnull PatchLmsClassRequest request) {
+        return patchLmsClass(request, null);
+    }
+
+    /**
+     * Update a class
+     * 
+     * <p>Updates the LmsClass identified by `id`. Provide the unified LmsClass fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchLmsClassResponse patchLmsClass(@Nonnull PatchLmsClassRequest request, @Nullable Options options) {
         RequestOperation<PatchLmsClassRequest, PatchLmsClassResponse> operation
-              = new PatchLmsClass.Sync(sdkConfiguration, _headers);
+              = new PatchLmsClass.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -919,8 +1294,23 @@ public class Lms {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchLmsCollectionResponse patchLmsCollection(@Nonnull PatchLmsCollectionRequest request) {
+        return patchLmsCollection(request, null);
+    }
+
+    /**
+     * Update a collection
+     * 
+     * <p>Updates the LmsCollection identified by `id`. Provide the unified LmsCollection fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchLmsCollectionResponse patchLmsCollection(@Nonnull PatchLmsCollectionRequest request, @Nullable Options options) {
         RequestOperation<PatchLmsCollectionRequest, PatchLmsCollectionResponse> operation
-              = new PatchLmsCollection.Sync(sdkConfiguration, _headers);
+              = new PatchLmsCollection.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -947,8 +1337,23 @@ public class Lms {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchLmsContentResponse patchLmsContent(@Nonnull PatchLmsContentRequest request) {
+        return patchLmsContent(request, null);
+    }
+
+    /**
+     * Update a content
+     * 
+     * <p>Updates the LmsContent identified by `id`. Provide the unified LmsContent fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchLmsContentResponse patchLmsContent(@Nonnull PatchLmsContentRequest request, @Nullable Options options) {
         RequestOperation<PatchLmsContentRequest, PatchLmsContentResponse> operation
-              = new PatchLmsContent.Sync(sdkConfiguration, _headers);
+              = new PatchLmsContent.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -975,8 +1380,23 @@ public class Lms {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchLmsCourseResponse patchLmsCourse(@Nonnull PatchLmsCourseRequest request) {
+        return patchLmsCourse(request, null);
+    }
+
+    /**
+     * Update a course
+     * 
+     * <p>Updates the LmsCourse identified by `id`. Provide the unified LmsCourse fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchLmsCourseResponse patchLmsCourse(@Nonnull PatchLmsCourseRequest request, @Nullable Options options) {
         RequestOperation<PatchLmsCourseRequest, PatchLmsCourseResponse> operation
-              = new PatchLmsCourse.Sync(sdkConfiguration, _headers);
+              = new PatchLmsCourse.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1003,8 +1423,23 @@ public class Lms {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchLmsInstructorResponse patchLmsInstructor(@Nonnull PatchLmsInstructorRequest request) {
+        return patchLmsInstructor(request, null);
+    }
+
+    /**
+     * Update an instructor
+     * 
+     * <p>Updates the LmsInstructor identified by `id`. Provide the unified LmsInstructor fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchLmsInstructorResponse patchLmsInstructor(@Nonnull PatchLmsInstructorRequest request, @Nullable Options options) {
         RequestOperation<PatchLmsInstructorRequest, PatchLmsInstructorResponse> operation
-              = new PatchLmsInstructor.Sync(sdkConfiguration, _headers);
+              = new PatchLmsInstructor.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1031,8 +1466,23 @@ public class Lms {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchLmsStudentResponse patchLmsStudent(@Nonnull PatchLmsStudentRequest request) {
+        return patchLmsStudent(request, null);
+    }
+
+    /**
+     * Update a student
+     * 
+     * <p>Updates the LmsStudent identified by `id`. Provide the unified LmsStudent fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchLmsStudentResponse patchLmsStudent(@Nonnull PatchLmsStudentRequest request, @Nullable Options options) {
         RequestOperation<PatchLmsStudentRequest, PatchLmsStudentResponse> operation
-              = new PatchLmsStudent.Sync(sdkConfiguration, _headers);
+              = new PatchLmsStudent.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1057,8 +1507,22 @@ public class Lms {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveLmsActivityResponse removeLmsActivity(@Nonnull RemoveLmsActivityRequest request) {
+        return removeLmsActivity(request, null);
+    }
+
+    /**
+     * Remove an activity
+     * 
+     * <p>Deletes the LmsActivity identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveLmsActivityResponse removeLmsActivity(@Nonnull RemoveLmsActivityRequest request, @Nullable Options options) {
         RequestOperation<RemoveLmsActivityRequest, RemoveLmsActivityResponse> operation
-              = new RemoveLmsActivity.Sync(sdkConfiguration, _headers);
+              = new RemoveLmsActivity.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1083,8 +1547,22 @@ public class Lms {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveLmsClassResponse removeLmsClass(@Nonnull RemoveLmsClassRequest request) {
+        return removeLmsClass(request, null);
+    }
+
+    /**
+     * Remove a class
+     * 
+     * <p>Deletes the LmsClass identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveLmsClassResponse removeLmsClass(@Nonnull RemoveLmsClassRequest request, @Nullable Options options) {
         RequestOperation<RemoveLmsClassRequest, RemoveLmsClassResponse> operation
-              = new RemoveLmsClass.Sync(sdkConfiguration, _headers);
+              = new RemoveLmsClass.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1109,8 +1587,22 @@ public class Lms {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveLmsCollectionResponse removeLmsCollection(@Nonnull RemoveLmsCollectionRequest request) {
+        return removeLmsCollection(request, null);
+    }
+
+    /**
+     * Remove a collection
+     * 
+     * <p>Deletes the LmsCollection identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveLmsCollectionResponse removeLmsCollection(@Nonnull RemoveLmsCollectionRequest request, @Nullable Options options) {
         RequestOperation<RemoveLmsCollectionRequest, RemoveLmsCollectionResponse> operation
-              = new RemoveLmsCollection.Sync(sdkConfiguration, _headers);
+              = new RemoveLmsCollection.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1135,8 +1627,22 @@ public class Lms {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveLmsContentResponse removeLmsContent(@Nonnull RemoveLmsContentRequest request) {
+        return removeLmsContent(request, null);
+    }
+
+    /**
+     * Remove a content
+     * 
+     * <p>Deletes the LmsContent identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveLmsContentResponse removeLmsContent(@Nonnull RemoveLmsContentRequest request, @Nullable Options options) {
         RequestOperation<RemoveLmsContentRequest, RemoveLmsContentResponse> operation
-              = new RemoveLmsContent.Sync(sdkConfiguration, _headers);
+              = new RemoveLmsContent.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1161,8 +1667,22 @@ public class Lms {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveLmsCourseResponse removeLmsCourse(@Nonnull RemoveLmsCourseRequest request) {
+        return removeLmsCourse(request, null);
+    }
+
+    /**
+     * Remove a course
+     * 
+     * <p>Deletes the LmsCourse identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveLmsCourseResponse removeLmsCourse(@Nonnull RemoveLmsCourseRequest request, @Nullable Options options) {
         RequestOperation<RemoveLmsCourseRequest, RemoveLmsCourseResponse> operation
-              = new RemoveLmsCourse.Sync(sdkConfiguration, _headers);
+              = new RemoveLmsCourse.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1187,8 +1707,22 @@ public class Lms {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveLmsInstructorResponse removeLmsInstructor(@Nonnull RemoveLmsInstructorRequest request) {
+        return removeLmsInstructor(request, null);
+    }
+
+    /**
+     * Remove an instructor
+     * 
+     * <p>Deletes the LmsInstructor identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveLmsInstructorResponse removeLmsInstructor(@Nonnull RemoveLmsInstructorRequest request, @Nullable Options options) {
         RequestOperation<RemoveLmsInstructorRequest, RemoveLmsInstructorResponse> operation
-              = new RemoveLmsInstructor.Sync(sdkConfiguration, _headers);
+              = new RemoveLmsInstructor.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1213,8 +1747,22 @@ public class Lms {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveLmsStudentResponse removeLmsStudent(@Nonnull RemoveLmsStudentRequest request) {
+        return removeLmsStudent(request, null);
+    }
+
+    /**
+     * Remove a student
+     * 
+     * <p>Deletes the LmsStudent identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveLmsStudentResponse removeLmsStudent(@Nonnull RemoveLmsStudentRequest request, @Nullable Options options) {
         RequestOperation<RemoveLmsStudentRequest, RemoveLmsStudentResponse> operation
-              = new RemoveLmsStudent.Sync(sdkConfiguration, _headers);
+              = new RemoveLmsStudent.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1241,8 +1789,23 @@ public class Lms {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateLmsActivityResponse updateLmsActivity(@Nonnull UpdateLmsActivityRequest request) {
+        return updateLmsActivity(request, null);
+    }
+
+    /**
+     * Update an activity
+     * 
+     * <p>Updates the LmsActivity identified by `id`. Provide the unified LmsActivity fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateLmsActivityResponse updateLmsActivity(@Nonnull UpdateLmsActivityRequest request, @Nullable Options options) {
         RequestOperation<UpdateLmsActivityRequest, UpdateLmsActivityResponse> operation
-              = new UpdateLmsActivity.Sync(sdkConfiguration, _headers);
+              = new UpdateLmsActivity.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1269,8 +1832,23 @@ public class Lms {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateLmsClassResponse updateLmsClass(@Nonnull UpdateLmsClassRequest request) {
+        return updateLmsClass(request, null);
+    }
+
+    /**
+     * Update a class
+     * 
+     * <p>Updates the LmsClass identified by `id`. Provide the unified LmsClass fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateLmsClassResponse updateLmsClass(@Nonnull UpdateLmsClassRequest request, @Nullable Options options) {
         RequestOperation<UpdateLmsClassRequest, UpdateLmsClassResponse> operation
-              = new UpdateLmsClass.Sync(sdkConfiguration, _headers);
+              = new UpdateLmsClass.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1297,8 +1875,23 @@ public class Lms {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateLmsCollectionResponse updateLmsCollection(@Nonnull UpdateLmsCollectionRequest request) {
+        return updateLmsCollection(request, null);
+    }
+
+    /**
+     * Update a collection
+     * 
+     * <p>Updates the LmsCollection identified by `id`. Provide the unified LmsCollection fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateLmsCollectionResponse updateLmsCollection(@Nonnull UpdateLmsCollectionRequest request, @Nullable Options options) {
         RequestOperation<UpdateLmsCollectionRequest, UpdateLmsCollectionResponse> operation
-              = new UpdateLmsCollection.Sync(sdkConfiguration, _headers);
+              = new UpdateLmsCollection.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1325,8 +1918,23 @@ public class Lms {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateLmsContentResponse updateLmsContent(@Nonnull UpdateLmsContentRequest request) {
+        return updateLmsContent(request, null);
+    }
+
+    /**
+     * Update a content
+     * 
+     * <p>Updates the LmsContent identified by `id`. Provide the unified LmsContent fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateLmsContentResponse updateLmsContent(@Nonnull UpdateLmsContentRequest request, @Nullable Options options) {
         RequestOperation<UpdateLmsContentRequest, UpdateLmsContentResponse> operation
-              = new UpdateLmsContent.Sync(sdkConfiguration, _headers);
+              = new UpdateLmsContent.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1353,8 +1961,23 @@ public class Lms {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateLmsCourseResponse updateLmsCourse(@Nonnull UpdateLmsCourseRequest request) {
+        return updateLmsCourse(request, null);
+    }
+
+    /**
+     * Update a course
+     * 
+     * <p>Updates the LmsCourse identified by `id`. Provide the unified LmsCourse fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateLmsCourseResponse updateLmsCourse(@Nonnull UpdateLmsCourseRequest request, @Nullable Options options) {
         RequestOperation<UpdateLmsCourseRequest, UpdateLmsCourseResponse> operation
-              = new UpdateLmsCourse.Sync(sdkConfiguration, _headers);
+              = new UpdateLmsCourse.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1381,8 +2004,23 @@ public class Lms {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateLmsInstructorResponse updateLmsInstructor(@Nonnull UpdateLmsInstructorRequest request) {
+        return updateLmsInstructor(request, null);
+    }
+
+    /**
+     * Update an instructor
+     * 
+     * <p>Updates the LmsInstructor identified by `id`. Provide the unified LmsInstructor fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateLmsInstructorResponse updateLmsInstructor(@Nonnull UpdateLmsInstructorRequest request, @Nullable Options options) {
         RequestOperation<UpdateLmsInstructorRequest, UpdateLmsInstructorResponse> operation
-              = new UpdateLmsInstructor.Sync(sdkConfiguration, _headers);
+              = new UpdateLmsInstructor.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1409,8 +2047,23 @@ public class Lms {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateLmsStudentResponse updateLmsStudent(@Nonnull UpdateLmsStudentRequest request) {
+        return updateLmsStudent(request, null);
+    }
+
+    /**
+     * Update a student
+     * 
+     * <p>Updates the LmsStudent identified by `id`. Provide the unified LmsStudent fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateLmsStudentResponse updateLmsStudent(@Nonnull UpdateLmsStudentRequest request, @Nullable Options options) {
         RequestOperation<UpdateLmsStudentRequest, UpdateLmsStudentResponse> operation
-              = new UpdateLmsStudent.Sync(sdkConfiguration, _headers);
+              = new UpdateLmsStudent.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

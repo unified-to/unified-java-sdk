@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateHrisTaxonomyRequest;
 import to.unified.unified_java_sdk.models.operations.GetHrisTaxonomyRequest;
@@ -36,6 +37,7 @@ import to.unified.unified_java_sdk.operations.PatchHrisTaxonomy;
 import to.unified.unified_java_sdk.operations.RemoveHrisTaxonomy;
 import to.unified.unified_java_sdk.operations.UpdateHrisTaxonomy;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncTaxonomy {
@@ -80,8 +82,22 @@ public class AsyncTaxonomy {
      * @return {@code CompletableFuture<CreateHrisTaxonomyResponse>} - The async response
      */
     public CompletableFuture<CreateHrisTaxonomyResponse> createHrisTaxonomy(@Nonnull CreateHrisTaxonomyRequest request) {
+        return createHrisTaxonomy(request, null);
+    }
+
+    /**
+     * Create a taxonomy
+     * 
+     * <p>Creates a HrisTaxonomy. Provide the unified HrisTaxonomy fields in the request body; they are mapped
+     * to the provider's API. Returns the created HrisTaxonomy.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateHrisTaxonomyResponse>} - The async response
+     */
+    public CompletableFuture<CreateHrisTaxonomyResponse> createHrisTaxonomy(@Nonnull CreateHrisTaxonomyRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateHrisTaxonomyRequest, CreateHrisTaxonomyResponse> operation
-              = new CreateHrisTaxonomy.Async(sdkConfiguration, _headers);
+              = new CreateHrisTaxonomy.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -109,8 +125,22 @@ public class AsyncTaxonomy {
      * @return {@code CompletableFuture<GetHrisTaxonomyResponse>} - The async response
      */
     public CompletableFuture<GetHrisTaxonomyResponse> getHrisTaxonomy(@Nonnull GetHrisTaxonomyRequest request) {
+        return getHrisTaxonomy(request, null);
+    }
+
+    /**
+     * Retrieve a taxonomy
+     * 
+     * <p>Retrieves a single HrisTaxonomy by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetHrisTaxonomyResponse>} - The async response
+     */
+    public CompletableFuture<GetHrisTaxonomyResponse> getHrisTaxonomy(@Nonnull GetHrisTaxonomyRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetHrisTaxonomyRequest, GetHrisTaxonomyResponse> operation
-              = new GetHrisTaxonomy.Async(sdkConfiguration, _headers);
+              = new GetHrisTaxonomy.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -146,8 +176,26 @@ public class AsyncTaxonomy {
      * @return {@code CompletableFuture<ListCrmTaxonomiesResponse>} - The async response
      */
     public CompletableFuture<ListCrmTaxonomiesResponse> listCrmTaxonomies(@Nonnull ListCrmTaxonomiesRequest request) {
+        return listCrmTaxonomies(request, null);
+    }
+
+    /**
+     * List all taxonomies
+     * 
+     * <p>Returns a list of CrmTaxonomies. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListCrmTaxonomiesResponse>} - The async response
+     */
+    public CompletableFuture<ListCrmTaxonomiesResponse> listCrmTaxonomies(@Nonnull ListCrmTaxonomiesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListCrmTaxonomiesRequest, ListCrmTaxonomiesResponse> operation
-              = new ListCrmTaxonomies.Async(sdkConfiguration, _headers);
+              = new ListCrmTaxonomies.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -183,8 +231,26 @@ public class AsyncTaxonomy {
      * @return {@code CompletableFuture<ListHrisTaxonomiesResponse>} - The async response
      */
     public CompletableFuture<ListHrisTaxonomiesResponse> listHrisTaxonomies(@Nonnull ListHrisTaxonomiesRequest request) {
+        return listHrisTaxonomies(request, null);
+    }
+
+    /**
+     * List all taxonomies
+     * 
+     * <p>Returns a list of HrisTaxonomies. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListHrisTaxonomiesResponse>} - The async response
+     */
+    public CompletableFuture<ListHrisTaxonomiesResponse> listHrisTaxonomies(@Nonnull ListHrisTaxonomiesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListHrisTaxonomiesRequest, ListHrisTaxonomiesResponse> operation
-              = new ListHrisTaxonomies.Async(sdkConfiguration, _headers);
+              = new ListHrisTaxonomies.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -212,8 +278,22 @@ public class AsyncTaxonomy {
      * @return {@code CompletableFuture<PatchHrisTaxonomyResponse>} - The async response
      */
     public CompletableFuture<PatchHrisTaxonomyResponse> patchHrisTaxonomy(@Nonnull PatchHrisTaxonomyRequest request) {
+        return patchHrisTaxonomy(request, null);
+    }
+
+    /**
+     * Update a taxonomy
+     * 
+     * <p>Updates the HrisTaxonomy identified by `id`. Provide the unified HrisTaxonomy fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchHrisTaxonomyResponse>} - The async response
+     */
+    public CompletableFuture<PatchHrisTaxonomyResponse> patchHrisTaxonomy(@Nonnull PatchHrisTaxonomyRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchHrisTaxonomyRequest, PatchHrisTaxonomyResponse> operation
-              = new PatchHrisTaxonomy.Async(sdkConfiguration, _headers);
+              = new PatchHrisTaxonomy.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -239,8 +319,21 @@ public class AsyncTaxonomy {
      * @return {@code CompletableFuture<RemoveHrisTaxonomyResponse>} - The async response
      */
     public CompletableFuture<RemoveHrisTaxonomyResponse> removeHrisTaxonomy(@Nonnull RemoveHrisTaxonomyRequest request) {
+        return removeHrisTaxonomy(request, null);
+    }
+
+    /**
+     * Remove a taxonomy
+     * 
+     * <p>Deletes the HrisTaxonomy identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveHrisTaxonomyResponse>} - The async response
+     */
+    public CompletableFuture<RemoveHrisTaxonomyResponse> removeHrisTaxonomy(@Nonnull RemoveHrisTaxonomyRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveHrisTaxonomyRequest, RemoveHrisTaxonomyResponse> operation
-              = new RemoveHrisTaxonomy.Async(sdkConfiguration, _headers);
+              = new RemoveHrisTaxonomy.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -268,8 +361,22 @@ public class AsyncTaxonomy {
      * @return {@code CompletableFuture<UpdateHrisTaxonomyResponse>} - The async response
      */
     public CompletableFuture<UpdateHrisTaxonomyResponse> updateHrisTaxonomy(@Nonnull UpdateHrisTaxonomyRequest request) {
+        return updateHrisTaxonomy(request, null);
+    }
+
+    /**
+     * Update a taxonomy
+     * 
+     * <p>Updates the HrisTaxonomy identified by `id`. Provide the unified HrisTaxonomy fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateHrisTaxonomyResponse>} - The async response
+     */
+    public CompletableFuture<UpdateHrisTaxonomyResponse> updateHrisTaxonomy(@Nonnull UpdateHrisTaxonomyRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateHrisTaxonomyRequest, UpdateHrisTaxonomyResponse> operation
-              = new UpdateHrisTaxonomy.Async(sdkConfiguration, _headers);
+              = new UpdateHrisTaxonomy.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

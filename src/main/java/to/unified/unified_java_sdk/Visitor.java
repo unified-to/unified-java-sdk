@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateAnalyticsVisitorRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAnalyticsVisitorRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateAnalyticsVisitorResponse;
@@ -31,6 +32,7 @@ import to.unified.unified_java_sdk.operations.PatchAnalyticsVisitor;
 import to.unified.unified_java_sdk.operations.RemoveAnalyticsVisitor;
 import to.unified.unified_java_sdk.operations.UpdateAnalyticsVisitor;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Visitor {
@@ -75,8 +77,23 @@ public class Visitor {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateAnalyticsVisitorResponse createAnalyticsVisitor(@Nonnull CreateAnalyticsVisitorRequest request) {
+        return createAnalyticsVisitor(request, null);
+    }
+
+    /**
+     * Create a visitor
+     * 
+     * <p>Creates a AnalyticsVisitor. Provide the unified AnalyticsVisitor fields in the request body; they
+     * are mapped to the provider's API. Returns the created AnalyticsVisitor.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateAnalyticsVisitorResponse createAnalyticsVisitor(@Nonnull CreateAnalyticsVisitorRequest request, @Nullable Options options) {
         RequestOperation<CreateAnalyticsVisitorRequest, CreateAnalyticsVisitorResponse> operation
-              = new CreateAnalyticsVisitor.Sync(sdkConfiguration, _headers);
+              = new CreateAnalyticsVisitor.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -103,8 +120,23 @@ public class Visitor {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAnalyticsVisitorResponse getAnalyticsVisitor(@Nonnull GetAnalyticsVisitorRequest request) {
+        return getAnalyticsVisitor(request, null);
+    }
+
+    /**
+     * Retrieve a visitor
+     * 
+     * <p>Retrieves a single AnalyticsVisitor by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAnalyticsVisitorResponse getAnalyticsVisitor(@Nonnull GetAnalyticsVisitorRequest request, @Nullable Options options) {
         RequestOperation<GetAnalyticsVisitorRequest, GetAnalyticsVisitorResponse> operation
-              = new GetAnalyticsVisitor.Sync(sdkConfiguration, _headers);
+              = new GetAnalyticsVisitor.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -139,8 +171,27 @@ public class Visitor {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAnalyticsVisitorsResponse listAnalyticsVisitors(@Nonnull ListAnalyticsVisitorsRequest request) {
+        return listAnalyticsVisitors(request, null);
+    }
+
+    /**
+     * List all visitors
+     * 
+     * <p>Returns a list of AnalyticsVisitors. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAnalyticsVisitorsResponse listAnalyticsVisitors(@Nonnull ListAnalyticsVisitorsRequest request, @Nullable Options options) {
         RequestOperation<ListAnalyticsVisitorsRequest, ListAnalyticsVisitorsResponse> operation
-              = new ListAnalyticsVisitors.Sync(sdkConfiguration, _headers);
+              = new ListAnalyticsVisitors.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +218,23 @@ public class Visitor {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchAnalyticsVisitorResponse patchAnalyticsVisitor(@Nonnull PatchAnalyticsVisitorRequest request) {
+        return patchAnalyticsVisitor(request, null);
+    }
+
+    /**
+     * Update a visitor
+     * 
+     * <p>Updates the AnalyticsVisitor identified by `id`. Provide the unified AnalyticsVisitor fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchAnalyticsVisitorResponse patchAnalyticsVisitor(@Nonnull PatchAnalyticsVisitorRequest request, @Nullable Options options) {
         RequestOperation<PatchAnalyticsVisitorRequest, PatchAnalyticsVisitorResponse> operation
-              = new PatchAnalyticsVisitor.Sync(sdkConfiguration, _headers);
+              = new PatchAnalyticsVisitor.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -193,8 +259,22 @@ public class Visitor {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveAnalyticsVisitorResponse removeAnalyticsVisitor(@Nonnull RemoveAnalyticsVisitorRequest request) {
+        return removeAnalyticsVisitor(request, null);
+    }
+
+    /**
+     * Remove a visitor
+     * 
+     * <p>Deletes the AnalyticsVisitor identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveAnalyticsVisitorResponse removeAnalyticsVisitor(@Nonnull RemoveAnalyticsVisitorRequest request, @Nullable Options options) {
         RequestOperation<RemoveAnalyticsVisitorRequest, RemoveAnalyticsVisitorResponse> operation
-              = new RemoveAnalyticsVisitor.Sync(sdkConfiguration, _headers);
+              = new RemoveAnalyticsVisitor.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -221,8 +301,23 @@ public class Visitor {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateAnalyticsVisitorResponse updateAnalyticsVisitor(@Nonnull UpdateAnalyticsVisitorRequest request) {
+        return updateAnalyticsVisitor(request, null);
+    }
+
+    /**
+     * Update a visitor
+     * 
+     * <p>Updates the AnalyticsVisitor identified by `id`. Provide the unified AnalyticsVisitor fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateAnalyticsVisitorResponse updateAnalyticsVisitor(@Nonnull UpdateAnalyticsVisitorRequest request, @Nullable Options options) {
         RequestOperation<UpdateAnalyticsVisitorRequest, UpdateAnalyticsVisitorResponse> operation
-              = new UpdateAnalyticsVisitor.Sync(sdkConfiguration, _headers);
+              = new UpdateAnalyticsVisitor.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

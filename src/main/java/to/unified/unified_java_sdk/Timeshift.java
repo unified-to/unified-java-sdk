@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateHrisTimeshiftRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisTimeshiftRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateHrisTimeshiftResponse;
@@ -31,6 +32,7 @@ import to.unified.unified_java_sdk.operations.PatchHrisTimeshift;
 import to.unified.unified_java_sdk.operations.RemoveHrisTimeshift;
 import to.unified.unified_java_sdk.operations.UpdateHrisTimeshift;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Timeshift {
@@ -75,8 +77,23 @@ public class Timeshift {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateHrisTimeshiftResponse createHrisTimeshift(@Nonnull CreateHrisTimeshiftRequest request) {
+        return createHrisTimeshift(request, null);
+    }
+
+    /**
+     * Create a timeshift
+     * 
+     * <p>Creates a HrisTimeshift. Provide the unified HrisTimeshift fields in the request body; they are
+     * mapped to the provider's API. Returns the created HrisTimeshift.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateHrisTimeshiftResponse createHrisTimeshift(@Nonnull CreateHrisTimeshiftRequest request, @Nullable Options options) {
         RequestOperation<CreateHrisTimeshiftRequest, CreateHrisTimeshiftResponse> operation
-              = new CreateHrisTimeshift.Sync(sdkConfiguration, _headers);
+              = new CreateHrisTimeshift.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -103,8 +120,23 @@ public class Timeshift {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetHrisTimeshiftResponse getHrisTimeshift(@Nonnull GetHrisTimeshiftRequest request) {
+        return getHrisTimeshift(request, null);
+    }
+
+    /**
+     * Retrieve a timeshift
+     * 
+     * <p>Retrieves a single HrisTimeshift by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetHrisTimeshiftResponse getHrisTimeshift(@Nonnull GetHrisTimeshiftRequest request, @Nullable Options options) {
         RequestOperation<GetHrisTimeshiftRequest, GetHrisTimeshiftResponse> operation
-              = new GetHrisTimeshift.Sync(sdkConfiguration, _headers);
+              = new GetHrisTimeshift.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -139,8 +171,27 @@ public class Timeshift {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListHrisTimeshiftsResponse listHrisTimeshifts(@Nonnull ListHrisTimeshiftsRequest request) {
+        return listHrisTimeshifts(request, null);
+    }
+
+    /**
+     * List all timeshifts
+     * 
+     * <p>Returns a list of HrisTimeshifts. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListHrisTimeshiftsResponse listHrisTimeshifts(@Nonnull ListHrisTimeshiftsRequest request, @Nullable Options options) {
         RequestOperation<ListHrisTimeshiftsRequest, ListHrisTimeshiftsResponse> operation
-              = new ListHrisTimeshifts.Sync(sdkConfiguration, _headers);
+              = new ListHrisTimeshifts.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +218,23 @@ public class Timeshift {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchHrisTimeshiftResponse patchHrisTimeshift(@Nonnull PatchHrisTimeshiftRequest request) {
+        return patchHrisTimeshift(request, null);
+    }
+
+    /**
+     * Update a timeshift
+     * 
+     * <p>Updates the HrisTimeshift identified by `id`. Provide the unified HrisTimeshift fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchHrisTimeshiftResponse patchHrisTimeshift(@Nonnull PatchHrisTimeshiftRequest request, @Nullable Options options) {
         RequestOperation<PatchHrisTimeshiftRequest, PatchHrisTimeshiftResponse> operation
-              = new PatchHrisTimeshift.Sync(sdkConfiguration, _headers);
+              = new PatchHrisTimeshift.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -193,8 +259,22 @@ public class Timeshift {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveHrisTimeshiftResponse removeHrisTimeshift(@Nonnull RemoveHrisTimeshiftRequest request) {
+        return removeHrisTimeshift(request, null);
+    }
+
+    /**
+     * Remove a timeshift
+     * 
+     * <p>Deletes the HrisTimeshift identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveHrisTimeshiftResponse removeHrisTimeshift(@Nonnull RemoveHrisTimeshiftRequest request, @Nullable Options options) {
         RequestOperation<RemoveHrisTimeshiftRequest, RemoveHrisTimeshiftResponse> operation
-              = new RemoveHrisTimeshift.Sync(sdkConfiguration, _headers);
+              = new RemoveHrisTimeshift.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -221,8 +301,23 @@ public class Timeshift {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateHrisTimeshiftResponse updateHrisTimeshift(@Nonnull UpdateHrisTimeshiftRequest request) {
+        return updateHrisTimeshift(request, null);
+    }
+
+    /**
+     * Update a timeshift
+     * 
+     * <p>Updates the HrisTimeshift identified by `id`. Provide the unified HrisTimeshift fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateHrisTimeshiftResponse updateHrisTimeshift(@Nonnull UpdateHrisTimeshiftRequest request, @Nullable Options options) {
         RequestOperation<UpdateHrisTimeshiftRequest, UpdateHrisTimeshiftResponse> operation
-              = new UpdateHrisTimeshift.Sync(sdkConfiguration, _headers);
+              = new UpdateHrisTimeshift.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

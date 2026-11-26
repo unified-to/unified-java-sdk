@@ -6,16 +6,26 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
+import to.unified.unified_java_sdk.models.operations.GetFhirImmunizationRequest;
 import to.unified.unified_java_sdk.models.operations.GetHealthcareImmunizationRequest;
+import to.unified.unified_java_sdk.models.operations.ListFhirImmunizationsRequest;
 import to.unified.unified_java_sdk.models.operations.ListHealthcareImmunizationsRequest;
+import to.unified.unified_java_sdk.models.operations.async.GetFhirImmunizationRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetFhirImmunizationResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetHealthcareImmunizationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetHealthcareImmunizationResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListFhirImmunizationsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListFhirImmunizationsResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListHealthcareImmunizationsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListHealthcareImmunizationsResponse;
+import to.unified.unified_java_sdk.operations.GetFhirImmunization;
 import to.unified.unified_java_sdk.operations.GetHealthcareImmunization;
+import to.unified.unified_java_sdk.operations.ListFhirImmunizations;
 import to.unified.unified_java_sdk.operations.ListHealthcareImmunizations;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncImmunization {
@@ -35,6 +45,49 @@ public class AsyncImmunization {
      */
     public Immunization sync() {
         return syncSDK;
+    }
+
+
+    /**
+     * Read a Immunization
+     * 
+     * <p>Responses use the application/fhir+json media type; errors are OperationOutcome resources. Read-only
+     * (FHIR R4 4.0.1).
+     * 
+     * @return The async call builder
+     */
+    public GetFhirImmunizationRequestBuilder getFhirImmunization() {
+        return new GetFhirImmunizationRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Read a Immunization
+     * 
+     * <p>Responses use the application/fhir+json media type; errors are OperationOutcome resources. Read-only
+     * (FHIR R4 4.0.1).
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<GetFhirImmunizationResponse>} - The async response
+     */
+    public CompletableFuture<GetFhirImmunizationResponse> getFhirImmunization(@Nonnull GetFhirImmunizationRequest request) {
+        return getFhirImmunization(request, null);
+    }
+
+    /**
+     * Read a Immunization
+     * 
+     * <p>Responses use the application/fhir+json media type; errors are OperationOutcome resources. Read-only
+     * (FHIR R4 4.0.1).
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetFhirImmunizationResponse>} - The async response
+     */
+    public CompletableFuture<GetFhirImmunizationResponse> getFhirImmunization(@Nonnull GetFhirImmunizationRequest request, @Nullable Options options) {
+        AsyncRequestOperation<GetFhirImmunizationRequest, GetFhirImmunizationResponse> operation
+              = new GetFhirImmunization.Async(sdkConfiguration, options, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
     }
 
 
@@ -60,8 +113,65 @@ public class AsyncImmunization {
      * @return {@code CompletableFuture<GetHealthcareImmunizationResponse>} - The async response
      */
     public CompletableFuture<GetHealthcareImmunizationResponse> getHealthcareImmunization(@Nonnull GetHealthcareImmunizationRequest request) {
+        return getHealthcareImmunization(request, null);
+    }
+
+    /**
+     * Retrieve an immunization
+     * 
+     * <p>Retrieves a single HealthcareImmunization by its `id`. Obtain `id` values from the corresponding
+     * list endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetHealthcareImmunizationResponse>} - The async response
+     */
+    public CompletableFuture<GetHealthcareImmunizationResponse> getHealthcareImmunization(@Nonnull GetHealthcareImmunizationRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetHealthcareImmunizationRequest, GetHealthcareImmunizationResponse> operation
-              = new GetHealthcareImmunization.Async(sdkConfiguration, _headers);
+              = new GetHealthcareImmunization.Async(sdkConfiguration, options, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Search Immunization resources
+     * 
+     * <p>Returns a searchset Bundle; follow its next link for more pages. Responses use the
+     * application/fhir+json media type; errors are OperationOutcome resources. Read-only (FHIR R4 4.0.1).
+     * 
+     * @return The async call builder
+     */
+    public ListFhirImmunizationsRequestBuilder listFhirImmunizations() {
+        return new ListFhirImmunizationsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Search Immunization resources
+     * 
+     * <p>Returns a searchset Bundle; follow its next link for more pages. Responses use the
+     * application/fhir+json media type; errors are OperationOutcome resources. Read-only (FHIR R4 4.0.1).
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<ListFhirImmunizationsResponse>} - The async response
+     */
+    public CompletableFuture<ListFhirImmunizationsResponse> listFhirImmunizations(@Nonnull ListFhirImmunizationsRequest request) {
+        return listFhirImmunizations(request, null);
+    }
+
+    /**
+     * Search Immunization resources
+     * 
+     * <p>Returns a searchset Bundle; follow its next link for more pages. Responses use the
+     * application/fhir+json media type; errors are OperationOutcome resources. Read-only (FHIR R4 4.0.1).
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListFhirImmunizationsResponse>} - The async response
+     */
+    public CompletableFuture<ListFhirImmunizationsResponse> listFhirImmunizations(@Nonnull ListFhirImmunizationsRequest request, @Nullable Options options) {
+        AsyncRequestOperation<ListFhirImmunizationsRequest, ListFhirImmunizationsResponse> operation
+              = new ListFhirImmunizations.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -97,8 +207,26 @@ public class AsyncImmunization {
      * @return {@code CompletableFuture<ListHealthcareImmunizationsResponse>} - The async response
      */
     public CompletableFuture<ListHealthcareImmunizationsResponse> listHealthcareImmunizations(@Nonnull ListHealthcareImmunizationsRequest request) {
+        return listHealthcareImmunizations(request, null);
+    }
+
+    /**
+     * List all immunizations
+     * 
+     * <p>Returns a list of HealthcareImmunizations. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListHealthcareImmunizationsResponse>} - The async response
+     */
+    public CompletableFuture<ListHealthcareImmunizationsResponse> listHealthcareImmunizations(@Nonnull ListHealthcareImmunizationsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListHealthcareImmunizationsRequest, ListHealthcareImmunizationsResponse> operation
-              = new ListHealthcareImmunizations.Async(sdkConfiguration, _headers);
+              = new ListHealthcareImmunizations.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

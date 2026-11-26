@@ -6,18 +6,28 @@ package to.unified.unified_java_sdk.models.operations;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.PatchHrisTaxwithholding;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class PatchHrisTaxwithholdingRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private PatchHrisTaxwithholdingRequest request;
+    private final Options.Builder optionsBuilder;
 
     public PatchHrisTaxwithholdingRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public PatchHrisTaxwithholdingRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public PatchHrisTaxwithholdingRequestBuilder request(@Nonnull PatchHrisTaxwithholdingRequest request) {
@@ -42,8 +52,9 @@ public class PatchHrisTaxwithholdingRequestBuilder {
     * @return The response from the server.
     */
     public PatchHrisTaxwithholdingResponse call() {
+        Options options = optionsBuilder.build();
         RequestOperation<PatchHrisTaxwithholdingRequest, PatchHrisTaxwithholdingResponse> operation
-              = new PatchHrisTaxwithholding.Sync(sdkConfiguration, _headers);
+              = new PatchHrisTaxwithholding.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

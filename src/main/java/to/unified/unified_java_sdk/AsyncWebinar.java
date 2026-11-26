@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateCalendarWebinarRequest;
 import to.unified.unified_java_sdk.models.operations.GetCalendarWebinarRequest;
@@ -32,6 +33,7 @@ import to.unified.unified_java_sdk.operations.PatchCalendarWebinar;
 import to.unified.unified_java_sdk.operations.RemoveCalendarWebinar;
 import to.unified.unified_java_sdk.operations.UpdateCalendarWebinar;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncWebinar {
@@ -76,8 +78,22 @@ public class AsyncWebinar {
      * @return {@code CompletableFuture<CreateCalendarWebinarResponse>} - The async response
      */
     public CompletableFuture<CreateCalendarWebinarResponse> createCalendarWebinar(@Nonnull CreateCalendarWebinarRequest request) {
+        return createCalendarWebinar(request, null);
+    }
+
+    /**
+     * Create a webinar
+     * 
+     * <p>Creates a CalendarWebinar. Provide the unified CalendarWebinar fields in the request body; they are
+     * mapped to the provider's API. Returns the created CalendarWebinar.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateCalendarWebinarResponse>} - The async response
+     */
+    public CompletableFuture<CreateCalendarWebinarResponse> createCalendarWebinar(@Nonnull CreateCalendarWebinarRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateCalendarWebinarRequest, CreateCalendarWebinarResponse> operation
-              = new CreateCalendarWebinar.Async(sdkConfiguration, _headers);
+              = new CreateCalendarWebinar.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -105,8 +121,22 @@ public class AsyncWebinar {
      * @return {@code CompletableFuture<GetCalendarWebinarResponse>} - The async response
      */
     public CompletableFuture<GetCalendarWebinarResponse> getCalendarWebinar(@Nonnull GetCalendarWebinarRequest request) {
+        return getCalendarWebinar(request, null);
+    }
+
+    /**
+     * Retrieve a webinar
+     * 
+     * <p>Retrieves a single CalendarWebinar by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetCalendarWebinarResponse>} - The async response
+     */
+    public CompletableFuture<GetCalendarWebinarResponse> getCalendarWebinar(@Nonnull GetCalendarWebinarRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetCalendarWebinarRequest, GetCalendarWebinarResponse> operation
-              = new GetCalendarWebinar.Async(sdkConfiguration, _headers);
+              = new GetCalendarWebinar.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -142,8 +172,26 @@ public class AsyncWebinar {
      * @return {@code CompletableFuture<ListCalendarWebinarsResponse>} - The async response
      */
     public CompletableFuture<ListCalendarWebinarsResponse> listCalendarWebinars(@Nonnull ListCalendarWebinarsRequest request) {
+        return listCalendarWebinars(request, null);
+    }
+
+    /**
+     * List all webinars
+     * 
+     * <p>Returns a list of CalendarWebinars. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListCalendarWebinarsResponse>} - The async response
+     */
+    public CompletableFuture<ListCalendarWebinarsResponse> listCalendarWebinars(@Nonnull ListCalendarWebinarsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListCalendarWebinarsRequest, ListCalendarWebinarsResponse> operation
-              = new ListCalendarWebinars.Async(sdkConfiguration, _headers);
+              = new ListCalendarWebinars.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -171,8 +219,22 @@ public class AsyncWebinar {
      * @return {@code CompletableFuture<PatchCalendarWebinarResponse>} - The async response
      */
     public CompletableFuture<PatchCalendarWebinarResponse> patchCalendarWebinar(@Nonnull PatchCalendarWebinarRequest request) {
+        return patchCalendarWebinar(request, null);
+    }
+
+    /**
+     * Update a webinar
+     * 
+     * <p>Updates the CalendarWebinar identified by `id`. Provide the unified CalendarWebinar fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchCalendarWebinarResponse>} - The async response
+     */
+    public CompletableFuture<PatchCalendarWebinarResponse> patchCalendarWebinar(@Nonnull PatchCalendarWebinarRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchCalendarWebinarRequest, PatchCalendarWebinarResponse> operation
-              = new PatchCalendarWebinar.Async(sdkConfiguration, _headers);
+              = new PatchCalendarWebinar.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -198,8 +260,21 @@ public class AsyncWebinar {
      * @return {@code CompletableFuture<RemoveCalendarWebinarResponse>} - The async response
      */
     public CompletableFuture<RemoveCalendarWebinarResponse> removeCalendarWebinar(@Nonnull RemoveCalendarWebinarRequest request) {
+        return removeCalendarWebinar(request, null);
+    }
+
+    /**
+     * Remove a webinar
+     * 
+     * <p>Deletes the CalendarWebinar identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveCalendarWebinarResponse>} - The async response
+     */
+    public CompletableFuture<RemoveCalendarWebinarResponse> removeCalendarWebinar(@Nonnull RemoveCalendarWebinarRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveCalendarWebinarRequest, RemoveCalendarWebinarResponse> operation
-              = new RemoveCalendarWebinar.Async(sdkConfiguration, _headers);
+              = new RemoveCalendarWebinar.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -227,8 +302,22 @@ public class AsyncWebinar {
      * @return {@code CompletableFuture<UpdateCalendarWebinarResponse>} - The async response
      */
     public CompletableFuture<UpdateCalendarWebinarResponse> updateCalendarWebinar(@Nonnull UpdateCalendarWebinarRequest request) {
+        return updateCalendarWebinar(request, null);
+    }
+
+    /**
+     * Update a webinar
+     * 
+     * <p>Updates the CalendarWebinar identified by `id`. Provide the unified CalendarWebinar fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateCalendarWebinarResponse>} - The async response
+     */
+    public CompletableFuture<UpdateCalendarWebinarResponse> updateCalendarWebinar(@Nonnull UpdateCalendarWebinarRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateCalendarWebinarRequest, UpdateCalendarWebinarResponse> operation
-              = new UpdateCalendarWebinar.Async(sdkConfiguration, _headers);
+              = new UpdateCalendarWebinar.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

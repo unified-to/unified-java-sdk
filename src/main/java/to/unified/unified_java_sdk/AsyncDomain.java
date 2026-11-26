@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateComputeDomainRequest;
 import to.unified.unified_java_sdk.models.operations.GetComputeDomainRequest;
@@ -32,6 +33,7 @@ import to.unified.unified_java_sdk.operations.PatchComputeDomain;
 import to.unified.unified_java_sdk.operations.RemoveComputeDomain;
 import to.unified.unified_java_sdk.operations.UpdateComputeDomain;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncDomain {
@@ -76,8 +78,22 @@ public class AsyncDomain {
      * @return {@code CompletableFuture<CreateComputeDomainResponse>} - The async response
      */
     public CompletableFuture<CreateComputeDomainResponse> createComputeDomain(@Nonnull CreateComputeDomainRequest request) {
+        return createComputeDomain(request, null);
+    }
+
+    /**
+     * Create a domain
+     * 
+     * <p>Creates a ComputeDomain. Provide the unified ComputeDomain fields in the request body; they are
+     * mapped to the provider's API. Returns the created ComputeDomain.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateComputeDomainResponse>} - The async response
+     */
+    public CompletableFuture<CreateComputeDomainResponse> createComputeDomain(@Nonnull CreateComputeDomainRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateComputeDomainRequest, CreateComputeDomainResponse> operation
-              = new CreateComputeDomain.Async(sdkConfiguration, _headers);
+              = new CreateComputeDomain.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -105,8 +121,22 @@ public class AsyncDomain {
      * @return {@code CompletableFuture<GetComputeDomainResponse>} - The async response
      */
     public CompletableFuture<GetComputeDomainResponse> getComputeDomain(@Nonnull GetComputeDomainRequest request) {
+        return getComputeDomain(request, null);
+    }
+
+    /**
+     * Retrieve a domain
+     * 
+     * <p>Retrieves a single ComputeDomain by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetComputeDomainResponse>} - The async response
+     */
+    public CompletableFuture<GetComputeDomainResponse> getComputeDomain(@Nonnull GetComputeDomainRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetComputeDomainRequest, GetComputeDomainResponse> operation
-              = new GetComputeDomain.Async(sdkConfiguration, _headers);
+              = new GetComputeDomain.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -142,8 +172,26 @@ public class AsyncDomain {
      * @return {@code CompletableFuture<ListComputeDomainsResponse>} - The async response
      */
     public CompletableFuture<ListComputeDomainsResponse> listComputeDomains(@Nonnull ListComputeDomainsRequest request) {
+        return listComputeDomains(request, null);
+    }
+
+    /**
+     * List all domains
+     * 
+     * <p>Returns a list of ComputeDomains. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListComputeDomainsResponse>} - The async response
+     */
+    public CompletableFuture<ListComputeDomainsResponse> listComputeDomains(@Nonnull ListComputeDomainsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListComputeDomainsRequest, ListComputeDomainsResponse> operation
-              = new ListComputeDomains.Async(sdkConfiguration, _headers);
+              = new ListComputeDomains.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -171,8 +219,22 @@ public class AsyncDomain {
      * @return {@code CompletableFuture<PatchComputeDomainResponse>} - The async response
      */
     public CompletableFuture<PatchComputeDomainResponse> patchComputeDomain(@Nonnull PatchComputeDomainRequest request) {
+        return patchComputeDomain(request, null);
+    }
+
+    /**
+     * Update a domain
+     * 
+     * <p>Updates the ComputeDomain identified by `id`. Provide the unified ComputeDomain fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchComputeDomainResponse>} - The async response
+     */
+    public CompletableFuture<PatchComputeDomainResponse> patchComputeDomain(@Nonnull PatchComputeDomainRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchComputeDomainRequest, PatchComputeDomainResponse> operation
-              = new PatchComputeDomain.Async(sdkConfiguration, _headers);
+              = new PatchComputeDomain.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -198,8 +260,21 @@ public class AsyncDomain {
      * @return {@code CompletableFuture<RemoveComputeDomainResponse>} - The async response
      */
     public CompletableFuture<RemoveComputeDomainResponse> removeComputeDomain(@Nonnull RemoveComputeDomainRequest request) {
+        return removeComputeDomain(request, null);
+    }
+
+    /**
+     * Remove a domain
+     * 
+     * <p>Deletes the ComputeDomain identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveComputeDomainResponse>} - The async response
+     */
+    public CompletableFuture<RemoveComputeDomainResponse> removeComputeDomain(@Nonnull RemoveComputeDomainRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveComputeDomainRequest, RemoveComputeDomainResponse> operation
-              = new RemoveComputeDomain.Async(sdkConfiguration, _headers);
+              = new RemoveComputeDomain.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -227,8 +302,22 @@ public class AsyncDomain {
      * @return {@code CompletableFuture<UpdateComputeDomainResponse>} - The async response
      */
     public CompletableFuture<UpdateComputeDomainResponse> updateComputeDomain(@Nonnull UpdateComputeDomainRequest request) {
+        return updateComputeDomain(request, null);
+    }
+
+    /**
+     * Update a domain
+     * 
+     * <p>Updates the ComputeDomain identified by `id`. Provide the unified ComputeDomain fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateComputeDomainResponse>} - The async response
+     */
+    public CompletableFuture<UpdateComputeDomainResponse> updateComputeDomain(@Nonnull UpdateComputeDomainRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateComputeDomainRequest, UpdateComputeDomainResponse> operation
-              = new UpdateComputeDomain.Async(sdkConfiguration, _headers);
+              = new UpdateComputeDomain.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

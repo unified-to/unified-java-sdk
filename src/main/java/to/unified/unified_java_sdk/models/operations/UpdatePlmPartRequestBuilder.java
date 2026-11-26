@@ -6,18 +6,28 @@ package to.unified.unified_java_sdk.models.operations;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.UpdatePlmPart;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class UpdatePlmPartRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private UpdatePlmPartRequest request;
+    private final Options.Builder optionsBuilder;
 
     public UpdatePlmPartRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public UpdatePlmPartRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public UpdatePlmPartRequestBuilder request(@Nonnull UpdatePlmPartRequest request) {
@@ -42,8 +52,9 @@ public class UpdatePlmPartRequestBuilder {
     * @return The response from the server.
     */
     public UpdatePlmPartResponse call() {
+        Options options = optionsBuilder.build();
         RequestOperation<UpdatePlmPartRequest, UpdatePlmPartResponse> operation
-              = new UpdatePlmPart.Sync(sdkConfiguration, _headers);
+              = new UpdatePlmPart.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

@@ -6,18 +6,28 @@ package to.unified.unified_java_sdk.models.operations;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.CreateAdsCampaign;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class CreateAdsCampaignRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private CreateAdsCampaignRequest request;
+    private final Options.Builder optionsBuilder;
 
     public CreateAdsCampaignRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public CreateAdsCampaignRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public CreateAdsCampaignRequestBuilder request(@Nonnull CreateAdsCampaignRequest request) {
@@ -42,8 +52,9 @@ public class CreateAdsCampaignRequestBuilder {
     * @return The response from the server.
     */
     public CreateAdsCampaignResponse call() {
+        Options options = optionsBuilder.build();
         RequestOperation<CreateAdsCampaignRequest, CreateAdsCampaignResponse> operation
-              = new CreateAdsCampaign.Sync(sdkConfiguration, _headers);
+              = new CreateAdsCampaign.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

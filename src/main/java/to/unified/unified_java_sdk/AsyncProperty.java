@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateAnalyticsPropertyRequest;
 import to.unified.unified_java_sdk.models.operations.CreatePropertyConversationRequest;
@@ -148,6 +149,7 @@ import to.unified.unified_java_sdk.operations.UpdatePropertyListing;
 import to.unified.unified_java_sdk.operations.UpdatePropertyReservation;
 import to.unified.unified_java_sdk.operations.UpdatePropertyReview;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncProperty {
@@ -192,8 +194,22 @@ public class AsyncProperty {
      * @return {@code CompletableFuture<CreateAnalyticsPropertyResponse>} - The async response
      */
     public CompletableFuture<CreateAnalyticsPropertyResponse> createAnalyticsProperty(@Nonnull CreateAnalyticsPropertyRequest request) {
+        return createAnalyticsProperty(request, null);
+    }
+
+    /**
+     * Create a property
+     * 
+     * <p>Creates a AnalyticsProperty. Provide the unified AnalyticsProperty fields in the request body; they
+     * are mapped to the provider's API. Returns the created AnalyticsProperty.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateAnalyticsPropertyResponse>} - The async response
+     */
+    public CompletableFuture<CreateAnalyticsPropertyResponse> createAnalyticsProperty(@Nonnull CreateAnalyticsPropertyRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateAnalyticsPropertyRequest, CreateAnalyticsPropertyResponse> operation
-              = new CreateAnalyticsProperty.Async(sdkConfiguration, _headers);
+              = new CreateAnalyticsProperty.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -221,8 +237,22 @@ public class AsyncProperty {
      * @return {@code CompletableFuture<CreatePropertyConversationResponse>} - The async response
      */
     public CompletableFuture<CreatePropertyConversationResponse> createPropertyConversation(@Nonnull CreatePropertyConversationRequest request) {
+        return createPropertyConversation(request, null);
+    }
+
+    /**
+     * Create a conversation
+     * 
+     * <p>Creates a PropertyConversation. Provide the unified PropertyConversation fields in the request body;
+     * they are mapped to the provider's API. Returns the created PropertyConversation.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreatePropertyConversationResponse>} - The async response
+     */
+    public CompletableFuture<CreatePropertyConversationResponse> createPropertyConversation(@Nonnull CreatePropertyConversationRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreatePropertyConversationRequest, CreatePropertyConversationResponse> operation
-              = new CreatePropertyConversation.Async(sdkConfiguration, _headers);
+              = new CreatePropertyConversation.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -250,8 +280,22 @@ public class AsyncProperty {
      * @return {@code CompletableFuture<CreatePropertyGuestResponse>} - The async response
      */
     public CompletableFuture<CreatePropertyGuestResponse> createPropertyGuest(@Nonnull CreatePropertyGuestRequest request) {
+        return createPropertyGuest(request, null);
+    }
+
+    /**
+     * Create a guest
+     * 
+     * <p>Creates a PropertyGuest. Provide the unified PropertyGuest fields in the request body; they are
+     * mapped to the provider's API. Returns the created PropertyGuest.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreatePropertyGuestResponse>} - The async response
+     */
+    public CompletableFuture<CreatePropertyGuestResponse> createPropertyGuest(@Nonnull CreatePropertyGuestRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreatePropertyGuestRequest, CreatePropertyGuestResponse> operation
-              = new CreatePropertyGuest.Async(sdkConfiguration, _headers);
+              = new CreatePropertyGuest.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -279,8 +323,22 @@ public class AsyncProperty {
      * @return {@code CompletableFuture<CreatePropertyListingResponse>} - The async response
      */
     public CompletableFuture<CreatePropertyListingResponse> createPropertyListing(@Nonnull CreatePropertyListingRequest request) {
+        return createPropertyListing(request, null);
+    }
+
+    /**
+     * Create a listing
+     * 
+     * <p>Creates a PropertyListing. Provide the unified PropertyListing fields in the request body; they are
+     * mapped to the provider's API. Returns the created PropertyListing.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreatePropertyListingResponse>} - The async response
+     */
+    public CompletableFuture<CreatePropertyListingResponse> createPropertyListing(@Nonnull CreatePropertyListingRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreatePropertyListingRequest, CreatePropertyListingResponse> operation
-              = new CreatePropertyListing.Async(sdkConfiguration, _headers);
+              = new CreatePropertyListing.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -308,8 +366,22 @@ public class AsyncProperty {
      * @return {@code CompletableFuture<CreatePropertyQuoteResponse>} - The async response
      */
     public CompletableFuture<CreatePropertyQuoteResponse> createPropertyQuote(@Nonnull CreatePropertyQuoteRequest request) {
+        return createPropertyQuote(request, null);
+    }
+
+    /**
+     * Create a quote
+     * 
+     * <p>Creates a PropertyQuote. Provide the unified PropertyQuote fields in the request body; they are
+     * mapped to the provider's API. Returns the created PropertyQuote.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreatePropertyQuoteResponse>} - The async response
+     */
+    public CompletableFuture<CreatePropertyQuoteResponse> createPropertyQuote(@Nonnull CreatePropertyQuoteRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreatePropertyQuoteRequest, CreatePropertyQuoteResponse> operation
-              = new CreatePropertyQuote.Async(sdkConfiguration, _headers);
+              = new CreatePropertyQuote.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -337,8 +409,22 @@ public class AsyncProperty {
      * @return {@code CompletableFuture<CreatePropertyReservationResponse>} - The async response
      */
     public CompletableFuture<CreatePropertyReservationResponse> createPropertyReservation(@Nonnull CreatePropertyReservationRequest request) {
+        return createPropertyReservation(request, null);
+    }
+
+    /**
+     * Create a reservation
+     * 
+     * <p>Creates a PropertyReservation. Provide the unified PropertyReservation fields in the request body;
+     * they are mapped to the provider's API. Returns the created PropertyReservation.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreatePropertyReservationResponse>} - The async response
+     */
+    public CompletableFuture<CreatePropertyReservationResponse> createPropertyReservation(@Nonnull CreatePropertyReservationRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreatePropertyReservationRequest, CreatePropertyReservationResponse> operation
-              = new CreatePropertyReservation.Async(sdkConfiguration, _headers);
+              = new CreatePropertyReservation.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -366,8 +452,22 @@ public class AsyncProperty {
      * @return {@code CompletableFuture<GetAnalyticsPropertyResponse>} - The async response
      */
     public CompletableFuture<GetAnalyticsPropertyResponse> getAnalyticsProperty(@Nonnull GetAnalyticsPropertyRequest request) {
+        return getAnalyticsProperty(request, null);
+    }
+
+    /**
+     * Retrieve a property
+     * 
+     * <p>Retrieves a single AnalyticsProperty by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetAnalyticsPropertyResponse>} - The async response
+     */
+    public CompletableFuture<GetAnalyticsPropertyResponse> getAnalyticsProperty(@Nonnull GetAnalyticsPropertyRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetAnalyticsPropertyRequest, GetAnalyticsPropertyResponse> operation
-              = new GetAnalyticsProperty.Async(sdkConfiguration, _headers);
+              = new GetAnalyticsProperty.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -395,8 +495,22 @@ public class AsyncProperty {
      * @return {@code CompletableFuture<GetPropertyConversationResponse>} - The async response
      */
     public CompletableFuture<GetPropertyConversationResponse> getPropertyConversation(@Nonnull GetPropertyConversationRequest request) {
+        return getPropertyConversation(request, null);
+    }
+
+    /**
+     * Retrieve a conversation
+     * 
+     * <p>Retrieves a single PropertyConversation by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetPropertyConversationResponse>} - The async response
+     */
+    public CompletableFuture<GetPropertyConversationResponse> getPropertyConversation(@Nonnull GetPropertyConversationRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetPropertyConversationRequest, GetPropertyConversationResponse> operation
-              = new GetPropertyConversation.Async(sdkConfiguration, _headers);
+              = new GetPropertyConversation.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -424,8 +538,22 @@ public class AsyncProperty {
      * @return {@code CompletableFuture<GetPropertyGuestResponse>} - The async response
      */
     public CompletableFuture<GetPropertyGuestResponse> getPropertyGuest(@Nonnull GetPropertyGuestRequest request) {
+        return getPropertyGuest(request, null);
+    }
+
+    /**
+     * Retrieve a guest
+     * 
+     * <p>Retrieves a single PropertyGuest by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetPropertyGuestResponse>} - The async response
+     */
+    public CompletableFuture<GetPropertyGuestResponse> getPropertyGuest(@Nonnull GetPropertyGuestRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetPropertyGuestRequest, GetPropertyGuestResponse> operation
-              = new GetPropertyGuest.Async(sdkConfiguration, _headers);
+              = new GetPropertyGuest.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -453,8 +581,22 @@ public class AsyncProperty {
      * @return {@code CompletableFuture<GetPropertyListingResponse>} - The async response
      */
     public CompletableFuture<GetPropertyListingResponse> getPropertyListing(@Nonnull GetPropertyListingRequest request) {
+        return getPropertyListing(request, null);
+    }
+
+    /**
+     * Retrieve a listing
+     * 
+     * <p>Retrieves a single PropertyListing by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetPropertyListingResponse>} - The async response
+     */
+    public CompletableFuture<GetPropertyListingResponse> getPropertyListing(@Nonnull GetPropertyListingRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetPropertyListingRequest, GetPropertyListingResponse> operation
-              = new GetPropertyListing.Async(sdkConfiguration, _headers);
+              = new GetPropertyListing.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -482,8 +624,22 @@ public class AsyncProperty {
      * @return {@code CompletableFuture<GetPropertyReservationResponse>} - The async response
      */
     public CompletableFuture<GetPropertyReservationResponse> getPropertyReservation(@Nonnull GetPropertyReservationRequest request) {
+        return getPropertyReservation(request, null);
+    }
+
+    /**
+     * Retrieve a reservation
+     * 
+     * <p>Retrieves a single PropertyReservation by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetPropertyReservationResponse>} - The async response
+     */
+    public CompletableFuture<GetPropertyReservationResponse> getPropertyReservation(@Nonnull GetPropertyReservationRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetPropertyReservationRequest, GetPropertyReservationResponse> operation
-              = new GetPropertyReservation.Async(sdkConfiguration, _headers);
+              = new GetPropertyReservation.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -511,8 +667,22 @@ public class AsyncProperty {
      * @return {@code CompletableFuture<GetPropertyReviewResponse>} - The async response
      */
     public CompletableFuture<GetPropertyReviewResponse> getPropertyReview(@Nonnull GetPropertyReviewRequest request) {
+        return getPropertyReview(request, null);
+    }
+
+    /**
+     * Retrieve a review
+     * 
+     * <p>Retrieves a single PropertyReview by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetPropertyReviewResponse>} - The async response
+     */
+    public CompletableFuture<GetPropertyReviewResponse> getPropertyReview(@Nonnull GetPropertyReviewRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetPropertyReviewRequest, GetPropertyReviewResponse> operation
-              = new GetPropertyReview.Async(sdkConfiguration, _headers);
+              = new GetPropertyReview.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -540,8 +710,22 @@ public class AsyncProperty {
      * @return {@code CompletableFuture<GetPropertyUnittypeResponse>} - The async response
      */
     public CompletableFuture<GetPropertyUnittypeResponse> getPropertyUnittype(@Nonnull GetPropertyUnittypeRequest request) {
+        return getPropertyUnittype(request, null);
+    }
+
+    /**
+     * Retrieve an unittype
+     * 
+     * <p>Retrieves a single PropertyUnittype by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetPropertyUnittypeResponse>} - The async response
+     */
+    public CompletableFuture<GetPropertyUnittypeResponse> getPropertyUnittype(@Nonnull GetPropertyUnittypeRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetPropertyUnittypeRequest, GetPropertyUnittypeResponse> operation
-              = new GetPropertyUnittype.Async(sdkConfiguration, _headers);
+              = new GetPropertyUnittype.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -577,8 +761,26 @@ public class AsyncProperty {
      * @return {@code CompletableFuture<ListAnalyticsPropertiesResponse>} - The async response
      */
     public CompletableFuture<ListAnalyticsPropertiesResponse> listAnalyticsProperties(@Nonnull ListAnalyticsPropertiesRequest request) {
+        return listAnalyticsProperties(request, null);
+    }
+
+    /**
+     * List all properties
+     * 
+     * <p>Returns a list of AnalyticsProperties. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListAnalyticsPropertiesResponse>} - The async response
+     */
+    public CompletableFuture<ListAnalyticsPropertiesResponse> listAnalyticsProperties(@Nonnull ListAnalyticsPropertiesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListAnalyticsPropertiesRequest, ListAnalyticsPropertiesResponse> operation
-              = new ListAnalyticsProperties.Async(sdkConfiguration, _headers);
+              = new ListAnalyticsProperties.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -614,8 +816,26 @@ public class AsyncProperty {
      * @return {@code CompletableFuture<ListPropertyAvailabilitiesResponse>} - The async response
      */
     public CompletableFuture<ListPropertyAvailabilitiesResponse> listPropertyAvailabilities(@Nonnull ListPropertyAvailabilitiesRequest request) {
+        return listPropertyAvailabilities(request, null);
+    }
+
+    /**
+     * List all availabilities
+     * 
+     * <p>Returns a list of PropertyAvailabilities. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListPropertyAvailabilitiesResponse>} - The async response
+     */
+    public CompletableFuture<ListPropertyAvailabilitiesResponse> listPropertyAvailabilities(@Nonnull ListPropertyAvailabilitiesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListPropertyAvailabilitiesRequest, ListPropertyAvailabilitiesResponse> operation
-              = new ListPropertyAvailabilities.Async(sdkConfiguration, _headers);
+              = new ListPropertyAvailabilities.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -651,8 +871,26 @@ public class AsyncProperty {
      * @return {@code CompletableFuture<ListPropertyConversationsResponse>} - The async response
      */
     public CompletableFuture<ListPropertyConversationsResponse> listPropertyConversations(@Nonnull ListPropertyConversationsRequest request) {
+        return listPropertyConversations(request, null);
+    }
+
+    /**
+     * List all conversations
+     * 
+     * <p>Returns a list of PropertyConversations. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListPropertyConversationsResponse>} - The async response
+     */
+    public CompletableFuture<ListPropertyConversationsResponse> listPropertyConversations(@Nonnull ListPropertyConversationsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListPropertyConversationsRequest, ListPropertyConversationsResponse> operation
-              = new ListPropertyConversations.Async(sdkConfiguration, _headers);
+              = new ListPropertyConversations.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -688,8 +926,26 @@ public class AsyncProperty {
      * @return {@code CompletableFuture<ListPropertyGuestsResponse>} - The async response
      */
     public CompletableFuture<ListPropertyGuestsResponse> listPropertyGuests(@Nonnull ListPropertyGuestsRequest request) {
+        return listPropertyGuests(request, null);
+    }
+
+    /**
+     * List all guests
+     * 
+     * <p>Returns a list of PropertyGuests. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListPropertyGuestsResponse>} - The async response
+     */
+    public CompletableFuture<ListPropertyGuestsResponse> listPropertyGuests(@Nonnull ListPropertyGuestsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListPropertyGuestsRequest, ListPropertyGuestsResponse> operation
-              = new ListPropertyGuests.Async(sdkConfiguration, _headers);
+              = new ListPropertyGuests.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -725,8 +981,26 @@ public class AsyncProperty {
      * @return {@code CompletableFuture<ListPropertyListingsResponse>} - The async response
      */
     public CompletableFuture<ListPropertyListingsResponse> listPropertyListings(@Nonnull ListPropertyListingsRequest request) {
+        return listPropertyListings(request, null);
+    }
+
+    /**
+     * List all listings
+     * 
+     * <p>Returns a list of PropertyListings. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListPropertyListingsResponse>} - The async response
+     */
+    public CompletableFuture<ListPropertyListingsResponse> listPropertyListings(@Nonnull ListPropertyListingsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListPropertyListingsRequest, ListPropertyListingsResponse> operation
-              = new ListPropertyListings.Async(sdkConfiguration, _headers);
+              = new ListPropertyListings.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -762,8 +1036,26 @@ public class AsyncProperty {
      * @return {@code CompletableFuture<ListPropertyReservationsResponse>} - The async response
      */
     public CompletableFuture<ListPropertyReservationsResponse> listPropertyReservations(@Nonnull ListPropertyReservationsRequest request) {
+        return listPropertyReservations(request, null);
+    }
+
+    /**
+     * List all reservations
+     * 
+     * <p>Returns a list of PropertyReservations. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListPropertyReservationsResponse>} - The async response
+     */
+    public CompletableFuture<ListPropertyReservationsResponse> listPropertyReservations(@Nonnull ListPropertyReservationsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListPropertyReservationsRequest, ListPropertyReservationsResponse> operation
-              = new ListPropertyReservations.Async(sdkConfiguration, _headers);
+              = new ListPropertyReservations.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -799,8 +1091,26 @@ public class AsyncProperty {
      * @return {@code CompletableFuture<ListPropertyReviewsResponse>} - The async response
      */
     public CompletableFuture<ListPropertyReviewsResponse> listPropertyReviews(@Nonnull ListPropertyReviewsRequest request) {
+        return listPropertyReviews(request, null);
+    }
+
+    /**
+     * List all reviews
+     * 
+     * <p>Returns a list of PropertyReviews. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListPropertyReviewsResponse>} - The async response
+     */
+    public CompletableFuture<ListPropertyReviewsResponse> listPropertyReviews(@Nonnull ListPropertyReviewsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListPropertyReviewsRequest, ListPropertyReviewsResponse> operation
-              = new ListPropertyReviews.Async(sdkConfiguration, _headers);
+              = new ListPropertyReviews.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -836,8 +1146,26 @@ public class AsyncProperty {
      * @return {@code CompletableFuture<ListPropertyUnittypesResponse>} - The async response
      */
     public CompletableFuture<ListPropertyUnittypesResponse> listPropertyUnittypes(@Nonnull ListPropertyUnittypesRequest request) {
+        return listPropertyUnittypes(request, null);
+    }
+
+    /**
+     * List all unittypes
+     * 
+     * <p>Returns a list of PropertyUnittypes. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListPropertyUnittypesResponse>} - The async response
+     */
+    public CompletableFuture<ListPropertyUnittypesResponse> listPropertyUnittypes(@Nonnull ListPropertyUnittypesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListPropertyUnittypesRequest, ListPropertyUnittypesResponse> operation
-              = new ListPropertyUnittypes.Async(sdkConfiguration, _headers);
+              = new ListPropertyUnittypes.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -865,8 +1193,22 @@ public class AsyncProperty {
      * @return {@code CompletableFuture<PatchAnalyticsPropertyResponse>} - The async response
      */
     public CompletableFuture<PatchAnalyticsPropertyResponse> patchAnalyticsProperty(@Nonnull PatchAnalyticsPropertyRequest request) {
+        return patchAnalyticsProperty(request, null);
+    }
+
+    /**
+     * Update a property
+     * 
+     * <p>Updates the AnalyticsProperty identified by `id`. Provide the unified AnalyticsProperty fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchAnalyticsPropertyResponse>} - The async response
+     */
+    public CompletableFuture<PatchAnalyticsPropertyResponse> patchAnalyticsProperty(@Nonnull PatchAnalyticsPropertyRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchAnalyticsPropertyRequest, PatchAnalyticsPropertyResponse> operation
-              = new PatchAnalyticsProperty.Async(sdkConfiguration, _headers);
+              = new PatchAnalyticsProperty.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -894,8 +1236,22 @@ public class AsyncProperty {
      * @return {@code CompletableFuture<PatchPropertyGuestResponse>} - The async response
      */
     public CompletableFuture<PatchPropertyGuestResponse> patchPropertyGuest(@Nonnull PatchPropertyGuestRequest request) {
+        return patchPropertyGuest(request, null);
+    }
+
+    /**
+     * Update a guest
+     * 
+     * <p>Updates the PropertyGuest identified by `id`. Provide the unified PropertyGuest fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchPropertyGuestResponse>} - The async response
+     */
+    public CompletableFuture<PatchPropertyGuestResponse> patchPropertyGuest(@Nonnull PatchPropertyGuestRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchPropertyGuestRequest, PatchPropertyGuestResponse> operation
-              = new PatchPropertyGuest.Async(sdkConfiguration, _headers);
+              = new PatchPropertyGuest.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -923,8 +1279,22 @@ public class AsyncProperty {
      * @return {@code CompletableFuture<PatchPropertyListingResponse>} - The async response
      */
     public CompletableFuture<PatchPropertyListingResponse> patchPropertyListing(@Nonnull PatchPropertyListingRequest request) {
+        return patchPropertyListing(request, null);
+    }
+
+    /**
+     * Update a listing
+     * 
+     * <p>Updates the PropertyListing identified by `id`. Provide the unified PropertyListing fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchPropertyListingResponse>} - The async response
+     */
+    public CompletableFuture<PatchPropertyListingResponse> patchPropertyListing(@Nonnull PatchPropertyListingRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchPropertyListingRequest, PatchPropertyListingResponse> operation
-              = new PatchPropertyListing.Async(sdkConfiguration, _headers);
+              = new PatchPropertyListing.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -952,8 +1322,22 @@ public class AsyncProperty {
      * @return {@code CompletableFuture<PatchPropertyReservationResponse>} - The async response
      */
     public CompletableFuture<PatchPropertyReservationResponse> patchPropertyReservation(@Nonnull PatchPropertyReservationRequest request) {
+        return patchPropertyReservation(request, null);
+    }
+
+    /**
+     * Update a reservation
+     * 
+     * <p>Updates the PropertyReservation identified by `id`. Provide the unified PropertyReservation fields
+     * to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchPropertyReservationResponse>} - The async response
+     */
+    public CompletableFuture<PatchPropertyReservationResponse> patchPropertyReservation(@Nonnull PatchPropertyReservationRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchPropertyReservationRequest, PatchPropertyReservationResponse> operation
-              = new PatchPropertyReservation.Async(sdkConfiguration, _headers);
+              = new PatchPropertyReservation.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -981,8 +1365,22 @@ public class AsyncProperty {
      * @return {@code CompletableFuture<PatchPropertyReviewResponse>} - The async response
      */
     public CompletableFuture<PatchPropertyReviewResponse> patchPropertyReview(@Nonnull PatchPropertyReviewRequest request) {
+        return patchPropertyReview(request, null);
+    }
+
+    /**
+     * Update a review
+     * 
+     * <p>Updates the PropertyReview identified by `id`. Provide the unified PropertyReview fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchPropertyReviewResponse>} - The async response
+     */
+    public CompletableFuture<PatchPropertyReviewResponse> patchPropertyReview(@Nonnull PatchPropertyReviewRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchPropertyReviewRequest, PatchPropertyReviewResponse> operation
-              = new PatchPropertyReview.Async(sdkConfiguration, _headers);
+              = new PatchPropertyReview.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1008,8 +1406,21 @@ public class AsyncProperty {
      * @return {@code CompletableFuture<RemoveAnalyticsPropertyResponse>} - The async response
      */
     public CompletableFuture<RemoveAnalyticsPropertyResponse> removeAnalyticsProperty(@Nonnull RemoveAnalyticsPropertyRequest request) {
+        return removeAnalyticsProperty(request, null);
+    }
+
+    /**
+     * Remove a property
+     * 
+     * <p>Deletes the AnalyticsProperty identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveAnalyticsPropertyResponse>} - The async response
+     */
+    public CompletableFuture<RemoveAnalyticsPropertyResponse> removeAnalyticsProperty(@Nonnull RemoveAnalyticsPropertyRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveAnalyticsPropertyRequest, RemoveAnalyticsPropertyResponse> operation
-              = new RemoveAnalyticsProperty.Async(sdkConfiguration, _headers);
+              = new RemoveAnalyticsProperty.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1035,8 +1446,21 @@ public class AsyncProperty {
      * @return {@code CompletableFuture<RemovePropertyGuestResponse>} - The async response
      */
     public CompletableFuture<RemovePropertyGuestResponse> removePropertyGuest(@Nonnull RemovePropertyGuestRequest request) {
+        return removePropertyGuest(request, null);
+    }
+
+    /**
+     * Remove a guest
+     * 
+     * <p>Deletes the PropertyGuest identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemovePropertyGuestResponse>} - The async response
+     */
+    public CompletableFuture<RemovePropertyGuestResponse> removePropertyGuest(@Nonnull RemovePropertyGuestRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemovePropertyGuestRequest, RemovePropertyGuestResponse> operation
-              = new RemovePropertyGuest.Async(sdkConfiguration, _headers);
+              = new RemovePropertyGuest.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1062,8 +1486,21 @@ public class AsyncProperty {
      * @return {@code CompletableFuture<RemovePropertyListingResponse>} - The async response
      */
     public CompletableFuture<RemovePropertyListingResponse> removePropertyListing(@Nonnull RemovePropertyListingRequest request) {
+        return removePropertyListing(request, null);
+    }
+
+    /**
+     * Remove a listing
+     * 
+     * <p>Deletes the PropertyListing identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemovePropertyListingResponse>} - The async response
+     */
+    public CompletableFuture<RemovePropertyListingResponse> removePropertyListing(@Nonnull RemovePropertyListingRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemovePropertyListingRequest, RemovePropertyListingResponse> operation
-              = new RemovePropertyListing.Async(sdkConfiguration, _headers);
+              = new RemovePropertyListing.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1089,8 +1526,21 @@ public class AsyncProperty {
      * @return {@code CompletableFuture<RemovePropertyReservationResponse>} - The async response
      */
     public CompletableFuture<RemovePropertyReservationResponse> removePropertyReservation(@Nonnull RemovePropertyReservationRequest request) {
+        return removePropertyReservation(request, null);
+    }
+
+    /**
+     * Remove a reservation
+     * 
+     * <p>Deletes the PropertyReservation identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemovePropertyReservationResponse>} - The async response
+     */
+    public CompletableFuture<RemovePropertyReservationResponse> removePropertyReservation(@Nonnull RemovePropertyReservationRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemovePropertyReservationRequest, RemovePropertyReservationResponse> operation
-              = new RemovePropertyReservation.Async(sdkConfiguration, _headers);
+              = new RemovePropertyReservation.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1118,8 +1568,22 @@ public class AsyncProperty {
      * @return {@code CompletableFuture<UpdateAnalyticsPropertyResponse>} - The async response
      */
     public CompletableFuture<UpdateAnalyticsPropertyResponse> updateAnalyticsProperty(@Nonnull UpdateAnalyticsPropertyRequest request) {
+        return updateAnalyticsProperty(request, null);
+    }
+
+    /**
+     * Update a property
+     * 
+     * <p>Updates the AnalyticsProperty identified by `id`. Provide the unified AnalyticsProperty fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateAnalyticsPropertyResponse>} - The async response
+     */
+    public CompletableFuture<UpdateAnalyticsPropertyResponse> updateAnalyticsProperty(@Nonnull UpdateAnalyticsPropertyRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateAnalyticsPropertyRequest, UpdateAnalyticsPropertyResponse> operation
-              = new UpdateAnalyticsProperty.Async(sdkConfiguration, _headers);
+              = new UpdateAnalyticsProperty.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1147,8 +1611,22 @@ public class AsyncProperty {
      * @return {@code CompletableFuture<UpdatePropertyGuestResponse>} - The async response
      */
     public CompletableFuture<UpdatePropertyGuestResponse> updatePropertyGuest(@Nonnull UpdatePropertyGuestRequest request) {
+        return updatePropertyGuest(request, null);
+    }
+
+    /**
+     * Update a guest
+     * 
+     * <p>Updates the PropertyGuest identified by `id`. Provide the unified PropertyGuest fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdatePropertyGuestResponse>} - The async response
+     */
+    public CompletableFuture<UpdatePropertyGuestResponse> updatePropertyGuest(@Nonnull UpdatePropertyGuestRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdatePropertyGuestRequest, UpdatePropertyGuestResponse> operation
-              = new UpdatePropertyGuest.Async(sdkConfiguration, _headers);
+              = new UpdatePropertyGuest.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1176,8 +1654,22 @@ public class AsyncProperty {
      * @return {@code CompletableFuture<UpdatePropertyListingResponse>} - The async response
      */
     public CompletableFuture<UpdatePropertyListingResponse> updatePropertyListing(@Nonnull UpdatePropertyListingRequest request) {
+        return updatePropertyListing(request, null);
+    }
+
+    /**
+     * Update a listing
+     * 
+     * <p>Updates the PropertyListing identified by `id`. Provide the unified PropertyListing fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdatePropertyListingResponse>} - The async response
+     */
+    public CompletableFuture<UpdatePropertyListingResponse> updatePropertyListing(@Nonnull UpdatePropertyListingRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdatePropertyListingRequest, UpdatePropertyListingResponse> operation
-              = new UpdatePropertyListing.Async(sdkConfiguration, _headers);
+              = new UpdatePropertyListing.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1205,8 +1697,22 @@ public class AsyncProperty {
      * @return {@code CompletableFuture<UpdatePropertyReservationResponse>} - The async response
      */
     public CompletableFuture<UpdatePropertyReservationResponse> updatePropertyReservation(@Nonnull UpdatePropertyReservationRequest request) {
+        return updatePropertyReservation(request, null);
+    }
+
+    /**
+     * Update a reservation
+     * 
+     * <p>Updates the PropertyReservation identified by `id`. Provide the unified PropertyReservation fields
+     * to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdatePropertyReservationResponse>} - The async response
+     */
+    public CompletableFuture<UpdatePropertyReservationResponse> updatePropertyReservation(@Nonnull UpdatePropertyReservationRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdatePropertyReservationRequest, UpdatePropertyReservationResponse> operation
-              = new UpdatePropertyReservation.Async(sdkConfiguration, _headers);
+              = new UpdatePropertyReservation.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1234,8 +1740,22 @@ public class AsyncProperty {
      * @return {@code CompletableFuture<UpdatePropertyReviewResponse>} - The async response
      */
     public CompletableFuture<UpdatePropertyReviewResponse> updatePropertyReview(@Nonnull UpdatePropertyReviewRequest request) {
+        return updatePropertyReview(request, null);
+    }
+
+    /**
+     * Update a review
+     * 
+     * <p>Updates the PropertyReview identified by `id`. Provide the unified PropertyReview fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdatePropertyReviewResponse>} - The async response
+     */
+    public CompletableFuture<UpdatePropertyReviewResponse> updatePropertyReview(@Nonnull UpdatePropertyReviewRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdatePropertyReviewRequest, UpdatePropertyReviewResponse> operation
-              = new UpdatePropertyReview.Async(sdkConfiguration, _headers);
+              = new UpdatePropertyReview.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

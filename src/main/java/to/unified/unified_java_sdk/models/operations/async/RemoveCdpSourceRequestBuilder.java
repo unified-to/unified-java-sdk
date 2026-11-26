@@ -6,20 +6,30 @@ package to.unified.unified_java_sdk.models.operations.async;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.RemoveCdpSourceRequest;
 import to.unified.unified_java_sdk.operations.RemoveCdpSource;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveCdpSourceRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private RemoveCdpSourceRequest request;
+    private final Options.Builder optionsBuilder;
 
     public RemoveCdpSourceRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public RemoveCdpSourceRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public RemoveCdpSourceRequestBuilder request(@Nonnull RemoveCdpSourceRequest request) {
@@ -44,8 +54,9 @@ public class RemoveCdpSourceRequestBuilder {
     * @return The response from the server.
     */
     public CompletableFuture<RemoveCdpSourceResponse> call() {
+        Options options = optionsBuilder.build();
         AsyncRequestOperation<RemoveCdpSourceRequest, RemoveCdpSourceResponse> operation
-              = new RemoveCdpSource.Async(sdkConfiguration, _headers);
+              = new RemoveCdpSource.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

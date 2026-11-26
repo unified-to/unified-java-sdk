@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateGenaiAgentRequest;
 import to.unified.unified_java_sdk.models.operations.CreateGenaiEmbeddingRequest;
@@ -132,6 +133,7 @@ import to.unified.unified_java_sdk.operations.UpdateGenaiMemory;
 import to.unified.unified_java_sdk.operations.UpdateGenaiOrganization;
 import to.unified.unified_java_sdk.operations.UpdateGenaiTask;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncGenai {
@@ -176,8 +178,22 @@ public class AsyncGenai {
      * @return {@code CompletableFuture<CreateGenaiAgentResponse>} - The async response
      */
     public CompletableFuture<CreateGenaiAgentResponse> createGenaiAgent(@Nonnull CreateGenaiAgentRequest request) {
+        return createGenaiAgent(request, null);
+    }
+
+    /**
+     * Create an agent
+     * 
+     * <p>Creates a GenaiAgent. Provide the unified GenaiAgent fields in the request body; they are mapped to
+     * the provider's API. Returns the created GenaiAgent.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateGenaiAgentResponse>} - The async response
+     */
+    public CompletableFuture<CreateGenaiAgentResponse> createGenaiAgent(@Nonnull CreateGenaiAgentRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateGenaiAgentRequest, CreateGenaiAgentResponse> operation
-              = new CreateGenaiAgent.Async(sdkConfiguration, _headers);
+              = new CreateGenaiAgent.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -205,8 +221,22 @@ public class AsyncGenai {
      * @return {@code CompletableFuture<CreateGenaiEmbeddingResponse>} - The async response
      */
     public CompletableFuture<CreateGenaiEmbeddingResponse> createGenaiEmbedding(@Nonnull CreateGenaiEmbeddingRequest request) {
+        return createGenaiEmbedding(request, null);
+    }
+
+    /**
+     * Create an embedding
+     * 
+     * <p>Creates a GenaiEmbedding. Provide the unified GenaiEmbedding fields in the request body; they are
+     * mapped to the provider's API. Returns the created GenaiEmbedding.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateGenaiEmbeddingResponse>} - The async response
+     */
+    public CompletableFuture<CreateGenaiEmbeddingResponse> createGenaiEmbedding(@Nonnull CreateGenaiEmbeddingRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateGenaiEmbeddingRequest, CreateGenaiEmbeddingResponse> operation
-              = new CreateGenaiEmbedding.Async(sdkConfiguration, _headers);
+              = new CreateGenaiEmbedding.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -234,8 +264,22 @@ public class AsyncGenai {
      * @return {@code CompletableFuture<CreateGenaiMemoryResponse>} - The async response
      */
     public CompletableFuture<CreateGenaiMemoryResponse> createGenaiMemory(@Nonnull CreateGenaiMemoryRequest request) {
+        return createGenaiMemory(request, null);
+    }
+
+    /**
+     * Create a memory
+     * 
+     * <p>Creates a GenaiMemory. Provide the unified GenaiMemory fields in the request body; they are mapped
+     * to the provider's API. Returns the created GenaiMemory.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateGenaiMemoryResponse>} - The async response
+     */
+    public CompletableFuture<CreateGenaiMemoryResponse> createGenaiMemory(@Nonnull CreateGenaiMemoryRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateGenaiMemoryRequest, CreateGenaiMemoryResponse> operation
-              = new CreateGenaiMemory.Async(sdkConfiguration, _headers);
+              = new CreateGenaiMemory.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -263,8 +307,22 @@ public class AsyncGenai {
      * @return {@code CompletableFuture<CreateGenaiOrganizationResponse>} - The async response
      */
     public CompletableFuture<CreateGenaiOrganizationResponse> createGenaiOrganization(@Nonnull CreateGenaiOrganizationRequest request) {
+        return createGenaiOrganization(request, null);
+    }
+
+    /**
+     * Create an organization
+     * 
+     * <p>Creates a GenaiOrganization. Provide the unified GenaiOrganization fields in the request body; they
+     * are mapped to the provider's API. Returns the created GenaiOrganization.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateGenaiOrganizationResponse>} - The async response
+     */
+    public CompletableFuture<CreateGenaiOrganizationResponse> createGenaiOrganization(@Nonnull CreateGenaiOrganizationRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateGenaiOrganizationRequest, CreateGenaiOrganizationResponse> operation
-              = new CreateGenaiOrganization.Async(sdkConfiguration, _headers);
+              = new CreateGenaiOrganization.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -292,8 +350,22 @@ public class AsyncGenai {
      * @return {@code CompletableFuture<CreateGenaiPromptResponse>} - The async response
      */
     public CompletableFuture<CreateGenaiPromptResponse> createGenaiPrompt(@Nonnull CreateGenaiPromptRequest request) {
+        return createGenaiPrompt(request, null);
+    }
+
+    /**
+     * Create a prompt
+     * 
+     * <p>Creates a GenaiPrompt. Provide the unified GenaiPrompt fields in the request body; they are mapped
+     * to the provider's API. Returns the created GenaiPrompt.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateGenaiPromptResponse>} - The async response
+     */
+    public CompletableFuture<CreateGenaiPromptResponse> createGenaiPrompt(@Nonnull CreateGenaiPromptRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateGenaiPromptRequest, CreateGenaiPromptResponse> operation
-              = new CreateGenaiPrompt.Async(sdkConfiguration, _headers);
+              = new CreateGenaiPrompt.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -321,8 +393,22 @@ public class AsyncGenai {
      * @return {@code CompletableFuture<CreateGenaiTaskResponse>} - The async response
      */
     public CompletableFuture<CreateGenaiTaskResponse> createGenaiTask(@Nonnull CreateGenaiTaskRequest request) {
+        return createGenaiTask(request, null);
+    }
+
+    /**
+     * Create a task
+     * 
+     * <p>Creates a GenaiTask. Provide the unified GenaiTask fields in the request body; they are mapped to
+     * the provider's API. Returns the created GenaiTask.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateGenaiTaskResponse>} - The async response
+     */
+    public CompletableFuture<CreateGenaiTaskResponse> createGenaiTask(@Nonnull CreateGenaiTaskRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateGenaiTaskRequest, CreateGenaiTaskResponse> operation
-              = new CreateGenaiTask.Async(sdkConfiguration, _headers);
+              = new CreateGenaiTask.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -350,8 +436,22 @@ public class AsyncGenai {
      * @return {@code CompletableFuture<GetGenaiAgentResponse>} - The async response
      */
     public CompletableFuture<GetGenaiAgentResponse> getGenaiAgent(@Nonnull GetGenaiAgentRequest request) {
+        return getGenaiAgent(request, null);
+    }
+
+    /**
+     * Retrieve an agent
+     * 
+     * <p>Retrieves a single GenaiAgent by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetGenaiAgentResponse>} - The async response
+     */
+    public CompletableFuture<GetGenaiAgentResponse> getGenaiAgent(@Nonnull GetGenaiAgentRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetGenaiAgentRequest, GetGenaiAgentResponse> operation
-              = new GetGenaiAgent.Async(sdkConfiguration, _headers);
+              = new GetGenaiAgent.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -379,8 +479,22 @@ public class AsyncGenai {
      * @return {@code CompletableFuture<GetGenaiMemoryResponse>} - The async response
      */
     public CompletableFuture<GetGenaiMemoryResponse> getGenaiMemory(@Nonnull GetGenaiMemoryRequest request) {
+        return getGenaiMemory(request, null);
+    }
+
+    /**
+     * Retrieve a memory
+     * 
+     * <p>Retrieves a single GenaiMemory by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetGenaiMemoryResponse>} - The async response
+     */
+    public CompletableFuture<GetGenaiMemoryResponse> getGenaiMemory(@Nonnull GetGenaiMemoryRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetGenaiMemoryRequest, GetGenaiMemoryResponse> operation
-              = new GetGenaiMemory.Async(sdkConfiguration, _headers);
+              = new GetGenaiMemory.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -408,8 +522,22 @@ public class AsyncGenai {
      * @return {@code CompletableFuture<GetGenaiModelResponse>} - The async response
      */
     public CompletableFuture<GetGenaiModelResponse> getGenaiModel(@Nonnull GetGenaiModelRequest request) {
+        return getGenaiModel(request, null);
+    }
+
+    /**
+     * Retrieve a model
+     * 
+     * <p>Retrieves a single GenaiModel by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetGenaiModelResponse>} - The async response
+     */
+    public CompletableFuture<GetGenaiModelResponse> getGenaiModel(@Nonnull GetGenaiModelRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetGenaiModelRequest, GetGenaiModelResponse> operation
-              = new GetGenaiModel.Async(sdkConfiguration, _headers);
+              = new GetGenaiModel.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -437,8 +565,22 @@ public class AsyncGenai {
      * @return {@code CompletableFuture<GetGenaiOrganizationResponse>} - The async response
      */
     public CompletableFuture<GetGenaiOrganizationResponse> getGenaiOrganization(@Nonnull GetGenaiOrganizationRequest request) {
+        return getGenaiOrganization(request, null);
+    }
+
+    /**
+     * Retrieve an organization
+     * 
+     * <p>Retrieves a single GenaiOrganization by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetGenaiOrganizationResponse>} - The async response
+     */
+    public CompletableFuture<GetGenaiOrganizationResponse> getGenaiOrganization(@Nonnull GetGenaiOrganizationRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetGenaiOrganizationRequest, GetGenaiOrganizationResponse> operation
-              = new GetGenaiOrganization.Async(sdkConfiguration, _headers);
+              = new GetGenaiOrganization.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -466,8 +608,22 @@ public class AsyncGenai {
      * @return {@code CompletableFuture<GetGenaiSkillResponse>} - The async response
      */
     public CompletableFuture<GetGenaiSkillResponse> getGenaiSkill(@Nonnull GetGenaiSkillRequest request) {
+        return getGenaiSkill(request, null);
+    }
+
+    /**
+     * Retrieve a skill
+     * 
+     * <p>Retrieves a single GenaiSkill by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetGenaiSkillResponse>} - The async response
+     */
+    public CompletableFuture<GetGenaiSkillResponse> getGenaiSkill(@Nonnull GetGenaiSkillRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetGenaiSkillRequest, GetGenaiSkillResponse> operation
-              = new GetGenaiSkill.Async(sdkConfiguration, _headers);
+              = new GetGenaiSkill.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -495,8 +651,22 @@ public class AsyncGenai {
      * @return {@code CompletableFuture<GetGenaiTaskResponse>} - The async response
      */
     public CompletableFuture<GetGenaiTaskResponse> getGenaiTask(@Nonnull GetGenaiTaskRequest request) {
+        return getGenaiTask(request, null);
+    }
+
+    /**
+     * Retrieve a task
+     * 
+     * <p>Retrieves a single GenaiTask by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetGenaiTaskResponse>} - The async response
+     */
+    public CompletableFuture<GetGenaiTaskResponse> getGenaiTask(@Nonnull GetGenaiTaskRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetGenaiTaskRequest, GetGenaiTaskResponse> operation
-              = new GetGenaiTask.Async(sdkConfiguration, _headers);
+              = new GetGenaiTask.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -532,8 +702,26 @@ public class AsyncGenai {
      * @return {@code CompletableFuture<ListGenaiAgentsResponse>} - The async response
      */
     public CompletableFuture<ListGenaiAgentsResponse> listGenaiAgents(@Nonnull ListGenaiAgentsRequest request) {
+        return listGenaiAgents(request, null);
+    }
+
+    /**
+     * List all agents
+     * 
+     * <p>Returns a list of GenaiAgents. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListGenaiAgentsResponse>} - The async response
+     */
+    public CompletableFuture<ListGenaiAgentsResponse> listGenaiAgents(@Nonnull ListGenaiAgentsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListGenaiAgentsRequest, ListGenaiAgentsResponse> operation
-              = new ListGenaiAgents.Async(sdkConfiguration, _headers);
+              = new ListGenaiAgents.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -569,8 +757,26 @@ public class AsyncGenai {
      * @return {@code CompletableFuture<ListGenaiMemoriesResponse>} - The async response
      */
     public CompletableFuture<ListGenaiMemoriesResponse> listGenaiMemories(@Nonnull ListGenaiMemoriesRequest request) {
+        return listGenaiMemories(request, null);
+    }
+
+    /**
+     * List all memories
+     * 
+     * <p>Returns a list of GenaiMemories. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListGenaiMemoriesResponse>} - The async response
+     */
+    public CompletableFuture<ListGenaiMemoriesResponse> listGenaiMemories(@Nonnull ListGenaiMemoriesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListGenaiMemoriesRequest, ListGenaiMemoriesResponse> operation
-              = new ListGenaiMemories.Async(sdkConfiguration, _headers);
+              = new ListGenaiMemories.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -606,8 +812,26 @@ public class AsyncGenai {
      * @return {@code CompletableFuture<ListGenaiModelsResponse>} - The async response
      */
     public CompletableFuture<ListGenaiModelsResponse> listGenaiModels(@Nonnull ListGenaiModelsRequest request) {
+        return listGenaiModels(request, null);
+    }
+
+    /**
+     * List all models
+     * 
+     * <p>Returns a list of GenaiModels. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListGenaiModelsResponse>} - The async response
+     */
+    public CompletableFuture<ListGenaiModelsResponse> listGenaiModels(@Nonnull ListGenaiModelsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListGenaiModelsRequest, ListGenaiModelsResponse> operation
-              = new ListGenaiModels.Async(sdkConfiguration, _headers);
+              = new ListGenaiModels.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -643,8 +867,26 @@ public class AsyncGenai {
      * @return {@code CompletableFuture<ListGenaiOrganizationsResponse>} - The async response
      */
     public CompletableFuture<ListGenaiOrganizationsResponse> listGenaiOrganizations(@Nonnull ListGenaiOrganizationsRequest request) {
+        return listGenaiOrganizations(request, null);
+    }
+
+    /**
+     * List all organizations
+     * 
+     * <p>Returns a list of GenaiOrganizations. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListGenaiOrganizationsResponse>} - The async response
+     */
+    public CompletableFuture<ListGenaiOrganizationsResponse> listGenaiOrganizations(@Nonnull ListGenaiOrganizationsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListGenaiOrganizationsRequest, ListGenaiOrganizationsResponse> operation
-              = new ListGenaiOrganizations.Async(sdkConfiguration, _headers);
+              = new ListGenaiOrganizations.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -680,8 +922,26 @@ public class AsyncGenai {
      * @return {@code CompletableFuture<ListGenaiSkillsResponse>} - The async response
      */
     public CompletableFuture<ListGenaiSkillsResponse> listGenaiSkills(@Nonnull ListGenaiSkillsRequest request) {
+        return listGenaiSkills(request, null);
+    }
+
+    /**
+     * List all skills
+     * 
+     * <p>Returns a list of GenaiSkills. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListGenaiSkillsResponse>} - The async response
+     */
+    public CompletableFuture<ListGenaiSkillsResponse> listGenaiSkills(@Nonnull ListGenaiSkillsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListGenaiSkillsRequest, ListGenaiSkillsResponse> operation
-              = new ListGenaiSkills.Async(sdkConfiguration, _headers);
+              = new ListGenaiSkills.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -717,8 +977,26 @@ public class AsyncGenai {
      * @return {@code CompletableFuture<ListGenaiTasksResponse>} - The async response
      */
     public CompletableFuture<ListGenaiTasksResponse> listGenaiTasks(@Nonnull ListGenaiTasksRequest request) {
+        return listGenaiTasks(request, null);
+    }
+
+    /**
+     * List all tasks
+     * 
+     * <p>Returns a list of GenaiTasks. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListGenaiTasksResponse>} - The async response
+     */
+    public CompletableFuture<ListGenaiTasksResponse> listGenaiTasks(@Nonnull ListGenaiTasksRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListGenaiTasksRequest, ListGenaiTasksResponse> operation
-              = new ListGenaiTasks.Async(sdkConfiguration, _headers);
+              = new ListGenaiTasks.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -746,8 +1024,22 @@ public class AsyncGenai {
      * @return {@code CompletableFuture<PatchGenaiAgentResponse>} - The async response
      */
     public CompletableFuture<PatchGenaiAgentResponse> patchGenaiAgent(@Nonnull PatchGenaiAgentRequest request) {
+        return patchGenaiAgent(request, null);
+    }
+
+    /**
+     * Update an agent
+     * 
+     * <p>Updates the GenaiAgent identified by `id`. Provide the unified GenaiAgent fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchGenaiAgentResponse>} - The async response
+     */
+    public CompletableFuture<PatchGenaiAgentResponse> patchGenaiAgent(@Nonnull PatchGenaiAgentRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchGenaiAgentRequest, PatchGenaiAgentResponse> operation
-              = new PatchGenaiAgent.Async(sdkConfiguration, _headers);
+              = new PatchGenaiAgent.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -775,8 +1067,22 @@ public class AsyncGenai {
      * @return {@code CompletableFuture<PatchGenaiMemoryResponse>} - The async response
      */
     public CompletableFuture<PatchGenaiMemoryResponse> patchGenaiMemory(@Nonnull PatchGenaiMemoryRequest request) {
+        return patchGenaiMemory(request, null);
+    }
+
+    /**
+     * Update a memory
+     * 
+     * <p>Updates the GenaiMemory identified by `id`. Provide the unified GenaiMemory fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchGenaiMemoryResponse>} - The async response
+     */
+    public CompletableFuture<PatchGenaiMemoryResponse> patchGenaiMemory(@Nonnull PatchGenaiMemoryRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchGenaiMemoryRequest, PatchGenaiMemoryResponse> operation
-              = new PatchGenaiMemory.Async(sdkConfiguration, _headers);
+              = new PatchGenaiMemory.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -804,8 +1110,22 @@ public class AsyncGenai {
      * @return {@code CompletableFuture<PatchGenaiOrganizationResponse>} - The async response
      */
     public CompletableFuture<PatchGenaiOrganizationResponse> patchGenaiOrganization(@Nonnull PatchGenaiOrganizationRequest request) {
+        return patchGenaiOrganization(request, null);
+    }
+
+    /**
+     * Update an organization
+     * 
+     * <p>Updates the GenaiOrganization identified by `id`. Provide the unified GenaiOrganization fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchGenaiOrganizationResponse>} - The async response
+     */
+    public CompletableFuture<PatchGenaiOrganizationResponse> patchGenaiOrganization(@Nonnull PatchGenaiOrganizationRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchGenaiOrganizationRequest, PatchGenaiOrganizationResponse> operation
-              = new PatchGenaiOrganization.Async(sdkConfiguration, _headers);
+              = new PatchGenaiOrganization.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -833,8 +1153,22 @@ public class AsyncGenai {
      * @return {@code CompletableFuture<PatchGenaiTaskResponse>} - The async response
      */
     public CompletableFuture<PatchGenaiTaskResponse> patchGenaiTask(@Nonnull PatchGenaiTaskRequest request) {
+        return patchGenaiTask(request, null);
+    }
+
+    /**
+     * Update a task
+     * 
+     * <p>Updates the GenaiTask identified by `id`. Provide the unified GenaiTask fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchGenaiTaskResponse>} - The async response
+     */
+    public CompletableFuture<PatchGenaiTaskResponse> patchGenaiTask(@Nonnull PatchGenaiTaskRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchGenaiTaskRequest, PatchGenaiTaskResponse> operation
-              = new PatchGenaiTask.Async(sdkConfiguration, _headers);
+              = new PatchGenaiTask.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -860,8 +1194,21 @@ public class AsyncGenai {
      * @return {@code CompletableFuture<RemoveGenaiAgentResponse>} - The async response
      */
     public CompletableFuture<RemoveGenaiAgentResponse> removeGenaiAgent(@Nonnull RemoveGenaiAgentRequest request) {
+        return removeGenaiAgent(request, null);
+    }
+
+    /**
+     * Remove an agent
+     * 
+     * <p>Deletes the GenaiAgent identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveGenaiAgentResponse>} - The async response
+     */
+    public CompletableFuture<RemoveGenaiAgentResponse> removeGenaiAgent(@Nonnull RemoveGenaiAgentRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveGenaiAgentRequest, RemoveGenaiAgentResponse> operation
-              = new RemoveGenaiAgent.Async(sdkConfiguration, _headers);
+              = new RemoveGenaiAgent.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -887,8 +1234,21 @@ public class AsyncGenai {
      * @return {@code CompletableFuture<RemoveGenaiMemoryResponse>} - The async response
      */
     public CompletableFuture<RemoveGenaiMemoryResponse> removeGenaiMemory(@Nonnull RemoveGenaiMemoryRequest request) {
+        return removeGenaiMemory(request, null);
+    }
+
+    /**
+     * Remove a memory
+     * 
+     * <p>Deletes the GenaiMemory identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveGenaiMemoryResponse>} - The async response
+     */
+    public CompletableFuture<RemoveGenaiMemoryResponse> removeGenaiMemory(@Nonnull RemoveGenaiMemoryRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveGenaiMemoryRequest, RemoveGenaiMemoryResponse> operation
-              = new RemoveGenaiMemory.Async(sdkConfiguration, _headers);
+              = new RemoveGenaiMemory.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -914,8 +1274,21 @@ public class AsyncGenai {
      * @return {@code CompletableFuture<RemoveGenaiOrganizationResponse>} - The async response
      */
     public CompletableFuture<RemoveGenaiOrganizationResponse> removeGenaiOrganization(@Nonnull RemoveGenaiOrganizationRequest request) {
+        return removeGenaiOrganization(request, null);
+    }
+
+    /**
+     * Remove an organization
+     * 
+     * <p>Deletes the GenaiOrganization identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveGenaiOrganizationResponse>} - The async response
+     */
+    public CompletableFuture<RemoveGenaiOrganizationResponse> removeGenaiOrganization(@Nonnull RemoveGenaiOrganizationRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveGenaiOrganizationRequest, RemoveGenaiOrganizationResponse> operation
-              = new RemoveGenaiOrganization.Async(sdkConfiguration, _headers);
+              = new RemoveGenaiOrganization.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -941,8 +1314,21 @@ public class AsyncGenai {
      * @return {@code CompletableFuture<RemoveGenaiSkillResponse>} - The async response
      */
     public CompletableFuture<RemoveGenaiSkillResponse> removeGenaiSkill(@Nonnull RemoveGenaiSkillRequest request) {
+        return removeGenaiSkill(request, null);
+    }
+
+    /**
+     * Remove a skill
+     * 
+     * <p>Deletes the GenaiSkill identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveGenaiSkillResponse>} - The async response
+     */
+    public CompletableFuture<RemoveGenaiSkillResponse> removeGenaiSkill(@Nonnull RemoveGenaiSkillRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveGenaiSkillRequest, RemoveGenaiSkillResponse> operation
-              = new RemoveGenaiSkill.Async(sdkConfiguration, _headers);
+              = new RemoveGenaiSkill.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -968,8 +1354,21 @@ public class AsyncGenai {
      * @return {@code CompletableFuture<RemoveGenaiTaskResponse>} - The async response
      */
     public CompletableFuture<RemoveGenaiTaskResponse> removeGenaiTask(@Nonnull RemoveGenaiTaskRequest request) {
+        return removeGenaiTask(request, null);
+    }
+
+    /**
+     * Remove a task
+     * 
+     * <p>Deletes the GenaiTask identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveGenaiTaskResponse>} - The async response
+     */
+    public CompletableFuture<RemoveGenaiTaskResponse> removeGenaiTask(@Nonnull RemoveGenaiTaskRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveGenaiTaskRequest, RemoveGenaiTaskResponse> operation
-              = new RemoveGenaiTask.Async(sdkConfiguration, _headers);
+              = new RemoveGenaiTask.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -997,8 +1396,22 @@ public class AsyncGenai {
      * @return {@code CompletableFuture<UpdateGenaiAgentResponse>} - The async response
      */
     public CompletableFuture<UpdateGenaiAgentResponse> updateGenaiAgent(@Nonnull UpdateGenaiAgentRequest request) {
+        return updateGenaiAgent(request, null);
+    }
+
+    /**
+     * Update an agent
+     * 
+     * <p>Updates the GenaiAgent identified by `id`. Provide the unified GenaiAgent fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateGenaiAgentResponse>} - The async response
+     */
+    public CompletableFuture<UpdateGenaiAgentResponse> updateGenaiAgent(@Nonnull UpdateGenaiAgentRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateGenaiAgentRequest, UpdateGenaiAgentResponse> operation
-              = new UpdateGenaiAgent.Async(sdkConfiguration, _headers);
+              = new UpdateGenaiAgent.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1026,8 +1439,22 @@ public class AsyncGenai {
      * @return {@code CompletableFuture<UpdateGenaiMemoryResponse>} - The async response
      */
     public CompletableFuture<UpdateGenaiMemoryResponse> updateGenaiMemory(@Nonnull UpdateGenaiMemoryRequest request) {
+        return updateGenaiMemory(request, null);
+    }
+
+    /**
+     * Update a memory
+     * 
+     * <p>Updates the GenaiMemory identified by `id`. Provide the unified GenaiMemory fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateGenaiMemoryResponse>} - The async response
+     */
+    public CompletableFuture<UpdateGenaiMemoryResponse> updateGenaiMemory(@Nonnull UpdateGenaiMemoryRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateGenaiMemoryRequest, UpdateGenaiMemoryResponse> operation
-              = new UpdateGenaiMemory.Async(sdkConfiguration, _headers);
+              = new UpdateGenaiMemory.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1055,8 +1482,22 @@ public class AsyncGenai {
      * @return {@code CompletableFuture<UpdateGenaiOrganizationResponse>} - The async response
      */
     public CompletableFuture<UpdateGenaiOrganizationResponse> updateGenaiOrganization(@Nonnull UpdateGenaiOrganizationRequest request) {
+        return updateGenaiOrganization(request, null);
+    }
+
+    /**
+     * Update an organization
+     * 
+     * <p>Updates the GenaiOrganization identified by `id`. Provide the unified GenaiOrganization fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateGenaiOrganizationResponse>} - The async response
+     */
+    public CompletableFuture<UpdateGenaiOrganizationResponse> updateGenaiOrganization(@Nonnull UpdateGenaiOrganizationRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateGenaiOrganizationRequest, UpdateGenaiOrganizationResponse> operation
-              = new UpdateGenaiOrganization.Async(sdkConfiguration, _headers);
+              = new UpdateGenaiOrganization.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1084,8 +1525,22 @@ public class AsyncGenai {
      * @return {@code CompletableFuture<UpdateGenaiTaskResponse>} - The async response
      */
     public CompletableFuture<UpdateGenaiTaskResponse> updateGenaiTask(@Nonnull UpdateGenaiTaskRequest request) {
+        return updateGenaiTask(request, null);
+    }
+
+    /**
+     * Update a task
+     * 
+     * <p>Updates the GenaiTask identified by `id`. Provide the unified GenaiTask fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateGenaiTaskResponse>} - The async response
+     */
+    public CompletableFuture<UpdateGenaiTaskResponse> updateGenaiTask(@Nonnull UpdateGenaiTaskRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateGenaiTaskRequest, UpdateGenaiTaskResponse> operation
-              = new UpdateGenaiTask.Async(sdkConfiguration, _headers);
+              = new UpdateGenaiTask.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

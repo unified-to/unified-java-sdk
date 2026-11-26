@@ -5,18 +5,28 @@ package to.unified.unified_java_sdk.models.operations.async;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestlessOperation;
 
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.ListUnifiedEnvironments;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListUnifiedEnvironmentsRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
+    private final Options.Builder optionsBuilder;
 
     public ListUnifiedEnvironmentsRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public ListUnifiedEnvironmentsRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     
@@ -33,8 +43,9 @@ public class ListUnifiedEnvironmentsRequestBuilder {
     * @return The response from the server.
     */
     public CompletableFuture<ListUnifiedEnvironmentsResponse> call() {
+        Options options = optionsBuilder.build();
         AsyncRequestlessOperation<ListUnifiedEnvironmentsResponse> operation
-            = new ListUnifiedEnvironments.Async(sdkConfiguration, _headers);
+            = new ListUnifiedEnvironments.Async(sdkConfiguration, options, _headers);
         return operation.doRequest()
             .thenCompose(operation::handleResponse);
     }

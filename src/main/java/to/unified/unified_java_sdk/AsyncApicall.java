@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.GetUnifiedApicallRequest;
 import to.unified.unified_java_sdk.models.operations.ListUnifiedApicallsRequest;
@@ -16,6 +17,7 @@ import to.unified.unified_java_sdk.models.operations.async.ListUnifiedApicallsRe
 import to.unified.unified_java_sdk.operations.GetUnifiedApicall;
 import to.unified.unified_java_sdk.operations.ListUnifiedApicalls;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncApicall {
@@ -54,8 +56,19 @@ public class AsyncApicall {
      * @return {@code CompletableFuture<GetUnifiedApicallResponse>} - The async response
      */
     public CompletableFuture<GetUnifiedApicallResponse> getUnifiedApicall(@Nonnull GetUnifiedApicallRequest request) {
+        return getUnifiedApicall(request, null);
+    }
+
+    /**
+     * Retrieve specific API Call by its ID
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetUnifiedApicallResponse>} - The async response
+     */
+    public CompletableFuture<GetUnifiedApicallResponse> getUnifiedApicall(@Nonnull GetUnifiedApicallRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetUnifiedApicallRequest, GetUnifiedApicallResponse> operation
-              = new GetUnifiedApicall.Async(sdkConfiguration, _headers);
+              = new GetUnifiedApicall.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -77,8 +90,19 @@ public class AsyncApicall {
      * @return {@code CompletableFuture<ListUnifiedApicallsResponse>} - The async response
      */
     public CompletableFuture<ListUnifiedApicallsResponse> listUnifiedApicalls(@Nonnull ListUnifiedApicallsRequest request) {
+        return listUnifiedApicalls(request, null);
+    }
+
+    /**
+     * Returns API Calls
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListUnifiedApicallsResponse>} - The async response
+     */
+    public CompletableFuture<ListUnifiedApicallsResponse> listUnifiedApicalls(@Nonnull ListUnifiedApicallsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListUnifiedApicallsRequest, ListUnifiedApicallsResponse> operation
-              = new ListUnifiedApicalls.Async(sdkConfiguration, _headers);
+              = new ListUnifiedApicalls.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

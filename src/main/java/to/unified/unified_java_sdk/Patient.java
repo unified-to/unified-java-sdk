@@ -6,12 +6,19 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateHealthcarePatientRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHealthcarePatientRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateHealthcarePatientResponse;
+import to.unified.unified_java_sdk.models.operations.GetFhirPatientRequest;
+import to.unified.unified_java_sdk.models.operations.GetFhirPatientRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetFhirPatientResponse;
 import to.unified.unified_java_sdk.models.operations.GetHealthcarePatientRequest;
 import to.unified.unified_java_sdk.models.operations.GetHealthcarePatientRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetHealthcarePatientResponse;
+import to.unified.unified_java_sdk.models.operations.ListFhirPatientsRequest;
+import to.unified.unified_java_sdk.models.operations.ListFhirPatientsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListFhirPatientsResponse;
 import to.unified.unified_java_sdk.models.operations.ListHealthcarePatientsRequest;
 import to.unified.unified_java_sdk.models.operations.ListHealthcarePatientsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListHealthcarePatientsResponse;
@@ -22,11 +29,14 @@ import to.unified.unified_java_sdk.models.operations.UpdateHealthcarePatientRequ
 import to.unified.unified_java_sdk.models.operations.UpdateHealthcarePatientRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateHealthcarePatientResponse;
 import to.unified.unified_java_sdk.operations.CreateHealthcarePatient;
+import to.unified.unified_java_sdk.operations.GetFhirPatient;
 import to.unified.unified_java_sdk.operations.GetHealthcarePatient;
+import to.unified.unified_java_sdk.operations.ListFhirPatients;
 import to.unified.unified_java_sdk.operations.ListHealthcarePatients;
 import to.unified.unified_java_sdk.operations.PatchHealthcarePatient;
 import to.unified.unified_java_sdk.operations.UpdateHealthcarePatient;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Patient {
@@ -71,8 +81,66 @@ public class Patient {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateHealthcarePatientResponse createHealthcarePatient(@Nonnull CreateHealthcarePatientRequest request) {
+        return createHealthcarePatient(request, null);
+    }
+
+    /**
+     * Create a patient
+     * 
+     * <p>Creates a HealthcarePatient. Provide the unified HealthcarePatient fields in the request body; they
+     * are mapped to the provider's API. Returns the created HealthcarePatient.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateHealthcarePatientResponse createHealthcarePatient(@Nonnull CreateHealthcarePatientRequest request, @Nullable Options options) {
         RequestOperation<CreateHealthcarePatientRequest, CreateHealthcarePatientResponse> operation
-              = new CreateHealthcarePatient.Sync(sdkConfiguration, _headers);
+              = new CreateHealthcarePatient.Sync(sdkConfiguration, options, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Read a Patient
+     * 
+     * <p>Responses use the application/fhir+json media type; errors are OperationOutcome resources. Read-only
+     * (FHIR R4 4.0.1).
+     * 
+     * @return The call builder
+     */
+    public GetFhirPatientRequestBuilder getFhirPatient() {
+        return new GetFhirPatientRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Read a Patient
+     * 
+     * <p>Responses use the application/fhir+json media type; errors are OperationOutcome resources. Read-only
+     * (FHIR R4 4.0.1).
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetFhirPatientResponse getFhirPatient(@Nonnull GetFhirPatientRequest request) {
+        return getFhirPatient(request, null);
+    }
+
+    /**
+     * Read a Patient
+     * 
+     * <p>Responses use the application/fhir+json media type; errors are OperationOutcome resources. Read-only
+     * (FHIR R4 4.0.1).
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetFhirPatientResponse getFhirPatient(@Nonnull GetFhirPatientRequest request, @Nullable Options options) {
+        RequestOperation<GetFhirPatientRequest, GetFhirPatientResponse> operation
+              = new GetFhirPatient.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -99,8 +167,66 @@ public class Patient {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetHealthcarePatientResponse getHealthcarePatient(@Nonnull GetHealthcarePatientRequest request) {
+        return getHealthcarePatient(request, null);
+    }
+
+    /**
+     * Retrieve a patient
+     * 
+     * <p>Retrieves a single HealthcarePatient by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetHealthcarePatientResponse getHealthcarePatient(@Nonnull GetHealthcarePatientRequest request, @Nullable Options options) {
         RequestOperation<GetHealthcarePatientRequest, GetHealthcarePatientResponse> operation
-              = new GetHealthcarePatient.Sync(sdkConfiguration, _headers);
+              = new GetHealthcarePatient.Sync(sdkConfiguration, options, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Search Patient resources
+     * 
+     * <p>Returns a searchset Bundle; follow its next link for more pages. Responses use the
+     * application/fhir+json media type; errors are OperationOutcome resources. Read-only (FHIR R4 4.0.1).
+     * 
+     * @return The call builder
+     */
+    public ListFhirPatientsRequestBuilder listFhirPatients() {
+        return new ListFhirPatientsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Search Patient resources
+     * 
+     * <p>Returns a searchset Bundle; follow its next link for more pages. Responses use the
+     * application/fhir+json media type; errors are OperationOutcome resources. Read-only (FHIR R4 4.0.1).
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListFhirPatientsResponse listFhirPatients(@Nonnull ListFhirPatientsRequest request) {
+        return listFhirPatients(request, null);
+    }
+
+    /**
+     * Search Patient resources
+     * 
+     * <p>Returns a searchset Bundle; follow its next link for more pages. Responses use the
+     * application/fhir+json media type; errors are OperationOutcome resources. Read-only (FHIR R4 4.0.1).
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListFhirPatientsResponse listFhirPatients(@Nonnull ListFhirPatientsRequest request, @Nullable Options options) {
+        RequestOperation<ListFhirPatientsRequest, ListFhirPatientsResponse> operation
+              = new ListFhirPatients.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -135,8 +261,27 @@ public class Patient {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListHealthcarePatientsResponse listHealthcarePatients(@Nonnull ListHealthcarePatientsRequest request) {
+        return listHealthcarePatients(request, null);
+    }
+
+    /**
+     * List all patients
+     * 
+     * <p>Returns a list of HealthcarePatients. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListHealthcarePatientsResponse listHealthcarePatients(@Nonnull ListHealthcarePatientsRequest request, @Nullable Options options) {
         RequestOperation<ListHealthcarePatientsRequest, ListHealthcarePatientsResponse> operation
-              = new ListHealthcarePatients.Sync(sdkConfiguration, _headers);
+              = new ListHealthcarePatients.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -163,8 +308,23 @@ public class Patient {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchHealthcarePatientResponse patchHealthcarePatient(@Nonnull PatchHealthcarePatientRequest request) {
+        return patchHealthcarePatient(request, null);
+    }
+
+    /**
+     * Update a patient
+     * 
+     * <p>Updates the HealthcarePatient identified by `id`. Provide the unified HealthcarePatient fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchHealthcarePatientResponse patchHealthcarePatient(@Nonnull PatchHealthcarePatientRequest request, @Nullable Options options) {
         RequestOperation<PatchHealthcarePatientRequest, PatchHealthcarePatientResponse> operation
-              = new PatchHealthcarePatient.Sync(sdkConfiguration, _headers);
+              = new PatchHealthcarePatient.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -191,8 +351,23 @@ public class Patient {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateHealthcarePatientResponse updateHealthcarePatient(@Nonnull UpdateHealthcarePatientRequest request) {
+        return updateHealthcarePatient(request, null);
+    }
+
+    /**
+     * Update a patient
+     * 
+     * <p>Updates the HealthcarePatient identified by `id`. Provide the unified HealthcarePatient fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateHealthcarePatientResponse updateHealthcarePatient(@Nonnull UpdateHealthcarePatientRequest request, @Nullable Options options) {
         RequestOperation<UpdateHealthcarePatientRequest, UpdateHealthcarePatientResponse> operation
-              = new UpdateHealthcarePatient.Sync(sdkConfiguration, _headers);
+              = new UpdateHealthcarePatient.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

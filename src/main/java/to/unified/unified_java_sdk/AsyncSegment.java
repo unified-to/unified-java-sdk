@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateCdpSegmentRequest;
 import to.unified.unified_java_sdk.models.operations.GetCdpSegmentRequest;
@@ -32,6 +33,7 @@ import to.unified.unified_java_sdk.operations.PatchCdpSegment;
 import to.unified.unified_java_sdk.operations.RemoveCdpSegment;
 import to.unified.unified_java_sdk.operations.UpdateCdpSegment;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncSegment {
@@ -76,8 +78,22 @@ public class AsyncSegment {
      * @return {@code CompletableFuture<CreateCdpSegmentResponse>} - The async response
      */
     public CompletableFuture<CreateCdpSegmentResponse> createCdpSegment(@Nonnull CreateCdpSegmentRequest request) {
+        return createCdpSegment(request, null);
+    }
+
+    /**
+     * Create a segment
+     * 
+     * <p>Creates a CdpSegment. Provide the unified CdpSegment fields in the request body; they are mapped to
+     * the provider's API. Returns the created CdpSegment.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateCdpSegmentResponse>} - The async response
+     */
+    public CompletableFuture<CreateCdpSegmentResponse> createCdpSegment(@Nonnull CreateCdpSegmentRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateCdpSegmentRequest, CreateCdpSegmentResponse> operation
-              = new CreateCdpSegment.Async(sdkConfiguration, _headers);
+              = new CreateCdpSegment.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -105,8 +121,22 @@ public class AsyncSegment {
      * @return {@code CompletableFuture<GetCdpSegmentResponse>} - The async response
      */
     public CompletableFuture<GetCdpSegmentResponse> getCdpSegment(@Nonnull GetCdpSegmentRequest request) {
+        return getCdpSegment(request, null);
+    }
+
+    /**
+     * Retrieve a segment
+     * 
+     * <p>Retrieves a single CdpSegment by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetCdpSegmentResponse>} - The async response
+     */
+    public CompletableFuture<GetCdpSegmentResponse> getCdpSegment(@Nonnull GetCdpSegmentRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetCdpSegmentRequest, GetCdpSegmentResponse> operation
-              = new GetCdpSegment.Async(sdkConfiguration, _headers);
+              = new GetCdpSegment.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -142,8 +172,26 @@ public class AsyncSegment {
      * @return {@code CompletableFuture<ListCdpSegmentsResponse>} - The async response
      */
     public CompletableFuture<ListCdpSegmentsResponse> listCdpSegments(@Nonnull ListCdpSegmentsRequest request) {
+        return listCdpSegments(request, null);
+    }
+
+    /**
+     * List all segments
+     * 
+     * <p>Returns a list of CdpSegments. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListCdpSegmentsResponse>} - The async response
+     */
+    public CompletableFuture<ListCdpSegmentsResponse> listCdpSegments(@Nonnull ListCdpSegmentsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListCdpSegmentsRequest, ListCdpSegmentsResponse> operation
-              = new ListCdpSegments.Async(sdkConfiguration, _headers);
+              = new ListCdpSegments.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -171,8 +219,22 @@ public class AsyncSegment {
      * @return {@code CompletableFuture<PatchCdpSegmentResponse>} - The async response
      */
     public CompletableFuture<PatchCdpSegmentResponse> patchCdpSegment(@Nonnull PatchCdpSegmentRequest request) {
+        return patchCdpSegment(request, null);
+    }
+
+    /**
+     * Update a segment
+     * 
+     * <p>Updates the CdpSegment identified by `id`. Provide the unified CdpSegment fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchCdpSegmentResponse>} - The async response
+     */
+    public CompletableFuture<PatchCdpSegmentResponse> patchCdpSegment(@Nonnull PatchCdpSegmentRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchCdpSegmentRequest, PatchCdpSegmentResponse> operation
-              = new PatchCdpSegment.Async(sdkConfiguration, _headers);
+              = new PatchCdpSegment.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -198,8 +260,21 @@ public class AsyncSegment {
      * @return {@code CompletableFuture<RemoveCdpSegmentResponse>} - The async response
      */
     public CompletableFuture<RemoveCdpSegmentResponse> removeCdpSegment(@Nonnull RemoveCdpSegmentRequest request) {
+        return removeCdpSegment(request, null);
+    }
+
+    /**
+     * Remove a segment
+     * 
+     * <p>Deletes the CdpSegment identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveCdpSegmentResponse>} - The async response
+     */
+    public CompletableFuture<RemoveCdpSegmentResponse> removeCdpSegment(@Nonnull RemoveCdpSegmentRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveCdpSegmentRequest, RemoveCdpSegmentResponse> operation
-              = new RemoveCdpSegment.Async(sdkConfiguration, _headers);
+              = new RemoveCdpSegment.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -227,8 +302,22 @@ public class AsyncSegment {
      * @return {@code CompletableFuture<UpdateCdpSegmentResponse>} - The async response
      */
     public CompletableFuture<UpdateCdpSegmentResponse> updateCdpSegment(@Nonnull UpdateCdpSegmentRequest request) {
+        return updateCdpSegment(request, null);
+    }
+
+    /**
+     * Update a segment
+     * 
+     * <p>Updates the CdpSegment identified by `id`. Provide the unified CdpSegment fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateCdpSegmentResponse>} - The async response
+     */
+    public CompletableFuture<UpdateCdpSegmentResponse> updateCdpSegment(@Nonnull UpdateCdpSegmentRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateCdpSegmentRequest, UpdateCdpSegmentResponse> operation
-              = new UpdateCdpSegment.Async(sdkConfiguration, _headers);
+              = new UpdateCdpSegment.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

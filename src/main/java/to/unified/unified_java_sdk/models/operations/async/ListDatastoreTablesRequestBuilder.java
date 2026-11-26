@@ -6,20 +6,30 @@ package to.unified.unified_java_sdk.models.operations.async;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.ListDatastoreTablesRequest;
 import to.unified.unified_java_sdk.operations.ListDatastoreTables;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListDatastoreTablesRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private ListDatastoreTablesRequest request;
+    private final Options.Builder optionsBuilder;
 
     public ListDatastoreTablesRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public ListDatastoreTablesRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public ListDatastoreTablesRequestBuilder request(@Nonnull ListDatastoreTablesRequest request) {
@@ -44,8 +54,9 @@ public class ListDatastoreTablesRequestBuilder {
     * @return The response from the server.
     */
     public CompletableFuture<ListDatastoreTablesResponse> call() {
+        Options options = optionsBuilder.build();
         AsyncRequestOperation<ListDatastoreTablesRequest, ListDatastoreTablesResponse> operation
-              = new ListDatastoreTables.Async(sdkConfiguration, _headers);
+              = new ListDatastoreTables.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

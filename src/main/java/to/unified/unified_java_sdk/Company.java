@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateAtsCompanyRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAtsCompanyRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateAtsCompanyResponse;
@@ -83,6 +84,7 @@ import to.unified.unified_java_sdk.operations.UpdateAtsCompany;
 import to.unified.unified_java_sdk.operations.UpdateCrmCompany;
 import to.unified.unified_java_sdk.operations.UpdateHrisCompany;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Company {
@@ -127,8 +129,23 @@ public class Company {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateAtsCompanyResponse createAtsCompany(@Nonnull CreateAtsCompanyRequest request) {
+        return createAtsCompany(request, null);
+    }
+
+    /**
+     * Create a company
+     * 
+     * <p>Creates a AtsCompany. Provide the unified AtsCompany fields in the request body; they are mapped to
+     * the provider's API. Returns the created AtsCompany.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateAtsCompanyResponse createAtsCompany(@Nonnull CreateAtsCompanyRequest request, @Nullable Options options) {
         RequestOperation<CreateAtsCompanyRequest, CreateAtsCompanyResponse> operation
-              = new CreateAtsCompany.Sync(sdkConfiguration, _headers);
+              = new CreateAtsCompany.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -155,8 +172,23 @@ public class Company {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateCrmCompanyResponse createCrmCompany(@Nonnull CreateCrmCompanyRequest request) {
+        return createCrmCompany(request, null);
+    }
+
+    /**
+     * Create a company
+     * 
+     * <p>Creates a CrmCompany. Provide the unified CrmCompany fields in the request body; they are mapped to
+     * the provider's API. Returns the created CrmCompany.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateCrmCompanyResponse createCrmCompany(@Nonnull CreateCrmCompanyRequest request, @Nullable Options options) {
         RequestOperation<CreateCrmCompanyRequest, CreateCrmCompanyResponse> operation
-              = new CreateCrmCompany.Sync(sdkConfiguration, _headers);
+              = new CreateCrmCompany.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -183,8 +215,23 @@ public class Company {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateHrisCompanyResponse createHrisCompany(@Nonnull CreateHrisCompanyRequest request) {
+        return createHrisCompany(request, null);
+    }
+
+    /**
+     * Create a company
+     * 
+     * <p>Creates a HrisCompany. Provide the unified HrisCompany fields in the request body; they are mapped
+     * to the provider's API. Returns the created HrisCompany.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateHrisCompanyResponse createHrisCompany(@Nonnull CreateHrisCompanyRequest request, @Nullable Options options) {
         RequestOperation<CreateHrisCompanyRequest, CreateHrisCompanyResponse> operation
-              = new CreateHrisCompany.Sync(sdkConfiguration, _headers);
+              = new CreateHrisCompany.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -211,8 +258,23 @@ public class Company {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAtsCompanyResponse getAtsCompany(@Nonnull GetAtsCompanyRequest request) {
+        return getAtsCompany(request, null);
+    }
+
+    /**
+     * Retrieve a company
+     * 
+     * <p>Retrieves a single AtsCompany by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAtsCompanyResponse getAtsCompany(@Nonnull GetAtsCompanyRequest request, @Nullable Options options) {
         RequestOperation<GetAtsCompanyRequest, GetAtsCompanyResponse> operation
-              = new GetAtsCompany.Sync(sdkConfiguration, _headers);
+              = new GetAtsCompany.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -239,8 +301,23 @@ public class Company {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetCrmCompanyResponse getCrmCompany(@Nonnull GetCrmCompanyRequest request) {
+        return getCrmCompany(request, null);
+    }
+
+    /**
+     * Retrieve a company
+     * 
+     * <p>Retrieves a single CrmCompany by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetCrmCompanyResponse getCrmCompany(@Nonnull GetCrmCompanyRequest request, @Nullable Options options) {
         RequestOperation<GetCrmCompanyRequest, GetCrmCompanyResponse> operation
-              = new GetCrmCompany.Sync(sdkConfiguration, _headers);
+              = new GetCrmCompany.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -267,8 +344,23 @@ public class Company {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetHrisCompanyResponse getHrisCompany(@Nonnull GetHrisCompanyRequest request) {
+        return getHrisCompany(request, null);
+    }
+
+    /**
+     * Retrieve a company
+     * 
+     * <p>Retrieves a single HrisCompany by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetHrisCompanyResponse getHrisCompany(@Nonnull GetHrisCompanyRequest request, @Nullable Options options) {
         RequestOperation<GetHrisCompanyRequest, GetHrisCompanyResponse> operation
-              = new GetHrisCompany.Sync(sdkConfiguration, _headers);
+              = new GetHrisCompany.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -303,8 +395,27 @@ public class Company {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAtsCompaniesResponse listAtsCompanies(@Nonnull ListAtsCompaniesRequest request) {
+        return listAtsCompanies(request, null);
+    }
+
+    /**
+     * List all companies
+     * 
+     * <p>Returns a list of AtsCompanies. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAtsCompaniesResponse listAtsCompanies(@Nonnull ListAtsCompaniesRequest request, @Nullable Options options) {
         RequestOperation<ListAtsCompaniesRequest, ListAtsCompaniesResponse> operation
-              = new ListAtsCompanies.Sync(sdkConfiguration, _headers);
+              = new ListAtsCompanies.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -339,8 +450,27 @@ public class Company {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListCrmCompaniesResponse listCrmCompanies(@Nonnull ListCrmCompaniesRequest request) {
+        return listCrmCompanies(request, null);
+    }
+
+    /**
+     * List all companies
+     * 
+     * <p>Returns a list of CrmCompanies. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListCrmCompaniesResponse listCrmCompanies(@Nonnull ListCrmCompaniesRequest request, @Nullable Options options) {
         RequestOperation<ListCrmCompaniesRequest, ListCrmCompaniesResponse> operation
-              = new ListCrmCompanies.Sync(sdkConfiguration, _headers);
+              = new ListCrmCompanies.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -361,8 +491,20 @@ public class Company {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListEnrichCompaniesResponse listEnrichCompanies(@Nonnull ListEnrichCompaniesRequest request) {
+        return listEnrichCompanies(request, null);
+    }
+
+    /**
+     * Retrieve enrichment information for a company
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListEnrichCompaniesResponse listEnrichCompanies(@Nonnull ListEnrichCompaniesRequest request, @Nullable Options options) {
         RequestOperation<ListEnrichCompaniesRequest, ListEnrichCompaniesResponse> operation
-              = new ListEnrichCompanies.Sync(sdkConfiguration, _headers);
+              = new ListEnrichCompanies.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -397,8 +539,27 @@ public class Company {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListHrisCompaniesResponse listHrisCompanies(@Nonnull ListHrisCompaniesRequest request) {
+        return listHrisCompanies(request, null);
+    }
+
+    /**
+     * List all companies
+     * 
+     * <p>Returns a list of HrisCompanies. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListHrisCompaniesResponse listHrisCompanies(@Nonnull ListHrisCompaniesRequest request, @Nullable Options options) {
         RequestOperation<ListHrisCompaniesRequest, ListHrisCompaniesResponse> operation
-              = new ListHrisCompanies.Sync(sdkConfiguration, _headers);
+              = new ListHrisCompanies.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -425,8 +586,23 @@ public class Company {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchAtsCompanyResponse patchAtsCompany(@Nonnull PatchAtsCompanyRequest request) {
+        return patchAtsCompany(request, null);
+    }
+
+    /**
+     * Update a company
+     * 
+     * <p>Updates the AtsCompany identified by `id`. Provide the unified AtsCompany fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchAtsCompanyResponse patchAtsCompany(@Nonnull PatchAtsCompanyRequest request, @Nullable Options options) {
         RequestOperation<PatchAtsCompanyRequest, PatchAtsCompanyResponse> operation
-              = new PatchAtsCompany.Sync(sdkConfiguration, _headers);
+              = new PatchAtsCompany.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -453,8 +629,23 @@ public class Company {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchCrmCompanyResponse patchCrmCompany(@Nonnull PatchCrmCompanyRequest request) {
+        return patchCrmCompany(request, null);
+    }
+
+    /**
+     * Update a company
+     * 
+     * <p>Updates the CrmCompany identified by `id`. Provide the unified CrmCompany fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchCrmCompanyResponse patchCrmCompany(@Nonnull PatchCrmCompanyRequest request, @Nullable Options options) {
         RequestOperation<PatchCrmCompanyRequest, PatchCrmCompanyResponse> operation
-              = new PatchCrmCompany.Sync(sdkConfiguration, _headers);
+              = new PatchCrmCompany.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -481,8 +672,23 @@ public class Company {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchHrisCompanyResponse patchHrisCompany(@Nonnull PatchHrisCompanyRequest request) {
+        return patchHrisCompany(request, null);
+    }
+
+    /**
+     * Update a company
+     * 
+     * <p>Updates the HrisCompany identified by `id`. Provide the unified HrisCompany fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchHrisCompanyResponse patchHrisCompany(@Nonnull PatchHrisCompanyRequest request, @Nullable Options options) {
         RequestOperation<PatchHrisCompanyRequest, PatchHrisCompanyResponse> operation
-              = new PatchHrisCompany.Sync(sdkConfiguration, _headers);
+              = new PatchHrisCompany.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -507,8 +713,22 @@ public class Company {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveAtsCompanyResponse removeAtsCompany(@Nonnull RemoveAtsCompanyRequest request) {
+        return removeAtsCompany(request, null);
+    }
+
+    /**
+     * Remove a company
+     * 
+     * <p>Deletes the AtsCompany identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveAtsCompanyResponse removeAtsCompany(@Nonnull RemoveAtsCompanyRequest request, @Nullable Options options) {
         RequestOperation<RemoveAtsCompanyRequest, RemoveAtsCompanyResponse> operation
-              = new RemoveAtsCompany.Sync(sdkConfiguration, _headers);
+              = new RemoveAtsCompany.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -533,8 +753,22 @@ public class Company {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveCrmCompanyResponse removeCrmCompany(@Nonnull RemoveCrmCompanyRequest request) {
+        return removeCrmCompany(request, null);
+    }
+
+    /**
+     * Remove a company
+     * 
+     * <p>Deletes the CrmCompany identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveCrmCompanyResponse removeCrmCompany(@Nonnull RemoveCrmCompanyRequest request, @Nullable Options options) {
         RequestOperation<RemoveCrmCompanyRequest, RemoveCrmCompanyResponse> operation
-              = new RemoveCrmCompany.Sync(sdkConfiguration, _headers);
+              = new RemoveCrmCompany.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -559,8 +793,22 @@ public class Company {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveHrisCompanyResponse removeHrisCompany(@Nonnull RemoveHrisCompanyRequest request) {
+        return removeHrisCompany(request, null);
+    }
+
+    /**
+     * Remove a company
+     * 
+     * <p>Deletes the HrisCompany identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveHrisCompanyResponse removeHrisCompany(@Nonnull RemoveHrisCompanyRequest request, @Nullable Options options) {
         RequestOperation<RemoveHrisCompanyRequest, RemoveHrisCompanyResponse> operation
-              = new RemoveHrisCompany.Sync(sdkConfiguration, _headers);
+              = new RemoveHrisCompany.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -587,8 +835,23 @@ public class Company {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateAtsCompanyResponse updateAtsCompany(@Nonnull UpdateAtsCompanyRequest request) {
+        return updateAtsCompany(request, null);
+    }
+
+    /**
+     * Update a company
+     * 
+     * <p>Updates the AtsCompany identified by `id`. Provide the unified AtsCompany fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateAtsCompanyResponse updateAtsCompany(@Nonnull UpdateAtsCompanyRequest request, @Nullable Options options) {
         RequestOperation<UpdateAtsCompanyRequest, UpdateAtsCompanyResponse> operation
-              = new UpdateAtsCompany.Sync(sdkConfiguration, _headers);
+              = new UpdateAtsCompany.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -615,8 +878,23 @@ public class Company {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateCrmCompanyResponse updateCrmCompany(@Nonnull UpdateCrmCompanyRequest request) {
+        return updateCrmCompany(request, null);
+    }
+
+    /**
+     * Update a company
+     * 
+     * <p>Updates the CrmCompany identified by `id`. Provide the unified CrmCompany fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateCrmCompanyResponse updateCrmCompany(@Nonnull UpdateCrmCompanyRequest request, @Nullable Options options) {
         RequestOperation<UpdateCrmCompanyRequest, UpdateCrmCompanyResponse> operation
-              = new UpdateCrmCompany.Sync(sdkConfiguration, _headers);
+              = new UpdateCrmCompany.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -643,8 +921,23 @@ public class Company {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateHrisCompanyResponse updateHrisCompany(@Nonnull UpdateHrisCompanyRequest request) {
+        return updateHrisCompany(request, null);
+    }
+
+    /**
+     * Update a company
+     * 
+     * <p>Updates the HrisCompany identified by `id`. Provide the unified HrisCompany fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateHrisCompanyResponse updateHrisCompany(@Nonnull UpdateHrisCompanyRequest request, @Nullable Options options) {
         RequestOperation<UpdateHrisCompanyRequest, UpdateHrisCompanyResponse> operation
-              = new UpdateHrisCompany.Sync(sdkConfiguration, _headers);
+              = new UpdateHrisCompany.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

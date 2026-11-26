@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateCrmPipelineRequest;
 import to.unified.unified_java_sdk.models.operations.GetCrmPipelineRequest;
@@ -32,6 +33,7 @@ import to.unified.unified_java_sdk.operations.PatchCrmPipeline;
 import to.unified.unified_java_sdk.operations.RemoveCrmPipeline;
 import to.unified.unified_java_sdk.operations.UpdateCrmPipeline;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncPipeline {
@@ -76,8 +78,22 @@ public class AsyncPipeline {
      * @return {@code CompletableFuture<CreateCrmPipelineResponse>} - The async response
      */
     public CompletableFuture<CreateCrmPipelineResponse> createCrmPipeline(@Nonnull CreateCrmPipelineRequest request) {
+        return createCrmPipeline(request, null);
+    }
+
+    /**
+     * Create a pipeline
+     * 
+     * <p>Creates a CrmPipeline. Provide the unified CrmPipeline fields in the request body; they are mapped
+     * to the provider's API. Returns the created CrmPipeline.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateCrmPipelineResponse>} - The async response
+     */
+    public CompletableFuture<CreateCrmPipelineResponse> createCrmPipeline(@Nonnull CreateCrmPipelineRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateCrmPipelineRequest, CreateCrmPipelineResponse> operation
-              = new CreateCrmPipeline.Async(sdkConfiguration, _headers);
+              = new CreateCrmPipeline.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -105,8 +121,22 @@ public class AsyncPipeline {
      * @return {@code CompletableFuture<GetCrmPipelineResponse>} - The async response
      */
     public CompletableFuture<GetCrmPipelineResponse> getCrmPipeline(@Nonnull GetCrmPipelineRequest request) {
+        return getCrmPipeline(request, null);
+    }
+
+    /**
+     * Retrieve a pipeline
+     * 
+     * <p>Retrieves a single CrmPipeline by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetCrmPipelineResponse>} - The async response
+     */
+    public CompletableFuture<GetCrmPipelineResponse> getCrmPipeline(@Nonnull GetCrmPipelineRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetCrmPipelineRequest, GetCrmPipelineResponse> operation
-              = new GetCrmPipeline.Async(sdkConfiguration, _headers);
+              = new GetCrmPipeline.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -142,8 +172,26 @@ public class AsyncPipeline {
      * @return {@code CompletableFuture<ListCrmPipelinesResponse>} - The async response
      */
     public CompletableFuture<ListCrmPipelinesResponse> listCrmPipelines(@Nonnull ListCrmPipelinesRequest request) {
+        return listCrmPipelines(request, null);
+    }
+
+    /**
+     * List all pipelines
+     * 
+     * <p>Returns a list of CrmPipelines. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListCrmPipelinesResponse>} - The async response
+     */
+    public CompletableFuture<ListCrmPipelinesResponse> listCrmPipelines(@Nonnull ListCrmPipelinesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListCrmPipelinesRequest, ListCrmPipelinesResponse> operation
-              = new ListCrmPipelines.Async(sdkConfiguration, _headers);
+              = new ListCrmPipelines.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -171,8 +219,22 @@ public class AsyncPipeline {
      * @return {@code CompletableFuture<PatchCrmPipelineResponse>} - The async response
      */
     public CompletableFuture<PatchCrmPipelineResponse> patchCrmPipeline(@Nonnull PatchCrmPipelineRequest request) {
+        return patchCrmPipeline(request, null);
+    }
+
+    /**
+     * Update a pipeline
+     * 
+     * <p>Updates the CrmPipeline identified by `id`. Provide the unified CrmPipeline fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchCrmPipelineResponse>} - The async response
+     */
+    public CompletableFuture<PatchCrmPipelineResponse> patchCrmPipeline(@Nonnull PatchCrmPipelineRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchCrmPipelineRequest, PatchCrmPipelineResponse> operation
-              = new PatchCrmPipeline.Async(sdkConfiguration, _headers);
+              = new PatchCrmPipeline.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -198,8 +260,21 @@ public class AsyncPipeline {
      * @return {@code CompletableFuture<RemoveCrmPipelineResponse>} - The async response
      */
     public CompletableFuture<RemoveCrmPipelineResponse> removeCrmPipeline(@Nonnull RemoveCrmPipelineRequest request) {
+        return removeCrmPipeline(request, null);
+    }
+
+    /**
+     * Remove a pipeline
+     * 
+     * <p>Deletes the CrmPipeline identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveCrmPipelineResponse>} - The async response
+     */
+    public CompletableFuture<RemoveCrmPipelineResponse> removeCrmPipeline(@Nonnull RemoveCrmPipelineRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveCrmPipelineRequest, RemoveCrmPipelineResponse> operation
-              = new RemoveCrmPipeline.Async(sdkConfiguration, _headers);
+              = new RemoveCrmPipeline.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -227,8 +302,22 @@ public class AsyncPipeline {
      * @return {@code CompletableFuture<UpdateCrmPipelineResponse>} - The async response
      */
     public CompletableFuture<UpdateCrmPipelineResponse> updateCrmPipeline(@Nonnull UpdateCrmPipelineRequest request) {
+        return updateCrmPipeline(request, null);
+    }
+
+    /**
+     * Update a pipeline
+     * 
+     * <p>Updates the CrmPipeline identified by `id`. Provide the unified CrmPipeline fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateCrmPipelineResponse>} - The async response
+     */
+    public CompletableFuture<UpdateCrmPipelineResponse> updateCrmPipeline(@Nonnull UpdateCrmPipelineRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateCrmPipelineRequest, UpdateCrmPipelineResponse> operation
-              = new UpdateCrmPipeline.Async(sdkConfiguration, _headers);
+              = new UpdateCrmPipeline.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

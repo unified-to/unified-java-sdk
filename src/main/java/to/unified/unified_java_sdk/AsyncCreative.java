@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateAdsCreativeRequest;
 import to.unified.unified_java_sdk.models.operations.GetAdsCreativeRequest;
@@ -32,6 +33,7 @@ import to.unified.unified_java_sdk.operations.PatchAdsCreative;
 import to.unified.unified_java_sdk.operations.RemoveAdsCreative;
 import to.unified.unified_java_sdk.operations.UpdateAdsCreative;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncCreative {
@@ -76,8 +78,22 @@ public class AsyncCreative {
      * @return {@code CompletableFuture<CreateAdsCreativeResponse>} - The async response
      */
     public CompletableFuture<CreateAdsCreativeResponse> createAdsCreative(@Nonnull CreateAdsCreativeRequest request) {
+        return createAdsCreative(request, null);
+    }
+
+    /**
+     * Create a creative
+     * 
+     * <p>Creates a AdsCreative. Provide the unified AdsCreative fields in the request body; they are mapped
+     * to the provider's API. Returns the created AdsCreative.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateAdsCreativeResponse>} - The async response
+     */
+    public CompletableFuture<CreateAdsCreativeResponse> createAdsCreative(@Nonnull CreateAdsCreativeRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateAdsCreativeRequest, CreateAdsCreativeResponse> operation
-              = new CreateAdsCreative.Async(sdkConfiguration, _headers);
+              = new CreateAdsCreative.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -105,8 +121,22 @@ public class AsyncCreative {
      * @return {@code CompletableFuture<GetAdsCreativeResponse>} - The async response
      */
     public CompletableFuture<GetAdsCreativeResponse> getAdsCreative(@Nonnull GetAdsCreativeRequest request) {
+        return getAdsCreative(request, null);
+    }
+
+    /**
+     * Retrieve a creative
+     * 
+     * <p>Retrieves a single AdsCreative by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetAdsCreativeResponse>} - The async response
+     */
+    public CompletableFuture<GetAdsCreativeResponse> getAdsCreative(@Nonnull GetAdsCreativeRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetAdsCreativeRequest, GetAdsCreativeResponse> operation
-              = new GetAdsCreative.Async(sdkConfiguration, _headers);
+              = new GetAdsCreative.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -142,8 +172,26 @@ public class AsyncCreative {
      * @return {@code CompletableFuture<ListAdsCreativesResponse>} - The async response
      */
     public CompletableFuture<ListAdsCreativesResponse> listAdsCreatives(@Nonnull ListAdsCreativesRequest request) {
+        return listAdsCreatives(request, null);
+    }
+
+    /**
+     * List all creatives
+     * 
+     * <p>Returns a list of AdsCreatives. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListAdsCreativesResponse>} - The async response
+     */
+    public CompletableFuture<ListAdsCreativesResponse> listAdsCreatives(@Nonnull ListAdsCreativesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListAdsCreativesRequest, ListAdsCreativesResponse> operation
-              = new ListAdsCreatives.Async(sdkConfiguration, _headers);
+              = new ListAdsCreatives.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -171,8 +219,22 @@ public class AsyncCreative {
      * @return {@code CompletableFuture<PatchAdsCreativeResponse>} - The async response
      */
     public CompletableFuture<PatchAdsCreativeResponse> patchAdsCreative(@Nonnull PatchAdsCreativeRequest request) {
+        return patchAdsCreative(request, null);
+    }
+
+    /**
+     * Update a creative
+     * 
+     * <p>Updates the AdsCreative identified by `id`. Provide the unified AdsCreative fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchAdsCreativeResponse>} - The async response
+     */
+    public CompletableFuture<PatchAdsCreativeResponse> patchAdsCreative(@Nonnull PatchAdsCreativeRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchAdsCreativeRequest, PatchAdsCreativeResponse> operation
-              = new PatchAdsCreative.Async(sdkConfiguration, _headers);
+              = new PatchAdsCreative.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -198,8 +260,21 @@ public class AsyncCreative {
      * @return {@code CompletableFuture<RemoveAdsCreativeResponse>} - The async response
      */
     public CompletableFuture<RemoveAdsCreativeResponse> removeAdsCreative(@Nonnull RemoveAdsCreativeRequest request) {
+        return removeAdsCreative(request, null);
+    }
+
+    /**
+     * Remove a creative
+     * 
+     * <p>Deletes the AdsCreative identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveAdsCreativeResponse>} - The async response
+     */
+    public CompletableFuture<RemoveAdsCreativeResponse> removeAdsCreative(@Nonnull RemoveAdsCreativeRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveAdsCreativeRequest, RemoveAdsCreativeResponse> operation
-              = new RemoveAdsCreative.Async(sdkConfiguration, _headers);
+              = new RemoveAdsCreative.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -227,8 +302,22 @@ public class AsyncCreative {
      * @return {@code CompletableFuture<UpdateAdsCreativeResponse>} - The async response
      */
     public CompletableFuture<UpdateAdsCreativeResponse> updateAdsCreative(@Nonnull UpdateAdsCreativeRequest request) {
+        return updateAdsCreative(request, null);
+    }
+
+    /**
+     * Update a creative
+     * 
+     * <p>Updates the AdsCreative identified by `id`. Provide the unified AdsCreative fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateAdsCreativeResponse>} - The async response
+     */
+    public CompletableFuture<UpdateAdsCreativeResponse> updateAdsCreative(@Nonnull UpdateAdsCreativeRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateAdsCreativeRequest, UpdateAdsCreativeResponse> operation
-              = new UpdateAdsCreative.Async(sdkConfiguration, _headers);
+              = new UpdateAdsCreative.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

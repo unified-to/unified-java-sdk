@@ -1,0 +1,8 @@
+# FhirEncounterParticipant
+
+
+## Fields
+
+| Field                                                                                                                      | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `individual`                                                                                                               | [Optional\<PropertyFhirEncounterParticipantIndividual>](../../models/shared/PropertyFhirEncounterParticipantIndividual.md) | :heavy_minus_sign:                                                                                                         | Persons involved in the encounter (Practitioner references)                                                                |

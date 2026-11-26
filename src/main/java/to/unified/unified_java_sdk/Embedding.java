@@ -6,11 +6,13 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateGenaiEmbeddingRequest;
 import to.unified.unified_java_sdk.models.operations.CreateGenaiEmbeddingRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateGenaiEmbeddingResponse;
 import to.unified.unified_java_sdk.operations.CreateGenaiEmbedding;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Embedding {
@@ -55,8 +57,23 @@ public class Embedding {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateGenaiEmbeddingResponse createGenaiEmbedding(@Nonnull CreateGenaiEmbeddingRequest request) {
+        return createGenaiEmbedding(request, null);
+    }
+
+    /**
+     * Create an embedding
+     * 
+     * <p>Creates a GenaiEmbedding. Provide the unified GenaiEmbedding fields in the request body; they are
+     * mapped to the provider's API. Returns the created GenaiEmbedding.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateGenaiEmbeddingResponse createGenaiEmbedding(@Nonnull CreateGenaiEmbeddingRequest request, @Nullable Options options) {
         RequestOperation<CreateGenaiEmbeddingRequest, CreateGenaiEmbeddingResponse> operation
-              = new CreateGenaiEmbedding.Sync(sdkConfiguration, _headers);
+              = new CreateGenaiEmbedding.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

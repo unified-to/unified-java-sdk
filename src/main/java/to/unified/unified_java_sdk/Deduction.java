@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateHrisDeductionRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisDeductionRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateHrisDeductionResponse;
@@ -31,6 +32,7 @@ import to.unified.unified_java_sdk.operations.PatchHrisDeduction;
 import to.unified.unified_java_sdk.operations.RemoveHrisDeduction;
 import to.unified.unified_java_sdk.operations.UpdateHrisDeduction;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Deduction {
@@ -75,8 +77,23 @@ public class Deduction {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateHrisDeductionResponse createHrisDeduction(@Nonnull CreateHrisDeductionRequest request) {
+        return createHrisDeduction(request, null);
+    }
+
+    /**
+     * Create a deduction
+     * 
+     * <p>Creates a HrisDeduction. Provide the unified HrisDeduction fields in the request body; they are
+     * mapped to the provider's API. Returns the created HrisDeduction.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateHrisDeductionResponse createHrisDeduction(@Nonnull CreateHrisDeductionRequest request, @Nullable Options options) {
         RequestOperation<CreateHrisDeductionRequest, CreateHrisDeductionResponse> operation
-              = new CreateHrisDeduction.Sync(sdkConfiguration, _headers);
+              = new CreateHrisDeduction.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -103,8 +120,23 @@ public class Deduction {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetHrisDeductionResponse getHrisDeduction(@Nonnull GetHrisDeductionRequest request) {
+        return getHrisDeduction(request, null);
+    }
+
+    /**
+     * Retrieve a deduction
+     * 
+     * <p>Retrieves a single HrisDeduction by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetHrisDeductionResponse getHrisDeduction(@Nonnull GetHrisDeductionRequest request, @Nullable Options options) {
         RequestOperation<GetHrisDeductionRequest, GetHrisDeductionResponse> operation
-              = new GetHrisDeduction.Sync(sdkConfiguration, _headers);
+              = new GetHrisDeduction.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -139,8 +171,27 @@ public class Deduction {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListHrisDeductionsResponse listHrisDeductions(@Nonnull ListHrisDeductionsRequest request) {
+        return listHrisDeductions(request, null);
+    }
+
+    /**
+     * List all deductions
+     * 
+     * <p>Returns a list of HrisDeductions. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListHrisDeductionsResponse listHrisDeductions(@Nonnull ListHrisDeductionsRequest request, @Nullable Options options) {
         RequestOperation<ListHrisDeductionsRequest, ListHrisDeductionsResponse> operation
-              = new ListHrisDeductions.Sync(sdkConfiguration, _headers);
+              = new ListHrisDeductions.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +218,23 @@ public class Deduction {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchHrisDeductionResponse patchHrisDeduction(@Nonnull PatchHrisDeductionRequest request) {
+        return patchHrisDeduction(request, null);
+    }
+
+    /**
+     * Update a deduction
+     * 
+     * <p>Updates the HrisDeduction identified by `id`. Provide the unified HrisDeduction fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchHrisDeductionResponse patchHrisDeduction(@Nonnull PatchHrisDeductionRequest request, @Nullable Options options) {
         RequestOperation<PatchHrisDeductionRequest, PatchHrisDeductionResponse> operation
-              = new PatchHrisDeduction.Sync(sdkConfiguration, _headers);
+              = new PatchHrisDeduction.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -193,8 +259,22 @@ public class Deduction {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveHrisDeductionResponse removeHrisDeduction(@Nonnull RemoveHrisDeductionRequest request) {
+        return removeHrisDeduction(request, null);
+    }
+
+    /**
+     * Remove a deduction
+     * 
+     * <p>Deletes the HrisDeduction identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveHrisDeductionResponse removeHrisDeduction(@Nonnull RemoveHrisDeductionRequest request, @Nullable Options options) {
         RequestOperation<RemoveHrisDeductionRequest, RemoveHrisDeductionResponse> operation
-              = new RemoveHrisDeduction.Sync(sdkConfiguration, _headers);
+              = new RemoveHrisDeduction.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -221,8 +301,23 @@ public class Deduction {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateHrisDeductionResponse updateHrisDeduction(@Nonnull UpdateHrisDeductionRequest request) {
+        return updateHrisDeduction(request, null);
+    }
+
+    /**
+     * Update a deduction
+     * 
+     * <p>Updates the HrisDeduction identified by `id`. Provide the unified HrisDeduction fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateHrisDeductionResponse updateHrisDeduction(@Nonnull UpdateHrisDeductionRequest request, @Nullable Options options) {
         RequestOperation<UpdateHrisDeductionRequest, UpdateHrisDeductionResponse> operation
-              = new UpdateHrisDeduction.Sync(sdkConfiguration, _headers);
+              = new UpdateHrisDeduction.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

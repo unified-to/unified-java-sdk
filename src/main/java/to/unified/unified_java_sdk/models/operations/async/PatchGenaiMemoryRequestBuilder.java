@@ -6,20 +6,30 @@ package to.unified.unified_java_sdk.models.operations.async;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.PatchGenaiMemoryRequest;
 import to.unified.unified_java_sdk.operations.PatchGenaiMemory;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class PatchGenaiMemoryRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private PatchGenaiMemoryRequest request;
+    private final Options.Builder optionsBuilder;
 
     public PatchGenaiMemoryRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public PatchGenaiMemoryRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public PatchGenaiMemoryRequestBuilder request(@Nonnull PatchGenaiMemoryRequest request) {
@@ -44,8 +54,9 @@ public class PatchGenaiMemoryRequestBuilder {
     * @return The response from the server.
     */
     public CompletableFuture<PatchGenaiMemoryResponse> call() {
+        Options options = optionsBuilder.build();
         AsyncRequestOperation<PatchGenaiMemoryRequest, PatchGenaiMemoryResponse> operation
-              = new PatchGenaiMemory.Async(sdkConfiguration, _headers);
+              = new PatchGenaiMemory.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceCollectionRequest;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceCollectionRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceCollectionResponse;
@@ -219,6 +220,7 @@ import to.unified.unified_java_sdk.operations.UpdateCommerceReservation;
 import to.unified.unified_java_sdk.operations.UpdateCommerceReview;
 import to.unified.unified_java_sdk.operations.UpdateCommerceSaleschannel;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Commerce {
@@ -263,8 +265,23 @@ public class Commerce {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateCommerceCollectionResponse createCommerceCollection(@Nonnull CreateCommerceCollectionRequest request) {
+        return createCommerceCollection(request, null);
+    }
+
+    /**
+     * Create a collection
+     * 
+     * <p>Creates a CommerceCollection. Provide the unified CommerceCollection fields in the request body;
+     * they are mapped to the provider's API. Returns the created CommerceCollection.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateCommerceCollectionResponse createCommerceCollection(@Nonnull CreateCommerceCollectionRequest request, @Nullable Options options) {
         RequestOperation<CreateCommerceCollectionRequest, CreateCommerceCollectionResponse> operation
-              = new CreateCommerceCollection.Sync(sdkConfiguration, _headers);
+              = new CreateCommerceCollection.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -291,8 +308,23 @@ public class Commerce {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateCommerceInventoryResponse createCommerceInventory(@Nonnull CreateCommerceInventoryRequest request) {
+        return createCommerceInventory(request, null);
+    }
+
+    /**
+     * Create an inventory
+     * 
+     * <p>Creates a CommerceInventory. Provide the unified CommerceInventory fields in the request body; they
+     * are mapped to the provider's API. Returns the created CommerceInventory.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateCommerceInventoryResponse createCommerceInventory(@Nonnull CreateCommerceInventoryRequest request, @Nullable Options options) {
         RequestOperation<CreateCommerceInventoryRequest, CreateCommerceInventoryResponse> operation
-              = new CreateCommerceInventory.Sync(sdkConfiguration, _headers);
+              = new CreateCommerceInventory.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -319,8 +351,23 @@ public class Commerce {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateCommerceItemResponse createCommerceItem(@Nonnull CreateCommerceItemRequest request) {
+        return createCommerceItem(request, null);
+    }
+
+    /**
+     * Create an item
+     * 
+     * <p>Creates a CommerceItem. Provide the unified CommerceItem fields in the request body; they are mapped
+     * to the provider's API. Returns the created CommerceItem.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateCommerceItemResponse createCommerceItem(@Nonnull CreateCommerceItemRequest request, @Nullable Options options) {
         RequestOperation<CreateCommerceItemRequest, CreateCommerceItemResponse> operation
-              = new CreateCommerceItem.Sync(sdkConfiguration, _headers);
+              = new CreateCommerceItem.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -347,8 +394,23 @@ public class Commerce {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateCommerceItemvariantResponse createCommerceItemvariant(@Nonnull CreateCommerceItemvariantRequest request) {
+        return createCommerceItemvariant(request, null);
+    }
+
+    /**
+     * Create an itemvariant
+     * 
+     * <p>Creates a CommerceItemvariant. Provide the unified CommerceItemvariant fields in the request body;
+     * they are mapped to the provider's API. Returns the created CommerceItemvariant.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateCommerceItemvariantResponse createCommerceItemvariant(@Nonnull CreateCommerceItemvariantRequest request, @Nullable Options options) {
         RequestOperation<CreateCommerceItemvariantRequest, CreateCommerceItemvariantResponse> operation
-              = new CreateCommerceItemvariant.Sync(sdkConfiguration, _headers);
+              = new CreateCommerceItemvariant.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -375,8 +437,23 @@ public class Commerce {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateCommerceLocationResponse createCommerceLocation(@Nonnull CreateCommerceLocationRequest request) {
+        return createCommerceLocation(request, null);
+    }
+
+    /**
+     * Create a location
+     * 
+     * <p>Creates a CommerceLocation. Provide the unified CommerceLocation fields in the request body; they
+     * are mapped to the provider's API. Returns the created CommerceLocation.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateCommerceLocationResponse createCommerceLocation(@Nonnull CreateCommerceLocationRequest request, @Nullable Options options) {
         RequestOperation<CreateCommerceLocationRequest, CreateCommerceLocationResponse> operation
-              = new CreateCommerceLocation.Sync(sdkConfiguration, _headers);
+              = new CreateCommerceLocation.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -403,8 +480,23 @@ public class Commerce {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateCommerceReservationResponse createCommerceReservation(@Nonnull CreateCommerceReservationRequest request) {
+        return createCommerceReservation(request, null);
+    }
+
+    /**
+     * Create a reservation
+     * 
+     * <p>Creates a CommerceReservation. Provide the unified CommerceReservation fields in the request body;
+     * they are mapped to the provider's API. Returns the created CommerceReservation.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateCommerceReservationResponse createCommerceReservation(@Nonnull CreateCommerceReservationRequest request, @Nullable Options options) {
         RequestOperation<CreateCommerceReservationRequest, CreateCommerceReservationResponse> operation
-              = new CreateCommerceReservation.Sync(sdkConfiguration, _headers);
+              = new CreateCommerceReservation.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -431,8 +523,23 @@ public class Commerce {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateCommerceReviewResponse createCommerceReview(@Nonnull CreateCommerceReviewRequest request) {
+        return createCommerceReview(request, null);
+    }
+
+    /**
+     * Create a review
+     * 
+     * <p>Creates a CommerceReview. Provide the unified CommerceReview fields in the request body; they are
+     * mapped to the provider's API. Returns the created CommerceReview.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateCommerceReviewResponse createCommerceReview(@Nonnull CreateCommerceReviewRequest request, @Nullable Options options) {
         RequestOperation<CreateCommerceReviewRequest, CreateCommerceReviewResponse> operation
-              = new CreateCommerceReview.Sync(sdkConfiguration, _headers);
+              = new CreateCommerceReview.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -459,8 +566,23 @@ public class Commerce {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateCommerceSaleschannelResponse createCommerceSaleschannel(@Nonnull CreateCommerceSaleschannelRequest request) {
+        return createCommerceSaleschannel(request, null);
+    }
+
+    /**
+     * Create a saleschannel
+     * 
+     * <p>Creates a CommerceSaleschannel. Provide the unified CommerceSaleschannel fields in the request body;
+     * they are mapped to the provider's API. Returns the created CommerceSaleschannel.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateCommerceSaleschannelResponse createCommerceSaleschannel(@Nonnull CreateCommerceSaleschannelRequest request, @Nullable Options options) {
         RequestOperation<CreateCommerceSaleschannelRequest, CreateCommerceSaleschannelResponse> operation
-              = new CreateCommerceSaleschannel.Sync(sdkConfiguration, _headers);
+              = new CreateCommerceSaleschannel.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -487,8 +609,23 @@ public class Commerce {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetCommerceCollectionResponse getCommerceCollection(@Nonnull GetCommerceCollectionRequest request) {
+        return getCommerceCollection(request, null);
+    }
+
+    /**
+     * Retrieve a collection
+     * 
+     * <p>Retrieves a single CommerceCollection by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetCommerceCollectionResponse getCommerceCollection(@Nonnull GetCommerceCollectionRequest request, @Nullable Options options) {
         RequestOperation<GetCommerceCollectionRequest, GetCommerceCollectionResponse> operation
-              = new GetCommerceCollection.Sync(sdkConfiguration, _headers);
+              = new GetCommerceCollection.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -515,8 +652,23 @@ public class Commerce {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetCommerceInventoryResponse getCommerceInventory(@Nonnull GetCommerceInventoryRequest request) {
+        return getCommerceInventory(request, null);
+    }
+
+    /**
+     * Retrieve an inventory
+     * 
+     * <p>Retrieves a single CommerceInventory by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetCommerceInventoryResponse getCommerceInventory(@Nonnull GetCommerceInventoryRequest request, @Nullable Options options) {
         RequestOperation<GetCommerceInventoryRequest, GetCommerceInventoryResponse> operation
-              = new GetCommerceInventory.Sync(sdkConfiguration, _headers);
+              = new GetCommerceInventory.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -543,8 +695,23 @@ public class Commerce {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetCommerceItemResponse getCommerceItem(@Nonnull GetCommerceItemRequest request) {
+        return getCommerceItem(request, null);
+    }
+
+    /**
+     * Retrieve an item
+     * 
+     * <p>Retrieves a single CommerceItem by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetCommerceItemResponse getCommerceItem(@Nonnull GetCommerceItemRequest request, @Nullable Options options) {
         RequestOperation<GetCommerceItemRequest, GetCommerceItemResponse> operation
-              = new GetCommerceItem.Sync(sdkConfiguration, _headers);
+              = new GetCommerceItem.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -571,8 +738,23 @@ public class Commerce {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetCommerceItemvariantResponse getCommerceItemvariant(@Nonnull GetCommerceItemvariantRequest request) {
+        return getCommerceItemvariant(request, null);
+    }
+
+    /**
+     * Retrieve an itemvariant
+     * 
+     * <p>Retrieves a single CommerceItemvariant by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetCommerceItemvariantResponse getCommerceItemvariant(@Nonnull GetCommerceItemvariantRequest request, @Nullable Options options) {
         RequestOperation<GetCommerceItemvariantRequest, GetCommerceItemvariantResponse> operation
-              = new GetCommerceItemvariant.Sync(sdkConfiguration, _headers);
+              = new GetCommerceItemvariant.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -599,8 +781,23 @@ public class Commerce {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetCommerceLocationResponse getCommerceLocation(@Nonnull GetCommerceLocationRequest request) {
+        return getCommerceLocation(request, null);
+    }
+
+    /**
+     * Retrieve a location
+     * 
+     * <p>Retrieves a single CommerceLocation by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetCommerceLocationResponse getCommerceLocation(@Nonnull GetCommerceLocationRequest request, @Nullable Options options) {
         RequestOperation<GetCommerceLocationRequest, GetCommerceLocationResponse> operation
-              = new GetCommerceLocation.Sync(sdkConfiguration, _headers);
+              = new GetCommerceLocation.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -627,8 +824,23 @@ public class Commerce {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetCommerceReservationResponse getCommerceReservation(@Nonnull GetCommerceReservationRequest request) {
+        return getCommerceReservation(request, null);
+    }
+
+    /**
+     * Retrieve a reservation
+     * 
+     * <p>Retrieves a single CommerceReservation by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetCommerceReservationResponse getCommerceReservation(@Nonnull GetCommerceReservationRequest request, @Nullable Options options) {
         RequestOperation<GetCommerceReservationRequest, GetCommerceReservationResponse> operation
-              = new GetCommerceReservation.Sync(sdkConfiguration, _headers);
+              = new GetCommerceReservation.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -655,8 +867,23 @@ public class Commerce {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetCommerceReturnResponse getCommerceReturn(@Nonnull GetCommerceReturnRequest request) {
+        return getCommerceReturn(request, null);
+    }
+
+    /**
+     * Retrieve a return
+     * 
+     * <p>Retrieves a single CommerceReturn by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetCommerceReturnResponse getCommerceReturn(@Nonnull GetCommerceReturnRequest request, @Nullable Options options) {
         RequestOperation<GetCommerceReturnRequest, GetCommerceReturnResponse> operation
-              = new GetCommerceReturn.Sync(sdkConfiguration, _headers);
+              = new GetCommerceReturn.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -683,8 +910,23 @@ public class Commerce {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetCommerceReviewResponse getCommerceReview(@Nonnull GetCommerceReviewRequest request) {
+        return getCommerceReview(request, null);
+    }
+
+    /**
+     * Retrieve a review
+     * 
+     * <p>Retrieves a single CommerceReview by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetCommerceReviewResponse getCommerceReview(@Nonnull GetCommerceReviewRequest request, @Nullable Options options) {
         RequestOperation<GetCommerceReviewRequest, GetCommerceReviewResponse> operation
-              = new GetCommerceReview.Sync(sdkConfiguration, _headers);
+              = new GetCommerceReview.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -711,8 +953,23 @@ public class Commerce {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetCommerceSaleschannelResponse getCommerceSaleschannel(@Nonnull GetCommerceSaleschannelRequest request) {
+        return getCommerceSaleschannel(request, null);
+    }
+
+    /**
+     * Retrieve a saleschannel
+     * 
+     * <p>Retrieves a single CommerceSaleschannel by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetCommerceSaleschannelResponse getCommerceSaleschannel(@Nonnull GetCommerceSaleschannelRequest request, @Nullable Options options) {
         RequestOperation<GetCommerceSaleschannelRequest, GetCommerceSaleschannelResponse> operation
-              = new GetCommerceSaleschannel.Sync(sdkConfiguration, _headers);
+              = new GetCommerceSaleschannel.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -739,8 +996,23 @@ public class Commerce {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetCommerceTableResponse getCommerceTable(@Nonnull GetCommerceTableRequest request) {
+        return getCommerceTable(request, null);
+    }
+
+    /**
+     * Retrieve a table
+     * 
+     * <p>Retrieves a single CommerceTable by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetCommerceTableResponse getCommerceTable(@Nonnull GetCommerceTableRequest request, @Nullable Options options) {
         RequestOperation<GetCommerceTableRequest, GetCommerceTableResponse> operation
-              = new GetCommerceTable.Sync(sdkConfiguration, _headers);
+              = new GetCommerceTable.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -775,8 +1047,27 @@ public class Commerce {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListCommerceAvailabilitiesResponse listCommerceAvailabilities(@Nonnull ListCommerceAvailabilitiesRequest request) {
+        return listCommerceAvailabilities(request, null);
+    }
+
+    /**
+     * List all availabilities
+     * 
+     * <p>Returns a list of CommerceAvailabilities. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListCommerceAvailabilitiesResponse listCommerceAvailabilities(@Nonnull ListCommerceAvailabilitiesRequest request, @Nullable Options options) {
         RequestOperation<ListCommerceAvailabilitiesRequest, ListCommerceAvailabilitiesResponse> operation
-              = new ListCommerceAvailabilities.Sync(sdkConfiguration, _headers);
+              = new ListCommerceAvailabilities.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -811,8 +1102,27 @@ public class Commerce {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListCommerceCollectionsResponse listCommerceCollections(@Nonnull ListCommerceCollectionsRequest request) {
+        return listCommerceCollections(request, null);
+    }
+
+    /**
+     * List all collections
+     * 
+     * <p>Returns a list of CommerceCollections. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListCommerceCollectionsResponse listCommerceCollections(@Nonnull ListCommerceCollectionsRequest request, @Nullable Options options) {
         RequestOperation<ListCommerceCollectionsRequest, ListCommerceCollectionsResponse> operation
-              = new ListCommerceCollections.Sync(sdkConfiguration, _headers);
+              = new ListCommerceCollections.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -847,8 +1157,27 @@ public class Commerce {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListCommerceInventoriesResponse listCommerceInventories(@Nonnull ListCommerceInventoriesRequest request) {
+        return listCommerceInventories(request, null);
+    }
+
+    /**
+     * List all inventories
+     * 
+     * <p>Returns a list of CommerceInventories. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListCommerceInventoriesResponse listCommerceInventories(@Nonnull ListCommerceInventoriesRequest request, @Nullable Options options) {
         RequestOperation<ListCommerceInventoriesRequest, ListCommerceInventoriesResponse> operation
-              = new ListCommerceInventories.Sync(sdkConfiguration, _headers);
+              = new ListCommerceInventories.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -883,8 +1212,27 @@ public class Commerce {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListCommerceItemsResponse listCommerceItems(@Nonnull ListCommerceItemsRequest request) {
+        return listCommerceItems(request, null);
+    }
+
+    /**
+     * List all items
+     * 
+     * <p>Returns a list of CommerceItems. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListCommerceItemsResponse listCommerceItems(@Nonnull ListCommerceItemsRequest request, @Nullable Options options) {
         RequestOperation<ListCommerceItemsRequest, ListCommerceItemsResponse> operation
-              = new ListCommerceItems.Sync(sdkConfiguration, _headers);
+              = new ListCommerceItems.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -919,8 +1267,27 @@ public class Commerce {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListCommerceItemvariantsResponse listCommerceItemvariants(@Nonnull ListCommerceItemvariantsRequest request) {
+        return listCommerceItemvariants(request, null);
+    }
+
+    /**
+     * List all itemvariants
+     * 
+     * <p>Returns a list of CommerceItemvariants. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListCommerceItemvariantsResponse listCommerceItemvariants(@Nonnull ListCommerceItemvariantsRequest request, @Nullable Options options) {
         RequestOperation<ListCommerceItemvariantsRequest, ListCommerceItemvariantsResponse> operation
-              = new ListCommerceItemvariants.Sync(sdkConfiguration, _headers);
+              = new ListCommerceItemvariants.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -955,8 +1322,27 @@ public class Commerce {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListCommerceLocationsResponse listCommerceLocations(@Nonnull ListCommerceLocationsRequest request) {
+        return listCommerceLocations(request, null);
+    }
+
+    /**
+     * List all locations
+     * 
+     * <p>Returns a list of CommerceLocations. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListCommerceLocationsResponse listCommerceLocations(@Nonnull ListCommerceLocationsRequest request, @Nullable Options options) {
         RequestOperation<ListCommerceLocationsRequest, ListCommerceLocationsResponse> operation
-              = new ListCommerceLocations.Sync(sdkConfiguration, _headers);
+              = new ListCommerceLocations.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -991,8 +1377,27 @@ public class Commerce {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListCommerceReservationsResponse listCommerceReservations(@Nonnull ListCommerceReservationsRequest request) {
+        return listCommerceReservations(request, null);
+    }
+
+    /**
+     * List all reservations
+     * 
+     * <p>Returns a list of CommerceReservations. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListCommerceReservationsResponse listCommerceReservations(@Nonnull ListCommerceReservationsRequest request, @Nullable Options options) {
         RequestOperation<ListCommerceReservationsRequest, ListCommerceReservationsResponse> operation
-              = new ListCommerceReservations.Sync(sdkConfiguration, _headers);
+              = new ListCommerceReservations.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1027,8 +1432,27 @@ public class Commerce {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListCommerceReturnsResponse listCommerceReturns(@Nonnull ListCommerceReturnsRequest request) {
+        return listCommerceReturns(request, null);
+    }
+
+    /**
+     * List all returns
+     * 
+     * <p>Returns a list of CommerceReturns. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListCommerceReturnsResponse listCommerceReturns(@Nonnull ListCommerceReturnsRequest request, @Nullable Options options) {
         RequestOperation<ListCommerceReturnsRequest, ListCommerceReturnsResponse> operation
-              = new ListCommerceReturns.Sync(sdkConfiguration, _headers);
+              = new ListCommerceReturns.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1063,8 +1487,27 @@ public class Commerce {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListCommerceReviewsResponse listCommerceReviews(@Nonnull ListCommerceReviewsRequest request) {
+        return listCommerceReviews(request, null);
+    }
+
+    /**
+     * List all reviews
+     * 
+     * <p>Returns a list of CommerceReviews. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListCommerceReviewsResponse listCommerceReviews(@Nonnull ListCommerceReviewsRequest request, @Nullable Options options) {
         RequestOperation<ListCommerceReviewsRequest, ListCommerceReviewsResponse> operation
-              = new ListCommerceReviews.Sync(sdkConfiguration, _headers);
+              = new ListCommerceReviews.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1099,8 +1542,27 @@ public class Commerce {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListCommerceSaleschannelsResponse listCommerceSaleschannels(@Nonnull ListCommerceSaleschannelsRequest request) {
+        return listCommerceSaleschannels(request, null);
+    }
+
+    /**
+     * List all saleschannels
+     * 
+     * <p>Returns a list of CommerceSaleschannels. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListCommerceSaleschannelsResponse listCommerceSaleschannels(@Nonnull ListCommerceSaleschannelsRequest request, @Nullable Options options) {
         RequestOperation<ListCommerceSaleschannelsRequest, ListCommerceSaleschannelsResponse> operation
-              = new ListCommerceSaleschannels.Sync(sdkConfiguration, _headers);
+              = new ListCommerceSaleschannels.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1135,8 +1597,27 @@ public class Commerce {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListCommerceTablesResponse listCommerceTables(@Nonnull ListCommerceTablesRequest request) {
+        return listCommerceTables(request, null);
+    }
+
+    /**
+     * List all tables
+     * 
+     * <p>Returns a list of CommerceTables. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListCommerceTablesResponse listCommerceTables(@Nonnull ListCommerceTablesRequest request, @Nullable Options options) {
         RequestOperation<ListCommerceTablesRequest, ListCommerceTablesResponse> operation
-              = new ListCommerceTables.Sync(sdkConfiguration, _headers);
+              = new ListCommerceTables.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1163,8 +1644,23 @@ public class Commerce {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchCommerceCollectionResponse patchCommerceCollection(@Nonnull PatchCommerceCollectionRequest request) {
+        return patchCommerceCollection(request, null);
+    }
+
+    /**
+     * Update a collection
+     * 
+     * <p>Updates the CommerceCollection identified by `id`. Provide the unified CommerceCollection fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchCommerceCollectionResponse patchCommerceCollection(@Nonnull PatchCommerceCollectionRequest request, @Nullable Options options) {
         RequestOperation<PatchCommerceCollectionRequest, PatchCommerceCollectionResponse> operation
-              = new PatchCommerceCollection.Sync(sdkConfiguration, _headers);
+              = new PatchCommerceCollection.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1191,8 +1687,23 @@ public class Commerce {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchCommerceInventoryResponse patchCommerceInventory(@Nonnull PatchCommerceInventoryRequest request) {
+        return patchCommerceInventory(request, null);
+    }
+
+    /**
+     * Update an inventory
+     * 
+     * <p>Updates the CommerceInventory identified by `id`. Provide the unified CommerceInventory fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchCommerceInventoryResponse patchCommerceInventory(@Nonnull PatchCommerceInventoryRequest request, @Nullable Options options) {
         RequestOperation<PatchCommerceInventoryRequest, PatchCommerceInventoryResponse> operation
-              = new PatchCommerceInventory.Sync(sdkConfiguration, _headers);
+              = new PatchCommerceInventory.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1219,8 +1730,23 @@ public class Commerce {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchCommerceItemResponse patchCommerceItem(@Nonnull PatchCommerceItemRequest request) {
+        return patchCommerceItem(request, null);
+    }
+
+    /**
+     * Update an item
+     * 
+     * <p>Updates the CommerceItem identified by `id`. Provide the unified CommerceItem fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchCommerceItemResponse patchCommerceItem(@Nonnull PatchCommerceItemRequest request, @Nullable Options options) {
         RequestOperation<PatchCommerceItemRequest, PatchCommerceItemResponse> operation
-              = new PatchCommerceItem.Sync(sdkConfiguration, _headers);
+              = new PatchCommerceItem.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1247,8 +1773,23 @@ public class Commerce {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchCommerceItemvariantResponse patchCommerceItemvariant(@Nonnull PatchCommerceItemvariantRequest request) {
+        return patchCommerceItemvariant(request, null);
+    }
+
+    /**
+     * Update an itemvariant
+     * 
+     * <p>Updates the CommerceItemvariant identified by `id`. Provide the unified CommerceItemvariant fields
+     * to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchCommerceItemvariantResponse patchCommerceItemvariant(@Nonnull PatchCommerceItemvariantRequest request, @Nullable Options options) {
         RequestOperation<PatchCommerceItemvariantRequest, PatchCommerceItemvariantResponse> operation
-              = new PatchCommerceItemvariant.Sync(sdkConfiguration, _headers);
+              = new PatchCommerceItemvariant.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1275,8 +1816,23 @@ public class Commerce {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchCommerceLocationResponse patchCommerceLocation(@Nonnull PatchCommerceLocationRequest request) {
+        return patchCommerceLocation(request, null);
+    }
+
+    /**
+     * Update a location
+     * 
+     * <p>Updates the CommerceLocation identified by `id`. Provide the unified CommerceLocation fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchCommerceLocationResponse patchCommerceLocation(@Nonnull PatchCommerceLocationRequest request, @Nullable Options options) {
         RequestOperation<PatchCommerceLocationRequest, PatchCommerceLocationResponse> operation
-              = new PatchCommerceLocation.Sync(sdkConfiguration, _headers);
+              = new PatchCommerceLocation.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1303,8 +1859,23 @@ public class Commerce {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchCommerceReservationResponse patchCommerceReservation(@Nonnull PatchCommerceReservationRequest request) {
+        return patchCommerceReservation(request, null);
+    }
+
+    /**
+     * Update a reservation
+     * 
+     * <p>Updates the CommerceReservation identified by `id`. Provide the unified CommerceReservation fields
+     * to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchCommerceReservationResponse patchCommerceReservation(@Nonnull PatchCommerceReservationRequest request, @Nullable Options options) {
         RequestOperation<PatchCommerceReservationRequest, PatchCommerceReservationResponse> operation
-              = new PatchCommerceReservation.Sync(sdkConfiguration, _headers);
+              = new PatchCommerceReservation.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1331,8 +1902,23 @@ public class Commerce {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchCommerceReviewResponse patchCommerceReview(@Nonnull PatchCommerceReviewRequest request) {
+        return patchCommerceReview(request, null);
+    }
+
+    /**
+     * Update a review
+     * 
+     * <p>Updates the CommerceReview identified by `id`. Provide the unified CommerceReview fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchCommerceReviewResponse patchCommerceReview(@Nonnull PatchCommerceReviewRequest request, @Nullable Options options) {
         RequestOperation<PatchCommerceReviewRequest, PatchCommerceReviewResponse> operation
-              = new PatchCommerceReview.Sync(sdkConfiguration, _headers);
+              = new PatchCommerceReview.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1359,8 +1945,23 @@ public class Commerce {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchCommerceSaleschannelResponse patchCommerceSaleschannel(@Nonnull PatchCommerceSaleschannelRequest request) {
+        return patchCommerceSaleschannel(request, null);
+    }
+
+    /**
+     * Update a saleschannel
+     * 
+     * <p>Updates the CommerceSaleschannel identified by `id`. Provide the unified CommerceSaleschannel fields
+     * to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchCommerceSaleschannelResponse patchCommerceSaleschannel(@Nonnull PatchCommerceSaleschannelRequest request, @Nullable Options options) {
         RequestOperation<PatchCommerceSaleschannelRequest, PatchCommerceSaleschannelResponse> operation
-              = new PatchCommerceSaleschannel.Sync(sdkConfiguration, _headers);
+              = new PatchCommerceSaleschannel.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1385,8 +1986,22 @@ public class Commerce {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveCommerceCollectionResponse removeCommerceCollection(@Nonnull RemoveCommerceCollectionRequest request) {
+        return removeCommerceCollection(request, null);
+    }
+
+    /**
+     * Remove a collection
+     * 
+     * <p>Deletes the CommerceCollection identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveCommerceCollectionResponse removeCommerceCollection(@Nonnull RemoveCommerceCollectionRequest request, @Nullable Options options) {
         RequestOperation<RemoveCommerceCollectionRequest, RemoveCommerceCollectionResponse> operation
-              = new RemoveCommerceCollection.Sync(sdkConfiguration, _headers);
+              = new RemoveCommerceCollection.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1411,8 +2026,22 @@ public class Commerce {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveCommerceInventoryResponse removeCommerceInventory(@Nonnull RemoveCommerceInventoryRequest request) {
+        return removeCommerceInventory(request, null);
+    }
+
+    /**
+     * Remove an inventory
+     * 
+     * <p>Deletes the CommerceInventory identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveCommerceInventoryResponse removeCommerceInventory(@Nonnull RemoveCommerceInventoryRequest request, @Nullable Options options) {
         RequestOperation<RemoveCommerceInventoryRequest, RemoveCommerceInventoryResponse> operation
-              = new RemoveCommerceInventory.Sync(sdkConfiguration, _headers);
+              = new RemoveCommerceInventory.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1437,8 +2066,22 @@ public class Commerce {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveCommerceItemResponse removeCommerceItem(@Nonnull RemoveCommerceItemRequest request) {
+        return removeCommerceItem(request, null);
+    }
+
+    /**
+     * Remove an item
+     * 
+     * <p>Deletes the CommerceItem identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveCommerceItemResponse removeCommerceItem(@Nonnull RemoveCommerceItemRequest request, @Nullable Options options) {
         RequestOperation<RemoveCommerceItemRequest, RemoveCommerceItemResponse> operation
-              = new RemoveCommerceItem.Sync(sdkConfiguration, _headers);
+              = new RemoveCommerceItem.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1463,8 +2106,22 @@ public class Commerce {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveCommerceItemvariantResponse removeCommerceItemvariant(@Nonnull RemoveCommerceItemvariantRequest request) {
+        return removeCommerceItemvariant(request, null);
+    }
+
+    /**
+     * Remove an itemvariant
+     * 
+     * <p>Deletes the CommerceItemvariant identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveCommerceItemvariantResponse removeCommerceItemvariant(@Nonnull RemoveCommerceItemvariantRequest request, @Nullable Options options) {
         RequestOperation<RemoveCommerceItemvariantRequest, RemoveCommerceItemvariantResponse> operation
-              = new RemoveCommerceItemvariant.Sync(sdkConfiguration, _headers);
+              = new RemoveCommerceItemvariant.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1489,8 +2146,22 @@ public class Commerce {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveCommerceLocationResponse removeCommerceLocation(@Nonnull RemoveCommerceLocationRequest request) {
+        return removeCommerceLocation(request, null);
+    }
+
+    /**
+     * Remove a location
+     * 
+     * <p>Deletes the CommerceLocation identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveCommerceLocationResponse removeCommerceLocation(@Nonnull RemoveCommerceLocationRequest request, @Nullable Options options) {
         RequestOperation<RemoveCommerceLocationRequest, RemoveCommerceLocationResponse> operation
-              = new RemoveCommerceLocation.Sync(sdkConfiguration, _headers);
+              = new RemoveCommerceLocation.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1515,8 +2186,22 @@ public class Commerce {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveCommerceReservationResponse removeCommerceReservation(@Nonnull RemoveCommerceReservationRequest request) {
+        return removeCommerceReservation(request, null);
+    }
+
+    /**
+     * Remove a reservation
+     * 
+     * <p>Deletes the CommerceReservation identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveCommerceReservationResponse removeCommerceReservation(@Nonnull RemoveCommerceReservationRequest request, @Nullable Options options) {
         RequestOperation<RemoveCommerceReservationRequest, RemoveCommerceReservationResponse> operation
-              = new RemoveCommerceReservation.Sync(sdkConfiguration, _headers);
+              = new RemoveCommerceReservation.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1541,8 +2226,22 @@ public class Commerce {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveCommerceReviewResponse removeCommerceReview(@Nonnull RemoveCommerceReviewRequest request) {
+        return removeCommerceReview(request, null);
+    }
+
+    /**
+     * Remove a review
+     * 
+     * <p>Deletes the CommerceReview identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveCommerceReviewResponse removeCommerceReview(@Nonnull RemoveCommerceReviewRequest request, @Nullable Options options) {
         RequestOperation<RemoveCommerceReviewRequest, RemoveCommerceReviewResponse> operation
-              = new RemoveCommerceReview.Sync(sdkConfiguration, _headers);
+              = new RemoveCommerceReview.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1567,8 +2266,22 @@ public class Commerce {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveCommerceSaleschannelResponse removeCommerceSaleschannel(@Nonnull RemoveCommerceSaleschannelRequest request) {
+        return removeCommerceSaleschannel(request, null);
+    }
+
+    /**
+     * Remove a saleschannel
+     * 
+     * <p>Deletes the CommerceSaleschannel identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveCommerceSaleschannelResponse removeCommerceSaleschannel(@Nonnull RemoveCommerceSaleschannelRequest request, @Nullable Options options) {
         RequestOperation<RemoveCommerceSaleschannelRequest, RemoveCommerceSaleschannelResponse> operation
-              = new RemoveCommerceSaleschannel.Sync(sdkConfiguration, _headers);
+              = new RemoveCommerceSaleschannel.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1595,8 +2308,23 @@ public class Commerce {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateCommerceCollectionResponse updateCommerceCollection(@Nonnull UpdateCommerceCollectionRequest request) {
+        return updateCommerceCollection(request, null);
+    }
+
+    /**
+     * Update a collection
+     * 
+     * <p>Updates the CommerceCollection identified by `id`. Provide the unified CommerceCollection fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateCommerceCollectionResponse updateCommerceCollection(@Nonnull UpdateCommerceCollectionRequest request, @Nullable Options options) {
         RequestOperation<UpdateCommerceCollectionRequest, UpdateCommerceCollectionResponse> operation
-              = new UpdateCommerceCollection.Sync(sdkConfiguration, _headers);
+              = new UpdateCommerceCollection.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1623,8 +2351,23 @@ public class Commerce {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateCommerceInventoryResponse updateCommerceInventory(@Nonnull UpdateCommerceInventoryRequest request) {
+        return updateCommerceInventory(request, null);
+    }
+
+    /**
+     * Update an inventory
+     * 
+     * <p>Updates the CommerceInventory identified by `id`. Provide the unified CommerceInventory fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateCommerceInventoryResponse updateCommerceInventory(@Nonnull UpdateCommerceInventoryRequest request, @Nullable Options options) {
         RequestOperation<UpdateCommerceInventoryRequest, UpdateCommerceInventoryResponse> operation
-              = new UpdateCommerceInventory.Sync(sdkConfiguration, _headers);
+              = new UpdateCommerceInventory.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1651,8 +2394,23 @@ public class Commerce {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateCommerceItemResponse updateCommerceItem(@Nonnull UpdateCommerceItemRequest request) {
+        return updateCommerceItem(request, null);
+    }
+
+    /**
+     * Update an item
+     * 
+     * <p>Updates the CommerceItem identified by `id`. Provide the unified CommerceItem fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateCommerceItemResponse updateCommerceItem(@Nonnull UpdateCommerceItemRequest request, @Nullable Options options) {
         RequestOperation<UpdateCommerceItemRequest, UpdateCommerceItemResponse> operation
-              = new UpdateCommerceItem.Sync(sdkConfiguration, _headers);
+              = new UpdateCommerceItem.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1679,8 +2437,23 @@ public class Commerce {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateCommerceItemvariantResponse updateCommerceItemvariant(@Nonnull UpdateCommerceItemvariantRequest request) {
+        return updateCommerceItemvariant(request, null);
+    }
+
+    /**
+     * Update an itemvariant
+     * 
+     * <p>Updates the CommerceItemvariant identified by `id`. Provide the unified CommerceItemvariant fields
+     * to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateCommerceItemvariantResponse updateCommerceItemvariant(@Nonnull UpdateCommerceItemvariantRequest request, @Nullable Options options) {
         RequestOperation<UpdateCommerceItemvariantRequest, UpdateCommerceItemvariantResponse> operation
-              = new UpdateCommerceItemvariant.Sync(sdkConfiguration, _headers);
+              = new UpdateCommerceItemvariant.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1707,8 +2480,23 @@ public class Commerce {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateCommerceLocationResponse updateCommerceLocation(@Nonnull UpdateCommerceLocationRequest request) {
+        return updateCommerceLocation(request, null);
+    }
+
+    /**
+     * Update a location
+     * 
+     * <p>Updates the CommerceLocation identified by `id`. Provide the unified CommerceLocation fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateCommerceLocationResponse updateCommerceLocation(@Nonnull UpdateCommerceLocationRequest request, @Nullable Options options) {
         RequestOperation<UpdateCommerceLocationRequest, UpdateCommerceLocationResponse> operation
-              = new UpdateCommerceLocation.Sync(sdkConfiguration, _headers);
+              = new UpdateCommerceLocation.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1735,8 +2523,23 @@ public class Commerce {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateCommerceReservationResponse updateCommerceReservation(@Nonnull UpdateCommerceReservationRequest request) {
+        return updateCommerceReservation(request, null);
+    }
+
+    /**
+     * Update a reservation
+     * 
+     * <p>Updates the CommerceReservation identified by `id`. Provide the unified CommerceReservation fields
+     * to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateCommerceReservationResponse updateCommerceReservation(@Nonnull UpdateCommerceReservationRequest request, @Nullable Options options) {
         RequestOperation<UpdateCommerceReservationRequest, UpdateCommerceReservationResponse> operation
-              = new UpdateCommerceReservation.Sync(sdkConfiguration, _headers);
+              = new UpdateCommerceReservation.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1763,8 +2566,23 @@ public class Commerce {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateCommerceReviewResponse updateCommerceReview(@Nonnull UpdateCommerceReviewRequest request) {
+        return updateCommerceReview(request, null);
+    }
+
+    /**
+     * Update a review
+     * 
+     * <p>Updates the CommerceReview identified by `id`. Provide the unified CommerceReview fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateCommerceReviewResponse updateCommerceReview(@Nonnull UpdateCommerceReviewRequest request, @Nullable Options options) {
         RequestOperation<UpdateCommerceReviewRequest, UpdateCommerceReviewResponse> operation
-              = new UpdateCommerceReview.Sync(sdkConfiguration, _headers);
+              = new UpdateCommerceReview.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1791,8 +2609,23 @@ public class Commerce {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateCommerceSaleschannelResponse updateCommerceSaleschannel(@Nonnull UpdateCommerceSaleschannelRequest request) {
+        return updateCommerceSaleschannel(request, null);
+    }
+
+    /**
+     * Update a saleschannel
+     * 
+     * <p>Updates the CommerceSaleschannel identified by `id`. Provide the unified CommerceSaleschannel fields
+     * to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateCommerceSaleschannelResponse updateCommerceSaleschannel(@Nonnull UpdateCommerceSaleschannelRequest request, @Nullable Options options) {
         RequestOperation<UpdateCommerceSaleschannelRequest, UpdateCommerceSaleschannelResponse> operation
-              = new UpdateCommerceSaleschannel.Sync(sdkConfiguration, _headers);
+              = new UpdateCommerceSaleschannel.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

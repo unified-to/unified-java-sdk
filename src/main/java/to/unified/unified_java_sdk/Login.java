@@ -6,11 +6,13 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.GetUnifiedIntegrationLoginRequest;
 import to.unified.unified_java_sdk.models.operations.GetUnifiedIntegrationLoginRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetUnifiedIntegrationLoginResponse;
 import to.unified.unified_java_sdk.operations.GetUnifiedIntegrationLogin;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Login {
@@ -57,8 +59,24 @@ public class Login {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetUnifiedIntegrationLoginResponse getUnifiedIntegrationLogin(@Nonnull GetUnifiedIntegrationLoginRequest request) {
+        return getUnifiedIntegrationLogin(request, null);
+    }
+
+    /**
+     * Sign in a user
+     * 
+     * <p>Returns an authentication URL for the specified integration. Once a successful OAuth2 code-flow
+     * authentication occurs, the name and email are returned inside a jwt parameter, which is a JSON web
+     * token that is base-64 encoded.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetUnifiedIntegrationLoginResponse getUnifiedIntegrationLogin(@Nonnull GetUnifiedIntegrationLoginRequest request, @Nullable Options options) {
         RequestOperation<GetUnifiedIntegrationLoginRequest, GetUnifiedIntegrationLoginResponse> operation
-              = new GetUnifiedIntegrationLogin.Sync(sdkConfiguration, _headers);
+              = new GetUnifiedIntegrationLogin.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

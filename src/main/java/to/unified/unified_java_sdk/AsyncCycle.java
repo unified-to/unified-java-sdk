@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.GetPerformanceCycleRequest;
 import to.unified.unified_java_sdk.models.operations.ListPerformanceCyclesRequest;
@@ -16,6 +17,7 @@ import to.unified.unified_java_sdk.models.operations.async.ListPerformanceCycles
 import to.unified.unified_java_sdk.operations.GetPerformanceCycle;
 import to.unified.unified_java_sdk.operations.ListPerformanceCycles;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncCycle {
@@ -60,8 +62,22 @@ public class AsyncCycle {
      * @return {@code CompletableFuture<GetPerformanceCycleResponse>} - The async response
      */
     public CompletableFuture<GetPerformanceCycleResponse> getPerformanceCycle(@Nonnull GetPerformanceCycleRequest request) {
+        return getPerformanceCycle(request, null);
+    }
+
+    /**
+     * Retrieve a cycle
+     * 
+     * <p>Retrieves a single PerformanceCycle by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetPerformanceCycleResponse>} - The async response
+     */
+    public CompletableFuture<GetPerformanceCycleResponse> getPerformanceCycle(@Nonnull GetPerformanceCycleRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetPerformanceCycleRequest, GetPerformanceCycleResponse> operation
-              = new GetPerformanceCycle.Async(sdkConfiguration, _headers);
+              = new GetPerformanceCycle.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -97,8 +113,26 @@ public class AsyncCycle {
      * @return {@code CompletableFuture<ListPerformanceCyclesResponse>} - The async response
      */
     public CompletableFuture<ListPerformanceCyclesResponse> listPerformanceCycles(@Nonnull ListPerformanceCyclesRequest request) {
+        return listPerformanceCycles(request, null);
+    }
+
+    /**
+     * List all cycles
+     * 
+     * <p>Returns a list of PerformanceCycles. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListPerformanceCyclesResponse>} - The async response
+     */
+    public CompletableFuture<ListPerformanceCyclesResponse> listPerformanceCycles(@Nonnull ListPerformanceCyclesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListPerformanceCyclesRequest, ListPerformanceCyclesResponse> operation
-              = new ListPerformanceCycles.Async(sdkConfiguration, _headers);
+              = new ListPerformanceCycles.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

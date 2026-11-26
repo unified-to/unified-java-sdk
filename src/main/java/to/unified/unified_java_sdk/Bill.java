@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingBillRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingBillRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingBillResponse;
@@ -31,6 +32,7 @@ import to.unified.unified_java_sdk.operations.PatchAccountingBill;
 import to.unified.unified_java_sdk.operations.RemoveAccountingBill;
 import to.unified.unified_java_sdk.operations.UpdateAccountingBill;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Bill {
@@ -75,8 +77,23 @@ public class Bill {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateAccountingBillResponse createAccountingBill(@Nonnull CreateAccountingBillRequest request) {
+        return createAccountingBill(request, null);
+    }
+
+    /**
+     * Create a bill
+     * 
+     * <p>Creates a AccountingBill. Provide the unified AccountingBill fields in the request body; they are
+     * mapped to the provider's API. Returns the created AccountingBill.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateAccountingBillResponse createAccountingBill(@Nonnull CreateAccountingBillRequest request, @Nullable Options options) {
         RequestOperation<CreateAccountingBillRequest, CreateAccountingBillResponse> operation
-              = new CreateAccountingBill.Sync(sdkConfiguration, _headers);
+              = new CreateAccountingBill.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -103,8 +120,23 @@ public class Bill {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAccountingBillResponse getAccountingBill(@Nonnull GetAccountingBillRequest request) {
+        return getAccountingBill(request, null);
+    }
+
+    /**
+     * Retrieve a bill
+     * 
+     * <p>Retrieves a single AccountingBill by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAccountingBillResponse getAccountingBill(@Nonnull GetAccountingBillRequest request, @Nullable Options options) {
         RequestOperation<GetAccountingBillRequest, GetAccountingBillResponse> operation
-              = new GetAccountingBill.Sync(sdkConfiguration, _headers);
+              = new GetAccountingBill.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -139,8 +171,27 @@ public class Bill {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAccountingBillsResponse listAccountingBills(@Nonnull ListAccountingBillsRequest request) {
+        return listAccountingBills(request, null);
+    }
+
+    /**
+     * List all bills
+     * 
+     * <p>Returns a list of AccountingBills. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAccountingBillsResponse listAccountingBills(@Nonnull ListAccountingBillsRequest request, @Nullable Options options) {
         RequestOperation<ListAccountingBillsRequest, ListAccountingBillsResponse> operation
-              = new ListAccountingBills.Sync(sdkConfiguration, _headers);
+              = new ListAccountingBills.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +218,23 @@ public class Bill {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchAccountingBillResponse patchAccountingBill(@Nonnull PatchAccountingBillRequest request) {
+        return patchAccountingBill(request, null);
+    }
+
+    /**
+     * Update a bill
+     * 
+     * <p>Updates the AccountingBill identified by `id`. Provide the unified AccountingBill fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchAccountingBillResponse patchAccountingBill(@Nonnull PatchAccountingBillRequest request, @Nullable Options options) {
         RequestOperation<PatchAccountingBillRequest, PatchAccountingBillResponse> operation
-              = new PatchAccountingBill.Sync(sdkConfiguration, _headers);
+              = new PatchAccountingBill.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -193,8 +259,22 @@ public class Bill {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveAccountingBillResponse removeAccountingBill(@Nonnull RemoveAccountingBillRequest request) {
+        return removeAccountingBill(request, null);
+    }
+
+    /**
+     * Remove a bill
+     * 
+     * <p>Deletes the AccountingBill identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveAccountingBillResponse removeAccountingBill(@Nonnull RemoveAccountingBillRequest request, @Nullable Options options) {
         RequestOperation<RemoveAccountingBillRequest, RemoveAccountingBillResponse> operation
-              = new RemoveAccountingBill.Sync(sdkConfiguration, _headers);
+              = new RemoveAccountingBill.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -221,8 +301,23 @@ public class Bill {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateAccountingBillResponse updateAccountingBill(@Nonnull UpdateAccountingBillRequest request) {
+        return updateAccountingBill(request, null);
+    }
+
+    /**
+     * Update a bill
+     * 
+     * <p>Updates the AccountingBill identified by `id`. Provide the unified AccountingBill fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateAccountingBillResponse updateAccountingBill(@Nonnull UpdateAccountingBillRequest request, @Nullable Options options) {
         RequestOperation<UpdateAccountingBillRequest, UpdateAccountingBillResponse> operation
-              = new UpdateAccountingBill.Sync(sdkConfiguration, _headers);
+              = new UpdateAccountingBill.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

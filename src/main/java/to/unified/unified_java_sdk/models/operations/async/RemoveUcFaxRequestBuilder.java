@@ -6,20 +6,30 @@ package to.unified.unified_java_sdk.models.operations.async;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.RemoveUcFaxRequest;
 import to.unified.unified_java_sdk.operations.RemoveUcFax;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveUcFaxRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private RemoveUcFaxRequest request;
+    private final Options.Builder optionsBuilder;
 
     public RemoveUcFaxRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public RemoveUcFaxRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public RemoveUcFaxRequestBuilder request(@Nonnull RemoveUcFaxRequest request) {
@@ -44,8 +54,9 @@ public class RemoveUcFaxRequestBuilder {
     * @return The response from the server.
     */
     public CompletableFuture<RemoveUcFaxResponse> call() {
+        Options options = optionsBuilder.build();
         AsyncRequestOperation<RemoveUcFaxRequest, RemoveUcFaxResponse> operation
-              = new RemoveUcFax.Async(sdkConfiguration, _headers);
+              = new RemoveUcFax.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

@@ -11,7 +11,7 @@ import java.util.Optional;
 public enum CreateGenaiEmbeddingQueryParamFields {
     MODEL_ID("model_id"),
     CONTENT("content"),
-    ENCONDING_FORMAT("enconding_format"),
+    ENCODING_FORMAT("encoding_format"),
     TYPE("type"),
     DIMENSION("dimension"),
     MAX_TOKENS("max_tokens"),

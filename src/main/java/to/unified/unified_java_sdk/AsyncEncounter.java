@@ -6,16 +6,26 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
+import to.unified.unified_java_sdk.models.operations.GetFhirEncounterRequest;
 import to.unified.unified_java_sdk.models.operations.GetHealthcareEncounterRequest;
+import to.unified.unified_java_sdk.models.operations.ListFhirEncountersRequest;
 import to.unified.unified_java_sdk.models.operations.ListHealthcareEncountersRequest;
+import to.unified.unified_java_sdk.models.operations.async.GetFhirEncounterRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetFhirEncounterResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetHealthcareEncounterRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetHealthcareEncounterResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListFhirEncountersRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListFhirEncountersResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListHealthcareEncountersRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListHealthcareEncountersResponse;
+import to.unified.unified_java_sdk.operations.GetFhirEncounter;
 import to.unified.unified_java_sdk.operations.GetHealthcareEncounter;
+import to.unified.unified_java_sdk.operations.ListFhirEncounters;
 import to.unified.unified_java_sdk.operations.ListHealthcareEncounters;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncEncounter {
@@ -35,6 +45,49 @@ public class AsyncEncounter {
      */
     public Encounter sync() {
         return syncSDK;
+    }
+
+
+    /**
+     * Read a Encounter
+     * 
+     * <p>Responses use the application/fhir+json media type; errors are OperationOutcome resources. Read-only
+     * (FHIR R4 4.0.1).
+     * 
+     * @return The async call builder
+     */
+    public GetFhirEncounterRequestBuilder getFhirEncounter() {
+        return new GetFhirEncounterRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Read a Encounter
+     * 
+     * <p>Responses use the application/fhir+json media type; errors are OperationOutcome resources. Read-only
+     * (FHIR R4 4.0.1).
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<GetFhirEncounterResponse>} - The async response
+     */
+    public CompletableFuture<GetFhirEncounterResponse> getFhirEncounter(@Nonnull GetFhirEncounterRequest request) {
+        return getFhirEncounter(request, null);
+    }
+
+    /**
+     * Read a Encounter
+     * 
+     * <p>Responses use the application/fhir+json media type; errors are OperationOutcome resources. Read-only
+     * (FHIR R4 4.0.1).
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetFhirEncounterResponse>} - The async response
+     */
+    public CompletableFuture<GetFhirEncounterResponse> getFhirEncounter(@Nonnull GetFhirEncounterRequest request, @Nullable Options options) {
+        AsyncRequestOperation<GetFhirEncounterRequest, GetFhirEncounterResponse> operation
+              = new GetFhirEncounter.Async(sdkConfiguration, options, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
     }
 
 
@@ -60,8 +113,65 @@ public class AsyncEncounter {
      * @return {@code CompletableFuture<GetHealthcareEncounterResponse>} - The async response
      */
     public CompletableFuture<GetHealthcareEncounterResponse> getHealthcareEncounter(@Nonnull GetHealthcareEncounterRequest request) {
+        return getHealthcareEncounter(request, null);
+    }
+
+    /**
+     * Retrieve an encounter
+     * 
+     * <p>Retrieves a single HealthcareEncounter by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetHealthcareEncounterResponse>} - The async response
+     */
+    public CompletableFuture<GetHealthcareEncounterResponse> getHealthcareEncounter(@Nonnull GetHealthcareEncounterRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetHealthcareEncounterRequest, GetHealthcareEncounterResponse> operation
-              = new GetHealthcareEncounter.Async(sdkConfiguration, _headers);
+              = new GetHealthcareEncounter.Async(sdkConfiguration, options, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Search Encounter resources
+     * 
+     * <p>Returns a searchset Bundle; follow its next link for more pages. Responses use the
+     * application/fhir+json media type; errors are OperationOutcome resources. Read-only (FHIR R4 4.0.1).
+     * 
+     * @return The async call builder
+     */
+    public ListFhirEncountersRequestBuilder listFhirEncounters() {
+        return new ListFhirEncountersRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Search Encounter resources
+     * 
+     * <p>Returns a searchset Bundle; follow its next link for more pages. Responses use the
+     * application/fhir+json media type; errors are OperationOutcome resources. Read-only (FHIR R4 4.0.1).
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<ListFhirEncountersResponse>} - The async response
+     */
+    public CompletableFuture<ListFhirEncountersResponse> listFhirEncounters(@Nonnull ListFhirEncountersRequest request) {
+        return listFhirEncounters(request, null);
+    }
+
+    /**
+     * Search Encounter resources
+     * 
+     * <p>Returns a searchset Bundle; follow its next link for more pages. Responses use the
+     * application/fhir+json media type; errors are OperationOutcome resources. Read-only (FHIR R4 4.0.1).
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListFhirEncountersResponse>} - The async response
+     */
+    public CompletableFuture<ListFhirEncountersResponse> listFhirEncounters(@Nonnull ListFhirEncountersRequest request, @Nullable Options options) {
+        AsyncRequestOperation<ListFhirEncountersRequest, ListFhirEncountersResponse> operation
+              = new ListFhirEncounters.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -97,8 +207,26 @@ public class AsyncEncounter {
      * @return {@code CompletableFuture<ListHealthcareEncountersResponse>} - The async response
      */
     public CompletableFuture<ListHealthcareEncountersResponse> listHealthcareEncounters(@Nonnull ListHealthcareEncountersRequest request) {
+        return listHealthcareEncounters(request, null);
+    }
+
+    /**
+     * List all encounters
+     * 
+     * <p>Returns a list of HealthcareEncounters. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListHealthcareEncountersResponse>} - The async response
+     */
+    public CompletableFuture<ListHealthcareEncountersResponse> listHealthcareEncounters(@Nonnull ListHealthcareEncountersRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListHealthcareEncountersRequest, ListHealthcareEncountersResponse> operation
-              = new ListHealthcareEncounters.Async(sdkConfiguration, _headers);
+              = new ListHealthcareEncounters.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

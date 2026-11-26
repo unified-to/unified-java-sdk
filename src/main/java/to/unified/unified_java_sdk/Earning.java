@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateHrisEarningRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisEarningRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateHrisEarningResponse;
@@ -31,6 +32,7 @@ import to.unified.unified_java_sdk.operations.PatchHrisEarning;
 import to.unified.unified_java_sdk.operations.RemoveHrisEarning;
 import to.unified.unified_java_sdk.operations.UpdateHrisEarning;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Earning {
@@ -75,8 +77,23 @@ public class Earning {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateHrisEarningResponse createHrisEarning(@Nonnull CreateHrisEarningRequest request) {
+        return createHrisEarning(request, null);
+    }
+
+    /**
+     * Create an earning
+     * 
+     * <p>Creates a HrisEarning. Provide the unified HrisEarning fields in the request body; they are mapped
+     * to the provider's API. Returns the created HrisEarning.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateHrisEarningResponse createHrisEarning(@Nonnull CreateHrisEarningRequest request, @Nullable Options options) {
         RequestOperation<CreateHrisEarningRequest, CreateHrisEarningResponse> operation
-              = new CreateHrisEarning.Sync(sdkConfiguration, _headers);
+              = new CreateHrisEarning.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -103,8 +120,23 @@ public class Earning {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetHrisEarningResponse getHrisEarning(@Nonnull GetHrisEarningRequest request) {
+        return getHrisEarning(request, null);
+    }
+
+    /**
+     * Retrieve an earning
+     * 
+     * <p>Retrieves a single HrisEarning by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetHrisEarningResponse getHrisEarning(@Nonnull GetHrisEarningRequest request, @Nullable Options options) {
         RequestOperation<GetHrisEarningRequest, GetHrisEarningResponse> operation
-              = new GetHrisEarning.Sync(sdkConfiguration, _headers);
+              = new GetHrisEarning.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -139,8 +171,27 @@ public class Earning {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListHrisEarningsResponse listHrisEarnings(@Nonnull ListHrisEarningsRequest request) {
+        return listHrisEarnings(request, null);
+    }
+
+    /**
+     * List all earnings
+     * 
+     * <p>Returns a list of HrisEarnings. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListHrisEarningsResponse listHrisEarnings(@Nonnull ListHrisEarningsRequest request, @Nullable Options options) {
         RequestOperation<ListHrisEarningsRequest, ListHrisEarningsResponse> operation
-              = new ListHrisEarnings.Sync(sdkConfiguration, _headers);
+              = new ListHrisEarnings.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +218,23 @@ public class Earning {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchHrisEarningResponse patchHrisEarning(@Nonnull PatchHrisEarningRequest request) {
+        return patchHrisEarning(request, null);
+    }
+
+    /**
+     * Update an earning
+     * 
+     * <p>Updates the HrisEarning identified by `id`. Provide the unified HrisEarning fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchHrisEarningResponse patchHrisEarning(@Nonnull PatchHrisEarningRequest request, @Nullable Options options) {
         RequestOperation<PatchHrisEarningRequest, PatchHrisEarningResponse> operation
-              = new PatchHrisEarning.Sync(sdkConfiguration, _headers);
+              = new PatchHrisEarning.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -193,8 +259,22 @@ public class Earning {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveHrisEarningResponse removeHrisEarning(@Nonnull RemoveHrisEarningRequest request) {
+        return removeHrisEarning(request, null);
+    }
+
+    /**
+     * Remove an earning
+     * 
+     * <p>Deletes the HrisEarning identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveHrisEarningResponse removeHrisEarning(@Nonnull RemoveHrisEarningRequest request, @Nullable Options options) {
         RequestOperation<RemoveHrisEarningRequest, RemoveHrisEarningResponse> operation
-              = new RemoveHrisEarning.Sync(sdkConfiguration, _headers);
+              = new RemoveHrisEarning.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -221,8 +301,23 @@ public class Earning {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateHrisEarningResponse updateHrisEarning(@Nonnull UpdateHrisEarningRequest request) {
+        return updateHrisEarning(request, null);
+    }
+
+    /**
+     * Update an earning
+     * 
+     * <p>Updates the HrisEarning identified by `id`. Provide the unified HrisEarning fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateHrisEarningResponse updateHrisEarning(@Nonnull UpdateHrisEarningRequest request, @Nullable Options options) {
         RequestOperation<UpdateHrisEarningRequest, UpdateHrisEarningResponse> operation
-              = new UpdateHrisEarning.Sync(sdkConfiguration, _headers);
+              = new UpdateHrisEarning.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

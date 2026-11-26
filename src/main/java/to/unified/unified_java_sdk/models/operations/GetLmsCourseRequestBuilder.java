@@ -6,18 +6,28 @@ package to.unified.unified_java_sdk.models.operations;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.GetLmsCourse;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetLmsCourseRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private GetLmsCourseRequest request;
+    private final Options.Builder optionsBuilder;
 
     public GetLmsCourseRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public GetLmsCourseRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public GetLmsCourseRequestBuilder request(@Nonnull GetLmsCourseRequest request) {
@@ -42,8 +52,9 @@ public class GetLmsCourseRequestBuilder {
     * @return The response from the server.
     */
     public GetLmsCourseResponse call() {
+        Options options = optionsBuilder.build();
         RequestOperation<GetLmsCourseRequest, GetLmsCourseResponse> operation
-              = new GetLmsCourse.Sync(sdkConfiguration, _headers);
+              = new GetLmsCourse.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

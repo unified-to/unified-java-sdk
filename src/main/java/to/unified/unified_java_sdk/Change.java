@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreatePlmChangeRequest;
 import to.unified.unified_java_sdk.models.operations.CreatePlmChangeRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreatePlmChangeResponse;
@@ -35,6 +36,7 @@ import to.unified.unified_java_sdk.operations.ListTaskChanges;
 import to.unified.unified_java_sdk.operations.PatchPlmChange;
 import to.unified.unified_java_sdk.operations.UpdatePlmChange;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Change {
@@ -79,8 +81,23 @@ public class Change {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreatePlmChangeResponse createPlmChange(@Nonnull CreatePlmChangeRequest request) {
+        return createPlmChange(request, null);
+    }
+
+    /**
+     * Create a change
+     * 
+     * <p>Creates a PlmChange. Provide the unified PlmChange fields in the request body; they are mapped to
+     * the provider's API. Returns the created PlmChange.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreatePlmChangeResponse createPlmChange(@Nonnull CreatePlmChangeRequest request, @Nullable Options options) {
         RequestOperation<CreatePlmChangeRequest, CreatePlmChangeResponse> operation
-              = new CreatePlmChange.Sync(sdkConfiguration, _headers);
+              = new CreatePlmChange.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -107,8 +124,23 @@ public class Change {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetPlmChangeResponse getPlmChange(@Nonnull GetPlmChangeRequest request) {
+        return getPlmChange(request, null);
+    }
+
+    /**
+     * Retrieve a change
+     * 
+     * <p>Retrieves a single PlmChange by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetPlmChangeResponse getPlmChange(@Nonnull GetPlmChangeRequest request, @Nullable Options options) {
         RequestOperation<GetPlmChangeRequest, GetPlmChangeResponse> operation
-              = new GetPlmChange.Sync(sdkConfiguration, _headers);
+              = new GetPlmChange.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -135,8 +167,23 @@ public class Change {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetTaskChangeResponse getTaskChange(@Nonnull GetTaskChangeRequest request) {
+        return getTaskChange(request, null);
+    }
+
+    /**
+     * Retrieve a change
+     * 
+     * <p>Retrieves a single TaskChange by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetTaskChangeResponse getTaskChange(@Nonnull GetTaskChangeRequest request, @Nullable Options options) {
         RequestOperation<GetTaskChangeRequest, GetTaskChangeResponse> operation
-              = new GetTaskChange.Sync(sdkConfiguration, _headers);
+              = new GetTaskChange.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -171,8 +218,27 @@ public class Change {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListPlmChangesResponse listPlmChanges(@Nonnull ListPlmChangesRequest request) {
+        return listPlmChanges(request, null);
+    }
+
+    /**
+     * List all changes
+     * 
+     * <p>Returns a list of PlmChanges. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListPlmChangesResponse listPlmChanges(@Nonnull ListPlmChangesRequest request, @Nullable Options options) {
         RequestOperation<ListPlmChangesRequest, ListPlmChangesResponse> operation
-              = new ListPlmChanges.Sync(sdkConfiguration, _headers);
+              = new ListPlmChanges.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -207,8 +273,27 @@ public class Change {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListTaskChangesResponse listTaskChanges(@Nonnull ListTaskChangesRequest request) {
+        return listTaskChanges(request, null);
+    }
+
+    /**
+     * List all changes
+     * 
+     * <p>Returns a list of TaskChanges. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListTaskChangesResponse listTaskChanges(@Nonnull ListTaskChangesRequest request, @Nullable Options options) {
         RequestOperation<ListTaskChangesRequest, ListTaskChangesResponse> operation
-              = new ListTaskChanges.Sync(sdkConfiguration, _headers);
+              = new ListTaskChanges.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -235,8 +320,23 @@ public class Change {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchPlmChangeResponse patchPlmChange(@Nonnull PatchPlmChangeRequest request) {
+        return patchPlmChange(request, null);
+    }
+
+    /**
+     * Update a change
+     * 
+     * <p>Updates the PlmChange identified by `id`. Provide the unified PlmChange fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchPlmChangeResponse patchPlmChange(@Nonnull PatchPlmChangeRequest request, @Nullable Options options) {
         RequestOperation<PatchPlmChangeRequest, PatchPlmChangeResponse> operation
-              = new PatchPlmChange.Sync(sdkConfiguration, _headers);
+              = new PatchPlmChange.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -263,8 +363,23 @@ public class Change {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdatePlmChangeResponse updatePlmChange(@Nonnull UpdatePlmChangeRequest request) {
+        return updatePlmChange(request, null);
+    }
+
+    /**
+     * Update a change
+     * 
+     * <p>Updates the PlmChange identified by `id`. Provide the unified PlmChange fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdatePlmChangeResponse updatePlmChange(@Nonnull UpdatePlmChangeRequest request, @Nullable Options options) {
         RequestOperation<UpdatePlmChangeRequest, UpdatePlmChangeResponse> operation
-              = new UpdatePlmChange.Sync(sdkConfiguration, _headers);
+              = new UpdatePlmChange.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

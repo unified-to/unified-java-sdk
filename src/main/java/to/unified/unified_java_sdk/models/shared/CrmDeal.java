@@ -146,6 +146,13 @@ public class CrmDeal {
     @JsonProperty("user_id")
     private String userId;
 
+    /**
+     * DMS Vehicles this deal is for
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("vehicle_ids")
+    private List<String> vehicleIds;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("won_reason")
@@ -173,6 +180,7 @@ public class CrmDeal {
             @JsonProperty("tags") @Nullable List<String> tags,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
             @JsonProperty("user_id") @Nullable String userId,
+            @JsonProperty("vehicle_ids") @Nullable List<String> vehicleIds,
             @JsonProperty("won_reason") @Nullable String wonReason) {
         this.amount = amount;
         this.closedAt = closedAt;
@@ -194,6 +202,7 @@ public class CrmDeal {
         this.tags = tags;
         this.updatedAt = updatedAt;
         this.userId = userId;
+        this.vehicleIds = vehicleIds;
         this.wonReason = wonReason;
     }
     
@@ -204,7 +213,8 @@ public class CrmDeal {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
     }
 
     /**
@@ -318,6 +328,13 @@ public class CrmDeal {
      */
     public Optional<String> userId() {
         return Optional.ofNullable(this.userId);
+    }
+
+    /**
+     * DMS Vehicles this deal is for
+     */
+    public Optional<List<String>> vehicleIds() {
+        return Optional.ofNullable(this.vehicleIds);
     }
 
     public Optional<String> wonReason() {
@@ -482,6 +499,15 @@ public class CrmDeal {
     }
 
 
+    /**
+     * DMS Vehicles this deal is for
+     */
+    public CrmDeal withVehicleIds(@Nullable List<String> vehicleIds) {
+        this.vehicleIds = vehicleIds;
+        return this;
+    }
+
+
     public CrmDeal withWonReason(@Nullable String wonReason) {
         this.wonReason = wonReason;
         return this;
@@ -518,6 +544,7 @@ public class CrmDeal {
             Utils.enhancedDeepEquals(this.tags, other.tags) &&
             Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt) &&
             Utils.enhancedDeepEquals(this.userId, other.userId) &&
+            Utils.enhancedDeepEquals(this.vehicleIds, other.vehicleIds) &&
             Utils.enhancedDeepEquals(this.wonReason, other.wonReason);
     }
     
@@ -530,7 +557,8 @@ public class CrmDeal {
             lostReason, metadata, name,
             pipelines, probability, raw,
             source, stages, tags,
-            updatedAt, userId, wonReason);
+            updatedAt, userId, vehicleIds,
+            wonReason);
     }
     
     @Override
@@ -556,6 +584,7 @@ public class CrmDeal {
                 "tags", tags,
                 "updatedAt", updatedAt,
                 "userId", userId,
+                "vehicleIds", vehicleIds,
                 "wonReason", wonReason);
     }
 
@@ -601,6 +630,8 @@ public class CrmDeal {
         private OffsetDateTime updatedAt;
 
         private String userId;
+
+        private List<String> vehicleIds;
 
         private String wonReason;
 
@@ -741,6 +772,14 @@ public class CrmDeal {
             return this;
         }
 
+        /**
+         * DMS Vehicles this deal is for
+         */
+        public Builder vehicleIds(@Nullable List<String> vehicleIds) {
+            this.vehicleIds = vehicleIds;
+            return this;
+        }
+
         public Builder wonReason(@Nullable String wonReason) {
             this.wonReason = wonReason;
             return this;
@@ -754,7 +793,8 @@ public class CrmDeal {
                 lostReason, metadata, name,
                 pipelines, probability, raw,
                 source, stages, tags,
-                updatedAt, userId, wonReason);
+                updatedAt, userId, vehicleIds,
+                wonReason);
         }
 
     }

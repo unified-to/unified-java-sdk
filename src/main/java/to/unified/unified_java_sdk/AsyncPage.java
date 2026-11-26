@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateKmsPageRequest;
 import to.unified.unified_java_sdk.models.operations.GetKmsPageRequest;
@@ -32,6 +33,7 @@ import to.unified.unified_java_sdk.operations.PatchKmsPage;
 import to.unified.unified_java_sdk.operations.RemoveKmsPage;
 import to.unified.unified_java_sdk.operations.UpdateKmsPage;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncPage {
@@ -76,8 +78,22 @@ public class AsyncPage {
      * @return {@code CompletableFuture<CreateKmsPageResponse>} - The async response
      */
     public CompletableFuture<CreateKmsPageResponse> createKmsPage(@Nonnull CreateKmsPageRequest request) {
+        return createKmsPage(request, null);
+    }
+
+    /**
+     * Create a page
+     * 
+     * <p>Creates a KmsPage. Provide the unified KmsPage fields in the request body; they are mapped to the
+     * provider's API. Returns the created KmsPage.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateKmsPageResponse>} - The async response
+     */
+    public CompletableFuture<CreateKmsPageResponse> createKmsPage(@Nonnull CreateKmsPageRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateKmsPageRequest, CreateKmsPageResponse> operation
-              = new CreateKmsPage.Async(sdkConfiguration, _headers);
+              = new CreateKmsPage.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -105,8 +121,22 @@ public class AsyncPage {
      * @return {@code CompletableFuture<GetKmsPageResponse>} - The async response
      */
     public CompletableFuture<GetKmsPageResponse> getKmsPage(@Nonnull GetKmsPageRequest request) {
+        return getKmsPage(request, null);
+    }
+
+    /**
+     * Retrieve a page
+     * 
+     * <p>Retrieves a single KmsPage by its `id`. Obtain `id` values from the corresponding list endpoint. Use
+     * `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetKmsPageResponse>} - The async response
+     */
+    public CompletableFuture<GetKmsPageResponse> getKmsPage(@Nonnull GetKmsPageRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetKmsPageRequest, GetKmsPageResponse> operation
-              = new GetKmsPage.Async(sdkConfiguration, _headers);
+              = new GetKmsPage.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -142,8 +172,26 @@ public class AsyncPage {
      * @return {@code CompletableFuture<ListKmsPagesResponse>} - The async response
      */
     public CompletableFuture<ListKmsPagesResponse> listKmsPages(@Nonnull ListKmsPagesRequest request) {
+        return listKmsPages(request, null);
+    }
+
+    /**
+     * List all pages
+     * 
+     * <p>Returns a list of KmsPages. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListKmsPagesResponse>} - The async response
+     */
+    public CompletableFuture<ListKmsPagesResponse> listKmsPages(@Nonnull ListKmsPagesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListKmsPagesRequest, ListKmsPagesResponse> operation
-              = new ListKmsPages.Async(sdkConfiguration, _headers);
+              = new ListKmsPages.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -171,8 +219,22 @@ public class AsyncPage {
      * @return {@code CompletableFuture<PatchKmsPageResponse>} - The async response
      */
     public CompletableFuture<PatchKmsPageResponse> patchKmsPage(@Nonnull PatchKmsPageRequest request) {
+        return patchKmsPage(request, null);
+    }
+
+    /**
+     * Update a page
+     * 
+     * <p>Updates the KmsPage identified by `id`. Provide the unified KmsPage fields to change in the request
+     * body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchKmsPageResponse>} - The async response
+     */
+    public CompletableFuture<PatchKmsPageResponse> patchKmsPage(@Nonnull PatchKmsPageRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchKmsPageRequest, PatchKmsPageResponse> operation
-              = new PatchKmsPage.Async(sdkConfiguration, _headers);
+              = new PatchKmsPage.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -198,8 +260,21 @@ public class AsyncPage {
      * @return {@code CompletableFuture<RemoveKmsPageResponse>} - The async response
      */
     public CompletableFuture<RemoveKmsPageResponse> removeKmsPage(@Nonnull RemoveKmsPageRequest request) {
+        return removeKmsPage(request, null);
+    }
+
+    /**
+     * Remove a page
+     * 
+     * <p>Deletes the KmsPage identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveKmsPageResponse>} - The async response
+     */
+    public CompletableFuture<RemoveKmsPageResponse> removeKmsPage(@Nonnull RemoveKmsPageRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveKmsPageRequest, RemoveKmsPageResponse> operation
-              = new RemoveKmsPage.Async(sdkConfiguration, _headers);
+              = new RemoveKmsPage.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -227,8 +302,22 @@ public class AsyncPage {
      * @return {@code CompletableFuture<UpdateKmsPageResponse>} - The async response
      */
     public CompletableFuture<UpdateKmsPageResponse> updateKmsPage(@Nonnull UpdateKmsPageRequest request) {
+        return updateKmsPage(request, null);
+    }
+
+    /**
+     * Update a page
+     * 
+     * <p>Updates the KmsPage identified by `id`. Provide the unified KmsPage fields to change in the request
+     * body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateKmsPageResponse>} - The async response
+     */
+    public CompletableFuture<UpdateKmsPageResponse> updateKmsPage(@Nonnull UpdateKmsPageRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateKmsPageRequest, UpdateKmsPageResponse> operation
-              = new UpdateKmsPage.Async(sdkConfiguration, _headers);
+              = new UpdateKmsPage.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

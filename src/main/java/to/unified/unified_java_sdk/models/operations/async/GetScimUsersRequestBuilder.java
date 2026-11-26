@@ -6,20 +6,30 @@ package to.unified.unified_java_sdk.models.operations.async;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.GetScimUsersRequest;
 import to.unified.unified_java_sdk.operations.GetScimUsers;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetScimUsersRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private GetScimUsersRequest request;
+    private final Options.Builder optionsBuilder;
 
     public GetScimUsersRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public GetScimUsersRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public GetScimUsersRequestBuilder request(@Nonnull GetScimUsersRequest request) {
@@ -44,8 +54,9 @@ public class GetScimUsersRequestBuilder {
     * @return The response from the server.
     */
     public CompletableFuture<GetScimUsersResponse> call() {
+        Options options = optionsBuilder.build();
         AsyncRequestOperation<GetScimUsersRequest, GetScimUsersResponse> operation
-              = new GetScimUsers.Async(sdkConfiguration, _headers);
+              = new GetScimUsers.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

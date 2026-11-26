@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Deprecated;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingOrderRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingOrderRequestBuilder;
@@ -13,41 +14,66 @@ import to.unified.unified_java_sdk.models.operations.CreateAccountingOrderRespon
 import to.unified.unified_java_sdk.models.operations.CreateAssessmentOrderRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAssessmentOrderRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateAssessmentOrderResponse;
+import to.unified.unified_java_sdk.models.operations.CreatePrintingOrderRequest;
+import to.unified.unified_java_sdk.models.operations.CreatePrintingOrderRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreatePrintingOrderResponse;
 import to.unified.unified_java_sdk.models.operations.GetAccountingOrderRequest;
 import to.unified.unified_java_sdk.models.operations.GetAccountingOrderRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetAccountingOrderResponse;
 import to.unified.unified_java_sdk.models.operations.GetAssessmentOrderRequest;
 import to.unified.unified_java_sdk.models.operations.GetAssessmentOrderRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetAssessmentOrderResponse;
+import to.unified.unified_java_sdk.models.operations.GetPrintingOrderRequest;
+import to.unified.unified_java_sdk.models.operations.GetPrintingOrderRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetPrintingOrderResponse;
 import to.unified.unified_java_sdk.models.operations.ListAccountingOrdersRequest;
 import to.unified.unified_java_sdk.models.operations.ListAccountingOrdersRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListAccountingOrdersResponse;
+import to.unified.unified_java_sdk.models.operations.ListPrintingOrdersRequest;
+import to.unified.unified_java_sdk.models.operations.ListPrintingOrdersRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListPrintingOrdersResponse;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingOrderRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingOrderRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingOrderResponse;
 import to.unified.unified_java_sdk.models.operations.PatchAssessmentOrderRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAssessmentOrderRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.PatchAssessmentOrderResponse;
+import to.unified.unified_java_sdk.models.operations.PatchPrintingOrderRequest;
+import to.unified.unified_java_sdk.models.operations.PatchPrintingOrderRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchPrintingOrderResponse;
 import to.unified.unified_java_sdk.models.operations.RemoveAccountingOrderRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveAccountingOrderRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.RemoveAccountingOrderResponse;
+import to.unified.unified_java_sdk.models.operations.RemovePrintingOrderRequest;
+import to.unified.unified_java_sdk.models.operations.RemovePrintingOrderRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemovePrintingOrderResponse;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingOrderRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingOrderRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingOrderResponse;
 import to.unified.unified_java_sdk.models.operations.UpdateAssessmentOrderRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAssessmentOrderRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateAssessmentOrderResponse;
+import to.unified.unified_java_sdk.models.operations.UpdatePrintingOrderRequest;
+import to.unified.unified_java_sdk.models.operations.UpdatePrintingOrderRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdatePrintingOrderResponse;
 import to.unified.unified_java_sdk.operations.CreateAccountingOrder;
 import to.unified.unified_java_sdk.operations.CreateAssessmentOrder;
+import to.unified.unified_java_sdk.operations.CreatePrintingOrder;
 import to.unified.unified_java_sdk.operations.GetAccountingOrder;
 import to.unified.unified_java_sdk.operations.GetAssessmentOrder;
+import to.unified.unified_java_sdk.operations.GetPrintingOrder;
 import to.unified.unified_java_sdk.operations.ListAccountingOrders;
+import to.unified.unified_java_sdk.operations.ListPrintingOrders;
 import to.unified.unified_java_sdk.operations.PatchAccountingOrder;
 import to.unified.unified_java_sdk.operations.PatchAssessmentOrder;
+import to.unified.unified_java_sdk.operations.PatchPrintingOrder;
 import to.unified.unified_java_sdk.operations.RemoveAccountingOrder;
+import to.unified.unified_java_sdk.operations.RemovePrintingOrder;
 import to.unified.unified_java_sdk.operations.UpdateAccountingOrder;
 import to.unified.unified_java_sdk.operations.UpdateAssessmentOrder;
+import to.unified.unified_java_sdk.operations.UpdatePrintingOrder;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Order {
@@ -96,8 +122,25 @@ public class Order {
      */
     @Deprecated
     public CreateAccountingOrderResponse createAccountingOrder(@Nonnull CreateAccountingOrderRequest request) {
+        return createAccountingOrder(request, null);
+    }
+
+    /**
+     * Create an order
+     * 
+     * <p>Creates a AccountingOrder. Provide the unified AccountingOrder fields in the request body; they are
+     * mapped to the provider's API. Returns the created AccountingOrder.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     * @deprecated method: This will be removed in a future release, please migrate away from it as soon as possible.
+     */
+    @Deprecated
+    public CreateAccountingOrderResponse createAccountingOrder(@Nonnull CreateAccountingOrderRequest request, @Nullable Options options) {
         RequestOperation<CreateAccountingOrderRequest, CreateAccountingOrderResponse> operation
-              = new CreateAccountingOrder.Sync(sdkConfiguration, _headers);
+              = new CreateAccountingOrder.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -124,8 +167,66 @@ public class Order {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateAssessmentOrderResponse createAssessmentOrder(@Nonnull CreateAssessmentOrderRequest request) {
+        return createAssessmentOrder(request, null);
+    }
+
+    /**
+     * Create an order
+     * 
+     * <p>Creates a AssessmentOrder. Provide the unified AssessmentOrder fields in the request body; they are
+     * mapped to the provider's API. Returns the created AssessmentOrder.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateAssessmentOrderResponse createAssessmentOrder(@Nonnull CreateAssessmentOrderRequest request, @Nullable Options options) {
         RequestOperation<CreateAssessmentOrderRequest, CreateAssessmentOrderResponse> operation
-              = new CreateAssessmentOrder.Sync(sdkConfiguration, _headers);
+              = new CreateAssessmentOrder.Sync(sdkConfiguration, options, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Create an order
+     * 
+     * <p>Creates a PrintingOrder. Provide the unified PrintingOrder fields in the request body; they are
+     * mapped to the provider's API. Returns the created PrintingOrder.
+     * 
+     * @return The call builder
+     */
+    public CreatePrintingOrderRequestBuilder createPrintingOrder() {
+        return new CreatePrintingOrderRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Create an order
+     * 
+     * <p>Creates a PrintingOrder. Provide the unified PrintingOrder fields in the request body; they are
+     * mapped to the provider's API. Returns the created PrintingOrder.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreatePrintingOrderResponse createPrintingOrder(@Nonnull CreatePrintingOrderRequest request) {
+        return createPrintingOrder(request, null);
+    }
+
+    /**
+     * Create an order
+     * 
+     * <p>Creates a PrintingOrder. Provide the unified PrintingOrder fields in the request body; they are
+     * mapped to the provider's API. Returns the created PrintingOrder.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreatePrintingOrderResponse createPrintingOrder(@Nonnull CreatePrintingOrderRequest request, @Nullable Options options) {
+        RequestOperation<CreatePrintingOrderRequest, CreatePrintingOrderResponse> operation
+              = new CreatePrintingOrder.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -156,8 +257,25 @@ public class Order {
      */
     @Deprecated
     public GetAccountingOrderResponse getAccountingOrder(@Nonnull GetAccountingOrderRequest request) {
+        return getAccountingOrder(request, null);
+    }
+
+    /**
+     * Retrieve an order
+     * 
+     * <p>Retrieves a single AccountingOrder by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     * @deprecated method: This will be removed in a future release, please migrate away from it as soon as possible.
+     */
+    @Deprecated
+    public GetAccountingOrderResponse getAccountingOrder(@Nonnull GetAccountingOrderRequest request, @Nullable Options options) {
         RequestOperation<GetAccountingOrderRequest, GetAccountingOrderResponse> operation
-              = new GetAccountingOrder.Sync(sdkConfiguration, _headers);
+              = new GetAccountingOrder.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -184,8 +302,66 @@ public class Order {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAssessmentOrderResponse getAssessmentOrder(@Nonnull GetAssessmentOrderRequest request) {
+        return getAssessmentOrder(request, null);
+    }
+
+    /**
+     * Retrieve an order
+     * 
+     * <p>Retrieves a single AssessmentOrder by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAssessmentOrderResponse getAssessmentOrder(@Nonnull GetAssessmentOrderRequest request, @Nullable Options options) {
         RequestOperation<GetAssessmentOrderRequest, GetAssessmentOrderResponse> operation
-              = new GetAssessmentOrder.Sync(sdkConfiguration, _headers);
+              = new GetAssessmentOrder.Sync(sdkConfiguration, options, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Retrieve an order
+     * 
+     * <p>Retrieves a single PrintingOrder by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @return The call builder
+     */
+    public GetPrintingOrderRequestBuilder getPrintingOrder() {
+        return new GetPrintingOrderRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve an order
+     * 
+     * <p>Retrieves a single PrintingOrder by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetPrintingOrderResponse getPrintingOrder(@Nonnull GetPrintingOrderRequest request) {
+        return getPrintingOrder(request, null);
+    }
+
+    /**
+     * Retrieve an order
+     * 
+     * <p>Retrieves a single PrintingOrder by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetPrintingOrderResponse getPrintingOrder(@Nonnull GetPrintingOrderRequest request, @Nullable Options options) {
+        RequestOperation<GetPrintingOrderRequest, GetPrintingOrderResponse> operation
+              = new GetPrintingOrder.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -224,8 +400,84 @@ public class Order {
      */
     @Deprecated
     public ListAccountingOrdersResponse listAccountingOrders(@Nonnull ListAccountingOrdersRequest request) {
+        return listAccountingOrders(request, null);
+    }
+
+    /**
+     * List all orders
+     * 
+     * <p>Returns a list of AccountingOrders. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     * @deprecated method: This will be removed in a future release, please migrate away from it as soon as possible.
+     */
+    @Deprecated
+    public ListAccountingOrdersResponse listAccountingOrders(@Nonnull ListAccountingOrdersRequest request, @Nullable Options options) {
         RequestOperation<ListAccountingOrdersRequest, ListAccountingOrdersResponse> operation
-              = new ListAccountingOrders.Sync(sdkConfiguration, _headers);
+              = new ListAccountingOrders.Sync(sdkConfiguration, options, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * List all orders
+     * 
+     * <p>Returns a list of PrintingOrders. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @return The call builder
+     */
+    public ListPrintingOrdersRequestBuilder listPrintingOrders() {
+        return new ListPrintingOrdersRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all orders
+     * 
+     * <p>Returns a list of PrintingOrders. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListPrintingOrdersResponse listPrintingOrders(@Nonnull ListPrintingOrdersRequest request) {
+        return listPrintingOrders(request, null);
+    }
+
+    /**
+     * List all orders
+     * 
+     * <p>Returns a list of PrintingOrders. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListPrintingOrdersResponse listPrintingOrders(@Nonnull ListPrintingOrdersRequest request, @Nullable Options options) {
+        RequestOperation<ListPrintingOrdersRequest, ListPrintingOrdersResponse> operation
+              = new ListPrintingOrders.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -256,8 +508,25 @@ public class Order {
      */
     @Deprecated
     public PatchAccountingOrderResponse patchAccountingOrder(@Nonnull PatchAccountingOrderRequest request) {
+        return patchAccountingOrder(request, null);
+    }
+
+    /**
+     * Update an order
+     * 
+     * <p>Updates the AccountingOrder identified by `id`. Provide the unified AccountingOrder fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     * @deprecated method: This will be removed in a future release, please migrate away from it as soon as possible.
+     */
+    @Deprecated
+    public PatchAccountingOrderResponse patchAccountingOrder(@Nonnull PatchAccountingOrderRequest request, @Nullable Options options) {
         RequestOperation<PatchAccountingOrderRequest, PatchAccountingOrderResponse> operation
-              = new PatchAccountingOrder.Sync(sdkConfiguration, _headers);
+              = new PatchAccountingOrder.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -284,8 +553,66 @@ public class Order {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchAssessmentOrderResponse patchAssessmentOrder(@Nonnull PatchAssessmentOrderRequest request) {
+        return patchAssessmentOrder(request, null);
+    }
+
+    /**
+     * Update an order
+     * 
+     * <p>Updates the AssessmentOrder identified by `id`. Provide the unified AssessmentOrder fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchAssessmentOrderResponse patchAssessmentOrder(@Nonnull PatchAssessmentOrderRequest request, @Nullable Options options) {
         RequestOperation<PatchAssessmentOrderRequest, PatchAssessmentOrderResponse> operation
-              = new PatchAssessmentOrder.Sync(sdkConfiguration, _headers);
+              = new PatchAssessmentOrder.Sync(sdkConfiguration, options, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Update an order
+     * 
+     * <p>Updates the PrintingOrder identified by `id`. Provide the unified PrintingOrder fields to change in
+     * the request body.
+     * 
+     * @return The call builder
+     */
+    public PatchPrintingOrderRequestBuilder patchPrintingOrder() {
+        return new PatchPrintingOrderRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update an order
+     * 
+     * <p>Updates the PrintingOrder identified by `id`. Provide the unified PrintingOrder fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchPrintingOrderResponse patchPrintingOrder(@Nonnull PatchPrintingOrderRequest request) {
+        return patchPrintingOrder(request, null);
+    }
+
+    /**
+     * Update an order
+     * 
+     * <p>Updates the PrintingOrder identified by `id`. Provide the unified PrintingOrder fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchPrintingOrderResponse patchPrintingOrder(@Nonnull PatchPrintingOrderRequest request, @Nullable Options options) {
+        RequestOperation<PatchPrintingOrderRequest, PatchPrintingOrderResponse> operation
+              = new PatchPrintingOrder.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -314,8 +641,64 @@ public class Order {
      */
     @Deprecated
     public RemoveAccountingOrderResponse removeAccountingOrder(@Nonnull RemoveAccountingOrderRequest request) {
+        return removeAccountingOrder(request, null);
+    }
+
+    /**
+     * Remove an order
+     * 
+     * <p>Deletes the AccountingOrder identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     * @deprecated method: This will be removed in a future release, please migrate away from it as soon as possible.
+     */
+    @Deprecated
+    public RemoveAccountingOrderResponse removeAccountingOrder(@Nonnull RemoveAccountingOrderRequest request, @Nullable Options options) {
         RequestOperation<RemoveAccountingOrderRequest, RemoveAccountingOrderResponse> operation
-              = new RemoveAccountingOrder.Sync(sdkConfiguration, _headers);
+              = new RemoveAccountingOrder.Sync(sdkConfiguration, options, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Remove an order
+     * 
+     * <p>Deletes the PrintingOrder identified by `id`.
+     * 
+     * @return The call builder
+     */
+    public RemovePrintingOrderRequestBuilder removePrintingOrder() {
+        return new RemovePrintingOrderRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove an order
+     * 
+     * <p>Deletes the PrintingOrder identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemovePrintingOrderResponse removePrintingOrder(@Nonnull RemovePrintingOrderRequest request) {
+        return removePrintingOrder(request, null);
+    }
+
+    /**
+     * Remove an order
+     * 
+     * <p>Deletes the PrintingOrder identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemovePrintingOrderResponse removePrintingOrder(@Nonnull RemovePrintingOrderRequest request, @Nullable Options options) {
+        RequestOperation<RemovePrintingOrderRequest, RemovePrintingOrderResponse> operation
+              = new RemovePrintingOrder.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -346,8 +729,25 @@ public class Order {
      */
     @Deprecated
     public UpdateAccountingOrderResponse updateAccountingOrder(@Nonnull UpdateAccountingOrderRequest request) {
+        return updateAccountingOrder(request, null);
+    }
+
+    /**
+     * Update an order
+     * 
+     * <p>Updates the AccountingOrder identified by `id`. Provide the unified AccountingOrder fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     * @deprecated method: This will be removed in a future release, please migrate away from it as soon as possible.
+     */
+    @Deprecated
+    public UpdateAccountingOrderResponse updateAccountingOrder(@Nonnull UpdateAccountingOrderRequest request, @Nullable Options options) {
         RequestOperation<UpdateAccountingOrderRequest, UpdateAccountingOrderResponse> operation
-              = new UpdateAccountingOrder.Sync(sdkConfiguration, _headers);
+              = new UpdateAccountingOrder.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -374,8 +774,66 @@ public class Order {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateAssessmentOrderResponse updateAssessmentOrder(@Nonnull UpdateAssessmentOrderRequest request) {
+        return updateAssessmentOrder(request, null);
+    }
+
+    /**
+     * Update an order
+     * 
+     * <p>Updates the AssessmentOrder identified by `id`. Provide the unified AssessmentOrder fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateAssessmentOrderResponse updateAssessmentOrder(@Nonnull UpdateAssessmentOrderRequest request, @Nullable Options options) {
         RequestOperation<UpdateAssessmentOrderRequest, UpdateAssessmentOrderResponse> operation
-              = new UpdateAssessmentOrder.Sync(sdkConfiguration, _headers);
+              = new UpdateAssessmentOrder.Sync(sdkConfiguration, options, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Update an order
+     * 
+     * <p>Updates the PrintingOrder identified by `id`. Provide the unified PrintingOrder fields to change in
+     * the request body.
+     * 
+     * @return The call builder
+     */
+    public UpdatePrintingOrderRequestBuilder updatePrintingOrder() {
+        return new UpdatePrintingOrderRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update an order
+     * 
+     * <p>Updates the PrintingOrder identified by `id`. Provide the unified PrintingOrder fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdatePrintingOrderResponse updatePrintingOrder(@Nonnull UpdatePrintingOrderRequest request) {
+        return updatePrintingOrder(request, null);
+    }
+
+    /**
+     * Update an order
+     * 
+     * <p>Updates the PrintingOrder identified by `id`. Provide the unified PrintingOrder fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdatePrintingOrderResponse updatePrintingOrder(@Nonnull UpdatePrintingOrderRequest request, @Nullable Options options) {
+        RequestOperation<UpdatePrintingOrderRequest, UpdatePrintingOrderResponse> operation
+              = new UpdatePrintingOrder.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

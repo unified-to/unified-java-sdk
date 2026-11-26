@@ -6,20 +6,30 @@ package to.unified.unified_java_sdk.models.operations.async;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.RemovePropertyReservationRequest;
 import to.unified.unified_java_sdk.operations.RemovePropertyReservation;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemovePropertyReservationRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private RemovePropertyReservationRequest request;
+    private final Options.Builder optionsBuilder;
 
     public RemovePropertyReservationRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public RemovePropertyReservationRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public RemovePropertyReservationRequestBuilder request(@Nonnull RemovePropertyReservationRequest request) {
@@ -44,8 +54,9 @@ public class RemovePropertyReservationRequestBuilder {
     * @return The response from the server.
     */
     public CompletableFuture<RemovePropertyReservationResponse> call() {
+        Options options = optionsBuilder.build();
         AsyncRequestOperation<RemovePropertyReservationRequest, RemovePropertyReservationResponse> operation
-              = new RemovePropertyReservation.Async(sdkConfiguration, _headers);
+              = new RemovePropertyReservation.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

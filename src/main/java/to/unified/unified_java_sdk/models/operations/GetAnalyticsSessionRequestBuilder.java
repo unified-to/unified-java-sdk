@@ -6,18 +6,28 @@ package to.unified.unified_java_sdk.models.operations;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.GetAnalyticsSession;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetAnalyticsSessionRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private GetAnalyticsSessionRequest request;
+    private final Options.Builder optionsBuilder;
 
     public GetAnalyticsSessionRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public GetAnalyticsSessionRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public GetAnalyticsSessionRequestBuilder request(@Nonnull GetAnalyticsSessionRequest request) {
@@ -42,8 +52,9 @@ public class GetAnalyticsSessionRequestBuilder {
     * @return The response from the server.
     */
     public GetAnalyticsSessionResponse call() {
+        Options options = optionsBuilder.build();
         RequestOperation<GetAnalyticsSessionRequest, GetAnalyticsSessionResponse> operation
-              = new GetAnalyticsSession.Sync(sdkConfiguration, _headers);
+              = new GetAnalyticsSession.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.GetComputeGputypeRequest;
 import to.unified.unified_java_sdk.models.operations.GetComputeGputypeRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetComputeGputypeResponse;
@@ -15,6 +16,7 @@ import to.unified.unified_java_sdk.models.operations.ListComputeGputypesResponse
 import to.unified.unified_java_sdk.operations.GetComputeGputype;
 import to.unified.unified_java_sdk.operations.ListComputeGputypes;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Gputype {
@@ -59,8 +61,23 @@ public class Gputype {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetComputeGputypeResponse getComputeGputype(@Nonnull GetComputeGputypeRequest request) {
+        return getComputeGputype(request, null);
+    }
+
+    /**
+     * Retrieve a gputype
+     * 
+     * <p>Retrieves a single ComputeGputype by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetComputeGputypeResponse getComputeGputype(@Nonnull GetComputeGputypeRequest request, @Nullable Options options) {
         RequestOperation<GetComputeGputypeRequest, GetComputeGputypeResponse> operation
-              = new GetComputeGputype.Sync(sdkConfiguration, _headers);
+              = new GetComputeGputype.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -95,8 +112,27 @@ public class Gputype {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListComputeGputypesResponse listComputeGputypes(@Nonnull ListComputeGputypesRequest request) {
+        return listComputeGputypes(request, null);
+    }
+
+    /**
+     * List all gputypes
+     * 
+     * <p>Returns a list of ComputeGputypes. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListComputeGputypesResponse listComputeGputypes(@Nonnull ListComputeGputypesRequest request, @Nullable Options options) {
         RequestOperation<ListComputeGputypesRequest, ListComputeGputypesResponse> operation
-              = new ListComputeGputypes.Sync(sdkConfiguration, _headers);
+              = new ListComputeGputypes.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

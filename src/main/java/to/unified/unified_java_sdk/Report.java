@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.GetHealthcareReportRequest;
 import to.unified.unified_java_sdk.models.operations.GetHealthcareReportRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetHealthcareReportResponse;
@@ -27,6 +28,7 @@ import to.unified.unified_java_sdk.operations.ListAnalyticsReports;
 import to.unified.unified_java_sdk.operations.ListHealthcareReports;
 import to.unified.unified_java_sdk.operations.ListMartechReports;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Report {
@@ -71,8 +73,23 @@ public class Report {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetHealthcareReportResponse getHealthcareReport(@Nonnull GetHealthcareReportRequest request) {
+        return getHealthcareReport(request, null);
+    }
+
+    /**
+     * Retrieve a report
+     * 
+     * <p>Retrieves a single HealthcareReport by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetHealthcareReportResponse getHealthcareReport(@Nonnull GetHealthcareReportRequest request, @Nullable Options options) {
         RequestOperation<GetHealthcareReportRequest, GetHealthcareReportResponse> operation
-              = new GetHealthcareReport.Sync(sdkConfiguration, _headers);
+              = new GetHealthcareReport.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -107,8 +124,27 @@ public class Report {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAdsReportsResponse listAdsReports(@Nonnull ListAdsReportsRequest request) {
+        return listAdsReports(request, null);
+    }
+
+    /**
+     * List all reports
+     * 
+     * <p>Returns a list of AdsReports. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAdsReportsResponse listAdsReports(@Nonnull ListAdsReportsRequest request, @Nullable Options options) {
         RequestOperation<ListAdsReportsRequest, ListAdsReportsResponse> operation
-              = new ListAdsReports.Sync(sdkConfiguration, _headers);
+              = new ListAdsReports.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -143,8 +179,27 @@ public class Report {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAnalyticsReportsResponse listAnalyticsReports(@Nonnull ListAnalyticsReportsRequest request) {
+        return listAnalyticsReports(request, null);
+    }
+
+    /**
+     * List all reports
+     * 
+     * <p>Returns a list of AnalyticsReports. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAnalyticsReportsResponse listAnalyticsReports(@Nonnull ListAnalyticsReportsRequest request, @Nullable Options options) {
         RequestOperation<ListAnalyticsReportsRequest, ListAnalyticsReportsResponse> operation
-              = new ListAnalyticsReports.Sync(sdkConfiguration, _headers);
+              = new ListAnalyticsReports.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -179,8 +234,27 @@ public class Report {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListHealthcareReportsResponse listHealthcareReports(@Nonnull ListHealthcareReportsRequest request) {
+        return listHealthcareReports(request, null);
+    }
+
+    /**
+     * List all reports
+     * 
+     * <p>Returns a list of HealthcareReports. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListHealthcareReportsResponse listHealthcareReports(@Nonnull ListHealthcareReportsRequest request, @Nullable Options options) {
         RequestOperation<ListHealthcareReportsRequest, ListHealthcareReportsResponse> operation
-              = new ListHealthcareReports.Sync(sdkConfiguration, _headers);
+              = new ListHealthcareReports.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -215,8 +289,27 @@ public class Report {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListMartechReportsResponse listMartechReports(@Nonnull ListMartechReportsRequest request) {
+        return listMartechReports(request, null);
+    }
+
+    /**
+     * List all reports
+     * 
+     * <p>Returns a list of MarketingReports. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListMartechReportsResponse listMartechReports(@Nonnull ListMartechReportsRequest request, @Nullable Options options) {
         RequestOperation<ListMartechReportsRequest, ListMartechReportsResponse> operation
-              = new ListMartechReports.Sync(sdkConfiguration, _headers);
+              = new ListMartechReports.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

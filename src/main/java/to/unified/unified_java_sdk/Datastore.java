@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateDatastoreDatabaseRequest;
 import to.unified.unified_java_sdk.models.operations.CreateDatastoreDatabaseRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateDatastoreDatabaseResponse;
@@ -83,6 +84,7 @@ import to.unified.unified_java_sdk.operations.UpdateDatastoreDatabase;
 import to.unified.unified_java_sdk.operations.UpdateDatastoreRecord;
 import to.unified.unified_java_sdk.operations.UpdateDatastoreTable;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Datastore {
@@ -127,8 +129,23 @@ public class Datastore {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateDatastoreDatabaseResponse createDatastoreDatabase(@Nonnull CreateDatastoreDatabaseRequest request) {
+        return createDatastoreDatabase(request, null);
+    }
+
+    /**
+     * Create a database
+     * 
+     * <p>Creates a DatastoreDatabase. Provide the unified DatastoreDatabase fields in the request body; they
+     * are mapped to the provider's API. Returns the created DatastoreDatabase.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateDatastoreDatabaseResponse createDatastoreDatabase(@Nonnull CreateDatastoreDatabaseRequest request, @Nullable Options options) {
         RequestOperation<CreateDatastoreDatabaseRequest, CreateDatastoreDatabaseResponse> operation
-              = new CreateDatastoreDatabase.Sync(sdkConfiguration, _headers);
+              = new CreateDatastoreDatabase.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -155,8 +172,23 @@ public class Datastore {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateDatastoreQueryResponse createDatastoreQuery(@Nonnull CreateDatastoreQueryRequest request) {
+        return createDatastoreQuery(request, null);
+    }
+
+    /**
+     * Create a query
+     * 
+     * <p>Creates a DatastoreQuery. Provide the unified DatastoreQuery fields in the request body; they are
+     * mapped to the provider's API. Returns the created DatastoreQuery.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateDatastoreQueryResponse createDatastoreQuery(@Nonnull CreateDatastoreQueryRequest request, @Nullable Options options) {
         RequestOperation<CreateDatastoreQueryRequest, CreateDatastoreQueryResponse> operation
-              = new CreateDatastoreQuery.Sync(sdkConfiguration, _headers);
+              = new CreateDatastoreQuery.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -183,8 +215,23 @@ public class Datastore {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateDatastoreRecordResponse createDatastoreRecord(@Nonnull CreateDatastoreRecordRequest request) {
+        return createDatastoreRecord(request, null);
+    }
+
+    /**
+     * Create a record
+     * 
+     * <p>Creates a DatastoreRecord. Provide the unified DatastoreRecord fields in the request body; they are
+     * mapped to the provider's API. Returns the created DatastoreRecord.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateDatastoreRecordResponse createDatastoreRecord(@Nonnull CreateDatastoreRecordRequest request, @Nullable Options options) {
         RequestOperation<CreateDatastoreRecordRequest, CreateDatastoreRecordResponse> operation
-              = new CreateDatastoreRecord.Sync(sdkConfiguration, _headers);
+              = new CreateDatastoreRecord.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -211,8 +258,23 @@ public class Datastore {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateDatastoreTableResponse createDatastoreTable(@Nonnull CreateDatastoreTableRequest request) {
+        return createDatastoreTable(request, null);
+    }
+
+    /**
+     * Create a table
+     * 
+     * <p>Creates a DatastoreTable. Provide the unified DatastoreTable fields in the request body; they are
+     * mapped to the provider's API. Returns the created DatastoreTable.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateDatastoreTableResponse createDatastoreTable(@Nonnull CreateDatastoreTableRequest request, @Nullable Options options) {
         RequestOperation<CreateDatastoreTableRequest, CreateDatastoreTableResponse> operation
-              = new CreateDatastoreTable.Sync(sdkConfiguration, _headers);
+              = new CreateDatastoreTable.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -239,8 +301,23 @@ public class Datastore {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetDatastoreDatabaseResponse getDatastoreDatabase(@Nonnull GetDatastoreDatabaseRequest request) {
+        return getDatastoreDatabase(request, null);
+    }
+
+    /**
+     * Retrieve a database
+     * 
+     * <p>Retrieves a single DatastoreDatabase by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetDatastoreDatabaseResponse getDatastoreDatabase(@Nonnull GetDatastoreDatabaseRequest request, @Nullable Options options) {
         RequestOperation<GetDatastoreDatabaseRequest, GetDatastoreDatabaseResponse> operation
-              = new GetDatastoreDatabase.Sync(sdkConfiguration, _headers);
+              = new GetDatastoreDatabase.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -267,8 +344,23 @@ public class Datastore {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetDatastoreRecordResponse getDatastoreRecord(@Nonnull GetDatastoreRecordRequest request) {
+        return getDatastoreRecord(request, null);
+    }
+
+    /**
+     * Retrieve a record
+     * 
+     * <p>Retrieves a single DatastoreRecord by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetDatastoreRecordResponse getDatastoreRecord(@Nonnull GetDatastoreRecordRequest request, @Nullable Options options) {
         RequestOperation<GetDatastoreRecordRequest, GetDatastoreRecordResponse> operation
-              = new GetDatastoreRecord.Sync(sdkConfiguration, _headers);
+              = new GetDatastoreRecord.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -295,8 +387,23 @@ public class Datastore {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetDatastoreTableResponse getDatastoreTable(@Nonnull GetDatastoreTableRequest request) {
+        return getDatastoreTable(request, null);
+    }
+
+    /**
+     * Retrieve a table
+     * 
+     * <p>Retrieves a single DatastoreTable by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetDatastoreTableResponse getDatastoreTable(@Nonnull GetDatastoreTableRequest request, @Nullable Options options) {
         RequestOperation<GetDatastoreTableRequest, GetDatastoreTableResponse> operation
-              = new GetDatastoreTable.Sync(sdkConfiguration, _headers);
+              = new GetDatastoreTable.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -331,8 +438,27 @@ public class Datastore {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListDatastoreDatabasesResponse listDatastoreDatabases(@Nonnull ListDatastoreDatabasesRequest request) {
+        return listDatastoreDatabases(request, null);
+    }
+
+    /**
+     * List all databases
+     * 
+     * <p>Returns a list of DatastoreDatabases. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListDatastoreDatabasesResponse listDatastoreDatabases(@Nonnull ListDatastoreDatabasesRequest request, @Nullable Options options) {
         RequestOperation<ListDatastoreDatabasesRequest, ListDatastoreDatabasesResponse> operation
-              = new ListDatastoreDatabases.Sync(sdkConfiguration, _headers);
+              = new ListDatastoreDatabases.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -367,8 +493,27 @@ public class Datastore {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListDatastoreRecordsResponse listDatastoreRecords(@Nonnull ListDatastoreRecordsRequest request) {
+        return listDatastoreRecords(request, null);
+    }
+
+    /**
+     * List all records
+     * 
+     * <p>Returns a list of DatastoreRecords. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListDatastoreRecordsResponse listDatastoreRecords(@Nonnull ListDatastoreRecordsRequest request, @Nullable Options options) {
         RequestOperation<ListDatastoreRecordsRequest, ListDatastoreRecordsResponse> operation
-              = new ListDatastoreRecords.Sync(sdkConfiguration, _headers);
+              = new ListDatastoreRecords.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -403,8 +548,27 @@ public class Datastore {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListDatastoreTablesResponse listDatastoreTables(@Nonnull ListDatastoreTablesRequest request) {
+        return listDatastoreTables(request, null);
+    }
+
+    /**
+     * List all tables
+     * 
+     * <p>Returns a list of DatastoreTables. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListDatastoreTablesResponse listDatastoreTables(@Nonnull ListDatastoreTablesRequest request, @Nullable Options options) {
         RequestOperation<ListDatastoreTablesRequest, ListDatastoreTablesResponse> operation
-              = new ListDatastoreTables.Sync(sdkConfiguration, _headers);
+              = new ListDatastoreTables.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -431,8 +595,23 @@ public class Datastore {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchDatastoreDatabaseResponse patchDatastoreDatabase(@Nonnull PatchDatastoreDatabaseRequest request) {
+        return patchDatastoreDatabase(request, null);
+    }
+
+    /**
+     * Update a database
+     * 
+     * <p>Updates the DatastoreDatabase identified by `id`. Provide the unified DatastoreDatabase fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchDatastoreDatabaseResponse patchDatastoreDatabase(@Nonnull PatchDatastoreDatabaseRequest request, @Nullable Options options) {
         RequestOperation<PatchDatastoreDatabaseRequest, PatchDatastoreDatabaseResponse> operation
-              = new PatchDatastoreDatabase.Sync(sdkConfiguration, _headers);
+              = new PatchDatastoreDatabase.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -459,8 +638,23 @@ public class Datastore {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchDatastoreRecordResponse patchDatastoreRecord(@Nonnull PatchDatastoreRecordRequest request) {
+        return patchDatastoreRecord(request, null);
+    }
+
+    /**
+     * Update a record
+     * 
+     * <p>Updates the DatastoreRecord identified by `id`. Provide the unified DatastoreRecord fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchDatastoreRecordResponse patchDatastoreRecord(@Nonnull PatchDatastoreRecordRequest request, @Nullable Options options) {
         RequestOperation<PatchDatastoreRecordRequest, PatchDatastoreRecordResponse> operation
-              = new PatchDatastoreRecord.Sync(sdkConfiguration, _headers);
+              = new PatchDatastoreRecord.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -487,8 +681,23 @@ public class Datastore {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchDatastoreTableResponse patchDatastoreTable(@Nonnull PatchDatastoreTableRequest request) {
+        return patchDatastoreTable(request, null);
+    }
+
+    /**
+     * Update a table
+     * 
+     * <p>Updates the DatastoreTable identified by `id`. Provide the unified DatastoreTable fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchDatastoreTableResponse patchDatastoreTable(@Nonnull PatchDatastoreTableRequest request, @Nullable Options options) {
         RequestOperation<PatchDatastoreTableRequest, PatchDatastoreTableResponse> operation
-              = new PatchDatastoreTable.Sync(sdkConfiguration, _headers);
+              = new PatchDatastoreTable.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -513,8 +722,22 @@ public class Datastore {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveDatastoreDatabaseResponse removeDatastoreDatabase(@Nonnull RemoveDatastoreDatabaseRequest request) {
+        return removeDatastoreDatabase(request, null);
+    }
+
+    /**
+     * Remove a database
+     * 
+     * <p>Deletes the DatastoreDatabase identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveDatastoreDatabaseResponse removeDatastoreDatabase(@Nonnull RemoveDatastoreDatabaseRequest request, @Nullable Options options) {
         RequestOperation<RemoveDatastoreDatabaseRequest, RemoveDatastoreDatabaseResponse> operation
-              = new RemoveDatastoreDatabase.Sync(sdkConfiguration, _headers);
+              = new RemoveDatastoreDatabase.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -539,8 +762,22 @@ public class Datastore {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveDatastoreRecordResponse removeDatastoreRecord(@Nonnull RemoveDatastoreRecordRequest request) {
+        return removeDatastoreRecord(request, null);
+    }
+
+    /**
+     * Remove a record
+     * 
+     * <p>Deletes the DatastoreRecord identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveDatastoreRecordResponse removeDatastoreRecord(@Nonnull RemoveDatastoreRecordRequest request, @Nullable Options options) {
         RequestOperation<RemoveDatastoreRecordRequest, RemoveDatastoreRecordResponse> operation
-              = new RemoveDatastoreRecord.Sync(sdkConfiguration, _headers);
+              = new RemoveDatastoreRecord.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -565,8 +802,22 @@ public class Datastore {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveDatastoreTableResponse removeDatastoreTable(@Nonnull RemoveDatastoreTableRequest request) {
+        return removeDatastoreTable(request, null);
+    }
+
+    /**
+     * Remove a table
+     * 
+     * <p>Deletes the DatastoreTable identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveDatastoreTableResponse removeDatastoreTable(@Nonnull RemoveDatastoreTableRequest request, @Nullable Options options) {
         RequestOperation<RemoveDatastoreTableRequest, RemoveDatastoreTableResponse> operation
-              = new RemoveDatastoreTable.Sync(sdkConfiguration, _headers);
+              = new RemoveDatastoreTable.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -593,8 +844,23 @@ public class Datastore {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateDatastoreDatabaseResponse updateDatastoreDatabase(@Nonnull UpdateDatastoreDatabaseRequest request) {
+        return updateDatastoreDatabase(request, null);
+    }
+
+    /**
+     * Update a database
+     * 
+     * <p>Updates the DatastoreDatabase identified by `id`. Provide the unified DatastoreDatabase fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateDatastoreDatabaseResponse updateDatastoreDatabase(@Nonnull UpdateDatastoreDatabaseRequest request, @Nullable Options options) {
         RequestOperation<UpdateDatastoreDatabaseRequest, UpdateDatastoreDatabaseResponse> operation
-              = new UpdateDatastoreDatabase.Sync(sdkConfiguration, _headers);
+              = new UpdateDatastoreDatabase.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -621,8 +887,23 @@ public class Datastore {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateDatastoreRecordResponse updateDatastoreRecord(@Nonnull UpdateDatastoreRecordRequest request) {
+        return updateDatastoreRecord(request, null);
+    }
+
+    /**
+     * Update a record
+     * 
+     * <p>Updates the DatastoreRecord identified by `id`. Provide the unified DatastoreRecord fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateDatastoreRecordResponse updateDatastoreRecord(@Nonnull UpdateDatastoreRecordRequest request, @Nullable Options options) {
         RequestOperation<UpdateDatastoreRecordRequest, UpdateDatastoreRecordResponse> operation
-              = new UpdateDatastoreRecord.Sync(sdkConfiguration, _headers);
+              = new UpdateDatastoreRecord.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -649,8 +930,23 @@ public class Datastore {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateDatastoreTableResponse updateDatastoreTable(@Nonnull UpdateDatastoreTableRequest request) {
+        return updateDatastoreTable(request, null);
+    }
+
+    /**
+     * Update a table
+     * 
+     * <p>Updates the DatastoreTable identified by `id`. Provide the unified DatastoreTable fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateDatastoreTableResponse updateDatastoreTable(@Nonnull UpdateDatastoreTableRequest request, @Nullable Options options) {
         RequestOperation<UpdateDatastoreTableRequest, UpdateDatastoreTableResponse> operation
-              = new UpdateDatastoreTable.Sync(sdkConfiguration, _headers);
+              = new UpdateDatastoreTable.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

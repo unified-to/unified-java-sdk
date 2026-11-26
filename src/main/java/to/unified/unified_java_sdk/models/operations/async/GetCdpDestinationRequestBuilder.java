@@ -6,20 +6,30 @@ package to.unified.unified_java_sdk.models.operations.async;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.GetCdpDestinationRequest;
 import to.unified.unified_java_sdk.operations.GetCdpDestination;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetCdpDestinationRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private GetCdpDestinationRequest request;
+    private final Options.Builder optionsBuilder;
 
     public GetCdpDestinationRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public GetCdpDestinationRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public GetCdpDestinationRequestBuilder request(@Nonnull GetCdpDestinationRequest request) {
@@ -44,8 +54,9 @@ public class GetCdpDestinationRequestBuilder {
     * @return The response from the server.
     */
     public CompletableFuture<GetCdpDestinationResponse> call() {
+        Options options = optionsBuilder.build();
         AsyncRequestOperation<GetCdpDestinationRequest, GetCdpDestinationResponse> operation
-              = new GetCdpDestination.Async(sdkConfiguration, _headers);
+              = new GetCdpDestination.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

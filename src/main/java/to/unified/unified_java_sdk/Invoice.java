@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingInvoiceRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingInvoiceRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingInvoiceResponse;
@@ -31,6 +32,7 @@ import to.unified.unified_java_sdk.operations.PatchAccountingInvoice;
 import to.unified.unified_java_sdk.operations.RemoveAccountingInvoice;
 import to.unified.unified_java_sdk.operations.UpdateAccountingInvoice;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Invoice {
@@ -75,8 +77,23 @@ public class Invoice {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateAccountingInvoiceResponse createAccountingInvoice(@Nonnull CreateAccountingInvoiceRequest request) {
+        return createAccountingInvoice(request, null);
+    }
+
+    /**
+     * Create an invoice
+     * 
+     * <p>Creates a AccountingInvoice. Provide the unified AccountingInvoice fields in the request body; they
+     * are mapped to the provider's API. Returns the created AccountingInvoice.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateAccountingInvoiceResponse createAccountingInvoice(@Nonnull CreateAccountingInvoiceRequest request, @Nullable Options options) {
         RequestOperation<CreateAccountingInvoiceRequest, CreateAccountingInvoiceResponse> operation
-              = new CreateAccountingInvoice.Sync(sdkConfiguration, _headers);
+              = new CreateAccountingInvoice.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -103,8 +120,23 @@ public class Invoice {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAccountingInvoiceResponse getAccountingInvoice(@Nonnull GetAccountingInvoiceRequest request) {
+        return getAccountingInvoice(request, null);
+    }
+
+    /**
+     * Retrieve an invoice
+     * 
+     * <p>Retrieves a single AccountingInvoice by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAccountingInvoiceResponse getAccountingInvoice(@Nonnull GetAccountingInvoiceRequest request, @Nullable Options options) {
         RequestOperation<GetAccountingInvoiceRequest, GetAccountingInvoiceResponse> operation
-              = new GetAccountingInvoice.Sync(sdkConfiguration, _headers);
+              = new GetAccountingInvoice.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -139,8 +171,27 @@ public class Invoice {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAccountingInvoicesResponse listAccountingInvoices(@Nonnull ListAccountingInvoicesRequest request) {
+        return listAccountingInvoices(request, null);
+    }
+
+    /**
+     * List all invoices
+     * 
+     * <p>Returns a list of AccountingInvoices. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAccountingInvoicesResponse listAccountingInvoices(@Nonnull ListAccountingInvoicesRequest request, @Nullable Options options) {
         RequestOperation<ListAccountingInvoicesRequest, ListAccountingInvoicesResponse> operation
-              = new ListAccountingInvoices.Sync(sdkConfiguration, _headers);
+              = new ListAccountingInvoices.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +218,23 @@ public class Invoice {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchAccountingInvoiceResponse patchAccountingInvoice(@Nonnull PatchAccountingInvoiceRequest request) {
+        return patchAccountingInvoice(request, null);
+    }
+
+    /**
+     * Update an invoice
+     * 
+     * <p>Updates the AccountingInvoice identified by `id`. Provide the unified AccountingInvoice fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchAccountingInvoiceResponse patchAccountingInvoice(@Nonnull PatchAccountingInvoiceRequest request, @Nullable Options options) {
         RequestOperation<PatchAccountingInvoiceRequest, PatchAccountingInvoiceResponse> operation
-              = new PatchAccountingInvoice.Sync(sdkConfiguration, _headers);
+              = new PatchAccountingInvoice.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -193,8 +259,22 @@ public class Invoice {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveAccountingInvoiceResponse removeAccountingInvoice(@Nonnull RemoveAccountingInvoiceRequest request) {
+        return removeAccountingInvoice(request, null);
+    }
+
+    /**
+     * Remove an invoice
+     * 
+     * <p>Deletes the AccountingInvoice identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveAccountingInvoiceResponse removeAccountingInvoice(@Nonnull RemoveAccountingInvoiceRequest request, @Nullable Options options) {
         RequestOperation<RemoveAccountingInvoiceRequest, RemoveAccountingInvoiceResponse> operation
-              = new RemoveAccountingInvoice.Sync(sdkConfiguration, _headers);
+              = new RemoveAccountingInvoice.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -221,8 +301,23 @@ public class Invoice {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateAccountingInvoiceResponse updateAccountingInvoice(@Nonnull UpdateAccountingInvoiceRequest request) {
+        return updateAccountingInvoice(request, null);
+    }
+
+    /**
+     * Update an invoice
+     * 
+     * <p>Updates the AccountingInvoice identified by `id`. Provide the unified AccountingInvoice fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateAccountingInvoiceResponse updateAccountingInvoice(@Nonnull UpdateAccountingInvoiceRequest request, @Nullable Options options) {
         RequestOperation<UpdateAccountingInvoiceRequest, UpdateAccountingInvoiceResponse> operation
-              = new UpdateAccountingInvoice.Sync(sdkConfiguration, _headers);
+              = new UpdateAccountingInvoice.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

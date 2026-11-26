@@ -6,20 +6,30 @@ package to.unified.unified_java_sdk.models.operations.async;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.ListAtsScorecardsRequest;
 import to.unified.unified_java_sdk.operations.ListAtsScorecards;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListAtsScorecardsRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private ListAtsScorecardsRequest request;
+    private final Options.Builder optionsBuilder;
 
     public ListAtsScorecardsRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public ListAtsScorecardsRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public ListAtsScorecardsRequestBuilder request(@Nonnull ListAtsScorecardsRequest request) {
@@ -44,8 +54,9 @@ public class ListAtsScorecardsRequestBuilder {
     * @return The response from the server.
     */
     public CompletableFuture<ListAtsScorecardsResponse> call() {
+        Options options = optionsBuilder.build();
         AsyncRequestOperation<ListAtsScorecardsRequest, ListAtsScorecardsResponse> operation
-              = new ListAtsScorecards.Async(sdkConfiguration, _headers);
+              = new ListAtsScorecards.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

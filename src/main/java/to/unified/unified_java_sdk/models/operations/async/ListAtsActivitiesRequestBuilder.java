@@ -6,20 +6,30 @@ package to.unified.unified_java_sdk.models.operations.async;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.ListAtsActivitiesRequest;
 import to.unified.unified_java_sdk.operations.ListAtsActivities;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListAtsActivitiesRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private ListAtsActivitiesRequest request;
+    private final Options.Builder optionsBuilder;
 
     public ListAtsActivitiesRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public ListAtsActivitiesRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public ListAtsActivitiesRequestBuilder request(@Nonnull ListAtsActivitiesRequest request) {
@@ -44,8 +54,9 @@ public class ListAtsActivitiesRequestBuilder {
     * @return The response from the server.
     */
     public CompletableFuture<ListAtsActivitiesResponse> call() {
+        Options options = optionsBuilder.build();
         AsyncRequestOperation<ListAtsActivitiesRequest, ListAtsActivitiesResponse> operation
-              = new ListAtsActivities.Async(sdkConfiguration, _headers);
+              = new ListAtsActivities.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

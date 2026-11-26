@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateHrisAttendanceRequest;
 import to.unified.unified_java_sdk.models.operations.GetHrisAttendanceRequest;
@@ -32,6 +33,7 @@ import to.unified.unified_java_sdk.operations.PatchHrisAttendance;
 import to.unified.unified_java_sdk.operations.RemoveHrisAttendance;
 import to.unified.unified_java_sdk.operations.UpdateHrisAttendance;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncAttendance {
@@ -76,8 +78,22 @@ public class AsyncAttendance {
      * @return {@code CompletableFuture<CreateHrisAttendanceResponse>} - The async response
      */
     public CompletableFuture<CreateHrisAttendanceResponse> createHrisAttendance(@Nonnull CreateHrisAttendanceRequest request) {
+        return createHrisAttendance(request, null);
+    }
+
+    /**
+     * Create an attendance
+     * 
+     * <p>Creates a HrisAttendance. Provide the unified HrisAttendance fields in the request body; they are
+     * mapped to the provider's API. Returns the created HrisAttendance.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateHrisAttendanceResponse>} - The async response
+     */
+    public CompletableFuture<CreateHrisAttendanceResponse> createHrisAttendance(@Nonnull CreateHrisAttendanceRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateHrisAttendanceRequest, CreateHrisAttendanceResponse> operation
-              = new CreateHrisAttendance.Async(sdkConfiguration, _headers);
+              = new CreateHrisAttendance.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -105,8 +121,22 @@ public class AsyncAttendance {
      * @return {@code CompletableFuture<GetHrisAttendanceResponse>} - The async response
      */
     public CompletableFuture<GetHrisAttendanceResponse> getHrisAttendance(@Nonnull GetHrisAttendanceRequest request) {
+        return getHrisAttendance(request, null);
+    }
+
+    /**
+     * Retrieve an attendance
+     * 
+     * <p>Retrieves a single HrisAttendance by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetHrisAttendanceResponse>} - The async response
+     */
+    public CompletableFuture<GetHrisAttendanceResponse> getHrisAttendance(@Nonnull GetHrisAttendanceRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetHrisAttendanceRequest, GetHrisAttendanceResponse> operation
-              = new GetHrisAttendance.Async(sdkConfiguration, _headers);
+              = new GetHrisAttendance.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -142,8 +172,26 @@ public class AsyncAttendance {
      * @return {@code CompletableFuture<ListHrisAttendancesResponse>} - The async response
      */
     public CompletableFuture<ListHrisAttendancesResponse> listHrisAttendances(@Nonnull ListHrisAttendancesRequest request) {
+        return listHrisAttendances(request, null);
+    }
+
+    /**
+     * List all attendances
+     * 
+     * <p>Returns a list of HrisAttendances. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListHrisAttendancesResponse>} - The async response
+     */
+    public CompletableFuture<ListHrisAttendancesResponse> listHrisAttendances(@Nonnull ListHrisAttendancesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListHrisAttendancesRequest, ListHrisAttendancesResponse> operation
-              = new ListHrisAttendances.Async(sdkConfiguration, _headers);
+              = new ListHrisAttendances.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -171,8 +219,22 @@ public class AsyncAttendance {
      * @return {@code CompletableFuture<PatchHrisAttendanceResponse>} - The async response
      */
     public CompletableFuture<PatchHrisAttendanceResponse> patchHrisAttendance(@Nonnull PatchHrisAttendanceRequest request) {
+        return patchHrisAttendance(request, null);
+    }
+
+    /**
+     * Update an attendance
+     * 
+     * <p>Updates the HrisAttendance identified by `id`. Provide the unified HrisAttendance fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchHrisAttendanceResponse>} - The async response
+     */
+    public CompletableFuture<PatchHrisAttendanceResponse> patchHrisAttendance(@Nonnull PatchHrisAttendanceRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchHrisAttendanceRequest, PatchHrisAttendanceResponse> operation
-              = new PatchHrisAttendance.Async(sdkConfiguration, _headers);
+              = new PatchHrisAttendance.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -198,8 +260,21 @@ public class AsyncAttendance {
      * @return {@code CompletableFuture<RemoveHrisAttendanceResponse>} - The async response
      */
     public CompletableFuture<RemoveHrisAttendanceResponse> removeHrisAttendance(@Nonnull RemoveHrisAttendanceRequest request) {
+        return removeHrisAttendance(request, null);
+    }
+
+    /**
+     * Remove an attendance
+     * 
+     * <p>Deletes the HrisAttendance identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveHrisAttendanceResponse>} - The async response
+     */
+    public CompletableFuture<RemoveHrisAttendanceResponse> removeHrisAttendance(@Nonnull RemoveHrisAttendanceRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveHrisAttendanceRequest, RemoveHrisAttendanceResponse> operation
-              = new RemoveHrisAttendance.Async(sdkConfiguration, _headers);
+              = new RemoveHrisAttendance.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -227,8 +302,22 @@ public class AsyncAttendance {
      * @return {@code CompletableFuture<UpdateHrisAttendanceResponse>} - The async response
      */
     public CompletableFuture<UpdateHrisAttendanceResponse> updateHrisAttendance(@Nonnull UpdateHrisAttendanceRequest request) {
+        return updateHrisAttendance(request, null);
+    }
+
+    /**
+     * Update an attendance
+     * 
+     * <p>Updates the HrisAttendance identified by `id`. Provide the unified HrisAttendance fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateHrisAttendanceResponse>} - The async response
+     */
+    public CompletableFuture<UpdateHrisAttendanceResponse> updateHrisAttendance(@Nonnull UpdateHrisAttendanceRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateHrisAttendanceRequest, UpdateHrisAttendanceResponse> operation
-              = new UpdateHrisAttendance.Async(sdkConfiguration, _headers);
+              = new UpdateHrisAttendance.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreatePaymentLinkRequest;
 import to.unified.unified_java_sdk.models.operations.CreatePaymentLinkRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreatePaymentLinkResponse;
@@ -95,6 +96,7 @@ import to.unified.unified_java_sdk.operations.UpdatePaymentLink;
 import to.unified.unified_java_sdk.operations.UpdatePaymentPayment;
 import to.unified.unified_java_sdk.operations.UpdatePaymentSubscription;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Payment {
@@ -139,8 +141,23 @@ public class Payment {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreatePaymentLinkResponse createPaymentLink(@Nonnull CreatePaymentLinkRequest request) {
+        return createPaymentLink(request, null);
+    }
+
+    /**
+     * Create a link
+     * 
+     * <p>Creates a PaymentLink. Provide the unified PaymentLink fields in the request body; they are mapped
+     * to the provider's API. Returns the created PaymentLink.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreatePaymentLinkResponse createPaymentLink(@Nonnull CreatePaymentLinkRequest request, @Nullable Options options) {
         RequestOperation<CreatePaymentLinkRequest, CreatePaymentLinkResponse> operation
-              = new CreatePaymentLink.Sync(sdkConfiguration, _headers);
+              = new CreatePaymentLink.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +184,23 @@ public class Payment {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreatePaymentPaymentResponse createPaymentPayment(@Nonnull CreatePaymentPaymentRequest request) {
+        return createPaymentPayment(request, null);
+    }
+
+    /**
+     * Create a payment
+     * 
+     * <p>Creates a PaymentPayment. Provide the unified PaymentPayment fields in the request body; they are
+     * mapped to the provider's API. Returns the created PaymentPayment.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreatePaymentPaymentResponse createPaymentPayment(@Nonnull CreatePaymentPaymentRequest request, @Nullable Options options) {
         RequestOperation<CreatePaymentPaymentRequest, CreatePaymentPaymentResponse> operation
-              = new CreatePaymentPayment.Sync(sdkConfiguration, _headers);
+              = new CreatePaymentPayment.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -195,8 +227,23 @@ public class Payment {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreatePaymentSubscriptionResponse createPaymentSubscription(@Nonnull CreatePaymentSubscriptionRequest request) {
+        return createPaymentSubscription(request, null);
+    }
+
+    /**
+     * Create a subscription
+     * 
+     * <p>Creates a PaymentSubscription. Provide the unified PaymentSubscription fields in the request body;
+     * they are mapped to the provider's API. Returns the created PaymentSubscription.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreatePaymentSubscriptionResponse createPaymentSubscription(@Nonnull CreatePaymentSubscriptionRequest request, @Nullable Options options) {
         RequestOperation<CreatePaymentSubscriptionRequest, CreatePaymentSubscriptionResponse> operation
-              = new CreatePaymentSubscription.Sync(sdkConfiguration, _headers);
+              = new CreatePaymentSubscription.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -223,8 +270,23 @@ public class Payment {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetPaymentLinkResponse getPaymentLink(@Nonnull GetPaymentLinkRequest request) {
+        return getPaymentLink(request, null);
+    }
+
+    /**
+     * Retrieve a link
+     * 
+     * <p>Retrieves a single PaymentLink by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetPaymentLinkResponse getPaymentLink(@Nonnull GetPaymentLinkRequest request, @Nullable Options options) {
         RequestOperation<GetPaymentLinkRequest, GetPaymentLinkResponse> operation
-              = new GetPaymentLink.Sync(sdkConfiguration, _headers);
+              = new GetPaymentLink.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -251,8 +313,23 @@ public class Payment {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetPaymentPaymentResponse getPaymentPayment(@Nonnull GetPaymentPaymentRequest request) {
+        return getPaymentPayment(request, null);
+    }
+
+    /**
+     * Retrieve a payment
+     * 
+     * <p>Retrieves a single PaymentPayment by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetPaymentPaymentResponse getPaymentPayment(@Nonnull GetPaymentPaymentRequest request, @Nullable Options options) {
         RequestOperation<GetPaymentPaymentRequest, GetPaymentPaymentResponse> operation
-              = new GetPaymentPayment.Sync(sdkConfiguration, _headers);
+              = new GetPaymentPayment.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -279,8 +356,23 @@ public class Payment {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetPaymentPayoutResponse getPaymentPayout(@Nonnull GetPaymentPayoutRequest request) {
+        return getPaymentPayout(request, null);
+    }
+
+    /**
+     * Retrieve a payout
+     * 
+     * <p>Retrieves a single PaymentPayout by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetPaymentPayoutResponse getPaymentPayout(@Nonnull GetPaymentPayoutRequest request, @Nullable Options options) {
         RequestOperation<GetPaymentPayoutRequest, GetPaymentPayoutResponse> operation
-              = new GetPaymentPayout.Sync(sdkConfiguration, _headers);
+              = new GetPaymentPayout.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -307,8 +399,23 @@ public class Payment {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetPaymentRefundResponse getPaymentRefund(@Nonnull GetPaymentRefundRequest request) {
+        return getPaymentRefund(request, null);
+    }
+
+    /**
+     * Retrieve a refund
+     * 
+     * <p>Retrieves a single PaymentRefund by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetPaymentRefundResponse getPaymentRefund(@Nonnull GetPaymentRefundRequest request, @Nullable Options options) {
         RequestOperation<GetPaymentRefundRequest, GetPaymentRefundResponse> operation
-              = new GetPaymentRefund.Sync(sdkConfiguration, _headers);
+              = new GetPaymentRefund.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -335,8 +442,23 @@ public class Payment {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetPaymentSubscriptionResponse getPaymentSubscription(@Nonnull GetPaymentSubscriptionRequest request) {
+        return getPaymentSubscription(request, null);
+    }
+
+    /**
+     * Retrieve a subscription
+     * 
+     * <p>Retrieves a single PaymentSubscription by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetPaymentSubscriptionResponse getPaymentSubscription(@Nonnull GetPaymentSubscriptionRequest request, @Nullable Options options) {
         RequestOperation<GetPaymentSubscriptionRequest, GetPaymentSubscriptionResponse> operation
-              = new GetPaymentSubscription.Sync(sdkConfiguration, _headers);
+              = new GetPaymentSubscription.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -371,8 +493,27 @@ public class Payment {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListPaymentLinksResponse listPaymentLinks(@Nonnull ListPaymentLinksRequest request) {
+        return listPaymentLinks(request, null);
+    }
+
+    /**
+     * List all links
+     * 
+     * <p>Returns a list of PaymentLinks. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListPaymentLinksResponse listPaymentLinks(@Nonnull ListPaymentLinksRequest request, @Nullable Options options) {
         RequestOperation<ListPaymentLinksRequest, ListPaymentLinksResponse> operation
-              = new ListPaymentLinks.Sync(sdkConfiguration, _headers);
+              = new ListPaymentLinks.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -407,8 +548,27 @@ public class Payment {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListPaymentPaymentsResponse listPaymentPayments(@Nonnull ListPaymentPaymentsRequest request) {
+        return listPaymentPayments(request, null);
+    }
+
+    /**
+     * List all payments
+     * 
+     * <p>Returns a list of PaymentPayments. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListPaymentPaymentsResponse listPaymentPayments(@Nonnull ListPaymentPaymentsRequest request, @Nullable Options options) {
         RequestOperation<ListPaymentPaymentsRequest, ListPaymentPaymentsResponse> operation
-              = new ListPaymentPayments.Sync(sdkConfiguration, _headers);
+              = new ListPaymentPayments.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -443,8 +603,27 @@ public class Payment {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListPaymentPayoutsResponse listPaymentPayouts(@Nonnull ListPaymentPayoutsRequest request) {
+        return listPaymentPayouts(request, null);
+    }
+
+    /**
+     * List all payouts
+     * 
+     * <p>Returns a list of PaymentPayouts. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListPaymentPayoutsResponse listPaymentPayouts(@Nonnull ListPaymentPayoutsRequest request, @Nullable Options options) {
         RequestOperation<ListPaymentPayoutsRequest, ListPaymentPayoutsResponse> operation
-              = new ListPaymentPayouts.Sync(sdkConfiguration, _headers);
+              = new ListPaymentPayouts.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -479,8 +658,27 @@ public class Payment {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListPaymentRefundsResponse listPaymentRefunds(@Nonnull ListPaymentRefundsRequest request) {
+        return listPaymentRefunds(request, null);
+    }
+
+    /**
+     * List all refunds
+     * 
+     * <p>Returns a list of PaymentRefunds. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListPaymentRefundsResponse listPaymentRefunds(@Nonnull ListPaymentRefundsRequest request, @Nullable Options options) {
         RequestOperation<ListPaymentRefundsRequest, ListPaymentRefundsResponse> operation
-              = new ListPaymentRefunds.Sync(sdkConfiguration, _headers);
+              = new ListPaymentRefunds.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -515,8 +713,27 @@ public class Payment {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListPaymentSubscriptionsResponse listPaymentSubscriptions(@Nonnull ListPaymentSubscriptionsRequest request) {
+        return listPaymentSubscriptions(request, null);
+    }
+
+    /**
+     * List all subscriptions
+     * 
+     * <p>Returns a list of PaymentSubscriptions. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListPaymentSubscriptionsResponse listPaymentSubscriptions(@Nonnull ListPaymentSubscriptionsRequest request, @Nullable Options options) {
         RequestOperation<ListPaymentSubscriptionsRequest, ListPaymentSubscriptionsResponse> operation
-              = new ListPaymentSubscriptions.Sync(sdkConfiguration, _headers);
+              = new ListPaymentSubscriptions.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -543,8 +760,23 @@ public class Payment {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchPaymentLinkResponse patchPaymentLink(@Nonnull PatchPaymentLinkRequest request) {
+        return patchPaymentLink(request, null);
+    }
+
+    /**
+     * Update a link
+     * 
+     * <p>Updates the PaymentLink identified by `id`. Provide the unified PaymentLink fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchPaymentLinkResponse patchPaymentLink(@Nonnull PatchPaymentLinkRequest request, @Nullable Options options) {
         RequestOperation<PatchPaymentLinkRequest, PatchPaymentLinkResponse> operation
-              = new PatchPaymentLink.Sync(sdkConfiguration, _headers);
+              = new PatchPaymentLink.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -571,8 +803,23 @@ public class Payment {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchPaymentPaymentResponse patchPaymentPayment(@Nonnull PatchPaymentPaymentRequest request) {
+        return patchPaymentPayment(request, null);
+    }
+
+    /**
+     * Update a payment
+     * 
+     * <p>Updates the PaymentPayment identified by `id`. Provide the unified PaymentPayment fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchPaymentPaymentResponse patchPaymentPayment(@Nonnull PatchPaymentPaymentRequest request, @Nullable Options options) {
         RequestOperation<PatchPaymentPaymentRequest, PatchPaymentPaymentResponse> operation
-              = new PatchPaymentPayment.Sync(sdkConfiguration, _headers);
+              = new PatchPaymentPayment.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -599,8 +846,23 @@ public class Payment {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchPaymentSubscriptionResponse patchPaymentSubscription(@Nonnull PatchPaymentSubscriptionRequest request) {
+        return patchPaymentSubscription(request, null);
+    }
+
+    /**
+     * Update a subscription
+     * 
+     * <p>Updates the PaymentSubscription identified by `id`. Provide the unified PaymentSubscription fields
+     * to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchPaymentSubscriptionResponse patchPaymentSubscription(@Nonnull PatchPaymentSubscriptionRequest request, @Nullable Options options) {
         RequestOperation<PatchPaymentSubscriptionRequest, PatchPaymentSubscriptionResponse> operation
-              = new PatchPaymentSubscription.Sync(sdkConfiguration, _headers);
+              = new PatchPaymentSubscription.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -625,8 +887,22 @@ public class Payment {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemovePaymentLinkResponse removePaymentLink(@Nonnull RemovePaymentLinkRequest request) {
+        return removePaymentLink(request, null);
+    }
+
+    /**
+     * Remove a link
+     * 
+     * <p>Deletes the PaymentLink identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemovePaymentLinkResponse removePaymentLink(@Nonnull RemovePaymentLinkRequest request, @Nullable Options options) {
         RequestOperation<RemovePaymentLinkRequest, RemovePaymentLinkResponse> operation
-              = new RemovePaymentLink.Sync(sdkConfiguration, _headers);
+              = new RemovePaymentLink.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -651,8 +927,22 @@ public class Payment {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemovePaymentPaymentResponse removePaymentPayment(@Nonnull RemovePaymentPaymentRequest request) {
+        return removePaymentPayment(request, null);
+    }
+
+    /**
+     * Remove a payment
+     * 
+     * <p>Deletes the PaymentPayment identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemovePaymentPaymentResponse removePaymentPayment(@Nonnull RemovePaymentPaymentRequest request, @Nullable Options options) {
         RequestOperation<RemovePaymentPaymentRequest, RemovePaymentPaymentResponse> operation
-              = new RemovePaymentPayment.Sync(sdkConfiguration, _headers);
+              = new RemovePaymentPayment.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -677,8 +967,22 @@ public class Payment {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemovePaymentSubscriptionResponse removePaymentSubscription(@Nonnull RemovePaymentSubscriptionRequest request) {
+        return removePaymentSubscription(request, null);
+    }
+
+    /**
+     * Remove a subscription
+     * 
+     * <p>Deletes the PaymentSubscription identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemovePaymentSubscriptionResponse removePaymentSubscription(@Nonnull RemovePaymentSubscriptionRequest request, @Nullable Options options) {
         RequestOperation<RemovePaymentSubscriptionRequest, RemovePaymentSubscriptionResponse> operation
-              = new RemovePaymentSubscription.Sync(sdkConfiguration, _headers);
+              = new RemovePaymentSubscription.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -705,8 +1009,23 @@ public class Payment {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdatePaymentLinkResponse updatePaymentLink(@Nonnull UpdatePaymentLinkRequest request) {
+        return updatePaymentLink(request, null);
+    }
+
+    /**
+     * Update a link
+     * 
+     * <p>Updates the PaymentLink identified by `id`. Provide the unified PaymentLink fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdatePaymentLinkResponse updatePaymentLink(@Nonnull UpdatePaymentLinkRequest request, @Nullable Options options) {
         RequestOperation<UpdatePaymentLinkRequest, UpdatePaymentLinkResponse> operation
-              = new UpdatePaymentLink.Sync(sdkConfiguration, _headers);
+              = new UpdatePaymentLink.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -733,8 +1052,23 @@ public class Payment {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdatePaymentPaymentResponse updatePaymentPayment(@Nonnull UpdatePaymentPaymentRequest request) {
+        return updatePaymentPayment(request, null);
+    }
+
+    /**
+     * Update a payment
+     * 
+     * <p>Updates the PaymentPayment identified by `id`. Provide the unified PaymentPayment fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdatePaymentPaymentResponse updatePaymentPayment(@Nonnull UpdatePaymentPaymentRequest request, @Nullable Options options) {
         RequestOperation<UpdatePaymentPaymentRequest, UpdatePaymentPaymentResponse> operation
-              = new UpdatePaymentPayment.Sync(sdkConfiguration, _headers);
+              = new UpdatePaymentPayment.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -761,8 +1095,23 @@ public class Payment {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdatePaymentSubscriptionResponse updatePaymentSubscription(@Nonnull UpdatePaymentSubscriptionRequest request) {
+        return updatePaymentSubscription(request, null);
+    }
+
+    /**
+     * Update a subscription
+     * 
+     * <p>Updates the PaymentSubscription identified by `id`. Provide the unified PaymentSubscription fields
+     * to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdatePaymentSubscriptionResponse updatePaymentSubscription(@Nonnull UpdatePaymentSubscriptionRequest request, @Nullable Options options) {
         RequestOperation<UpdatePaymentSubscriptionRequest, UpdatePaymentSubscriptionResponse> operation
-              = new UpdatePaymentSubscription.Sync(sdkConfiguration, _headers);
+              = new UpdatePaymentSubscription.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

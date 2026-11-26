@@ -21,12 +21,11 @@ import java.util.Optional;
 /**
  * Mode
  * 
- * <p>Google: bid_only falsetrue
+ * <p>server
  */
 public class Mode {
 
-    public static final Mode TARGETING = new Mode("TARGETING");
-    public static final Mode OBSERVATION = new Mode("OBSERVATION");
+    public static final Mode SERVER = new Mode("server");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -100,23 +99,20 @@ public class Mode {
 
     private static final Map<String, Mode> createValuesMap() {
         Map<String, Mode> map = new LinkedHashMap<>();
-        map.put("TARGETING", TARGETING);
-        map.put("OBSERVATION", OBSERVATION);
+        map.put("server", SERVER);
         return map;
     }
 
     private static final Map<String, ModeEnum> createEnumsMap() {
         Map<String, ModeEnum> map = new HashMap<>();
-        map.put("TARGETING", ModeEnum.TARGETING);
-        map.put("OBSERVATION", ModeEnum.OBSERVATION);
+        map.put("server", ModeEnum.SERVER);
         return map;
     }
     
     
     public enum ModeEnum {
 
-        TARGETING("TARGETING"),
-        OBSERVATION("OBSERVATION"),;
+        SERVER("server"),;
 
         private final String value;
 

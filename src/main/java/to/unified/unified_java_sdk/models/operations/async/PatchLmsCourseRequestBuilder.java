@@ -6,20 +6,30 @@ package to.unified.unified_java_sdk.models.operations.async;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.PatchLmsCourseRequest;
 import to.unified.unified_java_sdk.operations.PatchLmsCourse;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class PatchLmsCourseRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private PatchLmsCourseRequest request;
+    private final Options.Builder optionsBuilder;
 
     public PatchLmsCourseRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public PatchLmsCourseRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public PatchLmsCourseRequestBuilder request(@Nonnull PatchLmsCourseRequest request) {
@@ -44,8 +54,9 @@ public class PatchLmsCourseRequestBuilder {
     * @return The response from the server.
     */
     public CompletableFuture<PatchLmsCourseResponse> call() {
+        Options options = optionsBuilder.build();
         AsyncRequestOperation<PatchLmsCourseRequest, PatchLmsCourseResponse> operation
-              = new PatchLmsCourse.Async(sdkConfiguration, _headers);
+              = new PatchLmsCourse.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

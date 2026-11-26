@@ -6,12 +6,14 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateGenaiEmbeddingRequest;
 import to.unified.unified_java_sdk.models.operations.async.CreateGenaiEmbeddingRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.CreateGenaiEmbeddingResponse;
 import to.unified.unified_java_sdk.operations.CreateGenaiEmbedding;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncEmbedding {
@@ -56,8 +58,22 @@ public class AsyncEmbedding {
      * @return {@code CompletableFuture<CreateGenaiEmbeddingResponse>} - The async response
      */
     public CompletableFuture<CreateGenaiEmbeddingResponse> createGenaiEmbedding(@Nonnull CreateGenaiEmbeddingRequest request) {
+        return createGenaiEmbedding(request, null);
+    }
+
+    /**
+     * Create an embedding
+     * 
+     * <p>Creates a GenaiEmbedding. Provide the unified GenaiEmbedding fields in the request body; they are
+     * mapped to the provider's API. Returns the created GenaiEmbedding.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateGenaiEmbeddingResponse>} - The async response
+     */
+    public CompletableFuture<CreateGenaiEmbeddingResponse> createGenaiEmbedding(@Nonnull CreateGenaiEmbeddingRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateGenaiEmbeddingRequest, CreateGenaiEmbeddingResponse> operation
-              = new CreateGenaiEmbedding.Async(sdkConfiguration, _headers);
+              = new CreateGenaiEmbedding.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

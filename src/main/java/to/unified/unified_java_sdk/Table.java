@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateDatastoreTableRequest;
 import to.unified.unified_java_sdk.models.operations.CreateDatastoreTableRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateDatastoreTableResponse;
@@ -39,6 +40,7 @@ import to.unified.unified_java_sdk.operations.PatchDatastoreTable;
 import to.unified.unified_java_sdk.operations.RemoveDatastoreTable;
 import to.unified.unified_java_sdk.operations.UpdateDatastoreTable;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Table {
@@ -83,8 +85,23 @@ public class Table {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateDatastoreTableResponse createDatastoreTable(@Nonnull CreateDatastoreTableRequest request) {
+        return createDatastoreTable(request, null);
+    }
+
+    /**
+     * Create a table
+     * 
+     * <p>Creates a DatastoreTable. Provide the unified DatastoreTable fields in the request body; they are
+     * mapped to the provider's API. Returns the created DatastoreTable.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateDatastoreTableResponse createDatastoreTable(@Nonnull CreateDatastoreTableRequest request, @Nullable Options options) {
         RequestOperation<CreateDatastoreTableRequest, CreateDatastoreTableResponse> operation
-              = new CreateDatastoreTable.Sync(sdkConfiguration, _headers);
+              = new CreateDatastoreTable.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -111,8 +128,23 @@ public class Table {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetCommerceTableResponse getCommerceTable(@Nonnull GetCommerceTableRequest request) {
+        return getCommerceTable(request, null);
+    }
+
+    /**
+     * Retrieve a table
+     * 
+     * <p>Retrieves a single CommerceTable by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetCommerceTableResponse getCommerceTable(@Nonnull GetCommerceTableRequest request, @Nullable Options options) {
         RequestOperation<GetCommerceTableRequest, GetCommerceTableResponse> operation
-              = new GetCommerceTable.Sync(sdkConfiguration, _headers);
+              = new GetCommerceTable.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -139,8 +171,23 @@ public class Table {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetDatastoreTableResponse getDatastoreTable(@Nonnull GetDatastoreTableRequest request) {
+        return getDatastoreTable(request, null);
+    }
+
+    /**
+     * Retrieve a table
+     * 
+     * <p>Retrieves a single DatastoreTable by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetDatastoreTableResponse getDatastoreTable(@Nonnull GetDatastoreTableRequest request, @Nullable Options options) {
         RequestOperation<GetDatastoreTableRequest, GetDatastoreTableResponse> operation
-              = new GetDatastoreTable.Sync(sdkConfiguration, _headers);
+              = new GetDatastoreTable.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -175,8 +222,27 @@ public class Table {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListCommerceTablesResponse listCommerceTables(@Nonnull ListCommerceTablesRequest request) {
+        return listCommerceTables(request, null);
+    }
+
+    /**
+     * List all tables
+     * 
+     * <p>Returns a list of CommerceTables. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListCommerceTablesResponse listCommerceTables(@Nonnull ListCommerceTablesRequest request, @Nullable Options options) {
         RequestOperation<ListCommerceTablesRequest, ListCommerceTablesResponse> operation
-              = new ListCommerceTables.Sync(sdkConfiguration, _headers);
+              = new ListCommerceTables.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -211,8 +277,27 @@ public class Table {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListDatastoreTablesResponse listDatastoreTables(@Nonnull ListDatastoreTablesRequest request) {
+        return listDatastoreTables(request, null);
+    }
+
+    /**
+     * List all tables
+     * 
+     * <p>Returns a list of DatastoreTables. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListDatastoreTablesResponse listDatastoreTables(@Nonnull ListDatastoreTablesRequest request, @Nullable Options options) {
         RequestOperation<ListDatastoreTablesRequest, ListDatastoreTablesResponse> operation
-              = new ListDatastoreTables.Sync(sdkConfiguration, _headers);
+              = new ListDatastoreTables.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -239,8 +324,23 @@ public class Table {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchDatastoreTableResponse patchDatastoreTable(@Nonnull PatchDatastoreTableRequest request) {
+        return patchDatastoreTable(request, null);
+    }
+
+    /**
+     * Update a table
+     * 
+     * <p>Updates the DatastoreTable identified by `id`. Provide the unified DatastoreTable fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchDatastoreTableResponse patchDatastoreTable(@Nonnull PatchDatastoreTableRequest request, @Nullable Options options) {
         RequestOperation<PatchDatastoreTableRequest, PatchDatastoreTableResponse> operation
-              = new PatchDatastoreTable.Sync(sdkConfiguration, _headers);
+              = new PatchDatastoreTable.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -265,8 +365,22 @@ public class Table {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveDatastoreTableResponse removeDatastoreTable(@Nonnull RemoveDatastoreTableRequest request) {
+        return removeDatastoreTable(request, null);
+    }
+
+    /**
+     * Remove a table
+     * 
+     * <p>Deletes the DatastoreTable identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveDatastoreTableResponse removeDatastoreTable(@Nonnull RemoveDatastoreTableRequest request, @Nullable Options options) {
         RequestOperation<RemoveDatastoreTableRequest, RemoveDatastoreTableResponse> operation
-              = new RemoveDatastoreTable.Sync(sdkConfiguration, _headers);
+              = new RemoveDatastoreTable.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -293,8 +407,23 @@ public class Table {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateDatastoreTableResponse updateDatastoreTable(@Nonnull UpdateDatastoreTableRequest request) {
+        return updateDatastoreTable(request, null);
+    }
+
+    /**
+     * Update a table
+     * 
+     * <p>Updates the DatastoreTable identified by `id`. Provide the unified DatastoreTable fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateDatastoreTableResponse updateDatastoreTable(@Nonnull UpdateDatastoreTableRequest request, @Nullable Options options) {
         RequestOperation<UpdateDatastoreTableRequest, UpdateDatastoreTableResponse> operation
-              = new UpdateDatastoreTable.Sync(sdkConfiguration, _headers);
+              = new UpdateDatastoreTable.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

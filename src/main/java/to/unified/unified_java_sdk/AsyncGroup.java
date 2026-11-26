@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateAdsGroupRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisGroupRequest;
@@ -88,6 +89,7 @@ import to.unified.unified_java_sdk.operations.UpdateAdsGroup;
 import to.unified.unified_java_sdk.operations.UpdateHrisGroup;
 import to.unified.unified_java_sdk.operations.UpdateScimGroups;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncGroup {
@@ -132,8 +134,22 @@ public class AsyncGroup {
      * @return {@code CompletableFuture<CreateAdsGroupResponse>} - The async response
      */
     public CompletableFuture<CreateAdsGroupResponse> createAdsGroup(@Nonnull CreateAdsGroupRequest request) {
+        return createAdsGroup(request, null);
+    }
+
+    /**
+     * Create a group
+     * 
+     * <p>Creates a AdsGroup. Provide the unified AdsGroup fields in the request body; they are mapped to the
+     * provider's API. Returns the created AdsGroup.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateAdsGroupResponse>} - The async response
+     */
+    public CompletableFuture<CreateAdsGroupResponse> createAdsGroup(@Nonnull CreateAdsGroupRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateAdsGroupRequest, CreateAdsGroupResponse> operation
-              = new CreateAdsGroup.Async(sdkConfiguration, _headers);
+              = new CreateAdsGroup.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -161,8 +177,22 @@ public class AsyncGroup {
      * @return {@code CompletableFuture<CreateHrisGroupResponse>} - The async response
      */
     public CompletableFuture<CreateHrisGroupResponse> createHrisGroup(@Nonnull CreateHrisGroupRequest request) {
+        return createHrisGroup(request, null);
+    }
+
+    /**
+     * Create a group
+     * 
+     * <p>Creates a HrisGroup. Provide the unified HrisGroup fields in the request body; they are mapped to
+     * the provider's API. Returns the created HrisGroup.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateHrisGroupResponse>} - The async response
+     */
+    public CompletableFuture<CreateHrisGroupResponse> createHrisGroup(@Nonnull CreateHrisGroupRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateHrisGroupRequest, CreateHrisGroupResponse> operation
-              = new CreateHrisGroup.Async(sdkConfiguration, _headers);
+              = new CreateHrisGroup.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -184,8 +214,19 @@ public class AsyncGroup {
      * @return {@code CompletableFuture<CreateScimGroupsResponse>} - The async response
      */
     public CompletableFuture<CreateScimGroupsResponse> createScimGroups(@Nonnull CreateScimGroupsRequest request) {
+        return createScimGroups(request, null);
+    }
+
+    /**
+     * Create group
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateScimGroupsResponse>} - The async response
+     */
+    public CompletableFuture<CreateScimGroupsResponse> createScimGroups(@Nonnull CreateScimGroupsRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateScimGroupsRequest, CreateScimGroupsResponse> operation
-              = new CreateScimGroups.Async(sdkConfiguration, _headers);
+              = new CreateScimGroups.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -213,8 +254,22 @@ public class AsyncGroup {
      * @return {@code CompletableFuture<GetAdsGroupResponse>} - The async response
      */
     public CompletableFuture<GetAdsGroupResponse> getAdsGroup(@Nonnull GetAdsGroupRequest request) {
+        return getAdsGroup(request, null);
+    }
+
+    /**
+     * Retrieve a group
+     * 
+     * <p>Retrieves a single AdsGroup by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetAdsGroupResponse>} - The async response
+     */
+    public CompletableFuture<GetAdsGroupResponse> getAdsGroup(@Nonnull GetAdsGroupRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetAdsGroupRequest, GetAdsGroupResponse> operation
-              = new GetAdsGroup.Async(sdkConfiguration, _headers);
+              = new GetAdsGroup.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -242,8 +297,22 @@ public class AsyncGroup {
      * @return {@code CompletableFuture<GetClubsGroupResponse>} - The async response
      */
     public CompletableFuture<GetClubsGroupResponse> getClubsGroup(@Nonnull GetClubsGroupRequest request) {
+        return getClubsGroup(request, null);
+    }
+
+    /**
+     * Retrieve a group
+     * 
+     * <p>Retrieves a single ClubsGroup by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetClubsGroupResponse>} - The async response
+     */
+    public CompletableFuture<GetClubsGroupResponse> getClubsGroup(@Nonnull GetClubsGroupRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetClubsGroupRequest, GetClubsGroupResponse> operation
-              = new GetClubsGroup.Async(sdkConfiguration, _headers);
+              = new GetClubsGroup.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -271,8 +340,22 @@ public class AsyncGroup {
      * @return {@code CompletableFuture<GetHrisGroupResponse>} - The async response
      */
     public CompletableFuture<GetHrisGroupResponse> getHrisGroup(@Nonnull GetHrisGroupRequest request) {
+        return getHrisGroup(request, null);
+    }
+
+    /**
+     * Retrieve a group
+     * 
+     * <p>Retrieves a single HrisGroup by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetHrisGroupResponse>} - The async response
+     */
+    public CompletableFuture<GetHrisGroupResponse> getHrisGroup(@Nonnull GetHrisGroupRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetHrisGroupRequest, GetHrisGroupResponse> operation
-              = new GetHrisGroup.Async(sdkConfiguration, _headers);
+              = new GetHrisGroup.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -294,8 +377,19 @@ public class AsyncGroup {
      * @return {@code CompletableFuture<GetScimGroupsResponse>} - The async response
      */
     public CompletableFuture<GetScimGroupsResponse> getScimGroups(@Nonnull GetScimGroupsRequest request) {
+        return getScimGroups(request, null);
+    }
+
+    /**
+     * Get group
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetScimGroupsResponse>} - The async response
+     */
+    public CompletableFuture<GetScimGroupsResponse> getScimGroups(@Nonnull GetScimGroupsRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetScimGroupsRequest, GetScimGroupsResponse> operation
-              = new GetScimGroups.Async(sdkConfiguration, _headers);
+              = new GetScimGroups.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -331,8 +425,26 @@ public class AsyncGroup {
      * @return {@code CompletableFuture<ListAdsGroupsResponse>} - The async response
      */
     public CompletableFuture<ListAdsGroupsResponse> listAdsGroups(@Nonnull ListAdsGroupsRequest request) {
+        return listAdsGroups(request, null);
+    }
+
+    /**
+     * List all groups
+     * 
+     * <p>Returns a list of AdsGroups. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListAdsGroupsResponse>} - The async response
+     */
+    public CompletableFuture<ListAdsGroupsResponse> listAdsGroups(@Nonnull ListAdsGroupsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListAdsGroupsRequest, ListAdsGroupsResponse> operation
-              = new ListAdsGroups.Async(sdkConfiguration, _headers);
+              = new ListAdsGroups.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -368,8 +480,26 @@ public class AsyncGroup {
      * @return {@code CompletableFuture<ListClubsGroupsResponse>} - The async response
      */
     public CompletableFuture<ListClubsGroupsResponse> listClubsGroups(@Nonnull ListClubsGroupsRequest request) {
+        return listClubsGroups(request, null);
+    }
+
+    /**
+     * List all groups
+     * 
+     * <p>Returns a list of ClubsGroups. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListClubsGroupsResponse>} - The async response
+     */
+    public CompletableFuture<ListClubsGroupsResponse> listClubsGroups(@Nonnull ListClubsGroupsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListClubsGroupsRequest, ListClubsGroupsResponse> operation
-              = new ListClubsGroups.Async(sdkConfiguration, _headers);
+              = new ListClubsGroups.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -405,8 +535,26 @@ public class AsyncGroup {
      * @return {@code CompletableFuture<ListHrisGroupsResponse>} - The async response
      */
     public CompletableFuture<ListHrisGroupsResponse> listHrisGroups(@Nonnull ListHrisGroupsRequest request) {
+        return listHrisGroups(request, null);
+    }
+
+    /**
+     * List all groups
+     * 
+     * <p>Returns a list of HrisGroups. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListHrisGroupsResponse>} - The async response
+     */
+    public CompletableFuture<ListHrisGroupsResponse> listHrisGroups(@Nonnull ListHrisGroupsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListHrisGroupsRequest, ListHrisGroupsResponse> operation
-              = new ListHrisGroups.Async(sdkConfiguration, _headers);
+              = new ListHrisGroups.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -428,8 +576,19 @@ public class AsyncGroup {
      * @return {@code CompletableFuture<ListScimGroupsResponse>} - The async response
      */
     public CompletableFuture<ListScimGroupsResponse> listScimGroups(@Nonnull ListScimGroupsRequest request) {
+        return listScimGroups(request, null);
+    }
+
+    /**
+     * List groups
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListScimGroupsResponse>} - The async response
+     */
+    public CompletableFuture<ListScimGroupsResponse> listScimGroups(@Nonnull ListScimGroupsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListScimGroupsRequest, ListScimGroupsResponse> operation
-              = new ListScimGroups.Async(sdkConfiguration, _headers);
+              = new ListScimGroups.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -457,8 +616,22 @@ public class AsyncGroup {
      * @return {@code CompletableFuture<PatchAdsGroupResponse>} - The async response
      */
     public CompletableFuture<PatchAdsGroupResponse> patchAdsGroup(@Nonnull PatchAdsGroupRequest request) {
+        return patchAdsGroup(request, null);
+    }
+
+    /**
+     * Update a group
+     * 
+     * <p>Updates the AdsGroup identified by `id`. Provide the unified AdsGroup fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchAdsGroupResponse>} - The async response
+     */
+    public CompletableFuture<PatchAdsGroupResponse> patchAdsGroup(@Nonnull PatchAdsGroupRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchAdsGroupRequest, PatchAdsGroupResponse> operation
-              = new PatchAdsGroup.Async(sdkConfiguration, _headers);
+              = new PatchAdsGroup.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -486,8 +659,22 @@ public class AsyncGroup {
      * @return {@code CompletableFuture<PatchHrisGroupResponse>} - The async response
      */
     public CompletableFuture<PatchHrisGroupResponse> patchHrisGroup(@Nonnull PatchHrisGroupRequest request) {
+        return patchHrisGroup(request, null);
+    }
+
+    /**
+     * Update a group
+     * 
+     * <p>Updates the HrisGroup identified by `id`. Provide the unified HrisGroup fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchHrisGroupResponse>} - The async response
+     */
+    public CompletableFuture<PatchHrisGroupResponse> patchHrisGroup(@Nonnull PatchHrisGroupRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchHrisGroupRequest, PatchHrisGroupResponse> operation
-              = new PatchHrisGroup.Async(sdkConfiguration, _headers);
+              = new PatchHrisGroup.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -509,8 +696,19 @@ public class AsyncGroup {
      * @return {@code CompletableFuture<PatchScimGroupsResponse>} - The async response
      */
     public CompletableFuture<PatchScimGroupsResponse> patchScimGroups(@Nonnull PatchScimGroupsRequest request) {
+        return patchScimGroups(request, null);
+    }
+
+    /**
+     * Update group
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchScimGroupsResponse>} - The async response
+     */
+    public CompletableFuture<PatchScimGroupsResponse> patchScimGroups(@Nonnull PatchScimGroupsRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchScimGroupsRequest, PatchScimGroupsResponse> operation
-              = new PatchScimGroups.Async(sdkConfiguration, _headers);
+              = new PatchScimGroups.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -536,8 +734,21 @@ public class AsyncGroup {
      * @return {@code CompletableFuture<RemoveAdsGroupResponse>} - The async response
      */
     public CompletableFuture<RemoveAdsGroupResponse> removeAdsGroup(@Nonnull RemoveAdsGroupRequest request) {
+        return removeAdsGroup(request, null);
+    }
+
+    /**
+     * Remove a group
+     * 
+     * <p>Deletes the AdsGroup identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveAdsGroupResponse>} - The async response
+     */
+    public CompletableFuture<RemoveAdsGroupResponse> removeAdsGroup(@Nonnull RemoveAdsGroupRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveAdsGroupRequest, RemoveAdsGroupResponse> operation
-              = new RemoveAdsGroup.Async(sdkConfiguration, _headers);
+              = new RemoveAdsGroup.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -563,8 +774,21 @@ public class AsyncGroup {
      * @return {@code CompletableFuture<RemoveHrisGroupResponse>} - The async response
      */
     public CompletableFuture<RemoveHrisGroupResponse> removeHrisGroup(@Nonnull RemoveHrisGroupRequest request) {
+        return removeHrisGroup(request, null);
+    }
+
+    /**
+     * Remove a group
+     * 
+     * <p>Deletes the HrisGroup identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveHrisGroupResponse>} - The async response
+     */
+    public CompletableFuture<RemoveHrisGroupResponse> removeHrisGroup(@Nonnull RemoveHrisGroupRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveHrisGroupRequest, RemoveHrisGroupResponse> operation
-              = new RemoveHrisGroup.Async(sdkConfiguration, _headers);
+              = new RemoveHrisGroup.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -586,8 +810,19 @@ public class AsyncGroup {
      * @return {@code CompletableFuture<RemoveScimGroupsResponse>} - The async response
      */
     public CompletableFuture<RemoveScimGroupsResponse> removeScimGroups(@Nonnull RemoveScimGroupsRequest request) {
+        return removeScimGroups(request, null);
+    }
+
+    /**
+     * Delete group
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveScimGroupsResponse>} - The async response
+     */
+    public CompletableFuture<RemoveScimGroupsResponse> removeScimGroups(@Nonnull RemoveScimGroupsRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveScimGroupsRequest, RemoveScimGroupsResponse> operation
-              = new RemoveScimGroups.Async(sdkConfiguration, _headers);
+              = new RemoveScimGroups.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -615,8 +850,22 @@ public class AsyncGroup {
      * @return {@code CompletableFuture<UpdateAdsGroupResponse>} - The async response
      */
     public CompletableFuture<UpdateAdsGroupResponse> updateAdsGroup(@Nonnull UpdateAdsGroupRequest request) {
+        return updateAdsGroup(request, null);
+    }
+
+    /**
+     * Update a group
+     * 
+     * <p>Updates the AdsGroup identified by `id`. Provide the unified AdsGroup fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateAdsGroupResponse>} - The async response
+     */
+    public CompletableFuture<UpdateAdsGroupResponse> updateAdsGroup(@Nonnull UpdateAdsGroupRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateAdsGroupRequest, UpdateAdsGroupResponse> operation
-              = new UpdateAdsGroup.Async(sdkConfiguration, _headers);
+              = new UpdateAdsGroup.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -644,8 +893,22 @@ public class AsyncGroup {
      * @return {@code CompletableFuture<UpdateHrisGroupResponse>} - The async response
      */
     public CompletableFuture<UpdateHrisGroupResponse> updateHrisGroup(@Nonnull UpdateHrisGroupRequest request) {
+        return updateHrisGroup(request, null);
+    }
+
+    /**
+     * Update a group
+     * 
+     * <p>Updates the HrisGroup identified by `id`. Provide the unified HrisGroup fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateHrisGroupResponse>} - The async response
+     */
+    public CompletableFuture<UpdateHrisGroupResponse> updateHrisGroup(@Nonnull UpdateHrisGroupRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateHrisGroupRequest, UpdateHrisGroupResponse> operation
-              = new UpdateHrisGroup.Async(sdkConfiguration, _headers);
+              = new UpdateHrisGroup.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -667,8 +930,19 @@ public class AsyncGroup {
      * @return {@code CompletableFuture<UpdateScimGroupsResponse>} - The async response
      */
     public CompletableFuture<UpdateScimGroupsResponse> updateScimGroups(@Nonnull UpdateScimGroupsRequest request) {
+        return updateScimGroups(request, null);
+    }
+
+    /**
+     * Update group
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateScimGroupsResponse>} - The async response
+     */
+    public CompletableFuture<UpdateScimGroupsResponse> updateScimGroups(@Nonnull UpdateScimGroupsRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateScimGroupsRequest, UpdateScimGroupsResponse> operation
-              = new UpdateScimGroups.Async(sdkConfiguration, _headers);
+              = new UpdateScimGroups.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

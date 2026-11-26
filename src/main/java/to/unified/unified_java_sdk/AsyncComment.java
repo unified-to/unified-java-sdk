@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateKmsCommentRequest;
 import to.unified.unified_java_sdk.models.operations.CreateSocialCommentRequest;
@@ -104,6 +105,7 @@ import to.unified.unified_java_sdk.operations.UpdateSocialComment;
 import to.unified.unified_java_sdk.operations.UpdateTaskComment;
 import to.unified.unified_java_sdk.operations.UpdateUcComment;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncComment {
@@ -148,8 +150,22 @@ public class AsyncComment {
      * @return {@code CompletableFuture<CreateKmsCommentResponse>} - The async response
      */
     public CompletableFuture<CreateKmsCommentResponse> createKmsComment(@Nonnull CreateKmsCommentRequest request) {
+        return createKmsComment(request, null);
+    }
+
+    /**
+     * Create a comment
+     * 
+     * <p>Creates a KmsComment. Provide the unified KmsComment fields in the request body; they are mapped to
+     * the provider's API. Returns the created KmsComment.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateKmsCommentResponse>} - The async response
+     */
+    public CompletableFuture<CreateKmsCommentResponse> createKmsComment(@Nonnull CreateKmsCommentRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateKmsCommentRequest, CreateKmsCommentResponse> operation
-              = new CreateKmsComment.Async(sdkConfiguration, _headers);
+              = new CreateKmsComment.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -177,8 +193,22 @@ public class AsyncComment {
      * @return {@code CompletableFuture<CreateSocialCommentResponse>} - The async response
      */
     public CompletableFuture<CreateSocialCommentResponse> createSocialComment(@Nonnull CreateSocialCommentRequest request) {
+        return createSocialComment(request, null);
+    }
+
+    /**
+     * Create a comment
+     * 
+     * <p>Creates a SocialComment. Provide the unified SocialComment fields in the request body; they are
+     * mapped to the provider's API. Returns the created SocialComment.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateSocialCommentResponse>} - The async response
+     */
+    public CompletableFuture<CreateSocialCommentResponse> createSocialComment(@Nonnull CreateSocialCommentRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateSocialCommentRequest, CreateSocialCommentResponse> operation
-              = new CreateSocialComment.Async(sdkConfiguration, _headers);
+              = new CreateSocialComment.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -206,8 +236,22 @@ public class AsyncComment {
      * @return {@code CompletableFuture<CreateTaskCommentResponse>} - The async response
      */
     public CompletableFuture<CreateTaskCommentResponse> createTaskComment(@Nonnull CreateTaskCommentRequest request) {
+        return createTaskComment(request, null);
+    }
+
+    /**
+     * Create a comment
+     * 
+     * <p>Creates a TaskComment. Provide the unified TaskComment fields in the request body; they are mapped
+     * to the provider's API. Returns the created TaskComment.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateTaskCommentResponse>} - The async response
+     */
+    public CompletableFuture<CreateTaskCommentResponse> createTaskComment(@Nonnull CreateTaskCommentRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateTaskCommentRequest, CreateTaskCommentResponse> operation
-              = new CreateTaskComment.Async(sdkConfiguration, _headers);
+              = new CreateTaskComment.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -235,8 +279,22 @@ public class AsyncComment {
      * @return {@code CompletableFuture<CreateUcCommentResponse>} - The async response
      */
     public CompletableFuture<CreateUcCommentResponse> createUcComment(@Nonnull CreateUcCommentRequest request) {
+        return createUcComment(request, null);
+    }
+
+    /**
+     * Create a comment
+     * 
+     * <p>Creates a UcComment. Provide the unified UcComment fields in the request body; they are mapped to
+     * the provider's API. Returns the created UcComment.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateUcCommentResponse>} - The async response
+     */
+    public CompletableFuture<CreateUcCommentResponse> createUcComment(@Nonnull CreateUcCommentRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateUcCommentRequest, CreateUcCommentResponse> operation
-              = new CreateUcComment.Async(sdkConfiguration, _headers);
+              = new CreateUcComment.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -264,8 +322,22 @@ public class AsyncComment {
      * @return {@code CompletableFuture<GetKmsCommentResponse>} - The async response
      */
     public CompletableFuture<GetKmsCommentResponse> getKmsComment(@Nonnull GetKmsCommentRequest request) {
+        return getKmsComment(request, null);
+    }
+
+    /**
+     * Retrieve a comment
+     * 
+     * <p>Retrieves a single KmsComment by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetKmsCommentResponse>} - The async response
+     */
+    public CompletableFuture<GetKmsCommentResponse> getKmsComment(@Nonnull GetKmsCommentRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetKmsCommentRequest, GetKmsCommentResponse> operation
-              = new GetKmsComment.Async(sdkConfiguration, _headers);
+              = new GetKmsComment.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -293,8 +365,22 @@ public class AsyncComment {
      * @return {@code CompletableFuture<GetSocialCommentResponse>} - The async response
      */
     public CompletableFuture<GetSocialCommentResponse> getSocialComment(@Nonnull GetSocialCommentRequest request) {
+        return getSocialComment(request, null);
+    }
+
+    /**
+     * Retrieve a comment
+     * 
+     * <p>Retrieves a single SocialComment by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetSocialCommentResponse>} - The async response
+     */
+    public CompletableFuture<GetSocialCommentResponse> getSocialComment(@Nonnull GetSocialCommentRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetSocialCommentRequest, GetSocialCommentResponse> operation
-              = new GetSocialComment.Async(sdkConfiguration, _headers);
+              = new GetSocialComment.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -322,8 +408,22 @@ public class AsyncComment {
      * @return {@code CompletableFuture<GetTaskCommentResponse>} - The async response
      */
     public CompletableFuture<GetTaskCommentResponse> getTaskComment(@Nonnull GetTaskCommentRequest request) {
+        return getTaskComment(request, null);
+    }
+
+    /**
+     * Retrieve a comment
+     * 
+     * <p>Retrieves a single TaskComment by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetTaskCommentResponse>} - The async response
+     */
+    public CompletableFuture<GetTaskCommentResponse> getTaskComment(@Nonnull GetTaskCommentRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetTaskCommentRequest, GetTaskCommentResponse> operation
-              = new GetTaskComment.Async(sdkConfiguration, _headers);
+              = new GetTaskComment.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -351,8 +451,22 @@ public class AsyncComment {
      * @return {@code CompletableFuture<GetUcCommentResponse>} - The async response
      */
     public CompletableFuture<GetUcCommentResponse> getUcComment(@Nonnull GetUcCommentRequest request) {
+        return getUcComment(request, null);
+    }
+
+    /**
+     * Retrieve a comment
+     * 
+     * <p>Retrieves a single UcComment by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetUcCommentResponse>} - The async response
+     */
+    public CompletableFuture<GetUcCommentResponse> getUcComment(@Nonnull GetUcCommentRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetUcCommentRequest, GetUcCommentResponse> operation
-              = new GetUcComment.Async(sdkConfiguration, _headers);
+              = new GetUcComment.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -388,8 +502,26 @@ public class AsyncComment {
      * @return {@code CompletableFuture<ListKmsCommentsResponse>} - The async response
      */
     public CompletableFuture<ListKmsCommentsResponse> listKmsComments(@Nonnull ListKmsCommentsRequest request) {
+        return listKmsComments(request, null);
+    }
+
+    /**
+     * List all comments
+     * 
+     * <p>Returns a list of KmsComments. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListKmsCommentsResponse>} - The async response
+     */
+    public CompletableFuture<ListKmsCommentsResponse> listKmsComments(@Nonnull ListKmsCommentsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListKmsCommentsRequest, ListKmsCommentsResponse> operation
-              = new ListKmsComments.Async(sdkConfiguration, _headers);
+              = new ListKmsComments.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -425,8 +557,26 @@ public class AsyncComment {
      * @return {@code CompletableFuture<ListSocialCommentsResponse>} - The async response
      */
     public CompletableFuture<ListSocialCommentsResponse> listSocialComments(@Nonnull ListSocialCommentsRequest request) {
+        return listSocialComments(request, null);
+    }
+
+    /**
+     * List all comments
+     * 
+     * <p>Returns a list of SocialComments. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListSocialCommentsResponse>} - The async response
+     */
+    public CompletableFuture<ListSocialCommentsResponse> listSocialComments(@Nonnull ListSocialCommentsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListSocialCommentsRequest, ListSocialCommentsResponse> operation
-              = new ListSocialComments.Async(sdkConfiguration, _headers);
+              = new ListSocialComments.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -462,8 +612,26 @@ public class AsyncComment {
      * @return {@code CompletableFuture<ListTaskCommentsResponse>} - The async response
      */
     public CompletableFuture<ListTaskCommentsResponse> listTaskComments(@Nonnull ListTaskCommentsRequest request) {
+        return listTaskComments(request, null);
+    }
+
+    /**
+     * List all comments
+     * 
+     * <p>Returns a list of TaskComments. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListTaskCommentsResponse>} - The async response
+     */
+    public CompletableFuture<ListTaskCommentsResponse> listTaskComments(@Nonnull ListTaskCommentsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListTaskCommentsRequest, ListTaskCommentsResponse> operation
-              = new ListTaskComments.Async(sdkConfiguration, _headers);
+              = new ListTaskComments.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -499,8 +667,26 @@ public class AsyncComment {
      * @return {@code CompletableFuture<ListUcCommentsResponse>} - The async response
      */
     public CompletableFuture<ListUcCommentsResponse> listUcComments(@Nonnull ListUcCommentsRequest request) {
+        return listUcComments(request, null);
+    }
+
+    /**
+     * List all comments
+     * 
+     * <p>Returns a list of UcComments. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListUcCommentsResponse>} - The async response
+     */
+    public CompletableFuture<ListUcCommentsResponse> listUcComments(@Nonnull ListUcCommentsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListUcCommentsRequest, ListUcCommentsResponse> operation
-              = new ListUcComments.Async(sdkConfiguration, _headers);
+              = new ListUcComments.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -528,8 +714,22 @@ public class AsyncComment {
      * @return {@code CompletableFuture<PatchKmsCommentResponse>} - The async response
      */
     public CompletableFuture<PatchKmsCommentResponse> patchKmsComment(@Nonnull PatchKmsCommentRequest request) {
+        return patchKmsComment(request, null);
+    }
+
+    /**
+     * Update a comment
+     * 
+     * <p>Updates the KmsComment identified by `id`. Provide the unified KmsComment fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchKmsCommentResponse>} - The async response
+     */
+    public CompletableFuture<PatchKmsCommentResponse> patchKmsComment(@Nonnull PatchKmsCommentRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchKmsCommentRequest, PatchKmsCommentResponse> operation
-              = new PatchKmsComment.Async(sdkConfiguration, _headers);
+              = new PatchKmsComment.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -557,8 +757,22 @@ public class AsyncComment {
      * @return {@code CompletableFuture<PatchSocialCommentResponse>} - The async response
      */
     public CompletableFuture<PatchSocialCommentResponse> patchSocialComment(@Nonnull PatchSocialCommentRequest request) {
+        return patchSocialComment(request, null);
+    }
+
+    /**
+     * Update a comment
+     * 
+     * <p>Updates the SocialComment identified by `id`. Provide the unified SocialComment fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchSocialCommentResponse>} - The async response
+     */
+    public CompletableFuture<PatchSocialCommentResponse> patchSocialComment(@Nonnull PatchSocialCommentRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchSocialCommentRequest, PatchSocialCommentResponse> operation
-              = new PatchSocialComment.Async(sdkConfiguration, _headers);
+              = new PatchSocialComment.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -586,8 +800,22 @@ public class AsyncComment {
      * @return {@code CompletableFuture<PatchTaskCommentResponse>} - The async response
      */
     public CompletableFuture<PatchTaskCommentResponse> patchTaskComment(@Nonnull PatchTaskCommentRequest request) {
+        return patchTaskComment(request, null);
+    }
+
+    /**
+     * Update a comment
+     * 
+     * <p>Updates the TaskComment identified by `id`. Provide the unified TaskComment fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchTaskCommentResponse>} - The async response
+     */
+    public CompletableFuture<PatchTaskCommentResponse> patchTaskComment(@Nonnull PatchTaskCommentRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchTaskCommentRequest, PatchTaskCommentResponse> operation
-              = new PatchTaskComment.Async(sdkConfiguration, _headers);
+              = new PatchTaskComment.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -615,8 +843,22 @@ public class AsyncComment {
      * @return {@code CompletableFuture<PatchUcCommentResponse>} - The async response
      */
     public CompletableFuture<PatchUcCommentResponse> patchUcComment(@Nonnull PatchUcCommentRequest request) {
+        return patchUcComment(request, null);
+    }
+
+    /**
+     * Update a comment
+     * 
+     * <p>Updates the UcComment identified by `id`. Provide the unified UcComment fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchUcCommentResponse>} - The async response
+     */
+    public CompletableFuture<PatchUcCommentResponse> patchUcComment(@Nonnull PatchUcCommentRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchUcCommentRequest, PatchUcCommentResponse> operation
-              = new PatchUcComment.Async(sdkConfiguration, _headers);
+              = new PatchUcComment.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -642,8 +884,21 @@ public class AsyncComment {
      * @return {@code CompletableFuture<RemoveKmsCommentResponse>} - The async response
      */
     public CompletableFuture<RemoveKmsCommentResponse> removeKmsComment(@Nonnull RemoveKmsCommentRequest request) {
+        return removeKmsComment(request, null);
+    }
+
+    /**
+     * Remove a comment
+     * 
+     * <p>Deletes the KmsComment identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveKmsCommentResponse>} - The async response
+     */
+    public CompletableFuture<RemoveKmsCommentResponse> removeKmsComment(@Nonnull RemoveKmsCommentRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveKmsCommentRequest, RemoveKmsCommentResponse> operation
-              = new RemoveKmsComment.Async(sdkConfiguration, _headers);
+              = new RemoveKmsComment.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -669,8 +924,21 @@ public class AsyncComment {
      * @return {@code CompletableFuture<RemoveSocialCommentResponse>} - The async response
      */
     public CompletableFuture<RemoveSocialCommentResponse> removeSocialComment(@Nonnull RemoveSocialCommentRequest request) {
+        return removeSocialComment(request, null);
+    }
+
+    /**
+     * Remove a comment
+     * 
+     * <p>Deletes the SocialComment identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveSocialCommentResponse>} - The async response
+     */
+    public CompletableFuture<RemoveSocialCommentResponse> removeSocialComment(@Nonnull RemoveSocialCommentRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveSocialCommentRequest, RemoveSocialCommentResponse> operation
-              = new RemoveSocialComment.Async(sdkConfiguration, _headers);
+              = new RemoveSocialComment.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -696,8 +964,21 @@ public class AsyncComment {
      * @return {@code CompletableFuture<RemoveTaskCommentResponse>} - The async response
      */
     public CompletableFuture<RemoveTaskCommentResponse> removeTaskComment(@Nonnull RemoveTaskCommentRequest request) {
+        return removeTaskComment(request, null);
+    }
+
+    /**
+     * Remove a comment
+     * 
+     * <p>Deletes the TaskComment identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveTaskCommentResponse>} - The async response
+     */
+    public CompletableFuture<RemoveTaskCommentResponse> removeTaskComment(@Nonnull RemoveTaskCommentRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveTaskCommentRequest, RemoveTaskCommentResponse> operation
-              = new RemoveTaskComment.Async(sdkConfiguration, _headers);
+              = new RemoveTaskComment.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -723,8 +1004,21 @@ public class AsyncComment {
      * @return {@code CompletableFuture<RemoveUcCommentResponse>} - The async response
      */
     public CompletableFuture<RemoveUcCommentResponse> removeUcComment(@Nonnull RemoveUcCommentRequest request) {
+        return removeUcComment(request, null);
+    }
+
+    /**
+     * Remove a comment
+     * 
+     * <p>Deletes the UcComment identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveUcCommentResponse>} - The async response
+     */
+    public CompletableFuture<RemoveUcCommentResponse> removeUcComment(@Nonnull RemoveUcCommentRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveUcCommentRequest, RemoveUcCommentResponse> operation
-              = new RemoveUcComment.Async(sdkConfiguration, _headers);
+              = new RemoveUcComment.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -752,8 +1046,22 @@ public class AsyncComment {
      * @return {@code CompletableFuture<UpdateKmsCommentResponse>} - The async response
      */
     public CompletableFuture<UpdateKmsCommentResponse> updateKmsComment(@Nonnull UpdateKmsCommentRequest request) {
+        return updateKmsComment(request, null);
+    }
+
+    /**
+     * Update a comment
+     * 
+     * <p>Updates the KmsComment identified by `id`. Provide the unified KmsComment fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateKmsCommentResponse>} - The async response
+     */
+    public CompletableFuture<UpdateKmsCommentResponse> updateKmsComment(@Nonnull UpdateKmsCommentRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateKmsCommentRequest, UpdateKmsCommentResponse> operation
-              = new UpdateKmsComment.Async(sdkConfiguration, _headers);
+              = new UpdateKmsComment.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -781,8 +1089,22 @@ public class AsyncComment {
      * @return {@code CompletableFuture<UpdateSocialCommentResponse>} - The async response
      */
     public CompletableFuture<UpdateSocialCommentResponse> updateSocialComment(@Nonnull UpdateSocialCommentRequest request) {
+        return updateSocialComment(request, null);
+    }
+
+    /**
+     * Update a comment
+     * 
+     * <p>Updates the SocialComment identified by `id`. Provide the unified SocialComment fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateSocialCommentResponse>} - The async response
+     */
+    public CompletableFuture<UpdateSocialCommentResponse> updateSocialComment(@Nonnull UpdateSocialCommentRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateSocialCommentRequest, UpdateSocialCommentResponse> operation
-              = new UpdateSocialComment.Async(sdkConfiguration, _headers);
+              = new UpdateSocialComment.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -810,8 +1132,22 @@ public class AsyncComment {
      * @return {@code CompletableFuture<UpdateTaskCommentResponse>} - The async response
      */
     public CompletableFuture<UpdateTaskCommentResponse> updateTaskComment(@Nonnull UpdateTaskCommentRequest request) {
+        return updateTaskComment(request, null);
+    }
+
+    /**
+     * Update a comment
+     * 
+     * <p>Updates the TaskComment identified by `id`. Provide the unified TaskComment fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateTaskCommentResponse>} - The async response
+     */
+    public CompletableFuture<UpdateTaskCommentResponse> updateTaskComment(@Nonnull UpdateTaskCommentRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateTaskCommentRequest, UpdateTaskCommentResponse> operation
-              = new UpdateTaskComment.Async(sdkConfiguration, _headers);
+              = new UpdateTaskComment.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -839,8 +1175,22 @@ public class AsyncComment {
      * @return {@code CompletableFuture<UpdateUcCommentResponse>} - The async response
      */
     public CompletableFuture<UpdateUcCommentResponse> updateUcComment(@Nonnull UpdateUcCommentRequest request) {
+        return updateUcComment(request, null);
+    }
+
+    /**
+     * Update a comment
+     * 
+     * <p>Updates the UcComment identified by `id`. Provide the unified UcComment fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateUcCommentResponse>} - The async response
+     */
+    public CompletableFuture<UpdateUcCommentResponse> updateUcComment(@Nonnull UpdateUcCommentRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateUcCommentRequest, UpdateUcCommentResponse> operation
-              = new UpdateUcComment.Async(sdkConfiguration, _headers);
+              = new UpdateUcComment.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

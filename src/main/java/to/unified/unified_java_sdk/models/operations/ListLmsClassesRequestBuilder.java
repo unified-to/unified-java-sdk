@@ -6,18 +6,28 @@ package to.unified.unified_java_sdk.models.operations;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.ListLmsClasses;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListLmsClassesRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private ListLmsClassesRequest request;
+    private final Options.Builder optionsBuilder;
 
     public ListLmsClassesRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public ListLmsClassesRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public ListLmsClassesRequestBuilder request(@Nonnull ListLmsClassesRequest request) {
@@ -42,8 +52,9 @@ public class ListLmsClassesRequestBuilder {
     * @return The response from the server.
     */
     public ListLmsClassesResponse call() {
+        Options options = optionsBuilder.build();
         RequestOperation<ListLmsClassesRequest, ListLmsClassesResponse> operation
-              = new ListLmsClasses.Sync(sdkConfiguration, _headers);
+              = new ListLmsClasses.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateSigningSignatoryRequest;
 import to.unified.unified_java_sdk.models.operations.GetSigningSignatoryRequest;
@@ -32,6 +33,7 @@ import to.unified.unified_java_sdk.operations.PatchSigningSignatory;
 import to.unified.unified_java_sdk.operations.RemoveSigningSignatory;
 import to.unified.unified_java_sdk.operations.UpdateSigningSignatory;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncSignatory {
@@ -76,8 +78,22 @@ public class AsyncSignatory {
      * @return {@code CompletableFuture<CreateSigningSignatoryResponse>} - The async response
      */
     public CompletableFuture<CreateSigningSignatoryResponse> createSigningSignatory(@Nonnull CreateSigningSignatoryRequest request) {
+        return createSigningSignatory(request, null);
+    }
+
+    /**
+     * Create a signatory
+     * 
+     * <p>Creates a SigningSignatory. Provide the unified SigningSignatory fields in the request body; they
+     * are mapped to the provider's API. Returns the created SigningSignatory.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateSigningSignatoryResponse>} - The async response
+     */
+    public CompletableFuture<CreateSigningSignatoryResponse> createSigningSignatory(@Nonnull CreateSigningSignatoryRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateSigningSignatoryRequest, CreateSigningSignatoryResponse> operation
-              = new CreateSigningSignatory.Async(sdkConfiguration, _headers);
+              = new CreateSigningSignatory.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -105,8 +121,22 @@ public class AsyncSignatory {
      * @return {@code CompletableFuture<GetSigningSignatoryResponse>} - The async response
      */
     public CompletableFuture<GetSigningSignatoryResponse> getSigningSignatory(@Nonnull GetSigningSignatoryRequest request) {
+        return getSigningSignatory(request, null);
+    }
+
+    /**
+     * Retrieve a signatory
+     * 
+     * <p>Retrieves a single SigningSignatory by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetSigningSignatoryResponse>} - The async response
+     */
+    public CompletableFuture<GetSigningSignatoryResponse> getSigningSignatory(@Nonnull GetSigningSignatoryRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetSigningSignatoryRequest, GetSigningSignatoryResponse> operation
-              = new GetSigningSignatory.Async(sdkConfiguration, _headers);
+              = new GetSigningSignatory.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -142,8 +172,26 @@ public class AsyncSignatory {
      * @return {@code CompletableFuture<ListSigningSignatoriesResponse>} - The async response
      */
     public CompletableFuture<ListSigningSignatoriesResponse> listSigningSignatories(@Nonnull ListSigningSignatoriesRequest request) {
+        return listSigningSignatories(request, null);
+    }
+
+    /**
+     * List all signatories
+     * 
+     * <p>Returns a list of SigningSignatories. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListSigningSignatoriesResponse>} - The async response
+     */
+    public CompletableFuture<ListSigningSignatoriesResponse> listSigningSignatories(@Nonnull ListSigningSignatoriesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListSigningSignatoriesRequest, ListSigningSignatoriesResponse> operation
-              = new ListSigningSignatories.Async(sdkConfiguration, _headers);
+              = new ListSigningSignatories.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -171,8 +219,22 @@ public class AsyncSignatory {
      * @return {@code CompletableFuture<PatchSigningSignatoryResponse>} - The async response
      */
     public CompletableFuture<PatchSigningSignatoryResponse> patchSigningSignatory(@Nonnull PatchSigningSignatoryRequest request) {
+        return patchSigningSignatory(request, null);
+    }
+
+    /**
+     * Update a signatory
+     * 
+     * <p>Updates the SigningSignatory identified by `id`. Provide the unified SigningSignatory fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchSigningSignatoryResponse>} - The async response
+     */
+    public CompletableFuture<PatchSigningSignatoryResponse> patchSigningSignatory(@Nonnull PatchSigningSignatoryRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchSigningSignatoryRequest, PatchSigningSignatoryResponse> operation
-              = new PatchSigningSignatory.Async(sdkConfiguration, _headers);
+              = new PatchSigningSignatory.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -198,8 +260,21 @@ public class AsyncSignatory {
      * @return {@code CompletableFuture<RemoveSigningSignatoryResponse>} - The async response
      */
     public CompletableFuture<RemoveSigningSignatoryResponse> removeSigningSignatory(@Nonnull RemoveSigningSignatoryRequest request) {
+        return removeSigningSignatory(request, null);
+    }
+
+    /**
+     * Remove a signatory
+     * 
+     * <p>Deletes the SigningSignatory identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveSigningSignatoryResponse>} - The async response
+     */
+    public CompletableFuture<RemoveSigningSignatoryResponse> removeSigningSignatory(@Nonnull RemoveSigningSignatoryRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveSigningSignatoryRequest, RemoveSigningSignatoryResponse> operation
-              = new RemoveSigningSignatory.Async(sdkConfiguration, _headers);
+              = new RemoveSigningSignatory.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -227,8 +302,22 @@ public class AsyncSignatory {
      * @return {@code CompletableFuture<UpdateSigningSignatoryResponse>} - The async response
      */
     public CompletableFuture<UpdateSigningSignatoryResponse> updateSigningSignatory(@Nonnull UpdateSigningSignatoryRequest request) {
+        return updateSigningSignatory(request, null);
+    }
+
+    /**
+     * Update a signatory
+     * 
+     * <p>Updates the SigningSignatory identified by `id`. Provide the unified SigningSignatory fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateSigningSignatoryResponse>} - The async response
+     */
+    public CompletableFuture<UpdateSigningSignatoryResponse> updateSigningSignatory(@Nonnull UpdateSigningSignatoryRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateSigningSignatoryRequest, UpdateSigningSignatoryResponse> operation
-              = new UpdateSigningSignatory.Async(sdkConfiguration, _headers);
+              = new UpdateSigningSignatory.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

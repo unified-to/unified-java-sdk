@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateComputeKeyRequest;
 import to.unified.unified_java_sdk.models.operations.GetComputeKeyRequest;
@@ -32,6 +33,7 @@ import to.unified.unified_java_sdk.operations.PatchComputeKey;
 import to.unified.unified_java_sdk.operations.RemoveComputeKey;
 import to.unified.unified_java_sdk.operations.UpdateComputeKey;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncKey {
@@ -76,8 +78,22 @@ public class AsyncKey {
      * @return {@code CompletableFuture<CreateComputeKeyResponse>} - The async response
      */
     public CompletableFuture<CreateComputeKeyResponse> createComputeKey(@Nonnull CreateComputeKeyRequest request) {
+        return createComputeKey(request, null);
+    }
+
+    /**
+     * Create a key
+     * 
+     * <p>Creates a ComputeKey. Provide the unified ComputeKey fields in the request body; they are mapped to
+     * the provider's API. Returns the created ComputeKey.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateComputeKeyResponse>} - The async response
+     */
+    public CompletableFuture<CreateComputeKeyResponse> createComputeKey(@Nonnull CreateComputeKeyRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateComputeKeyRequest, CreateComputeKeyResponse> operation
-              = new CreateComputeKey.Async(sdkConfiguration, _headers);
+              = new CreateComputeKey.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -105,8 +121,22 @@ public class AsyncKey {
      * @return {@code CompletableFuture<GetComputeKeyResponse>} - The async response
      */
     public CompletableFuture<GetComputeKeyResponse> getComputeKey(@Nonnull GetComputeKeyRequest request) {
+        return getComputeKey(request, null);
+    }
+
+    /**
+     * Retrieve a key
+     * 
+     * <p>Retrieves a single ComputeKey by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetComputeKeyResponse>} - The async response
+     */
+    public CompletableFuture<GetComputeKeyResponse> getComputeKey(@Nonnull GetComputeKeyRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetComputeKeyRequest, GetComputeKeyResponse> operation
-              = new GetComputeKey.Async(sdkConfiguration, _headers);
+              = new GetComputeKey.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -142,8 +172,26 @@ public class AsyncKey {
      * @return {@code CompletableFuture<ListComputeKeysResponse>} - The async response
      */
     public CompletableFuture<ListComputeKeysResponse> listComputeKeys(@Nonnull ListComputeKeysRequest request) {
+        return listComputeKeys(request, null);
+    }
+
+    /**
+     * List all keys
+     * 
+     * <p>Returns a list of ComputeKeys. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListComputeKeysResponse>} - The async response
+     */
+    public CompletableFuture<ListComputeKeysResponse> listComputeKeys(@Nonnull ListComputeKeysRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListComputeKeysRequest, ListComputeKeysResponse> operation
-              = new ListComputeKeys.Async(sdkConfiguration, _headers);
+              = new ListComputeKeys.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -171,8 +219,22 @@ public class AsyncKey {
      * @return {@code CompletableFuture<PatchComputeKeyResponse>} - The async response
      */
     public CompletableFuture<PatchComputeKeyResponse> patchComputeKey(@Nonnull PatchComputeKeyRequest request) {
+        return patchComputeKey(request, null);
+    }
+
+    /**
+     * Update a key
+     * 
+     * <p>Updates the ComputeKey identified by `id`. Provide the unified ComputeKey fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchComputeKeyResponse>} - The async response
+     */
+    public CompletableFuture<PatchComputeKeyResponse> patchComputeKey(@Nonnull PatchComputeKeyRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchComputeKeyRequest, PatchComputeKeyResponse> operation
-              = new PatchComputeKey.Async(sdkConfiguration, _headers);
+              = new PatchComputeKey.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -198,8 +260,21 @@ public class AsyncKey {
      * @return {@code CompletableFuture<RemoveComputeKeyResponse>} - The async response
      */
     public CompletableFuture<RemoveComputeKeyResponse> removeComputeKey(@Nonnull RemoveComputeKeyRequest request) {
+        return removeComputeKey(request, null);
+    }
+
+    /**
+     * Remove a key
+     * 
+     * <p>Deletes the ComputeKey identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveComputeKeyResponse>} - The async response
+     */
+    public CompletableFuture<RemoveComputeKeyResponse> removeComputeKey(@Nonnull RemoveComputeKeyRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveComputeKeyRequest, RemoveComputeKeyResponse> operation
-              = new RemoveComputeKey.Async(sdkConfiguration, _headers);
+              = new RemoveComputeKey.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -227,8 +302,22 @@ public class AsyncKey {
      * @return {@code CompletableFuture<UpdateComputeKeyResponse>} - The async response
      */
     public CompletableFuture<UpdateComputeKeyResponse> updateComputeKey(@Nonnull UpdateComputeKeyRequest request) {
+        return updateComputeKey(request, null);
+    }
+
+    /**
+     * Update a key
+     * 
+     * <p>Updates the ComputeKey identified by `id`. Provide the unified ComputeKey fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateComputeKeyResponse>} - The async response
+     */
+    public CompletableFuture<UpdateComputeKeyResponse> updateComputeKey(@Nonnull UpdateComputeKeyRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateComputeKeyRequest, UpdateComputeKeyResponse> operation
-              = new UpdateComputeKey.Async(sdkConfiguration, _headers);
+              = new UpdateComputeKey.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

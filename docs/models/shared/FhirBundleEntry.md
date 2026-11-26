@@ -1,0 +1,10 @@
+# FhirBundleEntry
+
+
+## Fields
+
+| Field                                                                                            | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `fullUrl`                                                                                        | *Optional\<String>*                                                                              | :heavy_minus_sign:                                                                               | URI for resource (Absolute URL)                                                                  |
+| `resource`                                                                                       | [Optional\<Resource>](../../models/shared/Resource.md)                                           | :heavy_minus_sign:                                                                               | A resource of the searched type                                                                  |
+| `search`                                                                                         | [Optional\<PropertyFhirBundleEntrySearch>](../../models/shared/PropertyFhirBundleEntrySearch.md) | :heavy_minus_sign:                                                                               | Search related information                                                                       |

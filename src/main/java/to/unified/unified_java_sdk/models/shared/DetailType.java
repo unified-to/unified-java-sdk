@@ -74,6 +74,7 @@ public class DetailType {
     public static final DetailType POSTTAX_DEDUCTION_COLLEGE_SAVINGS = new DetailType("POSTTAX_DEDUCTION_COLLEGE_SAVINGS");
     public static final DetailType POSTTAX_DEDUCTION_UNION_DUES = new DetailType("POSTTAX_DEDUCTION_UNION_DUES");
     public static final DetailType POSTTAX_DEDUCTION_EWA_REPAYMENT = new DetailType("POSTTAX_DEDUCTION_EWA_REPAYMENT");
+    public static final DetailType EARNING_TAXABLE_BENEFIT = new DetailType("EARNING_TAXABLE_BENEFIT");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -196,6 +197,7 @@ public class DetailType {
         map.put("POSTTAX_DEDUCTION_COLLEGE_SAVINGS", POSTTAX_DEDUCTION_COLLEGE_SAVINGS);
         map.put("POSTTAX_DEDUCTION_UNION_DUES", POSTTAX_DEDUCTION_UNION_DUES);
         map.put("POSTTAX_DEDUCTION_EWA_REPAYMENT", POSTTAX_DEDUCTION_EWA_REPAYMENT);
+        map.put("EARNING_TAXABLE_BENEFIT", EARNING_TAXABLE_BENEFIT);
         return map;
     }
 
@@ -250,6 +252,7 @@ public class DetailType {
         map.put("POSTTAX_DEDUCTION_COLLEGE_SAVINGS", DetailTypeEnum.POSTTAX_DEDUCTION_COLLEGE_SAVINGS);
         map.put("POSTTAX_DEDUCTION_UNION_DUES", DetailTypeEnum.POSTTAX_DEDUCTION_UNION_DUES);
         map.put("POSTTAX_DEDUCTION_EWA_REPAYMENT", DetailTypeEnum.POSTTAX_DEDUCTION_EWA_REPAYMENT);
+        map.put("EARNING_TAXABLE_BENEFIT", DetailTypeEnum.EARNING_TAXABLE_BENEFIT);
         return map;
     }
     
@@ -304,7 +307,8 @@ public class DetailType {
         EMPLOYER_CONTRIBUTION_FSA("EMPLOYER_CONTRIBUTION_FSA"),
         POSTTAX_DEDUCTION_COLLEGE_SAVINGS("POSTTAX_DEDUCTION_COLLEGE_SAVINGS"),
         POSTTAX_DEDUCTION_UNION_DUES("POSTTAX_DEDUCTION_UNION_DUES"),
-        POSTTAX_DEDUCTION_EWA_REPAYMENT("POSTTAX_DEDUCTION_EWA_REPAYMENT"),;
+        POSTTAX_DEDUCTION_EWA_REPAYMENT("POSTTAX_DEDUCTION_EWA_REPAYMENT"),
+        EARNING_TAXABLE_BENEFIT("EARNING_TAXABLE_BENEFIT"),;
 
         private final String value;
 

@@ -6,18 +6,28 @@ package to.unified.unified_java_sdk.models.operations;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.PatchAdsAd;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class PatchAdsAdRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private PatchAdsAdRequest request;
+    private final Options.Builder optionsBuilder;
 
     public PatchAdsAdRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public PatchAdsAdRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public PatchAdsAdRequestBuilder request(@Nonnull PatchAdsAdRequest request) {
@@ -42,8 +52,9 @@ public class PatchAdsAdRequestBuilder {
     * @return The response from the server.
     */
     public PatchAdsAdResponse call() {
+        Options options = optionsBuilder.build();
         RequestOperation<PatchAdsAdRequest, PatchAdsAdResponse> operation
-              = new PatchAdsAd.Sync(sdkConfiguration, _headers);
+              = new PatchAdsAd.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateLegalTimeentryRequest;
 import to.unified.unified_java_sdk.models.operations.GetLegalTimeentryRequest;
@@ -32,6 +33,7 @@ import to.unified.unified_java_sdk.operations.PatchLegalTimeentry;
 import to.unified.unified_java_sdk.operations.RemoveLegalTimeentry;
 import to.unified.unified_java_sdk.operations.UpdateLegalTimeentry;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncTimeentry {
@@ -76,8 +78,22 @@ public class AsyncTimeentry {
      * @return {@code CompletableFuture<CreateLegalTimeentryResponse>} - The async response
      */
     public CompletableFuture<CreateLegalTimeentryResponse> createLegalTimeentry(@Nonnull CreateLegalTimeentryRequest request) {
+        return createLegalTimeentry(request, null);
+    }
+
+    /**
+     * Create a timeentry
+     * 
+     * <p>Creates a LegalTimeentry. Provide the unified LegalTimeentry fields in the request body; they are
+     * mapped to the provider's API. Returns the created LegalTimeentry.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateLegalTimeentryResponse>} - The async response
+     */
+    public CompletableFuture<CreateLegalTimeentryResponse> createLegalTimeentry(@Nonnull CreateLegalTimeentryRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateLegalTimeentryRequest, CreateLegalTimeentryResponse> operation
-              = new CreateLegalTimeentry.Async(sdkConfiguration, _headers);
+              = new CreateLegalTimeentry.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -105,8 +121,22 @@ public class AsyncTimeentry {
      * @return {@code CompletableFuture<GetLegalTimeentryResponse>} - The async response
      */
     public CompletableFuture<GetLegalTimeentryResponse> getLegalTimeentry(@Nonnull GetLegalTimeentryRequest request) {
+        return getLegalTimeentry(request, null);
+    }
+
+    /**
+     * Retrieve a timeentry
+     * 
+     * <p>Retrieves a single LegalTimeentry by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetLegalTimeentryResponse>} - The async response
+     */
+    public CompletableFuture<GetLegalTimeentryResponse> getLegalTimeentry(@Nonnull GetLegalTimeentryRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetLegalTimeentryRequest, GetLegalTimeentryResponse> operation
-              = new GetLegalTimeentry.Async(sdkConfiguration, _headers);
+              = new GetLegalTimeentry.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -142,8 +172,26 @@ public class AsyncTimeentry {
      * @return {@code CompletableFuture<ListLegalTimeentriesResponse>} - The async response
      */
     public CompletableFuture<ListLegalTimeentriesResponse> listLegalTimeentries(@Nonnull ListLegalTimeentriesRequest request) {
+        return listLegalTimeentries(request, null);
+    }
+
+    /**
+     * List all timeentries
+     * 
+     * <p>Returns a list of LegalTimeentries. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListLegalTimeentriesResponse>} - The async response
+     */
+    public CompletableFuture<ListLegalTimeentriesResponse> listLegalTimeentries(@Nonnull ListLegalTimeentriesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListLegalTimeentriesRequest, ListLegalTimeentriesResponse> operation
-              = new ListLegalTimeentries.Async(sdkConfiguration, _headers);
+              = new ListLegalTimeentries.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -171,8 +219,22 @@ public class AsyncTimeentry {
      * @return {@code CompletableFuture<PatchLegalTimeentryResponse>} - The async response
      */
     public CompletableFuture<PatchLegalTimeentryResponse> patchLegalTimeentry(@Nonnull PatchLegalTimeentryRequest request) {
+        return patchLegalTimeentry(request, null);
+    }
+
+    /**
+     * Update a timeentry
+     * 
+     * <p>Updates the LegalTimeentry identified by `id`. Provide the unified LegalTimeentry fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchLegalTimeentryResponse>} - The async response
+     */
+    public CompletableFuture<PatchLegalTimeentryResponse> patchLegalTimeentry(@Nonnull PatchLegalTimeentryRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchLegalTimeentryRequest, PatchLegalTimeentryResponse> operation
-              = new PatchLegalTimeentry.Async(sdkConfiguration, _headers);
+              = new PatchLegalTimeentry.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -198,8 +260,21 @@ public class AsyncTimeentry {
      * @return {@code CompletableFuture<RemoveLegalTimeentryResponse>} - The async response
      */
     public CompletableFuture<RemoveLegalTimeentryResponse> removeLegalTimeentry(@Nonnull RemoveLegalTimeentryRequest request) {
+        return removeLegalTimeentry(request, null);
+    }
+
+    /**
+     * Remove a timeentry
+     * 
+     * <p>Deletes the LegalTimeentry identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveLegalTimeentryResponse>} - The async response
+     */
+    public CompletableFuture<RemoveLegalTimeentryResponse> removeLegalTimeentry(@Nonnull RemoveLegalTimeentryRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveLegalTimeentryRequest, RemoveLegalTimeentryResponse> operation
-              = new RemoveLegalTimeentry.Async(sdkConfiguration, _headers);
+              = new RemoveLegalTimeentry.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -227,8 +302,22 @@ public class AsyncTimeentry {
      * @return {@code CompletableFuture<UpdateLegalTimeentryResponse>} - The async response
      */
     public CompletableFuture<UpdateLegalTimeentryResponse> updateLegalTimeentry(@Nonnull UpdateLegalTimeentryRequest request) {
+        return updateLegalTimeentry(request, null);
+    }
+
+    /**
+     * Update a timeentry
+     * 
+     * <p>Updates the LegalTimeentry identified by `id`. Provide the unified LegalTimeentry fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateLegalTimeentryResponse>} - The async response
+     */
+    public CompletableFuture<UpdateLegalTimeentryResponse> updateLegalTimeentry(@Nonnull UpdateLegalTimeentryRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateLegalTimeentryRequest, UpdateLegalTimeentryResponse> operation
-              = new UpdateLegalTimeentry.Async(sdkConfiguration, _headers);
+              = new UpdateLegalTimeentry.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateAdsCreativeRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAdsCreativeRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateAdsCreativeResponse;
@@ -31,6 +32,7 @@ import to.unified.unified_java_sdk.operations.PatchAdsCreative;
 import to.unified.unified_java_sdk.operations.RemoveAdsCreative;
 import to.unified.unified_java_sdk.operations.UpdateAdsCreative;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Creative {
@@ -75,8 +77,23 @@ public class Creative {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateAdsCreativeResponse createAdsCreative(@Nonnull CreateAdsCreativeRequest request) {
+        return createAdsCreative(request, null);
+    }
+
+    /**
+     * Create a creative
+     * 
+     * <p>Creates a AdsCreative. Provide the unified AdsCreative fields in the request body; they are mapped
+     * to the provider's API. Returns the created AdsCreative.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateAdsCreativeResponse createAdsCreative(@Nonnull CreateAdsCreativeRequest request, @Nullable Options options) {
         RequestOperation<CreateAdsCreativeRequest, CreateAdsCreativeResponse> operation
-              = new CreateAdsCreative.Sync(sdkConfiguration, _headers);
+              = new CreateAdsCreative.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -103,8 +120,23 @@ public class Creative {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAdsCreativeResponse getAdsCreative(@Nonnull GetAdsCreativeRequest request) {
+        return getAdsCreative(request, null);
+    }
+
+    /**
+     * Retrieve a creative
+     * 
+     * <p>Retrieves a single AdsCreative by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAdsCreativeResponse getAdsCreative(@Nonnull GetAdsCreativeRequest request, @Nullable Options options) {
         RequestOperation<GetAdsCreativeRequest, GetAdsCreativeResponse> operation
-              = new GetAdsCreative.Sync(sdkConfiguration, _headers);
+              = new GetAdsCreative.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -139,8 +171,27 @@ public class Creative {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAdsCreativesResponse listAdsCreatives(@Nonnull ListAdsCreativesRequest request) {
+        return listAdsCreatives(request, null);
+    }
+
+    /**
+     * List all creatives
+     * 
+     * <p>Returns a list of AdsCreatives. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAdsCreativesResponse listAdsCreatives(@Nonnull ListAdsCreativesRequest request, @Nullable Options options) {
         RequestOperation<ListAdsCreativesRequest, ListAdsCreativesResponse> operation
-              = new ListAdsCreatives.Sync(sdkConfiguration, _headers);
+              = new ListAdsCreatives.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +218,23 @@ public class Creative {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchAdsCreativeResponse patchAdsCreative(@Nonnull PatchAdsCreativeRequest request) {
+        return patchAdsCreative(request, null);
+    }
+
+    /**
+     * Update a creative
+     * 
+     * <p>Updates the AdsCreative identified by `id`. Provide the unified AdsCreative fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchAdsCreativeResponse patchAdsCreative(@Nonnull PatchAdsCreativeRequest request, @Nullable Options options) {
         RequestOperation<PatchAdsCreativeRequest, PatchAdsCreativeResponse> operation
-              = new PatchAdsCreative.Sync(sdkConfiguration, _headers);
+              = new PatchAdsCreative.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -193,8 +259,22 @@ public class Creative {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveAdsCreativeResponse removeAdsCreative(@Nonnull RemoveAdsCreativeRequest request) {
+        return removeAdsCreative(request, null);
+    }
+
+    /**
+     * Remove a creative
+     * 
+     * <p>Deletes the AdsCreative identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveAdsCreativeResponse removeAdsCreative(@Nonnull RemoveAdsCreativeRequest request, @Nullable Options options) {
         RequestOperation<RemoveAdsCreativeRequest, RemoveAdsCreativeResponse> operation
-              = new RemoveAdsCreative.Sync(sdkConfiguration, _headers);
+              = new RemoveAdsCreative.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -221,8 +301,23 @@ public class Creative {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateAdsCreativeResponse updateAdsCreative(@Nonnull UpdateAdsCreativeRequest request) {
+        return updateAdsCreative(request, null);
+    }
+
+    /**
+     * Update a creative
+     * 
+     * <p>Updates the AdsCreative identified by `id`. Provide the unified AdsCreative fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateAdsCreativeResponse updateAdsCreative(@Nonnull UpdateAdsCreativeRequest request, @Nullable Options options) {
         RequestOperation<UpdateAdsCreativeRequest, UpdateAdsCreativeResponse> operation
-              = new UpdateAdsCreative.Sync(sdkConfiguration, _headers);
+              = new UpdateAdsCreative.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

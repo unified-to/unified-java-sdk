@@ -7,6 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 import static to.unified.unified_java_sdk.operations.Operations.RequestlessOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateUnifiedSecretsmanagerRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateUnifiedSecretsmanagerResponse;
 import to.unified.unified_java_sdk.models.operations.GetUnifiedSecretsmanagerRequest;
@@ -39,6 +40,7 @@ import to.unified.unified_java_sdk.operations.PatchUnifiedSecretsmanager;
 import to.unified.unified_java_sdk.operations.RemoveUnifiedSecretsmanager;
 import to.unified.unified_java_sdk.operations.UpdateUnifiedSecretsmanager;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Secretsmanager {
@@ -77,8 +79,20 @@ public class Secretsmanager {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateUnifiedSecretsmanagerResponse createUnifiedSecretsmanager(@Nonnull SecretsManager request) {
+        return createUnifiedSecretsmanager(request, null);
+    }
+
+    /**
+     * Create secrets manager
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateUnifiedSecretsmanagerResponse createUnifiedSecretsmanager(@Nonnull SecretsManager request, @Nullable Options options) {
         RequestOperation<SecretsManager, CreateUnifiedSecretsmanagerResponse> operation
-              = new CreateUnifiedSecretsmanager.Sync(sdkConfiguration, _headers);
+              = new CreateUnifiedSecretsmanager.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -99,8 +113,20 @@ public class Secretsmanager {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetUnifiedSecretsmanagerResponse getUnifiedSecretsmanager(@Nonnull GetUnifiedSecretsmanagerRequest request) {
+        return getUnifiedSecretsmanager(request, null);
+    }
+
+    /**
+     * Retrieve secrets manager
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetUnifiedSecretsmanagerResponse getUnifiedSecretsmanager(@Nonnull GetUnifiedSecretsmanagerRequest request, @Nullable Options options) {
         RequestOperation<GetUnifiedSecretsmanagerRequest, GetUnifiedSecretsmanagerResponse> operation
-              = new GetUnifiedSecretsmanager.Sync(sdkConfiguration, _headers);
+              = new GetUnifiedSecretsmanager.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -120,8 +146,19 @@ public class Secretsmanager {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListUnifiedSecretsmanagerInstructionsResponse listUnifiedSecretsmanagerInstructionsDirect() {
+        return listUnifiedSecretsmanagerInstructions(null);
+    }
+
+    /**
+     * List secrets manager setup instructions
+     * 
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListUnifiedSecretsmanagerInstructionsResponse listUnifiedSecretsmanagerInstructions(@Nullable Options options) {
         RequestlessOperation<ListUnifiedSecretsmanagerInstructionsResponse> operation
-            = new ListUnifiedSecretsmanagerInstructions.Sync(sdkConfiguration, _headers);
+            = new ListUnifiedSecretsmanagerInstructions.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest());
     }
 
@@ -142,8 +179,20 @@ public class Secretsmanager {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListUnifiedSecretsmanagerSecretsResponse listUnifiedSecretsmanagerSecrets(@Nonnull ListUnifiedSecretsmanagerSecretsRequest request) {
+        return listUnifiedSecretsmanagerSecrets(request, null);
+    }
+
+    /**
+     * List secrets in a secrets manager
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListUnifiedSecretsmanagerSecretsResponse listUnifiedSecretsmanagerSecrets(@Nonnull ListUnifiedSecretsmanagerSecretsRequest request, @Nullable Options options) {
         RequestOperation<ListUnifiedSecretsmanagerSecretsRequest, ListUnifiedSecretsmanagerSecretsResponse> operation
-              = new ListUnifiedSecretsmanagerSecrets.Sync(sdkConfiguration, _headers);
+              = new ListUnifiedSecretsmanagerSecrets.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -164,8 +213,20 @@ public class Secretsmanager {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListUnifiedSecretsmanagersResponse listUnifiedSecretsmanagers(@Nonnull ListUnifiedSecretsmanagersRequest request) {
+        return listUnifiedSecretsmanagers(request, null);
+    }
+
+    /**
+     * List secrets managers
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListUnifiedSecretsmanagersResponse listUnifiedSecretsmanagers(@Nonnull ListUnifiedSecretsmanagersRequest request, @Nullable Options options) {
         RequestOperation<ListUnifiedSecretsmanagersRequest, ListUnifiedSecretsmanagersResponse> operation
-              = new ListUnifiedSecretsmanagers.Sync(sdkConfiguration, _headers);
+              = new ListUnifiedSecretsmanagers.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -186,8 +247,20 @@ public class Secretsmanager {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchUnifiedSecretsmanagerResponse patchUnifiedSecretsmanager(@Nonnull PatchUnifiedSecretsmanagerRequest request) {
+        return patchUnifiedSecretsmanager(request, null);
+    }
+
+    /**
+     * Update secrets manager
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchUnifiedSecretsmanagerResponse patchUnifiedSecretsmanager(@Nonnull PatchUnifiedSecretsmanagerRequest request, @Nullable Options options) {
         RequestOperation<PatchUnifiedSecretsmanagerRequest, PatchUnifiedSecretsmanagerResponse> operation
-              = new PatchUnifiedSecretsmanager.Sync(sdkConfiguration, _headers);
+              = new PatchUnifiedSecretsmanager.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -208,8 +281,20 @@ public class Secretsmanager {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveUnifiedSecretsmanagerResponse removeUnifiedSecretsmanager(@Nonnull RemoveUnifiedSecretsmanagerRequest request) {
+        return removeUnifiedSecretsmanager(request, null);
+    }
+
+    /**
+     * Remove secrets manager
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveUnifiedSecretsmanagerResponse removeUnifiedSecretsmanager(@Nonnull RemoveUnifiedSecretsmanagerRequest request, @Nullable Options options) {
         RequestOperation<RemoveUnifiedSecretsmanagerRequest, RemoveUnifiedSecretsmanagerResponse> operation
-              = new RemoveUnifiedSecretsmanager.Sync(sdkConfiguration, _headers);
+              = new RemoveUnifiedSecretsmanager.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -230,8 +315,20 @@ public class Secretsmanager {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateUnifiedSecretsmanagerResponse updateUnifiedSecretsmanager(@Nonnull UpdateUnifiedSecretsmanagerRequest request) {
+        return updateUnifiedSecretsmanager(request, null);
+    }
+
+    /**
+     * Update secrets manager
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateUnifiedSecretsmanagerResponse updateUnifiedSecretsmanager(@Nonnull UpdateUnifiedSecretsmanagerRequest request, @Nullable Options options) {
         RequestOperation<UpdateUnifiedSecretsmanagerRequest, UpdateUnifiedSecretsmanagerResponse> operation
-              = new UpdateUnifiedSecretsmanager.Sync(sdkConfiguration, _headers);
+              = new UpdateUnifiedSecretsmanager.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

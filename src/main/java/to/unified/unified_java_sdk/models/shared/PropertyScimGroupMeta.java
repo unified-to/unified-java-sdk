@@ -33,7 +33,7 @@ public class PropertyScimGroupMeta {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceType")
-    private ResourceType resourceType;
+    private PropertyScimGroupMetaResourceType resourceType;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -45,7 +45,7 @@ public class PropertyScimGroupMeta {
             @JsonProperty("created") @Nullable String created,
             @JsonProperty("lastModified") @Nullable String lastModified,
             @JsonProperty("location") @Nullable String location,
-            @JsonProperty("resourceType") @Nullable ResourceType resourceType,
+            @JsonProperty("resourceType") @Nullable PropertyScimGroupMetaResourceType resourceType,
             @JsonProperty("version") @Nullable String version) {
         this.created = created;
         this.lastModified = lastModified;
@@ -71,7 +71,7 @@ public class PropertyScimGroupMeta {
         return Optional.ofNullable(this.location);
     }
 
-    public Optional<ResourceType> resourceType() {
+    public Optional<PropertyScimGroupMetaResourceType> resourceType() {
         return Optional.ofNullable(this.resourceType);
     }
 
@@ -102,7 +102,7 @@ public class PropertyScimGroupMeta {
     }
 
 
-    public PropertyScimGroupMeta withResourceType(@Nullable ResourceType resourceType) {
+    public PropertyScimGroupMeta withResourceType(@Nullable PropertyScimGroupMetaResourceType resourceType) {
         this.resourceType = resourceType;
         return this;
     }
@@ -157,7 +157,7 @@ public class PropertyScimGroupMeta {
 
         private String location;
 
-        private ResourceType resourceType;
+        private PropertyScimGroupMetaResourceType resourceType;
 
         private String version;
 
@@ -180,7 +180,7 @@ public class PropertyScimGroupMeta {
             return this;
         }
 
-        public Builder resourceType(@Nullable ResourceType resourceType) {
+        public Builder resourceType(@Nullable PropertyScimGroupMetaResourceType resourceType) {
             this.resourceType = resourceType;
             return this;
         }

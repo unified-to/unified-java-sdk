@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreatePlmChangeRequest;
 import to.unified.unified_java_sdk.models.operations.GetPlmChangeRequest;
@@ -36,6 +37,7 @@ import to.unified.unified_java_sdk.operations.ListTaskChanges;
 import to.unified.unified_java_sdk.operations.PatchPlmChange;
 import to.unified.unified_java_sdk.operations.UpdatePlmChange;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncChange {
@@ -80,8 +82,22 @@ public class AsyncChange {
      * @return {@code CompletableFuture<CreatePlmChangeResponse>} - The async response
      */
     public CompletableFuture<CreatePlmChangeResponse> createPlmChange(@Nonnull CreatePlmChangeRequest request) {
+        return createPlmChange(request, null);
+    }
+
+    /**
+     * Create a change
+     * 
+     * <p>Creates a PlmChange. Provide the unified PlmChange fields in the request body; they are mapped to
+     * the provider's API. Returns the created PlmChange.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreatePlmChangeResponse>} - The async response
+     */
+    public CompletableFuture<CreatePlmChangeResponse> createPlmChange(@Nonnull CreatePlmChangeRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreatePlmChangeRequest, CreatePlmChangeResponse> operation
-              = new CreatePlmChange.Async(sdkConfiguration, _headers);
+              = new CreatePlmChange.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -109,8 +125,22 @@ public class AsyncChange {
      * @return {@code CompletableFuture<GetPlmChangeResponse>} - The async response
      */
     public CompletableFuture<GetPlmChangeResponse> getPlmChange(@Nonnull GetPlmChangeRequest request) {
+        return getPlmChange(request, null);
+    }
+
+    /**
+     * Retrieve a change
+     * 
+     * <p>Retrieves a single PlmChange by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetPlmChangeResponse>} - The async response
+     */
+    public CompletableFuture<GetPlmChangeResponse> getPlmChange(@Nonnull GetPlmChangeRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetPlmChangeRequest, GetPlmChangeResponse> operation
-              = new GetPlmChange.Async(sdkConfiguration, _headers);
+              = new GetPlmChange.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -138,8 +168,22 @@ public class AsyncChange {
      * @return {@code CompletableFuture<GetTaskChangeResponse>} - The async response
      */
     public CompletableFuture<GetTaskChangeResponse> getTaskChange(@Nonnull GetTaskChangeRequest request) {
+        return getTaskChange(request, null);
+    }
+
+    /**
+     * Retrieve a change
+     * 
+     * <p>Retrieves a single TaskChange by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetTaskChangeResponse>} - The async response
+     */
+    public CompletableFuture<GetTaskChangeResponse> getTaskChange(@Nonnull GetTaskChangeRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetTaskChangeRequest, GetTaskChangeResponse> operation
-              = new GetTaskChange.Async(sdkConfiguration, _headers);
+              = new GetTaskChange.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -175,8 +219,26 @@ public class AsyncChange {
      * @return {@code CompletableFuture<ListPlmChangesResponse>} - The async response
      */
     public CompletableFuture<ListPlmChangesResponse> listPlmChanges(@Nonnull ListPlmChangesRequest request) {
+        return listPlmChanges(request, null);
+    }
+
+    /**
+     * List all changes
+     * 
+     * <p>Returns a list of PlmChanges. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListPlmChangesResponse>} - The async response
+     */
+    public CompletableFuture<ListPlmChangesResponse> listPlmChanges(@Nonnull ListPlmChangesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListPlmChangesRequest, ListPlmChangesResponse> operation
-              = new ListPlmChanges.Async(sdkConfiguration, _headers);
+              = new ListPlmChanges.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -212,8 +274,26 @@ public class AsyncChange {
      * @return {@code CompletableFuture<ListTaskChangesResponse>} - The async response
      */
     public CompletableFuture<ListTaskChangesResponse> listTaskChanges(@Nonnull ListTaskChangesRequest request) {
+        return listTaskChanges(request, null);
+    }
+
+    /**
+     * List all changes
+     * 
+     * <p>Returns a list of TaskChanges. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListTaskChangesResponse>} - The async response
+     */
+    public CompletableFuture<ListTaskChangesResponse> listTaskChanges(@Nonnull ListTaskChangesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListTaskChangesRequest, ListTaskChangesResponse> operation
-              = new ListTaskChanges.Async(sdkConfiguration, _headers);
+              = new ListTaskChanges.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -241,8 +321,22 @@ public class AsyncChange {
      * @return {@code CompletableFuture<PatchPlmChangeResponse>} - The async response
      */
     public CompletableFuture<PatchPlmChangeResponse> patchPlmChange(@Nonnull PatchPlmChangeRequest request) {
+        return patchPlmChange(request, null);
+    }
+
+    /**
+     * Update a change
+     * 
+     * <p>Updates the PlmChange identified by `id`. Provide the unified PlmChange fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchPlmChangeResponse>} - The async response
+     */
+    public CompletableFuture<PatchPlmChangeResponse> patchPlmChange(@Nonnull PatchPlmChangeRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchPlmChangeRequest, PatchPlmChangeResponse> operation
-              = new PatchPlmChange.Async(sdkConfiguration, _headers);
+              = new PatchPlmChange.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -270,8 +364,22 @@ public class AsyncChange {
      * @return {@code CompletableFuture<UpdatePlmChangeResponse>} - The async response
      */
     public CompletableFuture<UpdatePlmChangeResponse> updatePlmChange(@Nonnull UpdatePlmChangeRequest request) {
+        return updatePlmChange(request, null);
+    }
+
+    /**
+     * Update a change
+     * 
+     * <p>Updates the PlmChange identified by `id`. Provide the unified PlmChange fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdatePlmChangeResponse>} - The async response
+     */
+    public CompletableFuture<UpdatePlmChangeResponse> updatePlmChange(@Nonnull UpdatePlmChangeRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdatePlmChangeRequest, UpdatePlmChangeResponse> operation
-              = new UpdatePlmChange.Async(sdkConfiguration, _headers);
+              = new UpdatePlmChange.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

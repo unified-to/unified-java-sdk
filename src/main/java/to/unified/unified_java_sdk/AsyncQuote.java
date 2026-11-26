@@ -6,8 +6,10 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingQuoteRequest;
+import to.unified.unified_java_sdk.models.operations.CreatePrintingQuoteRequest;
 import to.unified.unified_java_sdk.models.operations.CreatePropertyQuoteRequest;
 import to.unified.unified_java_sdk.models.operations.GetAccountingQuoteRequest;
 import to.unified.unified_java_sdk.models.operations.ListAccountingQuotesRequest;
@@ -16,6 +18,8 @@ import to.unified.unified_java_sdk.models.operations.RemoveAccountingQuoteReques
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingQuoteRequest;
 import to.unified.unified_java_sdk.models.operations.async.CreateAccountingQuoteRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.CreateAccountingQuoteResponse;
+import to.unified.unified_java_sdk.models.operations.async.CreatePrintingQuoteRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreatePrintingQuoteResponse;
 import to.unified.unified_java_sdk.models.operations.async.CreatePropertyQuoteRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.CreatePropertyQuoteResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetAccountingQuoteRequestBuilder;
@@ -29,6 +33,7 @@ import to.unified.unified_java_sdk.models.operations.async.RemoveAccountingQuote
 import to.unified.unified_java_sdk.models.operations.async.UpdateAccountingQuoteRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.UpdateAccountingQuoteResponse;
 import to.unified.unified_java_sdk.operations.CreateAccountingQuote;
+import to.unified.unified_java_sdk.operations.CreatePrintingQuote;
 import to.unified.unified_java_sdk.operations.CreatePropertyQuote;
 import to.unified.unified_java_sdk.operations.GetAccountingQuote;
 import to.unified.unified_java_sdk.operations.ListAccountingQuotes;
@@ -36,6 +41,7 @@ import to.unified.unified_java_sdk.operations.PatchAccountingQuote;
 import to.unified.unified_java_sdk.operations.RemoveAccountingQuote;
 import to.unified.unified_java_sdk.operations.UpdateAccountingQuote;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncQuote {
@@ -80,8 +86,65 @@ public class AsyncQuote {
      * @return {@code CompletableFuture<CreateAccountingQuoteResponse>} - The async response
      */
     public CompletableFuture<CreateAccountingQuoteResponse> createAccountingQuote(@Nonnull CreateAccountingQuoteRequest request) {
+        return createAccountingQuote(request, null);
+    }
+
+    /**
+     * Create a quote
+     * 
+     * <p>Creates a AccountingQuote. Provide the unified AccountingQuote fields in the request body; they are
+     * mapped to the provider's API. Returns the created AccountingQuote.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateAccountingQuoteResponse>} - The async response
+     */
+    public CompletableFuture<CreateAccountingQuoteResponse> createAccountingQuote(@Nonnull CreateAccountingQuoteRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateAccountingQuoteRequest, CreateAccountingQuoteResponse> operation
-              = new CreateAccountingQuote.Async(sdkConfiguration, _headers);
+              = new CreateAccountingQuote.Async(sdkConfiguration, options, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Create a quote
+     * 
+     * <p>Creates a PrintingQuote. Provide the unified PrintingQuote fields in the request body; they are
+     * mapped to the provider's API. Returns the created PrintingQuote.
+     * 
+     * @return The async call builder
+     */
+    public CreatePrintingQuoteRequestBuilder createPrintingQuote() {
+        return new CreatePrintingQuoteRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Create a quote
+     * 
+     * <p>Creates a PrintingQuote. Provide the unified PrintingQuote fields in the request body; they are
+     * mapped to the provider's API. Returns the created PrintingQuote.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<CreatePrintingQuoteResponse>} - The async response
+     */
+    public CompletableFuture<CreatePrintingQuoteResponse> createPrintingQuote(@Nonnull CreatePrintingQuoteRequest request) {
+        return createPrintingQuote(request, null);
+    }
+
+    /**
+     * Create a quote
+     * 
+     * <p>Creates a PrintingQuote. Provide the unified PrintingQuote fields in the request body; they are
+     * mapped to the provider's API. Returns the created PrintingQuote.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreatePrintingQuoteResponse>} - The async response
+     */
+    public CompletableFuture<CreatePrintingQuoteResponse> createPrintingQuote(@Nonnull CreatePrintingQuoteRequest request, @Nullable Options options) {
+        AsyncRequestOperation<CreatePrintingQuoteRequest, CreatePrintingQuoteResponse> operation
+              = new CreatePrintingQuote.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -109,8 +172,22 @@ public class AsyncQuote {
      * @return {@code CompletableFuture<CreatePropertyQuoteResponse>} - The async response
      */
     public CompletableFuture<CreatePropertyQuoteResponse> createPropertyQuote(@Nonnull CreatePropertyQuoteRequest request) {
+        return createPropertyQuote(request, null);
+    }
+
+    /**
+     * Create a quote
+     * 
+     * <p>Creates a PropertyQuote. Provide the unified PropertyQuote fields in the request body; they are
+     * mapped to the provider's API. Returns the created PropertyQuote.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreatePropertyQuoteResponse>} - The async response
+     */
+    public CompletableFuture<CreatePropertyQuoteResponse> createPropertyQuote(@Nonnull CreatePropertyQuoteRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreatePropertyQuoteRequest, CreatePropertyQuoteResponse> operation
-              = new CreatePropertyQuote.Async(sdkConfiguration, _headers);
+              = new CreatePropertyQuote.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -138,8 +215,22 @@ public class AsyncQuote {
      * @return {@code CompletableFuture<GetAccountingQuoteResponse>} - The async response
      */
     public CompletableFuture<GetAccountingQuoteResponse> getAccountingQuote(@Nonnull GetAccountingQuoteRequest request) {
+        return getAccountingQuote(request, null);
+    }
+
+    /**
+     * Retrieve a quote
+     * 
+     * <p>Retrieves a single AccountingQuote by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetAccountingQuoteResponse>} - The async response
+     */
+    public CompletableFuture<GetAccountingQuoteResponse> getAccountingQuote(@Nonnull GetAccountingQuoteRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetAccountingQuoteRequest, GetAccountingQuoteResponse> operation
-              = new GetAccountingQuote.Async(sdkConfiguration, _headers);
+              = new GetAccountingQuote.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -175,8 +266,26 @@ public class AsyncQuote {
      * @return {@code CompletableFuture<ListAccountingQuotesResponse>} - The async response
      */
     public CompletableFuture<ListAccountingQuotesResponse> listAccountingQuotes(@Nonnull ListAccountingQuotesRequest request) {
+        return listAccountingQuotes(request, null);
+    }
+
+    /**
+     * List all quotes
+     * 
+     * <p>Returns a list of AccountingQuotes. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListAccountingQuotesResponse>} - The async response
+     */
+    public CompletableFuture<ListAccountingQuotesResponse> listAccountingQuotes(@Nonnull ListAccountingQuotesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListAccountingQuotesRequest, ListAccountingQuotesResponse> operation
-              = new ListAccountingQuotes.Async(sdkConfiguration, _headers);
+              = new ListAccountingQuotes.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -204,8 +313,22 @@ public class AsyncQuote {
      * @return {@code CompletableFuture<PatchAccountingQuoteResponse>} - The async response
      */
     public CompletableFuture<PatchAccountingQuoteResponse> patchAccountingQuote(@Nonnull PatchAccountingQuoteRequest request) {
+        return patchAccountingQuote(request, null);
+    }
+
+    /**
+     * Update a quote
+     * 
+     * <p>Updates the AccountingQuote identified by `id`. Provide the unified AccountingQuote fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchAccountingQuoteResponse>} - The async response
+     */
+    public CompletableFuture<PatchAccountingQuoteResponse> patchAccountingQuote(@Nonnull PatchAccountingQuoteRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchAccountingQuoteRequest, PatchAccountingQuoteResponse> operation
-              = new PatchAccountingQuote.Async(sdkConfiguration, _headers);
+              = new PatchAccountingQuote.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -231,8 +354,21 @@ public class AsyncQuote {
      * @return {@code CompletableFuture<RemoveAccountingQuoteResponse>} - The async response
      */
     public CompletableFuture<RemoveAccountingQuoteResponse> removeAccountingQuote(@Nonnull RemoveAccountingQuoteRequest request) {
+        return removeAccountingQuote(request, null);
+    }
+
+    /**
+     * Remove a quote
+     * 
+     * <p>Deletes the AccountingQuote identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveAccountingQuoteResponse>} - The async response
+     */
+    public CompletableFuture<RemoveAccountingQuoteResponse> removeAccountingQuote(@Nonnull RemoveAccountingQuoteRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveAccountingQuoteRequest, RemoveAccountingQuoteResponse> operation
-              = new RemoveAccountingQuote.Async(sdkConfiguration, _headers);
+              = new RemoveAccountingQuote.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -260,8 +396,22 @@ public class AsyncQuote {
      * @return {@code CompletableFuture<UpdateAccountingQuoteResponse>} - The async response
      */
     public CompletableFuture<UpdateAccountingQuoteResponse> updateAccountingQuote(@Nonnull UpdateAccountingQuoteRequest request) {
+        return updateAccountingQuote(request, null);
+    }
+
+    /**
+     * Update a quote
+     * 
+     * <p>Updates the AccountingQuote identified by `id`. Provide the unified AccountingQuote fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateAccountingQuoteResponse>} - The async response
+     */
+    public CompletableFuture<UpdateAccountingQuoteResponse> updateAccountingQuote(@Nonnull UpdateAccountingQuoteRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateAccountingQuoteRequest, UpdateAccountingQuoteResponse> operation
-              = new UpdateAccountingQuote.Async(sdkConfiguration, _headers);
+              = new UpdateAccountingQuote.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

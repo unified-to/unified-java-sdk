@@ -6,18 +6,28 @@ package to.unified.unified_java_sdk.models.operations;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.CreateComputeVolume;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class CreateComputeVolumeRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private CreateComputeVolumeRequest request;
+    private final Options.Builder optionsBuilder;
 
     public CreateComputeVolumeRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public CreateComputeVolumeRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public CreateComputeVolumeRequestBuilder request(@Nonnull CreateComputeVolumeRequest request) {
@@ -42,8 +52,9 @@ public class CreateComputeVolumeRequestBuilder {
     * @return The response from the server.
     */
     public CreateComputeVolumeResponse call() {
+        Options options = optionsBuilder.build();
         RequestOperation<CreateComputeVolumeRequest, CreateComputeVolumeResponse> operation
-              = new CreateComputeVolume.Sync(sdkConfiguration, _headers);
+              = new CreateComputeVolume.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.GetUnifiedIntegrationAuthRequest;
 import to.unified.unified_java_sdk.models.operations.ListUnifiedIntegrationWorkspacesRequest;
@@ -20,6 +21,7 @@ import to.unified.unified_java_sdk.operations.GetUnifiedIntegrationAuth;
 import to.unified.unified_java_sdk.operations.ListUnifiedIntegrationWorkspaces;
 import to.unified.unified_java_sdk.operations.ListUnifiedIntegrations;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncIntegration {
@@ -66,8 +68,23 @@ public class AsyncIntegration {
      * @return {@code CompletableFuture<GetUnifiedIntegrationAuthResponse>} - The async response
      */
     public CompletableFuture<GetUnifiedIntegrationAuthResponse> getUnifiedIntegrationAuth(@Nonnull GetUnifiedIntegrationAuthRequest request) {
+        return getUnifiedIntegrationAuth(request, null);
+    }
+
+    /**
+     * Authorize or re-authorize a connection
+     * 
+     * <p>Returns an authorization URL for the specified integration. After successful authorization, a new
+     * connection is created unless connection_id and reauth_token are provided, in which case the existing
+     * connection is updated in place.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetUnifiedIntegrationAuthResponse>} - The async response
+     */
+    public CompletableFuture<GetUnifiedIntegrationAuthResponse> getUnifiedIntegrationAuth(@Nonnull GetUnifiedIntegrationAuthRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetUnifiedIntegrationAuthRequest, GetUnifiedIntegrationAuthResponse> operation
-              = new GetUnifiedIntegrationAuth.Async(sdkConfiguration, _headers);
+              = new GetUnifiedIntegrationAuth.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -93,8 +110,21 @@ public class AsyncIntegration {
      * @return {@code CompletableFuture<ListUnifiedIntegrationWorkspacesResponse>} - The async response
      */
     public CompletableFuture<ListUnifiedIntegrationWorkspacesResponse> listUnifiedIntegrationWorkspaces(@Nonnull ListUnifiedIntegrationWorkspacesRequest request) {
+        return listUnifiedIntegrationWorkspaces(request, null);
+    }
+
+    /**
+     * Returns all activated integrations in a workspace
+     * 
+     * <p>No authentication required as this is to be used by front-end interface
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListUnifiedIntegrationWorkspacesResponse>} - The async response
+     */
+    public CompletableFuture<ListUnifiedIntegrationWorkspacesResponse> listUnifiedIntegrationWorkspaces(@Nonnull ListUnifiedIntegrationWorkspacesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListUnifiedIntegrationWorkspacesRequest, ListUnifiedIntegrationWorkspacesResponse> operation
-              = new ListUnifiedIntegrationWorkspaces.Async(sdkConfiguration, _headers);
+              = new ListUnifiedIntegrationWorkspaces.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -116,8 +146,19 @@ public class AsyncIntegration {
      * @return {@code CompletableFuture<ListUnifiedIntegrationsResponse>} - The async response
      */
     public CompletableFuture<ListUnifiedIntegrationsResponse> listUnifiedIntegrations(@Nonnull ListUnifiedIntegrationsRequest request) {
+        return listUnifiedIntegrations(request, null);
+    }
+
+    /**
+     * Returns all integrations
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListUnifiedIntegrationsResponse>} - The async response
+     */
+    public CompletableFuture<ListUnifiedIntegrationsResponse> listUnifiedIntegrations(@Nonnull ListUnifiedIntegrationsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListUnifiedIntegrationsRequest, ListUnifiedIntegrationsResponse> operation
-              = new ListUnifiedIntegrations.Async(sdkConfiguration, _headers);
+              = new ListUnifiedIntegrations.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

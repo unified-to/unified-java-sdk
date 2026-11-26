@@ -6,15 +6,25 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import to.unified.unified_java_sdk.models.operations.GetFhirImmunizationRequest;
+import to.unified.unified_java_sdk.models.operations.GetFhirImmunizationRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetFhirImmunizationResponse;
 import to.unified.unified_java_sdk.models.operations.GetHealthcareImmunizationRequest;
 import to.unified.unified_java_sdk.models.operations.GetHealthcareImmunizationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetHealthcareImmunizationResponse;
+import to.unified.unified_java_sdk.models.operations.ListFhirImmunizationsRequest;
+import to.unified.unified_java_sdk.models.operations.ListFhirImmunizationsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListFhirImmunizationsResponse;
 import to.unified.unified_java_sdk.models.operations.ListHealthcareImmunizationsRequest;
 import to.unified.unified_java_sdk.models.operations.ListHealthcareImmunizationsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListHealthcareImmunizationsResponse;
+import to.unified.unified_java_sdk.operations.GetFhirImmunization;
 import to.unified.unified_java_sdk.operations.GetHealthcareImmunization;
+import to.unified.unified_java_sdk.operations.ListFhirImmunizations;
 import to.unified.unified_java_sdk.operations.ListHealthcareImmunizations;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Immunization {
@@ -34,6 +44,49 @@ public class Immunization {
      */
     public AsyncImmunization async() {
         return asyncSDK;
+    }
+
+    /**
+     * Read a Immunization
+     * 
+     * <p>Responses use the application/fhir+json media type; errors are OperationOutcome resources. Read-only
+     * (FHIR R4 4.0.1).
+     * 
+     * @return The call builder
+     */
+    public GetFhirImmunizationRequestBuilder getFhirImmunization() {
+        return new GetFhirImmunizationRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Read a Immunization
+     * 
+     * <p>Responses use the application/fhir+json media type; errors are OperationOutcome resources. Read-only
+     * (FHIR R4 4.0.1).
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetFhirImmunizationResponse getFhirImmunization(@Nonnull GetFhirImmunizationRequest request) {
+        return getFhirImmunization(request, null);
+    }
+
+    /**
+     * Read a Immunization
+     * 
+     * <p>Responses use the application/fhir+json media type; errors are OperationOutcome resources. Read-only
+     * (FHIR R4 4.0.1).
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetFhirImmunizationResponse getFhirImmunization(@Nonnull GetFhirImmunizationRequest request, @Nullable Options options) {
+        RequestOperation<GetFhirImmunizationRequest, GetFhirImmunizationResponse> operation
+              = new GetFhirImmunization.Sync(sdkConfiguration, options, _headers);
+        return operation.handleResponse(operation.doRequest(request));
     }
 
     /**
@@ -59,8 +112,66 @@ public class Immunization {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetHealthcareImmunizationResponse getHealthcareImmunization(@Nonnull GetHealthcareImmunizationRequest request) {
+        return getHealthcareImmunization(request, null);
+    }
+
+    /**
+     * Retrieve an immunization
+     * 
+     * <p>Retrieves a single HealthcareImmunization by its `id`. Obtain `id` values from the corresponding
+     * list endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetHealthcareImmunizationResponse getHealthcareImmunization(@Nonnull GetHealthcareImmunizationRequest request, @Nullable Options options) {
         RequestOperation<GetHealthcareImmunizationRequest, GetHealthcareImmunizationResponse> operation
-              = new GetHealthcareImmunization.Sync(sdkConfiguration, _headers);
+              = new GetHealthcareImmunization.Sync(sdkConfiguration, options, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Search Immunization resources
+     * 
+     * <p>Returns a searchset Bundle; follow its next link for more pages. Responses use the
+     * application/fhir+json media type; errors are OperationOutcome resources. Read-only (FHIR R4 4.0.1).
+     * 
+     * @return The call builder
+     */
+    public ListFhirImmunizationsRequestBuilder listFhirImmunizations() {
+        return new ListFhirImmunizationsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Search Immunization resources
+     * 
+     * <p>Returns a searchset Bundle; follow its next link for more pages. Responses use the
+     * application/fhir+json media type; errors are OperationOutcome resources. Read-only (FHIR R4 4.0.1).
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListFhirImmunizationsResponse listFhirImmunizations(@Nonnull ListFhirImmunizationsRequest request) {
+        return listFhirImmunizations(request, null);
+    }
+
+    /**
+     * Search Immunization resources
+     * 
+     * <p>Returns a searchset Bundle; follow its next link for more pages. Responses use the
+     * application/fhir+json media type; errors are OperationOutcome resources. Read-only (FHIR R4 4.0.1).
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListFhirImmunizationsResponse listFhirImmunizations(@Nonnull ListFhirImmunizationsRequest request, @Nullable Options options) {
+        RequestOperation<ListFhirImmunizationsRequest, ListFhirImmunizationsResponse> operation
+              = new ListFhirImmunizations.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -95,8 +206,27 @@ public class Immunization {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListHealthcareImmunizationsResponse listHealthcareImmunizations(@Nonnull ListHealthcareImmunizationsRequest request) {
+        return listHealthcareImmunizations(request, null);
+    }
+
+    /**
+     * List all immunizations
+     * 
+     * <p>Returns a list of HealthcareImmunizations. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListHealthcareImmunizationsResponse listHealthcareImmunizations(@Nonnull ListHealthcareImmunizationsRequest request, @Nullable Options options) {
         RequestOperation<ListHealthcareImmunizationsRequest, ListHealthcareImmunizationsResponse> operation
-              = new ListHealthcareImmunizations.Sync(sdkConfiguration, _headers);
+              = new ListHealthcareImmunizations.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

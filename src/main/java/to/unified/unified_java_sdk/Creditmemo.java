@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingCreditmemoRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingCreditmemoRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingCreditmemoResponse;
@@ -31,6 +32,7 @@ import to.unified.unified_java_sdk.operations.PatchAccountingCreditmemo;
 import to.unified.unified_java_sdk.operations.RemoveAccountingCreditmemo;
 import to.unified.unified_java_sdk.operations.UpdateAccountingCreditmemo;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Creditmemo {
@@ -75,8 +77,23 @@ public class Creditmemo {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateAccountingCreditmemoResponse createAccountingCreditmemo(@Nonnull CreateAccountingCreditmemoRequest request) {
+        return createAccountingCreditmemo(request, null);
+    }
+
+    /**
+     * Create a creditmemo
+     * 
+     * <p>Creates a AccountingCreditmemo. Provide the unified AccountingCreditmemo fields in the request body;
+     * they are mapped to the provider's API. Returns the created AccountingCreditmemo.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateAccountingCreditmemoResponse createAccountingCreditmemo(@Nonnull CreateAccountingCreditmemoRequest request, @Nullable Options options) {
         RequestOperation<CreateAccountingCreditmemoRequest, CreateAccountingCreditmemoResponse> operation
-              = new CreateAccountingCreditmemo.Sync(sdkConfiguration, _headers);
+              = new CreateAccountingCreditmemo.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -103,8 +120,23 @@ public class Creditmemo {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAccountingCreditmemoResponse getAccountingCreditmemo(@Nonnull GetAccountingCreditmemoRequest request) {
+        return getAccountingCreditmemo(request, null);
+    }
+
+    /**
+     * Retrieve a creditmemo
+     * 
+     * <p>Retrieves a single AccountingCreditmemo by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAccountingCreditmemoResponse getAccountingCreditmemo(@Nonnull GetAccountingCreditmemoRequest request, @Nullable Options options) {
         RequestOperation<GetAccountingCreditmemoRequest, GetAccountingCreditmemoResponse> operation
-              = new GetAccountingCreditmemo.Sync(sdkConfiguration, _headers);
+              = new GetAccountingCreditmemo.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -139,8 +171,27 @@ public class Creditmemo {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAccountingCreditmemoesResponse listAccountingCreditmemoes(@Nonnull ListAccountingCreditmemoesRequest request) {
+        return listAccountingCreditmemoes(request, null);
+    }
+
+    /**
+     * List all creditmemoes
+     * 
+     * <p>Returns a list of AccountingCreditmemoes. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAccountingCreditmemoesResponse listAccountingCreditmemoes(@Nonnull ListAccountingCreditmemoesRequest request, @Nullable Options options) {
         RequestOperation<ListAccountingCreditmemoesRequest, ListAccountingCreditmemoesResponse> operation
-              = new ListAccountingCreditmemoes.Sync(sdkConfiguration, _headers);
+              = new ListAccountingCreditmemoes.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +218,23 @@ public class Creditmemo {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchAccountingCreditmemoResponse patchAccountingCreditmemo(@Nonnull PatchAccountingCreditmemoRequest request) {
+        return patchAccountingCreditmemo(request, null);
+    }
+
+    /**
+     * Update a creditmemo
+     * 
+     * <p>Updates the AccountingCreditmemo identified by `id`. Provide the unified AccountingCreditmemo fields
+     * to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchAccountingCreditmemoResponse patchAccountingCreditmemo(@Nonnull PatchAccountingCreditmemoRequest request, @Nullable Options options) {
         RequestOperation<PatchAccountingCreditmemoRequest, PatchAccountingCreditmemoResponse> operation
-              = new PatchAccountingCreditmemo.Sync(sdkConfiguration, _headers);
+              = new PatchAccountingCreditmemo.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -193,8 +259,22 @@ public class Creditmemo {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveAccountingCreditmemoResponse removeAccountingCreditmemo(@Nonnull RemoveAccountingCreditmemoRequest request) {
+        return removeAccountingCreditmemo(request, null);
+    }
+
+    /**
+     * Remove a creditmemo
+     * 
+     * <p>Deletes the AccountingCreditmemo identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveAccountingCreditmemoResponse removeAccountingCreditmemo(@Nonnull RemoveAccountingCreditmemoRequest request, @Nullable Options options) {
         RequestOperation<RemoveAccountingCreditmemoRequest, RemoveAccountingCreditmemoResponse> operation
-              = new RemoveAccountingCreditmemo.Sync(sdkConfiguration, _headers);
+              = new RemoveAccountingCreditmemo.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -221,8 +301,23 @@ public class Creditmemo {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateAccountingCreditmemoResponse updateAccountingCreditmemo(@Nonnull UpdateAccountingCreditmemoRequest request) {
+        return updateAccountingCreditmemo(request, null);
+    }
+
+    /**
+     * Update a creditmemo
+     * 
+     * <p>Updates the AccountingCreditmemo identified by `id`. Provide the unified AccountingCreditmemo fields
+     * to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateAccountingCreditmemoResponse updateAccountingCreditmemo(@Nonnull UpdateAccountingCreditmemoRequest request, @Nullable Options options) {
         RequestOperation<UpdateAccountingCreditmemoRequest, UpdateAccountingCreditmemoResponse> operation
-              = new UpdateAccountingCreditmemo.Sync(sdkConfiguration, _headers);
+              = new UpdateAccountingCreditmemo.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

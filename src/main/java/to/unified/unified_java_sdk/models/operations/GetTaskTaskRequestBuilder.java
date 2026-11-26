@@ -6,18 +6,28 @@ package to.unified.unified_java_sdk.models.operations;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.GetTaskTask;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetTaskTaskRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private GetTaskTaskRequest request;
+    private final Options.Builder optionsBuilder;
 
     public GetTaskTaskRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public GetTaskTaskRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public GetTaskTaskRequestBuilder request(@Nonnull GetTaskTaskRequest request) {
@@ -42,8 +52,9 @@ public class GetTaskTaskRequestBuilder {
     * @return The response from the server.
     */
     public GetTaskTaskResponse call() {
+        Options options = optionsBuilder.build();
         RequestOperation<GetTaskTaskRequest, GetTaskTaskResponse> operation
-              = new GetTaskTask.Sync(sdkConfiguration, _headers);
+              = new GetTaskTask.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

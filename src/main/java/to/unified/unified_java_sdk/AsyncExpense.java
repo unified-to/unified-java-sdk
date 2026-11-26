@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingExpenseRequest;
 import to.unified.unified_java_sdk.models.operations.CreateLegalExpenseRequest;
@@ -56,6 +57,7 @@ import to.unified.unified_java_sdk.operations.RemoveLegalExpense;
 import to.unified.unified_java_sdk.operations.UpdateAccountingExpense;
 import to.unified.unified_java_sdk.operations.UpdateLegalExpense;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncExpense {
@@ -100,8 +102,22 @@ public class AsyncExpense {
      * @return {@code CompletableFuture<CreateAccountingExpenseResponse>} - The async response
      */
     public CompletableFuture<CreateAccountingExpenseResponse> createAccountingExpense(@Nonnull CreateAccountingExpenseRequest request) {
+        return createAccountingExpense(request, null);
+    }
+
+    /**
+     * Create an expense
+     * 
+     * <p>Creates a AccountingExpense. Provide the unified AccountingExpense fields in the request body; they
+     * are mapped to the provider's API. Returns the created AccountingExpense.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateAccountingExpenseResponse>} - The async response
+     */
+    public CompletableFuture<CreateAccountingExpenseResponse> createAccountingExpense(@Nonnull CreateAccountingExpenseRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateAccountingExpenseRequest, CreateAccountingExpenseResponse> operation
-              = new CreateAccountingExpense.Async(sdkConfiguration, _headers);
+              = new CreateAccountingExpense.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -129,8 +145,22 @@ public class AsyncExpense {
      * @return {@code CompletableFuture<CreateLegalExpenseResponse>} - The async response
      */
     public CompletableFuture<CreateLegalExpenseResponse> createLegalExpense(@Nonnull CreateLegalExpenseRequest request) {
+        return createLegalExpense(request, null);
+    }
+
+    /**
+     * Create an expense
+     * 
+     * <p>Creates a LegalExpense. Provide the unified LegalExpense fields in the request body; they are mapped
+     * to the provider's API. Returns the created LegalExpense.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateLegalExpenseResponse>} - The async response
+     */
+    public CompletableFuture<CreateLegalExpenseResponse> createLegalExpense(@Nonnull CreateLegalExpenseRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateLegalExpenseRequest, CreateLegalExpenseResponse> operation
-              = new CreateLegalExpense.Async(sdkConfiguration, _headers);
+              = new CreateLegalExpense.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -158,8 +188,22 @@ public class AsyncExpense {
      * @return {@code CompletableFuture<GetAccountingExpenseResponse>} - The async response
      */
     public CompletableFuture<GetAccountingExpenseResponse> getAccountingExpense(@Nonnull GetAccountingExpenseRequest request) {
+        return getAccountingExpense(request, null);
+    }
+
+    /**
+     * Retrieve an expense
+     * 
+     * <p>Retrieves a single AccountingExpense by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetAccountingExpenseResponse>} - The async response
+     */
+    public CompletableFuture<GetAccountingExpenseResponse> getAccountingExpense(@Nonnull GetAccountingExpenseRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetAccountingExpenseRequest, GetAccountingExpenseResponse> operation
-              = new GetAccountingExpense.Async(sdkConfiguration, _headers);
+              = new GetAccountingExpense.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -187,8 +231,22 @@ public class AsyncExpense {
      * @return {@code CompletableFuture<GetLegalExpenseResponse>} - The async response
      */
     public CompletableFuture<GetLegalExpenseResponse> getLegalExpense(@Nonnull GetLegalExpenseRequest request) {
+        return getLegalExpense(request, null);
+    }
+
+    /**
+     * Retrieve an expense
+     * 
+     * <p>Retrieves a single LegalExpense by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetLegalExpenseResponse>} - The async response
+     */
+    public CompletableFuture<GetLegalExpenseResponse> getLegalExpense(@Nonnull GetLegalExpenseRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetLegalExpenseRequest, GetLegalExpenseResponse> operation
-              = new GetLegalExpense.Async(sdkConfiguration, _headers);
+              = new GetLegalExpense.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -224,8 +282,26 @@ public class AsyncExpense {
      * @return {@code CompletableFuture<ListAccountingExpensesResponse>} - The async response
      */
     public CompletableFuture<ListAccountingExpensesResponse> listAccountingExpenses(@Nonnull ListAccountingExpensesRequest request) {
+        return listAccountingExpenses(request, null);
+    }
+
+    /**
+     * List all expenses
+     * 
+     * <p>Returns a list of AccountingExpenses. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListAccountingExpensesResponse>} - The async response
+     */
+    public CompletableFuture<ListAccountingExpensesResponse> listAccountingExpenses(@Nonnull ListAccountingExpensesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListAccountingExpensesRequest, ListAccountingExpensesResponse> operation
-              = new ListAccountingExpenses.Async(sdkConfiguration, _headers);
+              = new ListAccountingExpenses.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -261,8 +337,26 @@ public class AsyncExpense {
      * @return {@code CompletableFuture<ListLegalExpensesResponse>} - The async response
      */
     public CompletableFuture<ListLegalExpensesResponse> listLegalExpenses(@Nonnull ListLegalExpensesRequest request) {
+        return listLegalExpenses(request, null);
+    }
+
+    /**
+     * List all expenses
+     * 
+     * <p>Returns a list of LegalExpenses. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListLegalExpensesResponse>} - The async response
+     */
+    public CompletableFuture<ListLegalExpensesResponse> listLegalExpenses(@Nonnull ListLegalExpensesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListLegalExpensesRequest, ListLegalExpensesResponse> operation
-              = new ListLegalExpenses.Async(sdkConfiguration, _headers);
+              = new ListLegalExpenses.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -290,8 +384,22 @@ public class AsyncExpense {
      * @return {@code CompletableFuture<PatchAccountingExpenseResponse>} - The async response
      */
     public CompletableFuture<PatchAccountingExpenseResponse> patchAccountingExpense(@Nonnull PatchAccountingExpenseRequest request) {
+        return patchAccountingExpense(request, null);
+    }
+
+    /**
+     * Update an expense
+     * 
+     * <p>Updates the AccountingExpense identified by `id`. Provide the unified AccountingExpense fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchAccountingExpenseResponse>} - The async response
+     */
+    public CompletableFuture<PatchAccountingExpenseResponse> patchAccountingExpense(@Nonnull PatchAccountingExpenseRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchAccountingExpenseRequest, PatchAccountingExpenseResponse> operation
-              = new PatchAccountingExpense.Async(sdkConfiguration, _headers);
+              = new PatchAccountingExpense.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -319,8 +427,22 @@ public class AsyncExpense {
      * @return {@code CompletableFuture<PatchLegalExpenseResponse>} - The async response
      */
     public CompletableFuture<PatchLegalExpenseResponse> patchLegalExpense(@Nonnull PatchLegalExpenseRequest request) {
+        return patchLegalExpense(request, null);
+    }
+
+    /**
+     * Update an expense
+     * 
+     * <p>Updates the LegalExpense identified by `id`. Provide the unified LegalExpense fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchLegalExpenseResponse>} - The async response
+     */
+    public CompletableFuture<PatchLegalExpenseResponse> patchLegalExpense(@Nonnull PatchLegalExpenseRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchLegalExpenseRequest, PatchLegalExpenseResponse> operation
-              = new PatchLegalExpense.Async(sdkConfiguration, _headers);
+              = new PatchLegalExpense.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -346,8 +468,21 @@ public class AsyncExpense {
      * @return {@code CompletableFuture<RemoveAccountingExpenseResponse>} - The async response
      */
     public CompletableFuture<RemoveAccountingExpenseResponse> removeAccountingExpense(@Nonnull RemoveAccountingExpenseRequest request) {
+        return removeAccountingExpense(request, null);
+    }
+
+    /**
+     * Remove an expense
+     * 
+     * <p>Deletes the AccountingExpense identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveAccountingExpenseResponse>} - The async response
+     */
+    public CompletableFuture<RemoveAccountingExpenseResponse> removeAccountingExpense(@Nonnull RemoveAccountingExpenseRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveAccountingExpenseRequest, RemoveAccountingExpenseResponse> operation
-              = new RemoveAccountingExpense.Async(sdkConfiguration, _headers);
+              = new RemoveAccountingExpense.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -373,8 +508,21 @@ public class AsyncExpense {
      * @return {@code CompletableFuture<RemoveLegalExpenseResponse>} - The async response
      */
     public CompletableFuture<RemoveLegalExpenseResponse> removeLegalExpense(@Nonnull RemoveLegalExpenseRequest request) {
+        return removeLegalExpense(request, null);
+    }
+
+    /**
+     * Remove an expense
+     * 
+     * <p>Deletes the LegalExpense identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveLegalExpenseResponse>} - The async response
+     */
+    public CompletableFuture<RemoveLegalExpenseResponse> removeLegalExpense(@Nonnull RemoveLegalExpenseRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveLegalExpenseRequest, RemoveLegalExpenseResponse> operation
-              = new RemoveLegalExpense.Async(sdkConfiguration, _headers);
+              = new RemoveLegalExpense.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -402,8 +550,22 @@ public class AsyncExpense {
      * @return {@code CompletableFuture<UpdateAccountingExpenseResponse>} - The async response
      */
     public CompletableFuture<UpdateAccountingExpenseResponse> updateAccountingExpense(@Nonnull UpdateAccountingExpenseRequest request) {
+        return updateAccountingExpense(request, null);
+    }
+
+    /**
+     * Update an expense
+     * 
+     * <p>Updates the AccountingExpense identified by `id`. Provide the unified AccountingExpense fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateAccountingExpenseResponse>} - The async response
+     */
+    public CompletableFuture<UpdateAccountingExpenseResponse> updateAccountingExpense(@Nonnull UpdateAccountingExpenseRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateAccountingExpenseRequest, UpdateAccountingExpenseResponse> operation
-              = new UpdateAccountingExpense.Async(sdkConfiguration, _headers);
+              = new UpdateAccountingExpense.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -431,8 +593,22 @@ public class AsyncExpense {
      * @return {@code CompletableFuture<UpdateLegalExpenseResponse>} - The async response
      */
     public CompletableFuture<UpdateLegalExpenseResponse> updateLegalExpense(@Nonnull UpdateLegalExpenseRequest request) {
+        return updateLegalExpense(request, null);
+    }
+
+    /**
+     * Update an expense
+     * 
+     * <p>Updates the LegalExpense identified by `id`. Provide the unified LegalExpense fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateLegalExpenseResponse>} - The async response
+     */
+    public CompletableFuture<UpdateLegalExpenseResponse> updateLegalExpense(@Nonnull UpdateLegalExpenseRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateLegalExpenseRequest, UpdateLegalExpenseResponse> operation
-              = new UpdateLegalExpense.Async(sdkConfiguration, _headers);
+              = new UpdateLegalExpense.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

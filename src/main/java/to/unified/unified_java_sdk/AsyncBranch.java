@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateRepoBranchRequest;
 import to.unified.unified_java_sdk.models.operations.GetRepoBranchRequest;
@@ -32,6 +33,7 @@ import to.unified.unified_java_sdk.operations.PatchRepoBranch;
 import to.unified.unified_java_sdk.operations.RemoveRepoBranch;
 import to.unified.unified_java_sdk.operations.UpdateRepoBranch;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncBranch {
@@ -76,8 +78,22 @@ public class AsyncBranch {
      * @return {@code CompletableFuture<CreateRepoBranchResponse>} - The async response
      */
     public CompletableFuture<CreateRepoBranchResponse> createRepoBranch(@Nonnull CreateRepoBranchRequest request) {
+        return createRepoBranch(request, null);
+    }
+
+    /**
+     * Create a branch
+     * 
+     * <p>Creates a RepoBranch. Provide the unified RepoBranch fields in the request body; they are mapped to
+     * the provider's API. Returns the created RepoBranch.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateRepoBranchResponse>} - The async response
+     */
+    public CompletableFuture<CreateRepoBranchResponse> createRepoBranch(@Nonnull CreateRepoBranchRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateRepoBranchRequest, CreateRepoBranchResponse> operation
-              = new CreateRepoBranch.Async(sdkConfiguration, _headers);
+              = new CreateRepoBranch.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -105,8 +121,22 @@ public class AsyncBranch {
      * @return {@code CompletableFuture<GetRepoBranchResponse>} - The async response
      */
     public CompletableFuture<GetRepoBranchResponse> getRepoBranch(@Nonnull GetRepoBranchRequest request) {
+        return getRepoBranch(request, null);
+    }
+
+    /**
+     * Retrieve a branch
+     * 
+     * <p>Retrieves a single RepoBranch by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetRepoBranchResponse>} - The async response
+     */
+    public CompletableFuture<GetRepoBranchResponse> getRepoBranch(@Nonnull GetRepoBranchRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetRepoBranchRequest, GetRepoBranchResponse> operation
-              = new GetRepoBranch.Async(sdkConfiguration, _headers);
+              = new GetRepoBranch.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -142,8 +172,26 @@ public class AsyncBranch {
      * @return {@code CompletableFuture<ListRepoBranchesResponse>} - The async response
      */
     public CompletableFuture<ListRepoBranchesResponse> listRepoBranches(@Nonnull ListRepoBranchesRequest request) {
+        return listRepoBranches(request, null);
+    }
+
+    /**
+     * List all branches
+     * 
+     * <p>Returns a list of RepoBranches. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListRepoBranchesResponse>} - The async response
+     */
+    public CompletableFuture<ListRepoBranchesResponse> listRepoBranches(@Nonnull ListRepoBranchesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListRepoBranchesRequest, ListRepoBranchesResponse> operation
-              = new ListRepoBranches.Async(sdkConfiguration, _headers);
+              = new ListRepoBranches.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -171,8 +219,22 @@ public class AsyncBranch {
      * @return {@code CompletableFuture<PatchRepoBranchResponse>} - The async response
      */
     public CompletableFuture<PatchRepoBranchResponse> patchRepoBranch(@Nonnull PatchRepoBranchRequest request) {
+        return patchRepoBranch(request, null);
+    }
+
+    /**
+     * Update a branch
+     * 
+     * <p>Updates the RepoBranch identified by `id`. Provide the unified RepoBranch fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchRepoBranchResponse>} - The async response
+     */
+    public CompletableFuture<PatchRepoBranchResponse> patchRepoBranch(@Nonnull PatchRepoBranchRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchRepoBranchRequest, PatchRepoBranchResponse> operation
-              = new PatchRepoBranch.Async(sdkConfiguration, _headers);
+              = new PatchRepoBranch.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -198,8 +260,21 @@ public class AsyncBranch {
      * @return {@code CompletableFuture<RemoveRepoBranchResponse>} - The async response
      */
     public CompletableFuture<RemoveRepoBranchResponse> removeRepoBranch(@Nonnull RemoveRepoBranchRequest request) {
+        return removeRepoBranch(request, null);
+    }
+
+    /**
+     * Remove a branch
+     * 
+     * <p>Deletes the RepoBranch identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveRepoBranchResponse>} - The async response
+     */
+    public CompletableFuture<RemoveRepoBranchResponse> removeRepoBranch(@Nonnull RemoveRepoBranchRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveRepoBranchRequest, RemoveRepoBranchResponse> operation
-              = new RemoveRepoBranch.Async(sdkConfiguration, _headers);
+              = new RemoveRepoBranch.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -227,8 +302,22 @@ public class AsyncBranch {
      * @return {@code CompletableFuture<UpdateRepoBranchResponse>} - The async response
      */
     public CompletableFuture<UpdateRepoBranchResponse> updateRepoBranch(@Nonnull UpdateRepoBranchRequest request) {
+        return updateRepoBranch(request, null);
+    }
+
+    /**
+     * Update a branch
+     * 
+     * <p>Updates the RepoBranch identified by `id`. Provide the unified RepoBranch fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateRepoBranchResponse>} - The async response
+     */
+    public CompletableFuture<UpdateRepoBranchResponse> updateRepoBranch(@Nonnull UpdateRepoBranchRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateRepoBranchRequest, UpdateRepoBranchResponse> operation
-              = new UpdateRepoBranch.Async(sdkConfiguration, _headers);
+              = new UpdateRepoBranch.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

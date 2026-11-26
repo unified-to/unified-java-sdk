@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.GetClubsActivityRequest;
 import to.unified.unified_java_sdk.models.operations.GetClubsEventRequest;
@@ -48,6 +49,7 @@ import to.unified.unified_java_sdk.operations.ListClubsGroups;
 import to.unified.unified_java_sdk.operations.ListClubsLocations;
 import to.unified.unified_java_sdk.operations.ListClubsMembers;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncClubs {
@@ -92,8 +94,22 @@ public class AsyncClubs {
      * @return {@code CompletableFuture<GetClubsActivityResponse>} - The async response
      */
     public CompletableFuture<GetClubsActivityResponse> getClubsActivity(@Nonnull GetClubsActivityRequest request) {
+        return getClubsActivity(request, null);
+    }
+
+    /**
+     * Retrieve an activity
+     * 
+     * <p>Retrieves a single ClubsActivity by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetClubsActivityResponse>} - The async response
+     */
+    public CompletableFuture<GetClubsActivityResponse> getClubsActivity(@Nonnull GetClubsActivityRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetClubsActivityRequest, GetClubsActivityResponse> operation
-              = new GetClubsActivity.Async(sdkConfiguration, _headers);
+              = new GetClubsActivity.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -121,8 +137,22 @@ public class AsyncClubs {
      * @return {@code CompletableFuture<GetClubsEventResponse>} - The async response
      */
     public CompletableFuture<GetClubsEventResponse> getClubsEvent(@Nonnull GetClubsEventRequest request) {
+        return getClubsEvent(request, null);
+    }
+
+    /**
+     * Retrieve an event
+     * 
+     * <p>Retrieves a single ClubsEvent by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetClubsEventResponse>} - The async response
+     */
+    public CompletableFuture<GetClubsEventResponse> getClubsEvent(@Nonnull GetClubsEventRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetClubsEventRequest, GetClubsEventResponse> operation
-              = new GetClubsEvent.Async(sdkConfiguration, _headers);
+              = new GetClubsEvent.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -150,8 +180,22 @@ public class AsyncClubs {
      * @return {@code CompletableFuture<GetClubsGroupResponse>} - The async response
      */
     public CompletableFuture<GetClubsGroupResponse> getClubsGroup(@Nonnull GetClubsGroupRequest request) {
+        return getClubsGroup(request, null);
+    }
+
+    /**
+     * Retrieve a group
+     * 
+     * <p>Retrieves a single ClubsGroup by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetClubsGroupResponse>} - The async response
+     */
+    public CompletableFuture<GetClubsGroupResponse> getClubsGroup(@Nonnull GetClubsGroupRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetClubsGroupRequest, GetClubsGroupResponse> operation
-              = new GetClubsGroup.Async(sdkConfiguration, _headers);
+              = new GetClubsGroup.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -179,8 +223,22 @@ public class AsyncClubs {
      * @return {@code CompletableFuture<GetClubsLocationResponse>} - The async response
      */
     public CompletableFuture<GetClubsLocationResponse> getClubsLocation(@Nonnull GetClubsLocationRequest request) {
+        return getClubsLocation(request, null);
+    }
+
+    /**
+     * Retrieve a location
+     * 
+     * <p>Retrieves a single ClubsLocation by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetClubsLocationResponse>} - The async response
+     */
+    public CompletableFuture<GetClubsLocationResponse> getClubsLocation(@Nonnull GetClubsLocationRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetClubsLocationRequest, GetClubsLocationResponse> operation
-              = new GetClubsLocation.Async(sdkConfiguration, _headers);
+              = new GetClubsLocation.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -208,8 +266,22 @@ public class AsyncClubs {
      * @return {@code CompletableFuture<GetClubsMemberResponse>} - The async response
      */
     public CompletableFuture<GetClubsMemberResponse> getClubsMember(@Nonnull GetClubsMemberRequest request) {
+        return getClubsMember(request, null);
+    }
+
+    /**
+     * Retrieve a member
+     * 
+     * <p>Retrieves a single ClubsMember by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetClubsMemberResponse>} - The async response
+     */
+    public CompletableFuture<GetClubsMemberResponse> getClubsMember(@Nonnull GetClubsMemberRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetClubsMemberRequest, GetClubsMemberResponse> operation
-              = new GetClubsMember.Async(sdkConfiguration, _headers);
+              = new GetClubsMember.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -245,8 +317,26 @@ public class AsyncClubs {
      * @return {@code CompletableFuture<ListClubsActivitiesResponse>} - The async response
      */
     public CompletableFuture<ListClubsActivitiesResponse> listClubsActivities(@Nonnull ListClubsActivitiesRequest request) {
+        return listClubsActivities(request, null);
+    }
+
+    /**
+     * List all activities
+     * 
+     * <p>Returns a list of ClubsActivities. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListClubsActivitiesResponse>} - The async response
+     */
+    public CompletableFuture<ListClubsActivitiesResponse> listClubsActivities(@Nonnull ListClubsActivitiesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListClubsActivitiesRequest, ListClubsActivitiesResponse> operation
-              = new ListClubsActivities.Async(sdkConfiguration, _headers);
+              = new ListClubsActivities.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -282,8 +372,26 @@ public class AsyncClubs {
      * @return {@code CompletableFuture<ListClubsEventsResponse>} - The async response
      */
     public CompletableFuture<ListClubsEventsResponse> listClubsEvents(@Nonnull ListClubsEventsRequest request) {
+        return listClubsEvents(request, null);
+    }
+
+    /**
+     * List all events
+     * 
+     * <p>Returns a list of ClubsEvents. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListClubsEventsResponse>} - The async response
+     */
+    public CompletableFuture<ListClubsEventsResponse> listClubsEvents(@Nonnull ListClubsEventsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListClubsEventsRequest, ListClubsEventsResponse> operation
-              = new ListClubsEvents.Async(sdkConfiguration, _headers);
+              = new ListClubsEvents.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -319,8 +427,26 @@ public class AsyncClubs {
      * @return {@code CompletableFuture<ListClubsGroupsResponse>} - The async response
      */
     public CompletableFuture<ListClubsGroupsResponse> listClubsGroups(@Nonnull ListClubsGroupsRequest request) {
+        return listClubsGroups(request, null);
+    }
+
+    /**
+     * List all groups
+     * 
+     * <p>Returns a list of ClubsGroups. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListClubsGroupsResponse>} - The async response
+     */
+    public CompletableFuture<ListClubsGroupsResponse> listClubsGroups(@Nonnull ListClubsGroupsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListClubsGroupsRequest, ListClubsGroupsResponse> operation
-              = new ListClubsGroups.Async(sdkConfiguration, _headers);
+              = new ListClubsGroups.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -356,8 +482,26 @@ public class AsyncClubs {
      * @return {@code CompletableFuture<ListClubsLocationsResponse>} - The async response
      */
     public CompletableFuture<ListClubsLocationsResponse> listClubsLocations(@Nonnull ListClubsLocationsRequest request) {
+        return listClubsLocations(request, null);
+    }
+
+    /**
+     * List all locations
+     * 
+     * <p>Returns a list of ClubsLocations. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListClubsLocationsResponse>} - The async response
+     */
+    public CompletableFuture<ListClubsLocationsResponse> listClubsLocations(@Nonnull ListClubsLocationsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListClubsLocationsRequest, ListClubsLocationsResponse> operation
-              = new ListClubsLocations.Async(sdkConfiguration, _headers);
+              = new ListClubsLocations.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -393,8 +537,26 @@ public class AsyncClubs {
      * @return {@code CompletableFuture<ListClubsMembersResponse>} - The async response
      */
     public CompletableFuture<ListClubsMembersResponse> listClubsMembers(@Nonnull ListClubsMembersRequest request) {
+        return listClubsMembers(request, null);
+    }
+
+    /**
+     * List all members
+     * 
+     * <p>Returns a list of ClubsMembers. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListClubsMembersResponse>} - The async response
+     */
+    public CompletableFuture<ListClubsMembersResponse> listClubsMembers(@Nonnull ListClubsMembersRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListClubsMembersRequest, ListClubsMembersResponse> operation
-              = new ListClubsMembers.Async(sdkConfiguration, _headers);
+              = new ListClubsMembers.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

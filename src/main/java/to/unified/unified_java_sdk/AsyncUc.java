@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateUcCallRequest;
 import to.unified.unified_java_sdk.models.operations.CreateUcCommentRequest;
@@ -132,6 +133,7 @@ import to.unified.unified_java_sdk.operations.UpdateUcComment;
 import to.unified.unified_java_sdk.operations.UpdateUcContact;
 import to.unified.unified_java_sdk.operations.UpdateUcRecording;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncUc {
@@ -176,8 +178,22 @@ public class AsyncUc {
      * @return {@code CompletableFuture<CreateUcCallResponse>} - The async response
      */
     public CompletableFuture<CreateUcCallResponse> createUcCall(@Nonnull CreateUcCallRequest request) {
+        return createUcCall(request, null);
+    }
+
+    /**
+     * Create a call
+     * 
+     * <p>Creates a UcCall. Provide the unified UcCall fields in the request body; they are mapped to the
+     * provider's API. Returns the created UcCall.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateUcCallResponse>} - The async response
+     */
+    public CompletableFuture<CreateUcCallResponse> createUcCall(@Nonnull CreateUcCallRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateUcCallRequest, CreateUcCallResponse> operation
-              = new CreateUcCall.Async(sdkConfiguration, _headers);
+              = new CreateUcCall.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -205,8 +221,22 @@ public class AsyncUc {
      * @return {@code CompletableFuture<CreateUcCommentResponse>} - The async response
      */
     public CompletableFuture<CreateUcCommentResponse> createUcComment(@Nonnull CreateUcCommentRequest request) {
+        return createUcComment(request, null);
+    }
+
+    /**
+     * Create a comment
+     * 
+     * <p>Creates a UcComment. Provide the unified UcComment fields in the request body; they are mapped to
+     * the provider's API. Returns the created UcComment.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateUcCommentResponse>} - The async response
+     */
+    public CompletableFuture<CreateUcCommentResponse> createUcComment(@Nonnull CreateUcCommentRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateUcCommentRequest, CreateUcCommentResponse> operation
-              = new CreateUcComment.Async(sdkConfiguration, _headers);
+              = new CreateUcComment.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -234,8 +264,22 @@ public class AsyncUc {
      * @return {@code CompletableFuture<CreateUcContactResponse>} - The async response
      */
     public CompletableFuture<CreateUcContactResponse> createUcContact(@Nonnull CreateUcContactRequest request) {
+        return createUcContact(request, null);
+    }
+
+    /**
+     * Create a contact
+     * 
+     * <p>Creates a UcContact. Provide the unified UcContact fields in the request body; they are mapped to
+     * the provider's API. Returns the created UcContact.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateUcContactResponse>} - The async response
+     */
+    public CompletableFuture<CreateUcContactResponse> createUcContact(@Nonnull CreateUcContactRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateUcContactRequest, CreateUcContactResponse> operation
-              = new CreateUcContact.Async(sdkConfiguration, _headers);
+              = new CreateUcContact.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -263,8 +307,22 @@ public class AsyncUc {
      * @return {@code CompletableFuture<CreateUcFaxResponse>} - The async response
      */
     public CompletableFuture<CreateUcFaxResponse> createUcFax(@Nonnull CreateUcFaxRequest request) {
+        return createUcFax(request, null);
+    }
+
+    /**
+     * Create a fax
+     * 
+     * <p>Creates a UcFax. Provide the unified UcFax fields in the request body; they are mapped to the
+     * provider's API. Returns the created UcFax.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateUcFaxResponse>} - The async response
+     */
+    public CompletableFuture<CreateUcFaxResponse> createUcFax(@Nonnull CreateUcFaxRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateUcFaxRequest, CreateUcFaxResponse> operation
-              = new CreateUcFax.Async(sdkConfiguration, _headers);
+              = new CreateUcFax.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -292,8 +350,22 @@ public class AsyncUc {
      * @return {@code CompletableFuture<CreateUcRecordingResponse>} - The async response
      */
     public CompletableFuture<CreateUcRecordingResponse> createUcRecording(@Nonnull CreateUcRecordingRequest request) {
+        return createUcRecording(request, null);
+    }
+
+    /**
+     * Create a recording
+     * 
+     * <p>Creates a UcRecording. Provide the unified UcRecording fields in the request body; they are mapped
+     * to the provider's API. Returns the created UcRecording.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateUcRecordingResponse>} - The async response
+     */
+    public CompletableFuture<CreateUcRecordingResponse> createUcRecording(@Nonnull CreateUcRecordingRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateUcRecordingRequest, CreateUcRecordingResponse> operation
-              = new CreateUcRecording.Async(sdkConfiguration, _headers);
+              = new CreateUcRecording.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -321,8 +393,22 @@ public class AsyncUc {
      * @return {@code CompletableFuture<GetUcCallResponse>} - The async response
      */
     public CompletableFuture<GetUcCallResponse> getUcCall(@Nonnull GetUcCallRequest request) {
+        return getUcCall(request, null);
+    }
+
+    /**
+     * Retrieve a call
+     * 
+     * <p>Retrieves a single UcCall by its `id`. Obtain `id` values from the corresponding list endpoint. Use
+     * `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetUcCallResponse>} - The async response
+     */
+    public CompletableFuture<GetUcCallResponse> getUcCall(@Nonnull GetUcCallRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetUcCallRequest, GetUcCallResponse> operation
-              = new GetUcCall.Async(sdkConfiguration, _headers);
+              = new GetUcCall.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -350,8 +436,22 @@ public class AsyncUc {
      * @return {@code CompletableFuture<GetUcCommentResponse>} - The async response
      */
     public CompletableFuture<GetUcCommentResponse> getUcComment(@Nonnull GetUcCommentRequest request) {
+        return getUcComment(request, null);
+    }
+
+    /**
+     * Retrieve a comment
+     * 
+     * <p>Retrieves a single UcComment by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetUcCommentResponse>} - The async response
+     */
+    public CompletableFuture<GetUcCommentResponse> getUcComment(@Nonnull GetUcCommentRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetUcCommentRequest, GetUcCommentResponse> operation
-              = new GetUcComment.Async(sdkConfiguration, _headers);
+              = new GetUcComment.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -379,8 +479,22 @@ public class AsyncUc {
      * @return {@code CompletableFuture<GetUcContactResponse>} - The async response
      */
     public CompletableFuture<GetUcContactResponse> getUcContact(@Nonnull GetUcContactRequest request) {
+        return getUcContact(request, null);
+    }
+
+    /**
+     * Retrieve a contact
+     * 
+     * <p>Retrieves a single UcContact by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetUcContactResponse>} - The async response
+     */
+    public CompletableFuture<GetUcContactResponse> getUcContact(@Nonnull GetUcContactRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetUcContactRequest, GetUcContactResponse> operation
-              = new GetUcContact.Async(sdkConfiguration, _headers);
+              = new GetUcContact.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -408,8 +522,22 @@ public class AsyncUc {
      * @return {@code CompletableFuture<GetUcFaxResponse>} - The async response
      */
     public CompletableFuture<GetUcFaxResponse> getUcFax(@Nonnull GetUcFaxRequest request) {
+        return getUcFax(request, null);
+    }
+
+    /**
+     * Retrieve a fax
+     * 
+     * <p>Retrieves a single UcFax by its `id`. Obtain `id` values from the corresponding list endpoint. Use
+     * `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetUcFaxResponse>} - The async response
+     */
+    public CompletableFuture<GetUcFaxResponse> getUcFax(@Nonnull GetUcFaxRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetUcFaxRequest, GetUcFaxResponse> operation
-              = new GetUcFax.Async(sdkConfiguration, _headers);
+              = new GetUcFax.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -437,8 +565,22 @@ public class AsyncUc {
      * @return {@code CompletableFuture<GetUcRecordingResponse>} - The async response
      */
     public CompletableFuture<GetUcRecordingResponse> getUcRecording(@Nonnull GetUcRecordingRequest request) {
+        return getUcRecording(request, null);
+    }
+
+    /**
+     * Retrieve a recording
+     * 
+     * <p>Retrieves a single UcRecording by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetUcRecordingResponse>} - The async response
+     */
+    public CompletableFuture<GetUcRecordingResponse> getUcRecording(@Nonnull GetUcRecordingRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetUcRecordingRequest, GetUcRecordingResponse> operation
-              = new GetUcRecording.Async(sdkConfiguration, _headers);
+              = new GetUcRecording.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -466,8 +608,22 @@ public class AsyncUc {
      * @return {@code CompletableFuture<GetUcScorecardResponse>} - The async response
      */
     public CompletableFuture<GetUcScorecardResponse> getUcScorecard(@Nonnull GetUcScorecardRequest request) {
+        return getUcScorecard(request, null);
+    }
+
+    /**
+     * Retrieve a scorecard
+     * 
+     * <p>Retrieves a single UcScorecard by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetUcScorecardResponse>} - The async response
+     */
+    public CompletableFuture<GetUcScorecardResponse> getUcScorecard(@Nonnull GetUcScorecardRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetUcScorecardRequest, GetUcScorecardResponse> operation
-              = new GetUcScorecard.Async(sdkConfiguration, _headers);
+              = new GetUcScorecard.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -495,8 +651,22 @@ public class AsyncUc {
      * @return {@code CompletableFuture<GetUcScorecardtemplateResponse>} - The async response
      */
     public CompletableFuture<GetUcScorecardtemplateResponse> getUcScorecardtemplate(@Nonnull GetUcScorecardtemplateRequest request) {
+        return getUcScorecardtemplate(request, null);
+    }
+
+    /**
+     * Retrieve a scorecardtemplate
+     * 
+     * <p>Retrieves a single UcScorecardtemplate by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetUcScorecardtemplateResponse>} - The async response
+     */
+    public CompletableFuture<GetUcScorecardtemplateResponse> getUcScorecardtemplate(@Nonnull GetUcScorecardtemplateRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetUcScorecardtemplateRequest, GetUcScorecardtemplateResponse> operation
-              = new GetUcScorecardtemplate.Async(sdkConfiguration, _headers);
+              = new GetUcScorecardtemplate.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -532,8 +702,26 @@ public class AsyncUc {
      * @return {@code CompletableFuture<ListUcCallsResponse>} - The async response
      */
     public CompletableFuture<ListUcCallsResponse> listUcCalls(@Nonnull ListUcCallsRequest request) {
+        return listUcCalls(request, null);
+    }
+
+    /**
+     * List all calls
+     * 
+     * <p>Returns a list of UcCalls. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListUcCallsResponse>} - The async response
+     */
+    public CompletableFuture<ListUcCallsResponse> listUcCalls(@Nonnull ListUcCallsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListUcCallsRequest, ListUcCallsResponse> operation
-              = new ListUcCalls.Async(sdkConfiguration, _headers);
+              = new ListUcCalls.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -569,8 +757,26 @@ public class AsyncUc {
      * @return {@code CompletableFuture<ListUcCommentsResponse>} - The async response
      */
     public CompletableFuture<ListUcCommentsResponse> listUcComments(@Nonnull ListUcCommentsRequest request) {
+        return listUcComments(request, null);
+    }
+
+    /**
+     * List all comments
+     * 
+     * <p>Returns a list of UcComments. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListUcCommentsResponse>} - The async response
+     */
+    public CompletableFuture<ListUcCommentsResponse> listUcComments(@Nonnull ListUcCommentsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListUcCommentsRequest, ListUcCommentsResponse> operation
-              = new ListUcComments.Async(sdkConfiguration, _headers);
+              = new ListUcComments.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -606,8 +812,26 @@ public class AsyncUc {
      * @return {@code CompletableFuture<ListUcContactsResponse>} - The async response
      */
     public CompletableFuture<ListUcContactsResponse> listUcContacts(@Nonnull ListUcContactsRequest request) {
+        return listUcContacts(request, null);
+    }
+
+    /**
+     * List all contacts
+     * 
+     * <p>Returns a list of UcContacts. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListUcContactsResponse>} - The async response
+     */
+    public CompletableFuture<ListUcContactsResponse> listUcContacts(@Nonnull ListUcContactsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListUcContactsRequest, ListUcContactsResponse> operation
-              = new ListUcContacts.Async(sdkConfiguration, _headers);
+              = new ListUcContacts.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -643,8 +867,26 @@ public class AsyncUc {
      * @return {@code CompletableFuture<ListUcFaxesResponse>} - The async response
      */
     public CompletableFuture<ListUcFaxesResponse> listUcFaxes(@Nonnull ListUcFaxesRequest request) {
+        return listUcFaxes(request, null);
+    }
+
+    /**
+     * List all faxes
+     * 
+     * <p>Returns a list of UcFaxes. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListUcFaxesResponse>} - The async response
+     */
+    public CompletableFuture<ListUcFaxesResponse> listUcFaxes(@Nonnull ListUcFaxesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListUcFaxesRequest, ListUcFaxesResponse> operation
-              = new ListUcFaxes.Async(sdkConfiguration, _headers);
+              = new ListUcFaxes.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -680,8 +922,26 @@ public class AsyncUc {
      * @return {@code CompletableFuture<ListUcRecordingsResponse>} - The async response
      */
     public CompletableFuture<ListUcRecordingsResponse> listUcRecordings(@Nonnull ListUcRecordingsRequest request) {
+        return listUcRecordings(request, null);
+    }
+
+    /**
+     * List all recordings
+     * 
+     * <p>Returns a list of UcRecordings. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListUcRecordingsResponse>} - The async response
+     */
+    public CompletableFuture<ListUcRecordingsResponse> listUcRecordings(@Nonnull ListUcRecordingsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListUcRecordingsRequest, ListUcRecordingsResponse> operation
-              = new ListUcRecordings.Async(sdkConfiguration, _headers);
+              = new ListUcRecordings.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -717,8 +977,26 @@ public class AsyncUc {
      * @return {@code CompletableFuture<ListUcScorecardsResponse>} - The async response
      */
     public CompletableFuture<ListUcScorecardsResponse> listUcScorecards(@Nonnull ListUcScorecardsRequest request) {
+        return listUcScorecards(request, null);
+    }
+
+    /**
+     * List all scorecards
+     * 
+     * <p>Returns a list of UcScorecards. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListUcScorecardsResponse>} - The async response
+     */
+    public CompletableFuture<ListUcScorecardsResponse> listUcScorecards(@Nonnull ListUcScorecardsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListUcScorecardsRequest, ListUcScorecardsResponse> operation
-              = new ListUcScorecards.Async(sdkConfiguration, _headers);
+              = new ListUcScorecards.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -754,8 +1032,26 @@ public class AsyncUc {
      * @return {@code CompletableFuture<ListUcScorecardtemplatesResponse>} - The async response
      */
     public CompletableFuture<ListUcScorecardtemplatesResponse> listUcScorecardtemplates(@Nonnull ListUcScorecardtemplatesRequest request) {
+        return listUcScorecardtemplates(request, null);
+    }
+
+    /**
+     * List all scorecardtemplates
+     * 
+     * <p>Returns a list of UcScorecardtemplates. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListUcScorecardtemplatesResponse>} - The async response
+     */
+    public CompletableFuture<ListUcScorecardtemplatesResponse> listUcScorecardtemplates(@Nonnull ListUcScorecardtemplatesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListUcScorecardtemplatesRequest, ListUcScorecardtemplatesResponse> operation
-              = new ListUcScorecardtemplates.Async(sdkConfiguration, _headers);
+              = new ListUcScorecardtemplates.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -783,8 +1079,22 @@ public class AsyncUc {
      * @return {@code CompletableFuture<PatchUcCallResponse>} - The async response
      */
     public CompletableFuture<PatchUcCallResponse> patchUcCall(@Nonnull PatchUcCallRequest request) {
+        return patchUcCall(request, null);
+    }
+
+    /**
+     * Update a call
+     * 
+     * <p>Updates the UcCall identified by `id`. Provide the unified UcCall fields to change in the request
+     * body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchUcCallResponse>} - The async response
+     */
+    public CompletableFuture<PatchUcCallResponse> patchUcCall(@Nonnull PatchUcCallRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchUcCallRequest, PatchUcCallResponse> operation
-              = new PatchUcCall.Async(sdkConfiguration, _headers);
+              = new PatchUcCall.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -812,8 +1122,22 @@ public class AsyncUc {
      * @return {@code CompletableFuture<PatchUcCommentResponse>} - The async response
      */
     public CompletableFuture<PatchUcCommentResponse> patchUcComment(@Nonnull PatchUcCommentRequest request) {
+        return patchUcComment(request, null);
+    }
+
+    /**
+     * Update a comment
+     * 
+     * <p>Updates the UcComment identified by `id`. Provide the unified UcComment fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchUcCommentResponse>} - The async response
+     */
+    public CompletableFuture<PatchUcCommentResponse> patchUcComment(@Nonnull PatchUcCommentRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchUcCommentRequest, PatchUcCommentResponse> operation
-              = new PatchUcComment.Async(sdkConfiguration, _headers);
+              = new PatchUcComment.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -841,8 +1165,22 @@ public class AsyncUc {
      * @return {@code CompletableFuture<PatchUcContactResponse>} - The async response
      */
     public CompletableFuture<PatchUcContactResponse> patchUcContact(@Nonnull PatchUcContactRequest request) {
+        return patchUcContact(request, null);
+    }
+
+    /**
+     * Update a contact
+     * 
+     * <p>Updates the UcContact identified by `id`. Provide the unified UcContact fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchUcContactResponse>} - The async response
+     */
+    public CompletableFuture<PatchUcContactResponse> patchUcContact(@Nonnull PatchUcContactRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchUcContactRequest, PatchUcContactResponse> operation
-              = new PatchUcContact.Async(sdkConfiguration, _headers);
+              = new PatchUcContact.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -870,8 +1208,22 @@ public class AsyncUc {
      * @return {@code CompletableFuture<PatchUcRecordingResponse>} - The async response
      */
     public CompletableFuture<PatchUcRecordingResponse> patchUcRecording(@Nonnull PatchUcRecordingRequest request) {
+        return patchUcRecording(request, null);
+    }
+
+    /**
+     * Update a recording
+     * 
+     * <p>Updates the UcRecording identified by `id`. Provide the unified UcRecording fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchUcRecordingResponse>} - The async response
+     */
+    public CompletableFuture<PatchUcRecordingResponse> patchUcRecording(@Nonnull PatchUcRecordingRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchUcRecordingRequest, PatchUcRecordingResponse> operation
-              = new PatchUcRecording.Async(sdkConfiguration, _headers);
+              = new PatchUcRecording.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -897,8 +1249,21 @@ public class AsyncUc {
      * @return {@code CompletableFuture<RemoveUcCommentResponse>} - The async response
      */
     public CompletableFuture<RemoveUcCommentResponse> removeUcComment(@Nonnull RemoveUcCommentRequest request) {
+        return removeUcComment(request, null);
+    }
+
+    /**
+     * Remove a comment
+     * 
+     * <p>Deletes the UcComment identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveUcCommentResponse>} - The async response
+     */
+    public CompletableFuture<RemoveUcCommentResponse> removeUcComment(@Nonnull RemoveUcCommentRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveUcCommentRequest, RemoveUcCommentResponse> operation
-              = new RemoveUcComment.Async(sdkConfiguration, _headers);
+              = new RemoveUcComment.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -924,8 +1289,21 @@ public class AsyncUc {
      * @return {@code CompletableFuture<RemoveUcContactResponse>} - The async response
      */
     public CompletableFuture<RemoveUcContactResponse> removeUcContact(@Nonnull RemoveUcContactRequest request) {
+        return removeUcContact(request, null);
+    }
+
+    /**
+     * Remove a contact
+     * 
+     * <p>Deletes the UcContact identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveUcContactResponse>} - The async response
+     */
+    public CompletableFuture<RemoveUcContactResponse> removeUcContact(@Nonnull RemoveUcContactRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveUcContactRequest, RemoveUcContactResponse> operation
-              = new RemoveUcContact.Async(sdkConfiguration, _headers);
+              = new RemoveUcContact.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -951,8 +1329,21 @@ public class AsyncUc {
      * @return {@code CompletableFuture<RemoveUcFaxResponse>} - The async response
      */
     public CompletableFuture<RemoveUcFaxResponse> removeUcFax(@Nonnull RemoveUcFaxRequest request) {
+        return removeUcFax(request, null);
+    }
+
+    /**
+     * Remove a fax
+     * 
+     * <p>Deletes the UcFax identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveUcFaxResponse>} - The async response
+     */
+    public CompletableFuture<RemoveUcFaxResponse> removeUcFax(@Nonnull RemoveUcFaxRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveUcFaxRequest, RemoveUcFaxResponse> operation
-              = new RemoveUcFax.Async(sdkConfiguration, _headers);
+              = new RemoveUcFax.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -978,8 +1369,21 @@ public class AsyncUc {
      * @return {@code CompletableFuture<RemoveUcRecordingResponse>} - The async response
      */
     public CompletableFuture<RemoveUcRecordingResponse> removeUcRecording(@Nonnull RemoveUcRecordingRequest request) {
+        return removeUcRecording(request, null);
+    }
+
+    /**
+     * Remove a recording
+     * 
+     * <p>Deletes the UcRecording identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveUcRecordingResponse>} - The async response
+     */
+    public CompletableFuture<RemoveUcRecordingResponse> removeUcRecording(@Nonnull RemoveUcRecordingRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveUcRecordingRequest, RemoveUcRecordingResponse> operation
-              = new RemoveUcRecording.Async(sdkConfiguration, _headers);
+              = new RemoveUcRecording.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1007,8 +1411,22 @@ public class AsyncUc {
      * @return {@code CompletableFuture<UpdateUcCallResponse>} - The async response
      */
     public CompletableFuture<UpdateUcCallResponse> updateUcCall(@Nonnull UpdateUcCallRequest request) {
+        return updateUcCall(request, null);
+    }
+
+    /**
+     * Update a call
+     * 
+     * <p>Updates the UcCall identified by `id`. Provide the unified UcCall fields to change in the request
+     * body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateUcCallResponse>} - The async response
+     */
+    public CompletableFuture<UpdateUcCallResponse> updateUcCall(@Nonnull UpdateUcCallRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateUcCallRequest, UpdateUcCallResponse> operation
-              = new UpdateUcCall.Async(sdkConfiguration, _headers);
+              = new UpdateUcCall.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1036,8 +1454,22 @@ public class AsyncUc {
      * @return {@code CompletableFuture<UpdateUcCommentResponse>} - The async response
      */
     public CompletableFuture<UpdateUcCommentResponse> updateUcComment(@Nonnull UpdateUcCommentRequest request) {
+        return updateUcComment(request, null);
+    }
+
+    /**
+     * Update a comment
+     * 
+     * <p>Updates the UcComment identified by `id`. Provide the unified UcComment fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateUcCommentResponse>} - The async response
+     */
+    public CompletableFuture<UpdateUcCommentResponse> updateUcComment(@Nonnull UpdateUcCommentRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateUcCommentRequest, UpdateUcCommentResponse> operation
-              = new UpdateUcComment.Async(sdkConfiguration, _headers);
+              = new UpdateUcComment.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1065,8 +1497,22 @@ public class AsyncUc {
      * @return {@code CompletableFuture<UpdateUcContactResponse>} - The async response
      */
     public CompletableFuture<UpdateUcContactResponse> updateUcContact(@Nonnull UpdateUcContactRequest request) {
+        return updateUcContact(request, null);
+    }
+
+    /**
+     * Update a contact
+     * 
+     * <p>Updates the UcContact identified by `id`. Provide the unified UcContact fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateUcContactResponse>} - The async response
+     */
+    public CompletableFuture<UpdateUcContactResponse> updateUcContact(@Nonnull UpdateUcContactRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateUcContactRequest, UpdateUcContactResponse> operation
-              = new UpdateUcContact.Async(sdkConfiguration, _headers);
+              = new UpdateUcContact.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1094,8 +1540,22 @@ public class AsyncUc {
      * @return {@code CompletableFuture<UpdateUcRecordingResponse>} - The async response
      */
     public CompletableFuture<UpdateUcRecordingResponse> updateUcRecording(@Nonnull UpdateUcRecordingRequest request) {
+        return updateUcRecording(request, null);
+    }
+
+    /**
+     * Update a recording
+     * 
+     * <p>Updates the UcRecording identified by `id`. Provide the unified UcRecording fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateUcRecordingResponse>} - The async response
+     */
+    public CompletableFuture<UpdateUcRecordingResponse> updateUcRecording(@Nonnull UpdateUcRecordingRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateUcRecordingRequest, UpdateUcRecordingResponse> operation
-              = new UpdateUcRecording.Async(sdkConfiguration, _headers);
+              = new UpdateUcRecording.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.GetAdsTargetRequest;
 import to.unified.unified_java_sdk.models.operations.ListAdsTargetsRequest;
@@ -16,6 +17,7 @@ import to.unified.unified_java_sdk.models.operations.async.ListAdsTargetsRespons
 import to.unified.unified_java_sdk.operations.GetAdsTarget;
 import to.unified.unified_java_sdk.operations.ListAdsTargets;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncTarget {
@@ -60,8 +62,22 @@ public class AsyncTarget {
      * @return {@code CompletableFuture<GetAdsTargetResponse>} - The async response
      */
     public CompletableFuture<GetAdsTargetResponse> getAdsTarget(@Nonnull GetAdsTargetRequest request) {
+        return getAdsTarget(request, null);
+    }
+
+    /**
+     * Retrieve a target
+     * 
+     * <p>Retrieves a single AdsTarget by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetAdsTargetResponse>} - The async response
+     */
+    public CompletableFuture<GetAdsTargetResponse> getAdsTarget(@Nonnull GetAdsTargetRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetAdsTargetRequest, GetAdsTargetResponse> operation
-              = new GetAdsTarget.Async(sdkConfiguration, _headers);
+              = new GetAdsTarget.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -97,8 +113,26 @@ public class AsyncTarget {
      * @return {@code CompletableFuture<ListAdsTargetsResponse>} - The async response
      */
     public CompletableFuture<ListAdsTargetsResponse> listAdsTargets(@Nonnull ListAdsTargetsRequest request) {
+        return listAdsTargets(request, null);
+    }
+
+    /**
+     * List all targets
+     * 
+     * <p>Returns a list of AdsTargets. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListAdsTargetsResponse>} - The async response
+     */
+    public CompletableFuture<ListAdsTargetsResponse> listAdsTargets(@Nonnull ListAdsTargetsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListAdsTargetsRequest, ListAdsTargetsResponse> operation
-              = new ListAdsTargets.Async(sdkConfiguration, _headers);
+              = new ListAdsTargets.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

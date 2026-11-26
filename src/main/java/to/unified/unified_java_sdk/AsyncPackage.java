@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateAssessmentPackageRequest;
 import to.unified.unified_java_sdk.models.operations.GetAssessmentPackageRequest;
@@ -40,6 +41,7 @@ import to.unified.unified_java_sdk.operations.PatchAssessmentPackage;
 import to.unified.unified_java_sdk.operations.RemoveAssessmentPackage;
 import to.unified.unified_java_sdk.operations.UpdateAssessmentPackage;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncPackage {
@@ -78,8 +80,19 @@ public class AsyncPackage {
      * @return {@code CompletableFuture<CreateAssessmentPackageResponse>} - The async response
      */
     public CompletableFuture<CreateAssessmentPackageResponse> createAssessmentPackage(@Nonnull CreateAssessmentPackageRequest request) {
+        return createAssessmentPackage(request, null);
+    }
+
+    /**
+     * Create an assessment package
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateAssessmentPackageResponse>} - The async response
+     */
+    public CompletableFuture<CreateAssessmentPackageResponse> createAssessmentPackage(@Nonnull CreateAssessmentPackageRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateAssessmentPackageRequest, CreateAssessmentPackageResponse> operation
-              = new CreateAssessmentPackage.Async(sdkConfiguration, _headers);
+              = new CreateAssessmentPackage.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -101,8 +114,19 @@ public class AsyncPackage {
      * @return {@code CompletableFuture<GetAssessmentPackageResponse>} - The async response
      */
     public CompletableFuture<GetAssessmentPackageResponse> getAssessmentPackage(@Nonnull GetAssessmentPackageRequest request) {
+        return getAssessmentPackage(request, null);
+    }
+
+    /**
+     * Get an assessment package
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetAssessmentPackageResponse>} - The async response
+     */
+    public CompletableFuture<GetAssessmentPackageResponse> getAssessmentPackage(@Nonnull GetAssessmentPackageRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetAssessmentPackageRequest, GetAssessmentPackageResponse> operation
-              = new GetAssessmentPackage.Async(sdkConfiguration, _headers);
+              = new GetAssessmentPackage.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -130,8 +154,22 @@ public class AsyncPackage {
      * @return {@code CompletableFuture<GetVerificationPackageResponse>} - The async response
      */
     public CompletableFuture<GetVerificationPackageResponse> getVerificationPackage(@Nonnull GetVerificationPackageRequest request) {
+        return getVerificationPackage(request, null);
+    }
+
+    /**
+     * Retrieve a package
+     * 
+     * <p>Retrieves a single VerificationPackage by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetVerificationPackageResponse>} - The async response
+     */
+    public CompletableFuture<GetVerificationPackageResponse> getVerificationPackage(@Nonnull GetVerificationPackageRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetVerificationPackageRequest, GetVerificationPackageResponse> operation
-              = new GetVerificationPackage.Async(sdkConfiguration, _headers);
+              = new GetVerificationPackage.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -153,8 +191,19 @@ public class AsyncPackage {
      * @return {@code CompletableFuture<ListAssessmentPackagesResponse>} - The async response
      */
     public CompletableFuture<ListAssessmentPackagesResponse> listAssessmentPackages(@Nonnull ListAssessmentPackagesRequest request) {
+        return listAssessmentPackages(request, null);
+    }
+
+    /**
+     * List assessment packages
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListAssessmentPackagesResponse>} - The async response
+     */
+    public CompletableFuture<ListAssessmentPackagesResponse> listAssessmentPackages(@Nonnull ListAssessmentPackagesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListAssessmentPackagesRequest, ListAssessmentPackagesResponse> operation
-              = new ListAssessmentPackages.Async(sdkConfiguration, _headers);
+              = new ListAssessmentPackages.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -190,8 +239,26 @@ public class AsyncPackage {
      * @return {@code CompletableFuture<ListVerificationPackagesResponse>} - The async response
      */
     public CompletableFuture<ListVerificationPackagesResponse> listVerificationPackages(@Nonnull ListVerificationPackagesRequest request) {
+        return listVerificationPackages(request, null);
+    }
+
+    /**
+     * List all packages
+     * 
+     * <p>Returns a list of VerificationPackages. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListVerificationPackagesResponse>} - The async response
+     */
+    public CompletableFuture<ListVerificationPackagesResponse> listVerificationPackages(@Nonnull ListVerificationPackagesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListVerificationPackagesRequest, ListVerificationPackagesResponse> operation
-              = new ListVerificationPackages.Async(sdkConfiguration, _headers);
+              = new ListVerificationPackages.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -213,8 +280,19 @@ public class AsyncPackage {
      * @return {@code CompletableFuture<PatchAssessmentPackageResponse>} - The async response
      */
     public CompletableFuture<PatchAssessmentPackageResponse> patchAssessmentPackage(@Nonnull PatchAssessmentPackageRequest request) {
+        return patchAssessmentPackage(request, null);
+    }
+
+    /**
+     * Update an assessment package
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchAssessmentPackageResponse>} - The async response
+     */
+    public CompletableFuture<PatchAssessmentPackageResponse> patchAssessmentPackage(@Nonnull PatchAssessmentPackageRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchAssessmentPackageRequest, PatchAssessmentPackageResponse> operation
-              = new PatchAssessmentPackage.Async(sdkConfiguration, _headers);
+              = new PatchAssessmentPackage.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -236,8 +314,19 @@ public class AsyncPackage {
      * @return {@code CompletableFuture<RemoveAssessmentPackageResponse>} - The async response
      */
     public CompletableFuture<RemoveAssessmentPackageResponse> removeAssessmentPackage(@Nonnull RemoveAssessmentPackageRequest request) {
+        return removeAssessmentPackage(request, null);
+    }
+
+    /**
+     * Delete an assessment package
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveAssessmentPackageResponse>} - The async response
+     */
+    public CompletableFuture<RemoveAssessmentPackageResponse> removeAssessmentPackage(@Nonnull RemoveAssessmentPackageRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveAssessmentPackageRequest, RemoveAssessmentPackageResponse> operation
-              = new RemoveAssessmentPackage.Async(sdkConfiguration, _headers);
+              = new RemoveAssessmentPackage.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -259,8 +348,19 @@ public class AsyncPackage {
      * @return {@code CompletableFuture<UpdateAssessmentPackageResponse>} - The async response
      */
     public CompletableFuture<UpdateAssessmentPackageResponse> updateAssessmentPackage(@Nonnull UpdateAssessmentPackageRequest request) {
+        return updateAssessmentPackage(request, null);
+    }
+
+    /**
+     * Update an assessment package
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateAssessmentPackageResponse>} - The async response
+     */
+    public CompletableFuture<UpdateAssessmentPackageResponse> updateAssessmentPackage(@Nonnull UpdateAssessmentPackageRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateAssessmentPackageRequest, UpdateAssessmentPackageResponse> operation
-              = new UpdateAssessmentPackage.Async(sdkConfiguration, _headers);
+              = new UpdateAssessmentPackage.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

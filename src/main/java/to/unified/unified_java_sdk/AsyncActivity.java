@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateAtsActivityRequest;
 import to.unified.unified_java_sdk.models.operations.CreateLmsActivityRequest;
@@ -64,6 +65,7 @@ import to.unified.unified_java_sdk.operations.RemoveLmsActivity;
 import to.unified.unified_java_sdk.operations.UpdateAtsActivity;
 import to.unified.unified_java_sdk.operations.UpdateLmsActivity;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncActivity {
@@ -108,8 +110,22 @@ public class AsyncActivity {
      * @return {@code CompletableFuture<CreateAtsActivityResponse>} - The async response
      */
     public CompletableFuture<CreateAtsActivityResponse> createAtsActivity(@Nonnull CreateAtsActivityRequest request) {
+        return createAtsActivity(request, null);
+    }
+
+    /**
+     * Create an activity
+     * 
+     * <p>Creates a AtsActivity. Provide the unified AtsActivity fields in the request body; they are mapped
+     * to the provider's API. Returns the created AtsActivity.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateAtsActivityResponse>} - The async response
+     */
+    public CompletableFuture<CreateAtsActivityResponse> createAtsActivity(@Nonnull CreateAtsActivityRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateAtsActivityRequest, CreateAtsActivityResponse> operation
-              = new CreateAtsActivity.Async(sdkConfiguration, _headers);
+              = new CreateAtsActivity.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -137,8 +153,22 @@ public class AsyncActivity {
      * @return {@code CompletableFuture<CreateLmsActivityResponse>} - The async response
      */
     public CompletableFuture<CreateLmsActivityResponse> createLmsActivity(@Nonnull CreateLmsActivityRequest request) {
+        return createLmsActivity(request, null);
+    }
+
+    /**
+     * Create an activity
+     * 
+     * <p>Creates a LmsActivity. Provide the unified LmsActivity fields in the request body; they are mapped
+     * to the provider's API. Returns the created LmsActivity.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateLmsActivityResponse>} - The async response
+     */
+    public CompletableFuture<CreateLmsActivityResponse> createLmsActivity(@Nonnull CreateLmsActivityRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateLmsActivityRequest, CreateLmsActivityResponse> operation
-              = new CreateLmsActivity.Async(sdkConfiguration, _headers);
+              = new CreateLmsActivity.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -166,8 +196,22 @@ public class AsyncActivity {
      * @return {@code CompletableFuture<GetAtsActivityResponse>} - The async response
      */
     public CompletableFuture<GetAtsActivityResponse> getAtsActivity(@Nonnull GetAtsActivityRequest request) {
+        return getAtsActivity(request, null);
+    }
+
+    /**
+     * Retrieve an activity
+     * 
+     * <p>Retrieves a single AtsActivity by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetAtsActivityResponse>} - The async response
+     */
+    public CompletableFuture<GetAtsActivityResponse> getAtsActivity(@Nonnull GetAtsActivityRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetAtsActivityRequest, GetAtsActivityResponse> operation
-              = new GetAtsActivity.Async(sdkConfiguration, _headers);
+              = new GetAtsActivity.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -195,8 +239,22 @@ public class AsyncActivity {
      * @return {@code CompletableFuture<GetClubsActivityResponse>} - The async response
      */
     public CompletableFuture<GetClubsActivityResponse> getClubsActivity(@Nonnull GetClubsActivityRequest request) {
+        return getClubsActivity(request, null);
+    }
+
+    /**
+     * Retrieve an activity
+     * 
+     * <p>Retrieves a single ClubsActivity by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetClubsActivityResponse>} - The async response
+     */
+    public CompletableFuture<GetClubsActivityResponse> getClubsActivity(@Nonnull GetClubsActivityRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetClubsActivityRequest, GetClubsActivityResponse> operation
-              = new GetClubsActivity.Async(sdkConfiguration, _headers);
+              = new GetClubsActivity.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -224,8 +282,22 @@ public class AsyncActivity {
      * @return {@code CompletableFuture<GetLmsActivityResponse>} - The async response
      */
     public CompletableFuture<GetLmsActivityResponse> getLmsActivity(@Nonnull GetLmsActivityRequest request) {
+        return getLmsActivity(request, null);
+    }
+
+    /**
+     * Retrieve an activity
+     * 
+     * <p>Retrieves a single LmsActivity by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetLmsActivityResponse>} - The async response
+     */
+    public CompletableFuture<GetLmsActivityResponse> getLmsActivity(@Nonnull GetLmsActivityRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetLmsActivityRequest, GetLmsActivityResponse> operation
-              = new GetLmsActivity.Async(sdkConfiguration, _headers);
+              = new GetLmsActivity.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -261,8 +333,26 @@ public class AsyncActivity {
      * @return {@code CompletableFuture<ListAtsActivitiesResponse>} - The async response
      */
     public CompletableFuture<ListAtsActivitiesResponse> listAtsActivities(@Nonnull ListAtsActivitiesRequest request) {
+        return listAtsActivities(request, null);
+    }
+
+    /**
+     * List all activities
+     * 
+     * <p>Returns a list of AtsActivities. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListAtsActivitiesResponse>} - The async response
+     */
+    public CompletableFuture<ListAtsActivitiesResponse> listAtsActivities(@Nonnull ListAtsActivitiesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListAtsActivitiesRequest, ListAtsActivitiesResponse> operation
-              = new ListAtsActivities.Async(sdkConfiguration, _headers);
+              = new ListAtsActivities.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -298,8 +388,26 @@ public class AsyncActivity {
      * @return {@code CompletableFuture<ListClubsActivitiesResponse>} - The async response
      */
     public CompletableFuture<ListClubsActivitiesResponse> listClubsActivities(@Nonnull ListClubsActivitiesRequest request) {
+        return listClubsActivities(request, null);
+    }
+
+    /**
+     * List all activities
+     * 
+     * <p>Returns a list of ClubsActivities. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListClubsActivitiesResponse>} - The async response
+     */
+    public CompletableFuture<ListClubsActivitiesResponse> listClubsActivities(@Nonnull ListClubsActivitiesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListClubsActivitiesRequest, ListClubsActivitiesResponse> operation
-              = new ListClubsActivities.Async(sdkConfiguration, _headers);
+              = new ListClubsActivities.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -335,8 +443,26 @@ public class AsyncActivity {
      * @return {@code CompletableFuture<ListLmsActivitiesResponse>} - The async response
      */
     public CompletableFuture<ListLmsActivitiesResponse> listLmsActivities(@Nonnull ListLmsActivitiesRequest request) {
+        return listLmsActivities(request, null);
+    }
+
+    /**
+     * List all activities
+     * 
+     * <p>Returns a list of LmsActivities. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListLmsActivitiesResponse>} - The async response
+     */
+    public CompletableFuture<ListLmsActivitiesResponse> listLmsActivities(@Nonnull ListLmsActivitiesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListLmsActivitiesRequest, ListLmsActivitiesResponse> operation
-              = new ListLmsActivities.Async(sdkConfiguration, _headers);
+              = new ListLmsActivities.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -364,8 +490,22 @@ public class AsyncActivity {
      * @return {@code CompletableFuture<PatchAtsActivityResponse>} - The async response
      */
     public CompletableFuture<PatchAtsActivityResponse> patchAtsActivity(@Nonnull PatchAtsActivityRequest request) {
+        return patchAtsActivity(request, null);
+    }
+
+    /**
+     * Update an activity
+     * 
+     * <p>Updates the AtsActivity identified by `id`. Provide the unified AtsActivity fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchAtsActivityResponse>} - The async response
+     */
+    public CompletableFuture<PatchAtsActivityResponse> patchAtsActivity(@Nonnull PatchAtsActivityRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchAtsActivityRequest, PatchAtsActivityResponse> operation
-              = new PatchAtsActivity.Async(sdkConfiguration, _headers);
+              = new PatchAtsActivity.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -393,8 +533,22 @@ public class AsyncActivity {
      * @return {@code CompletableFuture<PatchLmsActivityResponse>} - The async response
      */
     public CompletableFuture<PatchLmsActivityResponse> patchLmsActivity(@Nonnull PatchLmsActivityRequest request) {
+        return patchLmsActivity(request, null);
+    }
+
+    /**
+     * Update an activity
+     * 
+     * <p>Updates the LmsActivity identified by `id`. Provide the unified LmsActivity fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchLmsActivityResponse>} - The async response
+     */
+    public CompletableFuture<PatchLmsActivityResponse> patchLmsActivity(@Nonnull PatchLmsActivityRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchLmsActivityRequest, PatchLmsActivityResponse> operation
-              = new PatchLmsActivity.Async(sdkConfiguration, _headers);
+              = new PatchLmsActivity.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -420,8 +574,21 @@ public class AsyncActivity {
      * @return {@code CompletableFuture<RemoveAtsActivityResponse>} - The async response
      */
     public CompletableFuture<RemoveAtsActivityResponse> removeAtsActivity(@Nonnull RemoveAtsActivityRequest request) {
+        return removeAtsActivity(request, null);
+    }
+
+    /**
+     * Remove an activity
+     * 
+     * <p>Deletes the AtsActivity identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveAtsActivityResponse>} - The async response
+     */
+    public CompletableFuture<RemoveAtsActivityResponse> removeAtsActivity(@Nonnull RemoveAtsActivityRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveAtsActivityRequest, RemoveAtsActivityResponse> operation
-              = new RemoveAtsActivity.Async(sdkConfiguration, _headers);
+              = new RemoveAtsActivity.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -447,8 +614,21 @@ public class AsyncActivity {
      * @return {@code CompletableFuture<RemoveLmsActivityResponse>} - The async response
      */
     public CompletableFuture<RemoveLmsActivityResponse> removeLmsActivity(@Nonnull RemoveLmsActivityRequest request) {
+        return removeLmsActivity(request, null);
+    }
+
+    /**
+     * Remove an activity
+     * 
+     * <p>Deletes the LmsActivity identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveLmsActivityResponse>} - The async response
+     */
+    public CompletableFuture<RemoveLmsActivityResponse> removeLmsActivity(@Nonnull RemoveLmsActivityRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveLmsActivityRequest, RemoveLmsActivityResponse> operation
-              = new RemoveLmsActivity.Async(sdkConfiguration, _headers);
+              = new RemoveLmsActivity.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -476,8 +656,22 @@ public class AsyncActivity {
      * @return {@code CompletableFuture<UpdateAtsActivityResponse>} - The async response
      */
     public CompletableFuture<UpdateAtsActivityResponse> updateAtsActivity(@Nonnull UpdateAtsActivityRequest request) {
+        return updateAtsActivity(request, null);
+    }
+
+    /**
+     * Update an activity
+     * 
+     * <p>Updates the AtsActivity identified by `id`. Provide the unified AtsActivity fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateAtsActivityResponse>} - The async response
+     */
+    public CompletableFuture<UpdateAtsActivityResponse> updateAtsActivity(@Nonnull UpdateAtsActivityRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateAtsActivityRequest, UpdateAtsActivityResponse> operation
-              = new UpdateAtsActivity.Async(sdkConfiguration, _headers);
+              = new UpdateAtsActivity.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -505,8 +699,22 @@ public class AsyncActivity {
      * @return {@code CompletableFuture<UpdateLmsActivityResponse>} - The async response
      */
     public CompletableFuture<UpdateLmsActivityResponse> updateLmsActivity(@Nonnull UpdateLmsActivityRequest request) {
+        return updateLmsActivity(request, null);
+    }
+
+    /**
+     * Update an activity
+     * 
+     * <p>Updates the LmsActivity identified by `id`. Provide the unified LmsActivity fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateLmsActivityResponse>} - The async response
+     */
+    public CompletableFuture<UpdateLmsActivityResponse> updateLmsActivity(@Nonnull UpdateLmsActivityRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateLmsActivityRequest, UpdateLmsActivityResponse> operation
-              = new UpdateLmsActivity.Async(sdkConfiguration, _headers);
+              = new UpdateLmsActivity.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

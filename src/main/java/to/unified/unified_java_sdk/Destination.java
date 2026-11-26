@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateCdpDestinationRequest;
 import to.unified.unified_java_sdk.models.operations.CreateCdpDestinationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateCdpDestinationResponse;
@@ -31,6 +32,7 @@ import to.unified.unified_java_sdk.operations.PatchCdpDestination;
 import to.unified.unified_java_sdk.operations.RemoveCdpDestination;
 import to.unified.unified_java_sdk.operations.UpdateCdpDestination;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Destination {
@@ -75,8 +77,23 @@ public class Destination {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateCdpDestinationResponse createCdpDestination(@Nonnull CreateCdpDestinationRequest request) {
+        return createCdpDestination(request, null);
+    }
+
+    /**
+     * Create a destination
+     * 
+     * <p>Creates a CdpDestination. Provide the unified CdpDestination fields in the request body; they are
+     * mapped to the provider's API. Returns the created CdpDestination.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateCdpDestinationResponse createCdpDestination(@Nonnull CreateCdpDestinationRequest request, @Nullable Options options) {
         RequestOperation<CreateCdpDestinationRequest, CreateCdpDestinationResponse> operation
-              = new CreateCdpDestination.Sync(sdkConfiguration, _headers);
+              = new CreateCdpDestination.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -103,8 +120,23 @@ public class Destination {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetCdpDestinationResponse getCdpDestination(@Nonnull GetCdpDestinationRequest request) {
+        return getCdpDestination(request, null);
+    }
+
+    /**
+     * Retrieve a destination
+     * 
+     * <p>Retrieves a single CdpDestination by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetCdpDestinationResponse getCdpDestination(@Nonnull GetCdpDestinationRequest request, @Nullable Options options) {
         RequestOperation<GetCdpDestinationRequest, GetCdpDestinationResponse> operation
-              = new GetCdpDestination.Sync(sdkConfiguration, _headers);
+              = new GetCdpDestination.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -139,8 +171,27 @@ public class Destination {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListCdpDestinationsResponse listCdpDestinations(@Nonnull ListCdpDestinationsRequest request) {
+        return listCdpDestinations(request, null);
+    }
+
+    /**
+     * List all destinations
+     * 
+     * <p>Returns a list of CdpDestinations. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListCdpDestinationsResponse listCdpDestinations(@Nonnull ListCdpDestinationsRequest request, @Nullable Options options) {
         RequestOperation<ListCdpDestinationsRequest, ListCdpDestinationsResponse> operation
-              = new ListCdpDestinations.Sync(sdkConfiguration, _headers);
+              = new ListCdpDestinations.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +218,23 @@ public class Destination {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchCdpDestinationResponse patchCdpDestination(@Nonnull PatchCdpDestinationRequest request) {
+        return patchCdpDestination(request, null);
+    }
+
+    /**
+     * Update a destination
+     * 
+     * <p>Updates the CdpDestination identified by `id`. Provide the unified CdpDestination fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchCdpDestinationResponse patchCdpDestination(@Nonnull PatchCdpDestinationRequest request, @Nullable Options options) {
         RequestOperation<PatchCdpDestinationRequest, PatchCdpDestinationResponse> operation
-              = new PatchCdpDestination.Sync(sdkConfiguration, _headers);
+              = new PatchCdpDestination.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -193,8 +259,22 @@ public class Destination {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveCdpDestinationResponse removeCdpDestination(@Nonnull RemoveCdpDestinationRequest request) {
+        return removeCdpDestination(request, null);
+    }
+
+    /**
+     * Remove a destination
+     * 
+     * <p>Deletes the CdpDestination identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveCdpDestinationResponse removeCdpDestination(@Nonnull RemoveCdpDestinationRequest request, @Nullable Options options) {
         RequestOperation<RemoveCdpDestinationRequest, RemoveCdpDestinationResponse> operation
-              = new RemoveCdpDestination.Sync(sdkConfiguration, _headers);
+              = new RemoveCdpDestination.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -221,8 +301,23 @@ public class Destination {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateCdpDestinationResponse updateCdpDestination(@Nonnull UpdateCdpDestinationRequest request) {
+        return updateCdpDestination(request, null);
+    }
+
+    /**
+     * Update a destination
+     * 
+     * <p>Updates the CdpDestination identified by `id`. Provide the unified CdpDestination fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateCdpDestinationResponse updateCdpDestination(@Nonnull UpdateCdpDestinationRequest request, @Nullable Options options) {
         RequestOperation<UpdateCdpDestinationRequest, UpdateCdpDestinationResponse> operation
-              = new UpdateCdpDestination.Sync(sdkConfiguration, _headers);
+              = new UpdateCdpDestination.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

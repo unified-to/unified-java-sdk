@@ -23,7 +23,10 @@ public enum UpdatePaymentLinkQueryParamFields {
     IS_CHARGEABLE_NOW("is_chargeable_now"),
     SUCCESS_URL("success_url"),
     METADATA("metadata"),
-    RAW("raw");
+    RAW("raw"),
+    CONTACT_NAME("contact_name"),
+    CONTACT_EMAIL("contact_email"),
+    CONTACT_PHONE("contact_phone");
 
     @JsonValue
     private final String value;

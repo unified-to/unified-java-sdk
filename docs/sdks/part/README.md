@@ -4,12 +4,101 @@
 
 ### Available Operations
 
+* [createDmsPart](#createdmspart) - Create a part
 * [createPlmPart](#createplmpart) - Create a part
+* [getDmsPart](#getdmspart) - Retrieve a part
 * [getPlmPart](#getplmpart) - Retrieve a part
+* [listDmsParts](#listdmsparts) - List all parts
 * [listPlmParts](#listplmparts) - List all parts
+* [patchDmsPart](#patchdmspart) - Update a part
 * [patchPlmPart](#patchplmpart) - Update a part
 * [removePlmPart](#removeplmpart) - Remove a part
+* [updateDmsPart](#updatedmspart) - Update a part
 * [updatePlmPart](#updateplmpart) - Update a part
+
+## createDmsPart
+
+Creates a DmsPart. Provide the unified DmsPart fields in the request body; they are mapped to the provider's API. Returns the created DmsPart.
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="createDmsPart" method="post" path="/dms/{connection_id}/part" example="dms_part" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateDmsPartRequest;
+import to.unified.unified_java_sdk.models.operations.CreateDmsPartResponse;
+import to.unified.unified_java_sdk.models.shared.DmsPart;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        CreateDmsPartRequest req = CreateDmsPartRequest.builder()
+                .dmsPart(DmsPart.builder()
+                    .binLocations(List.of(
+                        "S18-6"))
+                    .category("Ignition")
+                    .costAmount(25.26)
+                    .createdAt(OffsetDateTime.parse("2020-07-02T08:18:03.858Z"))
+                    .currency("USD")
+                    .description("Cabin filter")
+                    .id("9b7240ad-96e5-4b65-85bc-61fc79f25b33")
+                    .lastSoldAt(OffsetDateTime.parse("2020-11-23T02:58:55.383Z"))
+                    .listPriceAmount(39.61)
+                    .manufacturerCode("TOY")
+                    .maxStockQuantity(21d)
+                    .metadata(List.of())
+                    .minStockQuantity(3d)
+                    .packQuantity(1d)
+                    .partNumber("73992-IM3FI")
+                    .quantityAvailable(13d)
+                    .quantityOnHand(15d)
+                    .quantityOnOrder(14d)
+                    .sourceCode("30")
+                    .tradePriceAmount(29.05)
+                    .updatedAt(OffsetDateTime.parse("2023-11-22T17:33:42.467Z"))
+                    .build())
+                .connectionId("<id>")
+                .build();
+
+        CreateDmsPartResponse res = sdk.part().createDmsPart()
+                .request(req)
+                .call();
+
+        if (res.dmsPart().isPresent()) {
+            System.out.println(res.dmsPart().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `request`                                                               | [CreateDmsPartRequest](../../models/operations/CreateDmsPartRequest.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
+
+### Response
+
+**[CreateDmsPartResponse](../../models/operations/CreateDmsPartResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## createPlmPart
 
@@ -42,15 +131,15 @@ public class Application {
         CreatePlmPartRequest req = CreatePlmPartRequest.builder()
                 .plmPart(PlmPart.builder()
                     .createdAt(OffsetDateTime.parse("2019-04-13T06:25:34.770Z"))
-                    .description("Pectus tero ulterius aestivus talis tero ullam cruciamentum.")
+                    .description("Aestivus talis tero ullam cruciamentum voluptatibus cumque degusto cui.")
                     .documentIds(List.of())
                     .fileIds(List.of())
-                    .id("27e64544-0961-4f59-bc98-258fd955d2c2")
+                    .id("cbf12152-dad6-47ec-ad62-7c2affae56bc")
                     .isAssembly(false)
                     .lifecycleState("Design")
-                    .masterIdentifier("96d41521-d1cd-4ce3-819e-0fdb3601cebb")
+                    .masterIdentifier("dcb5c00d-1b27-424a-a8b1-2a2a9828f7bc")
                     .metadata(List.of())
-                    .name("grumpy PCB")
+                    .name("speedy PCB")
                     .number("PRT-009154")
                     .originalType("Software")
                     .revision("B")
@@ -58,8 +147,8 @@ public class Application {
                     .status(PlmPartStatus.IN_WORK)
                     .type(PlmPartType.SOFTWARE)
                     .unitOfMeasure("EA")
-                    .updatedAt(OffsetDateTime.parse("2021-04-14T00:16:55.229Z"))
-                    .url("https://inborn-independence.info")
+                    .updatedAt(OffsetDateTime.parse("2021-04-15T13:48:48.289Z"))
+                    .url("https://digital-pop.com")
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -84,6 +173,64 @@ public class Application {
 ### Response
 
 **[CreatePlmPartResponse](../../models/operations/CreatePlmPartResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## getDmsPart
+
+Retrieves a single DmsPart by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="getDmsPart" method="get" path="/dms/{connection_id}/part/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetDmsPartRequest;
+import to.unified.unified_java_sdk.models.operations.GetDmsPartResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        GetDmsPartRequest req = GetDmsPartRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetDmsPartResponse res = sdk.part().getDmsPart()
+                .request(req)
+                .call();
+
+        if (res.dmsPart().isPresent()) {
+            System.out.println(res.dmsPart().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                         | Type                                                              | Required                                                          | Description                                                       |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| `request`                                                         | [GetDmsPartRequest](../../models/operations/GetDmsPartRequest.md) | :heavy_check_mark:                                                | The request object to use for the request.                        |
+
+### Response
+
+**[GetDmsPartResponse](../../models/operations/GetDmsPartResponse.md)**
 
 ### Errors
 
@@ -149,6 +296,63 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## listDmsParts
+
+Returns a list of DmsParts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listDmsParts" method="get" path="/dms/{connection_id}/part" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListDmsPartsRequest;
+import to.unified.unified_java_sdk.models.operations.ListDmsPartsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListDmsPartsRequest req = ListDmsPartsRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListDmsPartsResponse res = sdk.part().listDmsParts()
+                .request(req)
+                .call();
+
+        if (res.dmsParts().isPresent()) {
+            System.out.println(res.dmsParts().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `request`                                                             | [ListDmsPartsRequest](../../models/operations/ListDmsPartsRequest.md) | :heavy_check_mark:                                                    | The request object to use for the request.                            |
+
+### Response
+
+**[ListDmsPartsResponse](../../models/operations/ListDmsPartsResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## listPlmParts
 
 Returns a list of PlmParts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
@@ -206,6 +410,91 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## patchDmsPart
+
+Updates the DmsPart identified by `id`. Provide the unified DmsPart fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="patchDmsPart" method="patch" path="/dms/{connection_id}/part/{id}" example="dms_part" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchDmsPartRequest;
+import to.unified.unified_java_sdk.models.operations.PatchDmsPartResponse;
+import to.unified.unified_java_sdk.models.shared.DmsPart;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        PatchDmsPartRequest req = PatchDmsPartRequest.builder()
+                .dmsPart(DmsPart.builder()
+                    .binLocations(List.of(
+                        "S18-6"))
+                    .category("Ignition")
+                    .costAmount(25.26)
+                    .createdAt(OffsetDateTime.parse("2020-07-02T08:18:03.858Z"))
+                    .currency("USD")
+                    .description("Cabin filter")
+                    .id("b10c1043-8b63-455f-ad11-71391e18bda2")
+                    .lastSoldAt(OffsetDateTime.parse("2020-11-23T02:58:55.384Z"))
+                    .listPriceAmount(39.61)
+                    .manufacturerCode("TOY")
+                    .maxStockQuantity(21d)
+                    .metadata(List.of())
+                    .minStockQuantity(3d)
+                    .packQuantity(1d)
+                    .partNumber("73992-IM3FI")
+                    .quantityAvailable(13d)
+                    .quantityOnHand(15d)
+                    .quantityOnOrder(14d)
+                    .sourceCode("30")
+                    .tradePriceAmount(29.05)
+                    .updatedAt(OffsetDateTime.parse("2023-11-22T17:33:42.476Z"))
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        PatchDmsPartResponse res = sdk.part().patchDmsPart()
+                .request(req)
+                .call();
+
+        if (res.dmsPart().isPresent()) {
+            System.out.println(res.dmsPart().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `request`                                                             | [PatchDmsPartRequest](../../models/operations/PatchDmsPartRequest.md) | :heavy_check_mark:                                                    | The request object to use for the request.                            |
+
+### Response
+
+**[PatchDmsPartResponse](../../models/operations/PatchDmsPartResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## patchPlmPart
 
 Updates the PlmPart identified by `id`. Provide the unified PlmPart fields to change in the request body.
@@ -237,15 +526,15 @@ public class Application {
         PatchPlmPartRequest req = PatchPlmPartRequest.builder()
                 .plmPart(PlmPart.builder()
                     .createdAt(OffsetDateTime.parse("2019-04-13T06:25:34.770Z"))
-                    .description("Pectus tero ulterius aestivus talis tero ullam cruciamentum.")
+                    .description("Aestivus talis tero ullam cruciamentum voluptatibus cumque degusto cui.")
                     .documentIds(List.of())
                     .fileIds(List.of())
-                    .id("0f8c3a9a-f840-4fe3-8c64-9781e6a756d7")
+                    .id("b21db8d9-4ff3-4579-aebb-40134b50f66a")
                     .isAssembly(false)
                     .lifecycleState("Design")
-                    .masterIdentifier("7b83f8bc-20b2-41c1-a159-d2fedcdc9f0a")
+                    .masterIdentifier("5b622726-2381-463b-ad37-2a737252494b")
                     .metadata(List.of())
-                    .name("grumpy PCB")
+                    .name("speedy PCB")
                     .number("PRT-009154")
                     .originalType("Software")
                     .revision("B")
@@ -253,8 +542,8 @@ public class Application {
                     .status(PlmPartStatus.IN_WORK)
                     .type(PlmPartType.SOFTWARE)
                     .unitOfMeasure("EA")
-                    .updatedAt(OffsetDateTime.parse("2021-04-14T00:16:55.234Z"))
-                    .url("https://inborn-independence.info")
+                    .updatedAt(OffsetDateTime.parse("2021-04-15T13:48:48.294Z"))
+                    .url("https://digital-pop.com")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -343,6 +632,91 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## updateDmsPart
+
+Updates the DmsPart identified by `id`. Provide the unified DmsPart fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="updateDmsPart" method="put" path="/dms/{connection_id}/part/{id}" example="dms_part" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateDmsPartRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateDmsPartResponse;
+import to.unified.unified_java_sdk.models.shared.DmsPart;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        UpdateDmsPartRequest req = UpdateDmsPartRequest.builder()
+                .dmsPart(DmsPart.builder()
+                    .binLocations(List.of(
+                        "S18-6"))
+                    .category("Ignition")
+                    .costAmount(25.26)
+                    .createdAt(OffsetDateTime.parse("2020-07-02T08:18:03.858Z"))
+                    .currency("USD")
+                    .description("Cabin filter")
+                    .id("b10c1043-8b63-455f-ad11-71391e18bda2")
+                    .lastSoldAt(OffsetDateTime.parse("2020-11-23T02:58:55.384Z"))
+                    .listPriceAmount(39.61)
+                    .manufacturerCode("TOY")
+                    .maxStockQuantity(21d)
+                    .metadata(List.of())
+                    .minStockQuantity(3d)
+                    .packQuantity(1d)
+                    .partNumber("73992-IM3FI")
+                    .quantityAvailable(13d)
+                    .quantityOnHand(15d)
+                    .quantityOnOrder(14d)
+                    .sourceCode("30")
+                    .tradePriceAmount(29.05)
+                    .updatedAt(OffsetDateTime.parse("2023-11-22T17:33:42.476Z"))
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        UpdateDmsPartResponse res = sdk.part().updateDmsPart()
+                .request(req)
+                .call();
+
+        if (res.dmsPart().isPresent()) {
+            System.out.println(res.dmsPart().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `request`                                                               | [UpdateDmsPartRequest](../../models/operations/UpdateDmsPartRequest.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
+
+### Response
+
+**[UpdateDmsPartResponse](../../models/operations/UpdateDmsPartResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## updatePlmPart
 
 Updates the PlmPart identified by `id`. Provide the unified PlmPart fields to change in the request body.
@@ -374,15 +748,15 @@ public class Application {
         UpdatePlmPartRequest req = UpdatePlmPartRequest.builder()
                 .plmPart(PlmPart.builder()
                     .createdAt(OffsetDateTime.parse("2019-04-13T06:25:34.770Z"))
-                    .description("Pectus tero ulterius aestivus talis tero ullam cruciamentum.")
+                    .description("Aestivus talis tero ullam cruciamentum voluptatibus cumque degusto cui.")
                     .documentIds(List.of())
                     .fileIds(List.of())
-                    .id("0f8c3a9a-f840-4fe3-8c64-9781e6a756d7")
+                    .id("b21db8d9-4ff3-4579-aebb-40134b50f66a")
                     .isAssembly(false)
                     .lifecycleState("Design")
-                    .masterIdentifier("7b83f8bc-20b2-41c1-a159-d2fedcdc9f0a")
+                    .masterIdentifier("5b622726-2381-463b-ad37-2a737252494b")
                     .metadata(List.of())
-                    .name("grumpy PCB")
+                    .name("speedy PCB")
                     .number("PRT-009154")
                     .originalType("Software")
                     .revision("B")
@@ -390,8 +764,8 @@ public class Application {
                     .status(PlmPartStatus.IN_WORK)
                     .type(PlmPartType.SOFTWARE)
                     .unitOfMeasure("EA")
-                    .updatedAt(OffsetDateTime.parse("2021-04-14T00:16:55.234Z"))
-                    .url("https://inborn-independence.info")
+                    .updatedAt(OffsetDateTime.parse("2021-04-15T13:48:48.294Z"))
+                    .url("https://digital-pop.com")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

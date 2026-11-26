@@ -6,20 +6,30 @@ package to.unified.unified_java_sdk.models.operations.async;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.PatchCalendarLinkRequest;
 import to.unified.unified_java_sdk.operations.PatchCalendarLink;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class PatchCalendarLinkRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private PatchCalendarLinkRequest request;
+    private final Options.Builder optionsBuilder;
 
     public PatchCalendarLinkRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public PatchCalendarLinkRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public PatchCalendarLinkRequestBuilder request(@Nonnull PatchCalendarLinkRequest request) {
@@ -44,8 +54,9 @@ public class PatchCalendarLinkRequestBuilder {
     * @return The response from the server.
     */
     public CompletableFuture<PatchCalendarLinkResponse> call() {
+        Options options = optionsBuilder.build();
         AsyncRequestOperation<PatchCalendarLinkRequest, PatchCalendarLinkResponse> operation
-              = new PatchCalendarLink.Async(sdkConfiguration, _headers);
+              = new PatchCalendarLink.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

@@ -6,9 +6,11 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateMetadataMetadataRequest;
 import to.unified.unified_java_sdk.models.operations.GetMetadataMetadataRequest;
+import to.unified.unified_java_sdk.models.operations.ListFhirMetadatasRequest;
 import to.unified.unified_java_sdk.models.operations.ListMetadataMetadatasRequest;
 import to.unified.unified_java_sdk.models.operations.PatchMetadataMetadataRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveMetadataMetadataRequest;
@@ -17,6 +19,8 @@ import to.unified.unified_java_sdk.models.operations.async.CreateMetadataMetadat
 import to.unified.unified_java_sdk.models.operations.async.CreateMetadataMetadataResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetMetadataMetadataRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetMetadataMetadataResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListFhirMetadatasRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListFhirMetadatasResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListMetadataMetadatasRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListMetadataMetadatasResponse;
 import to.unified.unified_java_sdk.models.operations.async.PatchMetadataMetadataRequestBuilder;
@@ -27,11 +31,13 @@ import to.unified.unified_java_sdk.models.operations.async.UpdateMetadataMetadat
 import to.unified.unified_java_sdk.models.operations.async.UpdateMetadataMetadataResponse;
 import to.unified.unified_java_sdk.operations.CreateMetadataMetadata;
 import to.unified.unified_java_sdk.operations.GetMetadataMetadata;
+import to.unified.unified_java_sdk.operations.ListFhirMetadatas;
 import to.unified.unified_java_sdk.operations.ListMetadataMetadatas;
 import to.unified.unified_java_sdk.operations.PatchMetadataMetadata;
 import to.unified.unified_java_sdk.operations.RemoveMetadataMetadata;
 import to.unified.unified_java_sdk.operations.UpdateMetadataMetadata;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncMetadata {
@@ -76,8 +82,22 @@ public class AsyncMetadata {
      * @return {@code CompletableFuture<CreateMetadataMetadataResponse>} - The async response
      */
     public CompletableFuture<CreateMetadataMetadataResponse> createMetadataMetadata(@Nonnull CreateMetadataMetadataRequest request) {
+        return createMetadataMetadata(request, null);
+    }
+
+    /**
+     * Create a metadata
+     * 
+     * <p>Creates a MetadataMetadata. Provide the unified MetadataMetadata fields in the request body; they
+     * are mapped to the provider's API. Returns the created MetadataMetadata.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateMetadataMetadataResponse>} - The async response
+     */
+    public CompletableFuture<CreateMetadataMetadataResponse> createMetadataMetadata(@Nonnull CreateMetadataMetadataRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateMetadataMetadataRequest, CreateMetadataMetadataResponse> operation
-              = new CreateMetadataMetadata.Async(sdkConfiguration, _headers);
+              = new CreateMetadataMetadata.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -105,8 +125,68 @@ public class AsyncMetadata {
      * @return {@code CompletableFuture<GetMetadataMetadataResponse>} - The async response
      */
     public CompletableFuture<GetMetadataMetadataResponse> getMetadataMetadata(@Nonnull GetMetadataMetadataRequest request) {
+        return getMetadataMetadata(request, null);
+    }
+
+    /**
+     * Retrieve a metadata
+     * 
+     * <p>Retrieves a single MetadataMetadata by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetMetadataMetadataResponse>} - The async response
+     */
+    public CompletableFuture<GetMetadataMetadataResponse> getMetadataMetadata(@Nonnull GetMetadataMetadataRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetMetadataMetadataRequest, GetMetadataMetadataResponse> operation
-              = new GetMetadataMetadata.Async(sdkConfiguration, _headers);
+              = new GetMetadataMetadata.Async(sdkConfiguration, options, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Get the CapabilityStatement
+     * 
+     * <p>The resources, interactions and search parameters this connection's integration supports. Responses
+     * use the application/fhir+json media type; errors are OperationOutcome resources. Read-only (FHIR R4
+     * 4.0.1).
+     * 
+     * @return The async call builder
+     */
+    public ListFhirMetadatasRequestBuilder listFhirMetadatas() {
+        return new ListFhirMetadatasRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Get the CapabilityStatement
+     * 
+     * <p>The resources, interactions and search parameters this connection's integration supports. Responses
+     * use the application/fhir+json media type; errors are OperationOutcome resources. Read-only (FHIR R4
+     * 4.0.1).
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<ListFhirMetadatasResponse>} - The async response
+     */
+    public CompletableFuture<ListFhirMetadatasResponse> listFhirMetadatas(@Nonnull ListFhirMetadatasRequest request) {
+        return listFhirMetadatas(request, null);
+    }
+
+    /**
+     * Get the CapabilityStatement
+     * 
+     * <p>The resources, interactions and search parameters this connection's integration supports. Responses
+     * use the application/fhir+json media type; errors are OperationOutcome resources. Read-only (FHIR R4
+     * 4.0.1).
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListFhirMetadatasResponse>} - The async response
+     */
+    public CompletableFuture<ListFhirMetadatasResponse> listFhirMetadatas(@Nonnull ListFhirMetadatasRequest request, @Nullable Options options) {
+        AsyncRequestOperation<ListFhirMetadatasRequest, ListFhirMetadatasResponse> operation
+              = new ListFhirMetadatas.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -142,8 +222,26 @@ public class AsyncMetadata {
      * @return {@code CompletableFuture<ListMetadataMetadatasResponse>} - The async response
      */
     public CompletableFuture<ListMetadataMetadatasResponse> listMetadataMetadatas(@Nonnull ListMetadataMetadatasRequest request) {
+        return listMetadataMetadatas(request, null);
+    }
+
+    /**
+     * List all metadatas
+     * 
+     * <p>Returns a list of MetadataMetadatas. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListMetadataMetadatasResponse>} - The async response
+     */
+    public CompletableFuture<ListMetadataMetadatasResponse> listMetadataMetadatas(@Nonnull ListMetadataMetadatasRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListMetadataMetadatasRequest, ListMetadataMetadatasResponse> operation
-              = new ListMetadataMetadatas.Async(sdkConfiguration, _headers);
+              = new ListMetadataMetadatas.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -171,8 +269,22 @@ public class AsyncMetadata {
      * @return {@code CompletableFuture<PatchMetadataMetadataResponse>} - The async response
      */
     public CompletableFuture<PatchMetadataMetadataResponse> patchMetadataMetadata(@Nonnull PatchMetadataMetadataRequest request) {
+        return patchMetadataMetadata(request, null);
+    }
+
+    /**
+     * Update a metadata
+     * 
+     * <p>Updates the MetadataMetadata identified by `id`. Provide the unified MetadataMetadata fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchMetadataMetadataResponse>} - The async response
+     */
+    public CompletableFuture<PatchMetadataMetadataResponse> patchMetadataMetadata(@Nonnull PatchMetadataMetadataRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchMetadataMetadataRequest, PatchMetadataMetadataResponse> operation
-              = new PatchMetadataMetadata.Async(sdkConfiguration, _headers);
+              = new PatchMetadataMetadata.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -198,8 +310,21 @@ public class AsyncMetadata {
      * @return {@code CompletableFuture<RemoveMetadataMetadataResponse>} - The async response
      */
     public CompletableFuture<RemoveMetadataMetadataResponse> removeMetadataMetadata(@Nonnull RemoveMetadataMetadataRequest request) {
+        return removeMetadataMetadata(request, null);
+    }
+
+    /**
+     * Remove a metadata
+     * 
+     * <p>Deletes the MetadataMetadata identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveMetadataMetadataResponse>} - The async response
+     */
+    public CompletableFuture<RemoveMetadataMetadataResponse> removeMetadataMetadata(@Nonnull RemoveMetadataMetadataRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveMetadataMetadataRequest, RemoveMetadataMetadataResponse> operation
-              = new RemoveMetadataMetadata.Async(sdkConfiguration, _headers);
+              = new RemoveMetadataMetadata.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -227,8 +352,22 @@ public class AsyncMetadata {
      * @return {@code CompletableFuture<UpdateMetadataMetadataResponse>} - The async response
      */
     public CompletableFuture<UpdateMetadataMetadataResponse> updateMetadataMetadata(@Nonnull UpdateMetadataMetadataRequest request) {
+        return updateMetadataMetadata(request, null);
+    }
+
+    /**
+     * Update a metadata
+     * 
+     * <p>Updates the MetadataMetadata identified by `id`. Provide the unified MetadataMetadata fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateMetadataMetadataResponse>} - The async response
+     */
+    public CompletableFuture<UpdateMetadataMetadataResponse> updateMetadataMetadata(@Nonnull UpdateMetadataMetadataRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateMetadataMetadataRequest, UpdateMetadataMetadataResponse> operation
-              = new UpdateMetadataMetadata.Async(sdkConfiguration, _headers);
+              = new UpdateMetadataMetadata.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

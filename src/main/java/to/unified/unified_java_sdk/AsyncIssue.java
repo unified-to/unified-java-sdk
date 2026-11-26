@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateQmsIssueRequest;
 import to.unified.unified_java_sdk.models.operations.GetQmsIssueRequest;
@@ -36,6 +37,7 @@ import to.unified.unified_java_sdk.operations.ListUnifiedIssues;
 import to.unified.unified_java_sdk.operations.PatchQmsIssue;
 import to.unified.unified_java_sdk.operations.UpdateQmsIssue;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncIssue {
@@ -80,8 +82,22 @@ public class AsyncIssue {
      * @return {@code CompletableFuture<CreateQmsIssueResponse>} - The async response
      */
     public CompletableFuture<CreateQmsIssueResponse> createQmsIssue(@Nonnull CreateQmsIssueRequest request) {
+        return createQmsIssue(request, null);
+    }
+
+    /**
+     * Create an issue
+     * 
+     * <p>Creates a QmsIssue. Provide the unified QmsIssue fields in the request body; they are mapped to the
+     * provider's API. Returns the created QmsIssue.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateQmsIssueResponse>} - The async response
+     */
+    public CompletableFuture<CreateQmsIssueResponse> createQmsIssue(@Nonnull CreateQmsIssueRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateQmsIssueRequest, CreateQmsIssueResponse> operation
-              = new CreateQmsIssue.Async(sdkConfiguration, _headers);
+              = new CreateQmsIssue.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -109,8 +125,22 @@ public class AsyncIssue {
      * @return {@code CompletableFuture<GetQmsIssueResponse>} - The async response
      */
     public CompletableFuture<GetQmsIssueResponse> getQmsIssue(@Nonnull GetQmsIssueRequest request) {
+        return getQmsIssue(request, null);
+    }
+
+    /**
+     * Retrieve an issue
+     * 
+     * <p>Retrieves a single QmsIssue by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetQmsIssueResponse>} - The async response
+     */
+    public CompletableFuture<GetQmsIssueResponse> getQmsIssue(@Nonnull GetQmsIssueRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetQmsIssueRequest, GetQmsIssueResponse> operation
-              = new GetQmsIssue.Async(sdkConfiguration, _headers);
+              = new GetQmsIssue.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -132,8 +162,19 @@ public class AsyncIssue {
      * @return {@code CompletableFuture<GetUnifiedIssueResponse>} - The async response
      */
     public CompletableFuture<GetUnifiedIssueResponse> getUnifiedIssue(@Nonnull GetUnifiedIssueRequest request) {
+        return getUnifiedIssue(request, null);
+    }
+
+    /**
+     * Retrieve support issue
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetUnifiedIssueResponse>} - The async response
+     */
+    public CompletableFuture<GetUnifiedIssueResponse> getUnifiedIssue(@Nonnull GetUnifiedIssueRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetUnifiedIssueRequest, GetUnifiedIssueResponse> operation
-              = new GetUnifiedIssue.Async(sdkConfiguration, _headers);
+              = new GetUnifiedIssue.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -169,8 +210,26 @@ public class AsyncIssue {
      * @return {@code CompletableFuture<ListQmsIssuesResponse>} - The async response
      */
     public CompletableFuture<ListQmsIssuesResponse> listQmsIssues(@Nonnull ListQmsIssuesRequest request) {
+        return listQmsIssues(request, null);
+    }
+
+    /**
+     * List all issues
+     * 
+     * <p>Returns a list of QmsIssues. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListQmsIssuesResponse>} - The async response
+     */
+    public CompletableFuture<ListQmsIssuesResponse> listQmsIssues(@Nonnull ListQmsIssuesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListQmsIssuesRequest, ListQmsIssuesResponse> operation
-              = new ListQmsIssues.Async(sdkConfiguration, _headers);
+              = new ListQmsIssues.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -192,8 +251,19 @@ public class AsyncIssue {
      * @return {@code CompletableFuture<ListUnifiedIssuesResponse>} - The async response
      */
     public CompletableFuture<ListUnifiedIssuesResponse> listUnifiedIssues(@Nonnull ListUnifiedIssuesRequest request) {
+        return listUnifiedIssues(request, null);
+    }
+
+    /**
+     * List support issues
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListUnifiedIssuesResponse>} - The async response
+     */
+    public CompletableFuture<ListUnifiedIssuesResponse> listUnifiedIssues(@Nonnull ListUnifiedIssuesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListUnifiedIssuesRequest, ListUnifiedIssuesResponse> operation
-              = new ListUnifiedIssues.Async(sdkConfiguration, _headers);
+              = new ListUnifiedIssues.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -221,8 +291,22 @@ public class AsyncIssue {
      * @return {@code CompletableFuture<PatchQmsIssueResponse>} - The async response
      */
     public CompletableFuture<PatchQmsIssueResponse> patchQmsIssue(@Nonnull PatchQmsIssueRequest request) {
+        return patchQmsIssue(request, null);
+    }
+
+    /**
+     * Update an issue
+     * 
+     * <p>Updates the QmsIssue identified by `id`. Provide the unified QmsIssue fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchQmsIssueResponse>} - The async response
+     */
+    public CompletableFuture<PatchQmsIssueResponse> patchQmsIssue(@Nonnull PatchQmsIssueRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchQmsIssueRequest, PatchQmsIssueResponse> operation
-              = new PatchQmsIssue.Async(sdkConfiguration, _headers);
+              = new PatchQmsIssue.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -250,8 +334,22 @@ public class AsyncIssue {
      * @return {@code CompletableFuture<UpdateQmsIssueResponse>} - The async response
      */
     public CompletableFuture<UpdateQmsIssueResponse> updateQmsIssue(@Nonnull UpdateQmsIssueRequest request) {
+        return updateQmsIssue(request, null);
+    }
+
+    /**
+     * Update an issue
+     * 
+     * <p>Updates the QmsIssue identified by `id`. Provide the unified QmsIssue fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateQmsIssueResponse>} - The async response
+     */
+    public CompletableFuture<UpdateQmsIssueResponse> updateQmsIssue(@Nonnull UpdateQmsIssueRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateQmsIssueRequest, UpdateQmsIssueResponse> operation
-              = new UpdateQmsIssue.Async(sdkConfiguration, _headers);
+              = new UpdateQmsIssue.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

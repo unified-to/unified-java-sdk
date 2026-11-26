@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.GetHealthcareCareplanRequest;
 import to.unified.unified_java_sdk.models.operations.GetHealthcareCareplanRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetHealthcareCareplanResponse;
@@ -15,6 +16,7 @@ import to.unified.unified_java_sdk.models.operations.ListHealthcareCareplansResp
 import to.unified.unified_java_sdk.operations.GetHealthcareCareplan;
 import to.unified.unified_java_sdk.operations.ListHealthcareCareplans;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Careplan {
@@ -59,8 +61,23 @@ public class Careplan {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetHealthcareCareplanResponse getHealthcareCareplan(@Nonnull GetHealthcareCareplanRequest request) {
+        return getHealthcareCareplan(request, null);
+    }
+
+    /**
+     * Retrieve a careplan
+     * 
+     * <p>Retrieves a single HealthcareCareplan by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetHealthcareCareplanResponse getHealthcareCareplan(@Nonnull GetHealthcareCareplanRequest request, @Nullable Options options) {
         RequestOperation<GetHealthcareCareplanRequest, GetHealthcareCareplanResponse> operation
-              = new GetHealthcareCareplan.Sync(sdkConfiguration, _headers);
+              = new GetHealthcareCareplan.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -95,8 +112,27 @@ public class Careplan {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListHealthcareCareplansResponse listHealthcareCareplans(@Nonnull ListHealthcareCareplansRequest request) {
+        return listHealthcareCareplans(request, null);
+    }
+
+    /**
+     * List all careplans
+     * 
+     * <p>Returns a list of HealthcareCareplans. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListHealthcareCareplansResponse listHealthcareCareplans(@Nonnull ListHealthcareCareplansRequest request, @Nullable Options options) {
         RequestOperation<ListHealthcareCareplansRequest, ListHealthcareCareplansResponse> operation
-              = new ListHealthcareCareplans.Sync(sdkConfiguration, _headers);
+              = new ListHealthcareCareplans.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

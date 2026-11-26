@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceInventoryRequest;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceInventoryRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceInventoryResponse;
@@ -39,6 +40,7 @@ import to.unified.unified_java_sdk.operations.PatchCommerceInventory;
 import to.unified.unified_java_sdk.operations.RemoveCommerceInventory;
 import to.unified.unified_java_sdk.operations.UpdateCommerceInventory;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Inventory {
@@ -83,8 +85,23 @@ public class Inventory {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateCommerceInventoryResponse createCommerceInventory(@Nonnull CreateCommerceInventoryRequest request) {
+        return createCommerceInventory(request, null);
+    }
+
+    /**
+     * Create an inventory
+     * 
+     * <p>Creates a CommerceInventory. Provide the unified CommerceInventory fields in the request body; they
+     * are mapped to the provider's API. Returns the created CommerceInventory.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateCommerceInventoryResponse createCommerceInventory(@Nonnull CreateCommerceInventoryRequest request, @Nullable Options options) {
         RequestOperation<CreateCommerceInventoryRequest, CreateCommerceInventoryResponse> operation
-              = new CreateCommerceInventory.Sync(sdkConfiguration, _headers);
+              = new CreateCommerceInventory.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -111,8 +128,23 @@ public class Inventory {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAdsInventoryResponse getAdsInventory(@Nonnull GetAdsInventoryRequest request) {
+        return getAdsInventory(request, null);
+    }
+
+    /**
+     * Retrieve an inventory
+     * 
+     * <p>Retrieves a single AdsInventory by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAdsInventoryResponse getAdsInventory(@Nonnull GetAdsInventoryRequest request, @Nullable Options options) {
         RequestOperation<GetAdsInventoryRequest, GetAdsInventoryResponse> operation
-              = new GetAdsInventory.Sync(sdkConfiguration, _headers);
+              = new GetAdsInventory.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -139,8 +171,23 @@ public class Inventory {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetCommerceInventoryResponse getCommerceInventory(@Nonnull GetCommerceInventoryRequest request) {
+        return getCommerceInventory(request, null);
+    }
+
+    /**
+     * Retrieve an inventory
+     * 
+     * <p>Retrieves a single CommerceInventory by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetCommerceInventoryResponse getCommerceInventory(@Nonnull GetCommerceInventoryRequest request, @Nullable Options options) {
         RequestOperation<GetCommerceInventoryRequest, GetCommerceInventoryResponse> operation
-              = new GetCommerceInventory.Sync(sdkConfiguration, _headers);
+              = new GetCommerceInventory.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -175,8 +222,27 @@ public class Inventory {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAdsInventoriesResponse listAdsInventories(@Nonnull ListAdsInventoriesRequest request) {
+        return listAdsInventories(request, null);
+    }
+
+    /**
+     * List all inventories
+     * 
+     * <p>Returns a list of AdsInventories. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAdsInventoriesResponse listAdsInventories(@Nonnull ListAdsInventoriesRequest request, @Nullable Options options) {
         RequestOperation<ListAdsInventoriesRequest, ListAdsInventoriesResponse> operation
-              = new ListAdsInventories.Sync(sdkConfiguration, _headers);
+              = new ListAdsInventories.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -211,8 +277,27 @@ public class Inventory {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListCommerceInventoriesResponse listCommerceInventories(@Nonnull ListCommerceInventoriesRequest request) {
+        return listCommerceInventories(request, null);
+    }
+
+    /**
+     * List all inventories
+     * 
+     * <p>Returns a list of CommerceInventories. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListCommerceInventoriesResponse listCommerceInventories(@Nonnull ListCommerceInventoriesRequest request, @Nullable Options options) {
         RequestOperation<ListCommerceInventoriesRequest, ListCommerceInventoriesResponse> operation
-              = new ListCommerceInventories.Sync(sdkConfiguration, _headers);
+              = new ListCommerceInventories.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -239,8 +324,23 @@ public class Inventory {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchCommerceInventoryResponse patchCommerceInventory(@Nonnull PatchCommerceInventoryRequest request) {
+        return patchCommerceInventory(request, null);
+    }
+
+    /**
+     * Update an inventory
+     * 
+     * <p>Updates the CommerceInventory identified by `id`. Provide the unified CommerceInventory fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchCommerceInventoryResponse patchCommerceInventory(@Nonnull PatchCommerceInventoryRequest request, @Nullable Options options) {
         RequestOperation<PatchCommerceInventoryRequest, PatchCommerceInventoryResponse> operation
-              = new PatchCommerceInventory.Sync(sdkConfiguration, _headers);
+              = new PatchCommerceInventory.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -265,8 +365,22 @@ public class Inventory {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveCommerceInventoryResponse removeCommerceInventory(@Nonnull RemoveCommerceInventoryRequest request) {
+        return removeCommerceInventory(request, null);
+    }
+
+    /**
+     * Remove an inventory
+     * 
+     * <p>Deletes the CommerceInventory identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveCommerceInventoryResponse removeCommerceInventory(@Nonnull RemoveCommerceInventoryRequest request, @Nullable Options options) {
         RequestOperation<RemoveCommerceInventoryRequest, RemoveCommerceInventoryResponse> operation
-              = new RemoveCommerceInventory.Sync(sdkConfiguration, _headers);
+              = new RemoveCommerceInventory.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -293,8 +407,23 @@ public class Inventory {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateCommerceInventoryResponse updateCommerceInventory(@Nonnull UpdateCommerceInventoryRequest request) {
+        return updateCommerceInventory(request, null);
+    }
+
+    /**
+     * Update an inventory
+     * 
+     * <p>Updates the CommerceInventory identified by `id`. Provide the unified CommerceInventory fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateCommerceInventoryResponse updateCommerceInventory(@Nonnull UpdateCommerceInventoryRequest request, @Nullable Options options) {
         RequestOperation<UpdateCommerceInventoryRequest, UpdateCommerceInventoryResponse> operation
-              = new UpdateCommerceInventory.Sync(sdkConfiguration, _headers);
+              = new UpdateCommerceInventory.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

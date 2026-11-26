@@ -19,6 +19,7 @@ public enum ListAtsCompaniesQueryParamFields {
     PARENT_ID("parent_id"),
     RECRUITER_IDS("recruiter_ids"),
     METADATA("metadata"),
+    FEES("fees"),
     RAW("raw");
 
     @JsonValue

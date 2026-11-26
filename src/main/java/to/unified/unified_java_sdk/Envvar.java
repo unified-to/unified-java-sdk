@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateComputeEnvvarRequest;
 import to.unified.unified_java_sdk.models.operations.CreateComputeEnvvarRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateComputeEnvvarResponse;
@@ -31,6 +32,7 @@ import to.unified.unified_java_sdk.operations.PatchComputeEnvvar;
 import to.unified.unified_java_sdk.operations.RemoveComputeEnvvar;
 import to.unified.unified_java_sdk.operations.UpdateComputeEnvvar;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Envvar {
@@ -75,8 +77,23 @@ public class Envvar {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateComputeEnvvarResponse createComputeEnvvar(@Nonnull CreateComputeEnvvarRequest request) {
+        return createComputeEnvvar(request, null);
+    }
+
+    /**
+     * Create an envvar
+     * 
+     * <p>Creates a ComputeEnvvar. Provide the unified ComputeEnvvar fields in the request body; they are
+     * mapped to the provider's API. Returns the created ComputeEnvvar.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateComputeEnvvarResponse createComputeEnvvar(@Nonnull CreateComputeEnvvarRequest request, @Nullable Options options) {
         RequestOperation<CreateComputeEnvvarRequest, CreateComputeEnvvarResponse> operation
-              = new CreateComputeEnvvar.Sync(sdkConfiguration, _headers);
+              = new CreateComputeEnvvar.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -103,8 +120,23 @@ public class Envvar {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetComputeEnvvarResponse getComputeEnvvar(@Nonnull GetComputeEnvvarRequest request) {
+        return getComputeEnvvar(request, null);
+    }
+
+    /**
+     * Retrieve an envvar
+     * 
+     * <p>Retrieves a single ComputeEnvvar by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetComputeEnvvarResponse getComputeEnvvar(@Nonnull GetComputeEnvvarRequest request, @Nullable Options options) {
         RequestOperation<GetComputeEnvvarRequest, GetComputeEnvvarResponse> operation
-              = new GetComputeEnvvar.Sync(sdkConfiguration, _headers);
+              = new GetComputeEnvvar.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -139,8 +171,27 @@ public class Envvar {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListComputeEnvvarsResponse listComputeEnvvars(@Nonnull ListComputeEnvvarsRequest request) {
+        return listComputeEnvvars(request, null);
+    }
+
+    /**
+     * List all envvars
+     * 
+     * <p>Returns a list of ComputeEnvvars. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListComputeEnvvarsResponse listComputeEnvvars(@Nonnull ListComputeEnvvarsRequest request, @Nullable Options options) {
         RequestOperation<ListComputeEnvvarsRequest, ListComputeEnvvarsResponse> operation
-              = new ListComputeEnvvars.Sync(sdkConfiguration, _headers);
+              = new ListComputeEnvvars.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +218,23 @@ public class Envvar {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchComputeEnvvarResponse patchComputeEnvvar(@Nonnull PatchComputeEnvvarRequest request) {
+        return patchComputeEnvvar(request, null);
+    }
+
+    /**
+     * Update an envvar
+     * 
+     * <p>Updates the ComputeEnvvar identified by `id`. Provide the unified ComputeEnvvar fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchComputeEnvvarResponse patchComputeEnvvar(@Nonnull PatchComputeEnvvarRequest request, @Nullable Options options) {
         RequestOperation<PatchComputeEnvvarRequest, PatchComputeEnvvarResponse> operation
-              = new PatchComputeEnvvar.Sync(sdkConfiguration, _headers);
+              = new PatchComputeEnvvar.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -193,8 +259,22 @@ public class Envvar {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveComputeEnvvarResponse removeComputeEnvvar(@Nonnull RemoveComputeEnvvarRequest request) {
+        return removeComputeEnvvar(request, null);
+    }
+
+    /**
+     * Remove an envvar
+     * 
+     * <p>Deletes the ComputeEnvvar identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveComputeEnvvarResponse removeComputeEnvvar(@Nonnull RemoveComputeEnvvarRequest request, @Nullable Options options) {
         RequestOperation<RemoveComputeEnvvarRequest, RemoveComputeEnvvarResponse> operation
-              = new RemoveComputeEnvvar.Sync(sdkConfiguration, _headers);
+              = new RemoveComputeEnvvar.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -221,8 +301,23 @@ public class Envvar {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateComputeEnvvarResponse updateComputeEnvvar(@Nonnull UpdateComputeEnvvarRequest request) {
+        return updateComputeEnvvar(request, null);
+    }
+
+    /**
+     * Update an envvar
+     * 
+     * <p>Updates the ComputeEnvvar identified by `id`. Provide the unified ComputeEnvvar fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateComputeEnvvarResponse updateComputeEnvvar(@Nonnull UpdateComputeEnvvarRequest request, @Nullable Options options) {
         RequestOperation<UpdateComputeEnvvarRequest, UpdateComputeEnvvarResponse> operation
-              = new UpdateComputeEnvvar.Sync(sdkConfiguration, _headers);
+              = new UpdateComputeEnvvar.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

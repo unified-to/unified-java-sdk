@@ -6,18 +6,28 @@ package to.unified.unified_java_sdk.models.operations;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.CreateAccountingJournal;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class CreateAccountingJournalRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private CreateAccountingJournalRequest request;
+    private final Options.Builder optionsBuilder;
 
     public CreateAccountingJournalRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public CreateAccountingJournalRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public CreateAccountingJournalRequestBuilder request(@Nonnull CreateAccountingJournalRequest request) {
@@ -42,8 +52,9 @@ public class CreateAccountingJournalRequestBuilder {
     * @return The response from the server.
     */
     public CreateAccountingJournalResponse call() {
+        Options options = optionsBuilder.build();
         RequestOperation<CreateAccountingJournalRequest, CreateAccountingJournalResponse> operation
-              = new CreateAccountingJournal.Sync(sdkConfiguration, _headers);
+              = new CreateAccountingJournal.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

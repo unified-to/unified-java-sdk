@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateKmsSpaceRequest;
 import to.unified.unified_java_sdk.models.operations.CreateKmsSpaceRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateKmsSpaceResponse;
@@ -31,6 +32,7 @@ import to.unified.unified_java_sdk.operations.PatchKmsSpace;
 import to.unified.unified_java_sdk.operations.RemoveKmsSpace;
 import to.unified.unified_java_sdk.operations.UpdateKmsSpace;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Space {
@@ -75,8 +77,23 @@ public class Space {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateKmsSpaceResponse createKmsSpace(@Nonnull CreateKmsSpaceRequest request) {
+        return createKmsSpace(request, null);
+    }
+
+    /**
+     * Create a space
+     * 
+     * <p>Creates a KmsSpace. Provide the unified KmsSpace fields in the request body; they are mapped to the
+     * provider's API. Returns the created KmsSpace.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateKmsSpaceResponse createKmsSpace(@Nonnull CreateKmsSpaceRequest request, @Nullable Options options) {
         RequestOperation<CreateKmsSpaceRequest, CreateKmsSpaceResponse> operation
-              = new CreateKmsSpace.Sync(sdkConfiguration, _headers);
+              = new CreateKmsSpace.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -103,8 +120,23 @@ public class Space {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetKmsSpaceResponse getKmsSpace(@Nonnull GetKmsSpaceRequest request) {
+        return getKmsSpace(request, null);
+    }
+
+    /**
+     * Retrieve a space
+     * 
+     * <p>Retrieves a single KmsSpace by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetKmsSpaceResponse getKmsSpace(@Nonnull GetKmsSpaceRequest request, @Nullable Options options) {
         RequestOperation<GetKmsSpaceRequest, GetKmsSpaceResponse> operation
-              = new GetKmsSpace.Sync(sdkConfiguration, _headers);
+              = new GetKmsSpace.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -139,8 +171,27 @@ public class Space {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListKmsSpacesResponse listKmsSpaces(@Nonnull ListKmsSpacesRequest request) {
+        return listKmsSpaces(request, null);
+    }
+
+    /**
+     * List all spaces
+     * 
+     * <p>Returns a list of KmsSpaces. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListKmsSpacesResponse listKmsSpaces(@Nonnull ListKmsSpacesRequest request, @Nullable Options options) {
         RequestOperation<ListKmsSpacesRequest, ListKmsSpacesResponse> operation
-              = new ListKmsSpaces.Sync(sdkConfiguration, _headers);
+              = new ListKmsSpaces.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +218,23 @@ public class Space {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchKmsSpaceResponse patchKmsSpace(@Nonnull PatchKmsSpaceRequest request) {
+        return patchKmsSpace(request, null);
+    }
+
+    /**
+     * Update a space
+     * 
+     * <p>Updates the KmsSpace identified by `id`. Provide the unified KmsSpace fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchKmsSpaceResponse patchKmsSpace(@Nonnull PatchKmsSpaceRequest request, @Nullable Options options) {
         RequestOperation<PatchKmsSpaceRequest, PatchKmsSpaceResponse> operation
-              = new PatchKmsSpace.Sync(sdkConfiguration, _headers);
+              = new PatchKmsSpace.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -193,8 +259,22 @@ public class Space {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveKmsSpaceResponse removeKmsSpace(@Nonnull RemoveKmsSpaceRequest request) {
+        return removeKmsSpace(request, null);
+    }
+
+    /**
+     * Remove a space
+     * 
+     * <p>Deletes the KmsSpace identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveKmsSpaceResponse removeKmsSpace(@Nonnull RemoveKmsSpaceRequest request, @Nullable Options options) {
         RequestOperation<RemoveKmsSpaceRequest, RemoveKmsSpaceResponse> operation
-              = new RemoveKmsSpace.Sync(sdkConfiguration, _headers);
+              = new RemoveKmsSpace.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -221,8 +301,23 @@ public class Space {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateKmsSpaceResponse updateKmsSpace(@Nonnull UpdateKmsSpaceRequest request) {
+        return updateKmsSpace(request, null);
+    }
+
+    /**
+     * Update a space
+     * 
+     * <p>Updates the KmsSpace identified by `id`. Provide the unified KmsSpace fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateKmsSpaceResponse updateKmsSpace(@Nonnull UpdateKmsSpaceRequest request, @Nullable Options options) {
         RequestOperation<UpdateKmsSpaceRequest, UpdateKmsSpaceResponse> operation
-              = new UpdateKmsSpace.Sync(sdkConfiguration, _headers);
+              = new UpdateKmsSpace.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateLegalPracticeareaRequest;
 import to.unified.unified_java_sdk.models.operations.CreateLegalPracticeareaRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateLegalPracticeareaResponse;
@@ -31,6 +32,7 @@ import to.unified.unified_java_sdk.operations.PatchLegalPracticearea;
 import to.unified.unified_java_sdk.operations.RemoveLegalPracticearea;
 import to.unified.unified_java_sdk.operations.UpdateLegalPracticearea;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Practicearea {
@@ -75,8 +77,23 @@ public class Practicearea {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateLegalPracticeareaResponse createLegalPracticearea(@Nonnull CreateLegalPracticeareaRequest request) {
+        return createLegalPracticearea(request, null);
+    }
+
+    /**
+     * Create a practicearea
+     * 
+     * <p>Creates a LegalPracticearea. Provide the unified LegalPracticearea fields in the request body; they
+     * are mapped to the provider's API. Returns the created LegalPracticearea.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateLegalPracticeareaResponse createLegalPracticearea(@Nonnull CreateLegalPracticeareaRequest request, @Nullable Options options) {
         RequestOperation<CreateLegalPracticeareaRequest, CreateLegalPracticeareaResponse> operation
-              = new CreateLegalPracticearea.Sync(sdkConfiguration, _headers);
+              = new CreateLegalPracticearea.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -103,8 +120,23 @@ public class Practicearea {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetLegalPracticeareaResponse getLegalPracticearea(@Nonnull GetLegalPracticeareaRequest request) {
+        return getLegalPracticearea(request, null);
+    }
+
+    /**
+     * Retrieve a practicearea
+     * 
+     * <p>Retrieves a single LegalPracticearea by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetLegalPracticeareaResponse getLegalPracticearea(@Nonnull GetLegalPracticeareaRequest request, @Nullable Options options) {
         RequestOperation<GetLegalPracticeareaRequest, GetLegalPracticeareaResponse> operation
-              = new GetLegalPracticearea.Sync(sdkConfiguration, _headers);
+              = new GetLegalPracticearea.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -139,8 +171,27 @@ public class Practicearea {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListLegalPracticeareasResponse listLegalPracticeareas(@Nonnull ListLegalPracticeareasRequest request) {
+        return listLegalPracticeareas(request, null);
+    }
+
+    /**
+     * List all practiceareas
+     * 
+     * <p>Returns a list of LegalPracticeareas. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListLegalPracticeareasResponse listLegalPracticeareas(@Nonnull ListLegalPracticeareasRequest request, @Nullable Options options) {
         RequestOperation<ListLegalPracticeareasRequest, ListLegalPracticeareasResponse> operation
-              = new ListLegalPracticeareas.Sync(sdkConfiguration, _headers);
+              = new ListLegalPracticeareas.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +218,23 @@ public class Practicearea {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchLegalPracticeareaResponse patchLegalPracticearea(@Nonnull PatchLegalPracticeareaRequest request) {
+        return patchLegalPracticearea(request, null);
+    }
+
+    /**
+     * Update a practicearea
+     * 
+     * <p>Updates the LegalPracticearea identified by `id`. Provide the unified LegalPracticearea fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchLegalPracticeareaResponse patchLegalPracticearea(@Nonnull PatchLegalPracticeareaRequest request, @Nullable Options options) {
         RequestOperation<PatchLegalPracticeareaRequest, PatchLegalPracticeareaResponse> operation
-              = new PatchLegalPracticearea.Sync(sdkConfiguration, _headers);
+              = new PatchLegalPracticearea.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -193,8 +259,22 @@ public class Practicearea {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveLegalPracticeareaResponse removeLegalPracticearea(@Nonnull RemoveLegalPracticeareaRequest request) {
+        return removeLegalPracticearea(request, null);
+    }
+
+    /**
+     * Remove a practicearea
+     * 
+     * <p>Deletes the LegalPracticearea identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveLegalPracticeareaResponse removeLegalPracticearea(@Nonnull RemoveLegalPracticeareaRequest request, @Nullable Options options) {
         RequestOperation<RemoveLegalPracticeareaRequest, RemoveLegalPracticeareaResponse> operation
-              = new RemoveLegalPracticearea.Sync(sdkConfiguration, _headers);
+              = new RemoveLegalPracticearea.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -221,8 +301,23 @@ public class Practicearea {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateLegalPracticeareaResponse updateLegalPracticearea(@Nonnull UpdateLegalPracticeareaRequest request) {
+        return updateLegalPracticearea(request, null);
+    }
+
+    /**
+     * Update a practicearea
+     * 
+     * <p>Updates the LegalPracticearea identified by `id`. Provide the unified LegalPracticearea fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateLegalPracticeareaResponse updateLegalPracticearea(@Nonnull UpdateLegalPracticeareaRequest request, @Nullable Options options) {
         RequestOperation<UpdateLegalPracticeareaRequest, UpdateLegalPracticeareaResponse> operation
-              = new UpdateLegalPracticearea.Sync(sdkConfiguration, _headers);
+              = new UpdateLegalPracticearea.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

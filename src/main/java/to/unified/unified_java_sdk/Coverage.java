@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.GetHealthcareCoverageRequest;
 import to.unified.unified_java_sdk.models.operations.GetHealthcareCoverageRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetHealthcareCoverageResponse;
@@ -15,6 +16,7 @@ import to.unified.unified_java_sdk.models.operations.ListHealthcareCoveragesResp
 import to.unified.unified_java_sdk.operations.GetHealthcareCoverage;
 import to.unified.unified_java_sdk.operations.ListHealthcareCoverages;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Coverage {
@@ -59,8 +61,23 @@ public class Coverage {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetHealthcareCoverageResponse getHealthcareCoverage(@Nonnull GetHealthcareCoverageRequest request) {
+        return getHealthcareCoverage(request, null);
+    }
+
+    /**
+     * Retrieve a coverage
+     * 
+     * <p>Retrieves a single HealthcareCoverage by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetHealthcareCoverageResponse getHealthcareCoverage(@Nonnull GetHealthcareCoverageRequest request, @Nullable Options options) {
         RequestOperation<GetHealthcareCoverageRequest, GetHealthcareCoverageResponse> operation
-              = new GetHealthcareCoverage.Sync(sdkConfiguration, _headers);
+              = new GetHealthcareCoverage.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -95,8 +112,27 @@ public class Coverage {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListHealthcareCoveragesResponse listHealthcareCoverages(@Nonnull ListHealthcareCoveragesRequest request) {
+        return listHealthcareCoverages(request, null);
+    }
+
+    /**
+     * List all coverages
+     * 
+     * <p>Returns a list of HealthcareCoverages. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListHealthcareCoveragesResponse listHealthcareCoverages(@Nonnull ListHealthcareCoveragesRequest request, @Nullable Options options) {
         RequestOperation<ListHealthcareCoveragesRequest, ListHealthcareCoveragesResponse> operation
-              = new ListHealthcareCoverages.Sync(sdkConfiguration, _headers);
+              = new ListHealthcareCoverages.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

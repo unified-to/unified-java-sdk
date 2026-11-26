@@ -6,18 +6,28 @@ package to.unified.unified_java_sdk.models.operations;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.PatchHrisDeduction;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class PatchHrisDeductionRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private PatchHrisDeductionRequest request;
+    private final Options.Builder optionsBuilder;
 
     public PatchHrisDeductionRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public PatchHrisDeductionRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public PatchHrisDeductionRequestBuilder request(@Nonnull PatchHrisDeductionRequest request) {
@@ -42,8 +52,9 @@ public class PatchHrisDeductionRequestBuilder {
     * @return The response from the server.
     */
     public PatchHrisDeductionResponse call() {
+        Options options = optionsBuilder.build();
         RequestOperation<PatchHrisDeductionRequest, PatchHrisDeductionResponse> operation
-              = new PatchHrisDeduction.Sync(sdkConfiguration, _headers);
+              = new PatchHrisDeduction.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

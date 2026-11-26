@@ -6,18 +6,28 @@ package to.unified.unified_java_sdk.models.operations;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.ListMartechLists;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListMartechListsRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private ListMartechListsRequest request;
+    private final Options.Builder optionsBuilder;
 
     public ListMartechListsRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public ListMartechListsRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public ListMartechListsRequestBuilder request(@Nonnull ListMartechListsRequest request) {
@@ -42,8 +52,9 @@ public class ListMartechListsRequestBuilder {
     * @return The response from the server.
     */
     public ListMartechListsResponse call() {
+        Options options = optionsBuilder.build();
         RequestOperation<ListMartechListsRequest, ListMartechListsResponse> operation
-              = new ListMartechLists.Sync(sdkConfiguration, _headers);
+              = new ListMartechLists.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

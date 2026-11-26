@@ -6,20 +6,30 @@ package to.unified.unified_java_sdk.models.operations.async;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.GetMessagingChannelRequest;
 import to.unified.unified_java_sdk.operations.GetMessagingChannel;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetMessagingChannelRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private GetMessagingChannelRequest request;
+    private final Options.Builder optionsBuilder;
 
     public GetMessagingChannelRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public GetMessagingChannelRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public GetMessagingChannelRequestBuilder request(@Nonnull GetMessagingChannelRequest request) {
@@ -44,8 +54,9 @@ public class GetMessagingChannelRequestBuilder {
     * @return The response from the server.
     */
     public CompletableFuture<GetMessagingChannelResponse> call() {
+        Options options = optionsBuilder.build();
         AsyncRequestOperation<GetMessagingChannelRequest, GetMessagingChannelResponse> operation
-              = new GetMessagingChannel.Async(sdkConfiguration, _headers);
+              = new GetMessagingChannel.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

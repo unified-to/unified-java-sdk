@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.GetShippingTrackingRequest;
 import to.unified.unified_java_sdk.models.operations.ListShippingTrackingsRequest;
@@ -16,6 +17,7 @@ import to.unified.unified_java_sdk.models.operations.async.ListShippingTrackings
 import to.unified.unified_java_sdk.operations.GetShippingTracking;
 import to.unified.unified_java_sdk.operations.ListShippingTrackings;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncTracking {
@@ -60,8 +62,22 @@ public class AsyncTracking {
      * @return {@code CompletableFuture<GetShippingTrackingResponse>} - The async response
      */
     public CompletableFuture<GetShippingTrackingResponse> getShippingTracking(@Nonnull GetShippingTrackingRequest request) {
+        return getShippingTracking(request, null);
+    }
+
+    /**
+     * Retrieve a tracking
+     * 
+     * <p>Retrieves a single ShippingTracking by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetShippingTrackingResponse>} - The async response
+     */
+    public CompletableFuture<GetShippingTrackingResponse> getShippingTracking(@Nonnull GetShippingTrackingRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetShippingTrackingRequest, GetShippingTrackingResponse> operation
-              = new GetShippingTracking.Async(sdkConfiguration, _headers);
+              = new GetShippingTracking.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -97,8 +113,26 @@ public class AsyncTracking {
      * @return {@code CompletableFuture<ListShippingTrackingsResponse>} - The async response
      */
     public CompletableFuture<ListShippingTrackingsResponse> listShippingTrackings(@Nonnull ListShippingTrackingsRequest request) {
+        return listShippingTrackings(request, null);
+    }
+
+    /**
+     * List all trackings
+     * 
+     * <p>Returns a list of ShippingTrackings. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListShippingTrackingsResponse>} - The async response
+     */
+    public CompletableFuture<ListShippingTrackingsResponse> listShippingTrackings(@Nonnull ListShippingTrackingsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListShippingTrackingsRequest, ListShippingTrackingsResponse> operation
-              = new ListShippingTrackings.Async(sdkConfiguration, _headers);
+              = new ListShippingTrackings.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

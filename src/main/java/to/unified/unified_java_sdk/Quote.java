@@ -6,9 +6,13 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingQuoteRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingQuoteRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingQuoteResponse;
+import to.unified.unified_java_sdk.models.operations.CreatePrintingQuoteRequest;
+import to.unified.unified_java_sdk.models.operations.CreatePrintingQuoteRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreatePrintingQuoteResponse;
 import to.unified.unified_java_sdk.models.operations.CreatePropertyQuoteRequest;
 import to.unified.unified_java_sdk.models.operations.CreatePropertyQuoteRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreatePropertyQuoteResponse;
@@ -28,6 +32,7 @@ import to.unified.unified_java_sdk.models.operations.UpdateAccountingQuoteReques
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingQuoteRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingQuoteResponse;
 import to.unified.unified_java_sdk.operations.CreateAccountingQuote;
+import to.unified.unified_java_sdk.operations.CreatePrintingQuote;
 import to.unified.unified_java_sdk.operations.CreatePropertyQuote;
 import to.unified.unified_java_sdk.operations.GetAccountingQuote;
 import to.unified.unified_java_sdk.operations.ListAccountingQuotes;
@@ -35,6 +40,7 @@ import to.unified.unified_java_sdk.operations.PatchAccountingQuote;
 import to.unified.unified_java_sdk.operations.RemoveAccountingQuote;
 import to.unified.unified_java_sdk.operations.UpdateAccountingQuote;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Quote {
@@ -79,8 +85,66 @@ public class Quote {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateAccountingQuoteResponse createAccountingQuote(@Nonnull CreateAccountingQuoteRequest request) {
+        return createAccountingQuote(request, null);
+    }
+
+    /**
+     * Create a quote
+     * 
+     * <p>Creates a AccountingQuote. Provide the unified AccountingQuote fields in the request body; they are
+     * mapped to the provider's API. Returns the created AccountingQuote.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateAccountingQuoteResponse createAccountingQuote(@Nonnull CreateAccountingQuoteRequest request, @Nullable Options options) {
         RequestOperation<CreateAccountingQuoteRequest, CreateAccountingQuoteResponse> operation
-              = new CreateAccountingQuote.Sync(sdkConfiguration, _headers);
+              = new CreateAccountingQuote.Sync(sdkConfiguration, options, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Create a quote
+     * 
+     * <p>Creates a PrintingQuote. Provide the unified PrintingQuote fields in the request body; they are
+     * mapped to the provider's API. Returns the created PrintingQuote.
+     * 
+     * @return The call builder
+     */
+    public CreatePrintingQuoteRequestBuilder createPrintingQuote() {
+        return new CreatePrintingQuoteRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Create a quote
+     * 
+     * <p>Creates a PrintingQuote. Provide the unified PrintingQuote fields in the request body; they are
+     * mapped to the provider's API. Returns the created PrintingQuote.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreatePrintingQuoteResponse createPrintingQuote(@Nonnull CreatePrintingQuoteRequest request) {
+        return createPrintingQuote(request, null);
+    }
+
+    /**
+     * Create a quote
+     * 
+     * <p>Creates a PrintingQuote. Provide the unified PrintingQuote fields in the request body; they are
+     * mapped to the provider's API. Returns the created PrintingQuote.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreatePrintingQuoteResponse createPrintingQuote(@Nonnull CreatePrintingQuoteRequest request, @Nullable Options options) {
+        RequestOperation<CreatePrintingQuoteRequest, CreatePrintingQuoteResponse> operation
+              = new CreatePrintingQuote.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -107,8 +171,23 @@ public class Quote {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreatePropertyQuoteResponse createPropertyQuote(@Nonnull CreatePropertyQuoteRequest request) {
+        return createPropertyQuote(request, null);
+    }
+
+    /**
+     * Create a quote
+     * 
+     * <p>Creates a PropertyQuote. Provide the unified PropertyQuote fields in the request body; they are
+     * mapped to the provider's API. Returns the created PropertyQuote.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreatePropertyQuoteResponse createPropertyQuote(@Nonnull CreatePropertyQuoteRequest request, @Nullable Options options) {
         RequestOperation<CreatePropertyQuoteRequest, CreatePropertyQuoteResponse> operation
-              = new CreatePropertyQuote.Sync(sdkConfiguration, _headers);
+              = new CreatePropertyQuote.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -135,8 +214,23 @@ public class Quote {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAccountingQuoteResponse getAccountingQuote(@Nonnull GetAccountingQuoteRequest request) {
+        return getAccountingQuote(request, null);
+    }
+
+    /**
+     * Retrieve a quote
+     * 
+     * <p>Retrieves a single AccountingQuote by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAccountingQuoteResponse getAccountingQuote(@Nonnull GetAccountingQuoteRequest request, @Nullable Options options) {
         RequestOperation<GetAccountingQuoteRequest, GetAccountingQuoteResponse> operation
-              = new GetAccountingQuote.Sync(sdkConfiguration, _headers);
+              = new GetAccountingQuote.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -171,8 +265,27 @@ public class Quote {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAccountingQuotesResponse listAccountingQuotes(@Nonnull ListAccountingQuotesRequest request) {
+        return listAccountingQuotes(request, null);
+    }
+
+    /**
+     * List all quotes
+     * 
+     * <p>Returns a list of AccountingQuotes. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAccountingQuotesResponse listAccountingQuotes(@Nonnull ListAccountingQuotesRequest request, @Nullable Options options) {
         RequestOperation<ListAccountingQuotesRequest, ListAccountingQuotesResponse> operation
-              = new ListAccountingQuotes.Sync(sdkConfiguration, _headers);
+              = new ListAccountingQuotes.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -199,8 +312,23 @@ public class Quote {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchAccountingQuoteResponse patchAccountingQuote(@Nonnull PatchAccountingQuoteRequest request) {
+        return patchAccountingQuote(request, null);
+    }
+
+    /**
+     * Update a quote
+     * 
+     * <p>Updates the AccountingQuote identified by `id`. Provide the unified AccountingQuote fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchAccountingQuoteResponse patchAccountingQuote(@Nonnull PatchAccountingQuoteRequest request, @Nullable Options options) {
         RequestOperation<PatchAccountingQuoteRequest, PatchAccountingQuoteResponse> operation
-              = new PatchAccountingQuote.Sync(sdkConfiguration, _headers);
+              = new PatchAccountingQuote.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -225,8 +353,22 @@ public class Quote {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveAccountingQuoteResponse removeAccountingQuote(@Nonnull RemoveAccountingQuoteRequest request) {
+        return removeAccountingQuote(request, null);
+    }
+
+    /**
+     * Remove a quote
+     * 
+     * <p>Deletes the AccountingQuote identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveAccountingQuoteResponse removeAccountingQuote(@Nonnull RemoveAccountingQuoteRequest request, @Nullable Options options) {
         RequestOperation<RemoveAccountingQuoteRequest, RemoveAccountingQuoteResponse> operation
-              = new RemoveAccountingQuote.Sync(sdkConfiguration, _headers);
+              = new RemoveAccountingQuote.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -253,8 +395,23 @@ public class Quote {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateAccountingQuoteResponse updateAccountingQuote(@Nonnull UpdateAccountingQuoteRequest request) {
+        return updateAccountingQuote(request, null);
+    }
+
+    /**
+     * Update a quote
+     * 
+     * <p>Updates the AccountingQuote identified by `id`. Provide the unified AccountingQuote fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateAccountingQuoteResponse updateAccountingQuote(@Nonnull UpdateAccountingQuoteRequest request, @Nullable Options options) {
         RequestOperation<UpdateAccountingQuoteRequest, UpdateAccountingQuoteResponse> operation
-              = new UpdateAccountingQuote.Sync(sdkConfiguration, _headers);
+              = new UpdateAccountingQuote.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

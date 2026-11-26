@@ -6,20 +6,30 @@ package to.unified.unified_java_sdk.models.operations.async;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.RemoveCdpProfileRequest;
 import to.unified.unified_java_sdk.operations.RemoveCdpProfile;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveCdpProfileRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private RemoveCdpProfileRequest request;
+    private final Options.Builder optionsBuilder;
 
     public RemoveCdpProfileRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public RemoveCdpProfileRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public RemoveCdpProfileRequestBuilder request(@Nonnull RemoveCdpProfileRequest request) {
@@ -44,8 +54,9 @@ public class RemoveCdpProfileRequestBuilder {
     * @return The response from the server.
     */
     public CompletableFuture<RemoveCdpProfileResponse> call() {
+        Options options = optionsBuilder.build();
         AsyncRequestOperation<RemoveCdpProfileRequest, RemoveCdpProfileResponse> operation
-              = new RemoveCdpProfile.Async(sdkConfiguration, _headers);
+              = new RemoveCdpProfile.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

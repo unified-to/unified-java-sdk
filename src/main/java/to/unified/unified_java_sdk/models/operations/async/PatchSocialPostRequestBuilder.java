@@ -6,20 +6,30 @@ package to.unified.unified_java_sdk.models.operations.async;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.PatchSocialPostRequest;
 import to.unified.unified_java_sdk.operations.PatchSocialPost;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class PatchSocialPostRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private PatchSocialPostRequest request;
+    private final Options.Builder optionsBuilder;
 
     public PatchSocialPostRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public PatchSocialPostRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public PatchSocialPostRequestBuilder request(@Nonnull PatchSocialPostRequest request) {
@@ -44,8 +54,9 @@ public class PatchSocialPostRequestBuilder {
     * @return The response from the server.
     */
     public CompletableFuture<PatchSocialPostResponse> call() {
+        Options options = optionsBuilder.build();
         AsyncRequestOperation<PatchSocialPostRequest, PatchSocialPostResponse> operation
-              = new PatchSocialPost.Async(sdkConfiguration, _headers);
+              = new PatchSocialPost.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

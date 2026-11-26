@@ -6,20 +6,30 @@ package to.unified.unified_java_sdk.models.operations.async;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.UpdateAtsCompanyRequest;
 import to.unified.unified_java_sdk.operations.UpdateAtsCompany;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class UpdateAtsCompanyRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private UpdateAtsCompanyRequest request;
+    private final Options.Builder optionsBuilder;
 
     public UpdateAtsCompanyRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public UpdateAtsCompanyRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public UpdateAtsCompanyRequestBuilder request(@Nonnull UpdateAtsCompanyRequest request) {
@@ -44,8 +54,9 @@ public class UpdateAtsCompanyRequestBuilder {
     * @return The response from the server.
     */
     public CompletableFuture<UpdateAtsCompanyResponse> call() {
+        Options options = optionsBuilder.build();
         AsyncRequestOperation<UpdateAtsCompanyRequest, UpdateAtsCompanyResponse> operation
-              = new UpdateAtsCompany.Async(sdkConfiguration, _headers);
+              = new UpdateAtsCompany.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

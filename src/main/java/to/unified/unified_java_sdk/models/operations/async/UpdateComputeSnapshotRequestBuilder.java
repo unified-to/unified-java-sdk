@@ -6,20 +6,30 @@ package to.unified.unified_java_sdk.models.operations.async;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.UpdateComputeSnapshotRequest;
 import to.unified.unified_java_sdk.operations.UpdateComputeSnapshot;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class UpdateComputeSnapshotRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private UpdateComputeSnapshotRequest request;
+    private final Options.Builder optionsBuilder;
 
     public UpdateComputeSnapshotRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public UpdateComputeSnapshotRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public UpdateComputeSnapshotRequestBuilder request(@Nonnull UpdateComputeSnapshotRequest request) {
@@ -44,8 +54,9 @@ public class UpdateComputeSnapshotRequestBuilder {
     * @return The response from the server.
     */
     public CompletableFuture<UpdateComputeSnapshotResponse> call() {
+        Options options = optionsBuilder.build();
         AsyncRequestOperation<UpdateComputeSnapshotRequest, UpdateComputeSnapshotResponse> operation
-              = new UpdateComputeSnapshot.Async(sdkConfiguration, _headers);
+              = new UpdateComputeSnapshot.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

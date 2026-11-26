@@ -6,14 +6,20 @@
 
 * [~~createAccountingOrder~~](#createaccountingorder) - Create an order :warning: **Deprecated**
 * [createAssessmentOrder](#createassessmentorder) - Create an order
+* [createPrintingOrder](#createprintingorder) - Create an order
 * [~~getAccountingOrder~~](#getaccountingorder) - Retrieve an order :warning: **Deprecated**
 * [getAssessmentOrder](#getassessmentorder) - Retrieve an order
+* [getPrintingOrder](#getprintingorder) - Retrieve an order
 * [~~listAccountingOrders~~](#listaccountingorders) - List all orders :warning: **Deprecated**
+* [listPrintingOrders](#listprintingorders) - List all orders
 * [~~patchAccountingOrder~~](#patchaccountingorder) - Update an order :warning: **Deprecated**
 * [patchAssessmentOrder](#patchassessmentorder) - Update an order
+* [patchPrintingOrder](#patchprintingorder) - Update an order
 * [~~removeAccountingOrder~~](#removeaccountingorder) - Remove an order :warning: **Deprecated**
+* [removePrintingOrder](#removeprintingorder) - Remove an order
 * [~~updateAccountingOrder~~](#updateaccountingorder) - Update an order :warning: **Deprecated**
 * [updateAssessmentOrder](#updateassessmentorder) - Update an order
+* [updatePrintingOrder](#updateprintingorder) - Update an order
 
 ## ~~createAccountingOrder~~
 
@@ -48,31 +54,31 @@ public class Application {
         CreateAccountingOrderRequest req = CreateAccountingOrderRequest.builder()
                 .accountingOrder(AccountingOrder.builder()
                     .billingAddress(PropertyAccountingOrderBillingAddress.builder()
-                        .address1("7654 Treutel Square")
-                        .city("Forrestport")
+                        .address1("125 Hayden Highway")
+                        .city("Altoona")
                         .countryCode("US")
-                        .postalCode("42190-3694")
-                        .region("Maine")
-                        .regionCode("OR")
+                        .postalCode("94706-7691")
+                        .region("Louisiana")
+                        .regionCode("VT")
                         .build())
                     .createdAt(OffsetDateTime.parse("2020-11-20T03:46:49.837Z"))
                     .currency("GBP")
-                    .id("f556c590-b00a-4dea-a379-f10a69c5f0d4")
+                    .id("384e438f-8690-4b9c-8f75-d4ae960e168a")
                     .lineitems(List.of())
                     .metadata(List.of())
                     .postedAt(OffsetDateTime.parse("2020-11-20T03:46:49.837Z"))
                     .shippingAddress(PropertyAccountingOrderShippingAddress.builder()
-                        .address1("4974 Beatty Corners")
-                        .city("Alizeport")
+                        .address1("450 Garett Mall")
+                        .city("New Kamronburgh")
                         .countryCode("US")
-                        .postalCode("56252")
-                        .region("Alaska")
-                        .regionCode("VT")
+                        .postalCode("76546")
+                        .region("Oregon")
+                        .regionCode("VA")
                         .build())
                     .status(AccountingOrderStatus.AUTHORIZED)
                     .totalAmount(0d)
                     .type(AccountingOrderType.SALES)
-                    .updatedAt(OffsetDateTime.parse("2022-02-14T11:43:04.425Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-02-15T17:04:05.234Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -137,32 +143,32 @@ public class Application {
                     .connectionId("")
                     .workspaceId("<id>")
                     .createdAt(OffsetDateTime.parse("2021-09-18T10:33:57.803Z"))
-                    .id("363e615e-5b4d-4491-8fa5-b9a33d1b7477")
+                    .id("9ff35da3-829c-465d-9203-598a906b3194")
                     .metadata(List.of())
                     .parameters(List.of())
                     .profileAddresses(List.of())
                     .profileDateOfBirth("1989-07-22T16:18:37.650Z")
                     .profileEmails(List.of(
-                        "amy.kris.windler@icloud.com"))
-                    .profileFirstName("Amy")
+                        "jordan.braun@icloud.com"))
+                    .profileFirstName("Jordan")
                     .profileGender(ProfileGender.NON_BINARY)
-                    .profileLastName("Kris-Windler")
-                    .profileName("Amy Kris-Windler")
-                    .profileResumeUrl("https://enchanted-cycle.biz/")
+                    .profileLastName("Braun")
+                    .profileName("Jordan Braun")
+                    .profileResumeUrl("https://astonishing-bug.com/")
                     .profileSocialMediaUrls(List.of())
                     .profileTelephones(List.of(
-                        "(341) 425-5828"))
-                    .reference("ab")
+                        "322.658.2806 x3159"))
+                    .reference("calcar")
                     .responseAttributes(List.of())
                     .responseDetails(List.of())
                     .responseDownloadUrls(List.of())
                     .responseMaxScore(84d)
                     .responseScore(82d)
                     .responseStatus(ResponseStatus.REJECTED)
-                    .responseUrl("https://rowdy-fisherman.biz/")
+                    .responseUrl("https://nervous-daughter.info/")
                     .status(AssessmentOrderStatus.REJECTED)
-                    .targetUrl("https://cautious-turret.info")
-                    .updatedAt(OffsetDateTime.parse("2023-02-02T20:13:00.636Z"))
+                    .targetUrl("https://idolized-suv.info")
+                    .updatedAt(OffsetDateTime.parse("2023-02-04T10:07:03.739Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -187,6 +193,118 @@ public class Application {
 ### Response
 
 **[CreateAssessmentOrderResponse](../../models/operations/CreateAssessmentOrderResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## createPrintingOrder
+
+Creates a PrintingOrder. Provide the unified PrintingOrder fields in the request body; they are mapped to the provider's API. Returns the created PrintingOrder.
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="createPrintingOrder" method="post" path="/printing/{connection_id}/order" example="printing_order" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreatePrintingOrderRequest;
+import to.unified.unified_java_sdk.models.operations.CreatePrintingOrderResponse;
+import to.unified.unified_java_sdk.models.shared.*;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        CreatePrintingOrderRequest req = CreatePrintingOrderRequest.builder()
+                .printingOrder(PrintingOrder.builder()
+                    .createdAt(OffsetDateTime.parse("2022-03-14T11:16:15.147Z"))
+                    .currency("USD")
+                    .discountAmount(0d)
+                    .id("237132fa-7b97-4c13-a37b-6b4a470489b9")
+                    .lineitems(List.of(
+                        PrintingLineitem.builder()
+                            .files(List.of(
+                                PrintingLineitemFile.builder()
+                                    .placement("default")
+                                    .url("https://picsum.photos/seed/y54e6o9hYi/191/3357")
+                                    .build()))
+                            .id("1")
+                            .name("Bespoke Marble Chair")
+                            .quantity(2d)
+                            .retailPriceAmount(54.89)
+                            .sku("IBDIE3XR")
+                            .unitPriceAmount(26.37)
+                            .build(),
+                        PrintingLineitem.builder()
+                            .files(List.of(
+                                PrintingLineitemFile.builder()
+                                    .placement("default")
+                                    .url("https://picsum.photos/seed/T7S5xf/3521/1221")
+                                    .build()))
+                            .id("2")
+                            .name("Electronic Cotton Hat")
+                            .quantity(1d)
+                            .retailPriceAmount(23.94)
+                            .unitPriceAmount(10.04)
+                            .build()))
+                    .metadata(List.of())
+                    .shipments(List.of())
+                    .shippingAddress(PropertyPrintingOrderShippingAddress.builder()
+                        .address1("651 Main Street")
+                        .city("Euclid")
+                        .country("United States")
+                        .countryCode("US")
+                        .email("gary_leffler28@gmail.com")
+                        .name("Angelita Denesik")
+                        .postalCode("80301")
+                        .region("Colorado")
+                        .regionCode("AR")
+                        .telephone("808-831-6489 x62979")
+                        .build())
+                    .shippingAmount(4.69)
+                    .shippingMethod("STANDARD")
+                    .status(PrintingOrderStatus.OTHER)
+                    .subtotalAmount(62.78)
+                    .taxAmount(5.02)
+                    .totalAmount(72.49)
+                    .updatedAt(OffsetDateTime.parse("2025-01-23T00:25:00.455Z"))
+                    .build())
+                .connectionId("<id>")
+                .build();
+
+        CreatePrintingOrderResponse res = sdk.order().createPrintingOrder()
+                .request(req)
+                .call();
+
+        if (res.printingOrder().isPresent()) {
+            System.out.println(res.printingOrder().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [CreatePrintingOrderRequest](../../models/operations/CreatePrintingOrderRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+
+### Response
+
+**[CreatePrintingOrderResponse](../../models/operations/CreatePrintingOrderResponse.md)**
 
 ### Errors
 
@@ -312,6 +430,64 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## getPrintingOrder
+
+Retrieves a single PrintingOrder by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="getPrintingOrder" method="get" path="/printing/{connection_id}/order/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetPrintingOrderRequest;
+import to.unified.unified_java_sdk.models.operations.GetPrintingOrderResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        GetPrintingOrderRequest req = GetPrintingOrderRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetPrintingOrderResponse res = sdk.order().getPrintingOrder()
+                .request(req)
+                .call();
+
+        if (res.printingOrder().isPresent()) {
+            System.out.println(res.printingOrder().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [GetPrintingOrderRequest](../../models/operations/GetPrintingOrderRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+
+### Response
+
+**[GetPrintingOrderResponse](../../models/operations/GetPrintingOrderResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## ~~listAccountingOrders~~
 
 Returns a list of AccountingOrders. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
@@ -371,6 +547,63 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## listPrintingOrders
+
+Returns a list of PrintingOrders. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listPrintingOrders" method="get" path="/printing/{connection_id}/order" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListPrintingOrdersRequest;
+import to.unified.unified_java_sdk.models.operations.ListPrintingOrdersResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListPrintingOrdersRequest req = ListPrintingOrdersRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListPrintingOrdersResponse res = sdk.order().listPrintingOrders()
+                .request(req)
+                .call();
+
+        if (res.printingOrders().isPresent()) {
+            System.out.println(res.printingOrders().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [ListPrintingOrdersRequest](../../models/operations/ListPrintingOrdersRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+
+### Response
+
+**[ListPrintingOrdersResponse](../../models/operations/ListPrintingOrdersResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## ~~patchAccountingOrder~~
 
 Updates the AccountingOrder identified by `id`. Provide the unified AccountingOrder fields to change in the request body.
@@ -404,31 +637,31 @@ public class Application {
         PatchAccountingOrderRequest req = PatchAccountingOrderRequest.builder()
                 .accountingOrder(AccountingOrder.builder()
                     .billingAddress(PropertyAccountingOrderBillingAddress.builder()
-                        .address1("7654 Treutel Square")
-                        .city("Forrestport")
+                        .address1("125 Hayden Highway")
+                        .city("Altoona")
                         .countryCode("US")
-                        .postalCode("42190-3694")
-                        .region("Maine")
-                        .regionCode("OR")
+                        .postalCode("94706-7691")
+                        .region("Louisiana")
+                        .regionCode("VT")
                         .build())
                     .createdAt(OffsetDateTime.parse("2020-11-20T03:46:49.837Z"))
                     .currency("GBP")
-                    .id("1532bd1a-233d-42d5-8f35-8611ccaca05b")
+                    .id("cf1ec589-f955-4d90-82e6-fb12de603bf0")
                     .lineitems(List.of())
                     .metadata(List.of())
                     .postedAt(OffsetDateTime.parse("2020-11-20T03:46:49.837Z"))
                     .shippingAddress(PropertyAccountingOrderShippingAddress.builder()
-                        .address1("4974 Beatty Corners")
-                        .city("Alizeport")
+                        .address1("450 Garett Mall")
+                        .city("New Kamronburgh")
                         .countryCode("US")
-                        .postalCode("56252")
-                        .region("Alaska")
-                        .regionCode("VT")
+                        .postalCode("76546")
+                        .region("Oregon")
+                        .regionCode("VA")
                         .build())
                     .status(AccountingOrderStatus.AUTHORIZED)
                     .totalAmount(0d)
                     .type(AccountingOrderType.SALES)
-                    .updatedAt(OffsetDateTime.parse("2022-02-14T11:43:04.436Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-02-15T17:04:05.241Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -494,32 +727,32 @@ public class Application {
                     .connectionId("")
                     .workspaceId("<id>")
                     .createdAt(OffsetDateTime.parse("2021-09-18T10:33:57.803Z"))
-                    .id("c8e2e4aa-def2-44a7-a086-4fe0c765f441")
+                    .id("bb5f9b29-6583-42d0-a3e2-48f8f319282a")
                     .metadata(List.of())
                     .parameters(List.of())
                     .profileAddresses(List.of())
                     .profileDateOfBirth("1989-07-22T16:18:37.650Z")
                     .profileEmails(List.of(
-                        "amy.kris.windler@icloud.com"))
-                    .profileFirstName("Amy")
+                        "jordan.braun@icloud.com"))
+                    .profileFirstName("Jordan")
                     .profileGender(ProfileGender.NON_BINARY)
-                    .profileLastName("Kris-Windler")
-                    .profileName("Amy Kris-Windler")
-                    .profileResumeUrl("https://enchanted-cycle.biz/")
+                    .profileLastName("Braun")
+                    .profileName("Jordan Braun")
+                    .profileResumeUrl("https://astonishing-bug.com/")
                     .profileSocialMediaUrls(List.of())
                     .profileTelephones(List.of(
-                        "(341) 425-5828"))
-                    .reference("ab")
+                        "322.658.2806 x3159"))
+                    .reference("calcar")
                     .responseAttributes(List.of())
                     .responseDetails(List.of())
                     .responseDownloadUrls(List.of())
                     .responseMaxScore(84d)
                     .responseScore(82d)
                     .responseStatus(ResponseStatus.REJECTED)
-                    .responseUrl("https://rowdy-fisherman.biz/")
+                    .responseUrl("https://nervous-daughter.info/")
                     .status(AssessmentOrderStatus.REJECTED)
-                    .targetUrl("https://cautious-turret.info")
-                    .updatedAt(OffsetDateTime.parse("2023-02-02T20:13:00.652Z"))
+                    .targetUrl("https://idolized-suv.info")
+                    .updatedAt(OffsetDateTime.parse("2023-02-04T10:07:03.747Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -545,6 +778,119 @@ public class Application {
 ### Response
 
 **[PatchAssessmentOrderResponse](../../models/operations/PatchAssessmentOrderResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## patchPrintingOrder
+
+Updates the PrintingOrder identified by `id`. Provide the unified PrintingOrder fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="patchPrintingOrder" method="patch" path="/printing/{connection_id}/order/{id}" example="printing_order" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchPrintingOrderRequest;
+import to.unified.unified_java_sdk.models.operations.PatchPrintingOrderResponse;
+import to.unified.unified_java_sdk.models.shared.*;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        PatchPrintingOrderRequest req = PatchPrintingOrderRequest.builder()
+                .printingOrder(PrintingOrder.builder()
+                    .createdAt(OffsetDateTime.parse("2022-03-14T11:16:15.147Z"))
+                    .currency("USD")
+                    .discountAmount(0d)
+                    .id("f21117c8-409c-4eb1-acd0-f555c27faee7")
+                    .lineitems(List.of(
+                        PrintingLineitem.builder()
+                            .files(List.of(
+                                PrintingLineitemFile.builder()
+                                    .placement("default")
+                                    .url("https://picsum.photos/seed/y54e6o9hYi/191/3357")
+                                    .build()))
+                            .id("1")
+                            .name("Bespoke Marble Chair")
+                            .quantity(2d)
+                            .retailPriceAmount(54.89)
+                            .sku("IBDIE3XR")
+                            .unitPriceAmount(26.37)
+                            .build(),
+                        PrintingLineitem.builder()
+                            .files(List.of(
+                                PrintingLineitemFile.builder()
+                                    .placement("default")
+                                    .url("https://picsum.photos/seed/T7S5xf/3521/1221")
+                                    .build()))
+                            .id("2")
+                            .name("Electronic Cotton Hat")
+                            .quantity(1d)
+                            .retailPriceAmount(23.94)
+                            .unitPriceAmount(10.04)
+                            .build()))
+                    .metadata(List.of())
+                    .shipments(List.of())
+                    .shippingAddress(PropertyPrintingOrderShippingAddress.builder()
+                        .address1("651 Main Street")
+                        .city("Euclid")
+                        .country("United States")
+                        .countryCode("US")
+                        .email("gary_leffler28@gmail.com")
+                        .name("Angelita Denesik")
+                        .postalCode("80301")
+                        .region("Colorado")
+                        .regionCode("AR")
+                        .telephone("808-831-6489 x62979")
+                        .build())
+                    .shippingAmount(4.69)
+                    .shippingMethod("STANDARD")
+                    .status(PrintingOrderStatus.OTHER)
+                    .subtotalAmount(62.78)
+                    .taxAmount(5.02)
+                    .totalAmount(72.49)
+                    .updatedAt(OffsetDateTime.parse("2025-01-23T00:25:00.475Z"))
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        PatchPrintingOrderResponse res = sdk.order().patchPrintingOrder()
+                .request(req)
+                .call();
+
+        if (res.printingOrder().isPresent()) {
+            System.out.println(res.printingOrder().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [PatchPrintingOrderRequest](../../models/operations/PatchPrintingOrderRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+
+### Response
+
+**[PatchPrintingOrderResponse](../../models/operations/PatchPrintingOrderResponse.md)**
 
 ### Errors
 
@@ -610,6 +956,62 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## removePrintingOrder
+
+Deletes the PrintingOrder identified by `id`.
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="removePrintingOrder" method="delete" path="/printing/{connection_id}/order/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemovePrintingOrderRequest;
+import to.unified.unified_java_sdk.models.operations.RemovePrintingOrderResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemovePrintingOrderRequest req = RemovePrintingOrderRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemovePrintingOrderResponse res = sdk.order().removePrintingOrder()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [RemovePrintingOrderRequest](../../models/operations/RemovePrintingOrderRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+
+### Response
+
+**[RemovePrintingOrderResponse](../../models/operations/RemovePrintingOrderResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## ~~updateAccountingOrder~~
 
 Updates the AccountingOrder identified by `id`. Provide the unified AccountingOrder fields to change in the request body.
@@ -643,31 +1045,31 @@ public class Application {
         UpdateAccountingOrderRequest req = UpdateAccountingOrderRequest.builder()
                 .accountingOrder(AccountingOrder.builder()
                     .billingAddress(PropertyAccountingOrderBillingAddress.builder()
-                        .address1("7654 Treutel Square")
-                        .city("Forrestport")
+                        .address1("125 Hayden Highway")
+                        .city("Altoona")
                         .countryCode("US")
-                        .postalCode("42190-3694")
-                        .region("Maine")
-                        .regionCode("OR")
+                        .postalCode("94706-7691")
+                        .region("Louisiana")
+                        .regionCode("VT")
                         .build())
                     .createdAt(OffsetDateTime.parse("2020-11-20T03:46:49.837Z"))
                     .currency("GBP")
-                    .id("1532bd1a-233d-42d5-8f35-8611ccaca05b")
+                    .id("cf1ec589-f955-4d90-82e6-fb12de603bf0")
                     .lineitems(List.of())
                     .metadata(List.of())
                     .postedAt(OffsetDateTime.parse("2020-11-20T03:46:49.837Z"))
                     .shippingAddress(PropertyAccountingOrderShippingAddress.builder()
-                        .address1("4974 Beatty Corners")
-                        .city("Alizeport")
+                        .address1("450 Garett Mall")
+                        .city("New Kamronburgh")
                         .countryCode("US")
-                        .postalCode("56252")
-                        .region("Alaska")
-                        .regionCode("VT")
+                        .postalCode("76546")
+                        .region("Oregon")
+                        .regionCode("VA")
                         .build())
                     .status(AccountingOrderStatus.AUTHORIZED)
                     .totalAmount(0d)
                     .type(AccountingOrderType.SALES)
-                    .updatedAt(OffsetDateTime.parse("2022-02-14T11:43:04.436Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-02-15T17:04:05.241Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -733,32 +1135,32 @@ public class Application {
                     .connectionId("")
                     .workspaceId("<id>")
                     .createdAt(OffsetDateTime.parse("2021-09-18T10:33:57.803Z"))
-                    .id("c8e2e4aa-def2-44a7-a086-4fe0c765f441")
+                    .id("bb5f9b29-6583-42d0-a3e2-48f8f319282a")
                     .metadata(List.of())
                     .parameters(List.of())
                     .profileAddresses(List.of())
                     .profileDateOfBirth("1989-07-22T16:18:37.650Z")
                     .profileEmails(List.of(
-                        "amy.kris.windler@icloud.com"))
-                    .profileFirstName("Amy")
+                        "jordan.braun@icloud.com"))
+                    .profileFirstName("Jordan")
                     .profileGender(ProfileGender.NON_BINARY)
-                    .profileLastName("Kris-Windler")
-                    .profileName("Amy Kris-Windler")
-                    .profileResumeUrl("https://enchanted-cycle.biz/")
+                    .profileLastName("Braun")
+                    .profileName("Jordan Braun")
+                    .profileResumeUrl("https://astonishing-bug.com/")
                     .profileSocialMediaUrls(List.of())
                     .profileTelephones(List.of(
-                        "(341) 425-5828"))
-                    .reference("ab")
+                        "322.658.2806 x3159"))
+                    .reference("calcar")
                     .responseAttributes(List.of())
                     .responseDetails(List.of())
                     .responseDownloadUrls(List.of())
                     .responseMaxScore(84d)
                     .responseScore(82d)
                     .responseStatus(ResponseStatus.REJECTED)
-                    .responseUrl("https://rowdy-fisherman.biz/")
+                    .responseUrl("https://nervous-daughter.info/")
                     .status(AssessmentOrderStatus.REJECTED)
-                    .targetUrl("https://cautious-turret.info")
-                    .updatedAt(OffsetDateTime.parse("2023-02-02T20:13:00.652Z"))
+                    .targetUrl("https://idolized-suv.info")
+                    .updatedAt(OffsetDateTime.parse("2023-02-04T10:07:03.747Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -784,6 +1186,119 @@ public class Application {
 ### Response
 
 **[UpdateAssessmentOrderResponse](../../models/operations/UpdateAssessmentOrderResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## updatePrintingOrder
+
+Updates the PrintingOrder identified by `id`. Provide the unified PrintingOrder fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="updatePrintingOrder" method="put" path="/printing/{connection_id}/order/{id}" example="printing_order" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdatePrintingOrderRequest;
+import to.unified.unified_java_sdk.models.operations.UpdatePrintingOrderResponse;
+import to.unified.unified_java_sdk.models.shared.*;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        UpdatePrintingOrderRequest req = UpdatePrintingOrderRequest.builder()
+                .printingOrder(PrintingOrder.builder()
+                    .createdAt(OffsetDateTime.parse("2022-03-14T11:16:15.147Z"))
+                    .currency("USD")
+                    .discountAmount(0d)
+                    .id("f21117c8-409c-4eb1-acd0-f555c27faee7")
+                    .lineitems(List.of(
+                        PrintingLineitem.builder()
+                            .files(List.of(
+                                PrintingLineitemFile.builder()
+                                    .placement("default")
+                                    .url("https://picsum.photos/seed/y54e6o9hYi/191/3357")
+                                    .build()))
+                            .id("1")
+                            .name("Bespoke Marble Chair")
+                            .quantity(2d)
+                            .retailPriceAmount(54.89)
+                            .sku("IBDIE3XR")
+                            .unitPriceAmount(26.37)
+                            .build(),
+                        PrintingLineitem.builder()
+                            .files(List.of(
+                                PrintingLineitemFile.builder()
+                                    .placement("default")
+                                    .url("https://picsum.photos/seed/T7S5xf/3521/1221")
+                                    .build()))
+                            .id("2")
+                            .name("Electronic Cotton Hat")
+                            .quantity(1d)
+                            .retailPriceAmount(23.94)
+                            .unitPriceAmount(10.04)
+                            .build()))
+                    .metadata(List.of())
+                    .shipments(List.of())
+                    .shippingAddress(PropertyPrintingOrderShippingAddress.builder()
+                        .address1("651 Main Street")
+                        .city("Euclid")
+                        .country("United States")
+                        .countryCode("US")
+                        .email("gary_leffler28@gmail.com")
+                        .name("Angelita Denesik")
+                        .postalCode("80301")
+                        .region("Colorado")
+                        .regionCode("AR")
+                        .telephone("808-831-6489 x62979")
+                        .build())
+                    .shippingAmount(4.69)
+                    .shippingMethod("STANDARD")
+                    .status(PrintingOrderStatus.OTHER)
+                    .subtotalAmount(62.78)
+                    .taxAmount(5.02)
+                    .totalAmount(72.49)
+                    .updatedAt(OffsetDateTime.parse("2025-01-23T00:25:00.475Z"))
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        UpdatePrintingOrderResponse res = sdk.order().updatePrintingOrder()
+                .request(req)
+                .call();
+
+        if (res.printingOrder().isPresent()) {
+            System.out.println(res.printingOrder().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [UpdatePrintingOrderRequest](../../models/operations/UpdatePrintingOrderRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+
+### Response
+
+**[UpdatePrintingOrderResponse](../../models/operations/UpdatePrintingOrderResponse.md)**
 
 ### Errors
 

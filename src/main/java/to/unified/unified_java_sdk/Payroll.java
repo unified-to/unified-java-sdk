@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.GetHrisPayrollRequest;
 import to.unified.unified_java_sdk.models.operations.GetHrisPayrollRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetHrisPayrollResponse;
@@ -15,6 +16,7 @@ import to.unified.unified_java_sdk.models.operations.ListHrisPayrollsResponse;
 import to.unified.unified_java_sdk.operations.GetHrisPayroll;
 import to.unified.unified_java_sdk.operations.ListHrisPayrolls;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Payroll {
@@ -59,8 +61,23 @@ public class Payroll {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetHrisPayrollResponse getHrisPayroll(@Nonnull GetHrisPayrollRequest request) {
+        return getHrisPayroll(request, null);
+    }
+
+    /**
+     * Retrieve a payroll
+     * 
+     * <p>Retrieves a single HrisPayroll by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetHrisPayrollResponse getHrisPayroll(@Nonnull GetHrisPayrollRequest request, @Nullable Options options) {
         RequestOperation<GetHrisPayrollRequest, GetHrisPayrollResponse> operation
-              = new GetHrisPayroll.Sync(sdkConfiguration, _headers);
+              = new GetHrisPayroll.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -95,8 +112,27 @@ public class Payroll {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListHrisPayrollsResponse listHrisPayrolls(@Nonnull ListHrisPayrollsRequest request) {
+        return listHrisPayrolls(request, null);
+    }
+
+    /**
+     * List all payrolls
+     * 
+     * <p>Returns a list of HrisPayrolls. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListHrisPayrollsResponse listHrisPayrolls(@Nonnull ListHrisPayrollsRequest request, @Nullable Options options) {
         RequestOperation<ListHrisPayrollsRequest, ListHrisPayrollsResponse> operation
-              = new ListHrisPayrolls.Sync(sdkConfiguration, _headers);
+              = new ListHrisPayrolls.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

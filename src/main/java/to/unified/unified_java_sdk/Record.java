@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateDatastoreRecordRequest;
 import to.unified.unified_java_sdk.models.operations.CreateDatastoreRecordRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateDatastoreRecordResponse;
@@ -31,6 +32,7 @@ import to.unified.unified_java_sdk.operations.PatchDatastoreRecord;
 import to.unified.unified_java_sdk.operations.RemoveDatastoreRecord;
 import to.unified.unified_java_sdk.operations.UpdateDatastoreRecord;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Record {
@@ -75,8 +77,23 @@ public class Record {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateDatastoreRecordResponse createDatastoreRecord(@Nonnull CreateDatastoreRecordRequest request) {
+        return createDatastoreRecord(request, null);
+    }
+
+    /**
+     * Create a record
+     * 
+     * <p>Creates a DatastoreRecord. Provide the unified DatastoreRecord fields in the request body; they are
+     * mapped to the provider's API. Returns the created DatastoreRecord.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateDatastoreRecordResponse createDatastoreRecord(@Nonnull CreateDatastoreRecordRequest request, @Nullable Options options) {
         RequestOperation<CreateDatastoreRecordRequest, CreateDatastoreRecordResponse> operation
-              = new CreateDatastoreRecord.Sync(sdkConfiguration, _headers);
+              = new CreateDatastoreRecord.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -103,8 +120,23 @@ public class Record {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetDatastoreRecordResponse getDatastoreRecord(@Nonnull GetDatastoreRecordRequest request) {
+        return getDatastoreRecord(request, null);
+    }
+
+    /**
+     * Retrieve a record
+     * 
+     * <p>Retrieves a single DatastoreRecord by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetDatastoreRecordResponse getDatastoreRecord(@Nonnull GetDatastoreRecordRequest request, @Nullable Options options) {
         RequestOperation<GetDatastoreRecordRequest, GetDatastoreRecordResponse> operation
-              = new GetDatastoreRecord.Sync(sdkConfiguration, _headers);
+              = new GetDatastoreRecord.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -139,8 +171,27 @@ public class Record {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListDatastoreRecordsResponse listDatastoreRecords(@Nonnull ListDatastoreRecordsRequest request) {
+        return listDatastoreRecords(request, null);
+    }
+
+    /**
+     * List all records
+     * 
+     * <p>Returns a list of DatastoreRecords. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListDatastoreRecordsResponse listDatastoreRecords(@Nonnull ListDatastoreRecordsRequest request, @Nullable Options options) {
         RequestOperation<ListDatastoreRecordsRequest, ListDatastoreRecordsResponse> operation
-              = new ListDatastoreRecords.Sync(sdkConfiguration, _headers);
+              = new ListDatastoreRecords.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +218,23 @@ public class Record {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchDatastoreRecordResponse patchDatastoreRecord(@Nonnull PatchDatastoreRecordRequest request) {
+        return patchDatastoreRecord(request, null);
+    }
+
+    /**
+     * Update a record
+     * 
+     * <p>Updates the DatastoreRecord identified by `id`. Provide the unified DatastoreRecord fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchDatastoreRecordResponse patchDatastoreRecord(@Nonnull PatchDatastoreRecordRequest request, @Nullable Options options) {
         RequestOperation<PatchDatastoreRecordRequest, PatchDatastoreRecordResponse> operation
-              = new PatchDatastoreRecord.Sync(sdkConfiguration, _headers);
+              = new PatchDatastoreRecord.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -193,8 +259,22 @@ public class Record {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveDatastoreRecordResponse removeDatastoreRecord(@Nonnull RemoveDatastoreRecordRequest request) {
+        return removeDatastoreRecord(request, null);
+    }
+
+    /**
+     * Remove a record
+     * 
+     * <p>Deletes the DatastoreRecord identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveDatastoreRecordResponse removeDatastoreRecord(@Nonnull RemoveDatastoreRecordRequest request, @Nullable Options options) {
         RequestOperation<RemoveDatastoreRecordRequest, RemoveDatastoreRecordResponse> operation
-              = new RemoveDatastoreRecord.Sync(sdkConfiguration, _headers);
+              = new RemoveDatastoreRecord.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -221,8 +301,23 @@ public class Record {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateDatastoreRecordResponse updateDatastoreRecord(@Nonnull UpdateDatastoreRecordRequest request) {
+        return updateDatastoreRecord(request, null);
+    }
+
+    /**
+     * Update a record
+     * 
+     * <p>Updates the DatastoreRecord identified by `id`. Provide the unified DatastoreRecord fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateDatastoreRecordResponse updateDatastoreRecord(@Nonnull UpdateDatastoreRecordRequest request, @Nullable Options options) {
         RequestOperation<UpdateDatastoreRecordRequest, UpdateDatastoreRecordResponse> operation
-              = new UpdateDatastoreRecord.Sync(sdkConfiguration, _headers);
+              = new UpdateDatastoreRecord.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

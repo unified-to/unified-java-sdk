@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateComputeVolumeRequest;
 import to.unified.unified_java_sdk.models.operations.CreateComputeVolumeRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateComputeVolumeResponse;
@@ -31,6 +32,7 @@ import to.unified.unified_java_sdk.operations.PatchComputeVolume;
 import to.unified.unified_java_sdk.operations.RemoveComputeVolume;
 import to.unified.unified_java_sdk.operations.UpdateComputeVolume;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Volume {
@@ -75,8 +77,23 @@ public class Volume {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateComputeVolumeResponse createComputeVolume(@Nonnull CreateComputeVolumeRequest request) {
+        return createComputeVolume(request, null);
+    }
+
+    /**
+     * Create a volume
+     * 
+     * <p>Creates a ComputeVolume. Provide the unified ComputeVolume fields in the request body; they are
+     * mapped to the provider's API. Returns the created ComputeVolume.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateComputeVolumeResponse createComputeVolume(@Nonnull CreateComputeVolumeRequest request, @Nullable Options options) {
         RequestOperation<CreateComputeVolumeRequest, CreateComputeVolumeResponse> operation
-              = new CreateComputeVolume.Sync(sdkConfiguration, _headers);
+              = new CreateComputeVolume.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -103,8 +120,23 @@ public class Volume {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetComputeVolumeResponse getComputeVolume(@Nonnull GetComputeVolumeRequest request) {
+        return getComputeVolume(request, null);
+    }
+
+    /**
+     * Retrieve a volume
+     * 
+     * <p>Retrieves a single ComputeVolume by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetComputeVolumeResponse getComputeVolume(@Nonnull GetComputeVolumeRequest request, @Nullable Options options) {
         RequestOperation<GetComputeVolumeRequest, GetComputeVolumeResponse> operation
-              = new GetComputeVolume.Sync(sdkConfiguration, _headers);
+              = new GetComputeVolume.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -139,8 +171,27 @@ public class Volume {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListComputeVolumesResponse listComputeVolumes(@Nonnull ListComputeVolumesRequest request) {
+        return listComputeVolumes(request, null);
+    }
+
+    /**
+     * List all volumes
+     * 
+     * <p>Returns a list of ComputeVolumes. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListComputeVolumesResponse listComputeVolumes(@Nonnull ListComputeVolumesRequest request, @Nullable Options options) {
         RequestOperation<ListComputeVolumesRequest, ListComputeVolumesResponse> operation
-              = new ListComputeVolumes.Sync(sdkConfiguration, _headers);
+              = new ListComputeVolumes.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +218,23 @@ public class Volume {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchComputeVolumeResponse patchComputeVolume(@Nonnull PatchComputeVolumeRequest request) {
+        return patchComputeVolume(request, null);
+    }
+
+    /**
+     * Update a volume
+     * 
+     * <p>Updates the ComputeVolume identified by `id`. Provide the unified ComputeVolume fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchComputeVolumeResponse patchComputeVolume(@Nonnull PatchComputeVolumeRequest request, @Nullable Options options) {
         RequestOperation<PatchComputeVolumeRequest, PatchComputeVolumeResponse> operation
-              = new PatchComputeVolume.Sync(sdkConfiguration, _headers);
+              = new PatchComputeVolume.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -193,8 +259,22 @@ public class Volume {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveComputeVolumeResponse removeComputeVolume(@Nonnull RemoveComputeVolumeRequest request) {
+        return removeComputeVolume(request, null);
+    }
+
+    /**
+     * Remove a volume
+     * 
+     * <p>Deletes the ComputeVolume identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveComputeVolumeResponse removeComputeVolume(@Nonnull RemoveComputeVolumeRequest request, @Nullable Options options) {
         RequestOperation<RemoveComputeVolumeRequest, RemoveComputeVolumeResponse> operation
-              = new RemoveComputeVolume.Sync(sdkConfiguration, _headers);
+              = new RemoveComputeVolume.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -221,8 +301,23 @@ public class Volume {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateComputeVolumeResponse updateComputeVolume(@Nonnull UpdateComputeVolumeRequest request) {
+        return updateComputeVolume(request, null);
+    }
+
+    /**
+     * Update a volume
+     * 
+     * <p>Updates the ComputeVolume identified by `id`. Provide the unified ComputeVolume fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateComputeVolumeResponse updateComputeVolume(@Nonnull UpdateComputeVolumeRequest request, @Nullable Options options) {
         RequestOperation<UpdateComputeVolumeRequest, UpdateComputeVolumeResponse> operation
-              = new UpdateComputeVolume.Sync(sdkConfiguration, _headers);
+              = new UpdateComputeVolume.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

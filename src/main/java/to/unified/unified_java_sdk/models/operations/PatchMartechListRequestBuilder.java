@@ -6,18 +6,28 @@ package to.unified.unified_java_sdk.models.operations;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.PatchMartechList;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class PatchMartechListRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private PatchMartechListRequest request;
+    private final Options.Builder optionsBuilder;
 
     public PatchMartechListRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public PatchMartechListRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public PatchMartechListRequestBuilder request(@Nonnull PatchMartechListRequest request) {
@@ -42,8 +52,9 @@ public class PatchMartechListRequestBuilder {
     * @return The response from the server.
     */
     public PatchMartechListResponse call() {
+        Options options = optionsBuilder.build();
         RequestOperation<PatchMartechListRequest, PatchMartechListResponse> operation
-              = new PatchMartechList.Sync(sdkConfiguration, _headers);
+              = new PatchMartechList.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

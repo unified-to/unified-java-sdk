@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateComputeEnvvarRequest;
 import to.unified.unified_java_sdk.models.operations.GetComputeEnvvarRequest;
@@ -32,6 +33,7 @@ import to.unified.unified_java_sdk.operations.PatchComputeEnvvar;
 import to.unified.unified_java_sdk.operations.RemoveComputeEnvvar;
 import to.unified.unified_java_sdk.operations.UpdateComputeEnvvar;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncEnvvar {
@@ -76,8 +78,22 @@ public class AsyncEnvvar {
      * @return {@code CompletableFuture<CreateComputeEnvvarResponse>} - The async response
      */
     public CompletableFuture<CreateComputeEnvvarResponse> createComputeEnvvar(@Nonnull CreateComputeEnvvarRequest request) {
+        return createComputeEnvvar(request, null);
+    }
+
+    /**
+     * Create an envvar
+     * 
+     * <p>Creates a ComputeEnvvar. Provide the unified ComputeEnvvar fields in the request body; they are
+     * mapped to the provider's API. Returns the created ComputeEnvvar.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateComputeEnvvarResponse>} - The async response
+     */
+    public CompletableFuture<CreateComputeEnvvarResponse> createComputeEnvvar(@Nonnull CreateComputeEnvvarRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateComputeEnvvarRequest, CreateComputeEnvvarResponse> operation
-              = new CreateComputeEnvvar.Async(sdkConfiguration, _headers);
+              = new CreateComputeEnvvar.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -105,8 +121,22 @@ public class AsyncEnvvar {
      * @return {@code CompletableFuture<GetComputeEnvvarResponse>} - The async response
      */
     public CompletableFuture<GetComputeEnvvarResponse> getComputeEnvvar(@Nonnull GetComputeEnvvarRequest request) {
+        return getComputeEnvvar(request, null);
+    }
+
+    /**
+     * Retrieve an envvar
+     * 
+     * <p>Retrieves a single ComputeEnvvar by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetComputeEnvvarResponse>} - The async response
+     */
+    public CompletableFuture<GetComputeEnvvarResponse> getComputeEnvvar(@Nonnull GetComputeEnvvarRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetComputeEnvvarRequest, GetComputeEnvvarResponse> operation
-              = new GetComputeEnvvar.Async(sdkConfiguration, _headers);
+              = new GetComputeEnvvar.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -142,8 +172,26 @@ public class AsyncEnvvar {
      * @return {@code CompletableFuture<ListComputeEnvvarsResponse>} - The async response
      */
     public CompletableFuture<ListComputeEnvvarsResponse> listComputeEnvvars(@Nonnull ListComputeEnvvarsRequest request) {
+        return listComputeEnvvars(request, null);
+    }
+
+    /**
+     * List all envvars
+     * 
+     * <p>Returns a list of ComputeEnvvars. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListComputeEnvvarsResponse>} - The async response
+     */
+    public CompletableFuture<ListComputeEnvvarsResponse> listComputeEnvvars(@Nonnull ListComputeEnvvarsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListComputeEnvvarsRequest, ListComputeEnvvarsResponse> operation
-              = new ListComputeEnvvars.Async(sdkConfiguration, _headers);
+              = new ListComputeEnvvars.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -171,8 +219,22 @@ public class AsyncEnvvar {
      * @return {@code CompletableFuture<PatchComputeEnvvarResponse>} - The async response
      */
     public CompletableFuture<PatchComputeEnvvarResponse> patchComputeEnvvar(@Nonnull PatchComputeEnvvarRequest request) {
+        return patchComputeEnvvar(request, null);
+    }
+
+    /**
+     * Update an envvar
+     * 
+     * <p>Updates the ComputeEnvvar identified by `id`. Provide the unified ComputeEnvvar fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchComputeEnvvarResponse>} - The async response
+     */
+    public CompletableFuture<PatchComputeEnvvarResponse> patchComputeEnvvar(@Nonnull PatchComputeEnvvarRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchComputeEnvvarRequest, PatchComputeEnvvarResponse> operation
-              = new PatchComputeEnvvar.Async(sdkConfiguration, _headers);
+              = new PatchComputeEnvvar.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -198,8 +260,21 @@ public class AsyncEnvvar {
      * @return {@code CompletableFuture<RemoveComputeEnvvarResponse>} - The async response
      */
     public CompletableFuture<RemoveComputeEnvvarResponse> removeComputeEnvvar(@Nonnull RemoveComputeEnvvarRequest request) {
+        return removeComputeEnvvar(request, null);
+    }
+
+    /**
+     * Remove an envvar
+     * 
+     * <p>Deletes the ComputeEnvvar identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveComputeEnvvarResponse>} - The async response
+     */
+    public CompletableFuture<RemoveComputeEnvvarResponse> removeComputeEnvvar(@Nonnull RemoveComputeEnvvarRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveComputeEnvvarRequest, RemoveComputeEnvvarResponse> operation
-              = new RemoveComputeEnvvar.Async(sdkConfiguration, _headers);
+              = new RemoveComputeEnvvar.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -227,8 +302,22 @@ public class AsyncEnvvar {
      * @return {@code CompletableFuture<UpdateComputeEnvvarResponse>} - The async response
      */
     public CompletableFuture<UpdateComputeEnvvarResponse> updateComputeEnvvar(@Nonnull UpdateComputeEnvvarRequest request) {
+        return updateComputeEnvvar(request, null);
+    }
+
+    /**
+     * Update an envvar
+     * 
+     * <p>Updates the ComputeEnvvar identified by `id`. Provide the unified ComputeEnvvar fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateComputeEnvvarResponse>} - The async response
+     */
+    public CompletableFuture<UpdateComputeEnvvarResponse> updateComputeEnvvar(@Nonnull UpdateComputeEnvvarRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateComputeEnvvarRequest, UpdateComputeEnvvarResponse> operation
-              = new UpdateComputeEnvvar.Async(sdkConfiguration, _headers);
+              = new UpdateComputeEnvvar.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

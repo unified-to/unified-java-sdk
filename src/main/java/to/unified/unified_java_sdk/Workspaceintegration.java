@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateUnifiedWorkspaceintegrationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateUnifiedWorkspaceintegrationResponse;
 import to.unified.unified_java_sdk.models.operations.GetUnifiedWorkspaceintegrationRequest;
@@ -31,6 +32,7 @@ import to.unified.unified_java_sdk.operations.PatchUnifiedWorkspaceintegration;
 import to.unified.unified_java_sdk.operations.RemoveUnifiedWorkspaceintegration;
 import to.unified.unified_java_sdk.operations.UpdateUnifiedWorkspaceintegration;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Workspaceintegration {
@@ -69,8 +71,20 @@ public class Workspaceintegration {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateUnifiedWorkspaceintegrationResponse createUnifiedWorkspaceintegration(@Nonnull WorkspaceIntegration request) {
+        return createUnifiedWorkspaceintegration(request, null);
+    }
+
+    /**
+     * Create workspace integration
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateUnifiedWorkspaceintegrationResponse createUnifiedWorkspaceintegration(@Nonnull WorkspaceIntegration request, @Nullable Options options) {
         RequestOperation<WorkspaceIntegration, CreateUnifiedWorkspaceintegrationResponse> operation
-              = new CreateUnifiedWorkspaceintegration.Sync(sdkConfiguration, _headers);
+              = new CreateUnifiedWorkspaceintegration.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -91,8 +105,20 @@ public class Workspaceintegration {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetUnifiedWorkspaceintegrationResponse getUnifiedWorkspaceintegration(@Nonnull GetUnifiedWorkspaceintegrationRequest request) {
+        return getUnifiedWorkspaceintegration(request, null);
+    }
+
+    /**
+     * Retrieve workspace integration
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetUnifiedWorkspaceintegrationResponse getUnifiedWorkspaceintegration(@Nonnull GetUnifiedWorkspaceintegrationRequest request, @Nullable Options options) {
         RequestOperation<GetUnifiedWorkspaceintegrationRequest, GetUnifiedWorkspaceintegrationResponse> operation
-              = new GetUnifiedWorkspaceintegration.Sync(sdkConfiguration, _headers);
+              = new GetUnifiedWorkspaceintegration.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -113,8 +139,20 @@ public class Workspaceintegration {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListUnifiedWorkspaceintegrationsResponse listUnifiedWorkspaceintegrations(@Nonnull ListUnifiedWorkspaceintegrationsRequest request) {
+        return listUnifiedWorkspaceintegrations(request, null);
+    }
+
+    /**
+     * List workspace integrations
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListUnifiedWorkspaceintegrationsResponse listUnifiedWorkspaceintegrations(@Nonnull ListUnifiedWorkspaceintegrationsRequest request, @Nullable Options options) {
         RequestOperation<ListUnifiedWorkspaceintegrationsRequest, ListUnifiedWorkspaceintegrationsResponse> operation
-              = new ListUnifiedWorkspaceintegrations.Sync(sdkConfiguration, _headers);
+              = new ListUnifiedWorkspaceintegrations.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -135,8 +173,20 @@ public class Workspaceintegration {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchUnifiedWorkspaceintegrationResponse patchUnifiedWorkspaceintegration(@Nonnull PatchUnifiedWorkspaceintegrationRequest request) {
+        return patchUnifiedWorkspaceintegration(request, null);
+    }
+
+    /**
+     * Update workspace integration
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchUnifiedWorkspaceintegrationResponse patchUnifiedWorkspaceintegration(@Nonnull PatchUnifiedWorkspaceintegrationRequest request, @Nullable Options options) {
         RequestOperation<PatchUnifiedWorkspaceintegrationRequest, PatchUnifiedWorkspaceintegrationResponse> operation
-              = new PatchUnifiedWorkspaceintegration.Sync(sdkConfiguration, _headers);
+              = new PatchUnifiedWorkspaceintegration.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -157,8 +207,20 @@ public class Workspaceintegration {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveUnifiedWorkspaceintegrationResponse removeUnifiedWorkspaceintegration(@Nonnull RemoveUnifiedWorkspaceintegrationRequest request) {
+        return removeUnifiedWorkspaceintegration(request, null);
+    }
+
+    /**
+     * Remove workspace integration
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveUnifiedWorkspaceintegrationResponse removeUnifiedWorkspaceintegration(@Nonnull RemoveUnifiedWorkspaceintegrationRequest request, @Nullable Options options) {
         RequestOperation<RemoveUnifiedWorkspaceintegrationRequest, RemoveUnifiedWorkspaceintegrationResponse> operation
-              = new RemoveUnifiedWorkspaceintegration.Sync(sdkConfiguration, _headers);
+              = new RemoveUnifiedWorkspaceintegration.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -179,8 +241,20 @@ public class Workspaceintegration {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateUnifiedWorkspaceintegrationResponse updateUnifiedWorkspaceintegration(@Nonnull UpdateUnifiedWorkspaceintegrationRequest request) {
+        return updateUnifiedWorkspaceintegration(request, null);
+    }
+
+    /**
+     * Update workspace integration
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateUnifiedWorkspaceintegrationResponse updateUnifiedWorkspaceintegration(@Nonnull UpdateUnifiedWorkspaceintegrationRequest request, @Nullable Options options) {
         RequestOperation<UpdateUnifiedWorkspaceintegrationRequest, UpdateUnifiedWorkspaceintegrationResponse> operation
-              = new UpdateUnifiedWorkspaceintegration.Sync(sdkConfiguration, _headers);
+              = new UpdateUnifiedWorkspaceintegration.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

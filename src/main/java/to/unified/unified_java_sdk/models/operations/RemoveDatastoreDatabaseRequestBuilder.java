@@ -6,18 +6,28 @@ package to.unified.unified_java_sdk.models.operations;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.RemoveDatastoreDatabase;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveDatastoreDatabaseRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private RemoveDatastoreDatabaseRequest request;
+    private final Options.Builder optionsBuilder;
 
     public RemoveDatastoreDatabaseRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public RemoveDatastoreDatabaseRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public RemoveDatastoreDatabaseRequestBuilder request(@Nonnull RemoveDatastoreDatabaseRequest request) {
@@ -42,8 +52,9 @@ public class RemoveDatastoreDatabaseRequestBuilder {
     * @return The response from the server.
     */
     public RemoveDatastoreDatabaseResponse call() {
+        Options options = optionsBuilder.build();
         RequestOperation<RemoveDatastoreDatabaseRequest, RemoveDatastoreDatabaseResponse> operation
-              = new RemoveDatastoreDatabase.Sync(sdkConfiguration, _headers);
+              = new RemoveDatastoreDatabase.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

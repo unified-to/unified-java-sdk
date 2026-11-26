@@ -30,6 +30,14 @@ public class StoragePermission {
     @JsonProperty("is_hidden")
     private Boolean isHidden;
 
+    /**
+     * Shared with everyone in the owner's organization/domain/enterprise (e.g. Google Drive domain, Box
+     * company or Microsoft organization sharing links)
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("is_organization")
+    private Boolean isOrganization;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_public")
@@ -50,11 +58,13 @@ public class StoragePermission {
     public StoragePermission(
             @JsonProperty("group_id") @Nullable String groupId,
             @JsonProperty("is_hidden") @Nullable Boolean isHidden,
+            @JsonProperty("is_organization") @Nullable Boolean isOrganization,
             @JsonProperty("is_public") @Nullable Boolean isPublic,
             @JsonProperty("roles") @Nonnull List<PropertyStoragePermissionRoles> roles,
             @JsonProperty("user_id") @Nullable String userId) {
         this.groupId = groupId;
         this.isHidden = isHidden;
+        this.isOrganization = isOrganization;
         this.isPublic = isPublic;
         this.roles = Optional.ofNullable(roles)
             .orElseThrow(() -> new IllegalArgumentException("roles cannot be null"));
@@ -64,7 +74,7 @@ public class StoragePermission {
     public StoragePermission(
             @Nonnull List<PropertyStoragePermissionRoles> roles) {
         this(null, null, null,
-            roles, null);
+            null, roles, null);
     }
 
     /**
@@ -76,6 +86,14 @@ public class StoragePermission {
 
     public Optional<Boolean> isHidden() {
         return Optional.ofNullable(this.isHidden);
+    }
+
+    /**
+     * Shared with everyone in the owner's organization/domain/enterprise (e.g. Google Drive domain, Box
+     * company or Microsoft organization sharing links)
+     */
+    public Optional<Boolean> isOrganization() {
+        return Optional.ofNullable(this.isOrganization);
     }
 
     public Optional<Boolean> isPublic() {
@@ -113,6 +131,16 @@ public class StoragePermission {
     }
 
 
+    /**
+     * Shared with everyone in the owner's organization/domain/enterprise (e.g. Google Drive domain, Box
+     * company or Microsoft organization sharing links)
+     */
+    public StoragePermission withIsOrganization(@Nullable Boolean isOrganization) {
+        this.isOrganization = isOrganization;
+        return this;
+    }
+
+
     public StoragePermission withIsPublic(@Nullable Boolean isPublic) {
         this.isPublic = isPublic;
         return this;
@@ -146,6 +174,7 @@ public class StoragePermission {
         return 
             Utils.enhancedDeepEquals(this.groupId, other.groupId) &&
             Utils.enhancedDeepEquals(this.isHidden, other.isHidden) &&
+            Utils.enhancedDeepEquals(this.isOrganization, other.isOrganization) &&
             Utils.enhancedDeepEquals(this.isPublic, other.isPublic) &&
             Utils.enhancedDeepEquals(this.roles, other.roles) &&
             Utils.enhancedDeepEquals(this.userId, other.userId);
@@ -154,8 +183,8 @@ public class StoragePermission {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            groupId, isHidden, isPublic,
-            roles, userId);
+            groupId, isHidden, isOrganization,
+            isPublic, roles, userId);
     }
     
     @Override
@@ -163,6 +192,7 @@ public class StoragePermission {
         return Utils.toString(StoragePermission.class,
                 "groupId", groupId,
                 "isHidden", isHidden,
+                "isOrganization", isOrganization,
                 "isPublic", isPublic,
                 "roles", roles,
                 "userId", userId);
@@ -174,6 +204,8 @@ public class StoragePermission {
         private String groupId;
 
         private Boolean isHidden;
+
+        private Boolean isOrganization;
 
         private Boolean isPublic;
 
@@ -198,6 +230,15 @@ public class StoragePermission {
             return this;
         }
 
+        /**
+         * Shared with everyone in the owner's organization/domain/enterprise (e.g. Google Drive domain, Box
+         * company or Microsoft organization sharing links)
+         */
+        public Builder isOrganization(@Nullable Boolean isOrganization) {
+            this.isOrganization = isOrganization;
+            return this;
+        }
+
         public Builder isPublic(@Nullable Boolean isPublic) {
             this.isPublic = isPublic;
             return this;
@@ -218,8 +259,8 @@ public class StoragePermission {
 
         public StoragePermission build() {
             return new StoragePermission(
-                groupId, isHidden, isPublic,
-                roles, userId);
+                groupId, isHidden, isOrganization,
+                isPublic, roles, userId);
         }
 
     }

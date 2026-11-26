@@ -6,20 +6,30 @@ package to.unified.unified_java_sdk.models.operations.async;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.CreateSigningDocumentRequest;
 import to.unified.unified_java_sdk.operations.CreateSigningDocument;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class CreateSigningDocumentRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private CreateSigningDocumentRequest request;
+    private final Options.Builder optionsBuilder;
 
     public CreateSigningDocumentRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public CreateSigningDocumentRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public CreateSigningDocumentRequestBuilder request(@Nonnull CreateSigningDocumentRequest request) {
@@ -44,8 +54,9 @@ public class CreateSigningDocumentRequestBuilder {
     * @return The response from the server.
     */
     public CompletableFuture<CreateSigningDocumentResponse> call() {
+        Options options = optionsBuilder.build();
         AsyncRequestOperation<CreateSigningDocumentRequest, CreateSigningDocumentResponse> operation
-              = new CreateSigningDocument.Async(sdkConfiguration, _headers);
+              = new CreateSigningDocument.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

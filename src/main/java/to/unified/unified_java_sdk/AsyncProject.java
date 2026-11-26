@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingProjectRequest;
 import to.unified.unified_java_sdk.models.operations.CreateTaskProjectRequest;
@@ -56,6 +57,7 @@ import to.unified.unified_java_sdk.operations.RemoveTaskProject;
 import to.unified.unified_java_sdk.operations.UpdateAccountingProject;
 import to.unified.unified_java_sdk.operations.UpdateTaskProject;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncProject {
@@ -100,8 +102,22 @@ public class AsyncProject {
      * @return {@code CompletableFuture<CreateAccountingProjectResponse>} - The async response
      */
     public CompletableFuture<CreateAccountingProjectResponse> createAccountingProject(@Nonnull CreateAccountingProjectRequest request) {
+        return createAccountingProject(request, null);
+    }
+
+    /**
+     * Create a project
+     * 
+     * <p>Creates a AccountingProject. Provide the unified AccountingProject fields in the request body; they
+     * are mapped to the provider's API. Returns the created AccountingProject.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateAccountingProjectResponse>} - The async response
+     */
+    public CompletableFuture<CreateAccountingProjectResponse> createAccountingProject(@Nonnull CreateAccountingProjectRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateAccountingProjectRequest, CreateAccountingProjectResponse> operation
-              = new CreateAccountingProject.Async(sdkConfiguration, _headers);
+              = new CreateAccountingProject.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -129,8 +145,22 @@ public class AsyncProject {
      * @return {@code CompletableFuture<CreateTaskProjectResponse>} - The async response
      */
     public CompletableFuture<CreateTaskProjectResponse> createTaskProject(@Nonnull CreateTaskProjectRequest request) {
+        return createTaskProject(request, null);
+    }
+
+    /**
+     * Create a project
+     * 
+     * <p>Creates a TaskProject. Provide the unified TaskProject fields in the request body; they are mapped
+     * to the provider's API. Returns the created TaskProject.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateTaskProjectResponse>} - The async response
+     */
+    public CompletableFuture<CreateTaskProjectResponse> createTaskProject(@Nonnull CreateTaskProjectRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateTaskProjectRequest, CreateTaskProjectResponse> operation
-              = new CreateTaskProject.Async(sdkConfiguration, _headers);
+              = new CreateTaskProject.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -158,8 +188,22 @@ public class AsyncProject {
      * @return {@code CompletableFuture<GetAccountingProjectResponse>} - The async response
      */
     public CompletableFuture<GetAccountingProjectResponse> getAccountingProject(@Nonnull GetAccountingProjectRequest request) {
+        return getAccountingProject(request, null);
+    }
+
+    /**
+     * Retrieve a project
+     * 
+     * <p>Retrieves a single AccountingProject by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetAccountingProjectResponse>} - The async response
+     */
+    public CompletableFuture<GetAccountingProjectResponse> getAccountingProject(@Nonnull GetAccountingProjectRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetAccountingProjectRequest, GetAccountingProjectResponse> operation
-              = new GetAccountingProject.Async(sdkConfiguration, _headers);
+              = new GetAccountingProject.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -187,8 +231,22 @@ public class AsyncProject {
      * @return {@code CompletableFuture<GetTaskProjectResponse>} - The async response
      */
     public CompletableFuture<GetTaskProjectResponse> getTaskProject(@Nonnull GetTaskProjectRequest request) {
+        return getTaskProject(request, null);
+    }
+
+    /**
+     * Retrieve a project
+     * 
+     * <p>Retrieves a single TaskProject by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetTaskProjectResponse>} - The async response
+     */
+    public CompletableFuture<GetTaskProjectResponse> getTaskProject(@Nonnull GetTaskProjectRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetTaskProjectRequest, GetTaskProjectResponse> operation
-              = new GetTaskProject.Async(sdkConfiguration, _headers);
+              = new GetTaskProject.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -224,8 +282,26 @@ public class AsyncProject {
      * @return {@code CompletableFuture<ListAccountingProjectsResponse>} - The async response
      */
     public CompletableFuture<ListAccountingProjectsResponse> listAccountingProjects(@Nonnull ListAccountingProjectsRequest request) {
+        return listAccountingProjects(request, null);
+    }
+
+    /**
+     * List all projects
+     * 
+     * <p>Returns a list of AccountingProjects. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListAccountingProjectsResponse>} - The async response
+     */
+    public CompletableFuture<ListAccountingProjectsResponse> listAccountingProjects(@Nonnull ListAccountingProjectsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListAccountingProjectsRequest, ListAccountingProjectsResponse> operation
-              = new ListAccountingProjects.Async(sdkConfiguration, _headers);
+              = new ListAccountingProjects.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -261,8 +337,26 @@ public class AsyncProject {
      * @return {@code CompletableFuture<ListTaskProjectsResponse>} - The async response
      */
     public CompletableFuture<ListTaskProjectsResponse> listTaskProjects(@Nonnull ListTaskProjectsRequest request) {
+        return listTaskProjects(request, null);
+    }
+
+    /**
+     * List all projects
+     * 
+     * <p>Returns a list of TaskProjects. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListTaskProjectsResponse>} - The async response
+     */
+    public CompletableFuture<ListTaskProjectsResponse> listTaskProjects(@Nonnull ListTaskProjectsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListTaskProjectsRequest, ListTaskProjectsResponse> operation
-              = new ListTaskProjects.Async(sdkConfiguration, _headers);
+              = new ListTaskProjects.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -290,8 +384,22 @@ public class AsyncProject {
      * @return {@code CompletableFuture<PatchAccountingProjectResponse>} - The async response
      */
     public CompletableFuture<PatchAccountingProjectResponse> patchAccountingProject(@Nonnull PatchAccountingProjectRequest request) {
+        return patchAccountingProject(request, null);
+    }
+
+    /**
+     * Update a project
+     * 
+     * <p>Updates the AccountingProject identified by `id`. Provide the unified AccountingProject fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchAccountingProjectResponse>} - The async response
+     */
+    public CompletableFuture<PatchAccountingProjectResponse> patchAccountingProject(@Nonnull PatchAccountingProjectRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchAccountingProjectRequest, PatchAccountingProjectResponse> operation
-              = new PatchAccountingProject.Async(sdkConfiguration, _headers);
+              = new PatchAccountingProject.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -319,8 +427,22 @@ public class AsyncProject {
      * @return {@code CompletableFuture<PatchTaskProjectResponse>} - The async response
      */
     public CompletableFuture<PatchTaskProjectResponse> patchTaskProject(@Nonnull PatchTaskProjectRequest request) {
+        return patchTaskProject(request, null);
+    }
+
+    /**
+     * Update a project
+     * 
+     * <p>Updates the TaskProject identified by `id`. Provide the unified TaskProject fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchTaskProjectResponse>} - The async response
+     */
+    public CompletableFuture<PatchTaskProjectResponse> patchTaskProject(@Nonnull PatchTaskProjectRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchTaskProjectRequest, PatchTaskProjectResponse> operation
-              = new PatchTaskProject.Async(sdkConfiguration, _headers);
+              = new PatchTaskProject.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -346,8 +468,21 @@ public class AsyncProject {
      * @return {@code CompletableFuture<RemoveAccountingProjectResponse>} - The async response
      */
     public CompletableFuture<RemoveAccountingProjectResponse> removeAccountingProject(@Nonnull RemoveAccountingProjectRequest request) {
+        return removeAccountingProject(request, null);
+    }
+
+    /**
+     * Remove a project
+     * 
+     * <p>Deletes the AccountingProject identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveAccountingProjectResponse>} - The async response
+     */
+    public CompletableFuture<RemoveAccountingProjectResponse> removeAccountingProject(@Nonnull RemoveAccountingProjectRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveAccountingProjectRequest, RemoveAccountingProjectResponse> operation
-              = new RemoveAccountingProject.Async(sdkConfiguration, _headers);
+              = new RemoveAccountingProject.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -373,8 +508,21 @@ public class AsyncProject {
      * @return {@code CompletableFuture<RemoveTaskProjectResponse>} - The async response
      */
     public CompletableFuture<RemoveTaskProjectResponse> removeTaskProject(@Nonnull RemoveTaskProjectRequest request) {
+        return removeTaskProject(request, null);
+    }
+
+    /**
+     * Remove a project
+     * 
+     * <p>Deletes the TaskProject identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveTaskProjectResponse>} - The async response
+     */
+    public CompletableFuture<RemoveTaskProjectResponse> removeTaskProject(@Nonnull RemoveTaskProjectRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveTaskProjectRequest, RemoveTaskProjectResponse> operation
-              = new RemoveTaskProject.Async(sdkConfiguration, _headers);
+              = new RemoveTaskProject.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -402,8 +550,22 @@ public class AsyncProject {
      * @return {@code CompletableFuture<UpdateAccountingProjectResponse>} - The async response
      */
     public CompletableFuture<UpdateAccountingProjectResponse> updateAccountingProject(@Nonnull UpdateAccountingProjectRequest request) {
+        return updateAccountingProject(request, null);
+    }
+
+    /**
+     * Update a project
+     * 
+     * <p>Updates the AccountingProject identified by `id`. Provide the unified AccountingProject fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateAccountingProjectResponse>} - The async response
+     */
+    public CompletableFuture<UpdateAccountingProjectResponse> updateAccountingProject(@Nonnull UpdateAccountingProjectRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateAccountingProjectRequest, UpdateAccountingProjectResponse> operation
-              = new UpdateAccountingProject.Async(sdkConfiguration, _headers);
+              = new UpdateAccountingProject.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -431,8 +593,22 @@ public class AsyncProject {
      * @return {@code CompletableFuture<UpdateTaskProjectResponse>} - The async response
      */
     public CompletableFuture<UpdateTaskProjectResponse> updateTaskProject(@Nonnull UpdateTaskProjectRequest request) {
+        return updateTaskProject(request, null);
+    }
+
+    /**
+     * Update a project
+     * 
+     * <p>Updates the TaskProject identified by `id`. Provide the unified TaskProject fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateTaskProjectResponse>} - The async response
+     */
+    public CompletableFuture<UpdateTaskProjectResponse> updateTaskProject(@Nonnull UpdateTaskProjectRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateTaskProjectRequest, UpdateTaskProjectResponse> operation
-              = new UpdateTaskProject.Async(sdkConfiguration, _headers);
+              = new UpdateTaskProject.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

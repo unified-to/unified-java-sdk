@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateTicketingCustomerRequest;
 import to.unified.unified_java_sdk.models.operations.CreateTicketingCustomerRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateTicketingCustomerResponse;
@@ -31,6 +32,7 @@ import to.unified.unified_java_sdk.operations.PatchTicketingCustomer;
 import to.unified.unified_java_sdk.operations.RemoveTicketingCustomer;
 import to.unified.unified_java_sdk.operations.UpdateTicketingCustomer;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Customer {
@@ -75,8 +77,23 @@ public class Customer {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateTicketingCustomerResponse createTicketingCustomer(@Nonnull CreateTicketingCustomerRequest request) {
+        return createTicketingCustomer(request, null);
+    }
+
+    /**
+     * Create a customer
+     * 
+     * <p>Creates a TicketingCustomer. Provide the unified TicketingCustomer fields in the request body; they
+     * are mapped to the provider's API. Returns the created TicketingCustomer.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateTicketingCustomerResponse createTicketingCustomer(@Nonnull CreateTicketingCustomerRequest request, @Nullable Options options) {
         RequestOperation<CreateTicketingCustomerRequest, CreateTicketingCustomerResponse> operation
-              = new CreateTicketingCustomer.Sync(sdkConfiguration, _headers);
+              = new CreateTicketingCustomer.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -103,8 +120,23 @@ public class Customer {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetTicketingCustomerResponse getTicketingCustomer(@Nonnull GetTicketingCustomerRequest request) {
+        return getTicketingCustomer(request, null);
+    }
+
+    /**
+     * Retrieve a customer
+     * 
+     * <p>Retrieves a single TicketingCustomer by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetTicketingCustomerResponse getTicketingCustomer(@Nonnull GetTicketingCustomerRequest request, @Nullable Options options) {
         RequestOperation<GetTicketingCustomerRequest, GetTicketingCustomerResponse> operation
-              = new GetTicketingCustomer.Sync(sdkConfiguration, _headers);
+              = new GetTicketingCustomer.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -139,8 +171,27 @@ public class Customer {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListTicketingCustomersResponse listTicketingCustomers(@Nonnull ListTicketingCustomersRequest request) {
+        return listTicketingCustomers(request, null);
+    }
+
+    /**
+     * List all customers
+     * 
+     * <p>Returns a list of TicketingCustomers. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListTicketingCustomersResponse listTicketingCustomers(@Nonnull ListTicketingCustomersRequest request, @Nullable Options options) {
         RequestOperation<ListTicketingCustomersRequest, ListTicketingCustomersResponse> operation
-              = new ListTicketingCustomers.Sync(sdkConfiguration, _headers);
+              = new ListTicketingCustomers.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +218,23 @@ public class Customer {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchTicketingCustomerResponse patchTicketingCustomer(@Nonnull PatchTicketingCustomerRequest request) {
+        return patchTicketingCustomer(request, null);
+    }
+
+    /**
+     * Update a customer
+     * 
+     * <p>Updates the TicketingCustomer identified by `id`. Provide the unified TicketingCustomer fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchTicketingCustomerResponse patchTicketingCustomer(@Nonnull PatchTicketingCustomerRequest request, @Nullable Options options) {
         RequestOperation<PatchTicketingCustomerRequest, PatchTicketingCustomerResponse> operation
-              = new PatchTicketingCustomer.Sync(sdkConfiguration, _headers);
+              = new PatchTicketingCustomer.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -193,8 +259,22 @@ public class Customer {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveTicketingCustomerResponse removeTicketingCustomer(@Nonnull RemoveTicketingCustomerRequest request) {
+        return removeTicketingCustomer(request, null);
+    }
+
+    /**
+     * Remove a customer
+     * 
+     * <p>Deletes the TicketingCustomer identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveTicketingCustomerResponse removeTicketingCustomer(@Nonnull RemoveTicketingCustomerRequest request, @Nullable Options options) {
         RequestOperation<RemoveTicketingCustomerRequest, RemoveTicketingCustomerResponse> operation
-              = new RemoveTicketingCustomer.Sync(sdkConfiguration, _headers);
+              = new RemoveTicketingCustomer.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -221,8 +301,23 @@ public class Customer {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateTicketingCustomerResponse updateTicketingCustomer(@Nonnull UpdateTicketingCustomerRequest request) {
+        return updateTicketingCustomer(request, null);
+    }
+
+    /**
+     * Update a customer
+     * 
+     * <p>Updates the TicketingCustomer identified by `id`. Provide the unified TicketingCustomer fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateTicketingCustomerResponse updateTicketingCustomer(@Nonnull UpdateTicketingCustomerRequest request, @Nullable Options options) {
         RequestOperation<UpdateTicketingCustomerRequest, UpdateTicketingCustomerResponse> operation
-              = new UpdateTicketingCustomer.Sync(sdkConfiguration, _headers);
+              = new UpdateTicketingCustomer.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

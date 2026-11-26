@@ -1,0 +1,10 @@
+# FhirCapabilityStatementResource
+
+
+## Fields
+
+| Field                                                                                                  | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `interaction`                                                                                          | List\<[FhirCapabilityStatementInteraction](../../models/shared/FhirCapabilityStatementInteraction.md)> | :heavy_minus_sign:                                                                                     | What operations are supported?                                                                         |
+| `searchParam`                                                                                          | List\<[FhirCapabilityStatementSearchParam](../../models/shared/FhirCapabilityStatementSearchParam.md)> | :heavy_minus_sign:                                                                                     | Search parameters supported by implementation                                                          |
+| `type`                                                                                                 | *String*                                                                                               | :heavy_check_mark:                                                                                     | A resource type that is supported                                                                      |

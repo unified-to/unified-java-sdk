@@ -6,18 +6,28 @@ package to.unified.unified_java_sdk.models.operations;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.ListAdsInsertionorders;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListAdsInsertionordersRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private ListAdsInsertionordersRequest request;
+    private final Options.Builder optionsBuilder;
 
     public ListAdsInsertionordersRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public ListAdsInsertionordersRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public ListAdsInsertionordersRequestBuilder request(@Nonnull ListAdsInsertionordersRequest request) {
@@ -42,8 +52,9 @@ public class ListAdsInsertionordersRequestBuilder {
     * @return The response from the server.
     */
     public ListAdsInsertionordersResponse call() {
+        Options options = optionsBuilder.build();
         RequestOperation<ListAdsInsertionordersRequest, ListAdsInsertionordersResponse> operation
-              = new ListAdsInsertionorders.Sync(sdkConfiguration, _headers);
+              = new ListAdsInsertionorders.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

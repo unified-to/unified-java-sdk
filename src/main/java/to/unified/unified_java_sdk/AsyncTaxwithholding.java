@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateHrisTaxwithholdingRequest;
 import to.unified.unified_java_sdk.models.operations.GetHrisTaxwithholdingRequest;
@@ -32,6 +33,7 @@ import to.unified.unified_java_sdk.operations.PatchHrisTaxwithholding;
 import to.unified.unified_java_sdk.operations.RemoveHrisTaxwithholding;
 import to.unified.unified_java_sdk.operations.UpdateHrisTaxwithholding;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncTaxwithholding {
@@ -76,8 +78,22 @@ public class AsyncTaxwithholding {
      * @return {@code CompletableFuture<CreateHrisTaxwithholdingResponse>} - The async response
      */
     public CompletableFuture<CreateHrisTaxwithholdingResponse> createHrisTaxwithholding(@Nonnull CreateHrisTaxwithholdingRequest request) {
+        return createHrisTaxwithholding(request, null);
+    }
+
+    /**
+     * Create a taxwithholding
+     * 
+     * <p>Creates a HrisTaxwithholding. Provide the unified HrisTaxwithholding fields in the request body;
+     * they are mapped to the provider's API. Returns the created HrisTaxwithholding.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateHrisTaxwithholdingResponse>} - The async response
+     */
+    public CompletableFuture<CreateHrisTaxwithholdingResponse> createHrisTaxwithholding(@Nonnull CreateHrisTaxwithholdingRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateHrisTaxwithholdingRequest, CreateHrisTaxwithholdingResponse> operation
-              = new CreateHrisTaxwithholding.Async(sdkConfiguration, _headers);
+              = new CreateHrisTaxwithholding.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -105,8 +121,22 @@ public class AsyncTaxwithholding {
      * @return {@code CompletableFuture<GetHrisTaxwithholdingResponse>} - The async response
      */
     public CompletableFuture<GetHrisTaxwithholdingResponse> getHrisTaxwithholding(@Nonnull GetHrisTaxwithholdingRequest request) {
+        return getHrisTaxwithholding(request, null);
+    }
+
+    /**
+     * Retrieve a taxwithholding
+     * 
+     * <p>Retrieves a single HrisTaxwithholding by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetHrisTaxwithholdingResponse>} - The async response
+     */
+    public CompletableFuture<GetHrisTaxwithholdingResponse> getHrisTaxwithholding(@Nonnull GetHrisTaxwithholdingRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetHrisTaxwithholdingRequest, GetHrisTaxwithholdingResponse> operation
-              = new GetHrisTaxwithholding.Async(sdkConfiguration, _headers);
+              = new GetHrisTaxwithholding.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -142,8 +172,26 @@ public class AsyncTaxwithholding {
      * @return {@code CompletableFuture<ListHrisTaxwithholdingsResponse>} - The async response
      */
     public CompletableFuture<ListHrisTaxwithholdingsResponse> listHrisTaxwithholdings(@Nonnull ListHrisTaxwithholdingsRequest request) {
+        return listHrisTaxwithholdings(request, null);
+    }
+
+    /**
+     * List all taxwithholdings
+     * 
+     * <p>Returns a list of HrisTaxwithholdings. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListHrisTaxwithholdingsResponse>} - The async response
+     */
+    public CompletableFuture<ListHrisTaxwithholdingsResponse> listHrisTaxwithholdings(@Nonnull ListHrisTaxwithholdingsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListHrisTaxwithholdingsRequest, ListHrisTaxwithholdingsResponse> operation
-              = new ListHrisTaxwithholdings.Async(sdkConfiguration, _headers);
+              = new ListHrisTaxwithholdings.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -171,8 +219,22 @@ public class AsyncTaxwithholding {
      * @return {@code CompletableFuture<PatchHrisTaxwithholdingResponse>} - The async response
      */
     public CompletableFuture<PatchHrisTaxwithholdingResponse> patchHrisTaxwithholding(@Nonnull PatchHrisTaxwithholdingRequest request) {
+        return patchHrisTaxwithholding(request, null);
+    }
+
+    /**
+     * Update a taxwithholding
+     * 
+     * <p>Updates the HrisTaxwithholding identified by `id`. Provide the unified HrisTaxwithholding fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchHrisTaxwithholdingResponse>} - The async response
+     */
+    public CompletableFuture<PatchHrisTaxwithholdingResponse> patchHrisTaxwithholding(@Nonnull PatchHrisTaxwithholdingRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchHrisTaxwithholdingRequest, PatchHrisTaxwithholdingResponse> operation
-              = new PatchHrisTaxwithholding.Async(sdkConfiguration, _headers);
+              = new PatchHrisTaxwithholding.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -198,8 +260,21 @@ public class AsyncTaxwithholding {
      * @return {@code CompletableFuture<RemoveHrisTaxwithholdingResponse>} - The async response
      */
     public CompletableFuture<RemoveHrisTaxwithholdingResponse> removeHrisTaxwithholding(@Nonnull RemoveHrisTaxwithholdingRequest request) {
+        return removeHrisTaxwithholding(request, null);
+    }
+
+    /**
+     * Remove a taxwithholding
+     * 
+     * <p>Deletes the HrisTaxwithholding identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveHrisTaxwithholdingResponse>} - The async response
+     */
+    public CompletableFuture<RemoveHrisTaxwithholdingResponse> removeHrisTaxwithholding(@Nonnull RemoveHrisTaxwithholdingRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveHrisTaxwithholdingRequest, RemoveHrisTaxwithholdingResponse> operation
-              = new RemoveHrisTaxwithholding.Async(sdkConfiguration, _headers);
+              = new RemoveHrisTaxwithholding.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -227,8 +302,22 @@ public class AsyncTaxwithholding {
      * @return {@code CompletableFuture<UpdateHrisTaxwithholdingResponse>} - The async response
      */
     public CompletableFuture<UpdateHrisTaxwithholdingResponse> updateHrisTaxwithholding(@Nonnull UpdateHrisTaxwithholdingRequest request) {
+        return updateHrisTaxwithholding(request, null);
+    }
+
+    /**
+     * Update a taxwithholding
+     * 
+     * <p>Updates the HrisTaxwithholding identified by `id`. Provide the unified HrisTaxwithholding fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateHrisTaxwithholdingResponse>} - The async response
+     */
+    public CompletableFuture<UpdateHrisTaxwithholdingResponse> updateHrisTaxwithholding(@Nonnull UpdateHrisTaxwithholdingRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateHrisTaxwithholdingRequest, UpdateHrisTaxwithholdingResponse> operation
-              = new UpdateHrisTaxwithholding.Async(sdkConfiguration, _headers);
+              = new UpdateHrisTaxwithholding.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

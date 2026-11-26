@@ -6,20 +6,30 @@ package to.unified.unified_java_sdk.models.operations.async;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.RemoveCrmDealRequest;
 import to.unified.unified_java_sdk.operations.RemoveCrmDeal;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveCrmDealRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private RemoveCrmDealRequest request;
+    private final Options.Builder optionsBuilder;
 
     public RemoveCrmDealRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public RemoveCrmDealRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public RemoveCrmDealRequestBuilder request(@Nonnull RemoveCrmDealRequest request) {
@@ -44,8 +54,9 @@ public class RemoveCrmDealRequestBuilder {
     * @return The response from the server.
     */
     public CompletableFuture<RemoveCrmDealResponse> call() {
+        Options options = optionsBuilder.build();
         AsyncRequestOperation<RemoveCrmDealRequest, RemoveCrmDealResponse> operation
-              = new RemoveCrmDeal.Async(sdkConfiguration, _headers);
+              = new RemoveCrmDeal.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

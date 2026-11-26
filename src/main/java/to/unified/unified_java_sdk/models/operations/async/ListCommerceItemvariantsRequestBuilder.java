@@ -6,20 +6,30 @@ package to.unified.unified_java_sdk.models.operations.async;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.ListCommerceItemvariantsRequest;
 import to.unified.unified_java_sdk.operations.ListCommerceItemvariants;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListCommerceItemvariantsRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private ListCommerceItemvariantsRequest request;
+    private final Options.Builder optionsBuilder;
 
     public ListCommerceItemvariantsRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public ListCommerceItemvariantsRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public ListCommerceItemvariantsRequestBuilder request(@Nonnull ListCommerceItemvariantsRequest request) {
@@ -44,8 +54,9 @@ public class ListCommerceItemvariantsRequestBuilder {
     * @return The response from the server.
     */
     public CompletableFuture<ListCommerceItemvariantsResponse> call() {
+        Options options = optionsBuilder.build();
         AsyncRequestOperation<ListCommerceItemvariantsRequest, ListCommerceItemvariantsResponse> operation
-              = new ListCommerceItemvariants.Async(sdkConfiguration, _headers);
+              = new ListCommerceItemvariants.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

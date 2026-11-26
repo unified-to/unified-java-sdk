@@ -6,12 +6,14 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.ListEnrichPeopleRequest;
 import to.unified.unified_java_sdk.models.operations.async.ListEnrichPeopleRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListEnrichPeopleResponse;
 import to.unified.unified_java_sdk.operations.ListEnrichPeople;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncPerson {
@@ -50,8 +52,19 @@ public class AsyncPerson {
      * @return {@code CompletableFuture<ListEnrichPeopleResponse>} - The async response
      */
     public CompletableFuture<ListEnrichPeopleResponse> listEnrichPeople(@Nonnull ListEnrichPeopleRequest request) {
+        return listEnrichPeople(request, null);
+    }
+
+    /**
+     * Retrieve enrichment information for a person
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListEnrichPeopleResponse>} - The async response
+     */
+    public CompletableFuture<ListEnrichPeopleResponse> listEnrichPeople(@Nonnull ListEnrichPeopleRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListEnrichPeopleRequest, ListEnrichPeopleResponse> operation
-              = new ListEnrichPeople.Async(sdkConfiguration, _headers);
+              = new ListEnrichPeople.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

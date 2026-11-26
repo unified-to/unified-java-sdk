@@ -6,20 +6,30 @@ package to.unified.unified_java_sdk.models.operations.async;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.GetAccountingJournalRequest;
 import to.unified.unified_java_sdk.operations.GetAccountingJournal;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetAccountingJournalRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private GetAccountingJournalRequest request;
+    private final Options.Builder optionsBuilder;
 
     public GetAccountingJournalRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public GetAccountingJournalRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public GetAccountingJournalRequestBuilder request(@Nonnull GetAccountingJournalRequest request) {
@@ -44,8 +54,9 @@ public class GetAccountingJournalRequestBuilder {
     * @return The response from the server.
     */
     public CompletableFuture<GetAccountingJournalResponse> call() {
+        Options options = optionsBuilder.build();
         AsyncRequestOperation<GetAccountingJournalRequest, GetAccountingJournalResponse> operation
-              = new GetAccountingJournal.Async(sdkConfiguration, _headers);
+              = new GetAccountingJournal.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

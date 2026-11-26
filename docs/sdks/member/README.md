@@ -43,23 +43,23 @@ public class Application {
 
         CreateMartechMemberRequest req = CreateMartechMemberRequest.builder()
                 .marketingMember(MarketingMember.builder()
-                    .company("Miller - Franecki")
+                    .company("Abernathy - Carter")
                     .createdAt(OffsetDateTime.parse("2022-04-15T15:32:38.496Z"))
                     .emails(List.of(
                         MarketingEmail.builder()
-                            .email("jude.leffler@hotmail.com")
+                            .email("jeremy.franecki@hotmail.com")
                             .type(MarketingEmailType.HOME)
                             .build()))
-                    .firstName("Jude")
-                    .id("4306f018-cb2e-482b-9da6-4a0e615e4135")
-                    .lastName("Leffler")
+                    .firstName("Jeremy")
+                    .id("54a07a1f-a6e2-45d2-8b68-b5180511baf1")
+                    .lastName("Franecki")
                     .metadata(List.of())
-                    .name("Jude Leffler")
+                    .name("Jeremy Franecki")
                     .status(MarketingMemberStatus.UNSUBSCRIBED)
                     .tags(List.of(
-                        "adnuo",
-                        "verumtamen"))
-                    .updatedAt(OffsetDateTime.parse("2025-07-30T07:20:19.448Z"))
+                        "deleniti",
+                        "subvenio"))
+                    .updatedAt(OffsetDateTime.parse("2025-08-03T13:17:02.566Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -351,23 +351,23 @@ public class Application {
 
         PatchMartechMemberRequest req = PatchMartechMemberRequest.builder()
                 .marketingMember(MarketingMember.builder()
-                    .company("Miller - Franecki")
+                    .company("Abernathy - Carter")
                     .createdAt(OffsetDateTime.parse("2022-04-15T15:32:38.496Z"))
                     .emails(List.of(
                         MarketingEmail.builder()
-                            .email("jude.leffler@hotmail.com")
+                            .email("jeremy.franecki@hotmail.com")
                             .type(MarketingEmailType.HOME)
                             .build()))
-                    .firstName("Jude")
-                    .id("922e6d35-31de-42f7-8849-0d70a0eec9e8")
-                    .lastName("Leffler")
+                    .firstName("Jeremy")
+                    .id("6833ab32-4258-4f4d-9b17-e6f468c6f498")
+                    .lastName("Franecki")
                     .metadata(List.of())
-                    .name("Jude Leffler")
+                    .name("Jeremy Franecki")
                     .status(MarketingMemberStatus.UNSUBSCRIBED)
                     .tags(List.of(
-                        "adnuo",
-                        "verumtamen"))
-                    .updatedAt(OffsetDateTime.parse("2025-07-30T07:20:19.458Z"))
+                        "deleniti",
+                        "subvenio"))
+                    .updatedAt(OffsetDateTime.parse("2025-08-03T13:17:02.575Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -486,23 +486,23 @@ public class Application {
 
         UpdateMartechMemberRequest req = UpdateMartechMemberRequest.builder()
                 .marketingMember(MarketingMember.builder()
-                    .company("Miller - Franecki")
+                    .company("Abernathy - Carter")
                     .createdAt(OffsetDateTime.parse("2022-04-15T15:32:38.496Z"))
                     .emails(List.of(
                         MarketingEmail.builder()
-                            .email("jude.leffler@hotmail.com")
+                            .email("jeremy.franecki@hotmail.com")
                             .type(MarketingEmailType.HOME)
                             .build()))
-                    .firstName("Jude")
-                    .id("922e6d35-31de-42f7-8849-0d70a0eec9e8")
-                    .lastName("Leffler")
+                    .firstName("Jeremy")
+                    .id("6833ab32-4258-4f4d-9b17-e6f468c6f498")
+                    .lastName("Franecki")
                     .metadata(List.of())
-                    .name("Jude Leffler")
+                    .name("Jeremy Franecki")
                     .status(MarketingMemberStatus.UNSUBSCRIBED)
                     .tags(List.of(
-                        "adnuo",
-                        "verumtamen"))
-                    .updatedAt(OffsetDateTime.parse("2025-07-30T07:20:19.458Z"))
+                        "deleniti",
+                        "subvenio"))
+                    .updatedAt(OffsetDateTime.parse("2025-08-03T13:17:02.575Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

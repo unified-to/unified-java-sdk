@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateCrmLeadRequest;
 import to.unified.unified_java_sdk.models.operations.GetCrmLeadRequest;
@@ -32,6 +33,7 @@ import to.unified.unified_java_sdk.operations.PatchCrmLead;
 import to.unified.unified_java_sdk.operations.RemoveCrmLead;
 import to.unified.unified_java_sdk.operations.UpdateCrmLead;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncLead {
@@ -76,8 +78,22 @@ public class AsyncLead {
      * @return {@code CompletableFuture<CreateCrmLeadResponse>} - The async response
      */
     public CompletableFuture<CreateCrmLeadResponse> createCrmLead(@Nonnull CreateCrmLeadRequest request) {
+        return createCrmLead(request, null);
+    }
+
+    /**
+     * Create a lead
+     * 
+     * <p>Creates a CrmLead. Provide the unified CrmLead fields in the request body; they are mapped to the
+     * provider's API. Returns the created CrmLead.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateCrmLeadResponse>} - The async response
+     */
+    public CompletableFuture<CreateCrmLeadResponse> createCrmLead(@Nonnull CreateCrmLeadRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateCrmLeadRequest, CreateCrmLeadResponse> operation
-              = new CreateCrmLead.Async(sdkConfiguration, _headers);
+              = new CreateCrmLead.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -105,8 +121,22 @@ public class AsyncLead {
      * @return {@code CompletableFuture<GetCrmLeadResponse>} - The async response
      */
     public CompletableFuture<GetCrmLeadResponse> getCrmLead(@Nonnull GetCrmLeadRequest request) {
+        return getCrmLead(request, null);
+    }
+
+    /**
+     * Retrieve a lead
+     * 
+     * <p>Retrieves a single CrmLead by its `id`. Obtain `id` values from the corresponding list endpoint. Use
+     * `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetCrmLeadResponse>} - The async response
+     */
+    public CompletableFuture<GetCrmLeadResponse> getCrmLead(@Nonnull GetCrmLeadRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetCrmLeadRequest, GetCrmLeadResponse> operation
-              = new GetCrmLead.Async(sdkConfiguration, _headers);
+              = new GetCrmLead.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -142,8 +172,26 @@ public class AsyncLead {
      * @return {@code CompletableFuture<ListCrmLeadsResponse>} - The async response
      */
     public CompletableFuture<ListCrmLeadsResponse> listCrmLeads(@Nonnull ListCrmLeadsRequest request) {
+        return listCrmLeads(request, null);
+    }
+
+    /**
+     * List all leads
+     * 
+     * <p>Returns a list of CrmLeads. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListCrmLeadsResponse>} - The async response
+     */
+    public CompletableFuture<ListCrmLeadsResponse> listCrmLeads(@Nonnull ListCrmLeadsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListCrmLeadsRequest, ListCrmLeadsResponse> operation
-              = new ListCrmLeads.Async(sdkConfiguration, _headers);
+              = new ListCrmLeads.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -171,8 +219,22 @@ public class AsyncLead {
      * @return {@code CompletableFuture<PatchCrmLeadResponse>} - The async response
      */
     public CompletableFuture<PatchCrmLeadResponse> patchCrmLead(@Nonnull PatchCrmLeadRequest request) {
+        return patchCrmLead(request, null);
+    }
+
+    /**
+     * Update a lead
+     * 
+     * <p>Updates the CrmLead identified by `id`. Provide the unified CrmLead fields to change in the request
+     * body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchCrmLeadResponse>} - The async response
+     */
+    public CompletableFuture<PatchCrmLeadResponse> patchCrmLead(@Nonnull PatchCrmLeadRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchCrmLeadRequest, PatchCrmLeadResponse> operation
-              = new PatchCrmLead.Async(sdkConfiguration, _headers);
+              = new PatchCrmLead.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -198,8 +260,21 @@ public class AsyncLead {
      * @return {@code CompletableFuture<RemoveCrmLeadResponse>} - The async response
      */
     public CompletableFuture<RemoveCrmLeadResponse> removeCrmLead(@Nonnull RemoveCrmLeadRequest request) {
+        return removeCrmLead(request, null);
+    }
+
+    /**
+     * Remove a lead
+     * 
+     * <p>Deletes the CrmLead identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveCrmLeadResponse>} - The async response
+     */
+    public CompletableFuture<RemoveCrmLeadResponse> removeCrmLead(@Nonnull RemoveCrmLeadRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveCrmLeadRequest, RemoveCrmLeadResponse> operation
-              = new RemoveCrmLead.Async(sdkConfiguration, _headers);
+              = new RemoveCrmLead.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -227,8 +302,22 @@ public class AsyncLead {
      * @return {@code CompletableFuture<UpdateCrmLeadResponse>} - The async response
      */
     public CompletableFuture<UpdateCrmLeadResponse> updateCrmLead(@Nonnull UpdateCrmLeadRequest request) {
+        return updateCrmLead(request, null);
+    }
+
+    /**
+     * Update a lead
+     * 
+     * <p>Updates the CrmLead identified by `id`. Provide the unified CrmLead fields to change in the request
+     * body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateCrmLeadResponse>} - The async response
+     */
+    public CompletableFuture<UpdateCrmLeadResponse> updateCrmLead(@Nonnull UpdateCrmLeadRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateCrmLeadRequest, UpdateCrmLeadResponse> operation
-              = new UpdateCrmLead.Async(sdkConfiguration, _headers);
+              = new UpdateCrmLead.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

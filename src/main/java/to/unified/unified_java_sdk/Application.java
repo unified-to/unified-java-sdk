@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateAtsApplicationRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAtsApplicationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateAtsApplicationResponse;
@@ -31,6 +32,7 @@ import to.unified.unified_java_sdk.operations.PatchAtsApplication;
 import to.unified.unified_java_sdk.operations.RemoveAtsApplication;
 import to.unified.unified_java_sdk.operations.UpdateAtsApplication;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Application {
@@ -75,8 +77,23 @@ public class Application {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateAtsApplicationResponse createAtsApplication(@Nonnull CreateAtsApplicationRequest request) {
+        return createAtsApplication(request, null);
+    }
+
+    /**
+     * Create an application
+     * 
+     * <p>Creates a AtsApplication. Provide the unified AtsApplication fields in the request body; they are
+     * mapped to the provider's API. Returns the created AtsApplication.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateAtsApplicationResponse createAtsApplication(@Nonnull CreateAtsApplicationRequest request, @Nullable Options options) {
         RequestOperation<CreateAtsApplicationRequest, CreateAtsApplicationResponse> operation
-              = new CreateAtsApplication.Sync(sdkConfiguration, _headers);
+              = new CreateAtsApplication.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -103,8 +120,23 @@ public class Application {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAtsApplicationResponse getAtsApplication(@Nonnull GetAtsApplicationRequest request) {
+        return getAtsApplication(request, null);
+    }
+
+    /**
+     * Retrieve an application
+     * 
+     * <p>Retrieves a single AtsApplication by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAtsApplicationResponse getAtsApplication(@Nonnull GetAtsApplicationRequest request, @Nullable Options options) {
         RequestOperation<GetAtsApplicationRequest, GetAtsApplicationResponse> operation
-              = new GetAtsApplication.Sync(sdkConfiguration, _headers);
+              = new GetAtsApplication.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -139,8 +171,27 @@ public class Application {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAtsApplicationsResponse listAtsApplications(@Nonnull ListAtsApplicationsRequest request) {
+        return listAtsApplications(request, null);
+    }
+
+    /**
+     * List all applications
+     * 
+     * <p>Returns a list of AtsApplications. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAtsApplicationsResponse listAtsApplications(@Nonnull ListAtsApplicationsRequest request, @Nullable Options options) {
         RequestOperation<ListAtsApplicationsRequest, ListAtsApplicationsResponse> operation
-              = new ListAtsApplications.Sync(sdkConfiguration, _headers);
+              = new ListAtsApplications.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +218,23 @@ public class Application {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchAtsApplicationResponse patchAtsApplication(@Nonnull PatchAtsApplicationRequest request) {
+        return patchAtsApplication(request, null);
+    }
+
+    /**
+     * Update an application
+     * 
+     * <p>Updates the AtsApplication identified by `id`. Provide the unified AtsApplication fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchAtsApplicationResponse patchAtsApplication(@Nonnull PatchAtsApplicationRequest request, @Nullable Options options) {
         RequestOperation<PatchAtsApplicationRequest, PatchAtsApplicationResponse> operation
-              = new PatchAtsApplication.Sync(sdkConfiguration, _headers);
+              = new PatchAtsApplication.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -193,8 +259,22 @@ public class Application {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveAtsApplicationResponse removeAtsApplication(@Nonnull RemoveAtsApplicationRequest request) {
+        return removeAtsApplication(request, null);
+    }
+
+    /**
+     * Remove an application
+     * 
+     * <p>Deletes the AtsApplication identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveAtsApplicationResponse removeAtsApplication(@Nonnull RemoveAtsApplicationRequest request, @Nullable Options options) {
         RequestOperation<RemoveAtsApplicationRequest, RemoveAtsApplicationResponse> operation
-              = new RemoveAtsApplication.Sync(sdkConfiguration, _headers);
+              = new RemoveAtsApplication.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -221,8 +301,23 @@ public class Application {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateAtsApplicationResponse updateAtsApplication(@Nonnull UpdateAtsApplicationRequest request) {
+        return updateAtsApplication(request, null);
+    }
+
+    /**
+     * Update an application
+     * 
+     * <p>Updates the AtsApplication identified by `id`. Provide the unified AtsApplication fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateAtsApplicationResponse updateAtsApplication(@Nonnull UpdateAtsApplicationRequest request, @Nullable Options options) {
         RequestOperation<UpdateAtsApplicationRequest, UpdateAtsApplicationResponse> operation
-              = new UpdateAtsApplication.Sync(sdkConfiguration, _headers);
+              = new UpdateAtsApplication.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

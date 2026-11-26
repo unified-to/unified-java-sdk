@@ -6,18 +6,28 @@ package to.unified.unified_java_sdk.models.operations;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.GetAtsActivity;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetAtsActivityRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private GetAtsActivityRequest request;
+    private final Options.Builder optionsBuilder;
 
     public GetAtsActivityRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public GetAtsActivityRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public GetAtsActivityRequestBuilder request(@Nonnull GetAtsActivityRequest request) {
@@ -42,8 +52,9 @@ public class GetAtsActivityRequestBuilder {
     * @return The response from the server.
     */
     public GetAtsActivityResponse call() {
+        Options options = optionsBuilder.build();
         RequestOperation<GetAtsActivityRequest, GetAtsActivityResponse> operation
-              = new GetAtsActivity.Sync(sdkConfiguration, _headers);
+              = new GetAtsActivity.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

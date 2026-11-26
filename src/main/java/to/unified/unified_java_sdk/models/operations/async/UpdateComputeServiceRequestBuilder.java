@@ -6,20 +6,30 @@ package to.unified.unified_java_sdk.models.operations.async;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.UpdateComputeServiceRequest;
 import to.unified.unified_java_sdk.operations.UpdateComputeService;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class UpdateComputeServiceRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private UpdateComputeServiceRequest request;
+    private final Options.Builder optionsBuilder;
 
     public UpdateComputeServiceRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public UpdateComputeServiceRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public UpdateComputeServiceRequestBuilder request(@Nonnull UpdateComputeServiceRequest request) {
@@ -44,8 +54,9 @@ public class UpdateComputeServiceRequestBuilder {
     * @return The response from the server.
     */
     public CompletableFuture<UpdateComputeServiceResponse> call() {
+        Options options = optionsBuilder.build();
         AsyncRequestOperation<UpdateComputeServiceRequest, UpdateComputeServiceResponse> operation
-              = new UpdateComputeService.Async(sdkConfiguration, _headers);
+              = new UpdateComputeService.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

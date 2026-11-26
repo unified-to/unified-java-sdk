@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateQmsAuditRequest;
 import to.unified.unified_java_sdk.models.operations.CreateQmsAuditRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateQmsAuditResponse;
@@ -27,6 +28,7 @@ import to.unified.unified_java_sdk.operations.ListQmsAudits;
 import to.unified.unified_java_sdk.operations.PatchQmsAudit;
 import to.unified.unified_java_sdk.operations.UpdateQmsAudit;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Audit {
@@ -71,8 +73,23 @@ public class Audit {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateQmsAuditResponse createQmsAudit(@Nonnull CreateQmsAuditRequest request) {
+        return createQmsAudit(request, null);
+    }
+
+    /**
+     * Create an audit
+     * 
+     * <p>Creates a QmsAudit. Provide the unified QmsAudit fields in the request body; they are mapped to the
+     * provider's API. Returns the created QmsAudit.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateQmsAuditResponse createQmsAudit(@Nonnull CreateQmsAuditRequest request, @Nullable Options options) {
         RequestOperation<CreateQmsAuditRequest, CreateQmsAuditResponse> operation
-              = new CreateQmsAudit.Sync(sdkConfiguration, _headers);
+              = new CreateQmsAudit.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -99,8 +116,23 @@ public class Audit {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetQmsAuditResponse getQmsAudit(@Nonnull GetQmsAuditRequest request) {
+        return getQmsAudit(request, null);
+    }
+
+    /**
+     * Retrieve an audit
+     * 
+     * <p>Retrieves a single QmsAudit by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetQmsAuditResponse getQmsAudit(@Nonnull GetQmsAuditRequest request, @Nullable Options options) {
         RequestOperation<GetQmsAuditRequest, GetQmsAuditResponse> operation
-              = new GetQmsAudit.Sync(sdkConfiguration, _headers);
+              = new GetQmsAudit.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -135,8 +167,27 @@ public class Audit {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListQmsAuditsResponse listQmsAudits(@Nonnull ListQmsAuditsRequest request) {
+        return listQmsAudits(request, null);
+    }
+
+    /**
+     * List all audits
+     * 
+     * <p>Returns a list of QmsAudits. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListQmsAuditsResponse listQmsAudits(@Nonnull ListQmsAuditsRequest request, @Nullable Options options) {
         RequestOperation<ListQmsAuditsRequest, ListQmsAuditsResponse> operation
-              = new ListQmsAudits.Sync(sdkConfiguration, _headers);
+              = new ListQmsAudits.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -163,8 +214,23 @@ public class Audit {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchQmsAuditResponse patchQmsAudit(@Nonnull PatchQmsAuditRequest request) {
+        return patchQmsAudit(request, null);
+    }
+
+    /**
+     * Update an audit
+     * 
+     * <p>Updates the QmsAudit identified by `id`. Provide the unified QmsAudit fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchQmsAuditResponse patchQmsAudit(@Nonnull PatchQmsAuditRequest request, @Nullable Options options) {
         RequestOperation<PatchQmsAuditRequest, PatchQmsAuditResponse> operation
-              = new PatchQmsAudit.Sync(sdkConfiguration, _headers);
+              = new PatchQmsAudit.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -191,8 +257,23 @@ public class Audit {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateQmsAuditResponse updateQmsAudit(@Nonnull UpdateQmsAuditRequest request) {
+        return updateQmsAudit(request, null);
+    }
+
+    /**
+     * Update an audit
+     * 
+     * <p>Updates the QmsAudit identified by `id`. Provide the unified QmsAudit fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateQmsAuditResponse updateQmsAudit(@Nonnull UpdateQmsAuditRequest request, @Nullable Options options) {
         RequestOperation<UpdateQmsAuditRequest, UpdateQmsAuditResponse> operation
-              = new UpdateQmsAudit.Sync(sdkConfiguration, _headers);
+              = new UpdateQmsAudit.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

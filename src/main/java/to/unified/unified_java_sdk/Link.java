@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateCalendarLinkRequest;
 import to.unified.unified_java_sdk.models.operations.CreateCalendarLinkRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateCalendarLinkResponse;
@@ -55,6 +56,7 @@ import to.unified.unified_java_sdk.operations.RemovePaymentLink;
 import to.unified.unified_java_sdk.operations.UpdateCalendarLink;
 import to.unified.unified_java_sdk.operations.UpdatePaymentLink;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Link {
@@ -99,8 +101,23 @@ public class Link {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateCalendarLinkResponse createCalendarLink(@Nonnull CreateCalendarLinkRequest request) {
+        return createCalendarLink(request, null);
+    }
+
+    /**
+     * Create a link
+     * 
+     * <p>Creates a CalendarLink. Provide the unified CalendarLink fields in the request body; they are mapped
+     * to the provider's API. Returns the created CalendarLink.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateCalendarLinkResponse createCalendarLink(@Nonnull CreateCalendarLinkRequest request, @Nullable Options options) {
         RequestOperation<CreateCalendarLinkRequest, CreateCalendarLinkResponse> operation
-              = new CreateCalendarLink.Sync(sdkConfiguration, _headers);
+              = new CreateCalendarLink.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -127,8 +144,23 @@ public class Link {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreatePaymentLinkResponse createPaymentLink(@Nonnull CreatePaymentLinkRequest request) {
+        return createPaymentLink(request, null);
+    }
+
+    /**
+     * Create a link
+     * 
+     * <p>Creates a PaymentLink. Provide the unified PaymentLink fields in the request body; they are mapped
+     * to the provider's API. Returns the created PaymentLink.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreatePaymentLinkResponse createPaymentLink(@Nonnull CreatePaymentLinkRequest request, @Nullable Options options) {
         RequestOperation<CreatePaymentLinkRequest, CreatePaymentLinkResponse> operation
-              = new CreatePaymentLink.Sync(sdkConfiguration, _headers);
+              = new CreatePaymentLink.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -155,8 +187,23 @@ public class Link {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetCalendarLinkResponse getCalendarLink(@Nonnull GetCalendarLinkRequest request) {
+        return getCalendarLink(request, null);
+    }
+
+    /**
+     * Retrieve a link
+     * 
+     * <p>Retrieves a single CalendarLink by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetCalendarLinkResponse getCalendarLink(@Nonnull GetCalendarLinkRequest request, @Nullable Options options) {
         RequestOperation<GetCalendarLinkRequest, GetCalendarLinkResponse> operation
-              = new GetCalendarLink.Sync(sdkConfiguration, _headers);
+              = new GetCalendarLink.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -183,8 +230,23 @@ public class Link {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetPaymentLinkResponse getPaymentLink(@Nonnull GetPaymentLinkRequest request) {
+        return getPaymentLink(request, null);
+    }
+
+    /**
+     * Retrieve a link
+     * 
+     * <p>Retrieves a single PaymentLink by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetPaymentLinkResponse getPaymentLink(@Nonnull GetPaymentLinkRequest request, @Nullable Options options) {
         RequestOperation<GetPaymentLinkRequest, GetPaymentLinkResponse> operation
-              = new GetPaymentLink.Sync(sdkConfiguration, _headers);
+              = new GetPaymentLink.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -219,8 +281,27 @@ public class Link {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListCalendarLinksResponse listCalendarLinks(@Nonnull ListCalendarLinksRequest request) {
+        return listCalendarLinks(request, null);
+    }
+
+    /**
+     * List all links
+     * 
+     * <p>Returns a list of CalendarLinks. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListCalendarLinksResponse listCalendarLinks(@Nonnull ListCalendarLinksRequest request, @Nullable Options options) {
         RequestOperation<ListCalendarLinksRequest, ListCalendarLinksResponse> operation
-              = new ListCalendarLinks.Sync(sdkConfiguration, _headers);
+              = new ListCalendarLinks.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -255,8 +336,27 @@ public class Link {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListPaymentLinksResponse listPaymentLinks(@Nonnull ListPaymentLinksRequest request) {
+        return listPaymentLinks(request, null);
+    }
+
+    /**
+     * List all links
+     * 
+     * <p>Returns a list of PaymentLinks. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListPaymentLinksResponse listPaymentLinks(@Nonnull ListPaymentLinksRequest request, @Nullable Options options) {
         RequestOperation<ListPaymentLinksRequest, ListPaymentLinksResponse> operation
-              = new ListPaymentLinks.Sync(sdkConfiguration, _headers);
+              = new ListPaymentLinks.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -283,8 +383,23 @@ public class Link {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchCalendarLinkResponse patchCalendarLink(@Nonnull PatchCalendarLinkRequest request) {
+        return patchCalendarLink(request, null);
+    }
+
+    /**
+     * Update a link
+     * 
+     * <p>Updates the CalendarLink identified by `id`. Provide the unified CalendarLink fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchCalendarLinkResponse patchCalendarLink(@Nonnull PatchCalendarLinkRequest request, @Nullable Options options) {
         RequestOperation<PatchCalendarLinkRequest, PatchCalendarLinkResponse> operation
-              = new PatchCalendarLink.Sync(sdkConfiguration, _headers);
+              = new PatchCalendarLink.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -311,8 +426,23 @@ public class Link {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchPaymentLinkResponse patchPaymentLink(@Nonnull PatchPaymentLinkRequest request) {
+        return patchPaymentLink(request, null);
+    }
+
+    /**
+     * Update a link
+     * 
+     * <p>Updates the PaymentLink identified by `id`. Provide the unified PaymentLink fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchPaymentLinkResponse patchPaymentLink(@Nonnull PatchPaymentLinkRequest request, @Nullable Options options) {
         RequestOperation<PatchPaymentLinkRequest, PatchPaymentLinkResponse> operation
-              = new PatchPaymentLink.Sync(sdkConfiguration, _headers);
+              = new PatchPaymentLink.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -337,8 +467,22 @@ public class Link {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveCalendarLinkResponse removeCalendarLink(@Nonnull RemoveCalendarLinkRequest request) {
+        return removeCalendarLink(request, null);
+    }
+
+    /**
+     * Remove a link
+     * 
+     * <p>Deletes the CalendarLink identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveCalendarLinkResponse removeCalendarLink(@Nonnull RemoveCalendarLinkRequest request, @Nullable Options options) {
         RequestOperation<RemoveCalendarLinkRequest, RemoveCalendarLinkResponse> operation
-              = new RemoveCalendarLink.Sync(sdkConfiguration, _headers);
+              = new RemoveCalendarLink.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -363,8 +507,22 @@ public class Link {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemovePaymentLinkResponse removePaymentLink(@Nonnull RemovePaymentLinkRequest request) {
+        return removePaymentLink(request, null);
+    }
+
+    /**
+     * Remove a link
+     * 
+     * <p>Deletes the PaymentLink identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemovePaymentLinkResponse removePaymentLink(@Nonnull RemovePaymentLinkRequest request, @Nullable Options options) {
         RequestOperation<RemovePaymentLinkRequest, RemovePaymentLinkResponse> operation
-              = new RemovePaymentLink.Sync(sdkConfiguration, _headers);
+              = new RemovePaymentLink.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -391,8 +549,23 @@ public class Link {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateCalendarLinkResponse updateCalendarLink(@Nonnull UpdateCalendarLinkRequest request) {
+        return updateCalendarLink(request, null);
+    }
+
+    /**
+     * Update a link
+     * 
+     * <p>Updates the CalendarLink identified by `id`. Provide the unified CalendarLink fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateCalendarLinkResponse updateCalendarLink(@Nonnull UpdateCalendarLinkRequest request, @Nullable Options options) {
         RequestOperation<UpdateCalendarLinkRequest, UpdateCalendarLinkResponse> operation
-              = new UpdateCalendarLink.Sync(sdkConfiguration, _headers);
+              = new UpdateCalendarLink.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -419,8 +592,23 @@ public class Link {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdatePaymentLinkResponse updatePaymentLink(@Nonnull UpdatePaymentLinkRequest request) {
+        return updatePaymentLink(request, null);
+    }
+
+    /**
+     * Update a link
+     * 
+     * <p>Updates the PaymentLink identified by `id`. Provide the unified PaymentLink fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdatePaymentLinkResponse updatePaymentLink(@Nonnull UpdatePaymentLinkRequest request, @Nullable Options options) {
         RequestOperation<UpdatePaymentLinkRequest, UpdatePaymentLinkResponse> operation
-              = new UpdatePaymentLink.Sync(sdkConfiguration, _headers);
+              = new UpdatePaymentLink.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

@@ -6,19 +6,29 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateHealthcareObservationRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHealthcareObservationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateHealthcareObservationResponse;
+import to.unified.unified_java_sdk.models.operations.GetFhirObservationRequest;
+import to.unified.unified_java_sdk.models.operations.GetFhirObservationRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetFhirObservationResponse;
 import to.unified.unified_java_sdk.models.operations.GetHealthcareObservationRequest;
 import to.unified.unified_java_sdk.models.operations.GetHealthcareObservationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetHealthcareObservationResponse;
+import to.unified.unified_java_sdk.models.operations.ListFhirObservationsRequest;
+import to.unified.unified_java_sdk.models.operations.ListFhirObservationsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListFhirObservationsResponse;
 import to.unified.unified_java_sdk.models.operations.ListHealthcareObservationsRequest;
 import to.unified.unified_java_sdk.models.operations.ListHealthcareObservationsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListHealthcareObservationsResponse;
 import to.unified.unified_java_sdk.operations.CreateHealthcareObservation;
+import to.unified.unified_java_sdk.operations.GetFhirObservation;
 import to.unified.unified_java_sdk.operations.GetHealthcareObservation;
+import to.unified.unified_java_sdk.operations.ListFhirObservations;
 import to.unified.unified_java_sdk.operations.ListHealthcareObservations;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Observation {
@@ -63,8 +73,66 @@ public class Observation {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateHealthcareObservationResponse createHealthcareObservation(@Nonnull CreateHealthcareObservationRequest request) {
+        return createHealthcareObservation(request, null);
+    }
+
+    /**
+     * Create an observation
+     * 
+     * <p>Creates a HealthcareObservation. Provide the unified HealthcareObservation fields in the request
+     * body; they are mapped to the provider's API. Returns the created HealthcareObservation.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateHealthcareObservationResponse createHealthcareObservation(@Nonnull CreateHealthcareObservationRequest request, @Nullable Options options) {
         RequestOperation<CreateHealthcareObservationRequest, CreateHealthcareObservationResponse> operation
-              = new CreateHealthcareObservation.Sync(sdkConfiguration, _headers);
+              = new CreateHealthcareObservation.Sync(sdkConfiguration, options, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Read a Observation
+     * 
+     * <p>Responses use the application/fhir+json media type; errors are OperationOutcome resources. Read-only
+     * (FHIR R4 4.0.1).
+     * 
+     * @return The call builder
+     */
+    public GetFhirObservationRequestBuilder getFhirObservation() {
+        return new GetFhirObservationRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Read a Observation
+     * 
+     * <p>Responses use the application/fhir+json media type; errors are OperationOutcome resources. Read-only
+     * (FHIR R4 4.0.1).
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetFhirObservationResponse getFhirObservation(@Nonnull GetFhirObservationRequest request) {
+        return getFhirObservation(request, null);
+    }
+
+    /**
+     * Read a Observation
+     * 
+     * <p>Responses use the application/fhir+json media type; errors are OperationOutcome resources. Read-only
+     * (FHIR R4 4.0.1).
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetFhirObservationResponse getFhirObservation(@Nonnull GetFhirObservationRequest request, @Nullable Options options) {
+        RequestOperation<GetFhirObservationRequest, GetFhirObservationResponse> operation
+              = new GetFhirObservation.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -91,8 +159,66 @@ public class Observation {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetHealthcareObservationResponse getHealthcareObservation(@Nonnull GetHealthcareObservationRequest request) {
+        return getHealthcareObservation(request, null);
+    }
+
+    /**
+     * Retrieve an observation
+     * 
+     * <p>Retrieves a single HealthcareObservation by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetHealthcareObservationResponse getHealthcareObservation(@Nonnull GetHealthcareObservationRequest request, @Nullable Options options) {
         RequestOperation<GetHealthcareObservationRequest, GetHealthcareObservationResponse> operation
-              = new GetHealthcareObservation.Sync(sdkConfiguration, _headers);
+              = new GetHealthcareObservation.Sync(sdkConfiguration, options, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Search Observation resources
+     * 
+     * <p>Returns a searchset Bundle; follow its next link for more pages. Responses use the
+     * application/fhir+json media type; errors are OperationOutcome resources. Read-only (FHIR R4 4.0.1).
+     * 
+     * @return The call builder
+     */
+    public ListFhirObservationsRequestBuilder listFhirObservations() {
+        return new ListFhirObservationsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Search Observation resources
+     * 
+     * <p>Returns a searchset Bundle; follow its next link for more pages. Responses use the
+     * application/fhir+json media type; errors are OperationOutcome resources. Read-only (FHIR R4 4.0.1).
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListFhirObservationsResponse listFhirObservations(@Nonnull ListFhirObservationsRequest request) {
+        return listFhirObservations(request, null);
+    }
+
+    /**
+     * Search Observation resources
+     * 
+     * <p>Returns a searchset Bundle; follow its next link for more pages. Responses use the
+     * application/fhir+json media type; errors are OperationOutcome resources. Read-only (FHIR R4 4.0.1).
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListFhirObservationsResponse listFhirObservations(@Nonnull ListFhirObservationsRequest request, @Nullable Options options) {
+        RequestOperation<ListFhirObservationsRequest, ListFhirObservationsResponse> operation
+              = new ListFhirObservations.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -127,8 +253,27 @@ public class Observation {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListHealthcareObservationsResponse listHealthcareObservations(@Nonnull ListHealthcareObservationsRequest request) {
+        return listHealthcareObservations(request, null);
+    }
+
+    /**
+     * List all observations
+     * 
+     * <p>Returns a list of HealthcareObservations. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListHealthcareObservationsResponse listHealthcareObservations(@Nonnull ListHealthcareObservationsRequest request, @Nullable Options options) {
         RequestOperation<ListHealthcareObservationsRequest, ListHealthcareObservationsResponse> operation
-              = new ListHealthcareObservations.Sync(sdkConfiguration, _headers);
+              = new ListHealthcareObservations.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

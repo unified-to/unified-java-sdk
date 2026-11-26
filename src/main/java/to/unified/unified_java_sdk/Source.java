@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateCdpSourceRequest;
 import to.unified.unified_java_sdk.models.operations.CreateCdpSourceRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateCdpSourceResponse;
@@ -31,6 +32,7 @@ import to.unified.unified_java_sdk.operations.PatchCdpSource;
 import to.unified.unified_java_sdk.operations.RemoveCdpSource;
 import to.unified.unified_java_sdk.operations.UpdateCdpSource;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Source {
@@ -75,8 +77,23 @@ public class Source {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateCdpSourceResponse createCdpSource(@Nonnull CreateCdpSourceRequest request) {
+        return createCdpSource(request, null);
+    }
+
+    /**
+     * Create a source
+     * 
+     * <p>Creates a CdpSource. Provide the unified CdpSource fields in the request body; they are mapped to
+     * the provider's API. Returns the created CdpSource.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateCdpSourceResponse createCdpSource(@Nonnull CreateCdpSourceRequest request, @Nullable Options options) {
         RequestOperation<CreateCdpSourceRequest, CreateCdpSourceResponse> operation
-              = new CreateCdpSource.Sync(sdkConfiguration, _headers);
+              = new CreateCdpSource.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -103,8 +120,23 @@ public class Source {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetCdpSourceResponse getCdpSource(@Nonnull GetCdpSourceRequest request) {
+        return getCdpSource(request, null);
+    }
+
+    /**
+     * Retrieve a source
+     * 
+     * <p>Retrieves a single CdpSource by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetCdpSourceResponse getCdpSource(@Nonnull GetCdpSourceRequest request, @Nullable Options options) {
         RequestOperation<GetCdpSourceRequest, GetCdpSourceResponse> operation
-              = new GetCdpSource.Sync(sdkConfiguration, _headers);
+              = new GetCdpSource.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -139,8 +171,27 @@ public class Source {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListCdpSourcesResponse listCdpSources(@Nonnull ListCdpSourcesRequest request) {
+        return listCdpSources(request, null);
+    }
+
+    /**
+     * List all sources
+     * 
+     * <p>Returns a list of CdpSources. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListCdpSourcesResponse listCdpSources(@Nonnull ListCdpSourcesRequest request, @Nullable Options options) {
         RequestOperation<ListCdpSourcesRequest, ListCdpSourcesResponse> operation
-              = new ListCdpSources.Sync(sdkConfiguration, _headers);
+              = new ListCdpSources.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +218,23 @@ public class Source {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchCdpSourceResponse patchCdpSource(@Nonnull PatchCdpSourceRequest request) {
+        return patchCdpSource(request, null);
+    }
+
+    /**
+     * Update a source
+     * 
+     * <p>Updates the CdpSource identified by `id`. Provide the unified CdpSource fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchCdpSourceResponse patchCdpSource(@Nonnull PatchCdpSourceRequest request, @Nullable Options options) {
         RequestOperation<PatchCdpSourceRequest, PatchCdpSourceResponse> operation
-              = new PatchCdpSource.Sync(sdkConfiguration, _headers);
+              = new PatchCdpSource.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -193,8 +259,22 @@ public class Source {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveCdpSourceResponse removeCdpSource(@Nonnull RemoveCdpSourceRequest request) {
+        return removeCdpSource(request, null);
+    }
+
+    /**
+     * Remove a source
+     * 
+     * <p>Deletes the CdpSource identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveCdpSourceResponse removeCdpSource(@Nonnull RemoveCdpSourceRequest request, @Nullable Options options) {
         RequestOperation<RemoveCdpSourceRequest, RemoveCdpSourceResponse> operation
-              = new RemoveCdpSource.Sync(sdkConfiguration, _headers);
+              = new RemoveCdpSource.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -221,8 +301,23 @@ public class Source {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateCdpSourceResponse updateCdpSource(@Nonnull UpdateCdpSourceRequest request) {
+        return updateCdpSource(request, null);
+    }
+
+    /**
+     * Update a source
+     * 
+     * <p>Updates the CdpSource identified by `id`. Provide the unified CdpSource fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateCdpSourceResponse updateCdpSource(@Nonnull UpdateCdpSourceRequest request, @Nullable Options options) {
         RequestOperation<UpdateCdpSourceRequest, UpdateCdpSourceResponse> operation
-              = new UpdateCdpSource.Sync(sdkConfiguration, _headers);
+              = new UpdateCdpSource.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

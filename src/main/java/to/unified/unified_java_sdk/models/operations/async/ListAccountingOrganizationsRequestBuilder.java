@@ -6,20 +6,30 @@ package to.unified.unified_java_sdk.models.operations.async;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.ListAccountingOrganizationsRequest;
 import to.unified.unified_java_sdk.operations.ListAccountingOrganizations;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListAccountingOrganizationsRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private ListAccountingOrganizationsRequest request;
+    private final Options.Builder optionsBuilder;
 
     public ListAccountingOrganizationsRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public ListAccountingOrganizationsRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public ListAccountingOrganizationsRequestBuilder request(@Nonnull ListAccountingOrganizationsRequest request) {
@@ -44,8 +54,9 @@ public class ListAccountingOrganizationsRequestBuilder {
     * @return The response from the server.
     */
     public CompletableFuture<ListAccountingOrganizationsResponse> call() {
+        Options options = optionsBuilder.build();
         AsyncRequestOperation<ListAccountingOrganizationsRequest, ListAccountingOrganizationsResponse> operation
-              = new ListAccountingOrganizations.Async(sdkConfiguration, _headers);
+              = new ListAccountingOrganizations.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

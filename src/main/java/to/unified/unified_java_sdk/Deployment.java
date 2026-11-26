@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateComputeDeploymentRequest;
 import to.unified.unified_java_sdk.models.operations.CreateComputeDeploymentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateComputeDeploymentResponse;
@@ -31,6 +32,7 @@ import to.unified.unified_java_sdk.operations.PatchComputeDeployment;
 import to.unified.unified_java_sdk.operations.RemoveComputeDeployment;
 import to.unified.unified_java_sdk.operations.UpdateComputeDeployment;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Deployment {
@@ -75,8 +77,23 @@ public class Deployment {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateComputeDeploymentResponse createComputeDeployment(@Nonnull CreateComputeDeploymentRequest request) {
+        return createComputeDeployment(request, null);
+    }
+
+    /**
+     * Create a deployment
+     * 
+     * <p>Creates a ComputeDeployment. Provide the unified ComputeDeployment fields in the request body; they
+     * are mapped to the provider's API. Returns the created ComputeDeployment.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateComputeDeploymentResponse createComputeDeployment(@Nonnull CreateComputeDeploymentRequest request, @Nullable Options options) {
         RequestOperation<CreateComputeDeploymentRequest, CreateComputeDeploymentResponse> operation
-              = new CreateComputeDeployment.Sync(sdkConfiguration, _headers);
+              = new CreateComputeDeployment.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -103,8 +120,23 @@ public class Deployment {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetComputeDeploymentResponse getComputeDeployment(@Nonnull GetComputeDeploymentRequest request) {
+        return getComputeDeployment(request, null);
+    }
+
+    /**
+     * Retrieve a deployment
+     * 
+     * <p>Retrieves a single ComputeDeployment by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetComputeDeploymentResponse getComputeDeployment(@Nonnull GetComputeDeploymentRequest request, @Nullable Options options) {
         RequestOperation<GetComputeDeploymentRequest, GetComputeDeploymentResponse> operation
-              = new GetComputeDeployment.Sync(sdkConfiguration, _headers);
+              = new GetComputeDeployment.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -139,8 +171,27 @@ public class Deployment {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListComputeDeploymentsResponse listComputeDeployments(@Nonnull ListComputeDeploymentsRequest request) {
+        return listComputeDeployments(request, null);
+    }
+
+    /**
+     * List all deployments
+     * 
+     * <p>Returns a list of ComputeDeployments. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListComputeDeploymentsResponse listComputeDeployments(@Nonnull ListComputeDeploymentsRequest request, @Nullable Options options) {
         RequestOperation<ListComputeDeploymentsRequest, ListComputeDeploymentsResponse> operation
-              = new ListComputeDeployments.Sync(sdkConfiguration, _headers);
+              = new ListComputeDeployments.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +218,23 @@ public class Deployment {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchComputeDeploymentResponse patchComputeDeployment(@Nonnull PatchComputeDeploymentRequest request) {
+        return patchComputeDeployment(request, null);
+    }
+
+    /**
+     * Update a deployment
+     * 
+     * <p>Updates the ComputeDeployment identified by `id`. Provide the unified ComputeDeployment fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchComputeDeploymentResponse patchComputeDeployment(@Nonnull PatchComputeDeploymentRequest request, @Nullable Options options) {
         RequestOperation<PatchComputeDeploymentRequest, PatchComputeDeploymentResponse> operation
-              = new PatchComputeDeployment.Sync(sdkConfiguration, _headers);
+              = new PatchComputeDeployment.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -193,8 +259,22 @@ public class Deployment {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveComputeDeploymentResponse removeComputeDeployment(@Nonnull RemoveComputeDeploymentRequest request) {
+        return removeComputeDeployment(request, null);
+    }
+
+    /**
+     * Remove a deployment
+     * 
+     * <p>Deletes the ComputeDeployment identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveComputeDeploymentResponse removeComputeDeployment(@Nonnull RemoveComputeDeploymentRequest request, @Nullable Options options) {
         RequestOperation<RemoveComputeDeploymentRequest, RemoveComputeDeploymentResponse> operation
-              = new RemoveComputeDeployment.Sync(sdkConfiguration, _headers);
+              = new RemoveComputeDeployment.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -221,8 +301,23 @@ public class Deployment {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateComputeDeploymentResponse updateComputeDeployment(@Nonnull UpdateComputeDeploymentRequest request) {
+        return updateComputeDeployment(request, null);
+    }
+
+    /**
+     * Update a deployment
+     * 
+     * <p>Updates the ComputeDeployment identified by `id`. Provide the unified ComputeDeployment fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateComputeDeploymentResponse updateComputeDeployment(@Nonnull UpdateComputeDeploymentRequest request, @Nullable Options options) {
         RequestOperation<UpdateComputeDeploymentRequest, UpdateComputeDeploymentResponse> operation
-              = new UpdateComputeDeployment.Sync(sdkConfiguration, _headers);
+              = new UpdateComputeDeployment.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateRepoCommitRequest;
 import to.unified.unified_java_sdk.models.operations.GetRepoCommitRequest;
@@ -32,6 +33,7 @@ import to.unified.unified_java_sdk.operations.PatchRepoCommit;
 import to.unified.unified_java_sdk.operations.RemoveRepoCommit;
 import to.unified.unified_java_sdk.operations.UpdateRepoCommit;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncCommit {
@@ -76,8 +78,22 @@ public class AsyncCommit {
      * @return {@code CompletableFuture<CreateRepoCommitResponse>} - The async response
      */
     public CompletableFuture<CreateRepoCommitResponse> createRepoCommit(@Nonnull CreateRepoCommitRequest request) {
+        return createRepoCommit(request, null);
+    }
+
+    /**
+     * Create a commit
+     * 
+     * <p>Creates a RepoCommit. Provide the unified RepoCommit fields in the request body; they are mapped to
+     * the provider's API. Returns the created RepoCommit.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateRepoCommitResponse>} - The async response
+     */
+    public CompletableFuture<CreateRepoCommitResponse> createRepoCommit(@Nonnull CreateRepoCommitRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateRepoCommitRequest, CreateRepoCommitResponse> operation
-              = new CreateRepoCommit.Async(sdkConfiguration, _headers);
+              = new CreateRepoCommit.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -105,8 +121,22 @@ public class AsyncCommit {
      * @return {@code CompletableFuture<GetRepoCommitResponse>} - The async response
      */
     public CompletableFuture<GetRepoCommitResponse> getRepoCommit(@Nonnull GetRepoCommitRequest request) {
+        return getRepoCommit(request, null);
+    }
+
+    /**
+     * Retrieve a commit
+     * 
+     * <p>Retrieves a single RepoCommit by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetRepoCommitResponse>} - The async response
+     */
+    public CompletableFuture<GetRepoCommitResponse> getRepoCommit(@Nonnull GetRepoCommitRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetRepoCommitRequest, GetRepoCommitResponse> operation
-              = new GetRepoCommit.Async(sdkConfiguration, _headers);
+              = new GetRepoCommit.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -142,8 +172,26 @@ public class AsyncCommit {
      * @return {@code CompletableFuture<ListRepoCommitsResponse>} - The async response
      */
     public CompletableFuture<ListRepoCommitsResponse> listRepoCommits(@Nonnull ListRepoCommitsRequest request) {
+        return listRepoCommits(request, null);
+    }
+
+    /**
+     * List all commits
+     * 
+     * <p>Returns a list of RepoCommits. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListRepoCommitsResponse>} - The async response
+     */
+    public CompletableFuture<ListRepoCommitsResponse> listRepoCommits(@Nonnull ListRepoCommitsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListRepoCommitsRequest, ListRepoCommitsResponse> operation
-              = new ListRepoCommits.Async(sdkConfiguration, _headers);
+              = new ListRepoCommits.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -171,8 +219,22 @@ public class AsyncCommit {
      * @return {@code CompletableFuture<PatchRepoCommitResponse>} - The async response
      */
     public CompletableFuture<PatchRepoCommitResponse> patchRepoCommit(@Nonnull PatchRepoCommitRequest request) {
+        return patchRepoCommit(request, null);
+    }
+
+    /**
+     * Update a commit
+     * 
+     * <p>Updates the RepoCommit identified by `id`. Provide the unified RepoCommit fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchRepoCommitResponse>} - The async response
+     */
+    public CompletableFuture<PatchRepoCommitResponse> patchRepoCommit(@Nonnull PatchRepoCommitRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchRepoCommitRequest, PatchRepoCommitResponse> operation
-              = new PatchRepoCommit.Async(sdkConfiguration, _headers);
+              = new PatchRepoCommit.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -198,8 +260,21 @@ public class AsyncCommit {
      * @return {@code CompletableFuture<RemoveRepoCommitResponse>} - The async response
      */
     public CompletableFuture<RemoveRepoCommitResponse> removeRepoCommit(@Nonnull RemoveRepoCommitRequest request) {
+        return removeRepoCommit(request, null);
+    }
+
+    /**
+     * Remove a commit
+     * 
+     * <p>Deletes the RepoCommit identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveRepoCommitResponse>} - The async response
+     */
+    public CompletableFuture<RemoveRepoCommitResponse> removeRepoCommit(@Nonnull RemoveRepoCommitRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveRepoCommitRequest, RemoveRepoCommitResponse> operation
-              = new RemoveRepoCommit.Async(sdkConfiguration, _headers);
+              = new RemoveRepoCommit.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -227,8 +302,22 @@ public class AsyncCommit {
      * @return {@code CompletableFuture<UpdateRepoCommitResponse>} - The async response
      */
     public CompletableFuture<UpdateRepoCommitResponse> updateRepoCommit(@Nonnull UpdateRepoCommitRequest request) {
+        return updateRepoCommit(request, null);
+    }
+
+    /**
+     * Update a commit
+     * 
+     * <p>Updates the RepoCommit identified by `id`. Provide the unified RepoCommit fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateRepoCommitResponse>} - The async response
+     */
+    public CompletableFuture<UpdateRepoCommitResponse> updateRepoCommit(@Nonnull UpdateRepoCommitRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateRepoCommitRequest, UpdateRepoCommitResponse> operation
-              = new UpdateRepoCommit.Async(sdkConfiguration, _headers);
+              = new UpdateRepoCommit.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

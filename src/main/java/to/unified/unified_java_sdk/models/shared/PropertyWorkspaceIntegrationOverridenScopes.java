@@ -1035,6 +1035,76 @@ public class PropertyWorkspaceIntegrationOverridenScopes {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("dms_appointment_read")
+    private String dmsAppointmentRead;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("dms_appointment_write")
+    private String dmsAppointmentWrite;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("dms_opcode_read")
+    private String dmsOpcodeRead;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("dms_opcode_write")
+    private String dmsOpcodeWrite;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("dms_part_read")
+    private String dmsPartRead;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("dms_part_write")
+    private String dmsPartWrite;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("dms_partsale_read")
+    private String dmsPartsaleRead;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("dms_partsale_write")
+    private String dmsPartsaleWrite;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("dms_repairorder_read")
+    private String dmsRepairorderRead;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("dms_repairorder_write")
+    private String dmsRepairorderWrite;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("dms_vehicle_read")
+    private String dmsVehicleRead;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("dms_vehicle_write")
+    private String dmsVehicleWrite;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("dms_vehiclesale_read")
+    private String dmsVehiclesaleRead;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("dms_vehiclesale_write")
+    private String dmsVehiclesaleWrite;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enrich_company_read")
     private String enrichCompanyRead;
 
@@ -1842,6 +1912,56 @@ public class PropertyWorkspaceIntegrationOverridenScopes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("plm_part_write")
     private String plmPartWrite;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("printing_file_read")
+    private String printingFileRead;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("printing_file_write")
+    private String printingFileWrite;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("printing_order_read")
+    private String printingOrderRead;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("printing_order_write")
+    private String printingOrderWrite;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("printing_product_read")
+    private String printingProductRead;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("printing_product_write")
+    private String printingProductWrite;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("printing_quote_read")
+    private String printingQuoteRead;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("printing_quote_write")
+    private String printingQuoteWrite;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("printing_template_read")
+    private String printingTemplateRead;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("printing_template_write")
+    private String printingTemplateWrite;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -3117,6 +3237,62 @@ public class PropertyWorkspaceIntegrationOverridenScopes {
         return Optional.ofNullable(this.datastoreTableWrite);
     }
 
+    public Optional<String> dmsAppointmentRead() {
+        return Optional.ofNullable(this.dmsAppointmentRead);
+    }
+
+    public Optional<String> dmsAppointmentWrite() {
+        return Optional.ofNullable(this.dmsAppointmentWrite);
+    }
+
+    public Optional<String> dmsOpcodeRead() {
+        return Optional.ofNullable(this.dmsOpcodeRead);
+    }
+
+    public Optional<String> dmsOpcodeWrite() {
+        return Optional.ofNullable(this.dmsOpcodeWrite);
+    }
+
+    public Optional<String> dmsPartRead() {
+        return Optional.ofNullable(this.dmsPartRead);
+    }
+
+    public Optional<String> dmsPartWrite() {
+        return Optional.ofNullable(this.dmsPartWrite);
+    }
+
+    public Optional<String> dmsPartsaleRead() {
+        return Optional.ofNullable(this.dmsPartsaleRead);
+    }
+
+    public Optional<String> dmsPartsaleWrite() {
+        return Optional.ofNullable(this.dmsPartsaleWrite);
+    }
+
+    public Optional<String> dmsRepairorderRead() {
+        return Optional.ofNullable(this.dmsRepairorderRead);
+    }
+
+    public Optional<String> dmsRepairorderWrite() {
+        return Optional.ofNullable(this.dmsRepairorderWrite);
+    }
+
+    public Optional<String> dmsVehicleRead() {
+        return Optional.ofNullable(this.dmsVehicleRead);
+    }
+
+    public Optional<String> dmsVehicleWrite() {
+        return Optional.ofNullable(this.dmsVehicleWrite);
+    }
+
+    public Optional<String> dmsVehiclesaleRead() {
+        return Optional.ofNullable(this.dmsVehiclesaleRead);
+    }
+
+    public Optional<String> dmsVehiclesaleWrite() {
+        return Optional.ofNullable(this.dmsVehiclesaleWrite);
+    }
+
     public Optional<String> enrichCompanyRead() {
         return Optional.ofNullable(this.enrichCompanyRead);
     }
@@ -3763,6 +3939,46 @@ public class PropertyWorkspaceIntegrationOverridenScopes {
 
     public Optional<String> plmPartWrite() {
         return Optional.ofNullable(this.plmPartWrite);
+    }
+
+    public Optional<String> printingFileRead() {
+        return Optional.ofNullable(this.printingFileRead);
+    }
+
+    public Optional<String> printingFileWrite() {
+        return Optional.ofNullable(this.printingFileWrite);
+    }
+
+    public Optional<String> printingOrderRead() {
+        return Optional.ofNullable(this.printingOrderRead);
+    }
+
+    public Optional<String> printingOrderWrite() {
+        return Optional.ofNullable(this.printingOrderWrite);
+    }
+
+    public Optional<String> printingProductRead() {
+        return Optional.ofNullable(this.printingProductRead);
+    }
+
+    public Optional<String> printingProductWrite() {
+        return Optional.ofNullable(this.printingProductWrite);
+    }
+
+    public Optional<String> printingQuoteRead() {
+        return Optional.ofNullable(this.printingQuoteRead);
+    }
+
+    public Optional<String> printingQuoteWrite() {
+        return Optional.ofNullable(this.printingQuoteWrite);
+    }
+
+    public Optional<String> printingTemplateRead() {
+        return Optional.ofNullable(this.printingTemplateRead);
+    }
+
+    public Optional<String> printingTemplateWrite() {
+        return Optional.ofNullable(this.printingTemplateWrite);
     }
 
     public Optional<String> propertyAvailabilityRead() {
@@ -5356,6 +5572,90 @@ public class PropertyWorkspaceIntegrationOverridenScopes {
     }
 
 
+    public PropertyWorkspaceIntegrationOverridenScopes withDmsAppointmentRead(@Nullable String dmsAppointmentRead) {
+        this.dmsAppointmentRead = dmsAppointmentRead;
+        return this;
+    }
+
+
+    public PropertyWorkspaceIntegrationOverridenScopes withDmsAppointmentWrite(@Nullable String dmsAppointmentWrite) {
+        this.dmsAppointmentWrite = dmsAppointmentWrite;
+        return this;
+    }
+
+
+    public PropertyWorkspaceIntegrationOverridenScopes withDmsOpcodeRead(@Nullable String dmsOpcodeRead) {
+        this.dmsOpcodeRead = dmsOpcodeRead;
+        return this;
+    }
+
+
+    public PropertyWorkspaceIntegrationOverridenScopes withDmsOpcodeWrite(@Nullable String dmsOpcodeWrite) {
+        this.dmsOpcodeWrite = dmsOpcodeWrite;
+        return this;
+    }
+
+
+    public PropertyWorkspaceIntegrationOverridenScopes withDmsPartRead(@Nullable String dmsPartRead) {
+        this.dmsPartRead = dmsPartRead;
+        return this;
+    }
+
+
+    public PropertyWorkspaceIntegrationOverridenScopes withDmsPartWrite(@Nullable String dmsPartWrite) {
+        this.dmsPartWrite = dmsPartWrite;
+        return this;
+    }
+
+
+    public PropertyWorkspaceIntegrationOverridenScopes withDmsPartsaleRead(@Nullable String dmsPartsaleRead) {
+        this.dmsPartsaleRead = dmsPartsaleRead;
+        return this;
+    }
+
+
+    public PropertyWorkspaceIntegrationOverridenScopes withDmsPartsaleWrite(@Nullable String dmsPartsaleWrite) {
+        this.dmsPartsaleWrite = dmsPartsaleWrite;
+        return this;
+    }
+
+
+    public PropertyWorkspaceIntegrationOverridenScopes withDmsRepairorderRead(@Nullable String dmsRepairorderRead) {
+        this.dmsRepairorderRead = dmsRepairorderRead;
+        return this;
+    }
+
+
+    public PropertyWorkspaceIntegrationOverridenScopes withDmsRepairorderWrite(@Nullable String dmsRepairorderWrite) {
+        this.dmsRepairorderWrite = dmsRepairorderWrite;
+        return this;
+    }
+
+
+    public PropertyWorkspaceIntegrationOverridenScopes withDmsVehicleRead(@Nullable String dmsVehicleRead) {
+        this.dmsVehicleRead = dmsVehicleRead;
+        return this;
+    }
+
+
+    public PropertyWorkspaceIntegrationOverridenScopes withDmsVehicleWrite(@Nullable String dmsVehicleWrite) {
+        this.dmsVehicleWrite = dmsVehicleWrite;
+        return this;
+    }
+
+
+    public PropertyWorkspaceIntegrationOverridenScopes withDmsVehiclesaleRead(@Nullable String dmsVehiclesaleRead) {
+        this.dmsVehiclesaleRead = dmsVehiclesaleRead;
+        return this;
+    }
+
+
+    public PropertyWorkspaceIntegrationOverridenScopes withDmsVehiclesaleWrite(@Nullable String dmsVehiclesaleWrite) {
+        this.dmsVehiclesaleWrite = dmsVehiclesaleWrite;
+        return this;
+    }
+
+
     public PropertyWorkspaceIntegrationOverridenScopes withEnrichCompanyRead(@Nullable String enrichCompanyRead) {
         this.enrichCompanyRead = enrichCompanyRead;
         return this;
@@ -6328,6 +6628,66 @@ public class PropertyWorkspaceIntegrationOverridenScopes {
     }
 
 
+    public PropertyWorkspaceIntegrationOverridenScopes withPrintingFileRead(@Nullable String printingFileRead) {
+        this.printingFileRead = printingFileRead;
+        return this;
+    }
+
+
+    public PropertyWorkspaceIntegrationOverridenScopes withPrintingFileWrite(@Nullable String printingFileWrite) {
+        this.printingFileWrite = printingFileWrite;
+        return this;
+    }
+
+
+    public PropertyWorkspaceIntegrationOverridenScopes withPrintingOrderRead(@Nullable String printingOrderRead) {
+        this.printingOrderRead = printingOrderRead;
+        return this;
+    }
+
+
+    public PropertyWorkspaceIntegrationOverridenScopes withPrintingOrderWrite(@Nullable String printingOrderWrite) {
+        this.printingOrderWrite = printingOrderWrite;
+        return this;
+    }
+
+
+    public PropertyWorkspaceIntegrationOverridenScopes withPrintingProductRead(@Nullable String printingProductRead) {
+        this.printingProductRead = printingProductRead;
+        return this;
+    }
+
+
+    public PropertyWorkspaceIntegrationOverridenScopes withPrintingProductWrite(@Nullable String printingProductWrite) {
+        this.printingProductWrite = printingProductWrite;
+        return this;
+    }
+
+
+    public PropertyWorkspaceIntegrationOverridenScopes withPrintingQuoteRead(@Nullable String printingQuoteRead) {
+        this.printingQuoteRead = printingQuoteRead;
+        return this;
+    }
+
+
+    public PropertyWorkspaceIntegrationOverridenScopes withPrintingQuoteWrite(@Nullable String printingQuoteWrite) {
+        this.printingQuoteWrite = printingQuoteWrite;
+        return this;
+    }
+
+
+    public PropertyWorkspaceIntegrationOverridenScopes withPrintingTemplateRead(@Nullable String printingTemplateRead) {
+        this.printingTemplateRead = printingTemplateRead;
+        return this;
+    }
+
+
+    public PropertyWorkspaceIntegrationOverridenScopes withPrintingTemplateWrite(@Nullable String printingTemplateWrite) {
+        this.printingTemplateWrite = printingTemplateWrite;
+        return this;
+    }
+
+
     public PropertyWorkspaceIntegrationOverridenScopes withPropertyAvailabilityRead(@Nullable String propertyAvailabilityRead) {
         this.propertyAvailabilityRead = propertyAvailabilityRead;
         return this;
@@ -7093,6 +7453,20 @@ public class PropertyWorkspaceIntegrationOverridenScopes {
             Utils.enhancedDeepEquals(this.datastoreRecordWrite, other.datastoreRecordWrite) &&
             Utils.enhancedDeepEquals(this.datastoreTableRead, other.datastoreTableRead) &&
             Utils.enhancedDeepEquals(this.datastoreTableWrite, other.datastoreTableWrite) &&
+            Utils.enhancedDeepEquals(this.dmsAppointmentRead, other.dmsAppointmentRead) &&
+            Utils.enhancedDeepEquals(this.dmsAppointmentWrite, other.dmsAppointmentWrite) &&
+            Utils.enhancedDeepEquals(this.dmsOpcodeRead, other.dmsOpcodeRead) &&
+            Utils.enhancedDeepEquals(this.dmsOpcodeWrite, other.dmsOpcodeWrite) &&
+            Utils.enhancedDeepEquals(this.dmsPartRead, other.dmsPartRead) &&
+            Utils.enhancedDeepEquals(this.dmsPartWrite, other.dmsPartWrite) &&
+            Utils.enhancedDeepEquals(this.dmsPartsaleRead, other.dmsPartsaleRead) &&
+            Utils.enhancedDeepEquals(this.dmsPartsaleWrite, other.dmsPartsaleWrite) &&
+            Utils.enhancedDeepEquals(this.dmsRepairorderRead, other.dmsRepairorderRead) &&
+            Utils.enhancedDeepEquals(this.dmsRepairorderWrite, other.dmsRepairorderWrite) &&
+            Utils.enhancedDeepEquals(this.dmsVehicleRead, other.dmsVehicleRead) &&
+            Utils.enhancedDeepEquals(this.dmsVehicleWrite, other.dmsVehicleWrite) &&
+            Utils.enhancedDeepEquals(this.dmsVehiclesaleRead, other.dmsVehiclesaleRead) &&
+            Utils.enhancedDeepEquals(this.dmsVehiclesaleWrite, other.dmsVehiclesaleWrite) &&
             Utils.enhancedDeepEquals(this.enrichCompanyRead, other.enrichCompanyRead) &&
             Utils.enhancedDeepEquals(this.enrichPersonRead, other.enrichPersonRead) &&
             Utils.enhancedDeepEquals(this.formsFormRead, other.formsFormRead) &&
@@ -7255,6 +7629,16 @@ public class PropertyWorkspaceIntegrationOverridenScopes {
             Utils.enhancedDeepEquals(this.plmDocumentWrite, other.plmDocumentWrite) &&
             Utils.enhancedDeepEquals(this.plmPartRead, other.plmPartRead) &&
             Utils.enhancedDeepEquals(this.plmPartWrite, other.plmPartWrite) &&
+            Utils.enhancedDeepEquals(this.printingFileRead, other.printingFileRead) &&
+            Utils.enhancedDeepEquals(this.printingFileWrite, other.printingFileWrite) &&
+            Utils.enhancedDeepEquals(this.printingOrderRead, other.printingOrderRead) &&
+            Utils.enhancedDeepEquals(this.printingOrderWrite, other.printingOrderWrite) &&
+            Utils.enhancedDeepEquals(this.printingProductRead, other.printingProductRead) &&
+            Utils.enhancedDeepEquals(this.printingProductWrite, other.printingProductWrite) &&
+            Utils.enhancedDeepEquals(this.printingQuoteRead, other.printingQuoteRead) &&
+            Utils.enhancedDeepEquals(this.printingQuoteWrite, other.printingQuoteWrite) &&
+            Utils.enhancedDeepEquals(this.printingTemplateRead, other.printingTemplateRead) &&
+            Utils.enhancedDeepEquals(this.printingTemplateWrite, other.printingTemplateWrite) &&
             Utils.enhancedDeepEquals(this.propertyAvailabilityRead, other.propertyAvailabilityRead) &&
             Utils.enhancedDeepEquals(this.propertyConversationRead, other.propertyConversationRead) &&
             Utils.enhancedDeepEquals(this.propertyConversationWrite, other.propertyConversationWrite) &&
@@ -7419,61 +7803,69 @@ public class PropertyWorkspaceIntegrationOverridenScopes {
             crmPipelineRead, crmPipelineWrite, crmTaxonomyRead,
             datastoreDatabaseRead, datastoreDatabaseWrite, datastoreQueryRead,
             datastoreQueryWrite, datastoreRecordRead, datastoreRecordWrite,
-            datastoreTableRead, datastoreTableWrite, enrichCompanyRead,
-            enrichPersonRead, formsFormRead, formsFormWrite,
-            formsSubmissionRead, formsSubmissionWrite, genaiAgentRead,
-            genaiAgentWrite, genaiEmbeddingRead, genaiEmbeddingWrite,
-            genaiMemoryRead, genaiMemoryWrite, genaiModelRead,
-            genaiOrganizationRead, genaiOrganizationWrite, genaiPromptRead,
-            genaiPromptWrite, genaiSkillRead, genaiSkillWrite,
-            genaiTaskRead, genaiTaskWrite, healthcareAllergyRead,
-            healthcareAllergyWrite, healthcareAppointmentRead, healthcareAppointmentWrite,
-            healthcareCareplanRead, healthcareCareplanWrite, healthcareConditionRead,
-            healthcareConditionWrite, healthcareCoverageRead, healthcareCoverageWrite,
-            healthcareDocumentRead, healthcareDocumentWrite, healthcareEncounterRead,
-            healthcareEncounterWrite, healthcareGoalRead, healthcareGoalWrite,
-            healthcareImmunizationRead, healthcareImmunizationWrite, healthcareLocationRead,
-            healthcareLocationWrite, healthcareMedicationRead, healthcareMedicationWrite,
-            healthcareObservationRead, healthcareObservationWrite, healthcarePatientRead,
-            healthcarePatientWrite, healthcarePractitionerRead, healthcarePractitionerWrite,
-            healthcareProcedureRead, healthcareProcedureWrite, healthcareReportRead,
-            healthcareReportWrite, healthcareSlotRead, healthcareSlotWrite,
-            hrisAttendanceRead, hrisAttendanceWrite, hrisBankaccountRead,
-            hrisBankaccountWrite, hrisBenefitRead, hrisBenefitWrite,
-            hrisCompanyRead, hrisCompanyWrite, hrisDeductionRead,
-            hrisDeductionWrite, hrisDeviceRead, hrisDeviceWrite,
-            hrisDocumentRead, hrisDocumentWrite, hrisEarningRead,
-            hrisEarningWrite, hrisEmployeeRead, hrisEmployeeWrite,
-            hrisGroupRead, hrisGroupWrite, hrisJobRead,
-            hrisJobWrite, hrisLocationRead, hrisLocationWrite,
-            hrisPaycodeRead, hrisPaycodeWrite, hrisPayrollRead,
-            hrisPayrollWrite, hrisPayslipRead, hrisPayslipWrite,
-            hrisTaxonomyRead, hrisTaxonomyWrite, hrisTaxwithholdingRead,
-            hrisTaxwithholdingWrite, hrisTimeoffRead, hrisTimeoffWrite,
-            hrisTimeshiftRead, hrisTimeshiftWrite, kmsCommentRead,
-            kmsCommentWrite, kmsPageRead, kmsPageWrite,
-            kmsSpaceRead, kmsSpaceWrite, legalExpenseRead,
-            legalExpenseWrite, legalMatterRead, legalMatterWrite,
-            legalPracticeareaRead, legalPracticeareaWrite, legalTimeentryRead,
-            legalTimeentryWrite, lmsActivityRead, lmsActivityWrite,
-            lmsClassRead, lmsClassWrite, lmsCollectionRead,
-            lmsCollectionWrite, lmsContentRead, lmsContentWrite,
-            lmsCourseRead, lmsCourseWrite, lmsInstructorRead,
-            lmsInstructorWrite, lmsStudentRead, lmsStudentWrite,
-            martechCampaignRead, martechCampaignWrite, martechListRead,
-            martechListWrite, martechMemberRead, martechMemberWrite,
-            martechReportRead, martechReportWrite, messagingChannelRead,
-            messagingChannelWrite, messagingEventRead, messagingEventWrite,
-            messagingMessageRead, messagingMessageWrite, metadataMetadataRead,
-            metadataMetadataWrite, paymentLinkRead, paymentLinkWrite,
-            paymentPaymentRead, paymentPaymentWrite, paymentPayoutRead,
-            paymentRefundRead, paymentSubscriptionRead, paymentSubscriptionWrite,
-            performanceCycleRead, performanceFeedbackRead, performanceFeedbackWrite,
-            performanceGoalRead, performanceGoalWrite, performanceReviewRead,
-            performanceReviewWrite, plmBomlineRead, plmBomlineWrite,
-            plmCategoryRead, plmCategoryWrite, plmChangeRead,
-            plmChangeWrite, plmDocumentRead, plmDocumentWrite,
-            plmPartRead, plmPartWrite, propertyAvailabilityRead,
+            datastoreTableRead, datastoreTableWrite, dmsAppointmentRead,
+            dmsAppointmentWrite, dmsOpcodeRead, dmsOpcodeWrite,
+            dmsPartRead, dmsPartWrite, dmsPartsaleRead,
+            dmsPartsaleWrite, dmsRepairorderRead, dmsRepairorderWrite,
+            dmsVehicleRead, dmsVehicleWrite, dmsVehiclesaleRead,
+            dmsVehiclesaleWrite, enrichCompanyRead, enrichPersonRead,
+            formsFormRead, formsFormWrite, formsSubmissionRead,
+            formsSubmissionWrite, genaiAgentRead, genaiAgentWrite,
+            genaiEmbeddingRead, genaiEmbeddingWrite, genaiMemoryRead,
+            genaiMemoryWrite, genaiModelRead, genaiOrganizationRead,
+            genaiOrganizationWrite, genaiPromptRead, genaiPromptWrite,
+            genaiSkillRead, genaiSkillWrite, genaiTaskRead,
+            genaiTaskWrite, healthcareAllergyRead, healthcareAllergyWrite,
+            healthcareAppointmentRead, healthcareAppointmentWrite, healthcareCareplanRead,
+            healthcareCareplanWrite, healthcareConditionRead, healthcareConditionWrite,
+            healthcareCoverageRead, healthcareCoverageWrite, healthcareDocumentRead,
+            healthcareDocumentWrite, healthcareEncounterRead, healthcareEncounterWrite,
+            healthcareGoalRead, healthcareGoalWrite, healthcareImmunizationRead,
+            healthcareImmunizationWrite, healthcareLocationRead, healthcareLocationWrite,
+            healthcareMedicationRead, healthcareMedicationWrite, healthcareObservationRead,
+            healthcareObservationWrite, healthcarePatientRead, healthcarePatientWrite,
+            healthcarePractitionerRead, healthcarePractitionerWrite, healthcareProcedureRead,
+            healthcareProcedureWrite, healthcareReportRead, healthcareReportWrite,
+            healthcareSlotRead, healthcareSlotWrite, hrisAttendanceRead,
+            hrisAttendanceWrite, hrisBankaccountRead, hrisBankaccountWrite,
+            hrisBenefitRead, hrisBenefitWrite, hrisCompanyRead,
+            hrisCompanyWrite, hrisDeductionRead, hrisDeductionWrite,
+            hrisDeviceRead, hrisDeviceWrite, hrisDocumentRead,
+            hrisDocumentWrite, hrisEarningRead, hrisEarningWrite,
+            hrisEmployeeRead, hrisEmployeeWrite, hrisGroupRead,
+            hrisGroupWrite, hrisJobRead, hrisJobWrite,
+            hrisLocationRead, hrisLocationWrite, hrisPaycodeRead,
+            hrisPaycodeWrite, hrisPayrollRead, hrisPayrollWrite,
+            hrisPayslipRead, hrisPayslipWrite, hrisTaxonomyRead,
+            hrisTaxonomyWrite, hrisTaxwithholdingRead, hrisTaxwithholdingWrite,
+            hrisTimeoffRead, hrisTimeoffWrite, hrisTimeshiftRead,
+            hrisTimeshiftWrite, kmsCommentRead, kmsCommentWrite,
+            kmsPageRead, kmsPageWrite, kmsSpaceRead,
+            kmsSpaceWrite, legalExpenseRead, legalExpenseWrite,
+            legalMatterRead, legalMatterWrite, legalPracticeareaRead,
+            legalPracticeareaWrite, legalTimeentryRead, legalTimeentryWrite,
+            lmsActivityRead, lmsActivityWrite, lmsClassRead,
+            lmsClassWrite, lmsCollectionRead, lmsCollectionWrite,
+            lmsContentRead, lmsContentWrite, lmsCourseRead,
+            lmsCourseWrite, lmsInstructorRead, lmsInstructorWrite,
+            lmsStudentRead, lmsStudentWrite, martechCampaignRead,
+            martechCampaignWrite, martechListRead, martechListWrite,
+            martechMemberRead, martechMemberWrite, martechReportRead,
+            martechReportWrite, messagingChannelRead, messagingChannelWrite,
+            messagingEventRead, messagingEventWrite, messagingMessageRead,
+            messagingMessageWrite, metadataMetadataRead, metadataMetadataWrite,
+            paymentLinkRead, paymentLinkWrite, paymentPaymentRead,
+            paymentPaymentWrite, paymentPayoutRead, paymentRefundRead,
+            paymentSubscriptionRead, paymentSubscriptionWrite, performanceCycleRead,
+            performanceFeedbackRead, performanceFeedbackWrite, performanceGoalRead,
+            performanceGoalWrite, performanceReviewRead, performanceReviewWrite,
+            plmBomlineRead, plmBomlineWrite, plmCategoryRead,
+            plmCategoryWrite, plmChangeRead, plmChangeWrite,
+            plmDocumentRead, plmDocumentWrite, plmPartRead,
+            plmPartWrite, printingFileRead, printingFileWrite,
+            printingOrderRead, printingOrderWrite, printingProductRead,
+            printingProductWrite, printingQuoteRead, printingQuoteWrite,
+            printingTemplateRead, printingTemplateWrite, propertyAvailabilityRead,
             propertyConversationRead, propertyConversationWrite, propertyGuestRead,
             propertyGuestWrite, propertyListingRead, propertyListingWrite,
             propertyQuoteRead, propertyQuoteWrite, propertyReservationRead,
@@ -7713,6 +8105,20 @@ public class PropertyWorkspaceIntegrationOverridenScopes {
                 "datastoreRecordWrite", datastoreRecordWrite,
                 "datastoreTableRead", datastoreTableRead,
                 "datastoreTableWrite", datastoreTableWrite,
+                "dmsAppointmentRead", dmsAppointmentRead,
+                "dmsAppointmentWrite", dmsAppointmentWrite,
+                "dmsOpcodeRead", dmsOpcodeRead,
+                "dmsOpcodeWrite", dmsOpcodeWrite,
+                "dmsPartRead", dmsPartRead,
+                "dmsPartWrite", dmsPartWrite,
+                "dmsPartsaleRead", dmsPartsaleRead,
+                "dmsPartsaleWrite", dmsPartsaleWrite,
+                "dmsRepairorderRead", dmsRepairorderRead,
+                "dmsRepairorderWrite", dmsRepairorderWrite,
+                "dmsVehicleRead", dmsVehicleRead,
+                "dmsVehicleWrite", dmsVehicleWrite,
+                "dmsVehiclesaleRead", dmsVehiclesaleRead,
+                "dmsVehiclesaleWrite", dmsVehiclesaleWrite,
                 "enrichCompanyRead", enrichCompanyRead,
                 "enrichPersonRead", enrichPersonRead,
                 "formsFormRead", formsFormRead,
@@ -7875,6 +8281,16 @@ public class PropertyWorkspaceIntegrationOverridenScopes {
                 "plmDocumentWrite", plmDocumentWrite,
                 "plmPartRead", plmPartRead,
                 "plmPartWrite", plmPartWrite,
+                "printingFileRead", printingFileRead,
+                "printingFileWrite", printingFileWrite,
+                "printingOrderRead", printingOrderRead,
+                "printingOrderWrite", printingOrderWrite,
+                "printingProductRead", printingProductRead,
+                "printingProductWrite", printingProductWrite,
+                "printingQuoteRead", printingQuoteRead,
+                "printingQuoteWrite", printingQuoteWrite,
+                "printingTemplateRead", printingTemplateRead,
+                "printingTemplateWrite", printingTemplateWrite,
                 "propertyAvailabilityRead", propertyAvailabilityRead,
                 "propertyConversationRead", propertyConversationRead,
                 "propertyConversationWrite", propertyConversationWrite,
@@ -8380,6 +8796,34 @@ public class PropertyWorkspaceIntegrationOverridenScopes {
 
         private String datastoreTableWrite;
 
+        private String dmsAppointmentRead;
+
+        private String dmsAppointmentWrite;
+
+        private String dmsOpcodeRead;
+
+        private String dmsOpcodeWrite;
+
+        private String dmsPartRead;
+
+        private String dmsPartWrite;
+
+        private String dmsPartsaleRead;
+
+        private String dmsPartsaleWrite;
+
+        private String dmsRepairorderRead;
+
+        private String dmsRepairorderWrite;
+
+        private String dmsVehicleRead;
+
+        private String dmsVehicleWrite;
+
+        private String dmsVehiclesaleRead;
+
+        private String dmsVehiclesaleWrite;
+
         private String enrichCompanyRead;
 
         private String enrichPersonRead;
@@ -8703,6 +9147,26 @@ public class PropertyWorkspaceIntegrationOverridenScopes {
         private String plmPartRead;
 
         private String plmPartWrite;
+
+        private String printingFileRead;
+
+        private String printingFileWrite;
+
+        private String printingOrderRead;
+
+        private String printingOrderWrite;
+
+        private String printingProductRead;
+
+        private String printingProductWrite;
+
+        private String printingQuoteRead;
+
+        private String printingQuoteWrite;
+
+        private String printingTemplateRead;
+
+        private String printingTemplateWrite;
 
         private String propertyAvailabilityRead;
 
@@ -10110,6 +10574,90 @@ public class PropertyWorkspaceIntegrationOverridenScopes {
             return this;
         }
 
+        @JsonProperty("dms_appointment_read")
+        public Builder dmsAppointmentRead(@Nullable String dmsAppointmentRead) {
+            this.dmsAppointmentRead = dmsAppointmentRead;
+            return this;
+        }
+
+        @JsonProperty("dms_appointment_write")
+        public Builder dmsAppointmentWrite(@Nullable String dmsAppointmentWrite) {
+            this.dmsAppointmentWrite = dmsAppointmentWrite;
+            return this;
+        }
+
+        @JsonProperty("dms_opcode_read")
+        public Builder dmsOpcodeRead(@Nullable String dmsOpcodeRead) {
+            this.dmsOpcodeRead = dmsOpcodeRead;
+            return this;
+        }
+
+        @JsonProperty("dms_opcode_write")
+        public Builder dmsOpcodeWrite(@Nullable String dmsOpcodeWrite) {
+            this.dmsOpcodeWrite = dmsOpcodeWrite;
+            return this;
+        }
+
+        @JsonProperty("dms_part_read")
+        public Builder dmsPartRead(@Nullable String dmsPartRead) {
+            this.dmsPartRead = dmsPartRead;
+            return this;
+        }
+
+        @JsonProperty("dms_part_write")
+        public Builder dmsPartWrite(@Nullable String dmsPartWrite) {
+            this.dmsPartWrite = dmsPartWrite;
+            return this;
+        }
+
+        @JsonProperty("dms_partsale_read")
+        public Builder dmsPartsaleRead(@Nullable String dmsPartsaleRead) {
+            this.dmsPartsaleRead = dmsPartsaleRead;
+            return this;
+        }
+
+        @JsonProperty("dms_partsale_write")
+        public Builder dmsPartsaleWrite(@Nullable String dmsPartsaleWrite) {
+            this.dmsPartsaleWrite = dmsPartsaleWrite;
+            return this;
+        }
+
+        @JsonProperty("dms_repairorder_read")
+        public Builder dmsRepairorderRead(@Nullable String dmsRepairorderRead) {
+            this.dmsRepairorderRead = dmsRepairorderRead;
+            return this;
+        }
+
+        @JsonProperty("dms_repairorder_write")
+        public Builder dmsRepairorderWrite(@Nullable String dmsRepairorderWrite) {
+            this.dmsRepairorderWrite = dmsRepairorderWrite;
+            return this;
+        }
+
+        @JsonProperty("dms_vehicle_read")
+        public Builder dmsVehicleRead(@Nullable String dmsVehicleRead) {
+            this.dmsVehicleRead = dmsVehicleRead;
+            return this;
+        }
+
+        @JsonProperty("dms_vehicle_write")
+        public Builder dmsVehicleWrite(@Nullable String dmsVehicleWrite) {
+            this.dmsVehicleWrite = dmsVehicleWrite;
+            return this;
+        }
+
+        @JsonProperty("dms_vehiclesale_read")
+        public Builder dmsVehiclesaleRead(@Nullable String dmsVehiclesaleRead) {
+            this.dmsVehiclesaleRead = dmsVehiclesaleRead;
+            return this;
+        }
+
+        @JsonProperty("dms_vehiclesale_write")
+        public Builder dmsVehiclesaleWrite(@Nullable String dmsVehiclesaleWrite) {
+            this.dmsVehiclesaleWrite = dmsVehiclesaleWrite;
+            return this;
+        }
+
         @JsonProperty("enrich_company_read")
         public Builder enrichCompanyRead(@Nullable String enrichCompanyRead) {
             this.enrichCompanyRead = enrichCompanyRead;
@@ -11082,6 +11630,66 @@ public class PropertyWorkspaceIntegrationOverridenScopes {
             return this;
         }
 
+        @JsonProperty("printing_file_read")
+        public Builder printingFileRead(@Nullable String printingFileRead) {
+            this.printingFileRead = printingFileRead;
+            return this;
+        }
+
+        @JsonProperty("printing_file_write")
+        public Builder printingFileWrite(@Nullable String printingFileWrite) {
+            this.printingFileWrite = printingFileWrite;
+            return this;
+        }
+
+        @JsonProperty("printing_order_read")
+        public Builder printingOrderRead(@Nullable String printingOrderRead) {
+            this.printingOrderRead = printingOrderRead;
+            return this;
+        }
+
+        @JsonProperty("printing_order_write")
+        public Builder printingOrderWrite(@Nullable String printingOrderWrite) {
+            this.printingOrderWrite = printingOrderWrite;
+            return this;
+        }
+
+        @JsonProperty("printing_product_read")
+        public Builder printingProductRead(@Nullable String printingProductRead) {
+            this.printingProductRead = printingProductRead;
+            return this;
+        }
+
+        @JsonProperty("printing_product_write")
+        public Builder printingProductWrite(@Nullable String printingProductWrite) {
+            this.printingProductWrite = printingProductWrite;
+            return this;
+        }
+
+        @JsonProperty("printing_quote_read")
+        public Builder printingQuoteRead(@Nullable String printingQuoteRead) {
+            this.printingQuoteRead = printingQuoteRead;
+            return this;
+        }
+
+        @JsonProperty("printing_quote_write")
+        public Builder printingQuoteWrite(@Nullable String printingQuoteWrite) {
+            this.printingQuoteWrite = printingQuoteWrite;
+            return this;
+        }
+
+        @JsonProperty("printing_template_read")
+        public Builder printingTemplateRead(@Nullable String printingTemplateRead) {
+            this.printingTemplateRead = printingTemplateRead;
+            return this;
+        }
+
+        @JsonProperty("printing_template_write")
+        public Builder printingTemplateWrite(@Nullable String printingTemplateWrite) {
+            this.printingTemplateWrite = printingTemplateWrite;
+            return this;
+        }
+
         @JsonProperty("property_availability_read")
         public Builder propertyAvailabilityRead(@Nullable String propertyAvailabilityRead) {
             this.propertyAvailabilityRead = propertyAvailabilityRead;
@@ -11838,6 +12446,20 @@ public class PropertyWorkspaceIntegrationOverridenScopes {
             _instance.datastoreRecordWrite = datastoreRecordWrite;
             _instance.datastoreTableRead = datastoreTableRead;
             _instance.datastoreTableWrite = datastoreTableWrite;
+            _instance.dmsAppointmentRead = dmsAppointmentRead;
+            _instance.dmsAppointmentWrite = dmsAppointmentWrite;
+            _instance.dmsOpcodeRead = dmsOpcodeRead;
+            _instance.dmsOpcodeWrite = dmsOpcodeWrite;
+            _instance.dmsPartRead = dmsPartRead;
+            _instance.dmsPartWrite = dmsPartWrite;
+            _instance.dmsPartsaleRead = dmsPartsaleRead;
+            _instance.dmsPartsaleWrite = dmsPartsaleWrite;
+            _instance.dmsRepairorderRead = dmsRepairorderRead;
+            _instance.dmsRepairorderWrite = dmsRepairorderWrite;
+            _instance.dmsVehicleRead = dmsVehicleRead;
+            _instance.dmsVehicleWrite = dmsVehicleWrite;
+            _instance.dmsVehiclesaleRead = dmsVehiclesaleRead;
+            _instance.dmsVehiclesaleWrite = dmsVehiclesaleWrite;
             _instance.enrichCompanyRead = enrichCompanyRead;
             _instance.enrichPersonRead = enrichPersonRead;
             _instance.formsFormRead = formsFormRead;
@@ -12000,6 +12622,16 @@ public class PropertyWorkspaceIntegrationOverridenScopes {
             _instance.plmDocumentWrite = plmDocumentWrite;
             _instance.plmPartRead = plmPartRead;
             _instance.plmPartWrite = plmPartWrite;
+            _instance.printingFileRead = printingFileRead;
+            _instance.printingFileWrite = printingFileWrite;
+            _instance.printingOrderRead = printingOrderRead;
+            _instance.printingOrderWrite = printingOrderWrite;
+            _instance.printingProductRead = printingProductRead;
+            _instance.printingProductWrite = printingProductWrite;
+            _instance.printingQuoteRead = printingQuoteRead;
+            _instance.printingQuoteWrite = printingQuoteWrite;
+            _instance.printingTemplateRead = printingTemplateRead;
+            _instance.printingTemplateWrite = printingTemplateWrite;
             _instance.propertyAvailabilityRead = propertyAvailabilityRead;
             _instance.propertyConversationRead = propertyConversationRead;
             _instance.propertyConversationWrite = propertyConversationWrite;

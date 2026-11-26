@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateGenaiMemoryRequest;
 import to.unified.unified_java_sdk.models.operations.CreateGenaiMemoryRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateGenaiMemoryResponse;
@@ -31,6 +32,7 @@ import to.unified.unified_java_sdk.operations.PatchGenaiMemory;
 import to.unified.unified_java_sdk.operations.RemoveGenaiMemory;
 import to.unified.unified_java_sdk.operations.UpdateGenaiMemory;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Memory {
@@ -75,8 +77,23 @@ public class Memory {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateGenaiMemoryResponse createGenaiMemory(@Nonnull CreateGenaiMemoryRequest request) {
+        return createGenaiMemory(request, null);
+    }
+
+    /**
+     * Create a memory
+     * 
+     * <p>Creates a GenaiMemory. Provide the unified GenaiMemory fields in the request body; they are mapped
+     * to the provider's API. Returns the created GenaiMemory.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateGenaiMemoryResponse createGenaiMemory(@Nonnull CreateGenaiMemoryRequest request, @Nullable Options options) {
         RequestOperation<CreateGenaiMemoryRequest, CreateGenaiMemoryResponse> operation
-              = new CreateGenaiMemory.Sync(sdkConfiguration, _headers);
+              = new CreateGenaiMemory.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -103,8 +120,23 @@ public class Memory {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetGenaiMemoryResponse getGenaiMemory(@Nonnull GetGenaiMemoryRequest request) {
+        return getGenaiMemory(request, null);
+    }
+
+    /**
+     * Retrieve a memory
+     * 
+     * <p>Retrieves a single GenaiMemory by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetGenaiMemoryResponse getGenaiMemory(@Nonnull GetGenaiMemoryRequest request, @Nullable Options options) {
         RequestOperation<GetGenaiMemoryRequest, GetGenaiMemoryResponse> operation
-              = new GetGenaiMemory.Sync(sdkConfiguration, _headers);
+              = new GetGenaiMemory.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -139,8 +171,27 @@ public class Memory {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListGenaiMemoriesResponse listGenaiMemories(@Nonnull ListGenaiMemoriesRequest request) {
+        return listGenaiMemories(request, null);
+    }
+
+    /**
+     * List all memories
+     * 
+     * <p>Returns a list of GenaiMemories. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListGenaiMemoriesResponse listGenaiMemories(@Nonnull ListGenaiMemoriesRequest request, @Nullable Options options) {
         RequestOperation<ListGenaiMemoriesRequest, ListGenaiMemoriesResponse> operation
-              = new ListGenaiMemories.Sync(sdkConfiguration, _headers);
+              = new ListGenaiMemories.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +218,23 @@ public class Memory {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchGenaiMemoryResponse patchGenaiMemory(@Nonnull PatchGenaiMemoryRequest request) {
+        return patchGenaiMemory(request, null);
+    }
+
+    /**
+     * Update a memory
+     * 
+     * <p>Updates the GenaiMemory identified by `id`. Provide the unified GenaiMemory fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchGenaiMemoryResponse patchGenaiMemory(@Nonnull PatchGenaiMemoryRequest request, @Nullable Options options) {
         RequestOperation<PatchGenaiMemoryRequest, PatchGenaiMemoryResponse> operation
-              = new PatchGenaiMemory.Sync(sdkConfiguration, _headers);
+              = new PatchGenaiMemory.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -193,8 +259,22 @@ public class Memory {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveGenaiMemoryResponse removeGenaiMemory(@Nonnull RemoveGenaiMemoryRequest request) {
+        return removeGenaiMemory(request, null);
+    }
+
+    /**
+     * Remove a memory
+     * 
+     * <p>Deletes the GenaiMemory identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveGenaiMemoryResponse removeGenaiMemory(@Nonnull RemoveGenaiMemoryRequest request, @Nullable Options options) {
         RequestOperation<RemoveGenaiMemoryRequest, RemoveGenaiMemoryResponse> operation
-              = new RemoveGenaiMemory.Sync(sdkConfiguration, _headers);
+              = new RemoveGenaiMemory.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -221,8 +301,23 @@ public class Memory {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateGenaiMemoryResponse updateGenaiMemory(@Nonnull UpdateGenaiMemoryRequest request) {
+        return updateGenaiMemory(request, null);
+    }
+
+    /**
+     * Update a memory
+     * 
+     * <p>Updates the GenaiMemory identified by `id`. Provide the unified GenaiMemory fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateGenaiMemoryResponse updateGenaiMemory(@Nonnull UpdateGenaiMemoryRequest request, @Nullable Options options) {
         RequestOperation<UpdateGenaiMemoryRequest, UpdateGenaiMemoryResponse> operation
-              = new UpdateGenaiMemory.Sync(sdkConfiguration, _headers);
+              = new UpdateGenaiMemory.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

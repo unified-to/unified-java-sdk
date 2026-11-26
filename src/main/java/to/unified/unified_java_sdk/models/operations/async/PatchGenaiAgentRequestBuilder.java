@@ -6,20 +6,30 @@ package to.unified.unified_java_sdk.models.operations.async;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.PatchGenaiAgentRequest;
 import to.unified.unified_java_sdk.operations.PatchGenaiAgent;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class PatchGenaiAgentRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private PatchGenaiAgentRequest request;
+    private final Options.Builder optionsBuilder;
 
     public PatchGenaiAgentRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public PatchGenaiAgentRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public PatchGenaiAgentRequestBuilder request(@Nonnull PatchGenaiAgentRequest request) {
@@ -44,8 +54,9 @@ public class PatchGenaiAgentRequestBuilder {
     * @return The response from the server.
     */
     public CompletableFuture<PatchGenaiAgentResponse> call() {
+        Options options = optionsBuilder.build();
         AsyncRequestOperation<PatchGenaiAgentRequest, PatchGenaiAgentResponse> operation
-              = new PatchGenaiAgent.Async(sdkConfiguration, _headers);
+              = new PatchGenaiAgent.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

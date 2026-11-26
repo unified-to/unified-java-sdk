@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.GetAccountingAgedreceivableRequest;
 import to.unified.unified_java_sdk.models.operations.ListAccountingAgedreceivablesRequest;
@@ -16,6 +17,7 @@ import to.unified.unified_java_sdk.models.operations.async.ListAccountingAgedrec
 import to.unified.unified_java_sdk.operations.GetAccountingAgedreceivable;
 import to.unified.unified_java_sdk.operations.ListAccountingAgedreceivables;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncAgedreceivable {
@@ -60,8 +62,22 @@ public class AsyncAgedreceivable {
      * @return {@code CompletableFuture<GetAccountingAgedreceivableResponse>} - The async response
      */
     public CompletableFuture<GetAccountingAgedreceivableResponse> getAccountingAgedreceivable(@Nonnull GetAccountingAgedreceivableRequest request) {
+        return getAccountingAgedreceivable(request, null);
+    }
+
+    /**
+     * Retrieve an agedreceivable
+     * 
+     * <p>Retrieves a single AccountingAgedreceivable by its `id`. Obtain `id` values from the corresponding
+     * list endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetAccountingAgedreceivableResponse>} - The async response
+     */
+    public CompletableFuture<GetAccountingAgedreceivableResponse> getAccountingAgedreceivable(@Nonnull GetAccountingAgedreceivableRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetAccountingAgedreceivableRequest, GetAccountingAgedreceivableResponse> operation
-              = new GetAccountingAgedreceivable.Async(sdkConfiguration, _headers);
+              = new GetAccountingAgedreceivable.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -97,8 +113,26 @@ public class AsyncAgedreceivable {
      * @return {@code CompletableFuture<ListAccountingAgedreceivablesResponse>} - The async response
      */
     public CompletableFuture<ListAccountingAgedreceivablesResponse> listAccountingAgedreceivables(@Nonnull ListAccountingAgedreceivablesRequest request) {
+        return listAccountingAgedreceivables(request, null);
+    }
+
+    /**
+     * List all agedreceivables
+     * 
+     * <p>Returns a list of AccountingAgedreceivables. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListAccountingAgedreceivablesResponse>} - The async response
+     */
+    public CompletableFuture<ListAccountingAgedreceivablesResponse> listAccountingAgedreceivables(@Nonnull ListAccountingAgedreceivablesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListAccountingAgedreceivablesRequest, ListAccountingAgedreceivablesResponse> operation
-              = new ListAccountingAgedreceivables.Async(sdkConfiguration, _headers);
+              = new ListAccountingAgedreceivables.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

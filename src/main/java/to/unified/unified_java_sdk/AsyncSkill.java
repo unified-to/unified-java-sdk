@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.GetGenaiSkillRequest;
 import to.unified.unified_java_sdk.models.operations.ListGenaiSkillsRequest;
@@ -20,6 +21,7 @@ import to.unified.unified_java_sdk.operations.GetGenaiSkill;
 import to.unified.unified_java_sdk.operations.ListGenaiSkills;
 import to.unified.unified_java_sdk.operations.RemoveGenaiSkill;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncSkill {
@@ -64,8 +66,22 @@ public class AsyncSkill {
      * @return {@code CompletableFuture<GetGenaiSkillResponse>} - The async response
      */
     public CompletableFuture<GetGenaiSkillResponse> getGenaiSkill(@Nonnull GetGenaiSkillRequest request) {
+        return getGenaiSkill(request, null);
+    }
+
+    /**
+     * Retrieve a skill
+     * 
+     * <p>Retrieves a single GenaiSkill by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetGenaiSkillResponse>} - The async response
+     */
+    public CompletableFuture<GetGenaiSkillResponse> getGenaiSkill(@Nonnull GetGenaiSkillRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetGenaiSkillRequest, GetGenaiSkillResponse> operation
-              = new GetGenaiSkill.Async(sdkConfiguration, _headers);
+              = new GetGenaiSkill.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -101,8 +117,26 @@ public class AsyncSkill {
      * @return {@code CompletableFuture<ListGenaiSkillsResponse>} - The async response
      */
     public CompletableFuture<ListGenaiSkillsResponse> listGenaiSkills(@Nonnull ListGenaiSkillsRequest request) {
+        return listGenaiSkills(request, null);
+    }
+
+    /**
+     * List all skills
+     * 
+     * <p>Returns a list of GenaiSkills. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListGenaiSkillsResponse>} - The async response
+     */
+    public CompletableFuture<ListGenaiSkillsResponse> listGenaiSkills(@Nonnull ListGenaiSkillsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListGenaiSkillsRequest, ListGenaiSkillsResponse> operation
-              = new ListGenaiSkills.Async(sdkConfiguration, _headers);
+              = new ListGenaiSkills.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -128,8 +162,21 @@ public class AsyncSkill {
      * @return {@code CompletableFuture<RemoveGenaiSkillResponse>} - The async response
      */
     public CompletableFuture<RemoveGenaiSkillResponse> removeGenaiSkill(@Nonnull RemoveGenaiSkillRequest request) {
+        return removeGenaiSkill(request, null);
+    }
+
+    /**
+     * Remove a skill
+     * 
+     * <p>Deletes the GenaiSkill identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveGenaiSkillResponse>} - The async response
+     */
+    public CompletableFuture<RemoveGenaiSkillResponse> removeGenaiSkill(@Nonnull RemoveGenaiSkillRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveGenaiSkillRequest, RemoveGenaiSkillResponse> operation
-              = new RemoveGenaiSkill.Async(sdkConfiguration, _headers);
+              = new RemoveGenaiSkill.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

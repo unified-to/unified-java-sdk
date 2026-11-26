@@ -6,20 +6,30 @@ package to.unified.unified_java_sdk.models.operations.async;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingExpenseRequest;
 import to.unified.unified_java_sdk.operations.PatchAccountingExpense;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class PatchAccountingExpenseRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private PatchAccountingExpenseRequest request;
+    private final Options.Builder optionsBuilder;
 
     public PatchAccountingExpenseRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public PatchAccountingExpenseRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public PatchAccountingExpenseRequestBuilder request(@Nonnull PatchAccountingExpenseRequest request) {
@@ -44,8 +54,9 @@ public class PatchAccountingExpenseRequestBuilder {
     * @return The response from the server.
     */
     public CompletableFuture<PatchAccountingExpenseResponse> call() {
+        Options options = optionsBuilder.build();
         AsyncRequestOperation<PatchAccountingExpenseRequest, PatchAccountingExpenseResponse> operation
-              = new PatchAccountingExpense.Async(sdkConfiguration, _headers);
+              = new PatchAccountingExpense.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

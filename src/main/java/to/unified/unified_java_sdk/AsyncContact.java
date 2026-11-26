@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingContactRequest;
 import to.unified.unified_java_sdk.models.operations.CreateCrmContactRequest;
@@ -80,6 +81,7 @@ import to.unified.unified_java_sdk.operations.UpdateAccountingContact;
 import to.unified.unified_java_sdk.operations.UpdateCrmContact;
 import to.unified.unified_java_sdk.operations.UpdateUcContact;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncContact {
@@ -124,8 +126,22 @@ public class AsyncContact {
      * @return {@code CompletableFuture<CreateAccountingContactResponse>} - The async response
      */
     public CompletableFuture<CreateAccountingContactResponse> createAccountingContact(@Nonnull CreateAccountingContactRequest request) {
+        return createAccountingContact(request, null);
+    }
+
+    /**
+     * Create a contact
+     * 
+     * <p>Creates a AccountingContact. Provide the unified AccountingContact fields in the request body; they
+     * are mapped to the provider's API. Returns the created AccountingContact.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateAccountingContactResponse>} - The async response
+     */
+    public CompletableFuture<CreateAccountingContactResponse> createAccountingContact(@Nonnull CreateAccountingContactRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateAccountingContactRequest, CreateAccountingContactResponse> operation
-              = new CreateAccountingContact.Async(sdkConfiguration, _headers);
+              = new CreateAccountingContact.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -153,8 +169,22 @@ public class AsyncContact {
      * @return {@code CompletableFuture<CreateCrmContactResponse>} - The async response
      */
     public CompletableFuture<CreateCrmContactResponse> createCrmContact(@Nonnull CreateCrmContactRequest request) {
+        return createCrmContact(request, null);
+    }
+
+    /**
+     * Create a contact
+     * 
+     * <p>Creates a CrmContact. Provide the unified CrmContact fields in the request body; they are mapped to
+     * the provider's API. Returns the created CrmContact.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateCrmContactResponse>} - The async response
+     */
+    public CompletableFuture<CreateCrmContactResponse> createCrmContact(@Nonnull CreateCrmContactRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateCrmContactRequest, CreateCrmContactResponse> operation
-              = new CreateCrmContact.Async(sdkConfiguration, _headers);
+              = new CreateCrmContact.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -182,8 +212,22 @@ public class AsyncContact {
      * @return {@code CompletableFuture<CreateUcContactResponse>} - The async response
      */
     public CompletableFuture<CreateUcContactResponse> createUcContact(@Nonnull CreateUcContactRequest request) {
+        return createUcContact(request, null);
+    }
+
+    /**
+     * Create a contact
+     * 
+     * <p>Creates a UcContact. Provide the unified UcContact fields in the request body; they are mapped to
+     * the provider's API. Returns the created UcContact.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateUcContactResponse>} - The async response
+     */
+    public CompletableFuture<CreateUcContactResponse> createUcContact(@Nonnull CreateUcContactRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateUcContactRequest, CreateUcContactResponse> operation
-              = new CreateUcContact.Async(sdkConfiguration, _headers);
+              = new CreateUcContact.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -211,8 +255,22 @@ public class AsyncContact {
      * @return {@code CompletableFuture<GetAccountingContactResponse>} - The async response
      */
     public CompletableFuture<GetAccountingContactResponse> getAccountingContact(@Nonnull GetAccountingContactRequest request) {
+        return getAccountingContact(request, null);
+    }
+
+    /**
+     * Retrieve a contact
+     * 
+     * <p>Retrieves a single AccountingContact by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetAccountingContactResponse>} - The async response
+     */
+    public CompletableFuture<GetAccountingContactResponse> getAccountingContact(@Nonnull GetAccountingContactRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetAccountingContactRequest, GetAccountingContactResponse> operation
-              = new GetAccountingContact.Async(sdkConfiguration, _headers);
+              = new GetAccountingContact.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -240,8 +298,22 @@ public class AsyncContact {
      * @return {@code CompletableFuture<GetCrmContactResponse>} - The async response
      */
     public CompletableFuture<GetCrmContactResponse> getCrmContact(@Nonnull GetCrmContactRequest request) {
+        return getCrmContact(request, null);
+    }
+
+    /**
+     * Retrieve a contact
+     * 
+     * <p>Retrieves a single CrmContact by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetCrmContactResponse>} - The async response
+     */
+    public CompletableFuture<GetCrmContactResponse> getCrmContact(@Nonnull GetCrmContactRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetCrmContactRequest, GetCrmContactResponse> operation
-              = new GetCrmContact.Async(sdkConfiguration, _headers);
+              = new GetCrmContact.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -269,8 +341,22 @@ public class AsyncContact {
      * @return {@code CompletableFuture<GetUcContactResponse>} - The async response
      */
     public CompletableFuture<GetUcContactResponse> getUcContact(@Nonnull GetUcContactRequest request) {
+        return getUcContact(request, null);
+    }
+
+    /**
+     * Retrieve a contact
+     * 
+     * <p>Retrieves a single UcContact by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetUcContactResponse>} - The async response
+     */
+    public CompletableFuture<GetUcContactResponse> getUcContact(@Nonnull GetUcContactRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetUcContactRequest, GetUcContactResponse> operation
-              = new GetUcContact.Async(sdkConfiguration, _headers);
+              = new GetUcContact.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -306,8 +392,26 @@ public class AsyncContact {
      * @return {@code CompletableFuture<ListAccountingContactsResponse>} - The async response
      */
     public CompletableFuture<ListAccountingContactsResponse> listAccountingContacts(@Nonnull ListAccountingContactsRequest request) {
+        return listAccountingContacts(request, null);
+    }
+
+    /**
+     * List all contacts
+     * 
+     * <p>Returns a list of AccountingContacts. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListAccountingContactsResponse>} - The async response
+     */
+    public CompletableFuture<ListAccountingContactsResponse> listAccountingContacts(@Nonnull ListAccountingContactsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListAccountingContactsRequest, ListAccountingContactsResponse> operation
-              = new ListAccountingContacts.Async(sdkConfiguration, _headers);
+              = new ListAccountingContacts.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -343,8 +447,26 @@ public class AsyncContact {
      * @return {@code CompletableFuture<ListCrmContactsResponse>} - The async response
      */
     public CompletableFuture<ListCrmContactsResponse> listCrmContacts(@Nonnull ListCrmContactsRequest request) {
+        return listCrmContacts(request, null);
+    }
+
+    /**
+     * List all contacts
+     * 
+     * <p>Returns a list of CrmContacts. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListCrmContactsResponse>} - The async response
+     */
+    public CompletableFuture<ListCrmContactsResponse> listCrmContacts(@Nonnull ListCrmContactsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListCrmContactsRequest, ListCrmContactsResponse> operation
-              = new ListCrmContacts.Async(sdkConfiguration, _headers);
+              = new ListCrmContacts.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -380,8 +502,26 @@ public class AsyncContact {
      * @return {@code CompletableFuture<ListUcContactsResponse>} - The async response
      */
     public CompletableFuture<ListUcContactsResponse> listUcContacts(@Nonnull ListUcContactsRequest request) {
+        return listUcContacts(request, null);
+    }
+
+    /**
+     * List all contacts
+     * 
+     * <p>Returns a list of UcContacts. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListUcContactsResponse>} - The async response
+     */
+    public CompletableFuture<ListUcContactsResponse> listUcContacts(@Nonnull ListUcContactsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListUcContactsRequest, ListUcContactsResponse> operation
-              = new ListUcContacts.Async(sdkConfiguration, _headers);
+              = new ListUcContacts.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -409,8 +549,22 @@ public class AsyncContact {
      * @return {@code CompletableFuture<PatchAccountingContactResponse>} - The async response
      */
     public CompletableFuture<PatchAccountingContactResponse> patchAccountingContact(@Nonnull PatchAccountingContactRequest request) {
+        return patchAccountingContact(request, null);
+    }
+
+    /**
+     * Update a contact
+     * 
+     * <p>Updates the AccountingContact identified by `id`. Provide the unified AccountingContact fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchAccountingContactResponse>} - The async response
+     */
+    public CompletableFuture<PatchAccountingContactResponse> patchAccountingContact(@Nonnull PatchAccountingContactRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchAccountingContactRequest, PatchAccountingContactResponse> operation
-              = new PatchAccountingContact.Async(sdkConfiguration, _headers);
+              = new PatchAccountingContact.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -438,8 +592,22 @@ public class AsyncContact {
      * @return {@code CompletableFuture<PatchCrmContactResponse>} - The async response
      */
     public CompletableFuture<PatchCrmContactResponse> patchCrmContact(@Nonnull PatchCrmContactRequest request) {
+        return patchCrmContact(request, null);
+    }
+
+    /**
+     * Update a contact
+     * 
+     * <p>Updates the CrmContact identified by `id`. Provide the unified CrmContact fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchCrmContactResponse>} - The async response
+     */
+    public CompletableFuture<PatchCrmContactResponse> patchCrmContact(@Nonnull PatchCrmContactRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchCrmContactRequest, PatchCrmContactResponse> operation
-              = new PatchCrmContact.Async(sdkConfiguration, _headers);
+              = new PatchCrmContact.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -467,8 +635,22 @@ public class AsyncContact {
      * @return {@code CompletableFuture<PatchUcContactResponse>} - The async response
      */
     public CompletableFuture<PatchUcContactResponse> patchUcContact(@Nonnull PatchUcContactRequest request) {
+        return patchUcContact(request, null);
+    }
+
+    /**
+     * Update a contact
+     * 
+     * <p>Updates the UcContact identified by `id`. Provide the unified UcContact fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchUcContactResponse>} - The async response
+     */
+    public CompletableFuture<PatchUcContactResponse> patchUcContact(@Nonnull PatchUcContactRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchUcContactRequest, PatchUcContactResponse> operation
-              = new PatchUcContact.Async(sdkConfiguration, _headers);
+              = new PatchUcContact.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -494,8 +676,21 @@ public class AsyncContact {
      * @return {@code CompletableFuture<RemoveAccountingContactResponse>} - The async response
      */
     public CompletableFuture<RemoveAccountingContactResponse> removeAccountingContact(@Nonnull RemoveAccountingContactRequest request) {
+        return removeAccountingContact(request, null);
+    }
+
+    /**
+     * Remove a contact
+     * 
+     * <p>Deletes the AccountingContact identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveAccountingContactResponse>} - The async response
+     */
+    public CompletableFuture<RemoveAccountingContactResponse> removeAccountingContact(@Nonnull RemoveAccountingContactRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveAccountingContactRequest, RemoveAccountingContactResponse> operation
-              = new RemoveAccountingContact.Async(sdkConfiguration, _headers);
+              = new RemoveAccountingContact.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -521,8 +716,21 @@ public class AsyncContact {
      * @return {@code CompletableFuture<RemoveCrmContactResponse>} - The async response
      */
     public CompletableFuture<RemoveCrmContactResponse> removeCrmContact(@Nonnull RemoveCrmContactRequest request) {
+        return removeCrmContact(request, null);
+    }
+
+    /**
+     * Remove a contact
+     * 
+     * <p>Deletes the CrmContact identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveCrmContactResponse>} - The async response
+     */
+    public CompletableFuture<RemoveCrmContactResponse> removeCrmContact(@Nonnull RemoveCrmContactRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveCrmContactRequest, RemoveCrmContactResponse> operation
-              = new RemoveCrmContact.Async(sdkConfiguration, _headers);
+              = new RemoveCrmContact.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -548,8 +756,21 @@ public class AsyncContact {
      * @return {@code CompletableFuture<RemoveUcContactResponse>} - The async response
      */
     public CompletableFuture<RemoveUcContactResponse> removeUcContact(@Nonnull RemoveUcContactRequest request) {
+        return removeUcContact(request, null);
+    }
+
+    /**
+     * Remove a contact
+     * 
+     * <p>Deletes the UcContact identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveUcContactResponse>} - The async response
+     */
+    public CompletableFuture<RemoveUcContactResponse> removeUcContact(@Nonnull RemoveUcContactRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveUcContactRequest, RemoveUcContactResponse> operation
-              = new RemoveUcContact.Async(sdkConfiguration, _headers);
+              = new RemoveUcContact.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -577,8 +798,22 @@ public class AsyncContact {
      * @return {@code CompletableFuture<UpdateAccountingContactResponse>} - The async response
      */
     public CompletableFuture<UpdateAccountingContactResponse> updateAccountingContact(@Nonnull UpdateAccountingContactRequest request) {
+        return updateAccountingContact(request, null);
+    }
+
+    /**
+     * Update a contact
+     * 
+     * <p>Updates the AccountingContact identified by `id`. Provide the unified AccountingContact fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateAccountingContactResponse>} - The async response
+     */
+    public CompletableFuture<UpdateAccountingContactResponse> updateAccountingContact(@Nonnull UpdateAccountingContactRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateAccountingContactRequest, UpdateAccountingContactResponse> operation
-              = new UpdateAccountingContact.Async(sdkConfiguration, _headers);
+              = new UpdateAccountingContact.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -606,8 +841,22 @@ public class AsyncContact {
      * @return {@code CompletableFuture<UpdateCrmContactResponse>} - The async response
      */
     public CompletableFuture<UpdateCrmContactResponse> updateCrmContact(@Nonnull UpdateCrmContactRequest request) {
+        return updateCrmContact(request, null);
+    }
+
+    /**
+     * Update a contact
+     * 
+     * <p>Updates the CrmContact identified by `id`. Provide the unified CrmContact fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateCrmContactResponse>} - The async response
+     */
+    public CompletableFuture<UpdateCrmContactResponse> updateCrmContact(@Nonnull UpdateCrmContactRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateCrmContactRequest, UpdateCrmContactResponse> operation
-              = new UpdateCrmContact.Async(sdkConfiguration, _headers);
+              = new UpdateCrmContact.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -635,8 +884,22 @@ public class AsyncContact {
      * @return {@code CompletableFuture<UpdateUcContactResponse>} - The async response
      */
     public CompletableFuture<UpdateUcContactResponse> updateUcContact(@Nonnull UpdateUcContactRequest request) {
+        return updateUcContact(request, null);
+    }
+
+    /**
+     * Update a contact
+     * 
+     * <p>Updates the UcContact identified by `id`. Provide the unified UcContact fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateUcContactResponse>} - The async response
+     */
+    public CompletableFuture<UpdateUcContactResponse> updateUcContact(@Nonnull UpdateUcContactRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateUcContactRequest, UpdateUcContactResponse> operation
-              = new UpdateUcContact.Async(sdkConfiguration, _headers);
+              = new UpdateUcContact.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

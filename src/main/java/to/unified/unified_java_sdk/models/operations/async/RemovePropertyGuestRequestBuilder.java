@@ -6,20 +6,30 @@ package to.unified.unified_java_sdk.models.operations.async;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.RemovePropertyGuestRequest;
 import to.unified.unified_java_sdk.operations.RemovePropertyGuest;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemovePropertyGuestRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private RemovePropertyGuestRequest request;
+    private final Options.Builder optionsBuilder;
 
     public RemovePropertyGuestRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public RemovePropertyGuestRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public RemovePropertyGuestRequestBuilder request(@Nonnull RemovePropertyGuestRequest request) {
@@ -44,8 +54,9 @@ public class RemovePropertyGuestRequestBuilder {
     * @return The response from the server.
     */
     public CompletableFuture<RemovePropertyGuestResponse> call() {
+        Options options = optionsBuilder.build();
         AsyncRequestOperation<RemovePropertyGuestRequest, RemovePropertyGuestResponse> operation
-              = new RemovePropertyGuest.Async(sdkConfiguration, _headers);
+              = new RemovePropertyGuest.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

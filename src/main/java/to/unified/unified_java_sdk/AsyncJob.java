@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateAtsJobRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisJobRequest;
@@ -56,6 +57,7 @@ import to.unified.unified_java_sdk.operations.RemoveHrisJob;
 import to.unified.unified_java_sdk.operations.UpdateAtsJob;
 import to.unified.unified_java_sdk.operations.UpdateHrisJob;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncJob {
@@ -100,8 +102,22 @@ public class AsyncJob {
      * @return {@code CompletableFuture<CreateAtsJobResponse>} - The async response
      */
     public CompletableFuture<CreateAtsJobResponse> createAtsJob(@Nonnull CreateAtsJobRequest request) {
+        return createAtsJob(request, null);
+    }
+
+    /**
+     * Create a job
+     * 
+     * <p>Creates a AtsJob. Provide the unified AtsJob fields in the request body; they are mapped to the
+     * provider's API. Returns the created AtsJob.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateAtsJobResponse>} - The async response
+     */
+    public CompletableFuture<CreateAtsJobResponse> createAtsJob(@Nonnull CreateAtsJobRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateAtsJobRequest, CreateAtsJobResponse> operation
-              = new CreateAtsJob.Async(sdkConfiguration, _headers);
+              = new CreateAtsJob.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -129,8 +145,22 @@ public class AsyncJob {
      * @return {@code CompletableFuture<CreateHrisJobResponse>} - The async response
      */
     public CompletableFuture<CreateHrisJobResponse> createHrisJob(@Nonnull CreateHrisJobRequest request) {
+        return createHrisJob(request, null);
+    }
+
+    /**
+     * Create a job
+     * 
+     * <p>Creates a HrisJob. Provide the unified HrisJob fields in the request body; they are mapped to the
+     * provider's API. Returns the created HrisJob.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateHrisJobResponse>} - The async response
+     */
+    public CompletableFuture<CreateHrisJobResponse> createHrisJob(@Nonnull CreateHrisJobRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateHrisJobRequest, CreateHrisJobResponse> operation
-              = new CreateHrisJob.Async(sdkConfiguration, _headers);
+              = new CreateHrisJob.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -158,8 +188,22 @@ public class AsyncJob {
      * @return {@code CompletableFuture<GetAtsJobResponse>} - The async response
      */
     public CompletableFuture<GetAtsJobResponse> getAtsJob(@Nonnull GetAtsJobRequest request) {
+        return getAtsJob(request, null);
+    }
+
+    /**
+     * Retrieve a job
+     * 
+     * <p>Retrieves a single AtsJob by its `id`. Obtain `id` values from the corresponding list endpoint. Use
+     * `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetAtsJobResponse>} - The async response
+     */
+    public CompletableFuture<GetAtsJobResponse> getAtsJob(@Nonnull GetAtsJobRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetAtsJobRequest, GetAtsJobResponse> operation
-              = new GetAtsJob.Async(sdkConfiguration, _headers);
+              = new GetAtsJob.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -187,8 +231,22 @@ public class AsyncJob {
      * @return {@code CompletableFuture<GetHrisJobResponse>} - The async response
      */
     public CompletableFuture<GetHrisJobResponse> getHrisJob(@Nonnull GetHrisJobRequest request) {
+        return getHrisJob(request, null);
+    }
+
+    /**
+     * Retrieve a job
+     * 
+     * <p>Retrieves a single HrisJob by its `id`. Obtain `id` values from the corresponding list endpoint. Use
+     * `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetHrisJobResponse>} - The async response
+     */
+    public CompletableFuture<GetHrisJobResponse> getHrisJob(@Nonnull GetHrisJobRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetHrisJobRequest, GetHrisJobResponse> operation
-              = new GetHrisJob.Async(sdkConfiguration, _headers);
+              = new GetHrisJob.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -224,8 +282,26 @@ public class AsyncJob {
      * @return {@code CompletableFuture<ListAtsJobsResponse>} - The async response
      */
     public CompletableFuture<ListAtsJobsResponse> listAtsJobs(@Nonnull ListAtsJobsRequest request) {
+        return listAtsJobs(request, null);
+    }
+
+    /**
+     * List all jobs
+     * 
+     * <p>Returns a list of AtsJobs. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListAtsJobsResponse>} - The async response
+     */
+    public CompletableFuture<ListAtsJobsResponse> listAtsJobs(@Nonnull ListAtsJobsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListAtsJobsRequest, ListAtsJobsResponse> operation
-              = new ListAtsJobs.Async(sdkConfiguration, _headers);
+              = new ListAtsJobs.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -261,8 +337,26 @@ public class AsyncJob {
      * @return {@code CompletableFuture<ListHrisJobsResponse>} - The async response
      */
     public CompletableFuture<ListHrisJobsResponse> listHrisJobs(@Nonnull ListHrisJobsRequest request) {
+        return listHrisJobs(request, null);
+    }
+
+    /**
+     * List all jobs
+     * 
+     * <p>Returns a list of HrisJobs. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListHrisJobsResponse>} - The async response
+     */
+    public CompletableFuture<ListHrisJobsResponse> listHrisJobs(@Nonnull ListHrisJobsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListHrisJobsRequest, ListHrisJobsResponse> operation
-              = new ListHrisJobs.Async(sdkConfiguration, _headers);
+              = new ListHrisJobs.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -290,8 +384,22 @@ public class AsyncJob {
      * @return {@code CompletableFuture<PatchAtsJobResponse>} - The async response
      */
     public CompletableFuture<PatchAtsJobResponse> patchAtsJob(@Nonnull PatchAtsJobRequest request) {
+        return patchAtsJob(request, null);
+    }
+
+    /**
+     * Update a job
+     * 
+     * <p>Updates the AtsJob identified by `id`. Provide the unified AtsJob fields to change in the request
+     * body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchAtsJobResponse>} - The async response
+     */
+    public CompletableFuture<PatchAtsJobResponse> patchAtsJob(@Nonnull PatchAtsJobRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchAtsJobRequest, PatchAtsJobResponse> operation
-              = new PatchAtsJob.Async(sdkConfiguration, _headers);
+              = new PatchAtsJob.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -319,8 +427,22 @@ public class AsyncJob {
      * @return {@code CompletableFuture<PatchHrisJobResponse>} - The async response
      */
     public CompletableFuture<PatchHrisJobResponse> patchHrisJob(@Nonnull PatchHrisJobRequest request) {
+        return patchHrisJob(request, null);
+    }
+
+    /**
+     * Update a job
+     * 
+     * <p>Updates the HrisJob identified by `id`. Provide the unified HrisJob fields to change in the request
+     * body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchHrisJobResponse>} - The async response
+     */
+    public CompletableFuture<PatchHrisJobResponse> patchHrisJob(@Nonnull PatchHrisJobRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchHrisJobRequest, PatchHrisJobResponse> operation
-              = new PatchHrisJob.Async(sdkConfiguration, _headers);
+              = new PatchHrisJob.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -346,8 +468,21 @@ public class AsyncJob {
      * @return {@code CompletableFuture<RemoveAtsJobResponse>} - The async response
      */
     public CompletableFuture<RemoveAtsJobResponse> removeAtsJob(@Nonnull RemoveAtsJobRequest request) {
+        return removeAtsJob(request, null);
+    }
+
+    /**
+     * Remove a job
+     * 
+     * <p>Deletes the AtsJob identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveAtsJobResponse>} - The async response
+     */
+    public CompletableFuture<RemoveAtsJobResponse> removeAtsJob(@Nonnull RemoveAtsJobRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveAtsJobRequest, RemoveAtsJobResponse> operation
-              = new RemoveAtsJob.Async(sdkConfiguration, _headers);
+              = new RemoveAtsJob.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -373,8 +508,21 @@ public class AsyncJob {
      * @return {@code CompletableFuture<RemoveHrisJobResponse>} - The async response
      */
     public CompletableFuture<RemoveHrisJobResponse> removeHrisJob(@Nonnull RemoveHrisJobRequest request) {
+        return removeHrisJob(request, null);
+    }
+
+    /**
+     * Remove a job
+     * 
+     * <p>Deletes the HrisJob identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveHrisJobResponse>} - The async response
+     */
+    public CompletableFuture<RemoveHrisJobResponse> removeHrisJob(@Nonnull RemoveHrisJobRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveHrisJobRequest, RemoveHrisJobResponse> operation
-              = new RemoveHrisJob.Async(sdkConfiguration, _headers);
+              = new RemoveHrisJob.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -402,8 +550,22 @@ public class AsyncJob {
      * @return {@code CompletableFuture<UpdateAtsJobResponse>} - The async response
      */
     public CompletableFuture<UpdateAtsJobResponse> updateAtsJob(@Nonnull UpdateAtsJobRequest request) {
+        return updateAtsJob(request, null);
+    }
+
+    /**
+     * Update a job
+     * 
+     * <p>Updates the AtsJob identified by `id`. Provide the unified AtsJob fields to change in the request
+     * body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateAtsJobResponse>} - The async response
+     */
+    public CompletableFuture<UpdateAtsJobResponse> updateAtsJob(@Nonnull UpdateAtsJobRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateAtsJobRequest, UpdateAtsJobResponse> operation
-              = new UpdateAtsJob.Async(sdkConfiguration, _headers);
+              = new UpdateAtsJob.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -431,8 +593,22 @@ public class AsyncJob {
      * @return {@code CompletableFuture<UpdateHrisJobResponse>} - The async response
      */
     public CompletableFuture<UpdateHrisJobResponse> updateHrisJob(@Nonnull UpdateHrisJobRequest request) {
+        return updateHrisJob(request, null);
+    }
+
+    /**
+     * Update a job
+     * 
+     * <p>Updates the HrisJob identified by `id`. Provide the unified HrisJob fields to change in the request
+     * body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateHrisJobResponse>} - The async response
+     */
+    public CompletableFuture<UpdateHrisJobResponse> updateHrisJob(@Nonnull UpdateHrisJobRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateHrisJobRequest, UpdateHrisJobResponse> operation
-              = new UpdateHrisJob.Async(sdkConfiguration, _headers);
+              = new UpdateHrisJob.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

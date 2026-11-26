@@ -18,10 +18,25 @@ import java.util.Optional;
  * without runtime errors. Instances are immutable singletons with reference equality.
  * Use {@code asEnum()} for switch expressions.
  */
+/**
+ * ResourceType
+ * 
+ * <p>Always AllergyIntolerance
+ */
 public class ResourceType {
 
-    public static final ResourceType USER = new ResourceType("User");
-    public static final ResourceType GROUP = new ResourceType("Group");
+    public static final ResourceType PATIENT = new ResourceType("Patient");
+    public static final ResourceType PRACTITIONER = new ResourceType("Practitioner");
+    public static final ResourceType ENCOUNTER = new ResourceType("Encounter");
+    public static final ResourceType OBSERVATION = new ResourceType("Observation");
+    public static final ResourceType CONDITION = new ResourceType("Condition");
+    public static final ResourceType ALLERGY_INTOLERANCE = new ResourceType("AllergyIntolerance");
+    public static final ResourceType MEDICATION_REQUEST = new ResourceType("MedicationRequest");
+    public static final ResourceType IMMUNIZATION = new ResourceType("Immunization");
+    public static final ResourceType BUNDLE = new ResourceType("Bundle");
+    public static final ResourceType OPERATION_OUTCOME = new ResourceType("OperationOutcome");
+    public static final ResourceType CAPABILITY_STATEMENT = new ResourceType("CapabilityStatement");
+    public static final ResourceType DIAGNOSTIC_REPORT = new ResourceType("DiagnosticReport");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -95,23 +110,53 @@ public class ResourceType {
 
     private static final Map<String, ResourceType> createValuesMap() {
         Map<String, ResourceType> map = new LinkedHashMap<>();
-        map.put("User", USER);
-        map.put("Group", GROUP);
+        map.put("Patient", PATIENT);
+        map.put("Practitioner", PRACTITIONER);
+        map.put("Encounter", ENCOUNTER);
+        map.put("Observation", OBSERVATION);
+        map.put("Condition", CONDITION);
+        map.put("AllergyIntolerance", ALLERGY_INTOLERANCE);
+        map.put("MedicationRequest", MEDICATION_REQUEST);
+        map.put("Immunization", IMMUNIZATION);
+        map.put("Bundle", BUNDLE);
+        map.put("OperationOutcome", OPERATION_OUTCOME);
+        map.put("CapabilityStatement", CAPABILITY_STATEMENT);
+        map.put("DiagnosticReport", DIAGNOSTIC_REPORT);
         return map;
     }
 
     private static final Map<String, ResourceTypeEnum> createEnumsMap() {
         Map<String, ResourceTypeEnum> map = new HashMap<>();
-        map.put("User", ResourceTypeEnum.USER);
-        map.put("Group", ResourceTypeEnum.GROUP);
+        map.put("Patient", ResourceTypeEnum.PATIENT);
+        map.put("Practitioner", ResourceTypeEnum.PRACTITIONER);
+        map.put("Encounter", ResourceTypeEnum.ENCOUNTER);
+        map.put("Observation", ResourceTypeEnum.OBSERVATION);
+        map.put("Condition", ResourceTypeEnum.CONDITION);
+        map.put("AllergyIntolerance", ResourceTypeEnum.ALLERGY_INTOLERANCE);
+        map.put("MedicationRequest", ResourceTypeEnum.MEDICATION_REQUEST);
+        map.put("Immunization", ResourceTypeEnum.IMMUNIZATION);
+        map.put("Bundle", ResourceTypeEnum.BUNDLE);
+        map.put("OperationOutcome", ResourceTypeEnum.OPERATION_OUTCOME);
+        map.put("CapabilityStatement", ResourceTypeEnum.CAPABILITY_STATEMENT);
+        map.put("DiagnosticReport", ResourceTypeEnum.DIAGNOSTIC_REPORT);
         return map;
     }
     
     
     public enum ResourceTypeEnum {
 
-        USER("User"),
-        GROUP("Group"),;
+        PATIENT("Patient"),
+        PRACTITIONER("Practitioner"),
+        ENCOUNTER("Encounter"),
+        OBSERVATION("Observation"),
+        CONDITION("Condition"),
+        ALLERGY_INTOLERANCE("AllergyIntolerance"),
+        MEDICATION_REQUEST("MedicationRequest"),
+        IMMUNIZATION("Immunization"),
+        BUNDLE("Bundle"),
+        OPERATION_OUTCOME("OperationOutcome"),
+        CAPABILITY_STATEMENT("CapabilityStatement"),
+        DIAGNOSTIC_REPORT("DiagnosticReport"),;
 
         private final String value;
 

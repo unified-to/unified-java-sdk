@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateHrisBenefitRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisBenefitRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateHrisBenefitResponse;
@@ -31,6 +32,7 @@ import to.unified.unified_java_sdk.operations.PatchHrisBenefit;
 import to.unified.unified_java_sdk.operations.RemoveHrisBenefit;
 import to.unified.unified_java_sdk.operations.UpdateHrisBenefit;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Benefit {
@@ -75,8 +77,23 @@ public class Benefit {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateHrisBenefitResponse createHrisBenefit(@Nonnull CreateHrisBenefitRequest request) {
+        return createHrisBenefit(request, null);
+    }
+
+    /**
+     * Create a benefit
+     * 
+     * <p>Creates a HrisBenefit. Provide the unified HrisBenefit fields in the request body; they are mapped
+     * to the provider's API. Returns the created HrisBenefit.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateHrisBenefitResponse createHrisBenefit(@Nonnull CreateHrisBenefitRequest request, @Nullable Options options) {
         RequestOperation<CreateHrisBenefitRequest, CreateHrisBenefitResponse> operation
-              = new CreateHrisBenefit.Sync(sdkConfiguration, _headers);
+              = new CreateHrisBenefit.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -103,8 +120,23 @@ public class Benefit {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetHrisBenefitResponse getHrisBenefit(@Nonnull GetHrisBenefitRequest request) {
+        return getHrisBenefit(request, null);
+    }
+
+    /**
+     * Retrieve a benefit
+     * 
+     * <p>Retrieves a single HrisBenefit by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetHrisBenefitResponse getHrisBenefit(@Nonnull GetHrisBenefitRequest request, @Nullable Options options) {
         RequestOperation<GetHrisBenefitRequest, GetHrisBenefitResponse> operation
-              = new GetHrisBenefit.Sync(sdkConfiguration, _headers);
+              = new GetHrisBenefit.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -139,8 +171,27 @@ public class Benefit {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListHrisBenefitsResponse listHrisBenefits(@Nonnull ListHrisBenefitsRequest request) {
+        return listHrisBenefits(request, null);
+    }
+
+    /**
+     * List all benefits
+     * 
+     * <p>Returns a list of HrisBenefits. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListHrisBenefitsResponse listHrisBenefits(@Nonnull ListHrisBenefitsRequest request, @Nullable Options options) {
         RequestOperation<ListHrisBenefitsRequest, ListHrisBenefitsResponse> operation
-              = new ListHrisBenefits.Sync(sdkConfiguration, _headers);
+              = new ListHrisBenefits.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +218,23 @@ public class Benefit {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchHrisBenefitResponse patchHrisBenefit(@Nonnull PatchHrisBenefitRequest request) {
+        return patchHrisBenefit(request, null);
+    }
+
+    /**
+     * Update a benefit
+     * 
+     * <p>Updates the HrisBenefit identified by `id`. Provide the unified HrisBenefit fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchHrisBenefitResponse patchHrisBenefit(@Nonnull PatchHrisBenefitRequest request, @Nullable Options options) {
         RequestOperation<PatchHrisBenefitRequest, PatchHrisBenefitResponse> operation
-              = new PatchHrisBenefit.Sync(sdkConfiguration, _headers);
+              = new PatchHrisBenefit.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -193,8 +259,22 @@ public class Benefit {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveHrisBenefitResponse removeHrisBenefit(@Nonnull RemoveHrisBenefitRequest request) {
+        return removeHrisBenefit(request, null);
+    }
+
+    /**
+     * Remove a benefit
+     * 
+     * <p>Deletes the HrisBenefit identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveHrisBenefitResponse removeHrisBenefit(@Nonnull RemoveHrisBenefitRequest request, @Nullable Options options) {
         RequestOperation<RemoveHrisBenefitRequest, RemoveHrisBenefitResponse> operation
-              = new RemoveHrisBenefit.Sync(sdkConfiguration, _headers);
+              = new RemoveHrisBenefit.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -221,8 +301,23 @@ public class Benefit {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateHrisBenefitResponse updateHrisBenefit(@Nonnull UpdateHrisBenefitRequest request) {
+        return updateHrisBenefit(request, null);
+    }
+
+    /**
+     * Update a benefit
+     * 
+     * <p>Updates the HrisBenefit identified by `id`. Provide the unified HrisBenefit fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateHrisBenefitResponse updateHrisBenefit(@Nonnull UpdateHrisBenefitRequest request, @Nullable Options options) {
         RequestOperation<UpdateHrisBenefitRequest, UpdateHrisBenefitResponse> operation
-              = new UpdateHrisBenefit.Sync(sdkConfiguration, _headers);
+              = new UpdateHrisBenefit.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

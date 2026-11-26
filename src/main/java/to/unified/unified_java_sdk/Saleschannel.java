@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceSaleschannelRequest;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceSaleschannelRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceSaleschannelResponse;
@@ -31,6 +32,7 @@ import to.unified.unified_java_sdk.operations.PatchCommerceSaleschannel;
 import to.unified.unified_java_sdk.operations.RemoveCommerceSaleschannel;
 import to.unified.unified_java_sdk.operations.UpdateCommerceSaleschannel;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Saleschannel {
@@ -75,8 +77,23 @@ public class Saleschannel {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateCommerceSaleschannelResponse createCommerceSaleschannel(@Nonnull CreateCommerceSaleschannelRequest request) {
+        return createCommerceSaleschannel(request, null);
+    }
+
+    /**
+     * Create a saleschannel
+     * 
+     * <p>Creates a CommerceSaleschannel. Provide the unified CommerceSaleschannel fields in the request body;
+     * they are mapped to the provider's API. Returns the created CommerceSaleschannel.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateCommerceSaleschannelResponse createCommerceSaleschannel(@Nonnull CreateCommerceSaleschannelRequest request, @Nullable Options options) {
         RequestOperation<CreateCommerceSaleschannelRequest, CreateCommerceSaleschannelResponse> operation
-              = new CreateCommerceSaleschannel.Sync(sdkConfiguration, _headers);
+              = new CreateCommerceSaleschannel.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -103,8 +120,23 @@ public class Saleschannel {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetCommerceSaleschannelResponse getCommerceSaleschannel(@Nonnull GetCommerceSaleschannelRequest request) {
+        return getCommerceSaleschannel(request, null);
+    }
+
+    /**
+     * Retrieve a saleschannel
+     * 
+     * <p>Retrieves a single CommerceSaleschannel by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetCommerceSaleschannelResponse getCommerceSaleschannel(@Nonnull GetCommerceSaleschannelRequest request, @Nullable Options options) {
         RequestOperation<GetCommerceSaleschannelRequest, GetCommerceSaleschannelResponse> operation
-              = new GetCommerceSaleschannel.Sync(sdkConfiguration, _headers);
+              = new GetCommerceSaleschannel.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -139,8 +171,27 @@ public class Saleschannel {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListCommerceSaleschannelsResponse listCommerceSaleschannels(@Nonnull ListCommerceSaleschannelsRequest request) {
+        return listCommerceSaleschannels(request, null);
+    }
+
+    /**
+     * List all saleschannels
+     * 
+     * <p>Returns a list of CommerceSaleschannels. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListCommerceSaleschannelsResponse listCommerceSaleschannels(@Nonnull ListCommerceSaleschannelsRequest request, @Nullable Options options) {
         RequestOperation<ListCommerceSaleschannelsRequest, ListCommerceSaleschannelsResponse> operation
-              = new ListCommerceSaleschannels.Sync(sdkConfiguration, _headers);
+              = new ListCommerceSaleschannels.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +218,23 @@ public class Saleschannel {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchCommerceSaleschannelResponse patchCommerceSaleschannel(@Nonnull PatchCommerceSaleschannelRequest request) {
+        return patchCommerceSaleschannel(request, null);
+    }
+
+    /**
+     * Update a saleschannel
+     * 
+     * <p>Updates the CommerceSaleschannel identified by `id`. Provide the unified CommerceSaleschannel fields
+     * to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchCommerceSaleschannelResponse patchCommerceSaleschannel(@Nonnull PatchCommerceSaleschannelRequest request, @Nullable Options options) {
         RequestOperation<PatchCommerceSaleschannelRequest, PatchCommerceSaleschannelResponse> operation
-              = new PatchCommerceSaleschannel.Sync(sdkConfiguration, _headers);
+              = new PatchCommerceSaleschannel.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -193,8 +259,22 @@ public class Saleschannel {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveCommerceSaleschannelResponse removeCommerceSaleschannel(@Nonnull RemoveCommerceSaleschannelRequest request) {
+        return removeCommerceSaleschannel(request, null);
+    }
+
+    /**
+     * Remove a saleschannel
+     * 
+     * <p>Deletes the CommerceSaleschannel identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveCommerceSaleschannelResponse removeCommerceSaleschannel(@Nonnull RemoveCommerceSaleschannelRequest request, @Nullable Options options) {
         RequestOperation<RemoveCommerceSaleschannelRequest, RemoveCommerceSaleschannelResponse> operation
-              = new RemoveCommerceSaleschannel.Sync(sdkConfiguration, _headers);
+              = new RemoveCommerceSaleschannel.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -221,8 +301,23 @@ public class Saleschannel {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateCommerceSaleschannelResponse updateCommerceSaleschannel(@Nonnull UpdateCommerceSaleschannelRequest request) {
+        return updateCommerceSaleschannel(request, null);
+    }
+
+    /**
+     * Update a saleschannel
+     * 
+     * <p>Updates the CommerceSaleschannel identified by `id`. Provide the unified CommerceSaleschannel fields
+     * to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateCommerceSaleschannelResponse updateCommerceSaleschannel(@Nonnull UpdateCommerceSaleschannelRequest request, @Nullable Options options) {
         RequestOperation<UpdateCommerceSaleschannelRequest, UpdateCommerceSaleschannelResponse> operation
-              = new UpdateCommerceSaleschannel.Sync(sdkConfiguration, _headers);
+              = new UpdateCommerceSaleschannel.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

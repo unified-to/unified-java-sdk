@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateHrisTimeshiftRequest;
 import to.unified.unified_java_sdk.models.operations.GetHrisTimeshiftRequest;
@@ -32,6 +33,7 @@ import to.unified.unified_java_sdk.operations.PatchHrisTimeshift;
 import to.unified.unified_java_sdk.operations.RemoveHrisTimeshift;
 import to.unified.unified_java_sdk.operations.UpdateHrisTimeshift;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncTimeshift {
@@ -76,8 +78,22 @@ public class AsyncTimeshift {
      * @return {@code CompletableFuture<CreateHrisTimeshiftResponse>} - The async response
      */
     public CompletableFuture<CreateHrisTimeshiftResponse> createHrisTimeshift(@Nonnull CreateHrisTimeshiftRequest request) {
+        return createHrisTimeshift(request, null);
+    }
+
+    /**
+     * Create a timeshift
+     * 
+     * <p>Creates a HrisTimeshift. Provide the unified HrisTimeshift fields in the request body; they are
+     * mapped to the provider's API. Returns the created HrisTimeshift.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateHrisTimeshiftResponse>} - The async response
+     */
+    public CompletableFuture<CreateHrisTimeshiftResponse> createHrisTimeshift(@Nonnull CreateHrisTimeshiftRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateHrisTimeshiftRequest, CreateHrisTimeshiftResponse> operation
-              = new CreateHrisTimeshift.Async(sdkConfiguration, _headers);
+              = new CreateHrisTimeshift.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -105,8 +121,22 @@ public class AsyncTimeshift {
      * @return {@code CompletableFuture<GetHrisTimeshiftResponse>} - The async response
      */
     public CompletableFuture<GetHrisTimeshiftResponse> getHrisTimeshift(@Nonnull GetHrisTimeshiftRequest request) {
+        return getHrisTimeshift(request, null);
+    }
+
+    /**
+     * Retrieve a timeshift
+     * 
+     * <p>Retrieves a single HrisTimeshift by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetHrisTimeshiftResponse>} - The async response
+     */
+    public CompletableFuture<GetHrisTimeshiftResponse> getHrisTimeshift(@Nonnull GetHrisTimeshiftRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetHrisTimeshiftRequest, GetHrisTimeshiftResponse> operation
-              = new GetHrisTimeshift.Async(sdkConfiguration, _headers);
+              = new GetHrisTimeshift.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -142,8 +172,26 @@ public class AsyncTimeshift {
      * @return {@code CompletableFuture<ListHrisTimeshiftsResponse>} - The async response
      */
     public CompletableFuture<ListHrisTimeshiftsResponse> listHrisTimeshifts(@Nonnull ListHrisTimeshiftsRequest request) {
+        return listHrisTimeshifts(request, null);
+    }
+
+    /**
+     * List all timeshifts
+     * 
+     * <p>Returns a list of HrisTimeshifts. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListHrisTimeshiftsResponse>} - The async response
+     */
+    public CompletableFuture<ListHrisTimeshiftsResponse> listHrisTimeshifts(@Nonnull ListHrisTimeshiftsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListHrisTimeshiftsRequest, ListHrisTimeshiftsResponse> operation
-              = new ListHrisTimeshifts.Async(sdkConfiguration, _headers);
+              = new ListHrisTimeshifts.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -171,8 +219,22 @@ public class AsyncTimeshift {
      * @return {@code CompletableFuture<PatchHrisTimeshiftResponse>} - The async response
      */
     public CompletableFuture<PatchHrisTimeshiftResponse> patchHrisTimeshift(@Nonnull PatchHrisTimeshiftRequest request) {
+        return patchHrisTimeshift(request, null);
+    }
+
+    /**
+     * Update a timeshift
+     * 
+     * <p>Updates the HrisTimeshift identified by `id`. Provide the unified HrisTimeshift fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchHrisTimeshiftResponse>} - The async response
+     */
+    public CompletableFuture<PatchHrisTimeshiftResponse> patchHrisTimeshift(@Nonnull PatchHrisTimeshiftRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchHrisTimeshiftRequest, PatchHrisTimeshiftResponse> operation
-              = new PatchHrisTimeshift.Async(sdkConfiguration, _headers);
+              = new PatchHrisTimeshift.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -198,8 +260,21 @@ public class AsyncTimeshift {
      * @return {@code CompletableFuture<RemoveHrisTimeshiftResponse>} - The async response
      */
     public CompletableFuture<RemoveHrisTimeshiftResponse> removeHrisTimeshift(@Nonnull RemoveHrisTimeshiftRequest request) {
+        return removeHrisTimeshift(request, null);
+    }
+
+    /**
+     * Remove a timeshift
+     * 
+     * <p>Deletes the HrisTimeshift identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveHrisTimeshiftResponse>} - The async response
+     */
+    public CompletableFuture<RemoveHrisTimeshiftResponse> removeHrisTimeshift(@Nonnull RemoveHrisTimeshiftRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveHrisTimeshiftRequest, RemoveHrisTimeshiftResponse> operation
-              = new RemoveHrisTimeshift.Async(sdkConfiguration, _headers);
+              = new RemoveHrisTimeshift.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -227,8 +302,22 @@ public class AsyncTimeshift {
      * @return {@code CompletableFuture<UpdateHrisTimeshiftResponse>} - The async response
      */
     public CompletableFuture<UpdateHrisTimeshiftResponse> updateHrisTimeshift(@Nonnull UpdateHrisTimeshiftRequest request) {
+        return updateHrisTimeshift(request, null);
+    }
+
+    /**
+     * Update a timeshift
+     * 
+     * <p>Updates the HrisTimeshift identified by `id`. Provide the unified HrisTimeshift fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateHrisTimeshiftResponse>} - The async response
+     */
+    public CompletableFuture<UpdateHrisTimeshiftResponse> updateHrisTimeshift(@Nonnull UpdateHrisTimeshiftRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateHrisTimeshiftRequest, UpdateHrisTimeshiftResponse> operation
-              = new UpdateHrisTimeshift.Async(sdkConfiguration, _headers);
+              = new UpdateHrisTimeshift.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingJournalRequest;
 import to.unified.unified_java_sdk.models.operations.GetAccountingJournalRequest;
@@ -32,6 +33,7 @@ import to.unified.unified_java_sdk.operations.PatchAccountingJournal;
 import to.unified.unified_java_sdk.operations.RemoveAccountingJournal;
 import to.unified.unified_java_sdk.operations.UpdateAccountingJournal;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncJournal {
@@ -76,8 +78,22 @@ public class AsyncJournal {
      * @return {@code CompletableFuture<CreateAccountingJournalResponse>} - The async response
      */
     public CompletableFuture<CreateAccountingJournalResponse> createAccountingJournal(@Nonnull CreateAccountingJournalRequest request) {
+        return createAccountingJournal(request, null);
+    }
+
+    /**
+     * Create a journal
+     * 
+     * <p>Creates a AccountingJournal. Provide the unified AccountingJournal fields in the request body; they
+     * are mapped to the provider's API. Returns the created AccountingJournal.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateAccountingJournalResponse>} - The async response
+     */
+    public CompletableFuture<CreateAccountingJournalResponse> createAccountingJournal(@Nonnull CreateAccountingJournalRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateAccountingJournalRequest, CreateAccountingJournalResponse> operation
-              = new CreateAccountingJournal.Async(sdkConfiguration, _headers);
+              = new CreateAccountingJournal.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -105,8 +121,22 @@ public class AsyncJournal {
      * @return {@code CompletableFuture<GetAccountingJournalResponse>} - The async response
      */
     public CompletableFuture<GetAccountingJournalResponse> getAccountingJournal(@Nonnull GetAccountingJournalRequest request) {
+        return getAccountingJournal(request, null);
+    }
+
+    /**
+     * Retrieve a journal
+     * 
+     * <p>Retrieves a single AccountingJournal by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetAccountingJournalResponse>} - The async response
+     */
+    public CompletableFuture<GetAccountingJournalResponse> getAccountingJournal(@Nonnull GetAccountingJournalRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetAccountingJournalRequest, GetAccountingJournalResponse> operation
-              = new GetAccountingJournal.Async(sdkConfiguration, _headers);
+              = new GetAccountingJournal.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -142,8 +172,26 @@ public class AsyncJournal {
      * @return {@code CompletableFuture<ListAccountingJournalsResponse>} - The async response
      */
     public CompletableFuture<ListAccountingJournalsResponse> listAccountingJournals(@Nonnull ListAccountingJournalsRequest request) {
+        return listAccountingJournals(request, null);
+    }
+
+    /**
+     * List all journals
+     * 
+     * <p>Returns a list of AccountingJournals. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListAccountingJournalsResponse>} - The async response
+     */
+    public CompletableFuture<ListAccountingJournalsResponse> listAccountingJournals(@Nonnull ListAccountingJournalsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListAccountingJournalsRequest, ListAccountingJournalsResponse> operation
-              = new ListAccountingJournals.Async(sdkConfiguration, _headers);
+              = new ListAccountingJournals.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -171,8 +219,22 @@ public class AsyncJournal {
      * @return {@code CompletableFuture<PatchAccountingJournalResponse>} - The async response
      */
     public CompletableFuture<PatchAccountingJournalResponse> patchAccountingJournal(@Nonnull PatchAccountingJournalRequest request) {
+        return patchAccountingJournal(request, null);
+    }
+
+    /**
+     * Update a journal
+     * 
+     * <p>Updates the AccountingJournal identified by `id`. Provide the unified AccountingJournal fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchAccountingJournalResponse>} - The async response
+     */
+    public CompletableFuture<PatchAccountingJournalResponse> patchAccountingJournal(@Nonnull PatchAccountingJournalRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchAccountingJournalRequest, PatchAccountingJournalResponse> operation
-              = new PatchAccountingJournal.Async(sdkConfiguration, _headers);
+              = new PatchAccountingJournal.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -198,8 +260,21 @@ public class AsyncJournal {
      * @return {@code CompletableFuture<RemoveAccountingJournalResponse>} - The async response
      */
     public CompletableFuture<RemoveAccountingJournalResponse> removeAccountingJournal(@Nonnull RemoveAccountingJournalRequest request) {
+        return removeAccountingJournal(request, null);
+    }
+
+    /**
+     * Remove a journal
+     * 
+     * <p>Deletes the AccountingJournal identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveAccountingJournalResponse>} - The async response
+     */
+    public CompletableFuture<RemoveAccountingJournalResponse> removeAccountingJournal(@Nonnull RemoveAccountingJournalRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveAccountingJournalRequest, RemoveAccountingJournalResponse> operation
-              = new RemoveAccountingJournal.Async(sdkConfiguration, _headers);
+              = new RemoveAccountingJournal.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -227,8 +302,22 @@ public class AsyncJournal {
      * @return {@code CompletableFuture<UpdateAccountingJournalResponse>} - The async response
      */
     public CompletableFuture<UpdateAccountingJournalResponse> updateAccountingJournal(@Nonnull UpdateAccountingJournalRequest request) {
+        return updateAccountingJournal(request, null);
+    }
+
+    /**
+     * Update a journal
+     * 
+     * <p>Updates the AccountingJournal identified by `id`. Provide the unified AccountingJournal fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateAccountingJournalResponse>} - The async response
+     */
+    public CompletableFuture<UpdateAccountingJournalResponse> updateAccountingJournal(@Nonnull UpdateAccountingJournalRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateAccountingJournalRequest, UpdateAccountingJournalResponse> operation
-              = new UpdateAccountingJournal.Async(sdkConfiguration, _headers);
+              = new UpdateAccountingJournal.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

@@ -6,20 +6,30 @@ package to.unified.unified_java_sdk.models.operations.async;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingQuoteRequest;
 import to.unified.unified_java_sdk.operations.CreateAccountingQuote;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class CreateAccountingQuoteRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private CreateAccountingQuoteRequest request;
+    private final Options.Builder optionsBuilder;
 
     public CreateAccountingQuoteRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public CreateAccountingQuoteRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public CreateAccountingQuoteRequestBuilder request(@Nonnull CreateAccountingQuoteRequest request) {
@@ -44,8 +54,9 @@ public class CreateAccountingQuoteRequestBuilder {
     * @return The response from the server.
     */
     public CompletableFuture<CreateAccountingQuoteResponse> call() {
+        Options options = optionsBuilder.build();
         AsyncRequestOperation<CreateAccountingQuoteRequest, CreateAccountingQuoteResponse> operation
-              = new CreateAccountingQuote.Async(sdkConfiguration, _headers);
+              = new CreateAccountingQuote.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

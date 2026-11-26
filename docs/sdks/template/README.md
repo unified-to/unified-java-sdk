@@ -6,8 +6,10 @@
 
 * [createComputeTemplate](#createcomputetemplate) - Create a template
 * [getComputeTemplate](#getcomputetemplate) - Retrieve a template
+* [getPrintingTemplate](#getprintingtemplate) - Retrieve a template
 * [getSigningTemplate](#getsigningtemplate) - Retrieve a template
 * [listComputeTemplates](#listcomputetemplates) - List all templates
+* [listPrintingTemplates](#listprintingtemplates) - List all templates
 * [listSigningTemplates](#listsigningtemplates) - List all templates
 * [patchComputeTemplate](#patchcomputetemplate) - Update a template
 * [removeComputeTemplate](#removecomputetemplate) - Remove a template
@@ -49,17 +51,17 @@ public class Application {
                     .dockerfile("FROM ubuntu:24.04\nRUN apt-get update")
                     .gpuCount(2d)
                     .gpuModel(ComputeTemplateGpuModel.NVIDIA_GH200)
-                    .id("3dc20b0b-ac7c-49be-b880-3efeab435384")
-                    .image("perfumed-molasses/cohibeo:5.2")
+                    .id("360a8107-add9-448f-b868-6e6d29eb929c")
+                    .image("jaunty-tarragon/demum:5.2")
                     .isPublic(false)
-                    .lastUsedAt(OffsetDateTime.parse("2026-04-18T02:58:26.685Z"))
+                    .lastUsedAt(OffsetDateTime.parse("2026-04-23T02:55:37.688Z"))
                     .memoryMb(8192d)
                     .metadata(List.of())
-                    .name("multi-byte-card")
+                    .name("online-matrix")
                     .ports(List.of(
                         8080d))
                     .status(ComputeTemplateStatus.OTHER)
-                    .updatedAt(OffsetDateTime.parse("2025-02-28T23:15:43.128Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-03-04T04:07:09.534Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -142,6 +144,64 @@ public class Application {
 ### Response
 
 **[GetComputeTemplateResponse](../../models/operations/GetComputeTemplateResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## getPrintingTemplate
+
+Retrieves a single PrintingTemplate by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="getPrintingTemplate" method="get" path="/printing/{connection_id}/template/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetPrintingTemplateRequest;
+import to.unified.unified_java_sdk.models.operations.GetPrintingTemplateResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        GetPrintingTemplateRequest req = GetPrintingTemplateRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetPrintingTemplateResponse res = sdk.template().getPrintingTemplate()
+                .request(req)
+                .call();
+
+        if (res.printingTemplate().isPresent()) {
+            System.out.println(res.printingTemplate().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [GetPrintingTemplateRequest](../../models/operations/GetPrintingTemplateRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+
+### Response
+
+**[GetPrintingTemplateResponse](../../models/operations/GetPrintingTemplateResponse.md)**
 
 ### Errors
 
@@ -264,6 +324,63 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## listPrintingTemplates
+
+Returns a list of PrintingTemplates. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listPrintingTemplates" method="get" path="/printing/{connection_id}/template" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListPrintingTemplatesRequest;
+import to.unified.unified_java_sdk.models.operations.ListPrintingTemplatesResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListPrintingTemplatesRequest req = ListPrintingTemplatesRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListPrintingTemplatesResponse res = sdk.template().listPrintingTemplates()
+                .request(req)
+                .call();
+
+        if (res.printingTemplates().isPresent()) {
+            System.out.println(res.printingTemplates().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [ListPrintingTemplatesRequest](../../models/operations/ListPrintingTemplatesRequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
+
+### Response
+
+**[ListPrintingTemplatesResponse](../../models/operations/ListPrintingTemplatesResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## listSigningTemplates
 
 Returns a list of SigningTemplates. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
@@ -357,17 +474,17 @@ public class Application {
                     .dockerfile("FROM ubuntu:24.04\nRUN apt-get update")
                     .gpuCount(2d)
                     .gpuModel(ComputeTemplateGpuModel.NVIDIA_GH200)
-                    .id("4df8e142-daab-47e3-9f0a-910336e6766b")
-                    .image("perfumed-molasses/cohibeo:5.2")
+                    .id("5f993572-9a49-43da-9460-8cef13a71f26")
+                    .image("jaunty-tarragon/demum:5.2")
                     .isPublic(false)
-                    .lastUsedAt(OffsetDateTime.parse("2026-04-18T02:58:26.703Z"))
+                    .lastUsedAt(OffsetDateTime.parse("2026-04-23T02:55:37.698Z"))
                     .memoryMb(8192d)
                     .metadata(List.of())
-                    .name("multi-byte-card")
+                    .name("online-matrix")
                     .ports(List.of(
                         8080d))
                     .status(ComputeTemplateStatus.OTHER)
-                    .updatedAt(OffsetDateTime.parse("2025-02-28T23:15:43.140Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-03-04T04:07:09.540Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -492,17 +609,17 @@ public class Application {
                     .dockerfile("FROM ubuntu:24.04\nRUN apt-get update")
                     .gpuCount(2d)
                     .gpuModel(ComputeTemplateGpuModel.NVIDIA_GH200)
-                    .id("4df8e142-daab-47e3-9f0a-910336e6766b")
-                    .image("perfumed-molasses/cohibeo:5.2")
+                    .id("5f993572-9a49-43da-9460-8cef13a71f26")
+                    .image("jaunty-tarragon/demum:5.2")
                     .isPublic(false)
-                    .lastUsedAt(OffsetDateTime.parse("2026-04-18T02:58:26.703Z"))
+                    .lastUsedAt(OffsetDateTime.parse("2026-04-23T02:55:37.698Z"))
                     .memoryMb(8192d)
                     .metadata(List.of())
-                    .name("multi-byte-card")
+                    .name("online-matrix")
                     .ports(List.of(
                         8080d))
                     .status(ComputeTemplateStatus.OTHER)
-                    .updatedAt(OffsetDateTime.parse("2025-02-28T23:15:43.140Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-03-04T04:07:09.540Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

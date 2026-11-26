@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.GetHealthcareProcedureRequest;
 import to.unified.unified_java_sdk.models.operations.ListHealthcareProceduresRequest;
@@ -16,6 +17,7 @@ import to.unified.unified_java_sdk.models.operations.async.ListHealthcareProcedu
 import to.unified.unified_java_sdk.operations.GetHealthcareProcedure;
 import to.unified.unified_java_sdk.operations.ListHealthcareProcedures;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncProcedure {
@@ -60,8 +62,22 @@ public class AsyncProcedure {
      * @return {@code CompletableFuture<GetHealthcareProcedureResponse>} - The async response
      */
     public CompletableFuture<GetHealthcareProcedureResponse> getHealthcareProcedure(@Nonnull GetHealthcareProcedureRequest request) {
+        return getHealthcareProcedure(request, null);
+    }
+
+    /**
+     * Retrieve a procedure
+     * 
+     * <p>Retrieves a single HealthcareProcedure by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetHealthcareProcedureResponse>} - The async response
+     */
+    public CompletableFuture<GetHealthcareProcedureResponse> getHealthcareProcedure(@Nonnull GetHealthcareProcedureRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetHealthcareProcedureRequest, GetHealthcareProcedureResponse> operation
-              = new GetHealthcareProcedure.Async(sdkConfiguration, _headers);
+              = new GetHealthcareProcedure.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -97,8 +113,26 @@ public class AsyncProcedure {
      * @return {@code CompletableFuture<ListHealthcareProceduresResponse>} - The async response
      */
     public CompletableFuture<ListHealthcareProceduresResponse> listHealthcareProcedures(@Nonnull ListHealthcareProceduresRequest request) {
+        return listHealthcareProcedures(request, null);
+    }
+
+    /**
+     * List all procedures
+     * 
+     * <p>Returns a list of HealthcareProcedures. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListHealthcareProceduresResponse>} - The async response
+     */
+    public CompletableFuture<ListHealthcareProceduresResponse> listHealthcareProcedures(@Nonnull ListHealthcareProceduresRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListHealthcareProceduresRequest, ListHealthcareProceduresResponse> operation
-              = new ListHealthcareProcedures.Async(sdkConfiguration, _headers);
+              = new ListHealthcareProcedures.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

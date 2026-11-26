@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateCalendarLinkRequest;
 import to.unified.unified_java_sdk.models.operations.CreatePaymentLinkRequest;
@@ -56,6 +57,7 @@ import to.unified.unified_java_sdk.operations.RemovePaymentLink;
 import to.unified.unified_java_sdk.operations.UpdateCalendarLink;
 import to.unified.unified_java_sdk.operations.UpdatePaymentLink;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncLink {
@@ -100,8 +102,22 @@ public class AsyncLink {
      * @return {@code CompletableFuture<CreateCalendarLinkResponse>} - The async response
      */
     public CompletableFuture<CreateCalendarLinkResponse> createCalendarLink(@Nonnull CreateCalendarLinkRequest request) {
+        return createCalendarLink(request, null);
+    }
+
+    /**
+     * Create a link
+     * 
+     * <p>Creates a CalendarLink. Provide the unified CalendarLink fields in the request body; they are mapped
+     * to the provider's API. Returns the created CalendarLink.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateCalendarLinkResponse>} - The async response
+     */
+    public CompletableFuture<CreateCalendarLinkResponse> createCalendarLink(@Nonnull CreateCalendarLinkRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateCalendarLinkRequest, CreateCalendarLinkResponse> operation
-              = new CreateCalendarLink.Async(sdkConfiguration, _headers);
+              = new CreateCalendarLink.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -129,8 +145,22 @@ public class AsyncLink {
      * @return {@code CompletableFuture<CreatePaymentLinkResponse>} - The async response
      */
     public CompletableFuture<CreatePaymentLinkResponse> createPaymentLink(@Nonnull CreatePaymentLinkRequest request) {
+        return createPaymentLink(request, null);
+    }
+
+    /**
+     * Create a link
+     * 
+     * <p>Creates a PaymentLink. Provide the unified PaymentLink fields in the request body; they are mapped
+     * to the provider's API. Returns the created PaymentLink.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreatePaymentLinkResponse>} - The async response
+     */
+    public CompletableFuture<CreatePaymentLinkResponse> createPaymentLink(@Nonnull CreatePaymentLinkRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreatePaymentLinkRequest, CreatePaymentLinkResponse> operation
-              = new CreatePaymentLink.Async(sdkConfiguration, _headers);
+              = new CreatePaymentLink.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -158,8 +188,22 @@ public class AsyncLink {
      * @return {@code CompletableFuture<GetCalendarLinkResponse>} - The async response
      */
     public CompletableFuture<GetCalendarLinkResponse> getCalendarLink(@Nonnull GetCalendarLinkRequest request) {
+        return getCalendarLink(request, null);
+    }
+
+    /**
+     * Retrieve a link
+     * 
+     * <p>Retrieves a single CalendarLink by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetCalendarLinkResponse>} - The async response
+     */
+    public CompletableFuture<GetCalendarLinkResponse> getCalendarLink(@Nonnull GetCalendarLinkRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetCalendarLinkRequest, GetCalendarLinkResponse> operation
-              = new GetCalendarLink.Async(sdkConfiguration, _headers);
+              = new GetCalendarLink.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -187,8 +231,22 @@ public class AsyncLink {
      * @return {@code CompletableFuture<GetPaymentLinkResponse>} - The async response
      */
     public CompletableFuture<GetPaymentLinkResponse> getPaymentLink(@Nonnull GetPaymentLinkRequest request) {
+        return getPaymentLink(request, null);
+    }
+
+    /**
+     * Retrieve a link
+     * 
+     * <p>Retrieves a single PaymentLink by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetPaymentLinkResponse>} - The async response
+     */
+    public CompletableFuture<GetPaymentLinkResponse> getPaymentLink(@Nonnull GetPaymentLinkRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetPaymentLinkRequest, GetPaymentLinkResponse> operation
-              = new GetPaymentLink.Async(sdkConfiguration, _headers);
+              = new GetPaymentLink.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -224,8 +282,26 @@ public class AsyncLink {
      * @return {@code CompletableFuture<ListCalendarLinksResponse>} - The async response
      */
     public CompletableFuture<ListCalendarLinksResponse> listCalendarLinks(@Nonnull ListCalendarLinksRequest request) {
+        return listCalendarLinks(request, null);
+    }
+
+    /**
+     * List all links
+     * 
+     * <p>Returns a list of CalendarLinks. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListCalendarLinksResponse>} - The async response
+     */
+    public CompletableFuture<ListCalendarLinksResponse> listCalendarLinks(@Nonnull ListCalendarLinksRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListCalendarLinksRequest, ListCalendarLinksResponse> operation
-              = new ListCalendarLinks.Async(sdkConfiguration, _headers);
+              = new ListCalendarLinks.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -261,8 +337,26 @@ public class AsyncLink {
      * @return {@code CompletableFuture<ListPaymentLinksResponse>} - The async response
      */
     public CompletableFuture<ListPaymentLinksResponse> listPaymentLinks(@Nonnull ListPaymentLinksRequest request) {
+        return listPaymentLinks(request, null);
+    }
+
+    /**
+     * List all links
+     * 
+     * <p>Returns a list of PaymentLinks. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListPaymentLinksResponse>} - The async response
+     */
+    public CompletableFuture<ListPaymentLinksResponse> listPaymentLinks(@Nonnull ListPaymentLinksRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListPaymentLinksRequest, ListPaymentLinksResponse> operation
-              = new ListPaymentLinks.Async(sdkConfiguration, _headers);
+              = new ListPaymentLinks.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -290,8 +384,22 @@ public class AsyncLink {
      * @return {@code CompletableFuture<PatchCalendarLinkResponse>} - The async response
      */
     public CompletableFuture<PatchCalendarLinkResponse> patchCalendarLink(@Nonnull PatchCalendarLinkRequest request) {
+        return patchCalendarLink(request, null);
+    }
+
+    /**
+     * Update a link
+     * 
+     * <p>Updates the CalendarLink identified by `id`. Provide the unified CalendarLink fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchCalendarLinkResponse>} - The async response
+     */
+    public CompletableFuture<PatchCalendarLinkResponse> patchCalendarLink(@Nonnull PatchCalendarLinkRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchCalendarLinkRequest, PatchCalendarLinkResponse> operation
-              = new PatchCalendarLink.Async(sdkConfiguration, _headers);
+              = new PatchCalendarLink.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -319,8 +427,22 @@ public class AsyncLink {
      * @return {@code CompletableFuture<PatchPaymentLinkResponse>} - The async response
      */
     public CompletableFuture<PatchPaymentLinkResponse> patchPaymentLink(@Nonnull PatchPaymentLinkRequest request) {
+        return patchPaymentLink(request, null);
+    }
+
+    /**
+     * Update a link
+     * 
+     * <p>Updates the PaymentLink identified by `id`. Provide the unified PaymentLink fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchPaymentLinkResponse>} - The async response
+     */
+    public CompletableFuture<PatchPaymentLinkResponse> patchPaymentLink(@Nonnull PatchPaymentLinkRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchPaymentLinkRequest, PatchPaymentLinkResponse> operation
-              = new PatchPaymentLink.Async(sdkConfiguration, _headers);
+              = new PatchPaymentLink.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -346,8 +468,21 @@ public class AsyncLink {
      * @return {@code CompletableFuture<RemoveCalendarLinkResponse>} - The async response
      */
     public CompletableFuture<RemoveCalendarLinkResponse> removeCalendarLink(@Nonnull RemoveCalendarLinkRequest request) {
+        return removeCalendarLink(request, null);
+    }
+
+    /**
+     * Remove a link
+     * 
+     * <p>Deletes the CalendarLink identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveCalendarLinkResponse>} - The async response
+     */
+    public CompletableFuture<RemoveCalendarLinkResponse> removeCalendarLink(@Nonnull RemoveCalendarLinkRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveCalendarLinkRequest, RemoveCalendarLinkResponse> operation
-              = new RemoveCalendarLink.Async(sdkConfiguration, _headers);
+              = new RemoveCalendarLink.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -373,8 +508,21 @@ public class AsyncLink {
      * @return {@code CompletableFuture<RemovePaymentLinkResponse>} - The async response
      */
     public CompletableFuture<RemovePaymentLinkResponse> removePaymentLink(@Nonnull RemovePaymentLinkRequest request) {
+        return removePaymentLink(request, null);
+    }
+
+    /**
+     * Remove a link
+     * 
+     * <p>Deletes the PaymentLink identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemovePaymentLinkResponse>} - The async response
+     */
+    public CompletableFuture<RemovePaymentLinkResponse> removePaymentLink(@Nonnull RemovePaymentLinkRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemovePaymentLinkRequest, RemovePaymentLinkResponse> operation
-              = new RemovePaymentLink.Async(sdkConfiguration, _headers);
+              = new RemovePaymentLink.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -402,8 +550,22 @@ public class AsyncLink {
      * @return {@code CompletableFuture<UpdateCalendarLinkResponse>} - The async response
      */
     public CompletableFuture<UpdateCalendarLinkResponse> updateCalendarLink(@Nonnull UpdateCalendarLinkRequest request) {
+        return updateCalendarLink(request, null);
+    }
+
+    /**
+     * Update a link
+     * 
+     * <p>Updates the CalendarLink identified by `id`. Provide the unified CalendarLink fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateCalendarLinkResponse>} - The async response
+     */
+    public CompletableFuture<UpdateCalendarLinkResponse> updateCalendarLink(@Nonnull UpdateCalendarLinkRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateCalendarLinkRequest, UpdateCalendarLinkResponse> operation
-              = new UpdateCalendarLink.Async(sdkConfiguration, _headers);
+              = new UpdateCalendarLink.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -431,8 +593,22 @@ public class AsyncLink {
      * @return {@code CompletableFuture<UpdatePaymentLinkResponse>} - The async response
      */
     public CompletableFuture<UpdatePaymentLinkResponse> updatePaymentLink(@Nonnull UpdatePaymentLinkRequest request) {
+        return updatePaymentLink(request, null);
+    }
+
+    /**
+     * Update a link
+     * 
+     * <p>Updates the PaymentLink identified by `id`. Provide the unified PaymentLink fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdatePaymentLinkResponse>} - The async response
+     */
+    public CompletableFuture<UpdatePaymentLinkResponse> updatePaymentLink(@Nonnull UpdatePaymentLinkRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdatePaymentLinkRequest, UpdatePaymentLinkResponse> operation
-              = new UpdatePaymentLink.Async(sdkConfiguration, _headers);
+              = new UpdatePaymentLink.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

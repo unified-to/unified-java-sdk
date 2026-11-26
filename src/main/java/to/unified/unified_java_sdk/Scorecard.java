@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateAtsScorecardRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAtsScorecardRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateAtsScorecardResponse;
@@ -39,6 +40,7 @@ import to.unified.unified_java_sdk.operations.PatchAtsScorecard;
 import to.unified.unified_java_sdk.operations.RemoveAtsScorecard;
 import to.unified.unified_java_sdk.operations.UpdateAtsScorecard;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Scorecard {
@@ -83,8 +85,23 @@ public class Scorecard {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateAtsScorecardResponse createAtsScorecard(@Nonnull CreateAtsScorecardRequest request) {
+        return createAtsScorecard(request, null);
+    }
+
+    /**
+     * Create a scorecard
+     * 
+     * <p>Creates a AtsScorecard. Provide the unified AtsScorecard fields in the request body; they are mapped
+     * to the provider's API. Returns the created AtsScorecard.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateAtsScorecardResponse createAtsScorecard(@Nonnull CreateAtsScorecardRequest request, @Nullable Options options) {
         RequestOperation<CreateAtsScorecardRequest, CreateAtsScorecardResponse> operation
-              = new CreateAtsScorecard.Sync(sdkConfiguration, _headers);
+              = new CreateAtsScorecard.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -111,8 +128,23 @@ public class Scorecard {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAtsScorecardResponse getAtsScorecard(@Nonnull GetAtsScorecardRequest request) {
+        return getAtsScorecard(request, null);
+    }
+
+    /**
+     * Retrieve a scorecard
+     * 
+     * <p>Retrieves a single AtsScorecard by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAtsScorecardResponse getAtsScorecard(@Nonnull GetAtsScorecardRequest request, @Nullable Options options) {
         RequestOperation<GetAtsScorecardRequest, GetAtsScorecardResponse> operation
-              = new GetAtsScorecard.Sync(sdkConfiguration, _headers);
+              = new GetAtsScorecard.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -139,8 +171,23 @@ public class Scorecard {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetUcScorecardResponse getUcScorecard(@Nonnull GetUcScorecardRequest request) {
+        return getUcScorecard(request, null);
+    }
+
+    /**
+     * Retrieve a scorecard
+     * 
+     * <p>Retrieves a single UcScorecard by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetUcScorecardResponse getUcScorecard(@Nonnull GetUcScorecardRequest request, @Nullable Options options) {
         RequestOperation<GetUcScorecardRequest, GetUcScorecardResponse> operation
-              = new GetUcScorecard.Sync(sdkConfiguration, _headers);
+              = new GetUcScorecard.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -175,8 +222,27 @@ public class Scorecard {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAtsScorecardsResponse listAtsScorecards(@Nonnull ListAtsScorecardsRequest request) {
+        return listAtsScorecards(request, null);
+    }
+
+    /**
+     * List all scorecards
+     * 
+     * <p>Returns a list of AtsScorecards. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAtsScorecardsResponse listAtsScorecards(@Nonnull ListAtsScorecardsRequest request, @Nullable Options options) {
         RequestOperation<ListAtsScorecardsRequest, ListAtsScorecardsResponse> operation
-              = new ListAtsScorecards.Sync(sdkConfiguration, _headers);
+              = new ListAtsScorecards.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -211,8 +277,27 @@ public class Scorecard {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListUcScorecardsResponse listUcScorecards(@Nonnull ListUcScorecardsRequest request) {
+        return listUcScorecards(request, null);
+    }
+
+    /**
+     * List all scorecards
+     * 
+     * <p>Returns a list of UcScorecards. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListUcScorecardsResponse listUcScorecards(@Nonnull ListUcScorecardsRequest request, @Nullable Options options) {
         RequestOperation<ListUcScorecardsRequest, ListUcScorecardsResponse> operation
-              = new ListUcScorecards.Sync(sdkConfiguration, _headers);
+              = new ListUcScorecards.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -239,8 +324,23 @@ public class Scorecard {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchAtsScorecardResponse patchAtsScorecard(@Nonnull PatchAtsScorecardRequest request) {
+        return patchAtsScorecard(request, null);
+    }
+
+    /**
+     * Update a scorecard
+     * 
+     * <p>Updates the AtsScorecard identified by `id`. Provide the unified AtsScorecard fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchAtsScorecardResponse patchAtsScorecard(@Nonnull PatchAtsScorecardRequest request, @Nullable Options options) {
         RequestOperation<PatchAtsScorecardRequest, PatchAtsScorecardResponse> operation
-              = new PatchAtsScorecard.Sync(sdkConfiguration, _headers);
+              = new PatchAtsScorecard.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -265,8 +365,22 @@ public class Scorecard {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveAtsScorecardResponse removeAtsScorecard(@Nonnull RemoveAtsScorecardRequest request) {
+        return removeAtsScorecard(request, null);
+    }
+
+    /**
+     * Remove a scorecard
+     * 
+     * <p>Deletes the AtsScorecard identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveAtsScorecardResponse removeAtsScorecard(@Nonnull RemoveAtsScorecardRequest request, @Nullable Options options) {
         RequestOperation<RemoveAtsScorecardRequest, RemoveAtsScorecardResponse> operation
-              = new RemoveAtsScorecard.Sync(sdkConfiguration, _headers);
+              = new RemoveAtsScorecard.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -293,8 +407,23 @@ public class Scorecard {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateAtsScorecardResponse updateAtsScorecard(@Nonnull UpdateAtsScorecardRequest request) {
+        return updateAtsScorecard(request, null);
+    }
+
+    /**
+     * Update a scorecard
+     * 
+     * <p>Updates the AtsScorecard identified by `id`. Provide the unified AtsScorecard fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateAtsScorecardResponse updateAtsScorecard(@Nonnull UpdateAtsScorecardRequest request, @Nullable Options options) {
         RequestOperation<UpdateAtsScorecardRequest, UpdateAtsScorecardResponse> operation
-              = new UpdateAtsScorecard.Sync(sdkConfiguration, _headers);
+              = new UpdateAtsScorecard.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

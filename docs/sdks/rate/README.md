@@ -37,7 +37,7 @@ public class Application {
         CreateShippingRateRequest req = CreateShippingRateRequest.builder()
                 .shippingRate(ShippingRate.builder()
                     .currency("USD")
-                    .id("108cc00e-f9b5-4a3c-bc5a-9a6d8f402fc8")
+                    .id("f9c1622c-65c4-4df7-a191-10c19d3695e5")
                     .metadata(List.of())
                     .rates(List.of(
                         ShippingRateRate.builder()
@@ -46,7 +46,7 @@ public class Application {
                             .baseAmount(46.01)
                             .currency("USD")
                             .deliveryDays(2d)
-                            .description("Veniam denego vulgo bos turpis pax.")
+                            .description("Bos turpis pax amet dolorem sufficio demonstro complectus benevolentia rerum.")
                             .discountAmount(4.6)
                             .estimatedDays(2d)
                             .estimatedDeliveryEndAt(OffsetDateTime.parse("2021-09-03T01:03:36.021Z"))

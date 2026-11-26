@@ -1,0 +1,11 @@
+# FhirIdentifier
+
+
+## Fields
+
+| Field                                                                                      | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `system`                                                                                   | *Optional\<String>*                                                                        | :heavy_minus_sign:                                                                         | The namespace for the identifier value                                                     |
+| `type`                                                                                     | [Optional\<PropertyFhirIdentifierType>](../../models/shared/PropertyFhirIdentifierType.md) | :heavy_minus_sign:                                                                         | Description of the identifier (v2-0203 code, eg. MR, NPI)                                  |
+| `use`                                                                                      | *Optional\<String>*                                                                        | :heavy_minus_sign:                                                                         | usual \| official \| temp \| secondary \| old                                              |
+| `value`                                                                                    | *Optional\<String>*                                                                        | :heavy_minus_sign:                                                                         | The value that is unique                                                                   |

@@ -6,18 +6,28 @@ package to.unified.unified_java_sdk.models.operations;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.GetCommerceTable;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetCommerceTableRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private GetCommerceTableRequest request;
+    private final Options.Builder optionsBuilder;
 
     public GetCommerceTableRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public GetCommerceTableRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public GetCommerceTableRequestBuilder request(@Nonnull GetCommerceTableRequest request) {
@@ -42,8 +52,9 @@ public class GetCommerceTableRequestBuilder {
     * @return The response from the server.
     */
     public GetCommerceTableResponse call() {
+        Options options = optionsBuilder.build();
         RequestOperation<GetCommerceTableRequest, GetCommerceTableResponse> operation
-              = new GetCommerceTable.Sync(sdkConfiguration, _headers);
+              = new GetCommerceTable.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

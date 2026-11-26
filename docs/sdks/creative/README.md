@@ -42,15 +42,15 @@ public class Application {
         CreateAdsCreativeRequest req = CreateAdsCreativeRequest.builder()
                 .adsCreative(AdsCreative.builder()
                     .createdAt(OffsetDateTime.parse("2020-02-17T11:24:51.093Z"))
-                    .id("4945f724-9c35-4a8e-b847-1ab6357fb1b6")
+                    .id("e4b8527c-b1bb-42b6-a53c-01c54b8233af")
                     .labels(List.of(
-                        "coma",
-                        "accedo",
-                        "termes"))
+                        "ventosus",
+                        "in",
+                        "delego"))
                     .metadata(List.of())
-                    .name("Brekke, Bradtke and Robel")
+                    .name("Sauer, Stiedemann and Bauch")
                     .status(AdsCreativeStatus.PAUSED)
-                    .updatedAt(OffsetDateTime.parse("2021-07-03T20:57:50.388Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-07-05T01:58:18.122Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -228,15 +228,15 @@ public class Application {
         PatchAdsCreativeRequest req = PatchAdsCreativeRequest.builder()
                 .adsCreative(AdsCreative.builder()
                     .createdAt(OffsetDateTime.parse("2020-02-17T11:24:51.093Z"))
-                    .id("5767e121-53dc-43b4-a56d-0163fc7bb05b")
+                    .id("084b2fc6-5a79-4458-9ede-8910dfd0ea37")
                     .labels(List.of(
-                        "coma",
-                        "accedo",
-                        "termes"))
+                        "ventosus",
+                        "in",
+                        "delego"))
                     .metadata(List.of())
-                    .name("Brekke, Bradtke and Robel")
+                    .name("Sauer, Stiedemann and Bauch")
                     .status(AdsCreativeStatus.PAUSED)
-                    .updatedAt(OffsetDateTime.parse("2021-07-03T20:57:50.395Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-07-05T01:58:18.127Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -356,15 +356,15 @@ public class Application {
         UpdateAdsCreativeRequest req = UpdateAdsCreativeRequest.builder()
                 .adsCreative(AdsCreative.builder()
                     .createdAt(OffsetDateTime.parse("2020-02-17T11:24:51.093Z"))
-                    .id("5767e121-53dc-43b4-a56d-0163fc7bb05b")
+                    .id("084b2fc6-5a79-4458-9ede-8910dfd0ea37")
                     .labels(List.of(
-                        "coma",
-                        "accedo",
-                        "termes"))
+                        "ventosus",
+                        "in",
+                        "delego"))
                     .metadata(List.of())
-                    .name("Brekke, Bradtke and Robel")
+                    .name("Sauer, Stiedemann and Bauch")
                     .status(AdsCreativeStatus.PAUSED)
-                    .updatedAt(OffsetDateTime.parse("2021-07-03T20:57:50.395Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-07-05T01:58:18.127Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateHrisTimeoffRequest;
 import to.unified.unified_java_sdk.models.operations.GetHrisTimeoffRequest;
@@ -32,6 +33,7 @@ import to.unified.unified_java_sdk.operations.PatchHrisTimeoff;
 import to.unified.unified_java_sdk.operations.RemoveHrisTimeoff;
 import to.unified.unified_java_sdk.operations.UpdateHrisTimeoff;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncTimeoff {
@@ -76,8 +78,22 @@ public class AsyncTimeoff {
      * @return {@code CompletableFuture<CreateHrisTimeoffResponse>} - The async response
      */
     public CompletableFuture<CreateHrisTimeoffResponse> createHrisTimeoff(@Nonnull CreateHrisTimeoffRequest request) {
+        return createHrisTimeoff(request, null);
+    }
+
+    /**
+     * Create a timeoff
+     * 
+     * <p>Creates a HrisTimeoff. Provide the unified HrisTimeoff fields in the request body; they are mapped
+     * to the provider's API. Returns the created HrisTimeoff.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateHrisTimeoffResponse>} - The async response
+     */
+    public CompletableFuture<CreateHrisTimeoffResponse> createHrisTimeoff(@Nonnull CreateHrisTimeoffRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateHrisTimeoffRequest, CreateHrisTimeoffResponse> operation
-              = new CreateHrisTimeoff.Async(sdkConfiguration, _headers);
+              = new CreateHrisTimeoff.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -105,8 +121,22 @@ public class AsyncTimeoff {
      * @return {@code CompletableFuture<GetHrisTimeoffResponse>} - The async response
      */
     public CompletableFuture<GetHrisTimeoffResponse> getHrisTimeoff(@Nonnull GetHrisTimeoffRequest request) {
+        return getHrisTimeoff(request, null);
+    }
+
+    /**
+     * Retrieve a timeoff
+     * 
+     * <p>Retrieves a single HrisTimeoff by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetHrisTimeoffResponse>} - The async response
+     */
+    public CompletableFuture<GetHrisTimeoffResponse> getHrisTimeoff(@Nonnull GetHrisTimeoffRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetHrisTimeoffRequest, GetHrisTimeoffResponse> operation
-              = new GetHrisTimeoff.Async(sdkConfiguration, _headers);
+              = new GetHrisTimeoff.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -142,8 +172,26 @@ public class AsyncTimeoff {
      * @return {@code CompletableFuture<ListHrisTimeoffsResponse>} - The async response
      */
     public CompletableFuture<ListHrisTimeoffsResponse> listHrisTimeoffs(@Nonnull ListHrisTimeoffsRequest request) {
+        return listHrisTimeoffs(request, null);
+    }
+
+    /**
+     * List all timeoffs
+     * 
+     * <p>Returns a list of HrisTimeoffs. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListHrisTimeoffsResponse>} - The async response
+     */
+    public CompletableFuture<ListHrisTimeoffsResponse> listHrisTimeoffs(@Nonnull ListHrisTimeoffsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListHrisTimeoffsRequest, ListHrisTimeoffsResponse> operation
-              = new ListHrisTimeoffs.Async(sdkConfiguration, _headers);
+              = new ListHrisTimeoffs.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -171,8 +219,22 @@ public class AsyncTimeoff {
      * @return {@code CompletableFuture<PatchHrisTimeoffResponse>} - The async response
      */
     public CompletableFuture<PatchHrisTimeoffResponse> patchHrisTimeoff(@Nonnull PatchHrisTimeoffRequest request) {
+        return patchHrisTimeoff(request, null);
+    }
+
+    /**
+     * Update a timeoff
+     * 
+     * <p>Updates the HrisTimeoff identified by `id`. Provide the unified HrisTimeoff fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchHrisTimeoffResponse>} - The async response
+     */
+    public CompletableFuture<PatchHrisTimeoffResponse> patchHrisTimeoff(@Nonnull PatchHrisTimeoffRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchHrisTimeoffRequest, PatchHrisTimeoffResponse> operation
-              = new PatchHrisTimeoff.Async(sdkConfiguration, _headers);
+              = new PatchHrisTimeoff.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -198,8 +260,21 @@ public class AsyncTimeoff {
      * @return {@code CompletableFuture<RemoveHrisTimeoffResponse>} - The async response
      */
     public CompletableFuture<RemoveHrisTimeoffResponse> removeHrisTimeoff(@Nonnull RemoveHrisTimeoffRequest request) {
+        return removeHrisTimeoff(request, null);
+    }
+
+    /**
+     * Remove a timeoff
+     * 
+     * <p>Deletes the HrisTimeoff identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveHrisTimeoffResponse>} - The async response
+     */
+    public CompletableFuture<RemoveHrisTimeoffResponse> removeHrisTimeoff(@Nonnull RemoveHrisTimeoffRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveHrisTimeoffRequest, RemoveHrisTimeoffResponse> operation
-              = new RemoveHrisTimeoff.Async(sdkConfiguration, _headers);
+              = new RemoveHrisTimeoff.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -227,8 +302,22 @@ public class AsyncTimeoff {
      * @return {@code CompletableFuture<UpdateHrisTimeoffResponse>} - The async response
      */
     public CompletableFuture<UpdateHrisTimeoffResponse> updateHrisTimeoff(@Nonnull UpdateHrisTimeoffRequest request) {
+        return updateHrisTimeoff(request, null);
+    }
+
+    /**
+     * Update a timeoff
+     * 
+     * <p>Updates the HrisTimeoff identified by `id`. Provide the unified HrisTimeoff fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateHrisTimeoffResponse>} - The async response
+     */
+    public CompletableFuture<UpdateHrisTimeoffResponse> updateHrisTimeoff(@Nonnull UpdateHrisTimeoffRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateHrisTimeoffRequest, UpdateHrisTimeoffResponse> operation
-              = new UpdateHrisTimeoff.Async(sdkConfiguration, _headers);
+              = new UpdateHrisTimeoff.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

@@ -6,20 +6,30 @@ package to.unified.unified_java_sdk.models.operations.async;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.PatchPaymentLinkRequest;
 import to.unified.unified_java_sdk.operations.PatchPaymentLink;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class PatchPaymentLinkRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private PatchPaymentLinkRequest request;
+    private final Options.Builder optionsBuilder;
 
     public PatchPaymentLinkRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public PatchPaymentLinkRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public PatchPaymentLinkRequestBuilder request(@Nonnull PatchPaymentLinkRequest request) {
@@ -44,8 +54,9 @@ public class PatchPaymentLinkRequestBuilder {
     * @return The response from the server.
     */
     public CompletableFuture<PatchPaymentLinkResponse> call() {
+        Options options = optionsBuilder.build();
         AsyncRequestOperation<PatchPaymentLinkRequest, PatchPaymentLinkResponse> operation
-              = new PatchPaymentLink.Async(sdkConfiguration, _headers);
+              = new PatchPaymentLink.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

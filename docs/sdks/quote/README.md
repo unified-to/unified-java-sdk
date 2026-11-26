@@ -5,6 +5,7 @@
 ### Available Operations
 
 * [createAccountingQuote](#createaccountingquote) - Create a quote
+* [createPrintingQuote](#createprintingquote) - Create a quote
 * [createPropertyQuote](#createpropertyquote) - Create a quote
 * [getAccountingQuote](#getaccountingquote) - Retrieve a quote
 * [listAccountingQuotes](#listaccountingquotes) - List all quotes
@@ -72,6 +73,135 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## createPrintingQuote
+
+Creates a PrintingQuote. Provide the unified PrintingQuote fields in the request body; they are mapped to the provider's API. Returns the created PrintingQuote.
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="createPrintingQuote" method="post" path="/printing/{connection_id}/quote" example="printing_quote" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreatePrintingQuoteRequest;
+import to.unified.unified_java_sdk.models.operations.CreatePrintingQuoteResponse;
+import to.unified.unified_java_sdk.models.shared.*;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        CreatePrintingQuoteRequest req = CreatePrintingQuoteRequest.builder()
+                .printingQuote(PrintingQuote.builder()
+                    .createdAt(OffsetDateTime.parse("2019-01-02T03:42:06.944Z"))
+                    .currency("USD")
+                    .discountAmount(0d)
+                    .id("3cb5cad5-b6bc-4fbd-9e30-851d688cd9d8")
+                    .lineitems(List.of(
+                        PrintingLineitem.builder()
+                            .files(List.of(
+                                PrintingLineitemFile.builder()
+                                    .placement("default")
+                                    .url("https://picsum.photos/seed/0Y5Bjnoiwx/3057/3113")
+                                    .build()))
+                            .id("1")
+                            .name("Practical Wooden Salad")
+                            .quantity(2d)
+                            .retailPriceAmount(50.83)
+                            .unitPriceAmount(21.72)
+                            .build(),
+                        PrintingLineitem.builder()
+                            .files(List.of(
+                                PrintingLineitemFile.builder()
+                                    .placement("default")
+                                    .url("https://picsum.photos/seed/rcPUF/2295/1801")
+                                    .build()))
+                            .id("2")
+                            .name("Handmade Gold Car")
+                            .quantity(4d)
+                            .retailPriceAmount(35.47)
+                            .sku("I79GIBCK")
+                            .unitPriceAmount(17.64)
+                            .build()))
+                    .metadata(List.of())
+                    .shippingAddress(PropertyPrintingQuoteShippingAddress.builder()
+                        .address1("4290 Garden Street")
+                        .address2("Suite 874")
+                        .city("Cartwrightshire")
+                        .companyName("Kris and Sons")
+                        .country("United States")
+                        .countryCode("US")
+                        .email("jada73@hotmail.com")
+                        .name("Heaven Crist")
+                        .postalCode("92871")
+                        .region("North Carolina")
+                        .regionCode("KY")
+                        .telephone("653.412.8900 x9387")
+                        .build())
+                    .shippingAmount(4.69)
+                    .shippingMethod("STANDARD")
+                    .shippingOptions(List.of(
+                        PrintingShippingoption.builder()
+                            .amount(4.69)
+                            .code("STANDARD")
+                            .currency("USD")
+                            .maxDeliveryDays(5d)
+                            .minDeliveryDays(3d)
+                            .name("Flat Rate (3-5 business days after fulfillment)")
+                            .build(),
+                        PrintingShippingoption.builder()
+                            .amount(12.99)
+                            .code("EXPRESS")
+                            .currency("USD")
+                            .maxDeliveryDays(3d)
+                            .minDeliveryDays(1d)
+                            .name("Express (1-3 business days after fulfillment)")
+                            .build()))
+                    .subtotalAmount(114d)
+                    .taxAmount(9.12)
+                    .totalAmount(127.81)
+                    .updatedAt(OffsetDateTime.parse("2019-01-02T03:42:06.944Z"))
+                    .build())
+                .connectionId("<id>")
+                .build();
+
+        CreatePrintingQuoteResponse res = sdk.quote().createPrintingQuote()
+                .request(req)
+                .call();
+
+        if (res.printingQuote().isPresent()) {
+            System.out.println(res.printingQuote().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [CreatePrintingQuoteRequest](../../models/operations/CreatePrintingQuoteRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+
+### Response
+
+**[CreatePrintingQuoteResponse](../../models/operations/CreatePrintingQuoteResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## createPropertyQuote
 
 Creates a PropertyQuote. Provide the unified PropertyQuote fields in the request body; they are mapped to the provider's API. Returns the created PropertyQuote.
@@ -107,9 +237,9 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2020-12-18T19:14:11.415Z"))
                     .currency("USD")
                     .depositAmount(594.54)
-                    .endAt(OffsetDateTime.parse("2026-12-04"))
+                    .endAt(OffsetDateTime.parse("2026-12-10"))
                     .guests(2d)
-                    .id("01851730-a9bb-4e2f-a31c-b5d838cf9cb7")
+                    .id("b7b495d9-99e4-42f5-af17-3515dfaab348")
                     .lineItems(List.of(
                         PropertyLineitem.builder()
                             .amount(1665d)
@@ -130,7 +260,7 @@ public class Application {
                             .name("Lodging tax")
                             .type(PropertyLineitemType.TAX)
                             .build()))
-                    .startAt(OffsetDateTime.parse("2026-11-25"))
+                    .startAt(OffsetDateTime.parse("2026-12-01"))
                     .totalAmount(1981.8)
                     .build())
                 .connectionId("<id>")

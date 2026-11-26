@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateHrisEmployeeRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisEmployeeRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateHrisEmployeeResponse;
@@ -31,6 +32,7 @@ import to.unified.unified_java_sdk.operations.PatchHrisEmployee;
 import to.unified.unified_java_sdk.operations.RemoveHrisEmployee;
 import to.unified.unified_java_sdk.operations.UpdateHrisEmployee;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Employee {
@@ -75,8 +77,23 @@ public class Employee {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateHrisEmployeeResponse createHrisEmployee(@Nonnull CreateHrisEmployeeRequest request) {
+        return createHrisEmployee(request, null);
+    }
+
+    /**
+     * Create an employee
+     * 
+     * <p>Creates a HrisEmployee. Provide the unified HrisEmployee fields in the request body; they are mapped
+     * to the provider's API. Returns the created HrisEmployee.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateHrisEmployeeResponse createHrisEmployee(@Nonnull CreateHrisEmployeeRequest request, @Nullable Options options) {
         RequestOperation<CreateHrisEmployeeRequest, CreateHrisEmployeeResponse> operation
-              = new CreateHrisEmployee.Sync(sdkConfiguration, _headers);
+              = new CreateHrisEmployee.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -103,8 +120,23 @@ public class Employee {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetHrisEmployeeResponse getHrisEmployee(@Nonnull GetHrisEmployeeRequest request) {
+        return getHrisEmployee(request, null);
+    }
+
+    /**
+     * Retrieve an employee
+     * 
+     * <p>Retrieves a single HrisEmployee by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetHrisEmployeeResponse getHrisEmployee(@Nonnull GetHrisEmployeeRequest request, @Nullable Options options) {
         RequestOperation<GetHrisEmployeeRequest, GetHrisEmployeeResponse> operation
-              = new GetHrisEmployee.Sync(sdkConfiguration, _headers);
+              = new GetHrisEmployee.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -139,8 +171,27 @@ public class Employee {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListHrisEmployeesResponse listHrisEmployees(@Nonnull ListHrisEmployeesRequest request) {
+        return listHrisEmployees(request, null);
+    }
+
+    /**
+     * List all employees
+     * 
+     * <p>Returns a list of HrisEmployees. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListHrisEmployeesResponse listHrisEmployees(@Nonnull ListHrisEmployeesRequest request, @Nullable Options options) {
         RequestOperation<ListHrisEmployeesRequest, ListHrisEmployeesResponse> operation
-              = new ListHrisEmployees.Sync(sdkConfiguration, _headers);
+              = new ListHrisEmployees.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +218,23 @@ public class Employee {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchHrisEmployeeResponse patchHrisEmployee(@Nonnull PatchHrisEmployeeRequest request) {
+        return patchHrisEmployee(request, null);
+    }
+
+    /**
+     * Update an employee
+     * 
+     * <p>Updates the HrisEmployee identified by `id`. Provide the unified HrisEmployee fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchHrisEmployeeResponse patchHrisEmployee(@Nonnull PatchHrisEmployeeRequest request, @Nullable Options options) {
         RequestOperation<PatchHrisEmployeeRequest, PatchHrisEmployeeResponse> operation
-              = new PatchHrisEmployee.Sync(sdkConfiguration, _headers);
+              = new PatchHrisEmployee.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -193,8 +259,22 @@ public class Employee {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveHrisEmployeeResponse removeHrisEmployee(@Nonnull RemoveHrisEmployeeRequest request) {
+        return removeHrisEmployee(request, null);
+    }
+
+    /**
+     * Remove an employee
+     * 
+     * <p>Deletes the HrisEmployee identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveHrisEmployeeResponse removeHrisEmployee(@Nonnull RemoveHrisEmployeeRequest request, @Nullable Options options) {
         RequestOperation<RemoveHrisEmployeeRequest, RemoveHrisEmployeeResponse> operation
-              = new RemoveHrisEmployee.Sync(sdkConfiguration, _headers);
+              = new RemoveHrisEmployee.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -221,8 +301,23 @@ public class Employee {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateHrisEmployeeResponse updateHrisEmployee(@Nonnull UpdateHrisEmployeeRequest request) {
+        return updateHrisEmployee(request, null);
+    }
+
+    /**
+     * Update an employee
+     * 
+     * <p>Updates the HrisEmployee identified by `id`. Provide the unified HrisEmployee fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateHrisEmployeeResponse updateHrisEmployee(@Nonnull UpdateHrisEmployeeRequest request, @Nullable Options options) {
         RequestOperation<UpdateHrisEmployeeRequest, UpdateHrisEmployeeResponse> operation
-              = new UpdateHrisEmployee.Sync(sdkConfiguration, _headers);
+              = new UpdateHrisEmployee.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

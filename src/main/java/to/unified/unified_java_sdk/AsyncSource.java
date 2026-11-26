@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateCdpSourceRequest;
 import to.unified.unified_java_sdk.models.operations.GetCdpSourceRequest;
@@ -32,6 +33,7 @@ import to.unified.unified_java_sdk.operations.PatchCdpSource;
 import to.unified.unified_java_sdk.operations.RemoveCdpSource;
 import to.unified.unified_java_sdk.operations.UpdateCdpSource;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncSource {
@@ -76,8 +78,22 @@ public class AsyncSource {
      * @return {@code CompletableFuture<CreateCdpSourceResponse>} - The async response
      */
     public CompletableFuture<CreateCdpSourceResponse> createCdpSource(@Nonnull CreateCdpSourceRequest request) {
+        return createCdpSource(request, null);
+    }
+
+    /**
+     * Create a source
+     * 
+     * <p>Creates a CdpSource. Provide the unified CdpSource fields in the request body; they are mapped to
+     * the provider's API. Returns the created CdpSource.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateCdpSourceResponse>} - The async response
+     */
+    public CompletableFuture<CreateCdpSourceResponse> createCdpSource(@Nonnull CreateCdpSourceRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateCdpSourceRequest, CreateCdpSourceResponse> operation
-              = new CreateCdpSource.Async(sdkConfiguration, _headers);
+              = new CreateCdpSource.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -105,8 +121,22 @@ public class AsyncSource {
      * @return {@code CompletableFuture<GetCdpSourceResponse>} - The async response
      */
     public CompletableFuture<GetCdpSourceResponse> getCdpSource(@Nonnull GetCdpSourceRequest request) {
+        return getCdpSource(request, null);
+    }
+
+    /**
+     * Retrieve a source
+     * 
+     * <p>Retrieves a single CdpSource by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetCdpSourceResponse>} - The async response
+     */
+    public CompletableFuture<GetCdpSourceResponse> getCdpSource(@Nonnull GetCdpSourceRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetCdpSourceRequest, GetCdpSourceResponse> operation
-              = new GetCdpSource.Async(sdkConfiguration, _headers);
+              = new GetCdpSource.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -142,8 +172,26 @@ public class AsyncSource {
      * @return {@code CompletableFuture<ListCdpSourcesResponse>} - The async response
      */
     public CompletableFuture<ListCdpSourcesResponse> listCdpSources(@Nonnull ListCdpSourcesRequest request) {
+        return listCdpSources(request, null);
+    }
+
+    /**
+     * List all sources
+     * 
+     * <p>Returns a list of CdpSources. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListCdpSourcesResponse>} - The async response
+     */
+    public CompletableFuture<ListCdpSourcesResponse> listCdpSources(@Nonnull ListCdpSourcesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListCdpSourcesRequest, ListCdpSourcesResponse> operation
-              = new ListCdpSources.Async(sdkConfiguration, _headers);
+              = new ListCdpSources.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -171,8 +219,22 @@ public class AsyncSource {
      * @return {@code CompletableFuture<PatchCdpSourceResponse>} - The async response
      */
     public CompletableFuture<PatchCdpSourceResponse> patchCdpSource(@Nonnull PatchCdpSourceRequest request) {
+        return patchCdpSource(request, null);
+    }
+
+    /**
+     * Update a source
+     * 
+     * <p>Updates the CdpSource identified by `id`. Provide the unified CdpSource fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchCdpSourceResponse>} - The async response
+     */
+    public CompletableFuture<PatchCdpSourceResponse> patchCdpSource(@Nonnull PatchCdpSourceRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchCdpSourceRequest, PatchCdpSourceResponse> operation
-              = new PatchCdpSource.Async(sdkConfiguration, _headers);
+              = new PatchCdpSource.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -198,8 +260,21 @@ public class AsyncSource {
      * @return {@code CompletableFuture<RemoveCdpSourceResponse>} - The async response
      */
     public CompletableFuture<RemoveCdpSourceResponse> removeCdpSource(@Nonnull RemoveCdpSourceRequest request) {
+        return removeCdpSource(request, null);
+    }
+
+    /**
+     * Remove a source
+     * 
+     * <p>Deletes the CdpSource identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveCdpSourceResponse>} - The async response
+     */
+    public CompletableFuture<RemoveCdpSourceResponse> removeCdpSource(@Nonnull RemoveCdpSourceRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveCdpSourceRequest, RemoveCdpSourceResponse> operation
-              = new RemoveCdpSource.Async(sdkConfiguration, _headers);
+              = new RemoveCdpSource.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -227,8 +302,22 @@ public class AsyncSource {
      * @return {@code CompletableFuture<UpdateCdpSourceResponse>} - The async response
      */
     public CompletableFuture<UpdateCdpSourceResponse> updateCdpSource(@Nonnull UpdateCdpSourceRequest request) {
+        return updateCdpSource(request, null);
+    }
+
+    /**
+     * Update a source
+     * 
+     * <p>Updates the CdpSource identified by `id`. Provide the unified CdpSource fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateCdpSourceResponse>} - The async response
+     */
+    public CompletableFuture<UpdateCdpSourceResponse> updateCdpSource(@Nonnull UpdateCdpSourceRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateCdpSourceRequest, UpdateCdpSourceResponse> operation
-              = new UpdateCdpSource.Async(sdkConfiguration, _headers);
+              = new UpdateCdpSource.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

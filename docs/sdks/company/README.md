@@ -36,11 +36,11 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateAtsCompanyRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAtsCompanyResponse;
-import to.unified.unified_java_sdk.models.shared.AtsCompany;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -55,11 +55,16 @@ public class Application {
         CreateAtsCompanyRequest req = CreateAtsCompanyRequest.builder()
                 .atsCompany(AtsCompany.builder()
                     .createdAt(OffsetDateTime.parse("2019-04-22T03:50:02.920Z"))
-                    .id("0f20e2f0-8584-4a85-8845-fc4b6fc26532")
-                    .name("Gulgowski, Dibbert and Wilderman")
-                    .phone("1-882-360-2010")
-                    .updatedAt(OffsetDateTime.parse("2020-10-06T23:05:14.533Z"))
-                    .websiteUrl("https://www.gulgowskidibbert.com")
+                    .fees(List.of(
+                        AtsFee.builder()
+                            .percentage(23d)
+                            .type(AtsFeeType.CONTINGENCY)
+                            .build()))
+                    .id("65519251-150b-442f-8977-16ec4bd7c957")
+                    .name("Streich, Mohr and Barton")
+                    .phone("245-586-5728 x0090")
+                    .updatedAt(OffsetDateTime.parse("2020-10-08T02:33:15.600Z"))
+                    .websiteUrl("https://www.streichmohr.com")
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -123,61 +128,61 @@ public class Application {
         CreateCrmCompanyRequest req = CreateCrmCompanyRequest.builder()
                 .crmCompany(CrmCompany.builder()
                     .address(PropertyCrmCompanyAddress.builder()
-                        .address1("3328 Wunsch Flat")
-                        .address2("Suite 905")
-                        .city("New Ryderfort")
+                        .address1("9269 Kian Terrace")
+                        .address2("Suite 220")
+                        .city("Horaceboro")
                         .countryCode("US")
-                        .postalCode("04674")
-                        .region("Delaware")
-                        .regionCode("NY")
+                        .postalCode("89395-7968")
+                        .region("Alabama")
+                        .regionCode("SD")
                         .build())
                     .createdAt(OffsetDateTime.parse("2020-05-11T18:26:32.925Z"))
-                    .description("Venustas cruentus votum patruus terebro.")
+                    .description("Quis autem.")
                     .domains(List.of(
-                        "goodwinsons.com"))
+                        "muellergroup.com"))
                     .emails(List.of(
                         CrmEmail.builder()
-                            .email("info@goodwinsons.com")
+                            .email("info@muellergroup.com")
                             .type(CrmEmailType.WORK)
                             .build(),
                         CrmEmail.builder()
-                            .email("sales@goodwinsons.com")
+                            .email("sales@muellergroup.com")
                             .type(CrmEmailType.WORK)
                             .build(),
                         CrmEmail.builder()
-                            .email("support@goodwinsons.com")
+                            .email("support@muellergroup.com")
                             .type(CrmEmailType.WORK)
                             .build()))
                     .employees(4177d)
-                    .id("91d16978-df3a-480f-9813-43a0b53891a7")
-                    .industry("Metrics")
+                    .id("a3387857-4556-4923-b1a2-646e26651b76")
+                    .industry("Accounts")
                     .isActive(true)
                     .linkUrls(List.of(
-                        "https://www.linkedin.com/company/goodwin-and-sons"))
+                        "https://www.linkedin.com/company/mueller-group"))
                     .metadata(List.of(
                         CrmMetadata.builder()
                             .extraData(CrmMetadataExtraData.of(Map.ofEntries(
                                 Map.entry("display_name", "Custom Property"))))
                             .format(CrmMetadataFormat.TEXT)
-                            .id("92a8780e-a063-4eb4-8e38-fc0088391535")
+                            .id("aaf4701d-51c9-471d-a78d-0cb2121ac6c4")
                             .namespace("custom")
                             .slug("custom_property")
-                            .value(CrmMetadataValue.of("unde"))
+                            .value(CrmMetadataValue.of("crur"))
                             .build()))
-                    .name("Goodwin and Sons")
+                    .name("Mueller Group")
                     .tags(List.of(
-                        "censura",
-                        "abstergo",
-                        "ipsam"))
+                        "capitulus",
+                        "consequuntur",
+                        "spoliatio"))
                     .telephones(List.of(
                         CrmTelephone.builder()
-                            .telephone("(667) 607-5872")
+                            .telephone("(858) 826-5232")
                             .type(CrmTelephoneType.HOME)
                             .build()))
-                    .timezone("Atlantic/Azores")
-                    .updatedAt(OffsetDateTime.parse("2025-03-25T13:24:48.732Z"))
+                    .timezone("Australia/Hobart")
+                    .updatedAt(OffsetDateTime.parse("2025-03-29T23:45:04.129Z"))
                     .websites(List.of(
-                        "https://www.goodwinsons.com"))
+                        "https://www.muellergroup.com"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -240,19 +245,19 @@ public class Application {
         CreateHrisCompanyRequest req = CreateHrisCompanyRequest.builder()
                 .hrisCompany(HrisCompany.builder()
                     .address(PropertyHrisCompanyAddress.builder()
-                        .address1("675 Lavinia Lights")
-                        .city("Rocky Mount")
+                        .address1("5991 Emmett Avenue")
+                        .city("Rosellafort")
                         .countryCode("US")
-                        .postalCode("67325")
-                        .region("Kentucky")
-                        .regionCode("MO")
+                        .postalCode("89875")
+                        .region("Oklahoma")
+                        .regionCode("DE")
                         .build())
                     .createdAt(OffsetDateTime.parse("2021-05-02T22:27:38.970Z"))
-                    .id("4c3f20fe-339c-4382-8248-f00abb97fcff")
-                    .legalName("Gottlieb Group LLC")
+                    .id("cda36f50-14d4-47ed-88f3-898963c0575b")
+                    .legalName("Robel LLC LLC")
                     .metadata(List.of())
-                    .name("Gottlieb Group")
-                    .updatedAt(OffsetDateTime.parse("2026-11-07T12:19:17.004Z"))
+                    .name("Robel LLC")
+                    .updatedAt(OffsetDateTime.parse("2026-11-13T09:54:55.016Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -698,11 +703,11 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchAtsCompanyRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAtsCompanyResponse;
-import to.unified.unified_java_sdk.models.shared.AtsCompany;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -717,11 +722,16 @@ public class Application {
         PatchAtsCompanyRequest req = PatchAtsCompanyRequest.builder()
                 .atsCompany(AtsCompany.builder()
                     .createdAt(OffsetDateTime.parse("2019-04-22T03:50:02.920Z"))
-                    .id("72fdce15-c950-4523-9f70-822841f6757a")
-                    .name("Gulgowski, Dibbert and Wilderman")
-                    .phone("1-882-360-2010")
-                    .updatedAt(OffsetDateTime.parse("2020-10-06T23:05:14.538Z"))
-                    .websiteUrl("https://www.gulgowskidibbert.com")
+                    .fees(List.of(
+                        AtsFee.builder()
+                            .percentage(23d)
+                            .type(AtsFeeType.CONTINGENCY)
+                            .build()))
+                    .id("c8c2ad67-5974-492b-90ab-d715fac0df23")
+                    .name("Streich, Mohr and Barton")
+                    .phone("245-586-5728 x0090")
+                    .updatedAt(OffsetDateTime.parse("2020-10-08T02:33:15.603Z"))
+                    .websiteUrl("https://www.streichmohr.com")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -786,61 +796,61 @@ public class Application {
         PatchCrmCompanyRequest req = PatchCrmCompanyRequest.builder()
                 .crmCompany(CrmCompany.builder()
                     .address(PropertyCrmCompanyAddress.builder()
-                        .address1("3328 Wunsch Flat")
-                        .address2("Suite 905")
-                        .city("New Ryderfort")
+                        .address1("9269 Kian Terrace")
+                        .address2("Suite 220")
+                        .city("Horaceboro")
                         .countryCode("US")
-                        .postalCode("04674")
-                        .region("Delaware")
-                        .regionCode("NY")
+                        .postalCode("89395-7968")
+                        .region("Alabama")
+                        .regionCode("SD")
                         .build())
                     .createdAt(OffsetDateTime.parse("2020-05-11T18:26:32.925Z"))
-                    .description("Venustas cruentus votum patruus terebro.")
+                    .description("Quis autem.")
                     .domains(List.of(
-                        "goodwinsons.com"))
+                        "muellergroup.com"))
                     .emails(List.of(
                         CrmEmail.builder()
-                            .email("info@goodwinsons.com")
+                            .email("info@muellergroup.com")
                             .type(CrmEmailType.WORK)
                             .build(),
                         CrmEmail.builder()
-                            .email("sales@goodwinsons.com")
+                            .email("sales@muellergroup.com")
                             .type(CrmEmailType.WORK)
                             .build(),
                         CrmEmail.builder()
-                            .email("support@goodwinsons.com")
+                            .email("support@muellergroup.com")
                             .type(CrmEmailType.WORK)
                             .build()))
                     .employees(4177d)
-                    .id("0165b447-c78d-4041-8aea-431c57ee7326")
-                    .industry("Metrics")
+                    .id("e4aef9b9-e953-4553-947c-f7e6c31a6491")
+                    .industry("Accounts")
                     .isActive(true)
                     .linkUrls(List.of(
-                        "https://www.linkedin.com/company/goodwin-and-sons"))
+                        "https://www.linkedin.com/company/mueller-group"))
                     .metadata(List.of(
                         CrmMetadata.builder()
                             .extraData(CrmMetadataExtraData.of(Map.ofEntries(
                                 Map.entry("display_name", "Custom Property"))))
                             .format(CrmMetadataFormat.TEXT)
-                            .id("69f18032-85e9-4b58-add9-f3da0589357a")
+                            .id("b061a397-d1d6-4226-860f-56fcafb8b547")
                             .namespace("custom")
                             .slug("custom_property")
-                            .value(CrmMetadataValue.of("unde"))
+                            .value(CrmMetadataValue.of("crur"))
                             .build()))
-                    .name("Goodwin and Sons")
+                    .name("Mueller Group")
                     .tags(List.of(
-                        "censura",
-                        "abstergo",
-                        "ipsam"))
+                        "capitulus",
+                        "consequuntur",
+                        "spoliatio"))
                     .telephones(List.of(
                         CrmTelephone.builder()
-                            .telephone("(667) 607-5872")
+                            .telephone("(858) 826-5232")
                             .type(CrmTelephoneType.HOME)
                             .build()))
-                    .timezone("Atlantic/Azores")
-                    .updatedAt(OffsetDateTime.parse("2025-03-25T13:24:48.750Z"))
+                    .timezone("Australia/Hobart")
+                    .updatedAt(OffsetDateTime.parse("2025-03-29T23:45:04.141Z"))
                     .websites(List.of(
-                        "https://www.goodwinsons.com"))
+                        "https://www.muellergroup.com"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -904,19 +914,19 @@ public class Application {
         PatchHrisCompanyRequest req = PatchHrisCompanyRequest.builder()
                 .hrisCompany(HrisCompany.builder()
                     .address(PropertyHrisCompanyAddress.builder()
-                        .address1("675 Lavinia Lights")
-                        .city("Rocky Mount")
+                        .address1("5991 Emmett Avenue")
+                        .city("Rosellafort")
                         .countryCode("US")
-                        .postalCode("67325")
-                        .region("Kentucky")
-                        .regionCode("MO")
+                        .postalCode("89875")
+                        .region("Oklahoma")
+                        .regionCode("DE")
                         .build())
                     .createdAt(OffsetDateTime.parse("2021-05-02T22:27:38.970Z"))
-                    .id("eaa2bfea-06dd-4b93-bdf0-5be065d16424")
-                    .legalName("Gottlieb Group LLC")
+                    .id("d3d2f41b-6e15-4067-904e-371b7210aae5")
+                    .legalName("Robel LLC LLC")
                     .metadata(List.of())
-                    .name("Gottlieb Group")
-                    .updatedAt(OffsetDateTime.parse("2026-11-07T12:19:17.017Z"))
+                    .name("Robel LLC")
+                    .updatedAt(OffsetDateTime.parse("2026-11-13T09:54:55.028Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1129,11 +1139,11 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateAtsCompanyRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAtsCompanyResponse;
-import to.unified.unified_java_sdk.models.shared.AtsCompany;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -1148,11 +1158,16 @@ public class Application {
         UpdateAtsCompanyRequest req = UpdateAtsCompanyRequest.builder()
                 .atsCompany(AtsCompany.builder()
                     .createdAt(OffsetDateTime.parse("2019-04-22T03:50:02.920Z"))
-                    .id("72fdce15-c950-4523-9f70-822841f6757a")
-                    .name("Gulgowski, Dibbert and Wilderman")
-                    .phone("1-882-360-2010")
-                    .updatedAt(OffsetDateTime.parse("2020-10-06T23:05:14.538Z"))
-                    .websiteUrl("https://www.gulgowskidibbert.com")
+                    .fees(List.of(
+                        AtsFee.builder()
+                            .percentage(23d)
+                            .type(AtsFeeType.CONTINGENCY)
+                            .build()))
+                    .id("c8c2ad67-5974-492b-90ab-d715fac0df23")
+                    .name("Streich, Mohr and Barton")
+                    .phone("245-586-5728 x0090")
+                    .updatedAt(OffsetDateTime.parse("2020-10-08T02:33:15.603Z"))
+                    .websiteUrl("https://www.streichmohr.com")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1217,61 +1232,61 @@ public class Application {
         UpdateCrmCompanyRequest req = UpdateCrmCompanyRequest.builder()
                 .crmCompany(CrmCompany.builder()
                     .address(PropertyCrmCompanyAddress.builder()
-                        .address1("3328 Wunsch Flat")
-                        .address2("Suite 905")
-                        .city("New Ryderfort")
+                        .address1("9269 Kian Terrace")
+                        .address2("Suite 220")
+                        .city("Horaceboro")
                         .countryCode("US")
-                        .postalCode("04674")
-                        .region("Delaware")
-                        .regionCode("NY")
+                        .postalCode("89395-7968")
+                        .region("Alabama")
+                        .regionCode("SD")
                         .build())
                     .createdAt(OffsetDateTime.parse("2020-05-11T18:26:32.925Z"))
-                    .description("Venustas cruentus votum patruus terebro.")
+                    .description("Quis autem.")
                     .domains(List.of(
-                        "goodwinsons.com"))
+                        "muellergroup.com"))
                     .emails(List.of(
                         CrmEmail.builder()
-                            .email("info@goodwinsons.com")
+                            .email("info@muellergroup.com")
                             .type(CrmEmailType.WORK)
                             .build(),
                         CrmEmail.builder()
-                            .email("sales@goodwinsons.com")
+                            .email("sales@muellergroup.com")
                             .type(CrmEmailType.WORK)
                             .build(),
                         CrmEmail.builder()
-                            .email("support@goodwinsons.com")
+                            .email("support@muellergroup.com")
                             .type(CrmEmailType.WORK)
                             .build()))
                     .employees(4177d)
-                    .id("0165b447-c78d-4041-8aea-431c57ee7326")
-                    .industry("Metrics")
+                    .id("e4aef9b9-e953-4553-947c-f7e6c31a6491")
+                    .industry("Accounts")
                     .isActive(true)
                     .linkUrls(List.of(
-                        "https://www.linkedin.com/company/goodwin-and-sons"))
+                        "https://www.linkedin.com/company/mueller-group"))
                     .metadata(List.of(
                         CrmMetadata.builder()
                             .extraData(CrmMetadataExtraData.of(Map.ofEntries(
                                 Map.entry("display_name", "Custom Property"))))
                             .format(CrmMetadataFormat.TEXT)
-                            .id("69f18032-85e9-4b58-add9-f3da0589357a")
+                            .id("b061a397-d1d6-4226-860f-56fcafb8b547")
                             .namespace("custom")
                             .slug("custom_property")
-                            .value(CrmMetadataValue.of("unde"))
+                            .value(CrmMetadataValue.of("crur"))
                             .build()))
-                    .name("Goodwin and Sons")
+                    .name("Mueller Group")
                     .tags(List.of(
-                        "censura",
-                        "abstergo",
-                        "ipsam"))
+                        "capitulus",
+                        "consequuntur",
+                        "spoliatio"))
                     .telephones(List.of(
                         CrmTelephone.builder()
-                            .telephone("(667) 607-5872")
+                            .telephone("(858) 826-5232")
                             .type(CrmTelephoneType.HOME)
                             .build()))
-                    .timezone("Atlantic/Azores")
-                    .updatedAt(OffsetDateTime.parse("2025-03-25T13:24:48.750Z"))
+                    .timezone("Australia/Hobart")
+                    .updatedAt(OffsetDateTime.parse("2025-03-29T23:45:04.141Z"))
                     .websites(List.of(
-                        "https://www.goodwinsons.com"))
+                        "https://www.muellergroup.com"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1335,19 +1350,19 @@ public class Application {
         UpdateHrisCompanyRequest req = UpdateHrisCompanyRequest.builder()
                 .hrisCompany(HrisCompany.builder()
                     .address(PropertyHrisCompanyAddress.builder()
-                        .address1("675 Lavinia Lights")
-                        .city("Rocky Mount")
+                        .address1("5991 Emmett Avenue")
+                        .city("Rosellafort")
                         .countryCode("US")
-                        .postalCode("67325")
-                        .region("Kentucky")
-                        .regionCode("MO")
+                        .postalCode("89875")
+                        .region("Oklahoma")
+                        .regionCode("DE")
                         .build())
                     .createdAt(OffsetDateTime.parse("2021-05-02T22:27:38.970Z"))
-                    .id("eaa2bfea-06dd-4b93-bdf0-5be065d16424")
-                    .legalName("Gottlieb Group LLC")
+                    .id("d3d2f41b-6e15-4067-904e-371b7210aae5")
+                    .legalName("Robel LLC LLC")
                     .metadata(List.of())
-                    .name("Gottlieb Group")
-                    .updatedAt(OffsetDateTime.parse("2026-11-07T12:19:17.017Z"))
+                    .name("Robel LLC")
+                    .updatedAt(OffsetDateTime.parse("2026-11-13T09:54:55.028Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

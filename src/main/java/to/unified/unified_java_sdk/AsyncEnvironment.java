@@ -7,6 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestlessOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.String;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
@@ -21,6 +22,7 @@ import to.unified.unified_java_sdk.operations.CreateUnifiedEnvironment;
 import to.unified.unified_java_sdk.operations.ListUnifiedEnvironments;
 import to.unified.unified_java_sdk.operations.RemoveUnifiedEnvironment;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncEnvironment {
@@ -59,8 +61,19 @@ public class AsyncEnvironment {
      * @return {@code CompletableFuture<CreateUnifiedEnvironmentResponse>} - The async response
      */
     public CompletableFuture<CreateUnifiedEnvironmentResponse> createUnifiedEnvironment(@Nonnull List<String> request) {
+        return createUnifiedEnvironment(request, null);
+    }
+
+    /**
+     * Create new environments
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateUnifiedEnvironmentResponse>} - The async response
+     */
+    public CompletableFuture<CreateUnifiedEnvironmentResponse> createUnifiedEnvironment(@Nonnull List<String> request, @Nullable Options options) {
         AsyncRequestOperation<List<String>, CreateUnifiedEnvironmentResponse> operation
-              = new CreateUnifiedEnvironment.Async(sdkConfiguration, _headers);
+              = new CreateUnifiedEnvironment.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -81,8 +94,18 @@ public class AsyncEnvironment {
      * @return {@code CompletableFuture<ListUnifiedEnvironmentsResponse>} - The async response
      */
     public CompletableFuture<ListUnifiedEnvironmentsResponse> listUnifiedEnvironmentsDirect() {
+        return listUnifiedEnvironments(null);
+    }
+
+    /**
+     * Returns all environments
+     * 
+     * @param options additional options
+     * @return {@code CompletableFuture<ListUnifiedEnvironmentsResponse>} - The async response
+     */
+    public CompletableFuture<ListUnifiedEnvironmentsResponse> listUnifiedEnvironments(@Nullable Options options) {
         AsyncRequestlessOperation<ListUnifiedEnvironmentsResponse> operation
-            = new ListUnifiedEnvironments.Async(sdkConfiguration, _headers);
+            = new ListUnifiedEnvironments.Async(sdkConfiguration, options, _headers);
         return operation.doRequest()
             .thenCompose(operation::handleResponse);
     }
@@ -104,8 +127,19 @@ public class AsyncEnvironment {
      * @return {@code CompletableFuture<RemoveUnifiedEnvironmentResponse>} - The async response
      */
     public CompletableFuture<RemoveUnifiedEnvironmentResponse> removeUnifiedEnvironment(@Nonnull RemoveUnifiedEnvironmentRequest request) {
+        return removeUnifiedEnvironment(request, null);
+    }
+
+    /**
+     * Remove an environment
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveUnifiedEnvironmentResponse>} - The async response
+     */
+    public CompletableFuture<RemoveUnifiedEnvironmentResponse> removeUnifiedEnvironment(@Nonnull RemoveUnifiedEnvironmentRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveUnifiedEnvironmentRequest, RemoveUnifiedEnvironmentResponse> operation
-              = new RemoveUnifiedEnvironment.Async(sdkConfiguration, _headers);
+              = new RemoveUnifiedEnvironment.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateQmsIssueRequest;
 import to.unified.unified_java_sdk.models.operations.CreateQmsIssueRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateQmsIssueResponse;
@@ -35,6 +36,7 @@ import to.unified.unified_java_sdk.operations.ListUnifiedIssues;
 import to.unified.unified_java_sdk.operations.PatchQmsIssue;
 import to.unified.unified_java_sdk.operations.UpdateQmsIssue;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Issue {
@@ -79,8 +81,23 @@ public class Issue {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateQmsIssueResponse createQmsIssue(@Nonnull CreateQmsIssueRequest request) {
+        return createQmsIssue(request, null);
+    }
+
+    /**
+     * Create an issue
+     * 
+     * <p>Creates a QmsIssue. Provide the unified QmsIssue fields in the request body; they are mapped to the
+     * provider's API. Returns the created QmsIssue.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateQmsIssueResponse createQmsIssue(@Nonnull CreateQmsIssueRequest request, @Nullable Options options) {
         RequestOperation<CreateQmsIssueRequest, CreateQmsIssueResponse> operation
-              = new CreateQmsIssue.Sync(sdkConfiguration, _headers);
+              = new CreateQmsIssue.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -107,8 +124,23 @@ public class Issue {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetQmsIssueResponse getQmsIssue(@Nonnull GetQmsIssueRequest request) {
+        return getQmsIssue(request, null);
+    }
+
+    /**
+     * Retrieve an issue
+     * 
+     * <p>Retrieves a single QmsIssue by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetQmsIssueResponse getQmsIssue(@Nonnull GetQmsIssueRequest request, @Nullable Options options) {
         RequestOperation<GetQmsIssueRequest, GetQmsIssueResponse> operation
-              = new GetQmsIssue.Sync(sdkConfiguration, _headers);
+              = new GetQmsIssue.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -129,8 +161,20 @@ public class Issue {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetUnifiedIssueResponse getUnifiedIssue(@Nonnull GetUnifiedIssueRequest request) {
+        return getUnifiedIssue(request, null);
+    }
+
+    /**
+     * Retrieve support issue
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetUnifiedIssueResponse getUnifiedIssue(@Nonnull GetUnifiedIssueRequest request, @Nullable Options options) {
         RequestOperation<GetUnifiedIssueRequest, GetUnifiedIssueResponse> operation
-              = new GetUnifiedIssue.Sync(sdkConfiguration, _headers);
+              = new GetUnifiedIssue.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -165,8 +209,27 @@ public class Issue {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListQmsIssuesResponse listQmsIssues(@Nonnull ListQmsIssuesRequest request) {
+        return listQmsIssues(request, null);
+    }
+
+    /**
+     * List all issues
+     * 
+     * <p>Returns a list of QmsIssues. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListQmsIssuesResponse listQmsIssues(@Nonnull ListQmsIssuesRequest request, @Nullable Options options) {
         RequestOperation<ListQmsIssuesRequest, ListQmsIssuesResponse> operation
-              = new ListQmsIssues.Sync(sdkConfiguration, _headers);
+              = new ListQmsIssues.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -187,8 +250,20 @@ public class Issue {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListUnifiedIssuesResponse listUnifiedIssues(@Nonnull ListUnifiedIssuesRequest request) {
+        return listUnifiedIssues(request, null);
+    }
+
+    /**
+     * List support issues
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListUnifiedIssuesResponse listUnifiedIssues(@Nonnull ListUnifiedIssuesRequest request, @Nullable Options options) {
         RequestOperation<ListUnifiedIssuesRequest, ListUnifiedIssuesResponse> operation
-              = new ListUnifiedIssues.Sync(sdkConfiguration, _headers);
+              = new ListUnifiedIssues.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -215,8 +290,23 @@ public class Issue {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchQmsIssueResponse patchQmsIssue(@Nonnull PatchQmsIssueRequest request) {
+        return patchQmsIssue(request, null);
+    }
+
+    /**
+     * Update an issue
+     * 
+     * <p>Updates the QmsIssue identified by `id`. Provide the unified QmsIssue fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchQmsIssueResponse patchQmsIssue(@Nonnull PatchQmsIssueRequest request, @Nullable Options options) {
         RequestOperation<PatchQmsIssueRequest, PatchQmsIssueResponse> operation
-              = new PatchQmsIssue.Sync(sdkConfiguration, _headers);
+              = new PatchQmsIssue.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -243,8 +333,23 @@ public class Issue {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateQmsIssueResponse updateQmsIssue(@Nonnull UpdateQmsIssueRequest request) {
+        return updateQmsIssue(request, null);
+    }
+
+    /**
+     * Update an issue
+     * 
+     * <p>Updates the QmsIssue identified by `id`. Provide the unified QmsIssue fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateQmsIssueResponse updateQmsIssue(@Nonnull UpdateQmsIssueRequest request, @Nullable Options options) {
         RequestOperation<UpdateQmsIssueRequest, UpdateQmsIssueResponse> operation
-              = new UpdateQmsIssue.Sync(sdkConfiguration, _headers);
+              = new UpdateQmsIssue.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

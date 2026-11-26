@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateUnifiedWebhookRequest;
 import to.unified.unified_java_sdk.models.operations.GetUnifiedWebhookRequest;
@@ -48,6 +49,7 @@ import to.unified.unified_java_sdk.operations.UpdateUnifiedWebhook;
 import to.unified.unified_java_sdk.operations.UpdateUnifiedWebhookResume;
 import to.unified.unified_java_sdk.operations.UpdateUnifiedWebhookTrigger;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncWebhook {
@@ -94,8 +96,23 @@ public class AsyncWebhook {
      * @return {@code CompletableFuture<CreateUnifiedWebhookResponse>} - The async response
      */
     public CompletableFuture<CreateUnifiedWebhookResponse> createUnifiedWebhook(@Nonnull CreateUnifiedWebhookRequest request) {
+        return createUnifiedWebhook(request, null);
+    }
+
+    /**
+     * Create webhook subscription
+     * 
+     * <p>The data payload received by your server is described at https://docs.unified.to/unified/overview.
+     * The `interval` field can be set as low as 1 minute for paid accounts, and 60 minutes for free
+     * accounts.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateUnifiedWebhookResponse>} - The async response
+     */
+    public CompletableFuture<CreateUnifiedWebhookResponse> createUnifiedWebhook(@Nonnull CreateUnifiedWebhookRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateUnifiedWebhookRequest, CreateUnifiedWebhookResponse> operation
-              = new CreateUnifiedWebhook.Async(sdkConfiguration, _headers);
+              = new CreateUnifiedWebhook.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -117,8 +134,19 @@ public class AsyncWebhook {
      * @return {@code CompletableFuture<GetUnifiedWebhookResponse>} - The async response
      */
     public CompletableFuture<GetUnifiedWebhookResponse> getUnifiedWebhook(@Nonnull GetUnifiedWebhookRequest request) {
+        return getUnifiedWebhook(request, null);
+    }
+
+    /**
+     * Retrieve webhook by its ID
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetUnifiedWebhookResponse>} - The async response
+     */
+    public CompletableFuture<GetUnifiedWebhookResponse> getUnifiedWebhook(@Nonnull GetUnifiedWebhookRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetUnifiedWebhookRequest, GetUnifiedWebhookResponse> operation
-              = new GetUnifiedWebhook.Async(sdkConfiguration, _headers);
+              = new GetUnifiedWebhook.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -140,8 +168,19 @@ public class AsyncWebhook {
      * @return {@code CompletableFuture<ListUnifiedWebhooksResponse>} - The async response
      */
     public CompletableFuture<ListUnifiedWebhooksResponse> listUnifiedWebhooks(@Nonnull ListUnifiedWebhooksRequest request) {
+        return listUnifiedWebhooks(request, null);
+    }
+
+    /**
+     * Returns all registered webhooks
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListUnifiedWebhooksResponse>} - The async response
+     */
+    public CompletableFuture<ListUnifiedWebhooksResponse> listUnifiedWebhooks(@Nonnull ListUnifiedWebhooksRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListUnifiedWebhooksRequest, ListUnifiedWebhooksResponse> operation
-              = new ListUnifiedWebhooks.Async(sdkConfiguration, _headers);
+              = new ListUnifiedWebhooks.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -163,8 +202,19 @@ public class AsyncWebhook {
      * @return {@code CompletableFuture<PatchUnifiedWebhookResponse>} - The async response
      */
     public CompletableFuture<PatchUnifiedWebhookResponse> patchUnifiedWebhook(@Nonnull PatchUnifiedWebhookRequest request) {
+        return patchUnifiedWebhook(request, null);
+    }
+
+    /**
+     * Update webhook subscription
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchUnifiedWebhookResponse>} - The async response
+     */
+    public CompletableFuture<PatchUnifiedWebhookResponse> patchUnifiedWebhook(@Nonnull PatchUnifiedWebhookRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchUnifiedWebhookRequest, PatchUnifiedWebhookResponse> operation
-              = new PatchUnifiedWebhook.Async(sdkConfiguration, _headers);
+              = new PatchUnifiedWebhook.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -214,8 +264,33 @@ public class AsyncWebhook {
      * @return {@code CompletableFuture<PatchUnifiedWebhookResumeResponse>} - The async response
      */
     public CompletableFuture<PatchUnifiedWebhookResumeResponse> patchUnifiedWebhookResume(@Nonnull PatchUnifiedWebhookResumeRequest request) {
+        return patchUnifiedWebhookResume(request, null);
+    }
+
+    /**
+     * Resume an unhealthy webhook subscription
+     * 
+     * <p>Sets is_healthy back to true and restarts the webhook. Fix the cause first (hook_url, connection
+     * auth); the connection must be healthy. Virtual: continues from where it stopped.
+     * 
+     * <p>A webhook that went unhealthy mid-initial-sync before resume was available restarts its initial
+     * sync, so deleting and recreating it is safer. Native: re-subscribes if the provider subscription is
+     * missing or expired. Events received while the webhook was unhealthy are not re-sent.
+     * 
+     * <p>Webhook sync (beta): continues from the stored sync token. Page cursors are not stored yet, so a
+     * resume can re-send some records. Virtual and initial-sync webhooks that have been unhealthy for more
+     * than 7 days cannot be resumed, because resuming would re-send every change since then; delete and
+     * recreate them instead.
+     * 
+     * <p>MCP Events subscriptions cannot be resumed; they are managed by their MCP client.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchUnifiedWebhookResumeResponse>} - The async response
+     */
+    public CompletableFuture<PatchUnifiedWebhookResumeResponse> patchUnifiedWebhookResume(@Nonnull PatchUnifiedWebhookResumeRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchUnifiedWebhookResumeRequest, PatchUnifiedWebhookResumeResponse> operation
-              = new PatchUnifiedWebhookResume.Async(sdkConfiguration, _headers);
+              = new PatchUnifiedWebhookResume.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -237,8 +312,19 @@ public class AsyncWebhook {
      * @return {@code CompletableFuture<PatchUnifiedWebhookTriggerResponse>} - The async response
      */
     public CompletableFuture<PatchUnifiedWebhookTriggerResponse> patchUnifiedWebhookTrigger(@Nonnull PatchUnifiedWebhookTriggerRequest request) {
+        return patchUnifiedWebhookTrigger(request, null);
+    }
+
+    /**
+     * Trigger webhook
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchUnifiedWebhookTriggerResponse>} - The async response
+     */
+    public CompletableFuture<PatchUnifiedWebhookTriggerResponse> patchUnifiedWebhookTrigger(@Nonnull PatchUnifiedWebhookTriggerRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchUnifiedWebhookTriggerRequest, PatchUnifiedWebhookTriggerResponse> operation
-              = new PatchUnifiedWebhookTrigger.Async(sdkConfiguration, _headers);
+              = new PatchUnifiedWebhookTrigger.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -260,8 +346,19 @@ public class AsyncWebhook {
      * @return {@code CompletableFuture<RemoveUnifiedWebhookResponse>} - The async response
      */
     public CompletableFuture<RemoveUnifiedWebhookResponse> removeUnifiedWebhook(@Nonnull RemoveUnifiedWebhookRequest request) {
+        return removeUnifiedWebhook(request, null);
+    }
+
+    /**
+     * Remove webhook subscription
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveUnifiedWebhookResponse>} - The async response
+     */
+    public CompletableFuture<RemoveUnifiedWebhookResponse> removeUnifiedWebhook(@Nonnull RemoveUnifiedWebhookRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveUnifiedWebhookRequest, RemoveUnifiedWebhookResponse> operation
-              = new RemoveUnifiedWebhook.Async(sdkConfiguration, _headers);
+              = new RemoveUnifiedWebhook.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -283,8 +380,19 @@ public class AsyncWebhook {
      * @return {@code CompletableFuture<UpdateUnifiedWebhookResponse>} - The async response
      */
     public CompletableFuture<UpdateUnifiedWebhookResponse> updateUnifiedWebhook(@Nonnull UpdateUnifiedWebhookRequest request) {
+        return updateUnifiedWebhook(request, null);
+    }
+
+    /**
+     * Update webhook subscription
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateUnifiedWebhookResponse>} - The async response
+     */
+    public CompletableFuture<UpdateUnifiedWebhookResponse> updateUnifiedWebhook(@Nonnull UpdateUnifiedWebhookRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateUnifiedWebhookRequest, UpdateUnifiedWebhookResponse> operation
-              = new UpdateUnifiedWebhook.Async(sdkConfiguration, _headers);
+              = new UpdateUnifiedWebhook.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -334,8 +442,33 @@ public class AsyncWebhook {
      * @return {@code CompletableFuture<UpdateUnifiedWebhookResumeResponse>} - The async response
      */
     public CompletableFuture<UpdateUnifiedWebhookResumeResponse> updateUnifiedWebhookResume(@Nonnull UpdateUnifiedWebhookResumeRequest request) {
+        return updateUnifiedWebhookResume(request, null);
+    }
+
+    /**
+     * Resume an unhealthy webhook subscription
+     * 
+     * <p>Sets is_healthy back to true and restarts the webhook. Fix the cause first (hook_url, connection
+     * auth); the connection must be healthy. Virtual: continues from where it stopped.
+     * 
+     * <p>A webhook that went unhealthy mid-initial-sync before resume was available restarts its initial
+     * sync, so deleting and recreating it is safer. Native: re-subscribes if the provider subscription is
+     * missing or expired. Events received while the webhook was unhealthy are not re-sent.
+     * 
+     * <p>Webhook sync (beta): continues from the stored sync token. Page cursors are not stored yet, so a
+     * resume can re-send some records. Virtual and initial-sync webhooks that have been unhealthy for more
+     * than 7 days cannot be resumed, because resuming would re-send every change since then; delete and
+     * recreate them instead.
+     * 
+     * <p>MCP Events subscriptions cannot be resumed; they are managed by their MCP client.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateUnifiedWebhookResumeResponse>} - The async response
+     */
+    public CompletableFuture<UpdateUnifiedWebhookResumeResponse> updateUnifiedWebhookResume(@Nonnull UpdateUnifiedWebhookResumeRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateUnifiedWebhookResumeRequest, UpdateUnifiedWebhookResumeResponse> operation
-              = new UpdateUnifiedWebhookResume.Async(sdkConfiguration, _headers);
+              = new UpdateUnifiedWebhookResume.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -357,8 +490,19 @@ public class AsyncWebhook {
      * @return {@code CompletableFuture<UpdateUnifiedWebhookTriggerResponse>} - The async response
      */
     public CompletableFuture<UpdateUnifiedWebhookTriggerResponse> updateUnifiedWebhookTrigger(@Nonnull UpdateUnifiedWebhookTriggerRequest request) {
+        return updateUnifiedWebhookTrigger(request, null);
+    }
+
+    /**
+     * Trigger webhook
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateUnifiedWebhookTriggerResponse>} - The async response
+     */
+    public CompletableFuture<UpdateUnifiedWebhookTriggerResponse> updateUnifiedWebhookTrigger(@Nonnull UpdateUnifiedWebhookTriggerRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateUnifiedWebhookTriggerRequest, UpdateUnifiedWebhookTriggerResponse> operation
-              = new UpdateUnifiedWebhookTrigger.Async(sdkConfiguration, _headers);
+              = new UpdateUnifiedWebhookTrigger.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

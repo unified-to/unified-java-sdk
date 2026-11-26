@@ -6,12 +6,14 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateGenaiPromptRequest;
 import to.unified.unified_java_sdk.models.operations.async.CreateGenaiPromptRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.CreateGenaiPromptResponse;
 import to.unified.unified_java_sdk.operations.CreateGenaiPrompt;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncPrompt {
@@ -56,8 +58,22 @@ public class AsyncPrompt {
      * @return {@code CompletableFuture<CreateGenaiPromptResponse>} - The async response
      */
     public CompletableFuture<CreateGenaiPromptResponse> createGenaiPrompt(@Nonnull CreateGenaiPromptRequest request) {
+        return createGenaiPrompt(request, null);
+    }
+
+    /**
+     * Create a prompt
+     * 
+     * <p>Creates a GenaiPrompt. Provide the unified GenaiPrompt fields in the request body; they are mapped
+     * to the provider's API. Returns the created GenaiPrompt.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateGenaiPromptResponse>} - The async response
+     */
+    public CompletableFuture<CreateGenaiPromptResponse> createGenaiPrompt(@Nonnull CreateGenaiPromptRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateGenaiPromptRequest, CreateGenaiPromptResponse> operation
-              = new CreateGenaiPrompt.Async(sdkConfiguration, _headers);
+              = new CreateGenaiPrompt.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

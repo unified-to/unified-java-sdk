@@ -6,20 +6,30 @@ package to.unified.unified_java_sdk.models.operations.async;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.ListCrmLeadsRequest;
 import to.unified.unified_java_sdk.operations.ListCrmLeads;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListCrmLeadsRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private ListCrmLeadsRequest request;
+    private final Options.Builder optionsBuilder;
 
     public ListCrmLeadsRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public ListCrmLeadsRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public ListCrmLeadsRequestBuilder request(@Nonnull ListCrmLeadsRequest request) {
@@ -44,8 +54,9 @@ public class ListCrmLeadsRequestBuilder {
     * @return The response from the server.
     */
     public CompletableFuture<ListCrmLeadsResponse> call() {
+        Options options = optionsBuilder.build();
         AsyncRequestOperation<ListCrmLeadsRequest, ListCrmLeadsResponse> operation
-              = new ListCrmLeads.Async(sdkConfiguration, _headers);
+              = new ListCrmLeads.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

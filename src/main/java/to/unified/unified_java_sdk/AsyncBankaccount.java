@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateHrisBankaccountRequest;
 import to.unified.unified_java_sdk.models.operations.GetHrisBankaccountRequest;
@@ -32,6 +33,7 @@ import to.unified.unified_java_sdk.operations.PatchHrisBankaccount;
 import to.unified.unified_java_sdk.operations.RemoveHrisBankaccount;
 import to.unified.unified_java_sdk.operations.UpdateHrisBankaccount;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncBankaccount {
@@ -76,8 +78,22 @@ public class AsyncBankaccount {
      * @return {@code CompletableFuture<CreateHrisBankaccountResponse>} - The async response
      */
     public CompletableFuture<CreateHrisBankaccountResponse> createHrisBankaccount(@Nonnull CreateHrisBankaccountRequest request) {
+        return createHrisBankaccount(request, null);
+    }
+
+    /**
+     * Create a bankaccount
+     * 
+     * <p>Creates a HrisBankaccount. Provide the unified HrisBankaccount fields in the request body; they are
+     * mapped to the provider's API. Returns the created HrisBankaccount.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateHrisBankaccountResponse>} - The async response
+     */
+    public CompletableFuture<CreateHrisBankaccountResponse> createHrisBankaccount(@Nonnull CreateHrisBankaccountRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateHrisBankaccountRequest, CreateHrisBankaccountResponse> operation
-              = new CreateHrisBankaccount.Async(sdkConfiguration, _headers);
+              = new CreateHrisBankaccount.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -105,8 +121,22 @@ public class AsyncBankaccount {
      * @return {@code CompletableFuture<GetHrisBankaccountResponse>} - The async response
      */
     public CompletableFuture<GetHrisBankaccountResponse> getHrisBankaccount(@Nonnull GetHrisBankaccountRequest request) {
+        return getHrisBankaccount(request, null);
+    }
+
+    /**
+     * Retrieve a bankaccount
+     * 
+     * <p>Retrieves a single HrisBankaccount by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetHrisBankaccountResponse>} - The async response
+     */
+    public CompletableFuture<GetHrisBankaccountResponse> getHrisBankaccount(@Nonnull GetHrisBankaccountRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetHrisBankaccountRequest, GetHrisBankaccountResponse> operation
-              = new GetHrisBankaccount.Async(sdkConfiguration, _headers);
+              = new GetHrisBankaccount.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -142,8 +172,26 @@ public class AsyncBankaccount {
      * @return {@code CompletableFuture<ListHrisBankaccountsResponse>} - The async response
      */
     public CompletableFuture<ListHrisBankaccountsResponse> listHrisBankaccounts(@Nonnull ListHrisBankaccountsRequest request) {
+        return listHrisBankaccounts(request, null);
+    }
+
+    /**
+     * List all bankaccounts
+     * 
+     * <p>Returns a list of HrisBankaccounts. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListHrisBankaccountsResponse>} - The async response
+     */
+    public CompletableFuture<ListHrisBankaccountsResponse> listHrisBankaccounts(@Nonnull ListHrisBankaccountsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListHrisBankaccountsRequest, ListHrisBankaccountsResponse> operation
-              = new ListHrisBankaccounts.Async(sdkConfiguration, _headers);
+              = new ListHrisBankaccounts.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -171,8 +219,22 @@ public class AsyncBankaccount {
      * @return {@code CompletableFuture<PatchHrisBankaccountResponse>} - The async response
      */
     public CompletableFuture<PatchHrisBankaccountResponse> patchHrisBankaccount(@Nonnull PatchHrisBankaccountRequest request) {
+        return patchHrisBankaccount(request, null);
+    }
+
+    /**
+     * Update a bankaccount
+     * 
+     * <p>Updates the HrisBankaccount identified by `id`. Provide the unified HrisBankaccount fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchHrisBankaccountResponse>} - The async response
+     */
+    public CompletableFuture<PatchHrisBankaccountResponse> patchHrisBankaccount(@Nonnull PatchHrisBankaccountRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchHrisBankaccountRequest, PatchHrisBankaccountResponse> operation
-              = new PatchHrisBankaccount.Async(sdkConfiguration, _headers);
+              = new PatchHrisBankaccount.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -198,8 +260,21 @@ public class AsyncBankaccount {
      * @return {@code CompletableFuture<RemoveHrisBankaccountResponse>} - The async response
      */
     public CompletableFuture<RemoveHrisBankaccountResponse> removeHrisBankaccount(@Nonnull RemoveHrisBankaccountRequest request) {
+        return removeHrisBankaccount(request, null);
+    }
+
+    /**
+     * Remove a bankaccount
+     * 
+     * <p>Deletes the HrisBankaccount identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveHrisBankaccountResponse>} - The async response
+     */
+    public CompletableFuture<RemoveHrisBankaccountResponse> removeHrisBankaccount(@Nonnull RemoveHrisBankaccountRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveHrisBankaccountRequest, RemoveHrisBankaccountResponse> operation
-              = new RemoveHrisBankaccount.Async(sdkConfiguration, _headers);
+              = new RemoveHrisBankaccount.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -227,8 +302,22 @@ public class AsyncBankaccount {
      * @return {@code CompletableFuture<UpdateHrisBankaccountResponse>} - The async response
      */
     public CompletableFuture<UpdateHrisBankaccountResponse> updateHrisBankaccount(@Nonnull UpdateHrisBankaccountRequest request) {
+        return updateHrisBankaccount(request, null);
+    }
+
+    /**
+     * Update a bankaccount
+     * 
+     * <p>Updates the HrisBankaccount identified by `id`. Provide the unified HrisBankaccount fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateHrisBankaccountResponse>} - The async response
+     */
+    public CompletableFuture<UpdateHrisBankaccountResponse> updateHrisBankaccount(@Nonnull UpdateHrisBankaccountRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateHrisBankaccountRequest, UpdateHrisBankaccountResponse> operation
-              = new UpdateHrisBankaccount.Async(sdkConfiguration, _headers);
+              = new UpdateHrisBankaccount.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

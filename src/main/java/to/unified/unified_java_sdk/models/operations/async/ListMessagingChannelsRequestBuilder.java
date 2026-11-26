@@ -6,20 +6,30 @@ package to.unified.unified_java_sdk.models.operations.async;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.ListMessagingChannelsRequest;
 import to.unified.unified_java_sdk.operations.ListMessagingChannels;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListMessagingChannelsRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private ListMessagingChannelsRequest request;
+    private final Options.Builder optionsBuilder;
 
     public ListMessagingChannelsRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public ListMessagingChannelsRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public ListMessagingChannelsRequestBuilder request(@Nonnull ListMessagingChannelsRequest request) {
@@ -44,8 +54,9 @@ public class ListMessagingChannelsRequestBuilder {
     * @return The response from the server.
     */
     public CompletableFuture<ListMessagingChannelsResponse> call() {
+        Options options = optionsBuilder.build();
         AsyncRequestOperation<ListMessagingChannelsRequest, ListMessagingChannelsResponse> operation
-              = new ListMessagingChannels.Async(sdkConfiguration, _headers);
+              = new ListMessagingChannels.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

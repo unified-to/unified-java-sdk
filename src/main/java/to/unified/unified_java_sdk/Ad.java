@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateAdsAdRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAdsAdRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateAdsAdResponse;
@@ -31,6 +32,7 @@ import to.unified.unified_java_sdk.operations.PatchAdsAd;
 import to.unified.unified_java_sdk.operations.RemoveAdsAd;
 import to.unified.unified_java_sdk.operations.UpdateAdsAd;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Ad {
@@ -75,8 +77,23 @@ public class Ad {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateAdsAdResponse createAdsAd(@Nonnull CreateAdsAdRequest request) {
+        return createAdsAd(request, null);
+    }
+
+    /**
+     * Create an ad
+     * 
+     * <p>Creates a AdsAd. Provide the unified AdsAd fields in the request body; they are mapped to the
+     * provider's API. Returns the created AdsAd.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateAdsAdResponse createAdsAd(@Nonnull CreateAdsAdRequest request, @Nullable Options options) {
         RequestOperation<CreateAdsAdRequest, CreateAdsAdResponse> operation
-              = new CreateAdsAd.Sync(sdkConfiguration, _headers);
+              = new CreateAdsAd.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -103,8 +120,23 @@ public class Ad {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAdsAdResponse getAdsAd(@Nonnull GetAdsAdRequest request) {
+        return getAdsAd(request, null);
+    }
+
+    /**
+     * Retrieve an ad
+     * 
+     * <p>Retrieves a single AdsAd by its `id`. Obtain `id` values from the corresponding list endpoint. Use
+     * `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAdsAdResponse getAdsAd(@Nonnull GetAdsAdRequest request, @Nullable Options options) {
         RequestOperation<GetAdsAdRequest, GetAdsAdResponse> operation
-              = new GetAdsAd.Sync(sdkConfiguration, _headers);
+              = new GetAdsAd.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -139,8 +171,27 @@ public class Ad {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAdsAdsResponse listAdsAds(@Nonnull ListAdsAdsRequest request) {
+        return listAdsAds(request, null);
+    }
+
+    /**
+     * List all ads
+     * 
+     * <p>Returns a list of AdsAds. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAdsAdsResponse listAdsAds(@Nonnull ListAdsAdsRequest request, @Nullable Options options) {
         RequestOperation<ListAdsAdsRequest, ListAdsAdsResponse> operation
-              = new ListAdsAds.Sync(sdkConfiguration, _headers);
+              = new ListAdsAds.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +218,23 @@ public class Ad {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchAdsAdResponse patchAdsAd(@Nonnull PatchAdsAdRequest request) {
+        return patchAdsAd(request, null);
+    }
+
+    /**
+     * Update an ad
+     * 
+     * <p>Updates the AdsAd identified by `id`. Provide the unified AdsAd fields to change in the request
+     * body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchAdsAdResponse patchAdsAd(@Nonnull PatchAdsAdRequest request, @Nullable Options options) {
         RequestOperation<PatchAdsAdRequest, PatchAdsAdResponse> operation
-              = new PatchAdsAd.Sync(sdkConfiguration, _headers);
+              = new PatchAdsAd.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -193,8 +259,22 @@ public class Ad {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveAdsAdResponse removeAdsAd(@Nonnull RemoveAdsAdRequest request) {
+        return removeAdsAd(request, null);
+    }
+
+    /**
+     * Remove an ad
+     * 
+     * <p>Deletes the AdsAd identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveAdsAdResponse removeAdsAd(@Nonnull RemoveAdsAdRequest request, @Nullable Options options) {
         RequestOperation<RemoveAdsAdRequest, RemoveAdsAdResponse> operation
-              = new RemoveAdsAd.Sync(sdkConfiguration, _headers);
+              = new RemoveAdsAd.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -221,8 +301,23 @@ public class Ad {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateAdsAdResponse updateAdsAd(@Nonnull UpdateAdsAdRequest request) {
+        return updateAdsAd(request, null);
+    }
+
+    /**
+     * Update an ad
+     * 
+     * <p>Updates the AdsAd identified by `id`. Provide the unified AdsAd fields to change in the request
+     * body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateAdsAdResponse updateAdsAd(@Nonnull UpdateAdsAdRequest request, @Nullable Options options) {
         RequestOperation<UpdateAdsAdRequest, UpdateAdsAdResponse> operation
-              = new UpdateAdsAd.Sync(sdkConfiguration, _headers);
+              = new UpdateAdsAd.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

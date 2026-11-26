@@ -6,32 +6,58 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
+import to.unified.unified_java_sdk.models.operations.CreateDmsAppointmentRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHealthcareAppointmentRequest;
+import to.unified.unified_java_sdk.models.operations.GetDmsAppointmentRequest;
 import to.unified.unified_java_sdk.models.operations.GetHealthcareAppointmentRequest;
+import to.unified.unified_java_sdk.models.operations.ListDmsAppointmentsRequest;
 import to.unified.unified_java_sdk.models.operations.ListHealthcareAppointmentsRequest;
+import to.unified.unified_java_sdk.models.operations.PatchDmsAppointmentRequest;
 import to.unified.unified_java_sdk.models.operations.PatchHealthcareAppointmentRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveDmsAppointmentRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveHealthcareAppointmentRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateDmsAppointmentRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateHealthcareAppointmentRequest;
+import to.unified.unified_java_sdk.models.operations.async.CreateDmsAppointmentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateDmsAppointmentResponse;
 import to.unified.unified_java_sdk.models.operations.async.CreateHealthcareAppointmentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.CreateHealthcareAppointmentResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetDmsAppointmentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetDmsAppointmentResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetHealthcareAppointmentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetHealthcareAppointmentResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListDmsAppointmentsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListDmsAppointmentsResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListHealthcareAppointmentsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListHealthcareAppointmentsResponse;
+import to.unified.unified_java_sdk.models.operations.async.PatchDmsAppointmentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchDmsAppointmentResponse;
 import to.unified.unified_java_sdk.models.operations.async.PatchHealthcareAppointmentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.PatchHealthcareAppointmentResponse;
+import to.unified.unified_java_sdk.models.operations.async.RemoveDmsAppointmentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveDmsAppointmentResponse;
 import to.unified.unified_java_sdk.models.operations.async.RemoveHealthcareAppointmentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.RemoveHealthcareAppointmentResponse;
+import to.unified.unified_java_sdk.models.operations.async.UpdateDmsAppointmentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateDmsAppointmentResponse;
 import to.unified.unified_java_sdk.models.operations.async.UpdateHealthcareAppointmentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.UpdateHealthcareAppointmentResponse;
+import to.unified.unified_java_sdk.operations.CreateDmsAppointment;
 import to.unified.unified_java_sdk.operations.CreateHealthcareAppointment;
+import to.unified.unified_java_sdk.operations.GetDmsAppointment;
 import to.unified.unified_java_sdk.operations.GetHealthcareAppointment;
+import to.unified.unified_java_sdk.operations.ListDmsAppointments;
 import to.unified.unified_java_sdk.operations.ListHealthcareAppointments;
+import to.unified.unified_java_sdk.operations.PatchDmsAppointment;
 import to.unified.unified_java_sdk.operations.PatchHealthcareAppointment;
+import to.unified.unified_java_sdk.operations.RemoveDmsAppointment;
 import to.unified.unified_java_sdk.operations.RemoveHealthcareAppointment;
+import to.unified.unified_java_sdk.operations.UpdateDmsAppointment;
 import to.unified.unified_java_sdk.operations.UpdateHealthcareAppointment;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncAppointment {
@@ -57,6 +83,49 @@ public class AsyncAppointment {
     /**
      * Create an appointment
      * 
+     * <p>Creates a DmsAppointment. Provide the unified DmsAppointment fields in the request body; they are
+     * mapped to the provider's API. Returns the created DmsAppointment.
+     * 
+     * @return The async call builder
+     */
+    public CreateDmsAppointmentRequestBuilder createDmsAppointment() {
+        return new CreateDmsAppointmentRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Create an appointment
+     * 
+     * <p>Creates a DmsAppointment. Provide the unified DmsAppointment fields in the request body; they are
+     * mapped to the provider's API. Returns the created DmsAppointment.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<CreateDmsAppointmentResponse>} - The async response
+     */
+    public CompletableFuture<CreateDmsAppointmentResponse> createDmsAppointment(@Nonnull CreateDmsAppointmentRequest request) {
+        return createDmsAppointment(request, null);
+    }
+
+    /**
+     * Create an appointment
+     * 
+     * <p>Creates a DmsAppointment. Provide the unified DmsAppointment fields in the request body; they are
+     * mapped to the provider's API. Returns the created DmsAppointment.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateDmsAppointmentResponse>} - The async response
+     */
+    public CompletableFuture<CreateDmsAppointmentResponse> createDmsAppointment(@Nonnull CreateDmsAppointmentRequest request, @Nullable Options options) {
+        AsyncRequestOperation<CreateDmsAppointmentRequest, CreateDmsAppointmentResponse> operation
+              = new CreateDmsAppointment.Async(sdkConfiguration, options, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Create an appointment
+     * 
      * <p>Creates a HealthcareAppointment. Provide the unified HealthcareAppointment fields in the request
      * body; they are mapped to the provider's API. Returns the created HealthcareAppointment.
      * 
@@ -76,8 +145,65 @@ public class AsyncAppointment {
      * @return {@code CompletableFuture<CreateHealthcareAppointmentResponse>} - The async response
      */
     public CompletableFuture<CreateHealthcareAppointmentResponse> createHealthcareAppointment(@Nonnull CreateHealthcareAppointmentRequest request) {
+        return createHealthcareAppointment(request, null);
+    }
+
+    /**
+     * Create an appointment
+     * 
+     * <p>Creates a HealthcareAppointment. Provide the unified HealthcareAppointment fields in the request
+     * body; they are mapped to the provider's API. Returns the created HealthcareAppointment.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateHealthcareAppointmentResponse>} - The async response
+     */
+    public CompletableFuture<CreateHealthcareAppointmentResponse> createHealthcareAppointment(@Nonnull CreateHealthcareAppointmentRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateHealthcareAppointmentRequest, CreateHealthcareAppointmentResponse> operation
-              = new CreateHealthcareAppointment.Async(sdkConfiguration, _headers);
+              = new CreateHealthcareAppointment.Async(sdkConfiguration, options, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Retrieve an appointment
+     * 
+     * <p>Retrieves a single DmsAppointment by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @return The async call builder
+     */
+    public GetDmsAppointmentRequestBuilder getDmsAppointment() {
+        return new GetDmsAppointmentRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve an appointment
+     * 
+     * <p>Retrieves a single DmsAppointment by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<GetDmsAppointmentResponse>} - The async response
+     */
+    public CompletableFuture<GetDmsAppointmentResponse> getDmsAppointment(@Nonnull GetDmsAppointmentRequest request) {
+        return getDmsAppointment(request, null);
+    }
+
+    /**
+     * Retrieve an appointment
+     * 
+     * <p>Retrieves a single DmsAppointment by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetDmsAppointmentResponse>} - The async response
+     */
+    public CompletableFuture<GetDmsAppointmentResponse> getDmsAppointment(@Nonnull GetDmsAppointmentRequest request, @Nullable Options options) {
+        AsyncRequestOperation<GetDmsAppointmentRequest, GetDmsAppointmentResponse> operation
+              = new GetDmsAppointment.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -105,8 +231,77 @@ public class AsyncAppointment {
      * @return {@code CompletableFuture<GetHealthcareAppointmentResponse>} - The async response
      */
     public CompletableFuture<GetHealthcareAppointmentResponse> getHealthcareAppointment(@Nonnull GetHealthcareAppointmentRequest request) {
+        return getHealthcareAppointment(request, null);
+    }
+
+    /**
+     * Retrieve an appointment
+     * 
+     * <p>Retrieves a single HealthcareAppointment by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetHealthcareAppointmentResponse>} - The async response
+     */
+    public CompletableFuture<GetHealthcareAppointmentResponse> getHealthcareAppointment(@Nonnull GetHealthcareAppointmentRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetHealthcareAppointmentRequest, GetHealthcareAppointmentResponse> operation
-              = new GetHealthcareAppointment.Async(sdkConfiguration, _headers);
+              = new GetHealthcareAppointment.Async(sdkConfiguration, options, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * List all appointments
+     * 
+     * <p>Returns a list of DmsAppointments. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @return The async call builder
+     */
+    public ListDmsAppointmentsRequestBuilder listDmsAppointments() {
+        return new ListDmsAppointmentsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all appointments
+     * 
+     * <p>Returns a list of DmsAppointments. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<ListDmsAppointmentsResponse>} - The async response
+     */
+    public CompletableFuture<ListDmsAppointmentsResponse> listDmsAppointments(@Nonnull ListDmsAppointmentsRequest request) {
+        return listDmsAppointments(request, null);
+    }
+
+    /**
+     * List all appointments
+     * 
+     * <p>Returns a list of DmsAppointments. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListDmsAppointmentsResponse>} - The async response
+     */
+    public CompletableFuture<ListDmsAppointmentsResponse> listDmsAppointments(@Nonnull ListDmsAppointmentsRequest request, @Nullable Options options) {
+        AsyncRequestOperation<ListDmsAppointmentsRequest, ListDmsAppointmentsResponse> operation
+              = new ListDmsAppointments.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -142,8 +337,69 @@ public class AsyncAppointment {
      * @return {@code CompletableFuture<ListHealthcareAppointmentsResponse>} - The async response
      */
     public CompletableFuture<ListHealthcareAppointmentsResponse> listHealthcareAppointments(@Nonnull ListHealthcareAppointmentsRequest request) {
+        return listHealthcareAppointments(request, null);
+    }
+
+    /**
+     * List all appointments
+     * 
+     * <p>Returns a list of HealthcareAppointments. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListHealthcareAppointmentsResponse>} - The async response
+     */
+    public CompletableFuture<ListHealthcareAppointmentsResponse> listHealthcareAppointments(@Nonnull ListHealthcareAppointmentsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListHealthcareAppointmentsRequest, ListHealthcareAppointmentsResponse> operation
-              = new ListHealthcareAppointments.Async(sdkConfiguration, _headers);
+              = new ListHealthcareAppointments.Async(sdkConfiguration, options, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Update an appointment
+     * 
+     * <p>Updates the DmsAppointment identified by `id`. Provide the unified DmsAppointment fields to change
+     * in the request body.
+     * 
+     * @return The async call builder
+     */
+    public PatchDmsAppointmentRequestBuilder patchDmsAppointment() {
+        return new PatchDmsAppointmentRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update an appointment
+     * 
+     * <p>Updates the DmsAppointment identified by `id`. Provide the unified DmsAppointment fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<PatchDmsAppointmentResponse>} - The async response
+     */
+    public CompletableFuture<PatchDmsAppointmentResponse> patchDmsAppointment(@Nonnull PatchDmsAppointmentRequest request) {
+        return patchDmsAppointment(request, null);
+    }
+
+    /**
+     * Update an appointment
+     * 
+     * <p>Updates the DmsAppointment identified by `id`. Provide the unified DmsAppointment fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchDmsAppointmentResponse>} - The async response
+     */
+    public CompletableFuture<PatchDmsAppointmentResponse> patchDmsAppointment(@Nonnull PatchDmsAppointmentRequest request, @Nullable Options options) {
+        AsyncRequestOperation<PatchDmsAppointmentRequest, PatchDmsAppointmentResponse> operation
+              = new PatchDmsAppointment.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -171,8 +427,62 @@ public class AsyncAppointment {
      * @return {@code CompletableFuture<PatchHealthcareAppointmentResponse>} - The async response
      */
     public CompletableFuture<PatchHealthcareAppointmentResponse> patchHealthcareAppointment(@Nonnull PatchHealthcareAppointmentRequest request) {
+        return patchHealthcareAppointment(request, null);
+    }
+
+    /**
+     * Update an appointment
+     * 
+     * <p>Updates the HealthcareAppointment identified by `id`. Provide the unified HealthcareAppointment
+     * fields to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchHealthcareAppointmentResponse>} - The async response
+     */
+    public CompletableFuture<PatchHealthcareAppointmentResponse> patchHealthcareAppointment(@Nonnull PatchHealthcareAppointmentRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchHealthcareAppointmentRequest, PatchHealthcareAppointmentResponse> operation
-              = new PatchHealthcareAppointment.Async(sdkConfiguration, _headers);
+              = new PatchHealthcareAppointment.Async(sdkConfiguration, options, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Remove an appointment
+     * 
+     * <p>Deletes the DmsAppointment identified by `id`.
+     * 
+     * @return The async call builder
+     */
+    public RemoveDmsAppointmentRequestBuilder removeDmsAppointment() {
+        return new RemoveDmsAppointmentRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove an appointment
+     * 
+     * <p>Deletes the DmsAppointment identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<RemoveDmsAppointmentResponse>} - The async response
+     */
+    public CompletableFuture<RemoveDmsAppointmentResponse> removeDmsAppointment(@Nonnull RemoveDmsAppointmentRequest request) {
+        return removeDmsAppointment(request, null);
+    }
+
+    /**
+     * Remove an appointment
+     * 
+     * <p>Deletes the DmsAppointment identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveDmsAppointmentResponse>} - The async response
+     */
+    public CompletableFuture<RemoveDmsAppointmentResponse> removeDmsAppointment(@Nonnull RemoveDmsAppointmentRequest request, @Nullable Options options) {
+        AsyncRequestOperation<RemoveDmsAppointmentRequest, RemoveDmsAppointmentResponse> operation
+              = new RemoveDmsAppointment.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -198,8 +508,64 @@ public class AsyncAppointment {
      * @return {@code CompletableFuture<RemoveHealthcareAppointmentResponse>} - The async response
      */
     public CompletableFuture<RemoveHealthcareAppointmentResponse> removeHealthcareAppointment(@Nonnull RemoveHealthcareAppointmentRequest request) {
+        return removeHealthcareAppointment(request, null);
+    }
+
+    /**
+     * Remove an appointment
+     * 
+     * <p>Deletes the HealthcareAppointment identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveHealthcareAppointmentResponse>} - The async response
+     */
+    public CompletableFuture<RemoveHealthcareAppointmentResponse> removeHealthcareAppointment(@Nonnull RemoveHealthcareAppointmentRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveHealthcareAppointmentRequest, RemoveHealthcareAppointmentResponse> operation
-              = new RemoveHealthcareAppointment.Async(sdkConfiguration, _headers);
+              = new RemoveHealthcareAppointment.Async(sdkConfiguration, options, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Update an appointment
+     * 
+     * <p>Updates the DmsAppointment identified by `id`. Provide the unified DmsAppointment fields to change
+     * in the request body.
+     * 
+     * @return The async call builder
+     */
+    public UpdateDmsAppointmentRequestBuilder updateDmsAppointment() {
+        return new UpdateDmsAppointmentRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update an appointment
+     * 
+     * <p>Updates the DmsAppointment identified by `id`. Provide the unified DmsAppointment fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<UpdateDmsAppointmentResponse>} - The async response
+     */
+    public CompletableFuture<UpdateDmsAppointmentResponse> updateDmsAppointment(@Nonnull UpdateDmsAppointmentRequest request) {
+        return updateDmsAppointment(request, null);
+    }
+
+    /**
+     * Update an appointment
+     * 
+     * <p>Updates the DmsAppointment identified by `id`. Provide the unified DmsAppointment fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateDmsAppointmentResponse>} - The async response
+     */
+    public CompletableFuture<UpdateDmsAppointmentResponse> updateDmsAppointment(@Nonnull UpdateDmsAppointmentRequest request, @Nullable Options options) {
+        AsyncRequestOperation<UpdateDmsAppointmentRequest, UpdateDmsAppointmentResponse> operation
+              = new UpdateDmsAppointment.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -227,8 +593,22 @@ public class AsyncAppointment {
      * @return {@code CompletableFuture<UpdateHealthcareAppointmentResponse>} - The async response
      */
     public CompletableFuture<UpdateHealthcareAppointmentResponse> updateHealthcareAppointment(@Nonnull UpdateHealthcareAppointmentRequest request) {
+        return updateHealthcareAppointment(request, null);
+    }
+
+    /**
+     * Update an appointment
+     * 
+     * <p>Updates the HealthcareAppointment identified by `id`. Provide the unified HealthcareAppointment
+     * fields to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateHealthcareAppointmentResponse>} - The async response
+     */
+    public CompletableFuture<UpdateHealthcareAppointmentResponse> updateHealthcareAppointment(@Nonnull UpdateHealthcareAppointmentRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateHealthcareAppointmentRequest, UpdateHealthcareAppointmentResponse> operation
-              = new UpdateHealthcareAppointment.Async(sdkConfiguration, _headers);
+              = new UpdateHealthcareAppointment.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

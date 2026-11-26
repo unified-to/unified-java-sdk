@@ -6,12 +6,14 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateDatastoreQueryRequest;
 import to.unified.unified_java_sdk.models.operations.async.CreateDatastoreQueryRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.CreateDatastoreQueryResponse;
 import to.unified.unified_java_sdk.operations.CreateDatastoreQuery;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncQuery {
@@ -56,8 +58,22 @@ public class AsyncQuery {
      * @return {@code CompletableFuture<CreateDatastoreQueryResponse>} - The async response
      */
     public CompletableFuture<CreateDatastoreQueryResponse> createDatastoreQuery(@Nonnull CreateDatastoreQueryRequest request) {
+        return createDatastoreQuery(request, null);
+    }
+
+    /**
+     * Create a query
+     * 
+     * <p>Creates a DatastoreQuery. Provide the unified DatastoreQuery fields in the request body; they are
+     * mapped to the provider's API. Returns the created DatastoreQuery.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateDatastoreQueryResponse>} - The async response
+     */
+    public CompletableFuture<CreateDatastoreQueryResponse> createDatastoreQuery(@Nonnull CreateDatastoreQueryRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateDatastoreQueryRequest, CreateDatastoreQueryResponse> operation
-              = new CreateDatastoreQuery.Async(sdkConfiguration, _headers);
+              = new CreateDatastoreQuery.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

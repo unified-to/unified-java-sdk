@@ -6,18 +6,28 @@ package to.unified.unified_java_sdk.models.operations;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.CreateAccountingExpense;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class CreateAccountingExpenseRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private CreateAccountingExpenseRequest request;
+    private final Options.Builder optionsBuilder;
 
     public CreateAccountingExpenseRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public CreateAccountingExpenseRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public CreateAccountingExpenseRequestBuilder request(@Nonnull CreateAccountingExpenseRequest request) {
@@ -42,8 +52,9 @@ public class CreateAccountingExpenseRequestBuilder {
     * @return The response from the server.
     */
     public CreateAccountingExpenseResponse call() {
+        Options options = optionsBuilder.build();
         RequestOperation<CreateAccountingExpenseRequest, CreateAccountingExpenseResponse> operation
-              = new CreateAccountingExpense.Sync(sdkConfiguration, _headers);
+              = new CreateAccountingExpense.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

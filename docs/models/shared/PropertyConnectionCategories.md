@@ -57,3 +57,6 @@ PropertyConnectionCategories custom = PropertyConnectionCategories.of("custom_va
 | `PROPERTY`     | property       |
 | `PLM`          | plm            |
 | `QMS`          | qms            |
+| `DMS`          | dms            |
+| `FHIR`         | fhir           |
+| `PRINTING`     | printing       |

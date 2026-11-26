@@ -6,20 +6,30 @@ package to.unified.unified_java_sdk.models.operations.async;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.ListHrisDeductionsRequest;
 import to.unified.unified_java_sdk.operations.ListHrisDeductions;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListHrisDeductionsRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private ListHrisDeductionsRequest request;
+    private final Options.Builder optionsBuilder;
 
     public ListHrisDeductionsRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public ListHrisDeductionsRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public ListHrisDeductionsRequestBuilder request(@Nonnull ListHrisDeductionsRequest request) {
@@ -44,8 +54,9 @@ public class ListHrisDeductionsRequestBuilder {
     * @return The response from the server.
     */
     public CompletableFuture<ListHrisDeductionsResponse> call() {
+        Options options = optionsBuilder.build();
         AsyncRequestOperation<ListHrisDeductionsRequest, ListHrisDeductionsResponse> operation
-              = new ListHrisDeductions.Async(sdkConfiguration, _headers);
+              = new ListHrisDeductions.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

@@ -6,18 +6,28 @@ package to.unified.unified_java_sdk.models.operations;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.RemoveMessagingChannel;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveMessagingChannelRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private RemoveMessagingChannelRequest request;
+    private final Options.Builder optionsBuilder;
 
     public RemoveMessagingChannelRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public RemoveMessagingChannelRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public RemoveMessagingChannelRequestBuilder request(@Nonnull RemoveMessagingChannelRequest request) {
@@ -42,8 +52,9 @@ public class RemoveMessagingChannelRequestBuilder {
     * @return The response from the server.
     */
     public RemoveMessagingChannelResponse call() {
+        Options options = optionsBuilder.build();
         RequestOperation<RemoveMessagingChannelRequest, RemoveMessagingChannelResponse> operation
-              = new RemoveMessagingChannel.Sync(sdkConfiguration, _headers);
+              = new RemoveMessagingChannel.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

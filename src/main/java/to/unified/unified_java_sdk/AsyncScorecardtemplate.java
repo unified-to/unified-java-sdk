@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.GetUcScorecardtemplateRequest;
 import to.unified.unified_java_sdk.models.operations.ListUcScorecardtemplatesRequest;
@@ -16,6 +17,7 @@ import to.unified.unified_java_sdk.models.operations.async.ListUcScorecardtempla
 import to.unified.unified_java_sdk.operations.GetUcScorecardtemplate;
 import to.unified.unified_java_sdk.operations.ListUcScorecardtemplates;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncScorecardtemplate {
@@ -60,8 +62,22 @@ public class AsyncScorecardtemplate {
      * @return {@code CompletableFuture<GetUcScorecardtemplateResponse>} - The async response
      */
     public CompletableFuture<GetUcScorecardtemplateResponse> getUcScorecardtemplate(@Nonnull GetUcScorecardtemplateRequest request) {
+        return getUcScorecardtemplate(request, null);
+    }
+
+    /**
+     * Retrieve a scorecardtemplate
+     * 
+     * <p>Retrieves a single UcScorecardtemplate by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetUcScorecardtemplateResponse>} - The async response
+     */
+    public CompletableFuture<GetUcScorecardtemplateResponse> getUcScorecardtemplate(@Nonnull GetUcScorecardtemplateRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetUcScorecardtemplateRequest, GetUcScorecardtemplateResponse> operation
-              = new GetUcScorecardtemplate.Async(sdkConfiguration, _headers);
+              = new GetUcScorecardtemplate.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -97,8 +113,26 @@ public class AsyncScorecardtemplate {
      * @return {@code CompletableFuture<ListUcScorecardtemplatesResponse>} - The async response
      */
     public CompletableFuture<ListUcScorecardtemplatesResponse> listUcScorecardtemplates(@Nonnull ListUcScorecardtemplatesRequest request) {
+        return listUcScorecardtemplates(request, null);
+    }
+
+    /**
+     * List all scorecardtemplates
+     * 
+     * <p>Returns a list of UcScorecardtemplates. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListUcScorecardtemplatesResponse>} - The async response
+     */
+    public CompletableFuture<ListUcScorecardtemplatesResponse> listUcScorecardtemplates(@Nonnull ListUcScorecardtemplatesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListUcScorecardtemplatesRequest, ListUcScorecardtemplatesResponse> operation
-              = new ListUcScorecardtemplates.Async(sdkConfiguration, _headers);
+              = new ListUcScorecardtemplates.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

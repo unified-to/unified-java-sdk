@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateKmsPageRequest;
 import to.unified.unified_java_sdk.models.operations.CreateKmsPageRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateKmsPageResponse;
@@ -31,6 +32,7 @@ import to.unified.unified_java_sdk.operations.PatchKmsPage;
 import to.unified.unified_java_sdk.operations.RemoveKmsPage;
 import to.unified.unified_java_sdk.operations.UpdateKmsPage;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Page {
@@ -75,8 +77,23 @@ public class Page {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateKmsPageResponse createKmsPage(@Nonnull CreateKmsPageRequest request) {
+        return createKmsPage(request, null);
+    }
+
+    /**
+     * Create a page
+     * 
+     * <p>Creates a KmsPage. Provide the unified KmsPage fields in the request body; they are mapped to the
+     * provider's API. Returns the created KmsPage.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateKmsPageResponse createKmsPage(@Nonnull CreateKmsPageRequest request, @Nullable Options options) {
         RequestOperation<CreateKmsPageRequest, CreateKmsPageResponse> operation
-              = new CreateKmsPage.Sync(sdkConfiguration, _headers);
+              = new CreateKmsPage.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -103,8 +120,23 @@ public class Page {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetKmsPageResponse getKmsPage(@Nonnull GetKmsPageRequest request) {
+        return getKmsPage(request, null);
+    }
+
+    /**
+     * Retrieve a page
+     * 
+     * <p>Retrieves a single KmsPage by its `id`. Obtain `id` values from the corresponding list endpoint. Use
+     * `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetKmsPageResponse getKmsPage(@Nonnull GetKmsPageRequest request, @Nullable Options options) {
         RequestOperation<GetKmsPageRequest, GetKmsPageResponse> operation
-              = new GetKmsPage.Sync(sdkConfiguration, _headers);
+              = new GetKmsPage.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -139,8 +171,27 @@ public class Page {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListKmsPagesResponse listKmsPages(@Nonnull ListKmsPagesRequest request) {
+        return listKmsPages(request, null);
+    }
+
+    /**
+     * List all pages
+     * 
+     * <p>Returns a list of KmsPages. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListKmsPagesResponse listKmsPages(@Nonnull ListKmsPagesRequest request, @Nullable Options options) {
         RequestOperation<ListKmsPagesRequest, ListKmsPagesResponse> operation
-              = new ListKmsPages.Sync(sdkConfiguration, _headers);
+              = new ListKmsPages.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +218,23 @@ public class Page {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchKmsPageResponse patchKmsPage(@Nonnull PatchKmsPageRequest request) {
+        return patchKmsPage(request, null);
+    }
+
+    /**
+     * Update a page
+     * 
+     * <p>Updates the KmsPage identified by `id`. Provide the unified KmsPage fields to change in the request
+     * body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchKmsPageResponse patchKmsPage(@Nonnull PatchKmsPageRequest request, @Nullable Options options) {
         RequestOperation<PatchKmsPageRequest, PatchKmsPageResponse> operation
-              = new PatchKmsPage.Sync(sdkConfiguration, _headers);
+              = new PatchKmsPage.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -193,8 +259,22 @@ public class Page {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveKmsPageResponse removeKmsPage(@Nonnull RemoveKmsPageRequest request) {
+        return removeKmsPage(request, null);
+    }
+
+    /**
+     * Remove a page
+     * 
+     * <p>Deletes the KmsPage identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveKmsPageResponse removeKmsPage(@Nonnull RemoveKmsPageRequest request, @Nullable Options options) {
         RequestOperation<RemoveKmsPageRequest, RemoveKmsPageResponse> operation
-              = new RemoveKmsPage.Sync(sdkConfiguration, _headers);
+              = new RemoveKmsPage.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -221,8 +301,23 @@ public class Page {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateKmsPageResponse updateKmsPage(@Nonnull UpdateKmsPageRequest request) {
+        return updateKmsPage(request, null);
+    }
+
+    /**
+     * Update a page
+     * 
+     * <p>Updates the KmsPage identified by `id`. Provide the unified KmsPage fields to change in the request
+     * body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateKmsPageResponse updateKmsPage(@Nonnull UpdateKmsPageRequest request, @Nullable Options options) {
         RequestOperation<UpdateKmsPageRequest, UpdateKmsPageResponse> operation
-              = new UpdateKmsPage.Sync(sdkConfiguration, _headers);
+              = new UpdateKmsPage.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

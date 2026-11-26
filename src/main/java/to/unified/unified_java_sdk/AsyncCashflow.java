@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.GetAccountingCashflowRequest;
 import to.unified.unified_java_sdk.models.operations.ListAccountingCashflowsRequest;
@@ -16,6 +17,7 @@ import to.unified.unified_java_sdk.models.operations.async.ListAccountingCashflo
 import to.unified.unified_java_sdk.operations.GetAccountingCashflow;
 import to.unified.unified_java_sdk.operations.ListAccountingCashflows;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncCashflow {
@@ -60,8 +62,22 @@ public class AsyncCashflow {
      * @return {@code CompletableFuture<GetAccountingCashflowResponse>} - The async response
      */
     public CompletableFuture<GetAccountingCashflowResponse> getAccountingCashflow(@Nonnull GetAccountingCashflowRequest request) {
+        return getAccountingCashflow(request, null);
+    }
+
+    /**
+     * Retrieve a cashflow
+     * 
+     * <p>Retrieves a single AccountingCashflow by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetAccountingCashflowResponse>} - The async response
+     */
+    public CompletableFuture<GetAccountingCashflowResponse> getAccountingCashflow(@Nonnull GetAccountingCashflowRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetAccountingCashflowRequest, GetAccountingCashflowResponse> operation
-              = new GetAccountingCashflow.Async(sdkConfiguration, _headers);
+              = new GetAccountingCashflow.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -97,8 +113,26 @@ public class AsyncCashflow {
      * @return {@code CompletableFuture<ListAccountingCashflowsResponse>} - The async response
      */
     public CompletableFuture<ListAccountingCashflowsResponse> listAccountingCashflows(@Nonnull ListAccountingCashflowsRequest request) {
+        return listAccountingCashflows(request, null);
+    }
+
+    /**
+     * List all cashflows
+     * 
+     * <p>Returns a list of AccountingCashflows. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListAccountingCashflowsResponse>} - The async response
+     */
+    public CompletableFuture<ListAccountingCashflowsResponse> listAccountingCashflows(@Nonnull ListAccountingCashflowsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListAccountingCashflowsRequest, ListAccountingCashflowsResponse> operation
-              = new ListAccountingCashflows.Async(sdkConfiguration, _headers);
+              = new ListAccountingCashflows.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

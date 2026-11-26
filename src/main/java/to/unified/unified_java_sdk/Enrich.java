@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.ListEnrichCompaniesRequest;
 import to.unified.unified_java_sdk.models.operations.ListEnrichCompaniesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListEnrichCompaniesResponse;
@@ -15,6 +16,7 @@ import to.unified.unified_java_sdk.models.operations.ListEnrichPeopleResponse;
 import to.unified.unified_java_sdk.operations.ListEnrichCompanies;
 import to.unified.unified_java_sdk.operations.ListEnrichPeople;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Enrich {
@@ -53,8 +55,20 @@ public class Enrich {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListEnrichCompaniesResponse listEnrichCompanies(@Nonnull ListEnrichCompaniesRequest request) {
+        return listEnrichCompanies(request, null);
+    }
+
+    /**
+     * Retrieve enrichment information for a company
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListEnrichCompaniesResponse listEnrichCompanies(@Nonnull ListEnrichCompaniesRequest request, @Nullable Options options) {
         RequestOperation<ListEnrichCompaniesRequest, ListEnrichCompaniesResponse> operation
-              = new ListEnrichCompanies.Sync(sdkConfiguration, _headers);
+              = new ListEnrichCompanies.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -75,8 +89,20 @@ public class Enrich {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListEnrichPeopleResponse listEnrichPeople(@Nonnull ListEnrichPeopleRequest request) {
+        return listEnrichPeople(request, null);
+    }
+
+    /**
+     * Retrieve enrichment information for a person
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListEnrichPeopleResponse listEnrichPeople(@Nonnull ListEnrichPeopleRequest request, @Nullable Options options) {
         RequestOperation<ListEnrichPeopleRequest, ListEnrichPeopleResponse> operation
-              = new ListEnrichPeople.Sync(sdkConfiguration, _headers);
+              = new ListEnrichPeople.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

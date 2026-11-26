@@ -6,20 +6,30 @@ package to.unified.unified_java_sdk.models.operations.async;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.GetAccountingOrganizationRequest;
 import to.unified.unified_java_sdk.operations.GetAccountingOrganization;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetAccountingOrganizationRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private GetAccountingOrganizationRequest request;
+    private final Options.Builder optionsBuilder;
 
     public GetAccountingOrganizationRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public GetAccountingOrganizationRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public GetAccountingOrganizationRequestBuilder request(@Nonnull GetAccountingOrganizationRequest request) {
@@ -44,8 +54,9 @@ public class GetAccountingOrganizationRequestBuilder {
     * @return The response from the server.
     */
     public CompletableFuture<GetAccountingOrganizationResponse> call() {
+        Options options = optionsBuilder.build();
         AsyncRequestOperation<GetAccountingOrganizationRequest, GetAccountingOrganizationResponse> operation
-              = new GetAccountingOrganization.Async(sdkConfiguration, _headers);
+              = new GetAccountingOrganization.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

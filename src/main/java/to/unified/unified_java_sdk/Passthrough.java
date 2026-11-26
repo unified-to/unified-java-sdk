@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreatePassthroughJsonRequest;
 import to.unified.unified_java_sdk.models.operations.CreatePassthroughJsonRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreatePassthroughJsonResponse;
@@ -39,6 +40,7 @@ import to.unified.unified_java_sdk.operations.RemovePassthrough;
 import to.unified.unified_java_sdk.operations.UpdatePassthroughJson;
 import to.unified.unified_java_sdk.operations.UpdatePassthroughRaw;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Passthrough {
@@ -77,8 +79,20 @@ public class Passthrough {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreatePassthroughJsonResponse createPassthroughJson(@Nonnull CreatePassthroughJsonRequest request) {
+        return createPassthroughJson(request, null);
+    }
+
+    /**
+     * Passthrough POST
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreatePassthroughJsonResponse createPassthroughJson(@Nonnull CreatePassthroughJsonRequest request, @Nullable Options options) {
         RequestOperation<CreatePassthroughJsonRequest, CreatePassthroughJsonResponse> operation
-              = new CreatePassthroughJson.Sync(sdkConfiguration, _headers);
+              = new CreatePassthroughJson.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -99,8 +113,20 @@ public class Passthrough {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreatePassthroughRawResponse createPassthroughRaw(@Nonnull CreatePassthroughRawRequest request) {
+        return createPassthroughRaw(request, null);
+    }
+
+    /**
+     * Passthrough POST
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreatePassthroughRawResponse createPassthroughRaw(@Nonnull CreatePassthroughRawRequest request, @Nullable Options options) {
         RequestOperation<CreatePassthroughRawRequest, CreatePassthroughRawResponse> operation
-              = new CreatePassthroughRaw.Sync(sdkConfiguration, _headers);
+              = new CreatePassthroughRaw.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -121,8 +147,20 @@ public class Passthrough {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListPassthroughsResponse listPassthroughs(@Nonnull ListPassthroughsRequest request) {
+        return listPassthroughs(request, null);
+    }
+
+    /**
+     * Passthrough GET
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListPassthroughsResponse listPassthroughs(@Nonnull ListPassthroughsRequest request, @Nullable Options options) {
         RequestOperation<ListPassthroughsRequest, ListPassthroughsResponse> operation
-              = new ListPassthroughs.Sync(sdkConfiguration, _headers);
+              = new ListPassthroughs.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -143,8 +181,20 @@ public class Passthrough {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchPassthroughJsonResponse patchPassthroughJson(@Nonnull PatchPassthroughJsonRequest request) {
+        return patchPassthroughJson(request, null);
+    }
+
+    /**
+     * Passthrough PUT
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchPassthroughJsonResponse patchPassthroughJson(@Nonnull PatchPassthroughJsonRequest request, @Nullable Options options) {
         RequestOperation<PatchPassthroughJsonRequest, PatchPassthroughJsonResponse> operation
-              = new PatchPassthroughJson.Sync(sdkConfiguration, _headers);
+              = new PatchPassthroughJson.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -165,8 +215,20 @@ public class Passthrough {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchPassthroughRawResponse patchPassthroughRaw(@Nonnull PatchPassthroughRawRequest request) {
+        return patchPassthroughRaw(request, null);
+    }
+
+    /**
+     * Passthrough PUT
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchPassthroughRawResponse patchPassthroughRaw(@Nonnull PatchPassthroughRawRequest request, @Nullable Options options) {
         RequestOperation<PatchPassthroughRawRequest, PatchPassthroughRawResponse> operation
-              = new PatchPassthroughRaw.Sync(sdkConfiguration, _headers);
+              = new PatchPassthroughRaw.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -187,8 +249,20 @@ public class Passthrough {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemovePassthroughResponse removePassthrough(@Nonnull RemovePassthroughRequest request) {
+        return removePassthrough(request, null);
+    }
+
+    /**
+     * Passthrough DELETE
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemovePassthroughResponse removePassthrough(@Nonnull RemovePassthroughRequest request, @Nullable Options options) {
         RequestOperation<RemovePassthroughRequest, RemovePassthroughResponse> operation
-              = new RemovePassthrough.Sync(sdkConfiguration, _headers);
+              = new RemovePassthrough.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -209,8 +283,20 @@ public class Passthrough {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdatePassthroughJsonResponse updatePassthroughJson(@Nonnull UpdatePassthroughJsonRequest request) {
+        return updatePassthroughJson(request, null);
+    }
+
+    /**
+     * Passthrough PUT
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdatePassthroughJsonResponse updatePassthroughJson(@Nonnull UpdatePassthroughJsonRequest request, @Nullable Options options) {
         RequestOperation<UpdatePassthroughJsonRequest, UpdatePassthroughJsonResponse> operation
-              = new UpdatePassthroughJson.Sync(sdkConfiguration, _headers);
+              = new UpdatePassthroughJson.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -231,8 +317,20 @@ public class Passthrough {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdatePassthroughRawResponse updatePassthroughRaw(@Nonnull UpdatePassthroughRawRequest request) {
+        return updatePassthroughRaw(request, null);
+    }
+
+    /**
+     * Passthrough PUT
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdatePassthroughRawResponse updatePassthroughRaw(@Nonnull UpdatePassthroughRawRequest request, @Nullable Options options) {
         RequestOperation<UpdatePassthroughRawRequest, UpdatePassthroughRawResponse> operation
-              = new UpdatePassthroughRaw.Sync(sdkConfiguration, _headers);
+              = new UpdatePassthroughRaw.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

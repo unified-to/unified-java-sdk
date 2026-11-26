@@ -6,18 +6,28 @@ package to.unified.unified_java_sdk.models.operations;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.ListHealthcareCoverages;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListHealthcareCoveragesRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private ListHealthcareCoveragesRequest request;
+    private final Options.Builder optionsBuilder;
 
     public ListHealthcareCoveragesRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public ListHealthcareCoveragesRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public ListHealthcareCoveragesRequestBuilder request(@Nonnull ListHealthcareCoveragesRequest request) {
@@ -42,8 +52,9 @@ public class ListHealthcareCoveragesRequestBuilder {
     * @return The response from the server.
     */
     public ListHealthcareCoveragesResponse call() {
+        Options options = optionsBuilder.build();
         RequestOperation<ListHealthcareCoveragesRequest, ListHealthcareCoveragesResponse> operation
-              = new ListHealthcareCoverages.Sync(sdkConfiguration, _headers);
+              = new ListHealthcareCoverages.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

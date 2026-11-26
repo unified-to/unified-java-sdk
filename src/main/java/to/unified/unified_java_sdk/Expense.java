@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingExpenseRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingExpenseRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingExpenseResponse;
@@ -55,6 +56,7 @@ import to.unified.unified_java_sdk.operations.RemoveLegalExpense;
 import to.unified.unified_java_sdk.operations.UpdateAccountingExpense;
 import to.unified.unified_java_sdk.operations.UpdateLegalExpense;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Expense {
@@ -99,8 +101,23 @@ public class Expense {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateAccountingExpenseResponse createAccountingExpense(@Nonnull CreateAccountingExpenseRequest request) {
+        return createAccountingExpense(request, null);
+    }
+
+    /**
+     * Create an expense
+     * 
+     * <p>Creates a AccountingExpense. Provide the unified AccountingExpense fields in the request body; they
+     * are mapped to the provider's API. Returns the created AccountingExpense.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateAccountingExpenseResponse createAccountingExpense(@Nonnull CreateAccountingExpenseRequest request, @Nullable Options options) {
         RequestOperation<CreateAccountingExpenseRequest, CreateAccountingExpenseResponse> operation
-              = new CreateAccountingExpense.Sync(sdkConfiguration, _headers);
+              = new CreateAccountingExpense.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -127,8 +144,23 @@ public class Expense {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateLegalExpenseResponse createLegalExpense(@Nonnull CreateLegalExpenseRequest request) {
+        return createLegalExpense(request, null);
+    }
+
+    /**
+     * Create an expense
+     * 
+     * <p>Creates a LegalExpense. Provide the unified LegalExpense fields in the request body; they are mapped
+     * to the provider's API. Returns the created LegalExpense.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateLegalExpenseResponse createLegalExpense(@Nonnull CreateLegalExpenseRequest request, @Nullable Options options) {
         RequestOperation<CreateLegalExpenseRequest, CreateLegalExpenseResponse> operation
-              = new CreateLegalExpense.Sync(sdkConfiguration, _headers);
+              = new CreateLegalExpense.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -155,8 +187,23 @@ public class Expense {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAccountingExpenseResponse getAccountingExpense(@Nonnull GetAccountingExpenseRequest request) {
+        return getAccountingExpense(request, null);
+    }
+
+    /**
+     * Retrieve an expense
+     * 
+     * <p>Retrieves a single AccountingExpense by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAccountingExpenseResponse getAccountingExpense(@Nonnull GetAccountingExpenseRequest request, @Nullable Options options) {
         RequestOperation<GetAccountingExpenseRequest, GetAccountingExpenseResponse> operation
-              = new GetAccountingExpense.Sync(sdkConfiguration, _headers);
+              = new GetAccountingExpense.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -183,8 +230,23 @@ public class Expense {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetLegalExpenseResponse getLegalExpense(@Nonnull GetLegalExpenseRequest request) {
+        return getLegalExpense(request, null);
+    }
+
+    /**
+     * Retrieve an expense
+     * 
+     * <p>Retrieves a single LegalExpense by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetLegalExpenseResponse getLegalExpense(@Nonnull GetLegalExpenseRequest request, @Nullable Options options) {
         RequestOperation<GetLegalExpenseRequest, GetLegalExpenseResponse> operation
-              = new GetLegalExpense.Sync(sdkConfiguration, _headers);
+              = new GetLegalExpense.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -219,8 +281,27 @@ public class Expense {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAccountingExpensesResponse listAccountingExpenses(@Nonnull ListAccountingExpensesRequest request) {
+        return listAccountingExpenses(request, null);
+    }
+
+    /**
+     * List all expenses
+     * 
+     * <p>Returns a list of AccountingExpenses. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAccountingExpensesResponse listAccountingExpenses(@Nonnull ListAccountingExpensesRequest request, @Nullable Options options) {
         RequestOperation<ListAccountingExpensesRequest, ListAccountingExpensesResponse> operation
-              = new ListAccountingExpenses.Sync(sdkConfiguration, _headers);
+              = new ListAccountingExpenses.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -255,8 +336,27 @@ public class Expense {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListLegalExpensesResponse listLegalExpenses(@Nonnull ListLegalExpensesRequest request) {
+        return listLegalExpenses(request, null);
+    }
+
+    /**
+     * List all expenses
+     * 
+     * <p>Returns a list of LegalExpenses. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListLegalExpensesResponse listLegalExpenses(@Nonnull ListLegalExpensesRequest request, @Nullable Options options) {
         RequestOperation<ListLegalExpensesRequest, ListLegalExpensesResponse> operation
-              = new ListLegalExpenses.Sync(sdkConfiguration, _headers);
+              = new ListLegalExpenses.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -283,8 +383,23 @@ public class Expense {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchAccountingExpenseResponse patchAccountingExpense(@Nonnull PatchAccountingExpenseRequest request) {
+        return patchAccountingExpense(request, null);
+    }
+
+    /**
+     * Update an expense
+     * 
+     * <p>Updates the AccountingExpense identified by `id`. Provide the unified AccountingExpense fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchAccountingExpenseResponse patchAccountingExpense(@Nonnull PatchAccountingExpenseRequest request, @Nullable Options options) {
         RequestOperation<PatchAccountingExpenseRequest, PatchAccountingExpenseResponse> operation
-              = new PatchAccountingExpense.Sync(sdkConfiguration, _headers);
+              = new PatchAccountingExpense.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -311,8 +426,23 @@ public class Expense {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchLegalExpenseResponse patchLegalExpense(@Nonnull PatchLegalExpenseRequest request) {
+        return patchLegalExpense(request, null);
+    }
+
+    /**
+     * Update an expense
+     * 
+     * <p>Updates the LegalExpense identified by `id`. Provide the unified LegalExpense fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchLegalExpenseResponse patchLegalExpense(@Nonnull PatchLegalExpenseRequest request, @Nullable Options options) {
         RequestOperation<PatchLegalExpenseRequest, PatchLegalExpenseResponse> operation
-              = new PatchLegalExpense.Sync(sdkConfiguration, _headers);
+              = new PatchLegalExpense.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -337,8 +467,22 @@ public class Expense {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveAccountingExpenseResponse removeAccountingExpense(@Nonnull RemoveAccountingExpenseRequest request) {
+        return removeAccountingExpense(request, null);
+    }
+
+    /**
+     * Remove an expense
+     * 
+     * <p>Deletes the AccountingExpense identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveAccountingExpenseResponse removeAccountingExpense(@Nonnull RemoveAccountingExpenseRequest request, @Nullable Options options) {
         RequestOperation<RemoveAccountingExpenseRequest, RemoveAccountingExpenseResponse> operation
-              = new RemoveAccountingExpense.Sync(sdkConfiguration, _headers);
+              = new RemoveAccountingExpense.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -363,8 +507,22 @@ public class Expense {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveLegalExpenseResponse removeLegalExpense(@Nonnull RemoveLegalExpenseRequest request) {
+        return removeLegalExpense(request, null);
+    }
+
+    /**
+     * Remove an expense
+     * 
+     * <p>Deletes the LegalExpense identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveLegalExpenseResponse removeLegalExpense(@Nonnull RemoveLegalExpenseRequest request, @Nullable Options options) {
         RequestOperation<RemoveLegalExpenseRequest, RemoveLegalExpenseResponse> operation
-              = new RemoveLegalExpense.Sync(sdkConfiguration, _headers);
+              = new RemoveLegalExpense.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -391,8 +549,23 @@ public class Expense {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateAccountingExpenseResponse updateAccountingExpense(@Nonnull UpdateAccountingExpenseRequest request) {
+        return updateAccountingExpense(request, null);
+    }
+
+    /**
+     * Update an expense
+     * 
+     * <p>Updates the AccountingExpense identified by `id`. Provide the unified AccountingExpense fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateAccountingExpenseResponse updateAccountingExpense(@Nonnull UpdateAccountingExpenseRequest request, @Nullable Options options) {
         RequestOperation<UpdateAccountingExpenseRequest, UpdateAccountingExpenseResponse> operation
-              = new UpdateAccountingExpense.Sync(sdkConfiguration, _headers);
+              = new UpdateAccountingExpense.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -419,8 +592,23 @@ public class Expense {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateLegalExpenseResponse updateLegalExpense(@Nonnull UpdateLegalExpenseRequest request) {
+        return updateLegalExpense(request, null);
+    }
+
+    /**
+     * Update an expense
+     * 
+     * <p>Updates the LegalExpense identified by `id`. Provide the unified LegalExpense fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateLegalExpenseResponse updateLegalExpense(@Nonnull UpdateLegalExpenseRequest request, @Nullable Options options) {
         RequestOperation<UpdateLegalExpenseRequest, UpdateLegalExpenseResponse> operation
-              = new UpdateLegalExpense.Sync(sdkConfiguration, _headers);
+              = new UpdateLegalExpense.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

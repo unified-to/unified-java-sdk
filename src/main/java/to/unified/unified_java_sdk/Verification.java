@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateVerificationRequestRequest;
 import to.unified.unified_java_sdk.models.operations.CreateVerificationRequestRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateVerificationRequestResponse;
@@ -39,6 +40,7 @@ import to.unified.unified_java_sdk.operations.PatchVerificationRequest;
 import to.unified.unified_java_sdk.operations.RemoveVerificationRequest;
 import to.unified.unified_java_sdk.operations.UpdateVerificationRequest;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Verification {
@@ -83,8 +85,23 @@ public class Verification {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateVerificationRequestResponse createVerificationRequest(@Nonnull CreateVerificationRequestRequest request) {
+        return createVerificationRequest(request, null);
+    }
+
+    /**
+     * Create a request
+     * 
+     * <p>Creates a VerificationRequest. Provide the unified VerificationRequest fields in the request body;
+     * they are mapped to the provider's API. Returns the created VerificationRequest.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateVerificationRequestResponse createVerificationRequest(@Nonnull CreateVerificationRequestRequest request, @Nullable Options options) {
         RequestOperation<CreateVerificationRequestRequest, CreateVerificationRequestResponse> operation
-              = new CreateVerificationRequest.Sync(sdkConfiguration, _headers);
+              = new CreateVerificationRequest.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -111,8 +128,23 @@ public class Verification {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetVerificationPackageResponse getVerificationPackage(@Nonnull GetVerificationPackageRequest request) {
+        return getVerificationPackage(request, null);
+    }
+
+    /**
+     * Retrieve a package
+     * 
+     * <p>Retrieves a single VerificationPackage by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetVerificationPackageResponse getVerificationPackage(@Nonnull GetVerificationPackageRequest request, @Nullable Options options) {
         RequestOperation<GetVerificationPackageRequest, GetVerificationPackageResponse> operation
-              = new GetVerificationPackage.Sync(sdkConfiguration, _headers);
+              = new GetVerificationPackage.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -139,8 +171,23 @@ public class Verification {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetVerificationRequestResponse getVerificationRequest(@Nonnull GetVerificationRequestRequest request) {
+        return getVerificationRequest(request, null);
+    }
+
+    /**
+     * Retrieve a request
+     * 
+     * <p>Retrieves a single VerificationRequest by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetVerificationRequestResponse getVerificationRequest(@Nonnull GetVerificationRequestRequest request, @Nullable Options options) {
         RequestOperation<GetVerificationRequestRequest, GetVerificationRequestResponse> operation
-              = new GetVerificationRequest.Sync(sdkConfiguration, _headers);
+              = new GetVerificationRequest.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -175,8 +222,27 @@ public class Verification {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListVerificationPackagesResponse listVerificationPackages(@Nonnull ListVerificationPackagesRequest request) {
+        return listVerificationPackages(request, null);
+    }
+
+    /**
+     * List all packages
+     * 
+     * <p>Returns a list of VerificationPackages. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListVerificationPackagesResponse listVerificationPackages(@Nonnull ListVerificationPackagesRequest request, @Nullable Options options) {
         RequestOperation<ListVerificationPackagesRequest, ListVerificationPackagesResponse> operation
-              = new ListVerificationPackages.Sync(sdkConfiguration, _headers);
+              = new ListVerificationPackages.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -211,8 +277,27 @@ public class Verification {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListVerificationRequestsResponse listVerificationRequests(@Nonnull ListVerificationRequestsRequest request) {
+        return listVerificationRequests(request, null);
+    }
+
+    /**
+     * List all requests
+     * 
+     * <p>Returns a list of VerificationRequests. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListVerificationRequestsResponse listVerificationRequests(@Nonnull ListVerificationRequestsRequest request, @Nullable Options options) {
         RequestOperation<ListVerificationRequestsRequest, ListVerificationRequestsResponse> operation
-              = new ListVerificationRequests.Sync(sdkConfiguration, _headers);
+              = new ListVerificationRequests.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -239,8 +324,23 @@ public class Verification {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchVerificationRequestResponse patchVerificationRequest(@Nonnull PatchVerificationRequestRequest request) {
+        return patchVerificationRequest(request, null);
+    }
+
+    /**
+     * Update a request
+     * 
+     * <p>Updates the VerificationRequest identified by `id`. Provide the unified VerificationRequest fields
+     * to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchVerificationRequestResponse patchVerificationRequest(@Nonnull PatchVerificationRequestRequest request, @Nullable Options options) {
         RequestOperation<PatchVerificationRequestRequest, PatchVerificationRequestResponse> operation
-              = new PatchVerificationRequest.Sync(sdkConfiguration, _headers);
+              = new PatchVerificationRequest.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -265,8 +365,22 @@ public class Verification {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveVerificationRequestResponse removeVerificationRequest(@Nonnull RemoveVerificationRequestRequest request) {
+        return removeVerificationRequest(request, null);
+    }
+
+    /**
+     * Remove a request
+     * 
+     * <p>Deletes the VerificationRequest identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveVerificationRequestResponse removeVerificationRequest(@Nonnull RemoveVerificationRequestRequest request, @Nullable Options options) {
         RequestOperation<RemoveVerificationRequestRequest, RemoveVerificationRequestResponse> operation
-              = new RemoveVerificationRequest.Sync(sdkConfiguration, _headers);
+              = new RemoveVerificationRequest.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -293,8 +407,23 @@ public class Verification {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateVerificationRequestResponse updateVerificationRequest(@Nonnull UpdateVerificationRequestRequest request) {
+        return updateVerificationRequest(request, null);
+    }
+
+    /**
+     * Update a request
+     * 
+     * <p>Updates the VerificationRequest identified by `id`. Provide the unified VerificationRequest fields
+     * to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateVerificationRequestResponse updateVerificationRequest(@Nonnull UpdateVerificationRequestRequest request, @Nullable Options options) {
         RequestOperation<UpdateVerificationRequestRequest, UpdateVerificationRequestResponse> operation
-              = new UpdateVerificationRequest.Sync(sdkConfiguration, _headers);
+              = new UpdateVerificationRequest.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

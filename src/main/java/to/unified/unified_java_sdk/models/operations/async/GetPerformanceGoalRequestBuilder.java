@@ -6,20 +6,30 @@ package to.unified.unified_java_sdk.models.operations.async;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.GetPerformanceGoalRequest;
 import to.unified.unified_java_sdk.operations.GetPerformanceGoal;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetPerformanceGoalRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private GetPerformanceGoalRequest request;
+    private final Options.Builder optionsBuilder;
 
     public GetPerformanceGoalRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public GetPerformanceGoalRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public GetPerformanceGoalRequestBuilder request(@Nonnull GetPerformanceGoalRequest request) {
@@ -44,8 +54,9 @@ public class GetPerformanceGoalRequestBuilder {
     * @return The response from the server.
     */
     public CompletableFuture<GetPerformanceGoalResponse> call() {
+        Options options = optionsBuilder.build();
         AsyncRequestOperation<GetPerformanceGoalRequest, GetPerformanceGoalResponse> operation
-              = new GetPerformanceGoal.Async(sdkConfiguration, _headers);
+              = new GetPerformanceGoal.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

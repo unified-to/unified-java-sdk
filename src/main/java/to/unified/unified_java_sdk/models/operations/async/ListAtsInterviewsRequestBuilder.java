@@ -6,20 +6,30 @@ package to.unified.unified_java_sdk.models.operations.async;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.ListAtsInterviewsRequest;
 import to.unified.unified_java_sdk.operations.ListAtsInterviews;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListAtsInterviewsRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private ListAtsInterviewsRequest request;
+    private final Options.Builder optionsBuilder;
 
     public ListAtsInterviewsRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public ListAtsInterviewsRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public ListAtsInterviewsRequestBuilder request(@Nonnull ListAtsInterviewsRequest request) {
@@ -44,8 +54,9 @@ public class ListAtsInterviewsRequestBuilder {
     * @return The response from the server.
     */
     public CompletableFuture<ListAtsInterviewsResponse> call() {
+        Options options = optionsBuilder.build();
         AsyncRequestOperation<ListAtsInterviewsRequest, ListAtsInterviewsResponse> operation
-              = new ListAtsInterviews.Async(sdkConfiguration, _headers);
+              = new ListAtsInterviews.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

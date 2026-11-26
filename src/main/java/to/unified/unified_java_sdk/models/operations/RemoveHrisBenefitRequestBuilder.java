@@ -6,18 +6,28 @@ package to.unified.unified_java_sdk.models.operations;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.RemoveHrisBenefit;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveHrisBenefitRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private RemoveHrisBenefitRequest request;
+    private final Options.Builder optionsBuilder;
 
     public RemoveHrisBenefitRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public RemoveHrisBenefitRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public RemoveHrisBenefitRequestBuilder request(@Nonnull RemoveHrisBenefitRequest request) {
@@ -42,8 +52,9 @@ public class RemoveHrisBenefitRequestBuilder {
     * @return The response from the server.
     */
     public RemoveHrisBenefitResponse call() {
+        Options options = optionsBuilder.build();
         RequestOperation<RemoveHrisBenefitRequest, RemoveHrisBenefitResponse> operation
-              = new RemoveHrisBenefit.Sync(sdkConfiguration, _headers);
+              = new RemoveHrisBenefit.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

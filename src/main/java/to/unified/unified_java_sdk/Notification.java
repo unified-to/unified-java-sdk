@@ -6,11 +6,13 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.ListUnifiedNotificationsRequest;
 import to.unified.unified_java_sdk.models.operations.ListUnifiedNotificationsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListUnifiedNotificationsResponse;
 import to.unified.unified_java_sdk.operations.ListUnifiedNotifications;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Notification {
@@ -49,8 +51,20 @@ public class Notification {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListUnifiedNotificationsResponse listUnifiedNotifications(@Nonnull ListUnifiedNotificationsRequest request) {
+        return listUnifiedNotifications(request, null);
+    }
+
+    /**
+     * List event notifications
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListUnifiedNotificationsResponse listUnifiedNotifications(@Nonnull ListUnifiedNotificationsRequest request, @Nullable Options options) {
         RequestOperation<ListUnifiedNotificationsRequest, ListUnifiedNotificationsResponse> operation
-              = new ListUnifiedNotifications.Sync(sdkConfiguration, _headers);
+              = new ListUnifiedNotifications.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

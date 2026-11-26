@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.GetUnifiedIntegrationAuthRequest;
 import to.unified.unified_java_sdk.models.operations.GetUnifiedIntegrationAuthRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetUnifiedIntegrationAuthResponse;
@@ -19,6 +20,7 @@ import to.unified.unified_java_sdk.operations.GetUnifiedIntegrationAuth;
 import to.unified.unified_java_sdk.operations.GetUnifiedIntegrationLogin;
 import to.unified.unified_java_sdk.operations.GetUnifiedIntegrationSaml;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Auth {
@@ -65,8 +67,24 @@ public class Auth {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetUnifiedIntegrationAuthResponse getUnifiedIntegrationAuth(@Nonnull GetUnifiedIntegrationAuthRequest request) {
+        return getUnifiedIntegrationAuth(request, null);
+    }
+
+    /**
+     * Authorize or re-authorize a connection
+     * 
+     * <p>Returns an authorization URL for the specified integration. After successful authorization, a new
+     * connection is created unless connection_id and reauth_token are provided, in which case the existing
+     * connection is updated in place.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetUnifiedIntegrationAuthResponse getUnifiedIntegrationAuth(@Nonnull GetUnifiedIntegrationAuthRequest request, @Nullable Options options) {
         RequestOperation<GetUnifiedIntegrationAuthRequest, GetUnifiedIntegrationAuthResponse> operation
-              = new GetUnifiedIntegrationAuth.Sync(sdkConfiguration, _headers);
+              = new GetUnifiedIntegrationAuth.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -95,8 +113,24 @@ public class Auth {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetUnifiedIntegrationLoginResponse getUnifiedIntegrationLogin(@Nonnull GetUnifiedIntegrationLoginRequest request) {
+        return getUnifiedIntegrationLogin(request, null);
+    }
+
+    /**
+     * Sign in a user
+     * 
+     * <p>Returns an authentication URL for the specified integration. Once a successful OAuth2 code-flow
+     * authentication occurs, the name and email are returned inside a jwt parameter, which is a JSON web
+     * token that is base-64 encoded.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetUnifiedIntegrationLoginResponse getUnifiedIntegrationLogin(@Nonnull GetUnifiedIntegrationLoginRequest request, @Nullable Options options) {
         RequestOperation<GetUnifiedIntegrationLoginRequest, GetUnifiedIntegrationLoginResponse> operation
-              = new GetUnifiedIntegrationLogin.Sync(sdkConfiguration, _headers);
+              = new GetUnifiedIntegrationLogin.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -125,8 +159,24 @@ public class Auth {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetUnifiedIntegrationSamlResponse getUnifiedIntegrationSaml(@Nonnull GetUnifiedIntegrationSamlRequest request) {
+        return getUnifiedIntegrationSaml(request, null);
+    }
+
+    /**
+     * Sign in a user via SAML
+     * 
+     * <p>Returns a SAML authentication URL for the specified integration. Once a successful authentication
+     * occurs, the name and email are returned inside a jwt parameter, which is a JSON web token that is
+     * base-64 encoded.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetUnifiedIntegrationSamlResponse getUnifiedIntegrationSaml(@Nonnull GetUnifiedIntegrationSamlRequest request, @Nullable Options options) {
         RequestOperation<GetUnifiedIntegrationSamlRequest, GetUnifiedIntegrationSamlResponse> operation
-              = new GetUnifiedIntegrationSaml.Sync(sdkConfiguration, _headers);
+              = new GetUnifiedIntegrationSaml.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

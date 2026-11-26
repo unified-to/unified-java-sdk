@@ -6,20 +6,30 @@ package to.unified.unified_java_sdk.models.operations;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.String;
+import java.time.Duration;
 import java.util.List;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.CreateUnifiedEnvironment;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class CreateUnifiedEnvironmentRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private List<String> request;
+    private final Options.Builder optionsBuilder;
 
     public CreateUnifiedEnvironmentRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public CreateUnifiedEnvironmentRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public CreateUnifiedEnvironmentRequestBuilder request(@Nonnull List<String> request) {
@@ -44,8 +54,9 @@ public class CreateUnifiedEnvironmentRequestBuilder {
     * @return The response from the server.
     */
     public CreateUnifiedEnvironmentResponse call() {
+        Options options = optionsBuilder.build();
         RequestOperation<List<String>, CreateUnifiedEnvironmentResponse> operation
-              = new CreateUnifiedEnvironment.Sync(sdkConfiguration, _headers);
+              = new CreateUnifiedEnvironment.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

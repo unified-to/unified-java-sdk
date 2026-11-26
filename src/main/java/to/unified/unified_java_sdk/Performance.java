@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreatePerformanceFeedbackRequest;
 import to.unified.unified_java_sdk.models.operations.CreatePerformanceFeedbackRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreatePerformanceFeedbackResponse;
@@ -59,6 +60,7 @@ import to.unified.unified_java_sdk.operations.PatchPerformanceGoal;
 import to.unified.unified_java_sdk.operations.RemovePerformanceGoal;
 import to.unified.unified_java_sdk.operations.UpdatePerformanceGoal;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Performance {
@@ -103,8 +105,23 @@ public class Performance {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreatePerformanceFeedbackResponse createPerformanceFeedback(@Nonnull CreatePerformanceFeedbackRequest request) {
+        return createPerformanceFeedback(request, null);
+    }
+
+    /**
+     * Create a feedback
+     * 
+     * <p>Creates a PerformanceFeedback. Provide the unified PerformanceFeedback fields in the request body;
+     * they are mapped to the provider's API. Returns the created PerformanceFeedback.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreatePerformanceFeedbackResponse createPerformanceFeedback(@Nonnull CreatePerformanceFeedbackRequest request, @Nullable Options options) {
         RequestOperation<CreatePerformanceFeedbackRequest, CreatePerformanceFeedbackResponse> operation
-              = new CreatePerformanceFeedback.Sync(sdkConfiguration, _headers);
+              = new CreatePerformanceFeedback.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -131,8 +148,23 @@ public class Performance {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreatePerformanceGoalResponse createPerformanceGoal(@Nonnull CreatePerformanceGoalRequest request) {
+        return createPerformanceGoal(request, null);
+    }
+
+    /**
+     * Create a goal
+     * 
+     * <p>Creates a PerformanceGoal. Provide the unified PerformanceGoal fields in the request body; they are
+     * mapped to the provider's API. Returns the created PerformanceGoal.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreatePerformanceGoalResponse createPerformanceGoal(@Nonnull CreatePerformanceGoalRequest request, @Nullable Options options) {
         RequestOperation<CreatePerformanceGoalRequest, CreatePerformanceGoalResponse> operation
-              = new CreatePerformanceGoal.Sync(sdkConfiguration, _headers);
+              = new CreatePerformanceGoal.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -159,8 +191,23 @@ public class Performance {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetPerformanceCycleResponse getPerformanceCycle(@Nonnull GetPerformanceCycleRequest request) {
+        return getPerformanceCycle(request, null);
+    }
+
+    /**
+     * Retrieve a cycle
+     * 
+     * <p>Retrieves a single PerformanceCycle by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetPerformanceCycleResponse getPerformanceCycle(@Nonnull GetPerformanceCycleRequest request, @Nullable Options options) {
         RequestOperation<GetPerformanceCycleRequest, GetPerformanceCycleResponse> operation
-              = new GetPerformanceCycle.Sync(sdkConfiguration, _headers);
+              = new GetPerformanceCycle.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -187,8 +234,23 @@ public class Performance {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetPerformanceFeedbackResponse getPerformanceFeedback(@Nonnull GetPerformanceFeedbackRequest request) {
+        return getPerformanceFeedback(request, null);
+    }
+
+    /**
+     * Retrieve a feedback
+     * 
+     * <p>Retrieves a single PerformanceFeedback by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetPerformanceFeedbackResponse getPerformanceFeedback(@Nonnull GetPerformanceFeedbackRequest request, @Nullable Options options) {
         RequestOperation<GetPerformanceFeedbackRequest, GetPerformanceFeedbackResponse> operation
-              = new GetPerformanceFeedback.Sync(sdkConfiguration, _headers);
+              = new GetPerformanceFeedback.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -215,8 +277,23 @@ public class Performance {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetPerformanceGoalResponse getPerformanceGoal(@Nonnull GetPerformanceGoalRequest request) {
+        return getPerformanceGoal(request, null);
+    }
+
+    /**
+     * Retrieve a goal
+     * 
+     * <p>Retrieves a single PerformanceGoal by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetPerformanceGoalResponse getPerformanceGoal(@Nonnull GetPerformanceGoalRequest request, @Nullable Options options) {
         RequestOperation<GetPerformanceGoalRequest, GetPerformanceGoalResponse> operation
-              = new GetPerformanceGoal.Sync(sdkConfiguration, _headers);
+              = new GetPerformanceGoal.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -243,8 +320,23 @@ public class Performance {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetPerformanceReviewResponse getPerformanceReview(@Nonnull GetPerformanceReviewRequest request) {
+        return getPerformanceReview(request, null);
+    }
+
+    /**
+     * Retrieve a review
+     * 
+     * <p>Retrieves a single PerformanceReview by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetPerformanceReviewResponse getPerformanceReview(@Nonnull GetPerformanceReviewRequest request, @Nullable Options options) {
         RequestOperation<GetPerformanceReviewRequest, GetPerformanceReviewResponse> operation
-              = new GetPerformanceReview.Sync(sdkConfiguration, _headers);
+              = new GetPerformanceReview.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -279,8 +371,27 @@ public class Performance {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListPerformanceCyclesResponse listPerformanceCycles(@Nonnull ListPerformanceCyclesRequest request) {
+        return listPerformanceCycles(request, null);
+    }
+
+    /**
+     * List all cycles
+     * 
+     * <p>Returns a list of PerformanceCycles. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListPerformanceCyclesResponse listPerformanceCycles(@Nonnull ListPerformanceCyclesRequest request, @Nullable Options options) {
         RequestOperation<ListPerformanceCyclesRequest, ListPerformanceCyclesResponse> operation
-              = new ListPerformanceCycles.Sync(sdkConfiguration, _headers);
+              = new ListPerformanceCycles.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -315,8 +426,27 @@ public class Performance {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListPerformanceFeedbacksResponse listPerformanceFeedbacks(@Nonnull ListPerformanceFeedbacksRequest request) {
+        return listPerformanceFeedbacks(request, null);
+    }
+
+    /**
+     * List all feedbacks
+     * 
+     * <p>Returns a list of PerformanceFeedbacks. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListPerformanceFeedbacksResponse listPerformanceFeedbacks(@Nonnull ListPerformanceFeedbacksRequest request, @Nullable Options options) {
         RequestOperation<ListPerformanceFeedbacksRequest, ListPerformanceFeedbacksResponse> operation
-              = new ListPerformanceFeedbacks.Sync(sdkConfiguration, _headers);
+              = new ListPerformanceFeedbacks.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -351,8 +481,27 @@ public class Performance {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListPerformanceGoalsResponse listPerformanceGoals(@Nonnull ListPerformanceGoalsRequest request) {
+        return listPerformanceGoals(request, null);
+    }
+
+    /**
+     * List all goals
+     * 
+     * <p>Returns a list of PerformanceGoals. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListPerformanceGoalsResponse listPerformanceGoals(@Nonnull ListPerformanceGoalsRequest request, @Nullable Options options) {
         RequestOperation<ListPerformanceGoalsRequest, ListPerformanceGoalsResponse> operation
-              = new ListPerformanceGoals.Sync(sdkConfiguration, _headers);
+              = new ListPerformanceGoals.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -387,8 +536,27 @@ public class Performance {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListPerformanceReviewsResponse listPerformanceReviews(@Nonnull ListPerformanceReviewsRequest request) {
+        return listPerformanceReviews(request, null);
+    }
+
+    /**
+     * List all reviews
+     * 
+     * <p>Returns a list of PerformanceReviews. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListPerformanceReviewsResponse listPerformanceReviews(@Nonnull ListPerformanceReviewsRequest request, @Nullable Options options) {
         RequestOperation<ListPerformanceReviewsRequest, ListPerformanceReviewsResponse> operation
-              = new ListPerformanceReviews.Sync(sdkConfiguration, _headers);
+              = new ListPerformanceReviews.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -415,8 +583,23 @@ public class Performance {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchPerformanceGoalResponse patchPerformanceGoal(@Nonnull PatchPerformanceGoalRequest request) {
+        return patchPerformanceGoal(request, null);
+    }
+
+    /**
+     * Update a goal
+     * 
+     * <p>Updates the PerformanceGoal identified by `id`. Provide the unified PerformanceGoal fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchPerformanceGoalResponse patchPerformanceGoal(@Nonnull PatchPerformanceGoalRequest request, @Nullable Options options) {
         RequestOperation<PatchPerformanceGoalRequest, PatchPerformanceGoalResponse> operation
-              = new PatchPerformanceGoal.Sync(sdkConfiguration, _headers);
+              = new PatchPerformanceGoal.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -441,8 +624,22 @@ public class Performance {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemovePerformanceGoalResponse removePerformanceGoal(@Nonnull RemovePerformanceGoalRequest request) {
+        return removePerformanceGoal(request, null);
+    }
+
+    /**
+     * Remove a goal
+     * 
+     * <p>Deletes the PerformanceGoal identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemovePerformanceGoalResponse removePerformanceGoal(@Nonnull RemovePerformanceGoalRequest request, @Nullable Options options) {
         RequestOperation<RemovePerformanceGoalRequest, RemovePerformanceGoalResponse> operation
-              = new RemovePerformanceGoal.Sync(sdkConfiguration, _headers);
+              = new RemovePerformanceGoal.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -469,8 +666,23 @@ public class Performance {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdatePerformanceGoalResponse updatePerformanceGoal(@Nonnull UpdatePerformanceGoalRequest request) {
+        return updatePerformanceGoal(request, null);
+    }
+
+    /**
+     * Update a goal
+     * 
+     * <p>Updates the PerformanceGoal identified by `id`. Provide the unified PerformanceGoal fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdatePerformanceGoalResponse updatePerformanceGoal(@Nonnull UpdatePerformanceGoalRequest request, @Nullable Options options) {
         RequestOperation<UpdatePerformanceGoalRequest, UpdatePerformanceGoalResponse> operation
-              = new UpdatePerformanceGoal.Sync(sdkConfiguration, _headers);
+              = new UpdatePerformanceGoal.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

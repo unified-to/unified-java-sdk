@@ -6,18 +6,28 @@ package to.unified.unified_java_sdk.models.operations;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.CreateComputeTemplate;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class CreateComputeTemplateRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private CreateComputeTemplateRequest request;
+    private final Options.Builder optionsBuilder;
 
     public CreateComputeTemplateRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public CreateComputeTemplateRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public CreateComputeTemplateRequestBuilder request(@Nonnull CreateComputeTemplateRequest request) {
@@ -42,8 +52,9 @@ public class CreateComputeTemplateRequestBuilder {
     * @return The response from the server.
     */
     public CreateComputeTemplateResponse call() {
+        Options options = optionsBuilder.build();
         RequestOperation<CreateComputeTemplateRequest, CreateComputeTemplateResponse> operation
-              = new CreateComputeTemplate.Sync(sdkConfiguration, _headers);
+              = new CreateComputeTemplate.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

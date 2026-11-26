@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateMartechCampaignRequest;
 import to.unified.unified_java_sdk.models.operations.CreateMartechCampaignRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateMartechCampaignResponse;
@@ -83,6 +84,7 @@ import to.unified.unified_java_sdk.operations.UpdateMartechCampaign;
 import to.unified.unified_java_sdk.operations.UpdateMartechList;
 import to.unified.unified_java_sdk.operations.UpdateMartechMember;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Martech {
@@ -127,8 +129,23 @@ public class Martech {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateMartechCampaignResponse createMartechCampaign(@Nonnull CreateMartechCampaignRequest request) {
+        return createMartechCampaign(request, null);
+    }
+
+    /**
+     * Create a campaign
+     * 
+     * <p>Creates a MarketingCampaign. Provide the unified MarketingCampaign fields in the request body; they
+     * are mapped to the provider's API. Returns the created MarketingCampaign.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateMartechCampaignResponse createMartechCampaign(@Nonnull CreateMartechCampaignRequest request, @Nullable Options options) {
         RequestOperation<CreateMartechCampaignRequest, CreateMartechCampaignResponse> operation
-              = new CreateMartechCampaign.Sync(sdkConfiguration, _headers);
+              = new CreateMartechCampaign.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -155,8 +172,23 @@ public class Martech {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateMartechListResponse createMartechList(@Nonnull CreateMartechListRequest request) {
+        return createMartechList(request, null);
+    }
+
+    /**
+     * Create a list
+     * 
+     * <p>Creates a MarketingList. Provide the unified MarketingList fields in the request body; they are
+     * mapped to the provider's API. Returns the created MarketingList.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateMartechListResponse createMartechList(@Nonnull CreateMartechListRequest request, @Nullable Options options) {
         RequestOperation<CreateMartechListRequest, CreateMartechListResponse> operation
-              = new CreateMartechList.Sync(sdkConfiguration, _headers);
+              = new CreateMartechList.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -183,8 +215,23 @@ public class Martech {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateMartechMemberResponse createMartechMember(@Nonnull CreateMartechMemberRequest request) {
+        return createMartechMember(request, null);
+    }
+
+    /**
+     * Create a member
+     * 
+     * <p>Creates a MarketingMember. Provide the unified MarketingMember fields in the request body; they are
+     * mapped to the provider's API. Returns the created MarketingMember.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateMartechMemberResponse createMartechMember(@Nonnull CreateMartechMemberRequest request, @Nullable Options options) {
         RequestOperation<CreateMartechMemberRequest, CreateMartechMemberResponse> operation
-              = new CreateMartechMember.Sync(sdkConfiguration, _headers);
+              = new CreateMartechMember.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -211,8 +258,23 @@ public class Martech {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetMartechCampaignResponse getMartechCampaign(@Nonnull GetMartechCampaignRequest request) {
+        return getMartechCampaign(request, null);
+    }
+
+    /**
+     * Retrieve a campaign
+     * 
+     * <p>Retrieves a single MarketingCampaign by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetMartechCampaignResponse getMartechCampaign(@Nonnull GetMartechCampaignRequest request, @Nullable Options options) {
         RequestOperation<GetMartechCampaignRequest, GetMartechCampaignResponse> operation
-              = new GetMartechCampaign.Sync(sdkConfiguration, _headers);
+              = new GetMartechCampaign.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -239,8 +301,23 @@ public class Martech {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetMartechListResponse getMartechList(@Nonnull GetMartechListRequest request) {
+        return getMartechList(request, null);
+    }
+
+    /**
+     * Retrieve a list
+     * 
+     * <p>Retrieves a single MarketingList by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetMartechListResponse getMartechList(@Nonnull GetMartechListRequest request, @Nullable Options options) {
         RequestOperation<GetMartechListRequest, GetMartechListResponse> operation
-              = new GetMartechList.Sync(sdkConfiguration, _headers);
+              = new GetMartechList.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -267,8 +344,23 @@ public class Martech {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetMartechMemberResponse getMartechMember(@Nonnull GetMartechMemberRequest request) {
+        return getMartechMember(request, null);
+    }
+
+    /**
+     * Retrieve a member
+     * 
+     * <p>Retrieves a single MarketingMember by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetMartechMemberResponse getMartechMember(@Nonnull GetMartechMemberRequest request, @Nullable Options options) {
         RequestOperation<GetMartechMemberRequest, GetMartechMemberResponse> operation
-              = new GetMartechMember.Sync(sdkConfiguration, _headers);
+              = new GetMartechMember.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -303,8 +395,27 @@ public class Martech {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListMartechCampaignsResponse listMartechCampaigns(@Nonnull ListMartechCampaignsRequest request) {
+        return listMartechCampaigns(request, null);
+    }
+
+    /**
+     * List all campaigns
+     * 
+     * <p>Returns a list of MarketingCampaigns. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListMartechCampaignsResponse listMartechCampaigns(@Nonnull ListMartechCampaignsRequest request, @Nullable Options options) {
         RequestOperation<ListMartechCampaignsRequest, ListMartechCampaignsResponse> operation
-              = new ListMartechCampaigns.Sync(sdkConfiguration, _headers);
+              = new ListMartechCampaigns.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -339,8 +450,27 @@ public class Martech {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListMartechListsResponse listMartechLists(@Nonnull ListMartechListsRequest request) {
+        return listMartechLists(request, null);
+    }
+
+    /**
+     * List all lists
+     * 
+     * <p>Returns a list of MarketingLists. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListMartechListsResponse listMartechLists(@Nonnull ListMartechListsRequest request, @Nullable Options options) {
         RequestOperation<ListMartechListsRequest, ListMartechListsResponse> operation
-              = new ListMartechLists.Sync(sdkConfiguration, _headers);
+              = new ListMartechLists.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -375,8 +505,27 @@ public class Martech {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListMartechMembersResponse listMartechMembers(@Nonnull ListMartechMembersRequest request) {
+        return listMartechMembers(request, null);
+    }
+
+    /**
+     * List all members
+     * 
+     * <p>Returns a list of MarketingMembers. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListMartechMembersResponse listMartechMembers(@Nonnull ListMartechMembersRequest request, @Nullable Options options) {
         RequestOperation<ListMartechMembersRequest, ListMartechMembersResponse> operation
-              = new ListMartechMembers.Sync(sdkConfiguration, _headers);
+              = new ListMartechMembers.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -411,8 +560,27 @@ public class Martech {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListMartechReportsResponse listMartechReports(@Nonnull ListMartechReportsRequest request) {
+        return listMartechReports(request, null);
+    }
+
+    /**
+     * List all reports
+     * 
+     * <p>Returns a list of MarketingReports. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListMartechReportsResponse listMartechReports(@Nonnull ListMartechReportsRequest request, @Nullable Options options) {
         RequestOperation<ListMartechReportsRequest, ListMartechReportsResponse> operation
-              = new ListMartechReports.Sync(sdkConfiguration, _headers);
+              = new ListMartechReports.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -439,8 +607,23 @@ public class Martech {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchMartechCampaignResponse patchMartechCampaign(@Nonnull PatchMartechCampaignRequest request) {
+        return patchMartechCampaign(request, null);
+    }
+
+    /**
+     * Update a campaign
+     * 
+     * <p>Updates the MarketingCampaign identified by `id`. Provide the unified MarketingCampaign fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchMartechCampaignResponse patchMartechCampaign(@Nonnull PatchMartechCampaignRequest request, @Nullable Options options) {
         RequestOperation<PatchMartechCampaignRequest, PatchMartechCampaignResponse> operation
-              = new PatchMartechCampaign.Sync(sdkConfiguration, _headers);
+              = new PatchMartechCampaign.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -467,8 +650,23 @@ public class Martech {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchMartechListResponse patchMartechList(@Nonnull PatchMartechListRequest request) {
+        return patchMartechList(request, null);
+    }
+
+    /**
+     * Update a list
+     * 
+     * <p>Updates the MarketingList identified by `id`. Provide the unified MarketingList fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchMartechListResponse patchMartechList(@Nonnull PatchMartechListRequest request, @Nullable Options options) {
         RequestOperation<PatchMartechListRequest, PatchMartechListResponse> operation
-              = new PatchMartechList.Sync(sdkConfiguration, _headers);
+              = new PatchMartechList.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -495,8 +693,23 @@ public class Martech {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchMartechMemberResponse patchMartechMember(@Nonnull PatchMartechMemberRequest request) {
+        return patchMartechMember(request, null);
+    }
+
+    /**
+     * Update a member
+     * 
+     * <p>Updates the MarketingMember identified by `id`. Provide the unified MarketingMember fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchMartechMemberResponse patchMartechMember(@Nonnull PatchMartechMemberRequest request, @Nullable Options options) {
         RequestOperation<PatchMartechMemberRequest, PatchMartechMemberResponse> operation
-              = new PatchMartechMember.Sync(sdkConfiguration, _headers);
+              = new PatchMartechMember.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -521,8 +734,22 @@ public class Martech {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveMartechCampaignResponse removeMartechCampaign(@Nonnull RemoveMartechCampaignRequest request) {
+        return removeMartechCampaign(request, null);
+    }
+
+    /**
+     * Remove a campaign
+     * 
+     * <p>Deletes the MarketingCampaign identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveMartechCampaignResponse removeMartechCampaign(@Nonnull RemoveMartechCampaignRequest request, @Nullable Options options) {
         RequestOperation<RemoveMartechCampaignRequest, RemoveMartechCampaignResponse> operation
-              = new RemoveMartechCampaign.Sync(sdkConfiguration, _headers);
+              = new RemoveMartechCampaign.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -547,8 +774,22 @@ public class Martech {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveMartechListResponse removeMartechList(@Nonnull RemoveMartechListRequest request) {
+        return removeMartechList(request, null);
+    }
+
+    /**
+     * Remove a list
+     * 
+     * <p>Deletes the MarketingList identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveMartechListResponse removeMartechList(@Nonnull RemoveMartechListRequest request, @Nullable Options options) {
         RequestOperation<RemoveMartechListRequest, RemoveMartechListResponse> operation
-              = new RemoveMartechList.Sync(sdkConfiguration, _headers);
+              = new RemoveMartechList.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -573,8 +814,22 @@ public class Martech {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveMartechMemberResponse removeMartechMember(@Nonnull RemoveMartechMemberRequest request) {
+        return removeMartechMember(request, null);
+    }
+
+    /**
+     * Remove a member
+     * 
+     * <p>Deletes the MarketingMember identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveMartechMemberResponse removeMartechMember(@Nonnull RemoveMartechMemberRequest request, @Nullable Options options) {
         RequestOperation<RemoveMartechMemberRequest, RemoveMartechMemberResponse> operation
-              = new RemoveMartechMember.Sync(sdkConfiguration, _headers);
+              = new RemoveMartechMember.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -601,8 +856,23 @@ public class Martech {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateMartechCampaignResponse updateMartechCampaign(@Nonnull UpdateMartechCampaignRequest request) {
+        return updateMartechCampaign(request, null);
+    }
+
+    /**
+     * Update a campaign
+     * 
+     * <p>Updates the MarketingCampaign identified by `id`. Provide the unified MarketingCampaign fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateMartechCampaignResponse updateMartechCampaign(@Nonnull UpdateMartechCampaignRequest request, @Nullable Options options) {
         RequestOperation<UpdateMartechCampaignRequest, UpdateMartechCampaignResponse> operation
-              = new UpdateMartechCampaign.Sync(sdkConfiguration, _headers);
+              = new UpdateMartechCampaign.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -629,8 +899,23 @@ public class Martech {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateMartechListResponse updateMartechList(@Nonnull UpdateMartechListRequest request) {
+        return updateMartechList(request, null);
+    }
+
+    /**
+     * Update a list
+     * 
+     * <p>Updates the MarketingList identified by `id`. Provide the unified MarketingList fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateMartechListResponse updateMartechList(@Nonnull UpdateMartechListRequest request, @Nullable Options options) {
         RequestOperation<UpdateMartechListRequest, UpdateMartechListResponse> operation
-              = new UpdateMartechList.Sync(sdkConfiguration, _headers);
+              = new UpdateMartechList.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -657,8 +942,23 @@ public class Martech {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateMartechMemberResponse updateMartechMember(@Nonnull UpdateMartechMemberRequest request) {
+        return updateMartechMember(request, null);
+    }
+
+    /**
+     * Update a member
+     * 
+     * <p>Updates the MarketingMember identified by `id`. Provide the unified MarketingMember fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateMartechMemberResponse updateMartechMember(@Nonnull UpdateMartechMemberRequest request, @Nullable Options options) {
         RequestOperation<UpdateMartechMemberRequest, UpdateMartechMemberResponse> operation
-              = new UpdateMartechMember.Sync(sdkConfiguration, _headers);
+              = new UpdateMartechMember.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

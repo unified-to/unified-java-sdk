@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateCdpProfileRequest;
 import to.unified.unified_java_sdk.models.operations.CreateCdpProfileRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateCdpProfileResponse;
@@ -39,6 +40,7 @@ import to.unified.unified_java_sdk.operations.PatchCdpProfile;
 import to.unified.unified_java_sdk.operations.RemoveCdpProfile;
 import to.unified.unified_java_sdk.operations.UpdateCdpProfile;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Profile {
@@ -83,8 +85,23 @@ public class Profile {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateCdpProfileResponse createCdpProfile(@Nonnull CreateCdpProfileRequest request) {
+        return createCdpProfile(request, null);
+    }
+
+    /**
+     * Create a profile
+     * 
+     * <p>Creates a CdpProfile. Provide the unified CdpProfile fields in the request body; they are mapped to
+     * the provider's API. Returns the created CdpProfile.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateCdpProfileResponse createCdpProfile(@Nonnull CreateCdpProfileRequest request, @Nullable Options options) {
         RequestOperation<CreateCdpProfileRequest, CreateCdpProfileResponse> operation
-              = new CreateCdpProfile.Sync(sdkConfiguration, _headers);
+              = new CreateCdpProfile.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -111,8 +128,23 @@ public class Profile {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetCdpProfileResponse getCdpProfile(@Nonnull GetCdpProfileRequest request) {
+        return getCdpProfile(request, null);
+    }
+
+    /**
+     * Retrieve a profile
+     * 
+     * <p>Retrieves a single CdpProfile by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetCdpProfileResponse getCdpProfile(@Nonnull GetCdpProfileRequest request, @Nullable Options options) {
         RequestOperation<GetCdpProfileRequest, GetCdpProfileResponse> operation
-              = new GetCdpProfile.Sync(sdkConfiguration, _headers);
+              = new GetCdpProfile.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -139,8 +171,23 @@ public class Profile {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetSocialProfileResponse getSocialProfile(@Nonnull GetSocialProfileRequest request) {
+        return getSocialProfile(request, null);
+    }
+
+    /**
+     * Retrieve a profile
+     * 
+     * <p>Retrieves a single SocialProfile by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetSocialProfileResponse getSocialProfile(@Nonnull GetSocialProfileRequest request, @Nullable Options options) {
         RequestOperation<GetSocialProfileRequest, GetSocialProfileResponse> operation
-              = new GetSocialProfile.Sync(sdkConfiguration, _headers);
+              = new GetSocialProfile.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -175,8 +222,27 @@ public class Profile {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListCdpProfilesResponse listCdpProfiles(@Nonnull ListCdpProfilesRequest request) {
+        return listCdpProfiles(request, null);
+    }
+
+    /**
+     * List all profiles
+     * 
+     * <p>Returns a list of CdpProfiles. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListCdpProfilesResponse listCdpProfiles(@Nonnull ListCdpProfilesRequest request, @Nullable Options options) {
         RequestOperation<ListCdpProfilesRequest, ListCdpProfilesResponse> operation
-              = new ListCdpProfiles.Sync(sdkConfiguration, _headers);
+              = new ListCdpProfiles.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -211,8 +277,27 @@ public class Profile {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListSocialProfilesResponse listSocialProfiles(@Nonnull ListSocialProfilesRequest request) {
+        return listSocialProfiles(request, null);
+    }
+
+    /**
+     * List all profiles
+     * 
+     * <p>Returns a list of SocialProfiles. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListSocialProfilesResponse listSocialProfiles(@Nonnull ListSocialProfilesRequest request, @Nullable Options options) {
         RequestOperation<ListSocialProfilesRequest, ListSocialProfilesResponse> operation
-              = new ListSocialProfiles.Sync(sdkConfiguration, _headers);
+              = new ListSocialProfiles.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -239,8 +324,23 @@ public class Profile {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchCdpProfileResponse patchCdpProfile(@Nonnull PatchCdpProfileRequest request) {
+        return patchCdpProfile(request, null);
+    }
+
+    /**
+     * Update a profile
+     * 
+     * <p>Updates the CdpProfile identified by `id`. Provide the unified CdpProfile fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchCdpProfileResponse patchCdpProfile(@Nonnull PatchCdpProfileRequest request, @Nullable Options options) {
         RequestOperation<PatchCdpProfileRequest, PatchCdpProfileResponse> operation
-              = new PatchCdpProfile.Sync(sdkConfiguration, _headers);
+              = new PatchCdpProfile.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -265,8 +365,22 @@ public class Profile {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveCdpProfileResponse removeCdpProfile(@Nonnull RemoveCdpProfileRequest request) {
+        return removeCdpProfile(request, null);
+    }
+
+    /**
+     * Remove a profile
+     * 
+     * <p>Deletes the CdpProfile identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveCdpProfileResponse removeCdpProfile(@Nonnull RemoveCdpProfileRequest request, @Nullable Options options) {
         RequestOperation<RemoveCdpProfileRequest, RemoveCdpProfileResponse> operation
-              = new RemoveCdpProfile.Sync(sdkConfiguration, _headers);
+              = new RemoveCdpProfile.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -293,8 +407,23 @@ public class Profile {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateCdpProfileResponse updateCdpProfile(@Nonnull UpdateCdpProfileRequest request) {
+        return updateCdpProfile(request, null);
+    }
+
+    /**
+     * Update a profile
+     * 
+     * <p>Updates the CdpProfile identified by `id`. Provide the unified CdpProfile fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateCdpProfileResponse updateCdpProfile(@Nonnull UpdateCdpProfileRequest request, @Nullable Options options) {
         RequestOperation<UpdateCdpProfileRequest, UpdateCdpProfileResponse> operation
-              = new UpdateCdpProfile.Sync(sdkConfiguration, _headers);
+              = new UpdateCdpProfile.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateAdsAdRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAdsAdRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateAdsAdResponse;
@@ -191,6 +192,7 @@ import to.unified.unified_java_sdk.operations.UpdateAdsGroup;
 import to.unified.unified_java_sdk.operations.UpdateAdsInsertionorder;
 import to.unified.unified_java_sdk.operations.UpdateAdsOrganization;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Ads {
@@ -235,8 +237,23 @@ public class Ads {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateAdsAdResponse createAdsAd(@Nonnull CreateAdsAdRequest request) {
+        return createAdsAd(request, null);
+    }
+
+    /**
+     * Create an ad
+     * 
+     * <p>Creates a AdsAd. Provide the unified AdsAd fields in the request body; they are mapped to the
+     * provider's API. Returns the created AdsAd.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateAdsAdResponse createAdsAd(@Nonnull CreateAdsAdRequest request, @Nullable Options options) {
         RequestOperation<CreateAdsAdRequest, CreateAdsAdResponse> operation
-              = new CreateAdsAd.Sync(sdkConfiguration, _headers);
+              = new CreateAdsAd.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -263,8 +280,23 @@ public class Ads {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateAdsAssetResponse createAdsAsset(@Nonnull CreateAdsAssetRequest request) {
+        return createAdsAsset(request, null);
+    }
+
+    /**
+     * Create an asset
+     * 
+     * <p>Creates a AdsAsset. Provide the unified AdsAsset fields in the request body; they are mapped to the
+     * provider's API. Returns the created AdsAsset.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateAdsAssetResponse createAdsAsset(@Nonnull CreateAdsAssetRequest request, @Nullable Options options) {
         RequestOperation<CreateAdsAssetRequest, CreateAdsAssetResponse> operation
-              = new CreateAdsAsset.Sync(sdkConfiguration, _headers);
+              = new CreateAdsAsset.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -291,8 +323,23 @@ public class Ads {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateAdsCampaignResponse createAdsCampaign(@Nonnull CreateAdsCampaignRequest request) {
+        return createAdsCampaign(request, null);
+    }
+
+    /**
+     * Create a campaign
+     * 
+     * <p>Creates a AdsCampaign. Provide the unified AdsCampaign fields in the request body; they are mapped
+     * to the provider's API. Returns the created AdsCampaign.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateAdsCampaignResponse createAdsCampaign(@Nonnull CreateAdsCampaignRequest request, @Nullable Options options) {
         RequestOperation<CreateAdsCampaignRequest, CreateAdsCampaignResponse> operation
-              = new CreateAdsCampaign.Sync(sdkConfiguration, _headers);
+              = new CreateAdsCampaign.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -319,8 +366,23 @@ public class Ads {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateAdsCreativeResponse createAdsCreative(@Nonnull CreateAdsCreativeRequest request) {
+        return createAdsCreative(request, null);
+    }
+
+    /**
+     * Create a creative
+     * 
+     * <p>Creates a AdsCreative. Provide the unified AdsCreative fields in the request body; they are mapped
+     * to the provider's API. Returns the created AdsCreative.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateAdsCreativeResponse createAdsCreative(@Nonnull CreateAdsCreativeRequest request, @Nullable Options options) {
         RequestOperation<CreateAdsCreativeRequest, CreateAdsCreativeResponse> operation
-              = new CreateAdsCreative.Sync(sdkConfiguration, _headers);
+              = new CreateAdsCreative.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -347,8 +409,23 @@ public class Ads {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateAdsGroupResponse createAdsGroup(@Nonnull CreateAdsGroupRequest request) {
+        return createAdsGroup(request, null);
+    }
+
+    /**
+     * Create a group
+     * 
+     * <p>Creates a AdsGroup. Provide the unified AdsGroup fields in the request body; they are mapped to the
+     * provider's API. Returns the created AdsGroup.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateAdsGroupResponse createAdsGroup(@Nonnull CreateAdsGroupRequest request, @Nullable Options options) {
         RequestOperation<CreateAdsGroupRequest, CreateAdsGroupResponse> operation
-              = new CreateAdsGroup.Sync(sdkConfiguration, _headers);
+              = new CreateAdsGroup.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -375,8 +452,23 @@ public class Ads {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateAdsInsertionorderResponse createAdsInsertionorder(@Nonnull CreateAdsInsertionorderRequest request) {
+        return createAdsInsertionorder(request, null);
+    }
+
+    /**
+     * Create an insertionorder
+     * 
+     * <p>Creates a AdsInsertionorder. Provide the unified AdsInsertionorder fields in the request body; they
+     * are mapped to the provider's API. Returns the created AdsInsertionorder.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateAdsInsertionorderResponse createAdsInsertionorder(@Nonnull CreateAdsInsertionorderRequest request, @Nullable Options options) {
         RequestOperation<CreateAdsInsertionorderRequest, CreateAdsInsertionorderResponse> operation
-              = new CreateAdsInsertionorder.Sync(sdkConfiguration, _headers);
+              = new CreateAdsInsertionorder.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -403,8 +495,23 @@ public class Ads {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateAdsOrganizationResponse createAdsOrganization(@Nonnull CreateAdsOrganizationRequest request) {
+        return createAdsOrganization(request, null);
+    }
+
+    /**
+     * Create an organization
+     * 
+     * <p>Creates a AdsOrganization. Provide the unified AdsOrganization fields in the request body; they are
+     * mapped to the provider's API. Returns the created AdsOrganization.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateAdsOrganizationResponse createAdsOrganization(@Nonnull CreateAdsOrganizationRequest request, @Nullable Options options) {
         RequestOperation<CreateAdsOrganizationRequest, CreateAdsOrganizationResponse> operation
-              = new CreateAdsOrganization.Sync(sdkConfiguration, _headers);
+              = new CreateAdsOrganization.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -431,8 +538,23 @@ public class Ads {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAdsAdResponse getAdsAd(@Nonnull GetAdsAdRequest request) {
+        return getAdsAd(request, null);
+    }
+
+    /**
+     * Retrieve an ad
+     * 
+     * <p>Retrieves a single AdsAd by its `id`. Obtain `id` values from the corresponding list endpoint. Use
+     * `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAdsAdResponse getAdsAd(@Nonnull GetAdsAdRequest request, @Nullable Options options) {
         RequestOperation<GetAdsAdRequest, GetAdsAdResponse> operation
-              = new GetAdsAd.Sync(sdkConfiguration, _headers);
+              = new GetAdsAd.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -459,8 +581,23 @@ public class Ads {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAdsAssetResponse getAdsAsset(@Nonnull GetAdsAssetRequest request) {
+        return getAdsAsset(request, null);
+    }
+
+    /**
+     * Retrieve an asset
+     * 
+     * <p>Retrieves a single AdsAsset by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAdsAssetResponse getAdsAsset(@Nonnull GetAdsAssetRequest request, @Nullable Options options) {
         RequestOperation<GetAdsAssetRequest, GetAdsAssetResponse> operation
-              = new GetAdsAsset.Sync(sdkConfiguration, _headers);
+              = new GetAdsAsset.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -487,8 +624,23 @@ public class Ads {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAdsCampaignResponse getAdsCampaign(@Nonnull GetAdsCampaignRequest request) {
+        return getAdsCampaign(request, null);
+    }
+
+    /**
+     * Retrieve a campaign
+     * 
+     * <p>Retrieves a single AdsCampaign by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAdsCampaignResponse getAdsCampaign(@Nonnull GetAdsCampaignRequest request, @Nullable Options options) {
         RequestOperation<GetAdsCampaignRequest, GetAdsCampaignResponse> operation
-              = new GetAdsCampaign.Sync(sdkConfiguration, _headers);
+              = new GetAdsCampaign.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -515,8 +667,23 @@ public class Ads {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAdsCreativeResponse getAdsCreative(@Nonnull GetAdsCreativeRequest request) {
+        return getAdsCreative(request, null);
+    }
+
+    /**
+     * Retrieve a creative
+     * 
+     * <p>Retrieves a single AdsCreative by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAdsCreativeResponse getAdsCreative(@Nonnull GetAdsCreativeRequest request, @Nullable Options options) {
         RequestOperation<GetAdsCreativeRequest, GetAdsCreativeResponse> operation
-              = new GetAdsCreative.Sync(sdkConfiguration, _headers);
+              = new GetAdsCreative.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -543,8 +710,23 @@ public class Ads {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAdsGroupResponse getAdsGroup(@Nonnull GetAdsGroupRequest request) {
+        return getAdsGroup(request, null);
+    }
+
+    /**
+     * Retrieve a group
+     * 
+     * <p>Retrieves a single AdsGroup by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAdsGroupResponse getAdsGroup(@Nonnull GetAdsGroupRequest request, @Nullable Options options) {
         RequestOperation<GetAdsGroupRequest, GetAdsGroupResponse> operation
-              = new GetAdsGroup.Sync(sdkConfiguration, _headers);
+              = new GetAdsGroup.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -571,8 +753,23 @@ public class Ads {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAdsInsertionorderResponse getAdsInsertionorder(@Nonnull GetAdsInsertionorderRequest request) {
+        return getAdsInsertionorder(request, null);
+    }
+
+    /**
+     * Retrieve an insertionorder
+     * 
+     * <p>Retrieves a single AdsInsertionorder by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAdsInsertionorderResponse getAdsInsertionorder(@Nonnull GetAdsInsertionorderRequest request, @Nullable Options options) {
         RequestOperation<GetAdsInsertionorderRequest, GetAdsInsertionorderResponse> operation
-              = new GetAdsInsertionorder.Sync(sdkConfiguration, _headers);
+              = new GetAdsInsertionorder.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -599,8 +796,23 @@ public class Ads {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAdsInventoryResponse getAdsInventory(@Nonnull GetAdsInventoryRequest request) {
+        return getAdsInventory(request, null);
+    }
+
+    /**
+     * Retrieve an inventory
+     * 
+     * <p>Retrieves a single AdsInventory by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAdsInventoryResponse getAdsInventory(@Nonnull GetAdsInventoryRequest request, @Nullable Options options) {
         RequestOperation<GetAdsInventoryRequest, GetAdsInventoryResponse> operation
-              = new GetAdsInventory.Sync(sdkConfiguration, _headers);
+              = new GetAdsInventory.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -627,8 +839,23 @@ public class Ads {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAdsOrganizationResponse getAdsOrganization(@Nonnull GetAdsOrganizationRequest request) {
+        return getAdsOrganization(request, null);
+    }
+
+    /**
+     * Retrieve an organization
+     * 
+     * <p>Retrieves a single AdsOrganization by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAdsOrganizationResponse getAdsOrganization(@Nonnull GetAdsOrganizationRequest request, @Nullable Options options) {
         RequestOperation<GetAdsOrganizationRequest, GetAdsOrganizationResponse> operation
-              = new GetAdsOrganization.Sync(sdkConfiguration, _headers);
+              = new GetAdsOrganization.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -655,8 +882,23 @@ public class Ads {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAdsPromotedResponse getAdsPromoted(@Nonnull GetAdsPromotedRequest request) {
+        return getAdsPromoted(request, null);
+    }
+
+    /**
+     * Retrieve a promoted
+     * 
+     * <p>Retrieves a single AdsPromoted by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAdsPromotedResponse getAdsPromoted(@Nonnull GetAdsPromotedRequest request, @Nullable Options options) {
         RequestOperation<GetAdsPromotedRequest, GetAdsPromotedResponse> operation
-              = new GetAdsPromoted.Sync(sdkConfiguration, _headers);
+              = new GetAdsPromoted.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -683,8 +925,23 @@ public class Ads {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAdsTargetResponse getAdsTarget(@Nonnull GetAdsTargetRequest request) {
+        return getAdsTarget(request, null);
+    }
+
+    /**
+     * Retrieve a target
+     * 
+     * <p>Retrieves a single AdsTarget by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAdsTargetResponse getAdsTarget(@Nonnull GetAdsTargetRequest request, @Nullable Options options) {
         RequestOperation<GetAdsTargetRequest, GetAdsTargetResponse> operation
-              = new GetAdsTarget.Sync(sdkConfiguration, _headers);
+              = new GetAdsTarget.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -719,8 +976,27 @@ public class Ads {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAdsAdsResponse listAdsAds(@Nonnull ListAdsAdsRequest request) {
+        return listAdsAds(request, null);
+    }
+
+    /**
+     * List all ads
+     * 
+     * <p>Returns a list of AdsAds. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAdsAdsResponse listAdsAds(@Nonnull ListAdsAdsRequest request, @Nullable Options options) {
         RequestOperation<ListAdsAdsRequest, ListAdsAdsResponse> operation
-              = new ListAdsAds.Sync(sdkConfiguration, _headers);
+              = new ListAdsAds.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -755,8 +1031,27 @@ public class Ads {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAdsAssetsResponse listAdsAssets(@Nonnull ListAdsAssetsRequest request) {
+        return listAdsAssets(request, null);
+    }
+
+    /**
+     * List all assets
+     * 
+     * <p>Returns a list of AdsAssets. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAdsAssetsResponse listAdsAssets(@Nonnull ListAdsAssetsRequest request, @Nullable Options options) {
         RequestOperation<ListAdsAssetsRequest, ListAdsAssetsResponse> operation
-              = new ListAdsAssets.Sync(sdkConfiguration, _headers);
+              = new ListAdsAssets.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -791,8 +1086,27 @@ public class Ads {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAdsCampaignsResponse listAdsCampaigns(@Nonnull ListAdsCampaignsRequest request) {
+        return listAdsCampaigns(request, null);
+    }
+
+    /**
+     * List all campaigns
+     * 
+     * <p>Returns a list of AdsCampaigns. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAdsCampaignsResponse listAdsCampaigns(@Nonnull ListAdsCampaignsRequest request, @Nullable Options options) {
         RequestOperation<ListAdsCampaignsRequest, ListAdsCampaignsResponse> operation
-              = new ListAdsCampaigns.Sync(sdkConfiguration, _headers);
+              = new ListAdsCampaigns.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -827,8 +1141,27 @@ public class Ads {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAdsCreativesResponse listAdsCreatives(@Nonnull ListAdsCreativesRequest request) {
+        return listAdsCreatives(request, null);
+    }
+
+    /**
+     * List all creatives
+     * 
+     * <p>Returns a list of AdsCreatives. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAdsCreativesResponse listAdsCreatives(@Nonnull ListAdsCreativesRequest request, @Nullable Options options) {
         RequestOperation<ListAdsCreativesRequest, ListAdsCreativesResponse> operation
-              = new ListAdsCreatives.Sync(sdkConfiguration, _headers);
+              = new ListAdsCreatives.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -863,8 +1196,27 @@ public class Ads {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAdsGroupsResponse listAdsGroups(@Nonnull ListAdsGroupsRequest request) {
+        return listAdsGroups(request, null);
+    }
+
+    /**
+     * List all groups
+     * 
+     * <p>Returns a list of AdsGroups. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAdsGroupsResponse listAdsGroups(@Nonnull ListAdsGroupsRequest request, @Nullable Options options) {
         RequestOperation<ListAdsGroupsRequest, ListAdsGroupsResponse> operation
-              = new ListAdsGroups.Sync(sdkConfiguration, _headers);
+              = new ListAdsGroups.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -899,8 +1251,27 @@ public class Ads {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAdsInsertionordersResponse listAdsInsertionorders(@Nonnull ListAdsInsertionordersRequest request) {
+        return listAdsInsertionorders(request, null);
+    }
+
+    /**
+     * List all insertionorders
+     * 
+     * <p>Returns a list of AdsInsertionorders. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAdsInsertionordersResponse listAdsInsertionorders(@Nonnull ListAdsInsertionordersRequest request, @Nullable Options options) {
         RequestOperation<ListAdsInsertionordersRequest, ListAdsInsertionordersResponse> operation
-              = new ListAdsInsertionorders.Sync(sdkConfiguration, _headers);
+              = new ListAdsInsertionorders.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -935,8 +1306,27 @@ public class Ads {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAdsInventoriesResponse listAdsInventories(@Nonnull ListAdsInventoriesRequest request) {
+        return listAdsInventories(request, null);
+    }
+
+    /**
+     * List all inventories
+     * 
+     * <p>Returns a list of AdsInventories. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAdsInventoriesResponse listAdsInventories(@Nonnull ListAdsInventoriesRequest request, @Nullable Options options) {
         RequestOperation<ListAdsInventoriesRequest, ListAdsInventoriesResponse> operation
-              = new ListAdsInventories.Sync(sdkConfiguration, _headers);
+              = new ListAdsInventories.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -971,8 +1361,27 @@ public class Ads {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAdsOrganizationsResponse listAdsOrganizations(@Nonnull ListAdsOrganizationsRequest request) {
+        return listAdsOrganizations(request, null);
+    }
+
+    /**
+     * List all organizations
+     * 
+     * <p>Returns a list of AdsOrganizations. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAdsOrganizationsResponse listAdsOrganizations(@Nonnull ListAdsOrganizationsRequest request, @Nullable Options options) {
         RequestOperation<ListAdsOrganizationsRequest, ListAdsOrganizationsResponse> operation
-              = new ListAdsOrganizations.Sync(sdkConfiguration, _headers);
+              = new ListAdsOrganizations.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1007,8 +1416,27 @@ public class Ads {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAdsPromotedsResponse listAdsPromoteds(@Nonnull ListAdsPromotedsRequest request) {
+        return listAdsPromoteds(request, null);
+    }
+
+    /**
+     * List all promoteds
+     * 
+     * <p>Returns a list of AdsPromoteds. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAdsPromotedsResponse listAdsPromoteds(@Nonnull ListAdsPromotedsRequest request, @Nullable Options options) {
         RequestOperation<ListAdsPromotedsRequest, ListAdsPromotedsResponse> operation
-              = new ListAdsPromoteds.Sync(sdkConfiguration, _headers);
+              = new ListAdsPromoteds.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1043,8 +1471,27 @@ public class Ads {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAdsReportsResponse listAdsReports(@Nonnull ListAdsReportsRequest request) {
+        return listAdsReports(request, null);
+    }
+
+    /**
+     * List all reports
+     * 
+     * <p>Returns a list of AdsReports. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAdsReportsResponse listAdsReports(@Nonnull ListAdsReportsRequest request, @Nullable Options options) {
         RequestOperation<ListAdsReportsRequest, ListAdsReportsResponse> operation
-              = new ListAdsReports.Sync(sdkConfiguration, _headers);
+              = new ListAdsReports.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1079,8 +1526,27 @@ public class Ads {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAdsTargetsResponse listAdsTargets(@Nonnull ListAdsTargetsRequest request) {
+        return listAdsTargets(request, null);
+    }
+
+    /**
+     * List all targets
+     * 
+     * <p>Returns a list of AdsTargets. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAdsTargetsResponse listAdsTargets(@Nonnull ListAdsTargetsRequest request, @Nullable Options options) {
         RequestOperation<ListAdsTargetsRequest, ListAdsTargetsResponse> operation
-              = new ListAdsTargets.Sync(sdkConfiguration, _headers);
+              = new ListAdsTargets.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1107,8 +1573,23 @@ public class Ads {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchAdsAdResponse patchAdsAd(@Nonnull PatchAdsAdRequest request) {
+        return patchAdsAd(request, null);
+    }
+
+    /**
+     * Update an ad
+     * 
+     * <p>Updates the AdsAd identified by `id`. Provide the unified AdsAd fields to change in the request
+     * body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchAdsAdResponse patchAdsAd(@Nonnull PatchAdsAdRequest request, @Nullable Options options) {
         RequestOperation<PatchAdsAdRequest, PatchAdsAdResponse> operation
-              = new PatchAdsAd.Sync(sdkConfiguration, _headers);
+              = new PatchAdsAd.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1135,8 +1616,23 @@ public class Ads {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchAdsCampaignResponse patchAdsCampaign(@Nonnull PatchAdsCampaignRequest request) {
+        return patchAdsCampaign(request, null);
+    }
+
+    /**
+     * Update a campaign
+     * 
+     * <p>Updates the AdsCampaign identified by `id`. Provide the unified AdsCampaign fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchAdsCampaignResponse patchAdsCampaign(@Nonnull PatchAdsCampaignRequest request, @Nullable Options options) {
         RequestOperation<PatchAdsCampaignRequest, PatchAdsCampaignResponse> operation
-              = new PatchAdsCampaign.Sync(sdkConfiguration, _headers);
+              = new PatchAdsCampaign.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1163,8 +1659,23 @@ public class Ads {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchAdsCreativeResponse patchAdsCreative(@Nonnull PatchAdsCreativeRequest request) {
+        return patchAdsCreative(request, null);
+    }
+
+    /**
+     * Update a creative
+     * 
+     * <p>Updates the AdsCreative identified by `id`. Provide the unified AdsCreative fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchAdsCreativeResponse patchAdsCreative(@Nonnull PatchAdsCreativeRequest request, @Nullable Options options) {
         RequestOperation<PatchAdsCreativeRequest, PatchAdsCreativeResponse> operation
-              = new PatchAdsCreative.Sync(sdkConfiguration, _headers);
+              = new PatchAdsCreative.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1191,8 +1702,23 @@ public class Ads {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchAdsGroupResponse patchAdsGroup(@Nonnull PatchAdsGroupRequest request) {
+        return patchAdsGroup(request, null);
+    }
+
+    /**
+     * Update a group
+     * 
+     * <p>Updates the AdsGroup identified by `id`. Provide the unified AdsGroup fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchAdsGroupResponse patchAdsGroup(@Nonnull PatchAdsGroupRequest request, @Nullable Options options) {
         RequestOperation<PatchAdsGroupRequest, PatchAdsGroupResponse> operation
-              = new PatchAdsGroup.Sync(sdkConfiguration, _headers);
+              = new PatchAdsGroup.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1219,8 +1745,23 @@ public class Ads {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchAdsInsertionorderResponse patchAdsInsertionorder(@Nonnull PatchAdsInsertionorderRequest request) {
+        return patchAdsInsertionorder(request, null);
+    }
+
+    /**
+     * Update an insertionorder
+     * 
+     * <p>Updates the AdsInsertionorder identified by `id`. Provide the unified AdsInsertionorder fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchAdsInsertionorderResponse patchAdsInsertionorder(@Nonnull PatchAdsInsertionorderRequest request, @Nullable Options options) {
         RequestOperation<PatchAdsInsertionorderRequest, PatchAdsInsertionorderResponse> operation
-              = new PatchAdsInsertionorder.Sync(sdkConfiguration, _headers);
+              = new PatchAdsInsertionorder.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1247,8 +1788,23 @@ public class Ads {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchAdsOrganizationResponse patchAdsOrganization(@Nonnull PatchAdsOrganizationRequest request) {
+        return patchAdsOrganization(request, null);
+    }
+
+    /**
+     * Update an organization
+     * 
+     * <p>Updates the AdsOrganization identified by `id`. Provide the unified AdsOrganization fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchAdsOrganizationResponse patchAdsOrganization(@Nonnull PatchAdsOrganizationRequest request, @Nullable Options options) {
         RequestOperation<PatchAdsOrganizationRequest, PatchAdsOrganizationResponse> operation
-              = new PatchAdsOrganization.Sync(sdkConfiguration, _headers);
+              = new PatchAdsOrganization.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1273,8 +1829,22 @@ public class Ads {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveAdsAdResponse removeAdsAd(@Nonnull RemoveAdsAdRequest request) {
+        return removeAdsAd(request, null);
+    }
+
+    /**
+     * Remove an ad
+     * 
+     * <p>Deletes the AdsAd identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveAdsAdResponse removeAdsAd(@Nonnull RemoveAdsAdRequest request, @Nullable Options options) {
         RequestOperation<RemoveAdsAdRequest, RemoveAdsAdResponse> operation
-              = new RemoveAdsAd.Sync(sdkConfiguration, _headers);
+              = new RemoveAdsAd.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1299,8 +1869,22 @@ public class Ads {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveAdsCampaignResponse removeAdsCampaign(@Nonnull RemoveAdsCampaignRequest request) {
+        return removeAdsCampaign(request, null);
+    }
+
+    /**
+     * Remove a campaign
+     * 
+     * <p>Deletes the AdsCampaign identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveAdsCampaignResponse removeAdsCampaign(@Nonnull RemoveAdsCampaignRequest request, @Nullable Options options) {
         RequestOperation<RemoveAdsCampaignRequest, RemoveAdsCampaignResponse> operation
-              = new RemoveAdsCampaign.Sync(sdkConfiguration, _headers);
+              = new RemoveAdsCampaign.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1325,8 +1909,22 @@ public class Ads {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveAdsCreativeResponse removeAdsCreative(@Nonnull RemoveAdsCreativeRequest request) {
+        return removeAdsCreative(request, null);
+    }
+
+    /**
+     * Remove a creative
+     * 
+     * <p>Deletes the AdsCreative identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveAdsCreativeResponse removeAdsCreative(@Nonnull RemoveAdsCreativeRequest request, @Nullable Options options) {
         RequestOperation<RemoveAdsCreativeRequest, RemoveAdsCreativeResponse> operation
-              = new RemoveAdsCreative.Sync(sdkConfiguration, _headers);
+              = new RemoveAdsCreative.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1351,8 +1949,22 @@ public class Ads {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveAdsGroupResponse removeAdsGroup(@Nonnull RemoveAdsGroupRequest request) {
+        return removeAdsGroup(request, null);
+    }
+
+    /**
+     * Remove a group
+     * 
+     * <p>Deletes the AdsGroup identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveAdsGroupResponse removeAdsGroup(@Nonnull RemoveAdsGroupRequest request, @Nullable Options options) {
         RequestOperation<RemoveAdsGroupRequest, RemoveAdsGroupResponse> operation
-              = new RemoveAdsGroup.Sync(sdkConfiguration, _headers);
+              = new RemoveAdsGroup.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1377,8 +1989,22 @@ public class Ads {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveAdsInsertionorderResponse removeAdsInsertionorder(@Nonnull RemoveAdsInsertionorderRequest request) {
+        return removeAdsInsertionorder(request, null);
+    }
+
+    /**
+     * Remove an insertionorder
+     * 
+     * <p>Deletes the AdsInsertionorder identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveAdsInsertionorderResponse removeAdsInsertionorder(@Nonnull RemoveAdsInsertionorderRequest request, @Nullable Options options) {
         RequestOperation<RemoveAdsInsertionorderRequest, RemoveAdsInsertionorderResponse> operation
-              = new RemoveAdsInsertionorder.Sync(sdkConfiguration, _headers);
+              = new RemoveAdsInsertionorder.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1403,8 +2029,22 @@ public class Ads {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveAdsOrganizationResponse removeAdsOrganization(@Nonnull RemoveAdsOrganizationRequest request) {
+        return removeAdsOrganization(request, null);
+    }
+
+    /**
+     * Remove an organization
+     * 
+     * <p>Deletes the AdsOrganization identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveAdsOrganizationResponse removeAdsOrganization(@Nonnull RemoveAdsOrganizationRequest request, @Nullable Options options) {
         RequestOperation<RemoveAdsOrganizationRequest, RemoveAdsOrganizationResponse> operation
-              = new RemoveAdsOrganization.Sync(sdkConfiguration, _headers);
+              = new RemoveAdsOrganization.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1431,8 +2071,23 @@ public class Ads {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateAdsAdResponse updateAdsAd(@Nonnull UpdateAdsAdRequest request) {
+        return updateAdsAd(request, null);
+    }
+
+    /**
+     * Update an ad
+     * 
+     * <p>Updates the AdsAd identified by `id`. Provide the unified AdsAd fields to change in the request
+     * body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateAdsAdResponse updateAdsAd(@Nonnull UpdateAdsAdRequest request, @Nullable Options options) {
         RequestOperation<UpdateAdsAdRequest, UpdateAdsAdResponse> operation
-              = new UpdateAdsAd.Sync(sdkConfiguration, _headers);
+              = new UpdateAdsAd.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1459,8 +2114,23 @@ public class Ads {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateAdsCampaignResponse updateAdsCampaign(@Nonnull UpdateAdsCampaignRequest request) {
+        return updateAdsCampaign(request, null);
+    }
+
+    /**
+     * Update a campaign
+     * 
+     * <p>Updates the AdsCampaign identified by `id`. Provide the unified AdsCampaign fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateAdsCampaignResponse updateAdsCampaign(@Nonnull UpdateAdsCampaignRequest request, @Nullable Options options) {
         RequestOperation<UpdateAdsCampaignRequest, UpdateAdsCampaignResponse> operation
-              = new UpdateAdsCampaign.Sync(sdkConfiguration, _headers);
+              = new UpdateAdsCampaign.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1487,8 +2157,23 @@ public class Ads {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateAdsCreativeResponse updateAdsCreative(@Nonnull UpdateAdsCreativeRequest request) {
+        return updateAdsCreative(request, null);
+    }
+
+    /**
+     * Update a creative
+     * 
+     * <p>Updates the AdsCreative identified by `id`. Provide the unified AdsCreative fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateAdsCreativeResponse updateAdsCreative(@Nonnull UpdateAdsCreativeRequest request, @Nullable Options options) {
         RequestOperation<UpdateAdsCreativeRequest, UpdateAdsCreativeResponse> operation
-              = new UpdateAdsCreative.Sync(sdkConfiguration, _headers);
+              = new UpdateAdsCreative.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1515,8 +2200,23 @@ public class Ads {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateAdsGroupResponse updateAdsGroup(@Nonnull UpdateAdsGroupRequest request) {
+        return updateAdsGroup(request, null);
+    }
+
+    /**
+     * Update a group
+     * 
+     * <p>Updates the AdsGroup identified by `id`. Provide the unified AdsGroup fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateAdsGroupResponse updateAdsGroup(@Nonnull UpdateAdsGroupRequest request, @Nullable Options options) {
         RequestOperation<UpdateAdsGroupRequest, UpdateAdsGroupResponse> operation
-              = new UpdateAdsGroup.Sync(sdkConfiguration, _headers);
+              = new UpdateAdsGroup.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1543,8 +2243,23 @@ public class Ads {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateAdsInsertionorderResponse updateAdsInsertionorder(@Nonnull UpdateAdsInsertionorderRequest request) {
+        return updateAdsInsertionorder(request, null);
+    }
+
+    /**
+     * Update an insertionorder
+     * 
+     * <p>Updates the AdsInsertionorder identified by `id`. Provide the unified AdsInsertionorder fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateAdsInsertionorderResponse updateAdsInsertionorder(@Nonnull UpdateAdsInsertionorderRequest request, @Nullable Options options) {
         RequestOperation<UpdateAdsInsertionorderRequest, UpdateAdsInsertionorderResponse> operation
-              = new UpdateAdsInsertionorder.Sync(sdkConfiguration, _headers);
+              = new UpdateAdsInsertionorder.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1571,8 +2286,23 @@ public class Ads {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateAdsOrganizationResponse updateAdsOrganization(@Nonnull UpdateAdsOrganizationRequest request) {
+        return updateAdsOrganization(request, null);
+    }
+
+    /**
+     * Update an organization
+     * 
+     * <p>Updates the AdsOrganization identified by `id`. Provide the unified AdsOrganization fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateAdsOrganizationResponse updateAdsOrganization(@Nonnull UpdateAdsOrganizationRequest request, @Nullable Options options) {
         RequestOperation<UpdateAdsOrganizationRequest, UpdateAdsOrganizationResponse> operation
-              = new UpdateAdsOrganization.Sync(sdkConfiguration, _headers);
+              = new UpdateAdsOrganization.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

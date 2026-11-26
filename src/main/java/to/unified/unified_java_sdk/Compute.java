@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateComputeDeploymentRequest;
 import to.unified.unified_java_sdk.models.operations.CreateComputeDeploymentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateComputeDeploymentResponse;
@@ -243,6 +244,7 @@ import to.unified.unified_java_sdk.operations.UpdateComputeSnapshot;
 import to.unified.unified_java_sdk.operations.UpdateComputeTemplate;
 import to.unified.unified_java_sdk.operations.UpdateComputeVolume;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Compute {
@@ -287,8 +289,23 @@ public class Compute {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateComputeDeploymentResponse createComputeDeployment(@Nonnull CreateComputeDeploymentRequest request) {
+        return createComputeDeployment(request, null);
+    }
+
+    /**
+     * Create a deployment
+     * 
+     * <p>Creates a ComputeDeployment. Provide the unified ComputeDeployment fields in the request body; they
+     * are mapped to the provider's API. Returns the created ComputeDeployment.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateComputeDeploymentResponse createComputeDeployment(@Nonnull CreateComputeDeploymentRequest request, @Nullable Options options) {
         RequestOperation<CreateComputeDeploymentRequest, CreateComputeDeploymentResponse> operation
-              = new CreateComputeDeployment.Sync(sdkConfiguration, _headers);
+              = new CreateComputeDeployment.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -315,8 +332,23 @@ public class Compute {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateComputeDomainResponse createComputeDomain(@Nonnull CreateComputeDomainRequest request) {
+        return createComputeDomain(request, null);
+    }
+
+    /**
+     * Create a domain
+     * 
+     * <p>Creates a ComputeDomain. Provide the unified ComputeDomain fields in the request body; they are
+     * mapped to the provider's API. Returns the created ComputeDomain.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateComputeDomainResponse createComputeDomain(@Nonnull CreateComputeDomainRequest request, @Nullable Options options) {
         RequestOperation<CreateComputeDomainRequest, CreateComputeDomainResponse> operation
-              = new CreateComputeDomain.Sync(sdkConfiguration, _headers);
+              = new CreateComputeDomain.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -343,8 +375,23 @@ public class Compute {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateComputeEnvvarResponse createComputeEnvvar(@Nonnull CreateComputeEnvvarRequest request) {
+        return createComputeEnvvar(request, null);
+    }
+
+    /**
+     * Create an envvar
+     * 
+     * <p>Creates a ComputeEnvvar. Provide the unified ComputeEnvvar fields in the request body; they are
+     * mapped to the provider's API. Returns the created ComputeEnvvar.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateComputeEnvvarResponse createComputeEnvvar(@Nonnull CreateComputeEnvvarRequest request, @Nullable Options options) {
         RequestOperation<CreateComputeEnvvarRequest, CreateComputeEnvvarResponse> operation
-              = new CreateComputeEnvvar.Sync(sdkConfiguration, _headers);
+              = new CreateComputeEnvvar.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -371,8 +418,23 @@ public class Compute {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateComputeInstanceResponse createComputeInstance(@Nonnull CreateComputeInstanceRequest request) {
+        return createComputeInstance(request, null);
+    }
+
+    /**
+     * Create an instance
+     * 
+     * <p>Creates a ComputeInstance. Provide the unified ComputeInstance fields in the request body; they are
+     * mapped to the provider's API. Returns the created ComputeInstance.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateComputeInstanceResponse createComputeInstance(@Nonnull CreateComputeInstanceRequest request, @Nullable Options options) {
         RequestOperation<CreateComputeInstanceRequest, CreateComputeInstanceResponse> operation
-              = new CreateComputeInstance.Sync(sdkConfiguration, _headers);
+              = new CreateComputeInstance.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -399,8 +461,23 @@ public class Compute {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateComputeKeyResponse createComputeKey(@Nonnull CreateComputeKeyRequest request) {
+        return createComputeKey(request, null);
+    }
+
+    /**
+     * Create a key
+     * 
+     * <p>Creates a ComputeKey. Provide the unified ComputeKey fields in the request body; they are mapped to
+     * the provider's API. Returns the created ComputeKey.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateComputeKeyResponse createComputeKey(@Nonnull CreateComputeKeyRequest request, @Nullable Options options) {
         RequestOperation<CreateComputeKeyRequest, CreateComputeKeyResponse> operation
-              = new CreateComputeKey.Sync(sdkConfiguration, _headers);
+              = new CreateComputeKey.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -427,8 +504,23 @@ public class Compute {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateComputeServiceResponse createComputeService(@Nonnull CreateComputeServiceRequest request) {
+        return createComputeService(request, null);
+    }
+
+    /**
+     * Create a service
+     * 
+     * <p>Creates a ComputeService. Provide the unified ComputeService fields in the request body; they are
+     * mapped to the provider's API. Returns the created ComputeService.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateComputeServiceResponse createComputeService(@Nonnull CreateComputeServiceRequest request, @Nullable Options options) {
         RequestOperation<CreateComputeServiceRequest, CreateComputeServiceResponse> operation
-              = new CreateComputeService.Sync(sdkConfiguration, _headers);
+              = new CreateComputeService.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -455,8 +547,23 @@ public class Compute {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateComputeSnapshotResponse createComputeSnapshot(@Nonnull CreateComputeSnapshotRequest request) {
+        return createComputeSnapshot(request, null);
+    }
+
+    /**
+     * Create a snapshot
+     * 
+     * <p>Creates a ComputeSnapshot. Provide the unified ComputeSnapshot fields in the request body; they are
+     * mapped to the provider's API. Returns the created ComputeSnapshot.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateComputeSnapshotResponse createComputeSnapshot(@Nonnull CreateComputeSnapshotRequest request, @Nullable Options options) {
         RequestOperation<CreateComputeSnapshotRequest, CreateComputeSnapshotResponse> operation
-              = new CreateComputeSnapshot.Sync(sdkConfiguration, _headers);
+              = new CreateComputeSnapshot.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -483,8 +590,23 @@ public class Compute {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateComputeTemplateResponse createComputeTemplate(@Nonnull CreateComputeTemplateRequest request) {
+        return createComputeTemplate(request, null);
+    }
+
+    /**
+     * Create a template
+     * 
+     * <p>Creates a ComputeTemplate. Provide the unified ComputeTemplate fields in the request body; they are
+     * mapped to the provider's API. Returns the created ComputeTemplate.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateComputeTemplateResponse createComputeTemplate(@Nonnull CreateComputeTemplateRequest request, @Nullable Options options) {
         RequestOperation<CreateComputeTemplateRequest, CreateComputeTemplateResponse> operation
-              = new CreateComputeTemplate.Sync(sdkConfiguration, _headers);
+              = new CreateComputeTemplate.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -511,8 +633,23 @@ public class Compute {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateComputeVolumeResponse createComputeVolume(@Nonnull CreateComputeVolumeRequest request) {
+        return createComputeVolume(request, null);
+    }
+
+    /**
+     * Create a volume
+     * 
+     * <p>Creates a ComputeVolume. Provide the unified ComputeVolume fields in the request body; they are
+     * mapped to the provider's API. Returns the created ComputeVolume.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateComputeVolumeResponse createComputeVolume(@Nonnull CreateComputeVolumeRequest request, @Nullable Options options) {
         RequestOperation<CreateComputeVolumeRequest, CreateComputeVolumeResponse> operation
-              = new CreateComputeVolume.Sync(sdkConfiguration, _headers);
+              = new CreateComputeVolume.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -539,8 +676,23 @@ public class Compute {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetComputeDeploymentResponse getComputeDeployment(@Nonnull GetComputeDeploymentRequest request) {
+        return getComputeDeployment(request, null);
+    }
+
+    /**
+     * Retrieve a deployment
+     * 
+     * <p>Retrieves a single ComputeDeployment by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetComputeDeploymentResponse getComputeDeployment(@Nonnull GetComputeDeploymentRequest request, @Nullable Options options) {
         RequestOperation<GetComputeDeploymentRequest, GetComputeDeploymentResponse> operation
-              = new GetComputeDeployment.Sync(sdkConfiguration, _headers);
+              = new GetComputeDeployment.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -567,8 +719,23 @@ public class Compute {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetComputeDomainResponse getComputeDomain(@Nonnull GetComputeDomainRequest request) {
+        return getComputeDomain(request, null);
+    }
+
+    /**
+     * Retrieve a domain
+     * 
+     * <p>Retrieves a single ComputeDomain by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetComputeDomainResponse getComputeDomain(@Nonnull GetComputeDomainRequest request, @Nullable Options options) {
         RequestOperation<GetComputeDomainRequest, GetComputeDomainResponse> operation
-              = new GetComputeDomain.Sync(sdkConfiguration, _headers);
+              = new GetComputeDomain.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -595,8 +762,23 @@ public class Compute {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetComputeEnvvarResponse getComputeEnvvar(@Nonnull GetComputeEnvvarRequest request) {
+        return getComputeEnvvar(request, null);
+    }
+
+    /**
+     * Retrieve an envvar
+     * 
+     * <p>Retrieves a single ComputeEnvvar by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetComputeEnvvarResponse getComputeEnvvar(@Nonnull GetComputeEnvvarRequest request, @Nullable Options options) {
         RequestOperation<GetComputeEnvvarRequest, GetComputeEnvvarResponse> operation
-              = new GetComputeEnvvar.Sync(sdkConfiguration, _headers);
+              = new GetComputeEnvvar.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -623,8 +805,23 @@ public class Compute {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetComputeGputypeResponse getComputeGputype(@Nonnull GetComputeGputypeRequest request) {
+        return getComputeGputype(request, null);
+    }
+
+    /**
+     * Retrieve a gputype
+     * 
+     * <p>Retrieves a single ComputeGputype by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetComputeGputypeResponse getComputeGputype(@Nonnull GetComputeGputypeRequest request, @Nullable Options options) {
         RequestOperation<GetComputeGputypeRequest, GetComputeGputypeResponse> operation
-              = new GetComputeGputype.Sync(sdkConfiguration, _headers);
+              = new GetComputeGputype.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -651,8 +848,23 @@ public class Compute {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetComputeInstanceResponse getComputeInstance(@Nonnull GetComputeInstanceRequest request) {
+        return getComputeInstance(request, null);
+    }
+
+    /**
+     * Retrieve an instance
+     * 
+     * <p>Retrieves a single ComputeInstance by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetComputeInstanceResponse getComputeInstance(@Nonnull GetComputeInstanceRequest request, @Nullable Options options) {
         RequestOperation<GetComputeInstanceRequest, GetComputeInstanceResponse> operation
-              = new GetComputeInstance.Sync(sdkConfiguration, _headers);
+              = new GetComputeInstance.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -679,8 +891,23 @@ public class Compute {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetComputeKeyResponse getComputeKey(@Nonnull GetComputeKeyRequest request) {
+        return getComputeKey(request, null);
+    }
+
+    /**
+     * Retrieve a key
+     * 
+     * <p>Retrieves a single ComputeKey by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetComputeKeyResponse getComputeKey(@Nonnull GetComputeKeyRequest request, @Nullable Options options) {
         RequestOperation<GetComputeKeyRequest, GetComputeKeyResponse> operation
-              = new GetComputeKey.Sync(sdkConfiguration, _headers);
+              = new GetComputeKey.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -707,8 +934,23 @@ public class Compute {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetComputeRegionResponse getComputeRegion(@Nonnull GetComputeRegionRequest request) {
+        return getComputeRegion(request, null);
+    }
+
+    /**
+     * Retrieve a region
+     * 
+     * <p>Retrieves a single ComputeRegion by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetComputeRegionResponse getComputeRegion(@Nonnull GetComputeRegionRequest request, @Nullable Options options) {
         RequestOperation<GetComputeRegionRequest, GetComputeRegionResponse> operation
-              = new GetComputeRegion.Sync(sdkConfiguration, _headers);
+              = new GetComputeRegion.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -735,8 +977,23 @@ public class Compute {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetComputeServiceResponse getComputeService(@Nonnull GetComputeServiceRequest request) {
+        return getComputeService(request, null);
+    }
+
+    /**
+     * Retrieve a service
+     * 
+     * <p>Retrieves a single ComputeService by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetComputeServiceResponse getComputeService(@Nonnull GetComputeServiceRequest request, @Nullable Options options) {
         RequestOperation<GetComputeServiceRequest, GetComputeServiceResponse> operation
-              = new GetComputeService.Sync(sdkConfiguration, _headers);
+              = new GetComputeService.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -763,8 +1020,23 @@ public class Compute {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetComputeSnapshotResponse getComputeSnapshot(@Nonnull GetComputeSnapshotRequest request) {
+        return getComputeSnapshot(request, null);
+    }
+
+    /**
+     * Retrieve a snapshot
+     * 
+     * <p>Retrieves a single ComputeSnapshot by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetComputeSnapshotResponse getComputeSnapshot(@Nonnull GetComputeSnapshotRequest request, @Nullable Options options) {
         RequestOperation<GetComputeSnapshotRequest, GetComputeSnapshotResponse> operation
-              = new GetComputeSnapshot.Sync(sdkConfiguration, _headers);
+              = new GetComputeSnapshot.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -791,8 +1063,23 @@ public class Compute {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetComputeTemplateResponse getComputeTemplate(@Nonnull GetComputeTemplateRequest request) {
+        return getComputeTemplate(request, null);
+    }
+
+    /**
+     * Retrieve a template
+     * 
+     * <p>Retrieves a single ComputeTemplate by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetComputeTemplateResponse getComputeTemplate(@Nonnull GetComputeTemplateRequest request, @Nullable Options options) {
         RequestOperation<GetComputeTemplateRequest, GetComputeTemplateResponse> operation
-              = new GetComputeTemplate.Sync(sdkConfiguration, _headers);
+              = new GetComputeTemplate.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -819,8 +1106,23 @@ public class Compute {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetComputeVolumeResponse getComputeVolume(@Nonnull GetComputeVolumeRequest request) {
+        return getComputeVolume(request, null);
+    }
+
+    /**
+     * Retrieve a volume
+     * 
+     * <p>Retrieves a single ComputeVolume by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetComputeVolumeResponse getComputeVolume(@Nonnull GetComputeVolumeRequest request, @Nullable Options options) {
         RequestOperation<GetComputeVolumeRequest, GetComputeVolumeResponse> operation
-              = new GetComputeVolume.Sync(sdkConfiguration, _headers);
+              = new GetComputeVolume.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -855,8 +1157,27 @@ public class Compute {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListComputeDeploymentsResponse listComputeDeployments(@Nonnull ListComputeDeploymentsRequest request) {
+        return listComputeDeployments(request, null);
+    }
+
+    /**
+     * List all deployments
+     * 
+     * <p>Returns a list of ComputeDeployments. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListComputeDeploymentsResponse listComputeDeployments(@Nonnull ListComputeDeploymentsRequest request, @Nullable Options options) {
         RequestOperation<ListComputeDeploymentsRequest, ListComputeDeploymentsResponse> operation
-              = new ListComputeDeployments.Sync(sdkConfiguration, _headers);
+              = new ListComputeDeployments.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -891,8 +1212,27 @@ public class Compute {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListComputeDomainsResponse listComputeDomains(@Nonnull ListComputeDomainsRequest request) {
+        return listComputeDomains(request, null);
+    }
+
+    /**
+     * List all domains
+     * 
+     * <p>Returns a list of ComputeDomains. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListComputeDomainsResponse listComputeDomains(@Nonnull ListComputeDomainsRequest request, @Nullable Options options) {
         RequestOperation<ListComputeDomainsRequest, ListComputeDomainsResponse> operation
-              = new ListComputeDomains.Sync(sdkConfiguration, _headers);
+              = new ListComputeDomains.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -927,8 +1267,27 @@ public class Compute {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListComputeEnvvarsResponse listComputeEnvvars(@Nonnull ListComputeEnvvarsRequest request) {
+        return listComputeEnvvars(request, null);
+    }
+
+    /**
+     * List all envvars
+     * 
+     * <p>Returns a list of ComputeEnvvars. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListComputeEnvvarsResponse listComputeEnvvars(@Nonnull ListComputeEnvvarsRequest request, @Nullable Options options) {
         RequestOperation<ListComputeEnvvarsRequest, ListComputeEnvvarsResponse> operation
-              = new ListComputeEnvvars.Sync(sdkConfiguration, _headers);
+              = new ListComputeEnvvars.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -963,8 +1322,27 @@ public class Compute {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListComputeGputypesResponse listComputeGputypes(@Nonnull ListComputeGputypesRequest request) {
+        return listComputeGputypes(request, null);
+    }
+
+    /**
+     * List all gputypes
+     * 
+     * <p>Returns a list of ComputeGputypes. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListComputeGputypesResponse listComputeGputypes(@Nonnull ListComputeGputypesRequest request, @Nullable Options options) {
         RequestOperation<ListComputeGputypesRequest, ListComputeGputypesResponse> operation
-              = new ListComputeGputypes.Sync(sdkConfiguration, _headers);
+              = new ListComputeGputypes.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -999,8 +1377,27 @@ public class Compute {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListComputeInstancesResponse listComputeInstances(@Nonnull ListComputeInstancesRequest request) {
+        return listComputeInstances(request, null);
+    }
+
+    /**
+     * List all instances
+     * 
+     * <p>Returns a list of ComputeInstances. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListComputeInstancesResponse listComputeInstances(@Nonnull ListComputeInstancesRequest request, @Nullable Options options) {
         RequestOperation<ListComputeInstancesRequest, ListComputeInstancesResponse> operation
-              = new ListComputeInstances.Sync(sdkConfiguration, _headers);
+              = new ListComputeInstances.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1035,8 +1432,27 @@ public class Compute {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListComputeKeysResponse listComputeKeys(@Nonnull ListComputeKeysRequest request) {
+        return listComputeKeys(request, null);
+    }
+
+    /**
+     * List all keys
+     * 
+     * <p>Returns a list of ComputeKeys. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListComputeKeysResponse listComputeKeys(@Nonnull ListComputeKeysRequest request, @Nullable Options options) {
         RequestOperation<ListComputeKeysRequest, ListComputeKeysResponse> operation
-              = new ListComputeKeys.Sync(sdkConfiguration, _headers);
+              = new ListComputeKeys.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1071,8 +1487,27 @@ public class Compute {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListComputeRegionsResponse listComputeRegions(@Nonnull ListComputeRegionsRequest request) {
+        return listComputeRegions(request, null);
+    }
+
+    /**
+     * List all regions
+     * 
+     * <p>Returns a list of ComputeRegions. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListComputeRegionsResponse listComputeRegions(@Nonnull ListComputeRegionsRequest request, @Nullable Options options) {
         RequestOperation<ListComputeRegionsRequest, ListComputeRegionsResponse> operation
-              = new ListComputeRegions.Sync(sdkConfiguration, _headers);
+              = new ListComputeRegions.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1107,8 +1542,27 @@ public class Compute {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListComputeServicesResponse listComputeServices(@Nonnull ListComputeServicesRequest request) {
+        return listComputeServices(request, null);
+    }
+
+    /**
+     * List all services
+     * 
+     * <p>Returns a list of ComputeServices. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListComputeServicesResponse listComputeServices(@Nonnull ListComputeServicesRequest request, @Nullable Options options) {
         RequestOperation<ListComputeServicesRequest, ListComputeServicesResponse> operation
-              = new ListComputeServices.Sync(sdkConfiguration, _headers);
+              = new ListComputeServices.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1143,8 +1597,27 @@ public class Compute {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListComputeSnapshotsResponse listComputeSnapshots(@Nonnull ListComputeSnapshotsRequest request) {
+        return listComputeSnapshots(request, null);
+    }
+
+    /**
+     * List all snapshots
+     * 
+     * <p>Returns a list of ComputeSnapshots. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListComputeSnapshotsResponse listComputeSnapshots(@Nonnull ListComputeSnapshotsRequest request, @Nullable Options options) {
         RequestOperation<ListComputeSnapshotsRequest, ListComputeSnapshotsResponse> operation
-              = new ListComputeSnapshots.Sync(sdkConfiguration, _headers);
+              = new ListComputeSnapshots.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1179,8 +1652,27 @@ public class Compute {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListComputeTemplatesResponse listComputeTemplates(@Nonnull ListComputeTemplatesRequest request) {
+        return listComputeTemplates(request, null);
+    }
+
+    /**
+     * List all templates
+     * 
+     * <p>Returns a list of ComputeTemplates. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListComputeTemplatesResponse listComputeTemplates(@Nonnull ListComputeTemplatesRequest request, @Nullable Options options) {
         RequestOperation<ListComputeTemplatesRequest, ListComputeTemplatesResponse> operation
-              = new ListComputeTemplates.Sync(sdkConfiguration, _headers);
+              = new ListComputeTemplates.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1215,8 +1707,27 @@ public class Compute {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListComputeUsagesResponse listComputeUsages(@Nonnull ListComputeUsagesRequest request) {
+        return listComputeUsages(request, null);
+    }
+
+    /**
+     * List all usages
+     * 
+     * <p>Returns a list of ComputeUsages. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListComputeUsagesResponse listComputeUsages(@Nonnull ListComputeUsagesRequest request, @Nullable Options options) {
         RequestOperation<ListComputeUsagesRequest, ListComputeUsagesResponse> operation
-              = new ListComputeUsages.Sync(sdkConfiguration, _headers);
+              = new ListComputeUsages.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1251,8 +1762,27 @@ public class Compute {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListComputeVolumesResponse listComputeVolumes(@Nonnull ListComputeVolumesRequest request) {
+        return listComputeVolumes(request, null);
+    }
+
+    /**
+     * List all volumes
+     * 
+     * <p>Returns a list of ComputeVolumes. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListComputeVolumesResponse listComputeVolumes(@Nonnull ListComputeVolumesRequest request, @Nullable Options options) {
         RequestOperation<ListComputeVolumesRequest, ListComputeVolumesResponse> operation
-              = new ListComputeVolumes.Sync(sdkConfiguration, _headers);
+              = new ListComputeVolumes.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1279,8 +1809,23 @@ public class Compute {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchComputeDeploymentResponse patchComputeDeployment(@Nonnull PatchComputeDeploymentRequest request) {
+        return patchComputeDeployment(request, null);
+    }
+
+    /**
+     * Update a deployment
+     * 
+     * <p>Updates the ComputeDeployment identified by `id`. Provide the unified ComputeDeployment fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchComputeDeploymentResponse patchComputeDeployment(@Nonnull PatchComputeDeploymentRequest request, @Nullable Options options) {
         RequestOperation<PatchComputeDeploymentRequest, PatchComputeDeploymentResponse> operation
-              = new PatchComputeDeployment.Sync(sdkConfiguration, _headers);
+              = new PatchComputeDeployment.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1307,8 +1852,23 @@ public class Compute {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchComputeDomainResponse patchComputeDomain(@Nonnull PatchComputeDomainRequest request) {
+        return patchComputeDomain(request, null);
+    }
+
+    /**
+     * Update a domain
+     * 
+     * <p>Updates the ComputeDomain identified by `id`. Provide the unified ComputeDomain fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchComputeDomainResponse patchComputeDomain(@Nonnull PatchComputeDomainRequest request, @Nullable Options options) {
         RequestOperation<PatchComputeDomainRequest, PatchComputeDomainResponse> operation
-              = new PatchComputeDomain.Sync(sdkConfiguration, _headers);
+              = new PatchComputeDomain.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1335,8 +1895,23 @@ public class Compute {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchComputeEnvvarResponse patchComputeEnvvar(@Nonnull PatchComputeEnvvarRequest request) {
+        return patchComputeEnvvar(request, null);
+    }
+
+    /**
+     * Update an envvar
+     * 
+     * <p>Updates the ComputeEnvvar identified by `id`. Provide the unified ComputeEnvvar fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchComputeEnvvarResponse patchComputeEnvvar(@Nonnull PatchComputeEnvvarRequest request, @Nullable Options options) {
         RequestOperation<PatchComputeEnvvarRequest, PatchComputeEnvvarResponse> operation
-              = new PatchComputeEnvvar.Sync(sdkConfiguration, _headers);
+              = new PatchComputeEnvvar.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1363,8 +1938,23 @@ public class Compute {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchComputeInstanceResponse patchComputeInstance(@Nonnull PatchComputeInstanceRequest request) {
+        return patchComputeInstance(request, null);
+    }
+
+    /**
+     * Update an instance
+     * 
+     * <p>Updates the ComputeInstance identified by `id`. Provide the unified ComputeInstance fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchComputeInstanceResponse patchComputeInstance(@Nonnull PatchComputeInstanceRequest request, @Nullable Options options) {
         RequestOperation<PatchComputeInstanceRequest, PatchComputeInstanceResponse> operation
-              = new PatchComputeInstance.Sync(sdkConfiguration, _headers);
+              = new PatchComputeInstance.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1391,8 +1981,23 @@ public class Compute {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchComputeKeyResponse patchComputeKey(@Nonnull PatchComputeKeyRequest request) {
+        return patchComputeKey(request, null);
+    }
+
+    /**
+     * Update a key
+     * 
+     * <p>Updates the ComputeKey identified by `id`. Provide the unified ComputeKey fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchComputeKeyResponse patchComputeKey(@Nonnull PatchComputeKeyRequest request, @Nullable Options options) {
         RequestOperation<PatchComputeKeyRequest, PatchComputeKeyResponse> operation
-              = new PatchComputeKey.Sync(sdkConfiguration, _headers);
+              = new PatchComputeKey.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1419,8 +2024,23 @@ public class Compute {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchComputeServiceResponse patchComputeService(@Nonnull PatchComputeServiceRequest request) {
+        return patchComputeService(request, null);
+    }
+
+    /**
+     * Update a service
+     * 
+     * <p>Updates the ComputeService identified by `id`. Provide the unified ComputeService fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchComputeServiceResponse patchComputeService(@Nonnull PatchComputeServiceRequest request, @Nullable Options options) {
         RequestOperation<PatchComputeServiceRequest, PatchComputeServiceResponse> operation
-              = new PatchComputeService.Sync(sdkConfiguration, _headers);
+              = new PatchComputeService.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1447,8 +2067,23 @@ public class Compute {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchComputeSnapshotResponse patchComputeSnapshot(@Nonnull PatchComputeSnapshotRequest request) {
+        return patchComputeSnapshot(request, null);
+    }
+
+    /**
+     * Update a snapshot
+     * 
+     * <p>Updates the ComputeSnapshot identified by `id`. Provide the unified ComputeSnapshot fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchComputeSnapshotResponse patchComputeSnapshot(@Nonnull PatchComputeSnapshotRequest request, @Nullable Options options) {
         RequestOperation<PatchComputeSnapshotRequest, PatchComputeSnapshotResponse> operation
-              = new PatchComputeSnapshot.Sync(sdkConfiguration, _headers);
+              = new PatchComputeSnapshot.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1475,8 +2110,23 @@ public class Compute {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchComputeTemplateResponse patchComputeTemplate(@Nonnull PatchComputeTemplateRequest request) {
+        return patchComputeTemplate(request, null);
+    }
+
+    /**
+     * Update a template
+     * 
+     * <p>Updates the ComputeTemplate identified by `id`. Provide the unified ComputeTemplate fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchComputeTemplateResponse patchComputeTemplate(@Nonnull PatchComputeTemplateRequest request, @Nullable Options options) {
         RequestOperation<PatchComputeTemplateRequest, PatchComputeTemplateResponse> operation
-              = new PatchComputeTemplate.Sync(sdkConfiguration, _headers);
+              = new PatchComputeTemplate.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1503,8 +2153,23 @@ public class Compute {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchComputeVolumeResponse patchComputeVolume(@Nonnull PatchComputeVolumeRequest request) {
+        return patchComputeVolume(request, null);
+    }
+
+    /**
+     * Update a volume
+     * 
+     * <p>Updates the ComputeVolume identified by `id`. Provide the unified ComputeVolume fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchComputeVolumeResponse patchComputeVolume(@Nonnull PatchComputeVolumeRequest request, @Nullable Options options) {
         RequestOperation<PatchComputeVolumeRequest, PatchComputeVolumeResponse> operation
-              = new PatchComputeVolume.Sync(sdkConfiguration, _headers);
+              = new PatchComputeVolume.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1529,8 +2194,22 @@ public class Compute {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveComputeDeploymentResponse removeComputeDeployment(@Nonnull RemoveComputeDeploymentRequest request) {
+        return removeComputeDeployment(request, null);
+    }
+
+    /**
+     * Remove a deployment
+     * 
+     * <p>Deletes the ComputeDeployment identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveComputeDeploymentResponse removeComputeDeployment(@Nonnull RemoveComputeDeploymentRequest request, @Nullable Options options) {
         RequestOperation<RemoveComputeDeploymentRequest, RemoveComputeDeploymentResponse> operation
-              = new RemoveComputeDeployment.Sync(sdkConfiguration, _headers);
+              = new RemoveComputeDeployment.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1555,8 +2234,22 @@ public class Compute {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveComputeDomainResponse removeComputeDomain(@Nonnull RemoveComputeDomainRequest request) {
+        return removeComputeDomain(request, null);
+    }
+
+    /**
+     * Remove a domain
+     * 
+     * <p>Deletes the ComputeDomain identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveComputeDomainResponse removeComputeDomain(@Nonnull RemoveComputeDomainRequest request, @Nullable Options options) {
         RequestOperation<RemoveComputeDomainRequest, RemoveComputeDomainResponse> operation
-              = new RemoveComputeDomain.Sync(sdkConfiguration, _headers);
+              = new RemoveComputeDomain.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1581,8 +2274,22 @@ public class Compute {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveComputeEnvvarResponse removeComputeEnvvar(@Nonnull RemoveComputeEnvvarRequest request) {
+        return removeComputeEnvvar(request, null);
+    }
+
+    /**
+     * Remove an envvar
+     * 
+     * <p>Deletes the ComputeEnvvar identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveComputeEnvvarResponse removeComputeEnvvar(@Nonnull RemoveComputeEnvvarRequest request, @Nullable Options options) {
         RequestOperation<RemoveComputeEnvvarRequest, RemoveComputeEnvvarResponse> operation
-              = new RemoveComputeEnvvar.Sync(sdkConfiguration, _headers);
+              = new RemoveComputeEnvvar.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1607,8 +2314,22 @@ public class Compute {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveComputeInstanceResponse removeComputeInstance(@Nonnull RemoveComputeInstanceRequest request) {
+        return removeComputeInstance(request, null);
+    }
+
+    /**
+     * Remove an instance
+     * 
+     * <p>Deletes the ComputeInstance identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveComputeInstanceResponse removeComputeInstance(@Nonnull RemoveComputeInstanceRequest request, @Nullable Options options) {
         RequestOperation<RemoveComputeInstanceRequest, RemoveComputeInstanceResponse> operation
-              = new RemoveComputeInstance.Sync(sdkConfiguration, _headers);
+              = new RemoveComputeInstance.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1633,8 +2354,22 @@ public class Compute {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveComputeKeyResponse removeComputeKey(@Nonnull RemoveComputeKeyRequest request) {
+        return removeComputeKey(request, null);
+    }
+
+    /**
+     * Remove a key
+     * 
+     * <p>Deletes the ComputeKey identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveComputeKeyResponse removeComputeKey(@Nonnull RemoveComputeKeyRequest request, @Nullable Options options) {
         RequestOperation<RemoveComputeKeyRequest, RemoveComputeKeyResponse> operation
-              = new RemoveComputeKey.Sync(sdkConfiguration, _headers);
+              = new RemoveComputeKey.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1659,8 +2394,22 @@ public class Compute {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveComputeServiceResponse removeComputeService(@Nonnull RemoveComputeServiceRequest request) {
+        return removeComputeService(request, null);
+    }
+
+    /**
+     * Remove a service
+     * 
+     * <p>Deletes the ComputeService identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveComputeServiceResponse removeComputeService(@Nonnull RemoveComputeServiceRequest request, @Nullable Options options) {
         RequestOperation<RemoveComputeServiceRequest, RemoveComputeServiceResponse> operation
-              = new RemoveComputeService.Sync(sdkConfiguration, _headers);
+              = new RemoveComputeService.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1685,8 +2434,22 @@ public class Compute {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveComputeSnapshotResponse removeComputeSnapshot(@Nonnull RemoveComputeSnapshotRequest request) {
+        return removeComputeSnapshot(request, null);
+    }
+
+    /**
+     * Remove a snapshot
+     * 
+     * <p>Deletes the ComputeSnapshot identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveComputeSnapshotResponse removeComputeSnapshot(@Nonnull RemoveComputeSnapshotRequest request, @Nullable Options options) {
         RequestOperation<RemoveComputeSnapshotRequest, RemoveComputeSnapshotResponse> operation
-              = new RemoveComputeSnapshot.Sync(sdkConfiguration, _headers);
+              = new RemoveComputeSnapshot.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1711,8 +2474,22 @@ public class Compute {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveComputeTemplateResponse removeComputeTemplate(@Nonnull RemoveComputeTemplateRequest request) {
+        return removeComputeTemplate(request, null);
+    }
+
+    /**
+     * Remove a template
+     * 
+     * <p>Deletes the ComputeTemplate identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveComputeTemplateResponse removeComputeTemplate(@Nonnull RemoveComputeTemplateRequest request, @Nullable Options options) {
         RequestOperation<RemoveComputeTemplateRequest, RemoveComputeTemplateResponse> operation
-              = new RemoveComputeTemplate.Sync(sdkConfiguration, _headers);
+              = new RemoveComputeTemplate.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1737,8 +2514,22 @@ public class Compute {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveComputeVolumeResponse removeComputeVolume(@Nonnull RemoveComputeVolumeRequest request) {
+        return removeComputeVolume(request, null);
+    }
+
+    /**
+     * Remove a volume
+     * 
+     * <p>Deletes the ComputeVolume identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveComputeVolumeResponse removeComputeVolume(@Nonnull RemoveComputeVolumeRequest request, @Nullable Options options) {
         RequestOperation<RemoveComputeVolumeRequest, RemoveComputeVolumeResponse> operation
-              = new RemoveComputeVolume.Sync(sdkConfiguration, _headers);
+              = new RemoveComputeVolume.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1765,8 +2556,23 @@ public class Compute {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateComputeDeploymentResponse updateComputeDeployment(@Nonnull UpdateComputeDeploymentRequest request) {
+        return updateComputeDeployment(request, null);
+    }
+
+    /**
+     * Update a deployment
+     * 
+     * <p>Updates the ComputeDeployment identified by `id`. Provide the unified ComputeDeployment fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateComputeDeploymentResponse updateComputeDeployment(@Nonnull UpdateComputeDeploymentRequest request, @Nullable Options options) {
         RequestOperation<UpdateComputeDeploymentRequest, UpdateComputeDeploymentResponse> operation
-              = new UpdateComputeDeployment.Sync(sdkConfiguration, _headers);
+              = new UpdateComputeDeployment.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1793,8 +2599,23 @@ public class Compute {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateComputeDomainResponse updateComputeDomain(@Nonnull UpdateComputeDomainRequest request) {
+        return updateComputeDomain(request, null);
+    }
+
+    /**
+     * Update a domain
+     * 
+     * <p>Updates the ComputeDomain identified by `id`. Provide the unified ComputeDomain fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateComputeDomainResponse updateComputeDomain(@Nonnull UpdateComputeDomainRequest request, @Nullable Options options) {
         RequestOperation<UpdateComputeDomainRequest, UpdateComputeDomainResponse> operation
-              = new UpdateComputeDomain.Sync(sdkConfiguration, _headers);
+              = new UpdateComputeDomain.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1821,8 +2642,23 @@ public class Compute {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateComputeEnvvarResponse updateComputeEnvvar(@Nonnull UpdateComputeEnvvarRequest request) {
+        return updateComputeEnvvar(request, null);
+    }
+
+    /**
+     * Update an envvar
+     * 
+     * <p>Updates the ComputeEnvvar identified by `id`. Provide the unified ComputeEnvvar fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateComputeEnvvarResponse updateComputeEnvvar(@Nonnull UpdateComputeEnvvarRequest request, @Nullable Options options) {
         RequestOperation<UpdateComputeEnvvarRequest, UpdateComputeEnvvarResponse> operation
-              = new UpdateComputeEnvvar.Sync(sdkConfiguration, _headers);
+              = new UpdateComputeEnvvar.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1849,8 +2685,23 @@ public class Compute {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateComputeInstanceResponse updateComputeInstance(@Nonnull UpdateComputeInstanceRequest request) {
+        return updateComputeInstance(request, null);
+    }
+
+    /**
+     * Update an instance
+     * 
+     * <p>Updates the ComputeInstance identified by `id`. Provide the unified ComputeInstance fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateComputeInstanceResponse updateComputeInstance(@Nonnull UpdateComputeInstanceRequest request, @Nullable Options options) {
         RequestOperation<UpdateComputeInstanceRequest, UpdateComputeInstanceResponse> operation
-              = new UpdateComputeInstance.Sync(sdkConfiguration, _headers);
+              = new UpdateComputeInstance.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1877,8 +2728,23 @@ public class Compute {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateComputeKeyResponse updateComputeKey(@Nonnull UpdateComputeKeyRequest request) {
+        return updateComputeKey(request, null);
+    }
+
+    /**
+     * Update a key
+     * 
+     * <p>Updates the ComputeKey identified by `id`. Provide the unified ComputeKey fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateComputeKeyResponse updateComputeKey(@Nonnull UpdateComputeKeyRequest request, @Nullable Options options) {
         RequestOperation<UpdateComputeKeyRequest, UpdateComputeKeyResponse> operation
-              = new UpdateComputeKey.Sync(sdkConfiguration, _headers);
+              = new UpdateComputeKey.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1905,8 +2771,23 @@ public class Compute {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateComputeServiceResponse updateComputeService(@Nonnull UpdateComputeServiceRequest request) {
+        return updateComputeService(request, null);
+    }
+
+    /**
+     * Update a service
+     * 
+     * <p>Updates the ComputeService identified by `id`. Provide the unified ComputeService fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateComputeServiceResponse updateComputeService(@Nonnull UpdateComputeServiceRequest request, @Nullable Options options) {
         RequestOperation<UpdateComputeServiceRequest, UpdateComputeServiceResponse> operation
-              = new UpdateComputeService.Sync(sdkConfiguration, _headers);
+              = new UpdateComputeService.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1933,8 +2814,23 @@ public class Compute {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateComputeSnapshotResponse updateComputeSnapshot(@Nonnull UpdateComputeSnapshotRequest request) {
+        return updateComputeSnapshot(request, null);
+    }
+
+    /**
+     * Update a snapshot
+     * 
+     * <p>Updates the ComputeSnapshot identified by `id`. Provide the unified ComputeSnapshot fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateComputeSnapshotResponse updateComputeSnapshot(@Nonnull UpdateComputeSnapshotRequest request, @Nullable Options options) {
         RequestOperation<UpdateComputeSnapshotRequest, UpdateComputeSnapshotResponse> operation
-              = new UpdateComputeSnapshot.Sync(sdkConfiguration, _headers);
+              = new UpdateComputeSnapshot.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1961,8 +2857,23 @@ public class Compute {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateComputeTemplateResponse updateComputeTemplate(@Nonnull UpdateComputeTemplateRequest request) {
+        return updateComputeTemplate(request, null);
+    }
+
+    /**
+     * Update a template
+     * 
+     * <p>Updates the ComputeTemplate identified by `id`. Provide the unified ComputeTemplate fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateComputeTemplateResponse updateComputeTemplate(@Nonnull UpdateComputeTemplateRequest request, @Nullable Options options) {
         RequestOperation<UpdateComputeTemplateRequest, UpdateComputeTemplateResponse> operation
-              = new UpdateComputeTemplate.Sync(sdkConfiguration, _headers);
+              = new UpdateComputeTemplate.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1989,8 +2900,23 @@ public class Compute {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateComputeVolumeResponse updateComputeVolume(@Nonnull UpdateComputeVolumeRequest request) {
+        return updateComputeVolume(request, null);
+    }
+
+    /**
+     * Update a volume
+     * 
+     * <p>Updates the ComputeVolume identified by `id`. Provide the unified ComputeVolume fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateComputeVolumeResponse updateComputeVolume(@Nonnull UpdateComputeVolumeRequest request, @Nullable Options options) {
         RequestOperation<UpdateComputeVolumeRequest, UpdateComputeVolumeResponse> operation
-              = new UpdateComputeVolume.Sync(sdkConfiguration, _headers);
+              = new UpdateComputeVolume.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

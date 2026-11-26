@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateAtsDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAtsDocumentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateAtsDocumentResponse;
@@ -111,6 +112,7 @@ import to.unified.unified_java_sdk.operations.UpdateHrisDocument;
 import to.unified.unified_java_sdk.operations.UpdatePlmDocument;
 import to.unified.unified_java_sdk.operations.UpdateSigningDocument;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Document {
@@ -155,8 +157,23 @@ public class Document {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateAtsDocumentResponse createAtsDocument(@Nonnull CreateAtsDocumentRequest request) {
+        return createAtsDocument(request, null);
+    }
+
+    /**
+     * Create a document
+     * 
+     * <p>Creates a AtsDocument. Provide the unified AtsDocument fields in the request body; they are mapped
+     * to the provider's API. Returns the created AtsDocument.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateAtsDocumentResponse createAtsDocument(@Nonnull CreateAtsDocumentRequest request, @Nullable Options options) {
         RequestOperation<CreateAtsDocumentRequest, CreateAtsDocumentResponse> operation
-              = new CreateAtsDocument.Sync(sdkConfiguration, _headers);
+              = new CreateAtsDocument.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -183,8 +200,23 @@ public class Document {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateHealthcareDocumentResponse createHealthcareDocument(@Nonnull CreateHealthcareDocumentRequest request) {
+        return createHealthcareDocument(request, null);
+    }
+
+    /**
+     * Create a document
+     * 
+     * <p>Creates a HealthcareDocument. Provide the unified HealthcareDocument fields in the request body;
+     * they are mapped to the provider's API. Returns the created HealthcareDocument.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateHealthcareDocumentResponse createHealthcareDocument(@Nonnull CreateHealthcareDocumentRequest request, @Nullable Options options) {
         RequestOperation<CreateHealthcareDocumentRequest, CreateHealthcareDocumentResponse> operation
-              = new CreateHealthcareDocument.Sync(sdkConfiguration, _headers);
+              = new CreateHealthcareDocument.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -211,8 +243,23 @@ public class Document {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateHrisDocumentResponse createHrisDocument(@Nonnull CreateHrisDocumentRequest request) {
+        return createHrisDocument(request, null);
+    }
+
+    /**
+     * Create a document
+     * 
+     * <p>Creates a HrisDocument. Provide the unified HrisDocument fields in the request body; they are mapped
+     * to the provider's API. Returns the created HrisDocument.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateHrisDocumentResponse createHrisDocument(@Nonnull CreateHrisDocumentRequest request, @Nullable Options options) {
         RequestOperation<CreateHrisDocumentRequest, CreateHrisDocumentResponse> operation
-              = new CreateHrisDocument.Sync(sdkConfiguration, _headers);
+              = new CreateHrisDocument.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -239,8 +286,23 @@ public class Document {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreatePlmDocumentResponse createPlmDocument(@Nonnull CreatePlmDocumentRequest request) {
+        return createPlmDocument(request, null);
+    }
+
+    /**
+     * Create a document
+     * 
+     * <p>Creates a PlmDocument. Provide the unified PlmDocument fields in the request body; they are mapped
+     * to the provider's API. Returns the created PlmDocument.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreatePlmDocumentResponse createPlmDocument(@Nonnull CreatePlmDocumentRequest request, @Nullable Options options) {
         RequestOperation<CreatePlmDocumentRequest, CreatePlmDocumentResponse> operation
-              = new CreatePlmDocument.Sync(sdkConfiguration, _headers);
+              = new CreatePlmDocument.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -267,8 +329,23 @@ public class Document {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateSigningDocumentResponse createSigningDocument(@Nonnull CreateSigningDocumentRequest request) {
+        return createSigningDocument(request, null);
+    }
+
+    /**
+     * Create a document
+     * 
+     * <p>Creates a SigningDocument. Provide the unified SigningDocument fields in the request body; they are
+     * mapped to the provider's API. Returns the created SigningDocument.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateSigningDocumentResponse createSigningDocument(@Nonnull CreateSigningDocumentRequest request, @Nullable Options options) {
         RequestOperation<CreateSigningDocumentRequest, CreateSigningDocumentResponse> operation
-              = new CreateSigningDocument.Sync(sdkConfiguration, _headers);
+              = new CreateSigningDocument.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -295,8 +372,23 @@ public class Document {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAtsDocumentResponse getAtsDocument(@Nonnull GetAtsDocumentRequest request) {
+        return getAtsDocument(request, null);
+    }
+
+    /**
+     * Retrieve a document
+     * 
+     * <p>Retrieves a single AtsDocument by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAtsDocumentResponse getAtsDocument(@Nonnull GetAtsDocumentRequest request, @Nullable Options options) {
         RequestOperation<GetAtsDocumentRequest, GetAtsDocumentResponse> operation
-              = new GetAtsDocument.Sync(sdkConfiguration, _headers);
+              = new GetAtsDocument.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -323,8 +415,23 @@ public class Document {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetHealthcareDocumentResponse getHealthcareDocument(@Nonnull GetHealthcareDocumentRequest request) {
+        return getHealthcareDocument(request, null);
+    }
+
+    /**
+     * Retrieve a document
+     * 
+     * <p>Retrieves a single HealthcareDocument by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetHealthcareDocumentResponse getHealthcareDocument(@Nonnull GetHealthcareDocumentRequest request, @Nullable Options options) {
         RequestOperation<GetHealthcareDocumentRequest, GetHealthcareDocumentResponse> operation
-              = new GetHealthcareDocument.Sync(sdkConfiguration, _headers);
+              = new GetHealthcareDocument.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -351,8 +458,23 @@ public class Document {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetHrisDocumentResponse getHrisDocument(@Nonnull GetHrisDocumentRequest request) {
+        return getHrisDocument(request, null);
+    }
+
+    /**
+     * Retrieve a document
+     * 
+     * <p>Retrieves a single HrisDocument by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetHrisDocumentResponse getHrisDocument(@Nonnull GetHrisDocumentRequest request, @Nullable Options options) {
         RequestOperation<GetHrisDocumentRequest, GetHrisDocumentResponse> operation
-              = new GetHrisDocument.Sync(sdkConfiguration, _headers);
+              = new GetHrisDocument.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -379,8 +501,23 @@ public class Document {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetPlmDocumentResponse getPlmDocument(@Nonnull GetPlmDocumentRequest request) {
+        return getPlmDocument(request, null);
+    }
+
+    /**
+     * Retrieve a document
+     * 
+     * <p>Retrieves a single PlmDocument by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetPlmDocumentResponse getPlmDocument(@Nonnull GetPlmDocumentRequest request, @Nullable Options options) {
         RequestOperation<GetPlmDocumentRequest, GetPlmDocumentResponse> operation
-              = new GetPlmDocument.Sync(sdkConfiguration, _headers);
+              = new GetPlmDocument.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -407,8 +544,23 @@ public class Document {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetSigningDocumentResponse getSigningDocument(@Nonnull GetSigningDocumentRequest request) {
+        return getSigningDocument(request, null);
+    }
+
+    /**
+     * Retrieve a document
+     * 
+     * <p>Retrieves a single SigningDocument by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetSigningDocumentResponse getSigningDocument(@Nonnull GetSigningDocumentRequest request, @Nullable Options options) {
         RequestOperation<GetSigningDocumentRequest, GetSigningDocumentResponse> operation
-              = new GetSigningDocument.Sync(sdkConfiguration, _headers);
+              = new GetSigningDocument.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -443,8 +595,27 @@ public class Document {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAtsDocumentsResponse listAtsDocuments(@Nonnull ListAtsDocumentsRequest request) {
+        return listAtsDocuments(request, null);
+    }
+
+    /**
+     * List all documents
+     * 
+     * <p>Returns a list of AtsDocuments. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAtsDocumentsResponse listAtsDocuments(@Nonnull ListAtsDocumentsRequest request, @Nullable Options options) {
         RequestOperation<ListAtsDocumentsRequest, ListAtsDocumentsResponse> operation
-              = new ListAtsDocuments.Sync(sdkConfiguration, _headers);
+              = new ListAtsDocuments.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -479,8 +650,27 @@ public class Document {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListHealthcareDocumentsResponse listHealthcareDocuments(@Nonnull ListHealthcareDocumentsRequest request) {
+        return listHealthcareDocuments(request, null);
+    }
+
+    /**
+     * List all documents
+     * 
+     * <p>Returns a list of HealthcareDocuments. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListHealthcareDocumentsResponse listHealthcareDocuments(@Nonnull ListHealthcareDocumentsRequest request, @Nullable Options options) {
         RequestOperation<ListHealthcareDocumentsRequest, ListHealthcareDocumentsResponse> operation
-              = new ListHealthcareDocuments.Sync(sdkConfiguration, _headers);
+              = new ListHealthcareDocuments.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -515,8 +705,27 @@ public class Document {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListHrisDocumentsResponse listHrisDocuments(@Nonnull ListHrisDocumentsRequest request) {
+        return listHrisDocuments(request, null);
+    }
+
+    /**
+     * List all documents
+     * 
+     * <p>Returns a list of HrisDocuments. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListHrisDocumentsResponse listHrisDocuments(@Nonnull ListHrisDocumentsRequest request, @Nullable Options options) {
         RequestOperation<ListHrisDocumentsRequest, ListHrisDocumentsResponse> operation
-              = new ListHrisDocuments.Sync(sdkConfiguration, _headers);
+              = new ListHrisDocuments.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -551,8 +760,27 @@ public class Document {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListPlmDocumentsResponse listPlmDocuments(@Nonnull ListPlmDocumentsRequest request) {
+        return listPlmDocuments(request, null);
+    }
+
+    /**
+     * List all documents
+     * 
+     * <p>Returns a list of PlmDocuments. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListPlmDocumentsResponse listPlmDocuments(@Nonnull ListPlmDocumentsRequest request, @Nullable Options options) {
         RequestOperation<ListPlmDocumentsRequest, ListPlmDocumentsResponse> operation
-              = new ListPlmDocuments.Sync(sdkConfiguration, _headers);
+              = new ListPlmDocuments.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -587,8 +815,27 @@ public class Document {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListSigningDocumentsResponse listSigningDocuments(@Nonnull ListSigningDocumentsRequest request) {
+        return listSigningDocuments(request, null);
+    }
+
+    /**
+     * List all documents
+     * 
+     * <p>Returns a list of SigningDocuments. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListSigningDocumentsResponse listSigningDocuments(@Nonnull ListSigningDocumentsRequest request, @Nullable Options options) {
         RequestOperation<ListSigningDocumentsRequest, ListSigningDocumentsResponse> operation
-              = new ListSigningDocuments.Sync(sdkConfiguration, _headers);
+              = new ListSigningDocuments.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -615,8 +862,23 @@ public class Document {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchAtsDocumentResponse patchAtsDocument(@Nonnull PatchAtsDocumentRequest request) {
+        return patchAtsDocument(request, null);
+    }
+
+    /**
+     * Update a document
+     * 
+     * <p>Updates the AtsDocument identified by `id`. Provide the unified AtsDocument fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchAtsDocumentResponse patchAtsDocument(@Nonnull PatchAtsDocumentRequest request, @Nullable Options options) {
         RequestOperation<PatchAtsDocumentRequest, PatchAtsDocumentResponse> operation
-              = new PatchAtsDocument.Sync(sdkConfiguration, _headers);
+              = new PatchAtsDocument.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -643,8 +905,23 @@ public class Document {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchHrisDocumentResponse patchHrisDocument(@Nonnull PatchHrisDocumentRequest request) {
+        return patchHrisDocument(request, null);
+    }
+
+    /**
+     * Update a document
+     * 
+     * <p>Updates the HrisDocument identified by `id`. Provide the unified HrisDocument fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchHrisDocumentResponse patchHrisDocument(@Nonnull PatchHrisDocumentRequest request, @Nullable Options options) {
         RequestOperation<PatchHrisDocumentRequest, PatchHrisDocumentResponse> operation
-              = new PatchHrisDocument.Sync(sdkConfiguration, _headers);
+              = new PatchHrisDocument.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -671,8 +948,23 @@ public class Document {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchPlmDocumentResponse patchPlmDocument(@Nonnull PatchPlmDocumentRequest request) {
+        return patchPlmDocument(request, null);
+    }
+
+    /**
+     * Update a document
+     * 
+     * <p>Updates the PlmDocument identified by `id`. Provide the unified PlmDocument fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchPlmDocumentResponse patchPlmDocument(@Nonnull PatchPlmDocumentRequest request, @Nullable Options options) {
         RequestOperation<PatchPlmDocumentRequest, PatchPlmDocumentResponse> operation
-              = new PatchPlmDocument.Sync(sdkConfiguration, _headers);
+              = new PatchPlmDocument.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -699,8 +991,23 @@ public class Document {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchSigningDocumentResponse patchSigningDocument(@Nonnull PatchSigningDocumentRequest request) {
+        return patchSigningDocument(request, null);
+    }
+
+    /**
+     * Update a document
+     * 
+     * <p>Updates the SigningDocument identified by `id`. Provide the unified SigningDocument fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchSigningDocumentResponse patchSigningDocument(@Nonnull PatchSigningDocumentRequest request, @Nullable Options options) {
         RequestOperation<PatchSigningDocumentRequest, PatchSigningDocumentResponse> operation
-              = new PatchSigningDocument.Sync(sdkConfiguration, _headers);
+              = new PatchSigningDocument.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -725,8 +1032,22 @@ public class Document {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveAtsDocumentResponse removeAtsDocument(@Nonnull RemoveAtsDocumentRequest request) {
+        return removeAtsDocument(request, null);
+    }
+
+    /**
+     * Remove a document
+     * 
+     * <p>Deletes the AtsDocument identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveAtsDocumentResponse removeAtsDocument(@Nonnull RemoveAtsDocumentRequest request, @Nullable Options options) {
         RequestOperation<RemoveAtsDocumentRequest, RemoveAtsDocumentResponse> operation
-              = new RemoveAtsDocument.Sync(sdkConfiguration, _headers);
+              = new RemoveAtsDocument.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -751,8 +1072,22 @@ public class Document {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveHrisDocumentResponse removeHrisDocument(@Nonnull RemoveHrisDocumentRequest request) {
+        return removeHrisDocument(request, null);
+    }
+
+    /**
+     * Remove a document
+     * 
+     * <p>Deletes the HrisDocument identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveHrisDocumentResponse removeHrisDocument(@Nonnull RemoveHrisDocumentRequest request, @Nullable Options options) {
         RequestOperation<RemoveHrisDocumentRequest, RemoveHrisDocumentResponse> operation
-              = new RemoveHrisDocument.Sync(sdkConfiguration, _headers);
+              = new RemoveHrisDocument.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -777,8 +1112,22 @@ public class Document {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveSigningDocumentResponse removeSigningDocument(@Nonnull RemoveSigningDocumentRequest request) {
+        return removeSigningDocument(request, null);
+    }
+
+    /**
+     * Remove a document
+     * 
+     * <p>Deletes the SigningDocument identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveSigningDocumentResponse removeSigningDocument(@Nonnull RemoveSigningDocumentRequest request, @Nullable Options options) {
         RequestOperation<RemoveSigningDocumentRequest, RemoveSigningDocumentResponse> operation
-              = new RemoveSigningDocument.Sync(sdkConfiguration, _headers);
+              = new RemoveSigningDocument.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -805,8 +1154,23 @@ public class Document {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateAtsDocumentResponse updateAtsDocument(@Nonnull UpdateAtsDocumentRequest request) {
+        return updateAtsDocument(request, null);
+    }
+
+    /**
+     * Update a document
+     * 
+     * <p>Updates the AtsDocument identified by `id`. Provide the unified AtsDocument fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateAtsDocumentResponse updateAtsDocument(@Nonnull UpdateAtsDocumentRequest request, @Nullable Options options) {
         RequestOperation<UpdateAtsDocumentRequest, UpdateAtsDocumentResponse> operation
-              = new UpdateAtsDocument.Sync(sdkConfiguration, _headers);
+              = new UpdateAtsDocument.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -833,8 +1197,23 @@ public class Document {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateHrisDocumentResponse updateHrisDocument(@Nonnull UpdateHrisDocumentRequest request) {
+        return updateHrisDocument(request, null);
+    }
+
+    /**
+     * Update a document
+     * 
+     * <p>Updates the HrisDocument identified by `id`. Provide the unified HrisDocument fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateHrisDocumentResponse updateHrisDocument(@Nonnull UpdateHrisDocumentRequest request, @Nullable Options options) {
         RequestOperation<UpdateHrisDocumentRequest, UpdateHrisDocumentResponse> operation
-              = new UpdateHrisDocument.Sync(sdkConfiguration, _headers);
+              = new UpdateHrisDocument.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -861,8 +1240,23 @@ public class Document {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdatePlmDocumentResponse updatePlmDocument(@Nonnull UpdatePlmDocumentRequest request) {
+        return updatePlmDocument(request, null);
+    }
+
+    /**
+     * Update a document
+     * 
+     * <p>Updates the PlmDocument identified by `id`. Provide the unified PlmDocument fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdatePlmDocumentResponse updatePlmDocument(@Nonnull UpdatePlmDocumentRequest request, @Nullable Options options) {
         RequestOperation<UpdatePlmDocumentRequest, UpdatePlmDocumentResponse> operation
-              = new UpdatePlmDocument.Sync(sdkConfiguration, _headers);
+              = new UpdatePlmDocument.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -889,8 +1283,23 @@ public class Document {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateSigningDocumentResponse updateSigningDocument(@Nonnull UpdateSigningDocumentRequest request) {
+        return updateSigningDocument(request, null);
+    }
+
+    /**
+     * Update a document
+     * 
+     * <p>Updates the SigningDocument identified by `id`. Provide the unified SigningDocument fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateSigningDocumentResponse updateSigningDocument(@Nonnull UpdateSigningDocumentRequest request, @Nullable Options options) {
         RequestOperation<UpdateSigningDocumentRequest, UpdateSigningDocumentResponse> operation
-              = new UpdateSigningDocument.Sync(sdkConfiguration, _headers);
+              = new UpdateSigningDocument.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

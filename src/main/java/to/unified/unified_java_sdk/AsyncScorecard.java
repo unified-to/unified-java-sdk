@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateAtsScorecardRequest;
 import to.unified.unified_java_sdk.models.operations.GetAtsScorecardRequest;
@@ -40,6 +41,7 @@ import to.unified.unified_java_sdk.operations.PatchAtsScorecard;
 import to.unified.unified_java_sdk.operations.RemoveAtsScorecard;
 import to.unified.unified_java_sdk.operations.UpdateAtsScorecard;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncScorecard {
@@ -84,8 +86,22 @@ public class AsyncScorecard {
      * @return {@code CompletableFuture<CreateAtsScorecardResponse>} - The async response
      */
     public CompletableFuture<CreateAtsScorecardResponse> createAtsScorecard(@Nonnull CreateAtsScorecardRequest request) {
+        return createAtsScorecard(request, null);
+    }
+
+    /**
+     * Create a scorecard
+     * 
+     * <p>Creates a AtsScorecard. Provide the unified AtsScorecard fields in the request body; they are mapped
+     * to the provider's API. Returns the created AtsScorecard.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateAtsScorecardResponse>} - The async response
+     */
+    public CompletableFuture<CreateAtsScorecardResponse> createAtsScorecard(@Nonnull CreateAtsScorecardRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateAtsScorecardRequest, CreateAtsScorecardResponse> operation
-              = new CreateAtsScorecard.Async(sdkConfiguration, _headers);
+              = new CreateAtsScorecard.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -113,8 +129,22 @@ public class AsyncScorecard {
      * @return {@code CompletableFuture<GetAtsScorecardResponse>} - The async response
      */
     public CompletableFuture<GetAtsScorecardResponse> getAtsScorecard(@Nonnull GetAtsScorecardRequest request) {
+        return getAtsScorecard(request, null);
+    }
+
+    /**
+     * Retrieve a scorecard
+     * 
+     * <p>Retrieves a single AtsScorecard by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetAtsScorecardResponse>} - The async response
+     */
+    public CompletableFuture<GetAtsScorecardResponse> getAtsScorecard(@Nonnull GetAtsScorecardRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetAtsScorecardRequest, GetAtsScorecardResponse> operation
-              = new GetAtsScorecard.Async(sdkConfiguration, _headers);
+              = new GetAtsScorecard.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -142,8 +172,22 @@ public class AsyncScorecard {
      * @return {@code CompletableFuture<GetUcScorecardResponse>} - The async response
      */
     public CompletableFuture<GetUcScorecardResponse> getUcScorecard(@Nonnull GetUcScorecardRequest request) {
+        return getUcScorecard(request, null);
+    }
+
+    /**
+     * Retrieve a scorecard
+     * 
+     * <p>Retrieves a single UcScorecard by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetUcScorecardResponse>} - The async response
+     */
+    public CompletableFuture<GetUcScorecardResponse> getUcScorecard(@Nonnull GetUcScorecardRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetUcScorecardRequest, GetUcScorecardResponse> operation
-              = new GetUcScorecard.Async(sdkConfiguration, _headers);
+              = new GetUcScorecard.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -179,8 +223,26 @@ public class AsyncScorecard {
      * @return {@code CompletableFuture<ListAtsScorecardsResponse>} - The async response
      */
     public CompletableFuture<ListAtsScorecardsResponse> listAtsScorecards(@Nonnull ListAtsScorecardsRequest request) {
+        return listAtsScorecards(request, null);
+    }
+
+    /**
+     * List all scorecards
+     * 
+     * <p>Returns a list of AtsScorecards. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListAtsScorecardsResponse>} - The async response
+     */
+    public CompletableFuture<ListAtsScorecardsResponse> listAtsScorecards(@Nonnull ListAtsScorecardsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListAtsScorecardsRequest, ListAtsScorecardsResponse> operation
-              = new ListAtsScorecards.Async(sdkConfiguration, _headers);
+              = new ListAtsScorecards.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -216,8 +278,26 @@ public class AsyncScorecard {
      * @return {@code CompletableFuture<ListUcScorecardsResponse>} - The async response
      */
     public CompletableFuture<ListUcScorecardsResponse> listUcScorecards(@Nonnull ListUcScorecardsRequest request) {
+        return listUcScorecards(request, null);
+    }
+
+    /**
+     * List all scorecards
+     * 
+     * <p>Returns a list of UcScorecards. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListUcScorecardsResponse>} - The async response
+     */
+    public CompletableFuture<ListUcScorecardsResponse> listUcScorecards(@Nonnull ListUcScorecardsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListUcScorecardsRequest, ListUcScorecardsResponse> operation
-              = new ListUcScorecards.Async(sdkConfiguration, _headers);
+              = new ListUcScorecards.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -245,8 +325,22 @@ public class AsyncScorecard {
      * @return {@code CompletableFuture<PatchAtsScorecardResponse>} - The async response
      */
     public CompletableFuture<PatchAtsScorecardResponse> patchAtsScorecard(@Nonnull PatchAtsScorecardRequest request) {
+        return patchAtsScorecard(request, null);
+    }
+
+    /**
+     * Update a scorecard
+     * 
+     * <p>Updates the AtsScorecard identified by `id`. Provide the unified AtsScorecard fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchAtsScorecardResponse>} - The async response
+     */
+    public CompletableFuture<PatchAtsScorecardResponse> patchAtsScorecard(@Nonnull PatchAtsScorecardRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchAtsScorecardRequest, PatchAtsScorecardResponse> operation
-              = new PatchAtsScorecard.Async(sdkConfiguration, _headers);
+              = new PatchAtsScorecard.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -272,8 +366,21 @@ public class AsyncScorecard {
      * @return {@code CompletableFuture<RemoveAtsScorecardResponse>} - The async response
      */
     public CompletableFuture<RemoveAtsScorecardResponse> removeAtsScorecard(@Nonnull RemoveAtsScorecardRequest request) {
+        return removeAtsScorecard(request, null);
+    }
+
+    /**
+     * Remove a scorecard
+     * 
+     * <p>Deletes the AtsScorecard identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveAtsScorecardResponse>} - The async response
+     */
+    public CompletableFuture<RemoveAtsScorecardResponse> removeAtsScorecard(@Nonnull RemoveAtsScorecardRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveAtsScorecardRequest, RemoveAtsScorecardResponse> operation
-              = new RemoveAtsScorecard.Async(sdkConfiguration, _headers);
+              = new RemoveAtsScorecard.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -301,8 +408,22 @@ public class AsyncScorecard {
      * @return {@code CompletableFuture<UpdateAtsScorecardResponse>} - The async response
      */
     public CompletableFuture<UpdateAtsScorecardResponse> updateAtsScorecard(@Nonnull UpdateAtsScorecardRequest request) {
+        return updateAtsScorecard(request, null);
+    }
+
+    /**
+     * Update a scorecard
+     * 
+     * <p>Updates the AtsScorecard identified by `id`. Provide the unified AtsScorecard fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateAtsScorecardResponse>} - The async response
+     */
+    public CompletableFuture<UpdateAtsScorecardResponse> updateAtsScorecard(@Nonnull UpdateAtsScorecardRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateAtsScorecardRequest, UpdateAtsScorecardResponse> operation
-              = new UpdateAtsScorecard.Async(sdkConfiguration, _headers);
+              = new UpdateAtsScorecard.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

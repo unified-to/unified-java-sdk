@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateDatastoreDatabaseRequest;
 import to.unified.unified_java_sdk.models.operations.CreateDatastoreDatabaseRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateDatastoreDatabaseResponse;
@@ -31,6 +32,7 @@ import to.unified.unified_java_sdk.operations.PatchDatastoreDatabase;
 import to.unified.unified_java_sdk.operations.RemoveDatastoreDatabase;
 import to.unified.unified_java_sdk.operations.UpdateDatastoreDatabase;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Database {
@@ -75,8 +77,23 @@ public class Database {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateDatastoreDatabaseResponse createDatastoreDatabase(@Nonnull CreateDatastoreDatabaseRequest request) {
+        return createDatastoreDatabase(request, null);
+    }
+
+    /**
+     * Create a database
+     * 
+     * <p>Creates a DatastoreDatabase. Provide the unified DatastoreDatabase fields in the request body; they
+     * are mapped to the provider's API. Returns the created DatastoreDatabase.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateDatastoreDatabaseResponse createDatastoreDatabase(@Nonnull CreateDatastoreDatabaseRequest request, @Nullable Options options) {
         RequestOperation<CreateDatastoreDatabaseRequest, CreateDatastoreDatabaseResponse> operation
-              = new CreateDatastoreDatabase.Sync(sdkConfiguration, _headers);
+              = new CreateDatastoreDatabase.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -103,8 +120,23 @@ public class Database {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetDatastoreDatabaseResponse getDatastoreDatabase(@Nonnull GetDatastoreDatabaseRequest request) {
+        return getDatastoreDatabase(request, null);
+    }
+
+    /**
+     * Retrieve a database
+     * 
+     * <p>Retrieves a single DatastoreDatabase by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetDatastoreDatabaseResponse getDatastoreDatabase(@Nonnull GetDatastoreDatabaseRequest request, @Nullable Options options) {
         RequestOperation<GetDatastoreDatabaseRequest, GetDatastoreDatabaseResponse> operation
-              = new GetDatastoreDatabase.Sync(sdkConfiguration, _headers);
+              = new GetDatastoreDatabase.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -139,8 +171,27 @@ public class Database {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListDatastoreDatabasesResponse listDatastoreDatabases(@Nonnull ListDatastoreDatabasesRequest request) {
+        return listDatastoreDatabases(request, null);
+    }
+
+    /**
+     * List all databases
+     * 
+     * <p>Returns a list of DatastoreDatabases. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListDatastoreDatabasesResponse listDatastoreDatabases(@Nonnull ListDatastoreDatabasesRequest request, @Nullable Options options) {
         RequestOperation<ListDatastoreDatabasesRequest, ListDatastoreDatabasesResponse> operation
-              = new ListDatastoreDatabases.Sync(sdkConfiguration, _headers);
+              = new ListDatastoreDatabases.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +218,23 @@ public class Database {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchDatastoreDatabaseResponse patchDatastoreDatabase(@Nonnull PatchDatastoreDatabaseRequest request) {
+        return patchDatastoreDatabase(request, null);
+    }
+
+    /**
+     * Update a database
+     * 
+     * <p>Updates the DatastoreDatabase identified by `id`. Provide the unified DatastoreDatabase fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchDatastoreDatabaseResponse patchDatastoreDatabase(@Nonnull PatchDatastoreDatabaseRequest request, @Nullable Options options) {
         RequestOperation<PatchDatastoreDatabaseRequest, PatchDatastoreDatabaseResponse> operation
-              = new PatchDatastoreDatabase.Sync(sdkConfiguration, _headers);
+              = new PatchDatastoreDatabase.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -193,8 +259,22 @@ public class Database {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveDatastoreDatabaseResponse removeDatastoreDatabase(@Nonnull RemoveDatastoreDatabaseRequest request) {
+        return removeDatastoreDatabase(request, null);
+    }
+
+    /**
+     * Remove a database
+     * 
+     * <p>Deletes the DatastoreDatabase identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveDatastoreDatabaseResponse removeDatastoreDatabase(@Nonnull RemoveDatastoreDatabaseRequest request, @Nullable Options options) {
         RequestOperation<RemoveDatastoreDatabaseRequest, RemoveDatastoreDatabaseResponse> operation
-              = new RemoveDatastoreDatabase.Sync(sdkConfiguration, _headers);
+              = new RemoveDatastoreDatabase.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -221,8 +301,23 @@ public class Database {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateDatastoreDatabaseResponse updateDatastoreDatabase(@Nonnull UpdateDatastoreDatabaseRequest request) {
+        return updateDatastoreDatabase(request, null);
+    }
+
+    /**
+     * Update a database
+     * 
+     * <p>Updates the DatastoreDatabase identified by `id`. Provide the unified DatastoreDatabase fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateDatastoreDatabaseResponse updateDatastoreDatabase(@Nonnull UpdateDatastoreDatabaseRequest request, @Nullable Options options) {
         RequestOperation<UpdateDatastoreDatabaseRequest, UpdateDatastoreDatabaseResponse> operation
-              = new UpdateDatastoreDatabase.Sync(sdkConfiguration, _headers);
+              = new UpdateDatastoreDatabase.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

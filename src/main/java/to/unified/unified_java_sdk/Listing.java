@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreatePropertyListingRequest;
 import to.unified.unified_java_sdk.models.operations.CreatePropertyListingRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreatePropertyListingResponse;
@@ -31,6 +32,7 @@ import to.unified.unified_java_sdk.operations.PatchPropertyListing;
 import to.unified.unified_java_sdk.operations.RemovePropertyListing;
 import to.unified.unified_java_sdk.operations.UpdatePropertyListing;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Listing {
@@ -75,8 +77,23 @@ public class Listing {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreatePropertyListingResponse createPropertyListing(@Nonnull CreatePropertyListingRequest request) {
+        return createPropertyListing(request, null);
+    }
+
+    /**
+     * Create a listing
+     * 
+     * <p>Creates a PropertyListing. Provide the unified PropertyListing fields in the request body; they are
+     * mapped to the provider's API. Returns the created PropertyListing.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreatePropertyListingResponse createPropertyListing(@Nonnull CreatePropertyListingRequest request, @Nullable Options options) {
         RequestOperation<CreatePropertyListingRequest, CreatePropertyListingResponse> operation
-              = new CreatePropertyListing.Sync(sdkConfiguration, _headers);
+              = new CreatePropertyListing.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -103,8 +120,23 @@ public class Listing {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetPropertyListingResponse getPropertyListing(@Nonnull GetPropertyListingRequest request) {
+        return getPropertyListing(request, null);
+    }
+
+    /**
+     * Retrieve a listing
+     * 
+     * <p>Retrieves a single PropertyListing by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetPropertyListingResponse getPropertyListing(@Nonnull GetPropertyListingRequest request, @Nullable Options options) {
         RequestOperation<GetPropertyListingRequest, GetPropertyListingResponse> operation
-              = new GetPropertyListing.Sync(sdkConfiguration, _headers);
+              = new GetPropertyListing.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -139,8 +171,27 @@ public class Listing {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListPropertyListingsResponse listPropertyListings(@Nonnull ListPropertyListingsRequest request) {
+        return listPropertyListings(request, null);
+    }
+
+    /**
+     * List all listings
+     * 
+     * <p>Returns a list of PropertyListings. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListPropertyListingsResponse listPropertyListings(@Nonnull ListPropertyListingsRequest request, @Nullable Options options) {
         RequestOperation<ListPropertyListingsRequest, ListPropertyListingsResponse> operation
-              = new ListPropertyListings.Sync(sdkConfiguration, _headers);
+              = new ListPropertyListings.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +218,23 @@ public class Listing {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchPropertyListingResponse patchPropertyListing(@Nonnull PatchPropertyListingRequest request) {
+        return patchPropertyListing(request, null);
+    }
+
+    /**
+     * Update a listing
+     * 
+     * <p>Updates the PropertyListing identified by `id`. Provide the unified PropertyListing fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchPropertyListingResponse patchPropertyListing(@Nonnull PatchPropertyListingRequest request, @Nullable Options options) {
         RequestOperation<PatchPropertyListingRequest, PatchPropertyListingResponse> operation
-              = new PatchPropertyListing.Sync(sdkConfiguration, _headers);
+              = new PatchPropertyListing.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -193,8 +259,22 @@ public class Listing {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemovePropertyListingResponse removePropertyListing(@Nonnull RemovePropertyListingRequest request) {
+        return removePropertyListing(request, null);
+    }
+
+    /**
+     * Remove a listing
+     * 
+     * <p>Deletes the PropertyListing identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemovePropertyListingResponse removePropertyListing(@Nonnull RemovePropertyListingRequest request, @Nullable Options options) {
         RequestOperation<RemovePropertyListingRequest, RemovePropertyListingResponse> operation
-              = new RemovePropertyListing.Sync(sdkConfiguration, _headers);
+              = new RemovePropertyListing.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -221,8 +301,23 @@ public class Listing {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdatePropertyListingResponse updatePropertyListing(@Nonnull UpdatePropertyListingRequest request) {
+        return updatePropertyListing(request, null);
+    }
+
+    /**
+     * Update a listing
+     * 
+     * <p>Updates the PropertyListing identified by `id`. Provide the unified PropertyListing fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdatePropertyListingResponse updatePropertyListing(@Nonnull UpdatePropertyListingRequest request, @Nullable Options options) {
         RequestOperation<UpdatePropertyListingRequest, UpdatePropertyListingResponse> operation
-              = new UpdatePropertyListing.Sync(sdkConfiguration, _headers);
+              = new UpdatePropertyListing.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

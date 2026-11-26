@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateAtsJobRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAtsJobRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateAtsJobResponse;
@@ -55,6 +56,7 @@ import to.unified.unified_java_sdk.operations.RemoveHrisJob;
 import to.unified.unified_java_sdk.operations.UpdateAtsJob;
 import to.unified.unified_java_sdk.operations.UpdateHrisJob;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Job {
@@ -99,8 +101,23 @@ public class Job {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateAtsJobResponse createAtsJob(@Nonnull CreateAtsJobRequest request) {
+        return createAtsJob(request, null);
+    }
+
+    /**
+     * Create a job
+     * 
+     * <p>Creates a AtsJob. Provide the unified AtsJob fields in the request body; they are mapped to the
+     * provider's API. Returns the created AtsJob.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateAtsJobResponse createAtsJob(@Nonnull CreateAtsJobRequest request, @Nullable Options options) {
         RequestOperation<CreateAtsJobRequest, CreateAtsJobResponse> operation
-              = new CreateAtsJob.Sync(sdkConfiguration, _headers);
+              = new CreateAtsJob.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -127,8 +144,23 @@ public class Job {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateHrisJobResponse createHrisJob(@Nonnull CreateHrisJobRequest request) {
+        return createHrisJob(request, null);
+    }
+
+    /**
+     * Create a job
+     * 
+     * <p>Creates a HrisJob. Provide the unified HrisJob fields in the request body; they are mapped to the
+     * provider's API. Returns the created HrisJob.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateHrisJobResponse createHrisJob(@Nonnull CreateHrisJobRequest request, @Nullable Options options) {
         RequestOperation<CreateHrisJobRequest, CreateHrisJobResponse> operation
-              = new CreateHrisJob.Sync(sdkConfiguration, _headers);
+              = new CreateHrisJob.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -155,8 +187,23 @@ public class Job {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAtsJobResponse getAtsJob(@Nonnull GetAtsJobRequest request) {
+        return getAtsJob(request, null);
+    }
+
+    /**
+     * Retrieve a job
+     * 
+     * <p>Retrieves a single AtsJob by its `id`. Obtain `id` values from the corresponding list endpoint. Use
+     * `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAtsJobResponse getAtsJob(@Nonnull GetAtsJobRequest request, @Nullable Options options) {
         RequestOperation<GetAtsJobRequest, GetAtsJobResponse> operation
-              = new GetAtsJob.Sync(sdkConfiguration, _headers);
+              = new GetAtsJob.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -183,8 +230,23 @@ public class Job {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetHrisJobResponse getHrisJob(@Nonnull GetHrisJobRequest request) {
+        return getHrisJob(request, null);
+    }
+
+    /**
+     * Retrieve a job
+     * 
+     * <p>Retrieves a single HrisJob by its `id`. Obtain `id` values from the corresponding list endpoint. Use
+     * `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetHrisJobResponse getHrisJob(@Nonnull GetHrisJobRequest request, @Nullable Options options) {
         RequestOperation<GetHrisJobRequest, GetHrisJobResponse> operation
-              = new GetHrisJob.Sync(sdkConfiguration, _headers);
+              = new GetHrisJob.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -219,8 +281,27 @@ public class Job {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAtsJobsResponse listAtsJobs(@Nonnull ListAtsJobsRequest request) {
+        return listAtsJobs(request, null);
+    }
+
+    /**
+     * List all jobs
+     * 
+     * <p>Returns a list of AtsJobs. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAtsJobsResponse listAtsJobs(@Nonnull ListAtsJobsRequest request, @Nullable Options options) {
         RequestOperation<ListAtsJobsRequest, ListAtsJobsResponse> operation
-              = new ListAtsJobs.Sync(sdkConfiguration, _headers);
+              = new ListAtsJobs.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -255,8 +336,27 @@ public class Job {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListHrisJobsResponse listHrisJobs(@Nonnull ListHrisJobsRequest request) {
+        return listHrisJobs(request, null);
+    }
+
+    /**
+     * List all jobs
+     * 
+     * <p>Returns a list of HrisJobs. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListHrisJobsResponse listHrisJobs(@Nonnull ListHrisJobsRequest request, @Nullable Options options) {
         RequestOperation<ListHrisJobsRequest, ListHrisJobsResponse> operation
-              = new ListHrisJobs.Sync(sdkConfiguration, _headers);
+              = new ListHrisJobs.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -283,8 +383,23 @@ public class Job {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchAtsJobResponse patchAtsJob(@Nonnull PatchAtsJobRequest request) {
+        return patchAtsJob(request, null);
+    }
+
+    /**
+     * Update a job
+     * 
+     * <p>Updates the AtsJob identified by `id`. Provide the unified AtsJob fields to change in the request
+     * body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchAtsJobResponse patchAtsJob(@Nonnull PatchAtsJobRequest request, @Nullable Options options) {
         RequestOperation<PatchAtsJobRequest, PatchAtsJobResponse> operation
-              = new PatchAtsJob.Sync(sdkConfiguration, _headers);
+              = new PatchAtsJob.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -311,8 +426,23 @@ public class Job {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchHrisJobResponse patchHrisJob(@Nonnull PatchHrisJobRequest request) {
+        return patchHrisJob(request, null);
+    }
+
+    /**
+     * Update a job
+     * 
+     * <p>Updates the HrisJob identified by `id`. Provide the unified HrisJob fields to change in the request
+     * body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchHrisJobResponse patchHrisJob(@Nonnull PatchHrisJobRequest request, @Nullable Options options) {
         RequestOperation<PatchHrisJobRequest, PatchHrisJobResponse> operation
-              = new PatchHrisJob.Sync(sdkConfiguration, _headers);
+              = new PatchHrisJob.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -337,8 +467,22 @@ public class Job {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveAtsJobResponse removeAtsJob(@Nonnull RemoveAtsJobRequest request) {
+        return removeAtsJob(request, null);
+    }
+
+    /**
+     * Remove a job
+     * 
+     * <p>Deletes the AtsJob identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveAtsJobResponse removeAtsJob(@Nonnull RemoveAtsJobRequest request, @Nullable Options options) {
         RequestOperation<RemoveAtsJobRequest, RemoveAtsJobResponse> operation
-              = new RemoveAtsJob.Sync(sdkConfiguration, _headers);
+              = new RemoveAtsJob.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -363,8 +507,22 @@ public class Job {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveHrisJobResponse removeHrisJob(@Nonnull RemoveHrisJobRequest request) {
+        return removeHrisJob(request, null);
+    }
+
+    /**
+     * Remove a job
+     * 
+     * <p>Deletes the HrisJob identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveHrisJobResponse removeHrisJob(@Nonnull RemoveHrisJobRequest request, @Nullable Options options) {
         RequestOperation<RemoveHrisJobRequest, RemoveHrisJobResponse> operation
-              = new RemoveHrisJob.Sync(sdkConfiguration, _headers);
+              = new RemoveHrisJob.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -391,8 +549,23 @@ public class Job {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateAtsJobResponse updateAtsJob(@Nonnull UpdateAtsJobRequest request) {
+        return updateAtsJob(request, null);
+    }
+
+    /**
+     * Update a job
+     * 
+     * <p>Updates the AtsJob identified by `id`. Provide the unified AtsJob fields to change in the request
+     * body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateAtsJobResponse updateAtsJob(@Nonnull UpdateAtsJobRequest request, @Nullable Options options) {
         RequestOperation<UpdateAtsJobRequest, UpdateAtsJobResponse> operation
-              = new UpdateAtsJob.Sync(sdkConfiguration, _headers);
+              = new UpdateAtsJob.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -419,8 +592,23 @@ public class Job {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateHrisJobResponse updateHrisJob(@Nonnull UpdateHrisJobRequest request) {
+        return updateHrisJob(request, null);
+    }
+
+    /**
+     * Update a job
+     * 
+     * <p>Updates the HrisJob identified by `id`. Provide the unified HrisJob fields to change in the request
+     * body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateHrisJobResponse updateHrisJob(@Nonnull UpdateHrisJobRequest request, @Nullable Options options) {
         RequestOperation<UpdateHrisJobRequest, UpdateHrisJobResponse> operation
-              = new UpdateHrisJob.Sync(sdkConfiguration, _headers);
+              = new UpdateHrisJob.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

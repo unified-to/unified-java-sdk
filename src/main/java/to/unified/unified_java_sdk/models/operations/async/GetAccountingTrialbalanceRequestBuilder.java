@@ -6,20 +6,30 @@ package to.unified.unified_java_sdk.models.operations.async;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.GetAccountingTrialbalanceRequest;
 import to.unified.unified_java_sdk.operations.GetAccountingTrialbalance;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetAccountingTrialbalanceRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private GetAccountingTrialbalanceRequest request;
+    private final Options.Builder optionsBuilder;
 
     public GetAccountingTrialbalanceRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public GetAccountingTrialbalanceRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public GetAccountingTrialbalanceRequestBuilder request(@Nonnull GetAccountingTrialbalanceRequest request) {
@@ -44,8 +54,9 @@ public class GetAccountingTrialbalanceRequestBuilder {
     * @return The response from the server.
     */
     public CompletableFuture<GetAccountingTrialbalanceResponse> call() {
+        Options options = optionsBuilder.build();
         AsyncRequestOperation<GetAccountingTrialbalanceRequest, GetAccountingTrialbalanceResponse> operation
-              = new GetAccountingTrialbalance.Async(sdkConfiguration, _headers);
+              = new GetAccountingTrialbalance.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

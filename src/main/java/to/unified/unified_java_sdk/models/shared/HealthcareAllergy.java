@@ -38,7 +38,7 @@ public class HealthcareAllergy {
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("criticality")
-    private Criticality criticality;
+    private HealthcareAllergyCriticality criticality;
 
     /**
      * The encounter in which the allergy was recorded
@@ -142,7 +142,7 @@ public class HealthcareAllergy {
     public HealthcareAllergy(
             @JsonProperty("codes") @Nullable List<HealthcareCode> codes,
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
-            @JsonProperty("criticality") @Nullable Criticality criticality,
+            @JsonProperty("criticality") @Nullable HealthcareAllergyCriticality criticality,
             @JsonProperty("encounter_id") @Nullable String encounterId,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("metadata") @Nullable List<HealthcareMetadata> metadata,
@@ -202,7 +202,7 @@ public class HealthcareAllergy {
     /**
      * Potential severity of future reactions
      */
-    public Optional<Criticality> criticality() {
+    public Optional<HealthcareAllergyCriticality> criticality() {
         return Optional.ofNullable(this.criticality);
     }
 
@@ -330,7 +330,7 @@ public class HealthcareAllergy {
     /**
      * Potential severity of future reactions
      */
-    public HealthcareAllergy withCriticality(@Nullable Criticality criticality) {
+    public HealthcareAllergy withCriticality(@Nullable HealthcareAllergyCriticality criticality) {
         this.criticality = criticality;
         return this;
     }
@@ -531,7 +531,7 @@ public class HealthcareAllergy {
 
         private OffsetDateTime createdAt;
 
-        private Criticality criticality;
+        private HealthcareAllergyCriticality criticality;
 
         private String encounterId;
 
@@ -584,7 +584,7 @@ public class HealthcareAllergy {
         /**
          * Potential severity of future reactions
          */
-        public Builder criticality(@Nullable Criticality criticality) {
+        public Builder criticality(@Nullable HealthcareAllergyCriticality criticality) {
             this.criticality = criticality;
             return this;
         }

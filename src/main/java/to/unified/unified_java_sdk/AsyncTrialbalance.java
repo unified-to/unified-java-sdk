@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.GetAccountingTrialbalanceRequest;
 import to.unified.unified_java_sdk.models.operations.ListAccountingTrialbalancesRequest;
@@ -16,6 +17,7 @@ import to.unified.unified_java_sdk.models.operations.async.ListAccountingTrialba
 import to.unified.unified_java_sdk.operations.GetAccountingTrialbalance;
 import to.unified.unified_java_sdk.operations.ListAccountingTrialbalances;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncTrialbalance {
@@ -60,8 +62,22 @@ public class AsyncTrialbalance {
      * @return {@code CompletableFuture<GetAccountingTrialbalanceResponse>} - The async response
      */
     public CompletableFuture<GetAccountingTrialbalanceResponse> getAccountingTrialbalance(@Nonnull GetAccountingTrialbalanceRequest request) {
+        return getAccountingTrialbalance(request, null);
+    }
+
+    /**
+     * Retrieve a trialbalance
+     * 
+     * <p>Retrieves a single AccountingTrialbalance by its `id`. Obtain `id` values from the corresponding
+     * list endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetAccountingTrialbalanceResponse>} - The async response
+     */
+    public CompletableFuture<GetAccountingTrialbalanceResponse> getAccountingTrialbalance(@Nonnull GetAccountingTrialbalanceRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetAccountingTrialbalanceRequest, GetAccountingTrialbalanceResponse> operation
-              = new GetAccountingTrialbalance.Async(sdkConfiguration, _headers);
+              = new GetAccountingTrialbalance.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -97,8 +113,26 @@ public class AsyncTrialbalance {
      * @return {@code CompletableFuture<ListAccountingTrialbalancesResponse>} - The async response
      */
     public CompletableFuture<ListAccountingTrialbalancesResponse> listAccountingTrialbalances(@Nonnull ListAccountingTrialbalancesRequest request) {
+        return listAccountingTrialbalances(request, null);
+    }
+
+    /**
+     * List all trialbalances
+     * 
+     * <p>Returns a list of AccountingTrialbalances. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListAccountingTrialbalancesResponse>} - The async response
+     */
+    public CompletableFuture<ListAccountingTrialbalancesResponse> listAccountingTrialbalances(@Nonnull ListAccountingTrialbalancesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListAccountingTrialbalancesRequest, ListAccountingTrialbalancesResponse> operation
-              = new ListAccountingTrialbalances.Async(sdkConfiguration, _headers);
+              = new ListAccountingTrialbalances.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

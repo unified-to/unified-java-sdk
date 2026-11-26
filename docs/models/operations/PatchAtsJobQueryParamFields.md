@@ -42,4 +42,5 @@ PatchAtsJobQueryParamFields value = PatchAtsJobQueryParamFields.ID;
 | `USER_ID`                  | user_id                    |
 | `INDUSTRY`                 | industry                   |
 | `SUMMARY`                  | summary                    |
+| `FEES`                     | fees                       |
 | `RAW`                      | raw                        |

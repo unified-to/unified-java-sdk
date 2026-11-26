@@ -146,6 +146,13 @@ public class CrmLead {
     @JsonProperty("user_id")
     private String userId;
 
+    /**
+     * DMS Vehicles the lead is interested in
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("vehicle_ids")
+    private List<String> vehicleIds;
+
     @JsonCreator
     public CrmLead(
             @JsonProperty("address") @Nullable PropertyCrmLeadAddress address,
@@ -168,7 +175,8 @@ public class CrmLead {
             @JsonProperty("telephones") @Nullable List<CrmTelephone> telephones,
             @JsonProperty("title") @Nullable String title,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
-            @JsonProperty("user_id") @Nullable String userId) {
+            @JsonProperty("user_id") @Nullable String userId,
+            @JsonProperty("vehicle_ids") @Nullable List<String> vehicleIds) {
         this.address = address;
         this.companyId = companyId;
         this.companyName = companyName;
@@ -190,6 +198,7 @@ public class CrmLead {
         this.title = title;
         this.updatedAt = updatedAt;
         this.userId = userId;
+        this.vehicleIds = vehicleIds;
     }
     
     public CrmLead() {
@@ -199,7 +208,8 @@ public class CrmLead {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
     }
 
     public Optional<PropertyCrmLeadAddress> address() {
@@ -315,6 +325,13 @@ public class CrmLead {
      */
     public Optional<String> userId() {
         return Optional.ofNullable(this.userId);
+    }
+
+    /**
+     * DMS Vehicles the lead is interested in
+     */
+    public Optional<List<String>> vehicleIds() {
+        return Optional.ofNullable(this.vehicleIds);
     }
 
     public static Builder builder() {
@@ -479,6 +496,15 @@ public class CrmLead {
     }
 
 
+    /**
+     * DMS Vehicles the lead is interested in
+     */
+    public CrmLead withVehicleIds(@Nullable List<String> vehicleIds) {
+        this.vehicleIds = vehicleIds;
+        return this;
+    }
+
+
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -509,7 +535,8 @@ public class CrmLead {
             Utils.enhancedDeepEquals(this.telephones, other.telephones) &&
             Utils.enhancedDeepEquals(this.title, other.title) &&
             Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt) &&
-            Utils.enhancedDeepEquals(this.userId, other.userId);
+            Utils.enhancedDeepEquals(this.userId, other.userId) &&
+            Utils.enhancedDeepEquals(this.vehicleIds, other.vehicleIds);
     }
     
     @Override
@@ -521,7 +548,8 @@ public class CrmLead {
             isActive, lastName, linkUrls,
             metadata, name, raw,
             source, status, telephones,
-            title, updatedAt, userId);
+            title, updatedAt, userId,
+            vehicleIds);
     }
     
     @Override
@@ -547,7 +575,8 @@ public class CrmLead {
                 "telephones", telephones,
                 "title", title,
                 "updatedAt", updatedAt,
-                "userId", userId);
+                "userId", userId,
+                "vehicleIds", vehicleIds);
     }
 
     @SuppressWarnings("UnusedReturnValue")
@@ -594,6 +623,8 @@ public class CrmLead {
         private OffsetDateTime updatedAt;
 
         private String userId;
+
+        private List<String> vehicleIds;
 
         private Builder() {
           // force use of static builder() method
@@ -735,6 +766,14 @@ public class CrmLead {
             return this;
         }
 
+        /**
+         * DMS Vehicles the lead is interested in
+         */
+        public Builder vehicleIds(@Nullable List<String> vehicleIds) {
+            this.vehicleIds = vehicleIds;
+            return this;
+        }
+
         public CrmLead build() {
             return new CrmLead(
                 address, companyId, companyName,
@@ -743,7 +782,8 @@ public class CrmLead {
                 isActive, lastName, linkUrls,
                 metadata, name, raw,
                 source, status, telephones,
-                title, updatedAt, userId);
+                title, updatedAt, userId,
+                vehicleIds);
         }
 
     }

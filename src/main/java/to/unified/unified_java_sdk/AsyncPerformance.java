@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreatePerformanceFeedbackRequest;
 import to.unified.unified_java_sdk.models.operations.CreatePerformanceGoalRequest;
@@ -60,6 +61,7 @@ import to.unified.unified_java_sdk.operations.PatchPerformanceGoal;
 import to.unified.unified_java_sdk.operations.RemovePerformanceGoal;
 import to.unified.unified_java_sdk.operations.UpdatePerformanceGoal;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncPerformance {
@@ -104,8 +106,22 @@ public class AsyncPerformance {
      * @return {@code CompletableFuture<CreatePerformanceFeedbackResponse>} - The async response
      */
     public CompletableFuture<CreatePerformanceFeedbackResponse> createPerformanceFeedback(@Nonnull CreatePerformanceFeedbackRequest request) {
+        return createPerformanceFeedback(request, null);
+    }
+
+    /**
+     * Create a feedback
+     * 
+     * <p>Creates a PerformanceFeedback. Provide the unified PerformanceFeedback fields in the request body;
+     * they are mapped to the provider's API. Returns the created PerformanceFeedback.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreatePerformanceFeedbackResponse>} - The async response
+     */
+    public CompletableFuture<CreatePerformanceFeedbackResponse> createPerformanceFeedback(@Nonnull CreatePerformanceFeedbackRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreatePerformanceFeedbackRequest, CreatePerformanceFeedbackResponse> operation
-              = new CreatePerformanceFeedback.Async(sdkConfiguration, _headers);
+              = new CreatePerformanceFeedback.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -133,8 +149,22 @@ public class AsyncPerformance {
      * @return {@code CompletableFuture<CreatePerformanceGoalResponse>} - The async response
      */
     public CompletableFuture<CreatePerformanceGoalResponse> createPerformanceGoal(@Nonnull CreatePerformanceGoalRequest request) {
+        return createPerformanceGoal(request, null);
+    }
+
+    /**
+     * Create a goal
+     * 
+     * <p>Creates a PerformanceGoal. Provide the unified PerformanceGoal fields in the request body; they are
+     * mapped to the provider's API. Returns the created PerformanceGoal.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreatePerformanceGoalResponse>} - The async response
+     */
+    public CompletableFuture<CreatePerformanceGoalResponse> createPerformanceGoal(@Nonnull CreatePerformanceGoalRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreatePerformanceGoalRequest, CreatePerformanceGoalResponse> operation
-              = new CreatePerformanceGoal.Async(sdkConfiguration, _headers);
+              = new CreatePerformanceGoal.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -162,8 +192,22 @@ public class AsyncPerformance {
      * @return {@code CompletableFuture<GetPerformanceCycleResponse>} - The async response
      */
     public CompletableFuture<GetPerformanceCycleResponse> getPerformanceCycle(@Nonnull GetPerformanceCycleRequest request) {
+        return getPerformanceCycle(request, null);
+    }
+
+    /**
+     * Retrieve a cycle
+     * 
+     * <p>Retrieves a single PerformanceCycle by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetPerformanceCycleResponse>} - The async response
+     */
+    public CompletableFuture<GetPerformanceCycleResponse> getPerformanceCycle(@Nonnull GetPerformanceCycleRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetPerformanceCycleRequest, GetPerformanceCycleResponse> operation
-              = new GetPerformanceCycle.Async(sdkConfiguration, _headers);
+              = new GetPerformanceCycle.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -191,8 +235,22 @@ public class AsyncPerformance {
      * @return {@code CompletableFuture<GetPerformanceFeedbackResponse>} - The async response
      */
     public CompletableFuture<GetPerformanceFeedbackResponse> getPerformanceFeedback(@Nonnull GetPerformanceFeedbackRequest request) {
+        return getPerformanceFeedback(request, null);
+    }
+
+    /**
+     * Retrieve a feedback
+     * 
+     * <p>Retrieves a single PerformanceFeedback by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetPerformanceFeedbackResponse>} - The async response
+     */
+    public CompletableFuture<GetPerformanceFeedbackResponse> getPerformanceFeedback(@Nonnull GetPerformanceFeedbackRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetPerformanceFeedbackRequest, GetPerformanceFeedbackResponse> operation
-              = new GetPerformanceFeedback.Async(sdkConfiguration, _headers);
+              = new GetPerformanceFeedback.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -220,8 +278,22 @@ public class AsyncPerformance {
      * @return {@code CompletableFuture<GetPerformanceGoalResponse>} - The async response
      */
     public CompletableFuture<GetPerformanceGoalResponse> getPerformanceGoal(@Nonnull GetPerformanceGoalRequest request) {
+        return getPerformanceGoal(request, null);
+    }
+
+    /**
+     * Retrieve a goal
+     * 
+     * <p>Retrieves a single PerformanceGoal by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetPerformanceGoalResponse>} - The async response
+     */
+    public CompletableFuture<GetPerformanceGoalResponse> getPerformanceGoal(@Nonnull GetPerformanceGoalRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetPerformanceGoalRequest, GetPerformanceGoalResponse> operation
-              = new GetPerformanceGoal.Async(sdkConfiguration, _headers);
+              = new GetPerformanceGoal.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -249,8 +321,22 @@ public class AsyncPerformance {
      * @return {@code CompletableFuture<GetPerformanceReviewResponse>} - The async response
      */
     public CompletableFuture<GetPerformanceReviewResponse> getPerformanceReview(@Nonnull GetPerformanceReviewRequest request) {
+        return getPerformanceReview(request, null);
+    }
+
+    /**
+     * Retrieve a review
+     * 
+     * <p>Retrieves a single PerformanceReview by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetPerformanceReviewResponse>} - The async response
+     */
+    public CompletableFuture<GetPerformanceReviewResponse> getPerformanceReview(@Nonnull GetPerformanceReviewRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetPerformanceReviewRequest, GetPerformanceReviewResponse> operation
-              = new GetPerformanceReview.Async(sdkConfiguration, _headers);
+              = new GetPerformanceReview.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -286,8 +372,26 @@ public class AsyncPerformance {
      * @return {@code CompletableFuture<ListPerformanceCyclesResponse>} - The async response
      */
     public CompletableFuture<ListPerformanceCyclesResponse> listPerformanceCycles(@Nonnull ListPerformanceCyclesRequest request) {
+        return listPerformanceCycles(request, null);
+    }
+
+    /**
+     * List all cycles
+     * 
+     * <p>Returns a list of PerformanceCycles. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListPerformanceCyclesResponse>} - The async response
+     */
+    public CompletableFuture<ListPerformanceCyclesResponse> listPerformanceCycles(@Nonnull ListPerformanceCyclesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListPerformanceCyclesRequest, ListPerformanceCyclesResponse> operation
-              = new ListPerformanceCycles.Async(sdkConfiguration, _headers);
+              = new ListPerformanceCycles.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -323,8 +427,26 @@ public class AsyncPerformance {
      * @return {@code CompletableFuture<ListPerformanceFeedbacksResponse>} - The async response
      */
     public CompletableFuture<ListPerformanceFeedbacksResponse> listPerformanceFeedbacks(@Nonnull ListPerformanceFeedbacksRequest request) {
+        return listPerformanceFeedbacks(request, null);
+    }
+
+    /**
+     * List all feedbacks
+     * 
+     * <p>Returns a list of PerformanceFeedbacks. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListPerformanceFeedbacksResponse>} - The async response
+     */
+    public CompletableFuture<ListPerformanceFeedbacksResponse> listPerformanceFeedbacks(@Nonnull ListPerformanceFeedbacksRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListPerformanceFeedbacksRequest, ListPerformanceFeedbacksResponse> operation
-              = new ListPerformanceFeedbacks.Async(sdkConfiguration, _headers);
+              = new ListPerformanceFeedbacks.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -360,8 +482,26 @@ public class AsyncPerformance {
      * @return {@code CompletableFuture<ListPerformanceGoalsResponse>} - The async response
      */
     public CompletableFuture<ListPerformanceGoalsResponse> listPerformanceGoals(@Nonnull ListPerformanceGoalsRequest request) {
+        return listPerformanceGoals(request, null);
+    }
+
+    /**
+     * List all goals
+     * 
+     * <p>Returns a list of PerformanceGoals. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListPerformanceGoalsResponse>} - The async response
+     */
+    public CompletableFuture<ListPerformanceGoalsResponse> listPerformanceGoals(@Nonnull ListPerformanceGoalsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListPerformanceGoalsRequest, ListPerformanceGoalsResponse> operation
-              = new ListPerformanceGoals.Async(sdkConfiguration, _headers);
+              = new ListPerformanceGoals.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -397,8 +537,26 @@ public class AsyncPerformance {
      * @return {@code CompletableFuture<ListPerformanceReviewsResponse>} - The async response
      */
     public CompletableFuture<ListPerformanceReviewsResponse> listPerformanceReviews(@Nonnull ListPerformanceReviewsRequest request) {
+        return listPerformanceReviews(request, null);
+    }
+
+    /**
+     * List all reviews
+     * 
+     * <p>Returns a list of PerformanceReviews. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListPerformanceReviewsResponse>} - The async response
+     */
+    public CompletableFuture<ListPerformanceReviewsResponse> listPerformanceReviews(@Nonnull ListPerformanceReviewsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListPerformanceReviewsRequest, ListPerformanceReviewsResponse> operation
-              = new ListPerformanceReviews.Async(sdkConfiguration, _headers);
+              = new ListPerformanceReviews.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -426,8 +584,22 @@ public class AsyncPerformance {
      * @return {@code CompletableFuture<PatchPerformanceGoalResponse>} - The async response
      */
     public CompletableFuture<PatchPerformanceGoalResponse> patchPerformanceGoal(@Nonnull PatchPerformanceGoalRequest request) {
+        return patchPerformanceGoal(request, null);
+    }
+
+    /**
+     * Update a goal
+     * 
+     * <p>Updates the PerformanceGoal identified by `id`. Provide the unified PerformanceGoal fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchPerformanceGoalResponse>} - The async response
+     */
+    public CompletableFuture<PatchPerformanceGoalResponse> patchPerformanceGoal(@Nonnull PatchPerformanceGoalRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchPerformanceGoalRequest, PatchPerformanceGoalResponse> operation
-              = new PatchPerformanceGoal.Async(sdkConfiguration, _headers);
+              = new PatchPerformanceGoal.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -453,8 +625,21 @@ public class AsyncPerformance {
      * @return {@code CompletableFuture<RemovePerformanceGoalResponse>} - The async response
      */
     public CompletableFuture<RemovePerformanceGoalResponse> removePerformanceGoal(@Nonnull RemovePerformanceGoalRequest request) {
+        return removePerformanceGoal(request, null);
+    }
+
+    /**
+     * Remove a goal
+     * 
+     * <p>Deletes the PerformanceGoal identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemovePerformanceGoalResponse>} - The async response
+     */
+    public CompletableFuture<RemovePerformanceGoalResponse> removePerformanceGoal(@Nonnull RemovePerformanceGoalRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemovePerformanceGoalRequest, RemovePerformanceGoalResponse> operation
-              = new RemovePerformanceGoal.Async(sdkConfiguration, _headers);
+              = new RemovePerformanceGoal.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -482,8 +667,22 @@ public class AsyncPerformance {
      * @return {@code CompletableFuture<UpdatePerformanceGoalResponse>} - The async response
      */
     public CompletableFuture<UpdatePerformanceGoalResponse> updatePerformanceGoal(@Nonnull UpdatePerformanceGoalRequest request) {
+        return updatePerformanceGoal(request, null);
+    }
+
+    /**
+     * Update a goal
+     * 
+     * <p>Updates the PerformanceGoal identified by `id`. Provide the unified PerformanceGoal fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdatePerformanceGoalResponse>} - The async response
+     */
+    public CompletableFuture<UpdatePerformanceGoalResponse> updatePerformanceGoal(@Nonnull UpdatePerformanceGoalRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdatePerformanceGoalRequest, UpdatePerformanceGoalResponse> operation
-              = new UpdatePerformanceGoal.Async(sdkConfiguration, _headers);
+              = new UpdatePerformanceGoal.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

@@ -6,20 +6,30 @@ package to.unified.unified_java_sdk.models.operations.async;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.RemovePlmPartRequest;
 import to.unified.unified_java_sdk.operations.RemovePlmPart;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemovePlmPartRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private RemovePlmPartRequest request;
+    private final Options.Builder optionsBuilder;
 
     public RemovePlmPartRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public RemovePlmPartRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public RemovePlmPartRequestBuilder request(@Nonnull RemovePlmPartRequest request) {
@@ -44,8 +54,9 @@ public class RemovePlmPartRequestBuilder {
     * @return The response from the server.
     */
     public CompletableFuture<RemovePlmPartResponse> call() {
+        Options options = optionsBuilder.build();
         AsyncRequestOperation<RemovePlmPartRequest, RemovePlmPartResponse> operation
-              = new RemovePlmPart.Async(sdkConfiguration, _headers);
+              = new RemovePlmPart.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

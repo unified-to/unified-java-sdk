@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.GetHealthcareReportRequest;
 import to.unified.unified_java_sdk.models.operations.ListAdsReportsRequest;
@@ -28,6 +29,7 @@ import to.unified.unified_java_sdk.operations.ListAnalyticsReports;
 import to.unified.unified_java_sdk.operations.ListHealthcareReports;
 import to.unified.unified_java_sdk.operations.ListMartechReports;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncReport {
@@ -72,8 +74,22 @@ public class AsyncReport {
      * @return {@code CompletableFuture<GetHealthcareReportResponse>} - The async response
      */
     public CompletableFuture<GetHealthcareReportResponse> getHealthcareReport(@Nonnull GetHealthcareReportRequest request) {
+        return getHealthcareReport(request, null);
+    }
+
+    /**
+     * Retrieve a report
+     * 
+     * <p>Retrieves a single HealthcareReport by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetHealthcareReportResponse>} - The async response
+     */
+    public CompletableFuture<GetHealthcareReportResponse> getHealthcareReport(@Nonnull GetHealthcareReportRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetHealthcareReportRequest, GetHealthcareReportResponse> operation
-              = new GetHealthcareReport.Async(sdkConfiguration, _headers);
+              = new GetHealthcareReport.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -109,8 +125,26 @@ public class AsyncReport {
      * @return {@code CompletableFuture<ListAdsReportsResponse>} - The async response
      */
     public CompletableFuture<ListAdsReportsResponse> listAdsReports(@Nonnull ListAdsReportsRequest request) {
+        return listAdsReports(request, null);
+    }
+
+    /**
+     * List all reports
+     * 
+     * <p>Returns a list of AdsReports. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListAdsReportsResponse>} - The async response
+     */
+    public CompletableFuture<ListAdsReportsResponse> listAdsReports(@Nonnull ListAdsReportsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListAdsReportsRequest, ListAdsReportsResponse> operation
-              = new ListAdsReports.Async(sdkConfiguration, _headers);
+              = new ListAdsReports.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -146,8 +180,26 @@ public class AsyncReport {
      * @return {@code CompletableFuture<ListAnalyticsReportsResponse>} - The async response
      */
     public CompletableFuture<ListAnalyticsReportsResponse> listAnalyticsReports(@Nonnull ListAnalyticsReportsRequest request) {
+        return listAnalyticsReports(request, null);
+    }
+
+    /**
+     * List all reports
+     * 
+     * <p>Returns a list of AnalyticsReports. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListAnalyticsReportsResponse>} - The async response
+     */
+    public CompletableFuture<ListAnalyticsReportsResponse> listAnalyticsReports(@Nonnull ListAnalyticsReportsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListAnalyticsReportsRequest, ListAnalyticsReportsResponse> operation
-              = new ListAnalyticsReports.Async(sdkConfiguration, _headers);
+              = new ListAnalyticsReports.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -183,8 +235,26 @@ public class AsyncReport {
      * @return {@code CompletableFuture<ListHealthcareReportsResponse>} - The async response
      */
     public CompletableFuture<ListHealthcareReportsResponse> listHealthcareReports(@Nonnull ListHealthcareReportsRequest request) {
+        return listHealthcareReports(request, null);
+    }
+
+    /**
+     * List all reports
+     * 
+     * <p>Returns a list of HealthcareReports. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListHealthcareReportsResponse>} - The async response
+     */
+    public CompletableFuture<ListHealthcareReportsResponse> listHealthcareReports(@Nonnull ListHealthcareReportsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListHealthcareReportsRequest, ListHealthcareReportsResponse> operation
-              = new ListHealthcareReports.Async(sdkConfiguration, _headers);
+              = new ListHealthcareReports.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -220,8 +290,26 @@ public class AsyncReport {
      * @return {@code CompletableFuture<ListMartechReportsResponse>} - The async response
      */
     public CompletableFuture<ListMartechReportsResponse> listMartechReports(@Nonnull ListMartechReportsRequest request) {
+        return listMartechReports(request, null);
+    }
+
+    /**
+     * List all reports
+     * 
+     * <p>Returns a list of MarketingReports. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListMartechReportsResponse>} - The async response
+     */
+    public CompletableFuture<ListMartechReportsResponse> listMartechReports(@Nonnull ListMartechReportsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListMartechReportsRequest, ListMartechReportsResponse> operation
-              = new ListMartechReports.Async(sdkConfiguration, _headers);
+              = new ListMartechReports.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

@@ -6,12 +6,16 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateMetadataMetadataRequest;
 import to.unified.unified_java_sdk.models.operations.CreateMetadataMetadataRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateMetadataMetadataResponse;
 import to.unified.unified_java_sdk.models.operations.GetMetadataMetadataRequest;
 import to.unified.unified_java_sdk.models.operations.GetMetadataMetadataRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetMetadataMetadataResponse;
+import to.unified.unified_java_sdk.models.operations.ListFhirMetadatasRequest;
+import to.unified.unified_java_sdk.models.operations.ListFhirMetadatasRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListFhirMetadatasResponse;
 import to.unified.unified_java_sdk.models.operations.ListMetadataMetadatasRequest;
 import to.unified.unified_java_sdk.models.operations.ListMetadataMetadatasRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListMetadataMetadatasResponse;
@@ -26,11 +30,13 @@ import to.unified.unified_java_sdk.models.operations.UpdateMetadataMetadataReque
 import to.unified.unified_java_sdk.models.operations.UpdateMetadataMetadataResponse;
 import to.unified.unified_java_sdk.operations.CreateMetadataMetadata;
 import to.unified.unified_java_sdk.operations.GetMetadataMetadata;
+import to.unified.unified_java_sdk.operations.ListFhirMetadatas;
 import to.unified.unified_java_sdk.operations.ListMetadataMetadatas;
 import to.unified.unified_java_sdk.operations.PatchMetadataMetadata;
 import to.unified.unified_java_sdk.operations.RemoveMetadataMetadata;
 import to.unified.unified_java_sdk.operations.UpdateMetadataMetadata;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Metadata {
@@ -75,8 +81,23 @@ public class Metadata {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateMetadataMetadataResponse createMetadataMetadata(@Nonnull CreateMetadataMetadataRequest request) {
+        return createMetadataMetadata(request, null);
+    }
+
+    /**
+     * Create a metadata
+     * 
+     * <p>Creates a MetadataMetadata. Provide the unified MetadataMetadata fields in the request body; they
+     * are mapped to the provider's API. Returns the created MetadataMetadata.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateMetadataMetadataResponse createMetadataMetadata(@Nonnull CreateMetadataMetadataRequest request, @Nullable Options options) {
         RequestOperation<CreateMetadataMetadataRequest, CreateMetadataMetadataResponse> operation
-              = new CreateMetadataMetadata.Sync(sdkConfiguration, _headers);
+              = new CreateMetadataMetadata.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -103,8 +124,69 @@ public class Metadata {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetMetadataMetadataResponse getMetadataMetadata(@Nonnull GetMetadataMetadataRequest request) {
+        return getMetadataMetadata(request, null);
+    }
+
+    /**
+     * Retrieve a metadata
+     * 
+     * <p>Retrieves a single MetadataMetadata by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetMetadataMetadataResponse getMetadataMetadata(@Nonnull GetMetadataMetadataRequest request, @Nullable Options options) {
         RequestOperation<GetMetadataMetadataRequest, GetMetadataMetadataResponse> operation
-              = new GetMetadataMetadata.Sync(sdkConfiguration, _headers);
+              = new GetMetadataMetadata.Sync(sdkConfiguration, options, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Get the CapabilityStatement
+     * 
+     * <p>The resources, interactions and search parameters this connection's integration supports. Responses
+     * use the application/fhir+json media type; errors are OperationOutcome resources. Read-only (FHIR R4
+     * 4.0.1).
+     * 
+     * @return The call builder
+     */
+    public ListFhirMetadatasRequestBuilder listFhirMetadatas() {
+        return new ListFhirMetadatasRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Get the CapabilityStatement
+     * 
+     * <p>The resources, interactions and search parameters this connection's integration supports. Responses
+     * use the application/fhir+json media type; errors are OperationOutcome resources. Read-only (FHIR R4
+     * 4.0.1).
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListFhirMetadatasResponse listFhirMetadatas(@Nonnull ListFhirMetadatasRequest request) {
+        return listFhirMetadatas(request, null);
+    }
+
+    /**
+     * Get the CapabilityStatement
+     * 
+     * <p>The resources, interactions and search parameters this connection's integration supports. Responses
+     * use the application/fhir+json media type; errors are OperationOutcome resources. Read-only (FHIR R4
+     * 4.0.1).
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListFhirMetadatasResponse listFhirMetadatas(@Nonnull ListFhirMetadatasRequest request, @Nullable Options options) {
+        RequestOperation<ListFhirMetadatasRequest, ListFhirMetadatasResponse> operation
+              = new ListFhirMetadatas.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -139,8 +221,27 @@ public class Metadata {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListMetadataMetadatasResponse listMetadataMetadatas(@Nonnull ListMetadataMetadatasRequest request) {
+        return listMetadataMetadatas(request, null);
+    }
+
+    /**
+     * List all metadatas
+     * 
+     * <p>Returns a list of MetadataMetadatas. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListMetadataMetadatasResponse listMetadataMetadatas(@Nonnull ListMetadataMetadatasRequest request, @Nullable Options options) {
         RequestOperation<ListMetadataMetadatasRequest, ListMetadataMetadatasResponse> operation
-              = new ListMetadataMetadatas.Sync(sdkConfiguration, _headers);
+              = new ListMetadataMetadatas.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +268,23 @@ public class Metadata {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchMetadataMetadataResponse patchMetadataMetadata(@Nonnull PatchMetadataMetadataRequest request) {
+        return patchMetadataMetadata(request, null);
+    }
+
+    /**
+     * Update a metadata
+     * 
+     * <p>Updates the MetadataMetadata identified by `id`. Provide the unified MetadataMetadata fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchMetadataMetadataResponse patchMetadataMetadata(@Nonnull PatchMetadataMetadataRequest request, @Nullable Options options) {
         RequestOperation<PatchMetadataMetadataRequest, PatchMetadataMetadataResponse> operation
-              = new PatchMetadataMetadata.Sync(sdkConfiguration, _headers);
+              = new PatchMetadataMetadata.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -193,8 +309,22 @@ public class Metadata {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveMetadataMetadataResponse removeMetadataMetadata(@Nonnull RemoveMetadataMetadataRequest request) {
+        return removeMetadataMetadata(request, null);
+    }
+
+    /**
+     * Remove a metadata
+     * 
+     * <p>Deletes the MetadataMetadata identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveMetadataMetadataResponse removeMetadataMetadata(@Nonnull RemoveMetadataMetadataRequest request, @Nullable Options options) {
         RequestOperation<RemoveMetadataMetadataRequest, RemoveMetadataMetadataResponse> operation
-              = new RemoveMetadataMetadata.Sync(sdkConfiguration, _headers);
+              = new RemoveMetadataMetadata.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -221,8 +351,23 @@ public class Metadata {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateMetadataMetadataResponse updateMetadataMetadata(@Nonnull UpdateMetadataMetadataRequest request) {
+        return updateMetadataMetadata(request, null);
+    }
+
+    /**
+     * Update a metadata
+     * 
+     * <p>Updates the MetadataMetadata identified by `id`. Provide the unified MetadataMetadata fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateMetadataMetadataResponse updateMetadataMetadata(@Nonnull UpdateMetadataMetadataRequest request, @Nullable Options options) {
         RequestOperation<UpdateMetadataMetadataRequest, UpdateMetadataMetadataResponse> operation
-              = new UpdateMetadataMetadata.Sync(sdkConfiguration, _headers);
+              = new UpdateMetadataMetadata.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

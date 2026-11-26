@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.GetAdsPromotedRequest;
 import to.unified.unified_java_sdk.models.operations.GetAdsPromotedRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetAdsPromotedResponse;
@@ -15,6 +16,7 @@ import to.unified.unified_java_sdk.models.operations.ListAdsPromotedsResponse;
 import to.unified.unified_java_sdk.operations.GetAdsPromoted;
 import to.unified.unified_java_sdk.operations.ListAdsPromoteds;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Promoted {
@@ -59,8 +61,23 @@ public class Promoted {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAdsPromotedResponse getAdsPromoted(@Nonnull GetAdsPromotedRequest request) {
+        return getAdsPromoted(request, null);
+    }
+
+    /**
+     * Retrieve a promoted
+     * 
+     * <p>Retrieves a single AdsPromoted by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAdsPromotedResponse getAdsPromoted(@Nonnull GetAdsPromotedRequest request, @Nullable Options options) {
         RequestOperation<GetAdsPromotedRequest, GetAdsPromotedResponse> operation
-              = new GetAdsPromoted.Sync(sdkConfiguration, _headers);
+              = new GetAdsPromoted.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -95,8 +112,27 @@ public class Promoted {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAdsPromotedsResponse listAdsPromoteds(@Nonnull ListAdsPromotedsRequest request) {
+        return listAdsPromoteds(request, null);
+    }
+
+    /**
+     * List all promoteds
+     * 
+     * <p>Returns a list of AdsPromoteds. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAdsPromotedsResponse listAdsPromoteds(@Nonnull ListAdsPromotedsRequest request, @Nullable Options options) {
         RequestOperation<ListAdsPromotedsRequest, ListAdsPromotedsResponse> operation
-              = new ListAdsPromoteds.Sync(sdkConfiguration, _headers);
+              = new ListAdsPromoteds.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

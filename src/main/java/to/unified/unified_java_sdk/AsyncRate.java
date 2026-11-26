@@ -6,12 +6,14 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateShippingRateRequest;
 import to.unified.unified_java_sdk.models.operations.async.CreateShippingRateRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.CreateShippingRateResponse;
 import to.unified.unified_java_sdk.operations.CreateShippingRate;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncRate {
@@ -56,8 +58,22 @@ public class AsyncRate {
      * @return {@code CompletableFuture<CreateShippingRateResponse>} - The async response
      */
     public CompletableFuture<CreateShippingRateResponse> createShippingRate(@Nonnull CreateShippingRateRequest request) {
+        return createShippingRate(request, null);
+    }
+
+    /**
+     * Create a rate
+     * 
+     * <p>Creates a ShippingRate. Provide the unified ShippingRate fields in the request body; they are mapped
+     * to the provider's API. Returns the created ShippingRate.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateShippingRateResponse>} - The async response
+     */
+    public CompletableFuture<CreateShippingRateResponse> createShippingRate(@Nonnull CreateShippingRateRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateShippingRateRequest, CreateShippingRateResponse> operation
-              = new CreateShippingRate.Async(sdkConfiguration, _headers);
+              = new CreateShippingRate.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

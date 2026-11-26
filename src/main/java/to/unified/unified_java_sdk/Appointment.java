@@ -6,31 +6,57 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import to.unified.unified_java_sdk.models.operations.CreateDmsAppointmentRequest;
+import to.unified.unified_java_sdk.models.operations.CreateDmsAppointmentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateDmsAppointmentResponse;
 import to.unified.unified_java_sdk.models.operations.CreateHealthcareAppointmentRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHealthcareAppointmentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateHealthcareAppointmentResponse;
+import to.unified.unified_java_sdk.models.operations.GetDmsAppointmentRequest;
+import to.unified.unified_java_sdk.models.operations.GetDmsAppointmentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetDmsAppointmentResponse;
 import to.unified.unified_java_sdk.models.operations.GetHealthcareAppointmentRequest;
 import to.unified.unified_java_sdk.models.operations.GetHealthcareAppointmentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetHealthcareAppointmentResponse;
+import to.unified.unified_java_sdk.models.operations.ListDmsAppointmentsRequest;
+import to.unified.unified_java_sdk.models.operations.ListDmsAppointmentsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListDmsAppointmentsResponse;
 import to.unified.unified_java_sdk.models.operations.ListHealthcareAppointmentsRequest;
 import to.unified.unified_java_sdk.models.operations.ListHealthcareAppointmentsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListHealthcareAppointmentsResponse;
+import to.unified.unified_java_sdk.models.operations.PatchDmsAppointmentRequest;
+import to.unified.unified_java_sdk.models.operations.PatchDmsAppointmentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchDmsAppointmentResponse;
 import to.unified.unified_java_sdk.models.operations.PatchHealthcareAppointmentRequest;
 import to.unified.unified_java_sdk.models.operations.PatchHealthcareAppointmentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.PatchHealthcareAppointmentResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveDmsAppointmentRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveDmsAppointmentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveDmsAppointmentResponse;
 import to.unified.unified_java_sdk.models.operations.RemoveHealthcareAppointmentRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveHealthcareAppointmentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.RemoveHealthcareAppointmentResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateDmsAppointmentRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateDmsAppointmentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateDmsAppointmentResponse;
 import to.unified.unified_java_sdk.models.operations.UpdateHealthcareAppointmentRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateHealthcareAppointmentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateHealthcareAppointmentResponse;
+import to.unified.unified_java_sdk.operations.CreateDmsAppointment;
 import to.unified.unified_java_sdk.operations.CreateHealthcareAppointment;
+import to.unified.unified_java_sdk.operations.GetDmsAppointment;
 import to.unified.unified_java_sdk.operations.GetHealthcareAppointment;
+import to.unified.unified_java_sdk.operations.ListDmsAppointments;
 import to.unified.unified_java_sdk.operations.ListHealthcareAppointments;
+import to.unified.unified_java_sdk.operations.PatchDmsAppointment;
 import to.unified.unified_java_sdk.operations.PatchHealthcareAppointment;
+import to.unified.unified_java_sdk.operations.RemoveDmsAppointment;
 import to.unified.unified_java_sdk.operations.RemoveHealthcareAppointment;
+import to.unified.unified_java_sdk.operations.UpdateDmsAppointment;
 import to.unified.unified_java_sdk.operations.UpdateHealthcareAppointment;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Appointment {
@@ -50,6 +76,49 @@ public class Appointment {
      */
     public AsyncAppointment async() {
         return asyncSDK;
+    }
+
+    /**
+     * Create an appointment
+     * 
+     * <p>Creates a DmsAppointment. Provide the unified DmsAppointment fields in the request body; they are
+     * mapped to the provider's API. Returns the created DmsAppointment.
+     * 
+     * @return The call builder
+     */
+    public CreateDmsAppointmentRequestBuilder createDmsAppointment() {
+        return new CreateDmsAppointmentRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Create an appointment
+     * 
+     * <p>Creates a DmsAppointment. Provide the unified DmsAppointment fields in the request body; they are
+     * mapped to the provider's API. Returns the created DmsAppointment.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateDmsAppointmentResponse createDmsAppointment(@Nonnull CreateDmsAppointmentRequest request) {
+        return createDmsAppointment(request, null);
+    }
+
+    /**
+     * Create an appointment
+     * 
+     * <p>Creates a DmsAppointment. Provide the unified DmsAppointment fields in the request body; they are
+     * mapped to the provider's API. Returns the created DmsAppointment.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateDmsAppointmentResponse createDmsAppointment(@Nonnull CreateDmsAppointmentRequest request, @Nullable Options options) {
+        RequestOperation<CreateDmsAppointmentRequest, CreateDmsAppointmentResponse> operation
+              = new CreateDmsAppointment.Sync(sdkConfiguration, options, _headers);
+        return operation.handleResponse(operation.doRequest(request));
     }
 
     /**
@@ -75,8 +144,66 @@ public class Appointment {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateHealthcareAppointmentResponse createHealthcareAppointment(@Nonnull CreateHealthcareAppointmentRequest request) {
+        return createHealthcareAppointment(request, null);
+    }
+
+    /**
+     * Create an appointment
+     * 
+     * <p>Creates a HealthcareAppointment. Provide the unified HealthcareAppointment fields in the request
+     * body; they are mapped to the provider's API. Returns the created HealthcareAppointment.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateHealthcareAppointmentResponse createHealthcareAppointment(@Nonnull CreateHealthcareAppointmentRequest request, @Nullable Options options) {
         RequestOperation<CreateHealthcareAppointmentRequest, CreateHealthcareAppointmentResponse> operation
-              = new CreateHealthcareAppointment.Sync(sdkConfiguration, _headers);
+              = new CreateHealthcareAppointment.Sync(sdkConfiguration, options, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Retrieve an appointment
+     * 
+     * <p>Retrieves a single DmsAppointment by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @return The call builder
+     */
+    public GetDmsAppointmentRequestBuilder getDmsAppointment() {
+        return new GetDmsAppointmentRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve an appointment
+     * 
+     * <p>Retrieves a single DmsAppointment by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetDmsAppointmentResponse getDmsAppointment(@Nonnull GetDmsAppointmentRequest request) {
+        return getDmsAppointment(request, null);
+    }
+
+    /**
+     * Retrieve an appointment
+     * 
+     * <p>Retrieves a single DmsAppointment by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetDmsAppointmentResponse getDmsAppointment(@Nonnull GetDmsAppointmentRequest request, @Nullable Options options) {
+        RequestOperation<GetDmsAppointmentRequest, GetDmsAppointmentResponse> operation
+              = new GetDmsAppointment.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -103,8 +230,78 @@ public class Appointment {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetHealthcareAppointmentResponse getHealthcareAppointment(@Nonnull GetHealthcareAppointmentRequest request) {
+        return getHealthcareAppointment(request, null);
+    }
+
+    /**
+     * Retrieve an appointment
+     * 
+     * <p>Retrieves a single HealthcareAppointment by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetHealthcareAppointmentResponse getHealthcareAppointment(@Nonnull GetHealthcareAppointmentRequest request, @Nullable Options options) {
         RequestOperation<GetHealthcareAppointmentRequest, GetHealthcareAppointmentResponse> operation
-              = new GetHealthcareAppointment.Sync(sdkConfiguration, _headers);
+              = new GetHealthcareAppointment.Sync(sdkConfiguration, options, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * List all appointments
+     * 
+     * <p>Returns a list of DmsAppointments. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @return The call builder
+     */
+    public ListDmsAppointmentsRequestBuilder listDmsAppointments() {
+        return new ListDmsAppointmentsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all appointments
+     * 
+     * <p>Returns a list of DmsAppointments. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListDmsAppointmentsResponse listDmsAppointments(@Nonnull ListDmsAppointmentsRequest request) {
+        return listDmsAppointments(request, null);
+    }
+
+    /**
+     * List all appointments
+     * 
+     * <p>Returns a list of DmsAppointments. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListDmsAppointmentsResponse listDmsAppointments(@Nonnull ListDmsAppointmentsRequest request, @Nullable Options options) {
+        RequestOperation<ListDmsAppointmentsRequest, ListDmsAppointmentsResponse> operation
+              = new ListDmsAppointments.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -139,8 +336,70 @@ public class Appointment {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListHealthcareAppointmentsResponse listHealthcareAppointments(@Nonnull ListHealthcareAppointmentsRequest request) {
+        return listHealthcareAppointments(request, null);
+    }
+
+    /**
+     * List all appointments
+     * 
+     * <p>Returns a list of HealthcareAppointments. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListHealthcareAppointmentsResponse listHealthcareAppointments(@Nonnull ListHealthcareAppointmentsRequest request, @Nullable Options options) {
         RequestOperation<ListHealthcareAppointmentsRequest, ListHealthcareAppointmentsResponse> operation
-              = new ListHealthcareAppointments.Sync(sdkConfiguration, _headers);
+              = new ListHealthcareAppointments.Sync(sdkConfiguration, options, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Update an appointment
+     * 
+     * <p>Updates the DmsAppointment identified by `id`. Provide the unified DmsAppointment fields to change
+     * in the request body.
+     * 
+     * @return The call builder
+     */
+    public PatchDmsAppointmentRequestBuilder patchDmsAppointment() {
+        return new PatchDmsAppointmentRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update an appointment
+     * 
+     * <p>Updates the DmsAppointment identified by `id`. Provide the unified DmsAppointment fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchDmsAppointmentResponse patchDmsAppointment(@Nonnull PatchDmsAppointmentRequest request) {
+        return patchDmsAppointment(request, null);
+    }
+
+    /**
+     * Update an appointment
+     * 
+     * <p>Updates the DmsAppointment identified by `id`. Provide the unified DmsAppointment fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchDmsAppointmentResponse patchDmsAppointment(@Nonnull PatchDmsAppointmentRequest request, @Nullable Options options) {
+        RequestOperation<PatchDmsAppointmentRequest, PatchDmsAppointmentResponse> operation
+              = new PatchDmsAppointment.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +426,63 @@ public class Appointment {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchHealthcareAppointmentResponse patchHealthcareAppointment(@Nonnull PatchHealthcareAppointmentRequest request) {
+        return patchHealthcareAppointment(request, null);
+    }
+
+    /**
+     * Update an appointment
+     * 
+     * <p>Updates the HealthcareAppointment identified by `id`. Provide the unified HealthcareAppointment
+     * fields to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchHealthcareAppointmentResponse patchHealthcareAppointment(@Nonnull PatchHealthcareAppointmentRequest request, @Nullable Options options) {
         RequestOperation<PatchHealthcareAppointmentRequest, PatchHealthcareAppointmentResponse> operation
-              = new PatchHealthcareAppointment.Sync(sdkConfiguration, _headers);
+              = new PatchHealthcareAppointment.Sync(sdkConfiguration, options, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Remove an appointment
+     * 
+     * <p>Deletes the DmsAppointment identified by `id`.
+     * 
+     * @return The call builder
+     */
+    public RemoveDmsAppointmentRequestBuilder removeDmsAppointment() {
+        return new RemoveDmsAppointmentRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove an appointment
+     * 
+     * <p>Deletes the DmsAppointment identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveDmsAppointmentResponse removeDmsAppointment(@Nonnull RemoveDmsAppointmentRequest request) {
+        return removeDmsAppointment(request, null);
+    }
+
+    /**
+     * Remove an appointment
+     * 
+     * <p>Deletes the DmsAppointment identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveDmsAppointmentResponse removeDmsAppointment(@Nonnull RemoveDmsAppointmentRequest request, @Nullable Options options) {
+        RequestOperation<RemoveDmsAppointmentRequest, RemoveDmsAppointmentResponse> operation
+              = new RemoveDmsAppointment.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -193,8 +507,65 @@ public class Appointment {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveHealthcareAppointmentResponse removeHealthcareAppointment(@Nonnull RemoveHealthcareAppointmentRequest request) {
+        return removeHealthcareAppointment(request, null);
+    }
+
+    /**
+     * Remove an appointment
+     * 
+     * <p>Deletes the HealthcareAppointment identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveHealthcareAppointmentResponse removeHealthcareAppointment(@Nonnull RemoveHealthcareAppointmentRequest request, @Nullable Options options) {
         RequestOperation<RemoveHealthcareAppointmentRequest, RemoveHealthcareAppointmentResponse> operation
-              = new RemoveHealthcareAppointment.Sync(sdkConfiguration, _headers);
+              = new RemoveHealthcareAppointment.Sync(sdkConfiguration, options, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Update an appointment
+     * 
+     * <p>Updates the DmsAppointment identified by `id`. Provide the unified DmsAppointment fields to change
+     * in the request body.
+     * 
+     * @return The call builder
+     */
+    public UpdateDmsAppointmentRequestBuilder updateDmsAppointment() {
+        return new UpdateDmsAppointmentRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update an appointment
+     * 
+     * <p>Updates the DmsAppointment identified by `id`. Provide the unified DmsAppointment fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateDmsAppointmentResponse updateDmsAppointment(@Nonnull UpdateDmsAppointmentRequest request) {
+        return updateDmsAppointment(request, null);
+    }
+
+    /**
+     * Update an appointment
+     * 
+     * <p>Updates the DmsAppointment identified by `id`. Provide the unified DmsAppointment fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateDmsAppointmentResponse updateDmsAppointment(@Nonnull UpdateDmsAppointmentRequest request, @Nullable Options options) {
+        RequestOperation<UpdateDmsAppointmentRequest, UpdateDmsAppointmentResponse> operation
+              = new UpdateDmsAppointment.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -221,8 +592,23 @@ public class Appointment {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateHealthcareAppointmentResponse updateHealthcareAppointment(@Nonnull UpdateHealthcareAppointmentRequest request) {
+        return updateHealthcareAppointment(request, null);
+    }
+
+    /**
+     * Update an appointment
+     * 
+     * <p>Updates the HealthcareAppointment identified by `id`. Provide the unified HealthcareAppointment
+     * fields to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateHealthcareAppointmentResponse updateHealthcareAppointment(@Nonnull UpdateHealthcareAppointmentRequest request, @Nullable Options options) {
         RequestOperation<UpdateHealthcareAppointmentRequest, UpdateHealthcareAppointmentResponse> operation
-              = new UpdateHealthcareAppointment.Sync(sdkConfiguration, _headers);
+              = new UpdateHealthcareAppointment.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

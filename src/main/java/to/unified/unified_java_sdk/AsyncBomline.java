@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreatePlmBomlineRequest;
 import to.unified.unified_java_sdk.models.operations.GetPlmBomlineRequest;
@@ -32,6 +33,7 @@ import to.unified.unified_java_sdk.operations.PatchPlmBomline;
 import to.unified.unified_java_sdk.operations.RemovePlmBomline;
 import to.unified.unified_java_sdk.operations.UpdatePlmBomline;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncBomline {
@@ -76,8 +78,22 @@ public class AsyncBomline {
      * @return {@code CompletableFuture<CreatePlmBomlineResponse>} - The async response
      */
     public CompletableFuture<CreatePlmBomlineResponse> createPlmBomline(@Nonnull CreatePlmBomlineRequest request) {
+        return createPlmBomline(request, null);
+    }
+
+    /**
+     * Create a bomline
+     * 
+     * <p>Creates a PlmBomline. Provide the unified PlmBomline fields in the request body; they are mapped to
+     * the provider's API. Returns the created PlmBomline.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreatePlmBomlineResponse>} - The async response
+     */
+    public CompletableFuture<CreatePlmBomlineResponse> createPlmBomline(@Nonnull CreatePlmBomlineRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreatePlmBomlineRequest, CreatePlmBomlineResponse> operation
-              = new CreatePlmBomline.Async(sdkConfiguration, _headers);
+              = new CreatePlmBomline.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -105,8 +121,22 @@ public class AsyncBomline {
      * @return {@code CompletableFuture<GetPlmBomlineResponse>} - The async response
      */
     public CompletableFuture<GetPlmBomlineResponse> getPlmBomline(@Nonnull GetPlmBomlineRequest request) {
+        return getPlmBomline(request, null);
+    }
+
+    /**
+     * Retrieve a bomline
+     * 
+     * <p>Retrieves a single PlmBomline by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetPlmBomlineResponse>} - The async response
+     */
+    public CompletableFuture<GetPlmBomlineResponse> getPlmBomline(@Nonnull GetPlmBomlineRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetPlmBomlineRequest, GetPlmBomlineResponse> operation
-              = new GetPlmBomline.Async(sdkConfiguration, _headers);
+              = new GetPlmBomline.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -142,8 +172,26 @@ public class AsyncBomline {
      * @return {@code CompletableFuture<ListPlmBomlinesResponse>} - The async response
      */
     public CompletableFuture<ListPlmBomlinesResponse> listPlmBomlines(@Nonnull ListPlmBomlinesRequest request) {
+        return listPlmBomlines(request, null);
+    }
+
+    /**
+     * List all bomlines
+     * 
+     * <p>Returns a list of PlmBomlines. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListPlmBomlinesResponse>} - The async response
+     */
+    public CompletableFuture<ListPlmBomlinesResponse> listPlmBomlines(@Nonnull ListPlmBomlinesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListPlmBomlinesRequest, ListPlmBomlinesResponse> operation
-              = new ListPlmBomlines.Async(sdkConfiguration, _headers);
+              = new ListPlmBomlines.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -171,8 +219,22 @@ public class AsyncBomline {
      * @return {@code CompletableFuture<PatchPlmBomlineResponse>} - The async response
      */
     public CompletableFuture<PatchPlmBomlineResponse> patchPlmBomline(@Nonnull PatchPlmBomlineRequest request) {
+        return patchPlmBomline(request, null);
+    }
+
+    /**
+     * Update a bomline
+     * 
+     * <p>Updates the PlmBomline identified by `id`. Provide the unified PlmBomline fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchPlmBomlineResponse>} - The async response
+     */
+    public CompletableFuture<PatchPlmBomlineResponse> patchPlmBomline(@Nonnull PatchPlmBomlineRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchPlmBomlineRequest, PatchPlmBomlineResponse> operation
-              = new PatchPlmBomline.Async(sdkConfiguration, _headers);
+              = new PatchPlmBomline.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -198,8 +260,21 @@ public class AsyncBomline {
      * @return {@code CompletableFuture<RemovePlmBomlineResponse>} - The async response
      */
     public CompletableFuture<RemovePlmBomlineResponse> removePlmBomline(@Nonnull RemovePlmBomlineRequest request) {
+        return removePlmBomline(request, null);
+    }
+
+    /**
+     * Remove a bomline
+     * 
+     * <p>Deletes the PlmBomline identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemovePlmBomlineResponse>} - The async response
+     */
+    public CompletableFuture<RemovePlmBomlineResponse> removePlmBomline(@Nonnull RemovePlmBomlineRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemovePlmBomlineRequest, RemovePlmBomlineResponse> operation
-              = new RemovePlmBomline.Async(sdkConfiguration, _headers);
+              = new RemovePlmBomline.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -227,8 +302,22 @@ public class AsyncBomline {
      * @return {@code CompletableFuture<UpdatePlmBomlineResponse>} - The async response
      */
     public CompletableFuture<UpdatePlmBomlineResponse> updatePlmBomline(@Nonnull UpdatePlmBomlineRequest request) {
+        return updatePlmBomline(request, null);
+    }
+
+    /**
+     * Update a bomline
+     * 
+     * <p>Updates the PlmBomline identified by `id`. Provide the unified PlmBomline fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdatePlmBomlineResponse>} - The async response
+     */
+    public CompletableFuture<UpdatePlmBomlineResponse> updatePlmBomline(@Nonnull UpdatePlmBomlineRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdatePlmBomlineRequest, UpdatePlmBomlineResponse> operation
-              = new UpdatePlmBomline.Async(sdkConfiguration, _headers);
+              = new UpdatePlmBomline.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.GetPaymentPayoutRequest;
 import to.unified.unified_java_sdk.models.operations.GetPaymentPayoutRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetPaymentPayoutResponse;
@@ -15,6 +16,7 @@ import to.unified.unified_java_sdk.models.operations.ListPaymentPayoutsResponse;
 import to.unified.unified_java_sdk.operations.GetPaymentPayout;
 import to.unified.unified_java_sdk.operations.ListPaymentPayouts;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Payout {
@@ -59,8 +61,23 @@ public class Payout {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetPaymentPayoutResponse getPaymentPayout(@Nonnull GetPaymentPayoutRequest request) {
+        return getPaymentPayout(request, null);
+    }
+
+    /**
+     * Retrieve a payout
+     * 
+     * <p>Retrieves a single PaymentPayout by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetPaymentPayoutResponse getPaymentPayout(@Nonnull GetPaymentPayoutRequest request, @Nullable Options options) {
         RequestOperation<GetPaymentPayoutRequest, GetPaymentPayoutResponse> operation
-              = new GetPaymentPayout.Sync(sdkConfiguration, _headers);
+              = new GetPaymentPayout.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -95,8 +112,27 @@ public class Payout {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListPaymentPayoutsResponse listPaymentPayouts(@Nonnull ListPaymentPayoutsRequest request) {
+        return listPaymentPayouts(request, null);
+    }
+
+    /**
+     * List all payouts
+     * 
+     * <p>Returns a list of PaymentPayouts. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListPaymentPayoutsResponse listPaymentPayouts(@Nonnull ListPaymentPayoutsRequest request, @Nullable Options options) {
         RequestOperation<ListPaymentPayoutsRequest, ListPaymentPayoutsResponse> operation
-              = new ListPaymentPayouts.Sync(sdkConfiguration, _headers);
+              = new ListPaymentPayouts.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

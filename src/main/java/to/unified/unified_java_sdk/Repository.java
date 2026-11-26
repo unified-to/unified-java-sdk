@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateRepoRepositoryRequest;
 import to.unified.unified_java_sdk.models.operations.CreateRepoRepositoryRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateRepoRepositoryResponse;
@@ -31,6 +32,7 @@ import to.unified.unified_java_sdk.operations.PatchRepoRepository;
 import to.unified.unified_java_sdk.operations.RemoveRepoRepository;
 import to.unified.unified_java_sdk.operations.UpdateRepoRepository;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Repository {
@@ -75,8 +77,23 @@ public class Repository {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateRepoRepositoryResponse createRepoRepository(@Nonnull CreateRepoRepositoryRequest request) {
+        return createRepoRepository(request, null);
+    }
+
+    /**
+     * Create a repository
+     * 
+     * <p>Creates a RepoRepository. Provide the unified RepoRepository fields in the request body; they are
+     * mapped to the provider's API. Returns the created RepoRepository.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateRepoRepositoryResponse createRepoRepository(@Nonnull CreateRepoRepositoryRequest request, @Nullable Options options) {
         RequestOperation<CreateRepoRepositoryRequest, CreateRepoRepositoryResponse> operation
-              = new CreateRepoRepository.Sync(sdkConfiguration, _headers);
+              = new CreateRepoRepository.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -103,8 +120,23 @@ public class Repository {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetRepoRepositoryResponse getRepoRepository(@Nonnull GetRepoRepositoryRequest request) {
+        return getRepoRepository(request, null);
+    }
+
+    /**
+     * Retrieve a repository
+     * 
+     * <p>Retrieves a single RepoRepository by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetRepoRepositoryResponse getRepoRepository(@Nonnull GetRepoRepositoryRequest request, @Nullable Options options) {
         RequestOperation<GetRepoRepositoryRequest, GetRepoRepositoryResponse> operation
-              = new GetRepoRepository.Sync(sdkConfiguration, _headers);
+              = new GetRepoRepository.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -139,8 +171,27 @@ public class Repository {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListRepoRepositoriesResponse listRepoRepositories(@Nonnull ListRepoRepositoriesRequest request) {
+        return listRepoRepositories(request, null);
+    }
+
+    /**
+     * List all repositories
+     * 
+     * <p>Returns a list of RepoRepositories. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListRepoRepositoriesResponse listRepoRepositories(@Nonnull ListRepoRepositoriesRequest request, @Nullable Options options) {
         RequestOperation<ListRepoRepositoriesRequest, ListRepoRepositoriesResponse> operation
-              = new ListRepoRepositories.Sync(sdkConfiguration, _headers);
+              = new ListRepoRepositories.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +218,23 @@ public class Repository {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchRepoRepositoryResponse patchRepoRepository(@Nonnull PatchRepoRepositoryRequest request) {
+        return patchRepoRepository(request, null);
+    }
+
+    /**
+     * Update a repository
+     * 
+     * <p>Updates the RepoRepository identified by `id`. Provide the unified RepoRepository fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchRepoRepositoryResponse patchRepoRepository(@Nonnull PatchRepoRepositoryRequest request, @Nullable Options options) {
         RequestOperation<PatchRepoRepositoryRequest, PatchRepoRepositoryResponse> operation
-              = new PatchRepoRepository.Sync(sdkConfiguration, _headers);
+              = new PatchRepoRepository.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -193,8 +259,22 @@ public class Repository {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveRepoRepositoryResponse removeRepoRepository(@Nonnull RemoveRepoRepositoryRequest request) {
+        return removeRepoRepository(request, null);
+    }
+
+    /**
+     * Remove a repository
+     * 
+     * <p>Deletes the RepoRepository identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveRepoRepositoryResponse removeRepoRepository(@Nonnull RemoveRepoRepositoryRequest request, @Nullable Options options) {
         RequestOperation<RemoveRepoRepositoryRequest, RemoveRepoRepositoryResponse> operation
-              = new RemoveRepoRepository.Sync(sdkConfiguration, _headers);
+              = new RemoveRepoRepository.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -221,8 +301,23 @@ public class Repository {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateRepoRepositoryResponse updateRepoRepository(@Nonnull UpdateRepoRepositoryRequest request) {
+        return updateRepoRepository(request, null);
+    }
+
+    /**
+     * Update a repository
+     * 
+     * <p>Updates the RepoRepository identified by `id`. Provide the unified RepoRepository fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateRepoRepositoryResponse updateRepoRepository(@Nonnull UpdateRepoRepositoryRequest request, @Nullable Options options) {
         RequestOperation<UpdateRepoRepositoryRequest, UpdateRepoRepositoryResponse> operation
-              = new UpdateRepoRepository.Sync(sdkConfiguration, _headers);
+              = new UpdateRepoRepository.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

@@ -6,19 +6,29 @@ package to.unified.unified_java_sdk.models.operations;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.shared.SecretsManager;
 import to.unified.unified_java_sdk.operations.CreateUnifiedSecretsmanager;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class CreateUnifiedSecretsmanagerRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private SecretsManager request;
+    private final Options.Builder optionsBuilder;
 
     public CreateUnifiedSecretsmanagerRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public CreateUnifiedSecretsmanagerRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public CreateUnifiedSecretsmanagerRequestBuilder request(@Nonnull SecretsManager request) {
@@ -43,8 +53,9 @@ public class CreateUnifiedSecretsmanagerRequestBuilder {
     * @return The response from the server.
     */
     public CreateUnifiedSecretsmanagerResponse call() {
+        Options options = optionsBuilder.build();
         RequestOperation<SecretsManager, CreateUnifiedSecretsmanagerResponse> operation
-              = new CreateUnifiedSecretsmanager.Sync(sdkConfiguration, _headers);
+              = new CreateUnifiedSecretsmanager.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

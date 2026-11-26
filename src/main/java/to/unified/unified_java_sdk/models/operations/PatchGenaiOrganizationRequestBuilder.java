@@ -6,18 +6,28 @@ package to.unified.unified_java_sdk.models.operations;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.PatchGenaiOrganization;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class PatchGenaiOrganizationRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private PatchGenaiOrganizationRequest request;
+    private final Options.Builder optionsBuilder;
 
     public PatchGenaiOrganizationRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public PatchGenaiOrganizationRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public PatchGenaiOrganizationRequestBuilder request(@Nonnull PatchGenaiOrganizationRequest request) {
@@ -42,8 +52,9 @@ public class PatchGenaiOrganizationRequestBuilder {
     * @return The response from the server.
     */
     public PatchGenaiOrganizationResponse call() {
+        Options options = optionsBuilder.build();
         RequestOperation<PatchGenaiOrganizationRequest, PatchGenaiOrganizationResponse> operation
-              = new PatchGenaiOrganization.Sync(sdkConfiguration, _headers);
+              = new PatchGenaiOrganization.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.GetAccountingTrialbalanceRequest;
 import to.unified.unified_java_sdk.models.operations.GetAccountingTrialbalanceRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetAccountingTrialbalanceResponse;
@@ -15,6 +16,7 @@ import to.unified.unified_java_sdk.models.operations.ListAccountingTrialbalances
 import to.unified.unified_java_sdk.operations.GetAccountingTrialbalance;
 import to.unified.unified_java_sdk.operations.ListAccountingTrialbalances;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Trialbalance {
@@ -59,8 +61,23 @@ public class Trialbalance {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAccountingTrialbalanceResponse getAccountingTrialbalance(@Nonnull GetAccountingTrialbalanceRequest request) {
+        return getAccountingTrialbalance(request, null);
+    }
+
+    /**
+     * Retrieve a trialbalance
+     * 
+     * <p>Retrieves a single AccountingTrialbalance by its `id`. Obtain `id` values from the corresponding
+     * list endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAccountingTrialbalanceResponse getAccountingTrialbalance(@Nonnull GetAccountingTrialbalanceRequest request, @Nullable Options options) {
         RequestOperation<GetAccountingTrialbalanceRequest, GetAccountingTrialbalanceResponse> operation
-              = new GetAccountingTrialbalance.Sync(sdkConfiguration, _headers);
+              = new GetAccountingTrialbalance.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -95,8 +112,27 @@ public class Trialbalance {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAccountingTrialbalancesResponse listAccountingTrialbalances(@Nonnull ListAccountingTrialbalancesRequest request) {
+        return listAccountingTrialbalances(request, null);
+    }
+
+    /**
+     * List all trialbalances
+     * 
+     * <p>Returns a list of AccountingTrialbalances. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAccountingTrialbalancesResponse listAccountingTrialbalances(@Nonnull ListAccountingTrialbalancesRequest request, @Nullable Options options) {
         RequestOperation<ListAccountingTrialbalancesRequest, ListAccountingTrialbalancesResponse> operation
-              = new ListAccountingTrialbalances.Sync(sdkConfiguration, _headers);
+              = new ListAccountingTrialbalances.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

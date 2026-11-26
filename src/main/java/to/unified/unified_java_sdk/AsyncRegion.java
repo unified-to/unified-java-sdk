@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.GetComputeRegionRequest;
 import to.unified.unified_java_sdk.models.operations.ListComputeRegionsRequest;
@@ -16,6 +17,7 @@ import to.unified.unified_java_sdk.models.operations.async.ListComputeRegionsRes
 import to.unified.unified_java_sdk.operations.GetComputeRegion;
 import to.unified.unified_java_sdk.operations.ListComputeRegions;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncRegion {
@@ -60,8 +62,22 @@ public class AsyncRegion {
      * @return {@code CompletableFuture<GetComputeRegionResponse>} - The async response
      */
     public CompletableFuture<GetComputeRegionResponse> getComputeRegion(@Nonnull GetComputeRegionRequest request) {
+        return getComputeRegion(request, null);
+    }
+
+    /**
+     * Retrieve a region
+     * 
+     * <p>Retrieves a single ComputeRegion by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetComputeRegionResponse>} - The async response
+     */
+    public CompletableFuture<GetComputeRegionResponse> getComputeRegion(@Nonnull GetComputeRegionRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetComputeRegionRequest, GetComputeRegionResponse> operation
-              = new GetComputeRegion.Async(sdkConfiguration, _headers);
+              = new GetComputeRegion.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -97,8 +113,26 @@ public class AsyncRegion {
      * @return {@code CompletableFuture<ListComputeRegionsResponse>} - The async response
      */
     public CompletableFuture<ListComputeRegionsResponse> listComputeRegions(@Nonnull ListComputeRegionsRequest request) {
+        return listComputeRegions(request, null);
+    }
+
+    /**
+     * List all regions
+     * 
+     * <p>Returns a list of ComputeRegions. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListComputeRegionsResponse>} - The async response
+     */
+    public CompletableFuture<ListComputeRegionsResponse> listComputeRegions(@Nonnull ListComputeRegionsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListComputeRegionsRequest, ListComputeRegionsResponse> operation
-              = new ListComputeRegions.Async(sdkConfiguration, _headers);
+              = new ListComputeRegions.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

@@ -6,20 +6,30 @@ package to.unified.unified_java_sdk.models.operations.async;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.UpdateHealthcareAppointmentRequest;
 import to.unified.unified_java_sdk.operations.UpdateHealthcareAppointment;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class UpdateHealthcareAppointmentRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private UpdateHealthcareAppointmentRequest request;
+    private final Options.Builder optionsBuilder;
 
     public UpdateHealthcareAppointmentRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public UpdateHealthcareAppointmentRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public UpdateHealthcareAppointmentRequestBuilder request(@Nonnull UpdateHealthcareAppointmentRequest request) {
@@ -44,8 +54,9 @@ public class UpdateHealthcareAppointmentRequestBuilder {
     * @return The response from the server.
     */
     public CompletableFuture<UpdateHealthcareAppointmentResponse> call() {
+        Options options = optionsBuilder.build();
         AsyncRequestOperation<UpdateHealthcareAppointmentRequest, UpdateHealthcareAppointmentResponse> operation
-              = new UpdateHealthcareAppointment.Async(sdkConfiguration, _headers);
+              = new UpdateHealthcareAppointment.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

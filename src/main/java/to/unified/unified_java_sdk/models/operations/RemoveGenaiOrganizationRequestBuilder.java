@@ -6,18 +6,28 @@ package to.unified.unified_java_sdk.models.operations;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.RemoveGenaiOrganization;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveGenaiOrganizationRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private RemoveGenaiOrganizationRequest request;
+    private final Options.Builder optionsBuilder;
 
     public RemoveGenaiOrganizationRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public RemoveGenaiOrganizationRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public RemoveGenaiOrganizationRequestBuilder request(@Nonnull RemoveGenaiOrganizationRequest request) {
@@ -42,8 +52,9 @@ public class RemoveGenaiOrganizationRequestBuilder {
     * @return The response from the server.
     */
     public RemoveGenaiOrganizationResponse call() {
+        Options options = optionsBuilder.build();
         RequestOperation<RemoveGenaiOrganizationRequest, RemoveGenaiOrganizationResponse> operation
-              = new RemoveGenaiOrganization.Sync(sdkConfiguration, _headers);
+              = new RemoveGenaiOrganization.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

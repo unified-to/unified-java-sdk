@@ -6,18 +6,28 @@ package to.unified.unified_java_sdk.models.operations;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.PatchHrisBankaccount;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class PatchHrisBankaccountRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private PatchHrisBankaccountRequest request;
+    private final Options.Builder optionsBuilder;
 
     public PatchHrisBankaccountRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public PatchHrisBankaccountRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public PatchHrisBankaccountRequestBuilder request(@Nonnull PatchHrisBankaccountRequest request) {
@@ -42,8 +52,9 @@ public class PatchHrisBankaccountRequestBuilder {
     * @return The response from the server.
     */
     public PatchHrisBankaccountResponse call() {
+        Options options = optionsBuilder.build();
         RequestOperation<PatchHrisBankaccountRequest, PatchHrisBankaccountResponse> operation
-              = new PatchHrisBankaccount.Sync(sdkConfiguration, _headers);
+              = new PatchHrisBankaccount.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingExpensereportRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingExpensereportRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingExpensereportResponse;
@@ -31,6 +32,7 @@ import to.unified.unified_java_sdk.operations.PatchAccountingExpensereport;
 import to.unified.unified_java_sdk.operations.RemoveAccountingExpensereport;
 import to.unified.unified_java_sdk.operations.UpdateAccountingExpensereport;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Expensereport {
@@ -75,8 +77,23 @@ public class Expensereport {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateAccountingExpensereportResponse createAccountingExpensereport(@Nonnull CreateAccountingExpensereportRequest request) {
+        return createAccountingExpensereport(request, null);
+    }
+
+    /**
+     * Create an expensereport
+     * 
+     * <p>Creates a AccountingExpensereport. Provide the unified AccountingExpensereport fields in the request
+     * body; they are mapped to the provider's API. Returns the created AccountingExpensereport.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateAccountingExpensereportResponse createAccountingExpensereport(@Nonnull CreateAccountingExpensereportRequest request, @Nullable Options options) {
         RequestOperation<CreateAccountingExpensereportRequest, CreateAccountingExpensereportResponse> operation
-              = new CreateAccountingExpensereport.Sync(sdkConfiguration, _headers);
+              = new CreateAccountingExpensereport.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -103,8 +120,23 @@ public class Expensereport {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAccountingExpensereportResponse getAccountingExpensereport(@Nonnull GetAccountingExpensereportRequest request) {
+        return getAccountingExpensereport(request, null);
+    }
+
+    /**
+     * Retrieve an expensereport
+     * 
+     * <p>Retrieves a single AccountingExpensereport by its `id`. Obtain `id` values from the corresponding
+     * list endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAccountingExpensereportResponse getAccountingExpensereport(@Nonnull GetAccountingExpensereportRequest request, @Nullable Options options) {
         RequestOperation<GetAccountingExpensereportRequest, GetAccountingExpensereportResponse> operation
-              = new GetAccountingExpensereport.Sync(sdkConfiguration, _headers);
+              = new GetAccountingExpensereport.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -139,8 +171,27 @@ public class Expensereport {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAccountingExpensereportsResponse listAccountingExpensereports(@Nonnull ListAccountingExpensereportsRequest request) {
+        return listAccountingExpensereports(request, null);
+    }
+
+    /**
+     * List all expensereports
+     * 
+     * <p>Returns a list of AccountingExpensereports. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAccountingExpensereportsResponse listAccountingExpensereports(@Nonnull ListAccountingExpensereportsRequest request, @Nullable Options options) {
         RequestOperation<ListAccountingExpensereportsRequest, ListAccountingExpensereportsResponse> operation
-              = new ListAccountingExpensereports.Sync(sdkConfiguration, _headers);
+              = new ListAccountingExpensereports.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +218,23 @@ public class Expensereport {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchAccountingExpensereportResponse patchAccountingExpensereport(@Nonnull PatchAccountingExpensereportRequest request) {
+        return patchAccountingExpensereport(request, null);
+    }
+
+    /**
+     * Update an expensereport
+     * 
+     * <p>Updates the AccountingExpensereport identified by `id`. Provide the unified AccountingExpensereport
+     * fields to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchAccountingExpensereportResponse patchAccountingExpensereport(@Nonnull PatchAccountingExpensereportRequest request, @Nullable Options options) {
         RequestOperation<PatchAccountingExpensereportRequest, PatchAccountingExpensereportResponse> operation
-              = new PatchAccountingExpensereport.Sync(sdkConfiguration, _headers);
+              = new PatchAccountingExpensereport.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -193,8 +259,22 @@ public class Expensereport {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveAccountingExpensereportResponse removeAccountingExpensereport(@Nonnull RemoveAccountingExpensereportRequest request) {
+        return removeAccountingExpensereport(request, null);
+    }
+
+    /**
+     * Remove an expensereport
+     * 
+     * <p>Deletes the AccountingExpensereport identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveAccountingExpensereportResponse removeAccountingExpensereport(@Nonnull RemoveAccountingExpensereportRequest request, @Nullable Options options) {
         RequestOperation<RemoveAccountingExpensereportRequest, RemoveAccountingExpensereportResponse> operation
-              = new RemoveAccountingExpensereport.Sync(sdkConfiguration, _headers);
+              = new RemoveAccountingExpensereport.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -221,8 +301,23 @@ public class Expensereport {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateAccountingExpensereportResponse updateAccountingExpensereport(@Nonnull UpdateAccountingExpensereportRequest request) {
+        return updateAccountingExpensereport(request, null);
+    }
+
+    /**
+     * Update an expensereport
+     * 
+     * <p>Updates the AccountingExpensereport identified by `id`. Provide the unified AccountingExpensereport
+     * fields to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateAccountingExpensereportResponse updateAccountingExpensereport(@Nonnull UpdateAccountingExpensereportRequest request, @Nullable Options options) {
         RequestOperation<UpdateAccountingExpensereportRequest, UpdateAccountingExpensereportResponse> operation
-              = new UpdateAccountingExpensereport.Sync(sdkConfiguration, _headers);
+              = new UpdateAccountingExpensereport.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

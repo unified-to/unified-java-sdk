@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingTaxrateRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingTaxrateRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingTaxrateResponse;
@@ -31,6 +32,7 @@ import to.unified.unified_java_sdk.operations.PatchAccountingTaxrate;
 import to.unified.unified_java_sdk.operations.RemoveAccountingTaxrate;
 import to.unified.unified_java_sdk.operations.UpdateAccountingTaxrate;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Taxrate {
@@ -75,8 +77,23 @@ public class Taxrate {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateAccountingTaxrateResponse createAccountingTaxrate(@Nonnull CreateAccountingTaxrateRequest request) {
+        return createAccountingTaxrate(request, null);
+    }
+
+    /**
+     * Create a taxrate
+     * 
+     * <p>Creates a AccountingTaxrate. Provide the unified AccountingTaxrate fields in the request body; they
+     * are mapped to the provider's API. Returns the created AccountingTaxrate.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateAccountingTaxrateResponse createAccountingTaxrate(@Nonnull CreateAccountingTaxrateRequest request, @Nullable Options options) {
         RequestOperation<CreateAccountingTaxrateRequest, CreateAccountingTaxrateResponse> operation
-              = new CreateAccountingTaxrate.Sync(sdkConfiguration, _headers);
+              = new CreateAccountingTaxrate.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -103,8 +120,23 @@ public class Taxrate {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAccountingTaxrateResponse getAccountingTaxrate(@Nonnull GetAccountingTaxrateRequest request) {
+        return getAccountingTaxrate(request, null);
+    }
+
+    /**
+     * Retrieve a taxrate
+     * 
+     * <p>Retrieves a single AccountingTaxrate by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAccountingTaxrateResponse getAccountingTaxrate(@Nonnull GetAccountingTaxrateRequest request, @Nullable Options options) {
         RequestOperation<GetAccountingTaxrateRequest, GetAccountingTaxrateResponse> operation
-              = new GetAccountingTaxrate.Sync(sdkConfiguration, _headers);
+              = new GetAccountingTaxrate.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -139,8 +171,27 @@ public class Taxrate {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAccountingTaxratesResponse listAccountingTaxrates(@Nonnull ListAccountingTaxratesRequest request) {
+        return listAccountingTaxrates(request, null);
+    }
+
+    /**
+     * List all taxrates
+     * 
+     * <p>Returns a list of AccountingTaxrates. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAccountingTaxratesResponse listAccountingTaxrates(@Nonnull ListAccountingTaxratesRequest request, @Nullable Options options) {
         RequestOperation<ListAccountingTaxratesRequest, ListAccountingTaxratesResponse> operation
-              = new ListAccountingTaxrates.Sync(sdkConfiguration, _headers);
+              = new ListAccountingTaxrates.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +218,23 @@ public class Taxrate {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchAccountingTaxrateResponse patchAccountingTaxrate(@Nonnull PatchAccountingTaxrateRequest request) {
+        return patchAccountingTaxrate(request, null);
+    }
+
+    /**
+     * Update a taxrate
+     * 
+     * <p>Updates the AccountingTaxrate identified by `id`. Provide the unified AccountingTaxrate fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchAccountingTaxrateResponse patchAccountingTaxrate(@Nonnull PatchAccountingTaxrateRequest request, @Nullable Options options) {
         RequestOperation<PatchAccountingTaxrateRequest, PatchAccountingTaxrateResponse> operation
-              = new PatchAccountingTaxrate.Sync(sdkConfiguration, _headers);
+              = new PatchAccountingTaxrate.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -193,8 +259,22 @@ public class Taxrate {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveAccountingTaxrateResponse removeAccountingTaxrate(@Nonnull RemoveAccountingTaxrateRequest request) {
+        return removeAccountingTaxrate(request, null);
+    }
+
+    /**
+     * Remove a taxrate
+     * 
+     * <p>Deletes the AccountingTaxrate identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveAccountingTaxrateResponse removeAccountingTaxrate(@Nonnull RemoveAccountingTaxrateRequest request, @Nullable Options options) {
         RequestOperation<RemoveAccountingTaxrateRequest, RemoveAccountingTaxrateResponse> operation
-              = new RemoveAccountingTaxrate.Sync(sdkConfiguration, _headers);
+              = new RemoveAccountingTaxrate.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -221,8 +301,23 @@ public class Taxrate {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateAccountingTaxrateResponse updateAccountingTaxrate(@Nonnull UpdateAccountingTaxrateRequest request) {
+        return updateAccountingTaxrate(request, null);
+    }
+
+    /**
+     * Update a taxrate
+     * 
+     * <p>Updates the AccountingTaxrate identified by `id`. Provide the unified AccountingTaxrate fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateAccountingTaxrateResponse updateAccountingTaxrate(@Nonnull UpdateAccountingTaxrateRequest request, @Nullable Options options) {
         RequestOperation<UpdateAccountingTaxrateRequest, UpdateAccountingTaxrateResponse> operation
-              = new UpdateAccountingTaxrate.Sync(sdkConfiguration, _headers);
+              = new UpdateAccountingTaxrate.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

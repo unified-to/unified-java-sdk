@@ -6,18 +6,28 @@ package to.unified.unified_java_sdk.models.operations;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.GetCalendarRoom;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetCalendarRoomRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private GetCalendarRoomRequest request;
+    private final Options.Builder optionsBuilder;
 
     public GetCalendarRoomRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public GetCalendarRoomRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public GetCalendarRoomRequestBuilder request(@Nonnull GetCalendarRoomRequest request) {
@@ -42,8 +52,9 @@ public class GetCalendarRoomRequestBuilder {
     * @return The response from the server.
     */
     public GetCalendarRoomResponse call() {
+        Options options = optionsBuilder.build();
         RequestOperation<GetCalendarRoomRequest, GetCalendarRoomResponse> operation
-              = new GetCalendarRoom.Sync(sdkConfiguration, _headers);
+              = new GetCalendarRoom.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

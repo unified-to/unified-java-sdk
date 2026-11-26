@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateLegalMatterRequest;
 import to.unified.unified_java_sdk.models.operations.CreateLegalMatterRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateLegalMatterResponse;
@@ -31,6 +32,7 @@ import to.unified.unified_java_sdk.operations.PatchLegalMatter;
 import to.unified.unified_java_sdk.operations.RemoveLegalMatter;
 import to.unified.unified_java_sdk.operations.UpdateLegalMatter;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Matter {
@@ -75,8 +77,23 @@ public class Matter {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateLegalMatterResponse createLegalMatter(@Nonnull CreateLegalMatterRequest request) {
+        return createLegalMatter(request, null);
+    }
+
+    /**
+     * Create a matter
+     * 
+     * <p>Creates a LegalMatter. Provide the unified LegalMatter fields in the request body; they are mapped
+     * to the provider's API. Returns the created LegalMatter.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateLegalMatterResponse createLegalMatter(@Nonnull CreateLegalMatterRequest request, @Nullable Options options) {
         RequestOperation<CreateLegalMatterRequest, CreateLegalMatterResponse> operation
-              = new CreateLegalMatter.Sync(sdkConfiguration, _headers);
+              = new CreateLegalMatter.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -103,8 +120,23 @@ public class Matter {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetLegalMatterResponse getLegalMatter(@Nonnull GetLegalMatterRequest request) {
+        return getLegalMatter(request, null);
+    }
+
+    /**
+     * Retrieve a matter
+     * 
+     * <p>Retrieves a single LegalMatter by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetLegalMatterResponse getLegalMatter(@Nonnull GetLegalMatterRequest request, @Nullable Options options) {
         RequestOperation<GetLegalMatterRequest, GetLegalMatterResponse> operation
-              = new GetLegalMatter.Sync(sdkConfiguration, _headers);
+              = new GetLegalMatter.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -139,8 +171,27 @@ public class Matter {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListLegalMattersResponse listLegalMatters(@Nonnull ListLegalMattersRequest request) {
+        return listLegalMatters(request, null);
+    }
+
+    /**
+     * List all matters
+     * 
+     * <p>Returns a list of LegalMatters. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListLegalMattersResponse listLegalMatters(@Nonnull ListLegalMattersRequest request, @Nullable Options options) {
         RequestOperation<ListLegalMattersRequest, ListLegalMattersResponse> operation
-              = new ListLegalMatters.Sync(sdkConfiguration, _headers);
+              = new ListLegalMatters.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +218,23 @@ public class Matter {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchLegalMatterResponse patchLegalMatter(@Nonnull PatchLegalMatterRequest request) {
+        return patchLegalMatter(request, null);
+    }
+
+    /**
+     * Update a matter
+     * 
+     * <p>Updates the LegalMatter identified by `id`. Provide the unified LegalMatter fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchLegalMatterResponse patchLegalMatter(@Nonnull PatchLegalMatterRequest request, @Nullable Options options) {
         RequestOperation<PatchLegalMatterRequest, PatchLegalMatterResponse> operation
-              = new PatchLegalMatter.Sync(sdkConfiguration, _headers);
+              = new PatchLegalMatter.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -193,8 +259,22 @@ public class Matter {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveLegalMatterResponse removeLegalMatter(@Nonnull RemoveLegalMatterRequest request) {
+        return removeLegalMatter(request, null);
+    }
+
+    /**
+     * Remove a matter
+     * 
+     * <p>Deletes the LegalMatter identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveLegalMatterResponse removeLegalMatter(@Nonnull RemoveLegalMatterRequest request, @Nullable Options options) {
         RequestOperation<RemoveLegalMatterRequest, RemoveLegalMatterResponse> operation
-              = new RemoveLegalMatter.Sync(sdkConfiguration, _headers);
+              = new RemoveLegalMatter.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -221,8 +301,23 @@ public class Matter {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateLegalMatterResponse updateLegalMatter(@Nonnull UpdateLegalMatterRequest request) {
+        return updateLegalMatter(request, null);
+    }
+
+    /**
+     * Update a matter
+     * 
+     * <p>Updates the LegalMatter identified by `id`. Provide the unified LegalMatter fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateLegalMatterResponse updateLegalMatter(@Nonnull UpdateLegalMatterRequest request, @Nullable Options options) {
         RequestOperation<UpdateLegalMatterRequest, UpdateLegalMatterResponse> operation
-              = new UpdateLegalMatter.Sync(sdkConfiguration, _headers);
+              = new UpdateLegalMatter.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

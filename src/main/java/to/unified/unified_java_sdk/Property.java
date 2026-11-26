@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateAnalyticsPropertyRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAnalyticsPropertyRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateAnalyticsPropertyResponse;
@@ -147,6 +148,7 @@ import to.unified.unified_java_sdk.operations.UpdatePropertyListing;
 import to.unified.unified_java_sdk.operations.UpdatePropertyReservation;
 import to.unified.unified_java_sdk.operations.UpdatePropertyReview;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Property {
@@ -191,8 +193,23 @@ public class Property {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateAnalyticsPropertyResponse createAnalyticsProperty(@Nonnull CreateAnalyticsPropertyRequest request) {
+        return createAnalyticsProperty(request, null);
+    }
+
+    /**
+     * Create a property
+     * 
+     * <p>Creates a AnalyticsProperty. Provide the unified AnalyticsProperty fields in the request body; they
+     * are mapped to the provider's API. Returns the created AnalyticsProperty.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateAnalyticsPropertyResponse createAnalyticsProperty(@Nonnull CreateAnalyticsPropertyRequest request, @Nullable Options options) {
         RequestOperation<CreateAnalyticsPropertyRequest, CreateAnalyticsPropertyResponse> operation
-              = new CreateAnalyticsProperty.Sync(sdkConfiguration, _headers);
+              = new CreateAnalyticsProperty.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -219,8 +236,23 @@ public class Property {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreatePropertyConversationResponse createPropertyConversation(@Nonnull CreatePropertyConversationRequest request) {
+        return createPropertyConversation(request, null);
+    }
+
+    /**
+     * Create a conversation
+     * 
+     * <p>Creates a PropertyConversation. Provide the unified PropertyConversation fields in the request body;
+     * they are mapped to the provider's API. Returns the created PropertyConversation.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreatePropertyConversationResponse createPropertyConversation(@Nonnull CreatePropertyConversationRequest request, @Nullable Options options) {
         RequestOperation<CreatePropertyConversationRequest, CreatePropertyConversationResponse> operation
-              = new CreatePropertyConversation.Sync(sdkConfiguration, _headers);
+              = new CreatePropertyConversation.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -247,8 +279,23 @@ public class Property {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreatePropertyGuestResponse createPropertyGuest(@Nonnull CreatePropertyGuestRequest request) {
+        return createPropertyGuest(request, null);
+    }
+
+    /**
+     * Create a guest
+     * 
+     * <p>Creates a PropertyGuest. Provide the unified PropertyGuest fields in the request body; they are
+     * mapped to the provider's API. Returns the created PropertyGuest.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreatePropertyGuestResponse createPropertyGuest(@Nonnull CreatePropertyGuestRequest request, @Nullable Options options) {
         RequestOperation<CreatePropertyGuestRequest, CreatePropertyGuestResponse> operation
-              = new CreatePropertyGuest.Sync(sdkConfiguration, _headers);
+              = new CreatePropertyGuest.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -275,8 +322,23 @@ public class Property {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreatePropertyListingResponse createPropertyListing(@Nonnull CreatePropertyListingRequest request) {
+        return createPropertyListing(request, null);
+    }
+
+    /**
+     * Create a listing
+     * 
+     * <p>Creates a PropertyListing. Provide the unified PropertyListing fields in the request body; they are
+     * mapped to the provider's API. Returns the created PropertyListing.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreatePropertyListingResponse createPropertyListing(@Nonnull CreatePropertyListingRequest request, @Nullable Options options) {
         RequestOperation<CreatePropertyListingRequest, CreatePropertyListingResponse> operation
-              = new CreatePropertyListing.Sync(sdkConfiguration, _headers);
+              = new CreatePropertyListing.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -303,8 +365,23 @@ public class Property {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreatePropertyQuoteResponse createPropertyQuote(@Nonnull CreatePropertyQuoteRequest request) {
+        return createPropertyQuote(request, null);
+    }
+
+    /**
+     * Create a quote
+     * 
+     * <p>Creates a PropertyQuote. Provide the unified PropertyQuote fields in the request body; they are
+     * mapped to the provider's API. Returns the created PropertyQuote.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreatePropertyQuoteResponse createPropertyQuote(@Nonnull CreatePropertyQuoteRequest request, @Nullable Options options) {
         RequestOperation<CreatePropertyQuoteRequest, CreatePropertyQuoteResponse> operation
-              = new CreatePropertyQuote.Sync(sdkConfiguration, _headers);
+              = new CreatePropertyQuote.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -331,8 +408,23 @@ public class Property {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreatePropertyReservationResponse createPropertyReservation(@Nonnull CreatePropertyReservationRequest request) {
+        return createPropertyReservation(request, null);
+    }
+
+    /**
+     * Create a reservation
+     * 
+     * <p>Creates a PropertyReservation. Provide the unified PropertyReservation fields in the request body;
+     * they are mapped to the provider's API. Returns the created PropertyReservation.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreatePropertyReservationResponse createPropertyReservation(@Nonnull CreatePropertyReservationRequest request, @Nullable Options options) {
         RequestOperation<CreatePropertyReservationRequest, CreatePropertyReservationResponse> operation
-              = new CreatePropertyReservation.Sync(sdkConfiguration, _headers);
+              = new CreatePropertyReservation.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -359,8 +451,23 @@ public class Property {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAnalyticsPropertyResponse getAnalyticsProperty(@Nonnull GetAnalyticsPropertyRequest request) {
+        return getAnalyticsProperty(request, null);
+    }
+
+    /**
+     * Retrieve a property
+     * 
+     * <p>Retrieves a single AnalyticsProperty by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAnalyticsPropertyResponse getAnalyticsProperty(@Nonnull GetAnalyticsPropertyRequest request, @Nullable Options options) {
         RequestOperation<GetAnalyticsPropertyRequest, GetAnalyticsPropertyResponse> operation
-              = new GetAnalyticsProperty.Sync(sdkConfiguration, _headers);
+              = new GetAnalyticsProperty.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -387,8 +494,23 @@ public class Property {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetPropertyConversationResponse getPropertyConversation(@Nonnull GetPropertyConversationRequest request) {
+        return getPropertyConversation(request, null);
+    }
+
+    /**
+     * Retrieve a conversation
+     * 
+     * <p>Retrieves a single PropertyConversation by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetPropertyConversationResponse getPropertyConversation(@Nonnull GetPropertyConversationRequest request, @Nullable Options options) {
         RequestOperation<GetPropertyConversationRequest, GetPropertyConversationResponse> operation
-              = new GetPropertyConversation.Sync(sdkConfiguration, _headers);
+              = new GetPropertyConversation.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -415,8 +537,23 @@ public class Property {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetPropertyGuestResponse getPropertyGuest(@Nonnull GetPropertyGuestRequest request) {
+        return getPropertyGuest(request, null);
+    }
+
+    /**
+     * Retrieve a guest
+     * 
+     * <p>Retrieves a single PropertyGuest by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetPropertyGuestResponse getPropertyGuest(@Nonnull GetPropertyGuestRequest request, @Nullable Options options) {
         RequestOperation<GetPropertyGuestRequest, GetPropertyGuestResponse> operation
-              = new GetPropertyGuest.Sync(sdkConfiguration, _headers);
+              = new GetPropertyGuest.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -443,8 +580,23 @@ public class Property {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetPropertyListingResponse getPropertyListing(@Nonnull GetPropertyListingRequest request) {
+        return getPropertyListing(request, null);
+    }
+
+    /**
+     * Retrieve a listing
+     * 
+     * <p>Retrieves a single PropertyListing by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetPropertyListingResponse getPropertyListing(@Nonnull GetPropertyListingRequest request, @Nullable Options options) {
         RequestOperation<GetPropertyListingRequest, GetPropertyListingResponse> operation
-              = new GetPropertyListing.Sync(sdkConfiguration, _headers);
+              = new GetPropertyListing.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -471,8 +623,23 @@ public class Property {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetPropertyReservationResponse getPropertyReservation(@Nonnull GetPropertyReservationRequest request) {
+        return getPropertyReservation(request, null);
+    }
+
+    /**
+     * Retrieve a reservation
+     * 
+     * <p>Retrieves a single PropertyReservation by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetPropertyReservationResponse getPropertyReservation(@Nonnull GetPropertyReservationRequest request, @Nullable Options options) {
         RequestOperation<GetPropertyReservationRequest, GetPropertyReservationResponse> operation
-              = new GetPropertyReservation.Sync(sdkConfiguration, _headers);
+              = new GetPropertyReservation.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -499,8 +666,23 @@ public class Property {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetPropertyReviewResponse getPropertyReview(@Nonnull GetPropertyReviewRequest request) {
+        return getPropertyReview(request, null);
+    }
+
+    /**
+     * Retrieve a review
+     * 
+     * <p>Retrieves a single PropertyReview by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetPropertyReviewResponse getPropertyReview(@Nonnull GetPropertyReviewRequest request, @Nullable Options options) {
         RequestOperation<GetPropertyReviewRequest, GetPropertyReviewResponse> operation
-              = new GetPropertyReview.Sync(sdkConfiguration, _headers);
+              = new GetPropertyReview.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -527,8 +709,23 @@ public class Property {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetPropertyUnittypeResponse getPropertyUnittype(@Nonnull GetPropertyUnittypeRequest request) {
+        return getPropertyUnittype(request, null);
+    }
+
+    /**
+     * Retrieve an unittype
+     * 
+     * <p>Retrieves a single PropertyUnittype by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetPropertyUnittypeResponse getPropertyUnittype(@Nonnull GetPropertyUnittypeRequest request, @Nullable Options options) {
         RequestOperation<GetPropertyUnittypeRequest, GetPropertyUnittypeResponse> operation
-              = new GetPropertyUnittype.Sync(sdkConfiguration, _headers);
+              = new GetPropertyUnittype.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -563,8 +760,27 @@ public class Property {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAnalyticsPropertiesResponse listAnalyticsProperties(@Nonnull ListAnalyticsPropertiesRequest request) {
+        return listAnalyticsProperties(request, null);
+    }
+
+    /**
+     * List all properties
+     * 
+     * <p>Returns a list of AnalyticsProperties. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAnalyticsPropertiesResponse listAnalyticsProperties(@Nonnull ListAnalyticsPropertiesRequest request, @Nullable Options options) {
         RequestOperation<ListAnalyticsPropertiesRequest, ListAnalyticsPropertiesResponse> operation
-              = new ListAnalyticsProperties.Sync(sdkConfiguration, _headers);
+              = new ListAnalyticsProperties.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -599,8 +815,27 @@ public class Property {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListPropertyAvailabilitiesResponse listPropertyAvailabilities(@Nonnull ListPropertyAvailabilitiesRequest request) {
+        return listPropertyAvailabilities(request, null);
+    }
+
+    /**
+     * List all availabilities
+     * 
+     * <p>Returns a list of PropertyAvailabilities. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListPropertyAvailabilitiesResponse listPropertyAvailabilities(@Nonnull ListPropertyAvailabilitiesRequest request, @Nullable Options options) {
         RequestOperation<ListPropertyAvailabilitiesRequest, ListPropertyAvailabilitiesResponse> operation
-              = new ListPropertyAvailabilities.Sync(sdkConfiguration, _headers);
+              = new ListPropertyAvailabilities.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -635,8 +870,27 @@ public class Property {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListPropertyConversationsResponse listPropertyConversations(@Nonnull ListPropertyConversationsRequest request) {
+        return listPropertyConversations(request, null);
+    }
+
+    /**
+     * List all conversations
+     * 
+     * <p>Returns a list of PropertyConversations. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListPropertyConversationsResponse listPropertyConversations(@Nonnull ListPropertyConversationsRequest request, @Nullable Options options) {
         RequestOperation<ListPropertyConversationsRequest, ListPropertyConversationsResponse> operation
-              = new ListPropertyConversations.Sync(sdkConfiguration, _headers);
+              = new ListPropertyConversations.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -671,8 +925,27 @@ public class Property {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListPropertyGuestsResponse listPropertyGuests(@Nonnull ListPropertyGuestsRequest request) {
+        return listPropertyGuests(request, null);
+    }
+
+    /**
+     * List all guests
+     * 
+     * <p>Returns a list of PropertyGuests. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListPropertyGuestsResponse listPropertyGuests(@Nonnull ListPropertyGuestsRequest request, @Nullable Options options) {
         RequestOperation<ListPropertyGuestsRequest, ListPropertyGuestsResponse> operation
-              = new ListPropertyGuests.Sync(sdkConfiguration, _headers);
+              = new ListPropertyGuests.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -707,8 +980,27 @@ public class Property {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListPropertyListingsResponse listPropertyListings(@Nonnull ListPropertyListingsRequest request) {
+        return listPropertyListings(request, null);
+    }
+
+    /**
+     * List all listings
+     * 
+     * <p>Returns a list of PropertyListings. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListPropertyListingsResponse listPropertyListings(@Nonnull ListPropertyListingsRequest request, @Nullable Options options) {
         RequestOperation<ListPropertyListingsRequest, ListPropertyListingsResponse> operation
-              = new ListPropertyListings.Sync(sdkConfiguration, _headers);
+              = new ListPropertyListings.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -743,8 +1035,27 @@ public class Property {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListPropertyReservationsResponse listPropertyReservations(@Nonnull ListPropertyReservationsRequest request) {
+        return listPropertyReservations(request, null);
+    }
+
+    /**
+     * List all reservations
+     * 
+     * <p>Returns a list of PropertyReservations. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListPropertyReservationsResponse listPropertyReservations(@Nonnull ListPropertyReservationsRequest request, @Nullable Options options) {
         RequestOperation<ListPropertyReservationsRequest, ListPropertyReservationsResponse> operation
-              = new ListPropertyReservations.Sync(sdkConfiguration, _headers);
+              = new ListPropertyReservations.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -779,8 +1090,27 @@ public class Property {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListPropertyReviewsResponse listPropertyReviews(@Nonnull ListPropertyReviewsRequest request) {
+        return listPropertyReviews(request, null);
+    }
+
+    /**
+     * List all reviews
+     * 
+     * <p>Returns a list of PropertyReviews. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListPropertyReviewsResponse listPropertyReviews(@Nonnull ListPropertyReviewsRequest request, @Nullable Options options) {
         RequestOperation<ListPropertyReviewsRequest, ListPropertyReviewsResponse> operation
-              = new ListPropertyReviews.Sync(sdkConfiguration, _headers);
+              = new ListPropertyReviews.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -815,8 +1145,27 @@ public class Property {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListPropertyUnittypesResponse listPropertyUnittypes(@Nonnull ListPropertyUnittypesRequest request) {
+        return listPropertyUnittypes(request, null);
+    }
+
+    /**
+     * List all unittypes
+     * 
+     * <p>Returns a list of PropertyUnittypes. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListPropertyUnittypesResponse listPropertyUnittypes(@Nonnull ListPropertyUnittypesRequest request, @Nullable Options options) {
         RequestOperation<ListPropertyUnittypesRequest, ListPropertyUnittypesResponse> operation
-              = new ListPropertyUnittypes.Sync(sdkConfiguration, _headers);
+              = new ListPropertyUnittypes.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -843,8 +1192,23 @@ public class Property {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchAnalyticsPropertyResponse patchAnalyticsProperty(@Nonnull PatchAnalyticsPropertyRequest request) {
+        return patchAnalyticsProperty(request, null);
+    }
+
+    /**
+     * Update a property
+     * 
+     * <p>Updates the AnalyticsProperty identified by `id`. Provide the unified AnalyticsProperty fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchAnalyticsPropertyResponse patchAnalyticsProperty(@Nonnull PatchAnalyticsPropertyRequest request, @Nullable Options options) {
         RequestOperation<PatchAnalyticsPropertyRequest, PatchAnalyticsPropertyResponse> operation
-              = new PatchAnalyticsProperty.Sync(sdkConfiguration, _headers);
+              = new PatchAnalyticsProperty.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -871,8 +1235,23 @@ public class Property {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchPropertyGuestResponse patchPropertyGuest(@Nonnull PatchPropertyGuestRequest request) {
+        return patchPropertyGuest(request, null);
+    }
+
+    /**
+     * Update a guest
+     * 
+     * <p>Updates the PropertyGuest identified by `id`. Provide the unified PropertyGuest fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchPropertyGuestResponse patchPropertyGuest(@Nonnull PatchPropertyGuestRequest request, @Nullable Options options) {
         RequestOperation<PatchPropertyGuestRequest, PatchPropertyGuestResponse> operation
-              = new PatchPropertyGuest.Sync(sdkConfiguration, _headers);
+              = new PatchPropertyGuest.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -899,8 +1278,23 @@ public class Property {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchPropertyListingResponse patchPropertyListing(@Nonnull PatchPropertyListingRequest request) {
+        return patchPropertyListing(request, null);
+    }
+
+    /**
+     * Update a listing
+     * 
+     * <p>Updates the PropertyListing identified by `id`. Provide the unified PropertyListing fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchPropertyListingResponse patchPropertyListing(@Nonnull PatchPropertyListingRequest request, @Nullable Options options) {
         RequestOperation<PatchPropertyListingRequest, PatchPropertyListingResponse> operation
-              = new PatchPropertyListing.Sync(sdkConfiguration, _headers);
+              = new PatchPropertyListing.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -927,8 +1321,23 @@ public class Property {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchPropertyReservationResponse patchPropertyReservation(@Nonnull PatchPropertyReservationRequest request) {
+        return patchPropertyReservation(request, null);
+    }
+
+    /**
+     * Update a reservation
+     * 
+     * <p>Updates the PropertyReservation identified by `id`. Provide the unified PropertyReservation fields
+     * to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchPropertyReservationResponse patchPropertyReservation(@Nonnull PatchPropertyReservationRequest request, @Nullable Options options) {
         RequestOperation<PatchPropertyReservationRequest, PatchPropertyReservationResponse> operation
-              = new PatchPropertyReservation.Sync(sdkConfiguration, _headers);
+              = new PatchPropertyReservation.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -955,8 +1364,23 @@ public class Property {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchPropertyReviewResponse patchPropertyReview(@Nonnull PatchPropertyReviewRequest request) {
+        return patchPropertyReview(request, null);
+    }
+
+    /**
+     * Update a review
+     * 
+     * <p>Updates the PropertyReview identified by `id`. Provide the unified PropertyReview fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchPropertyReviewResponse patchPropertyReview(@Nonnull PatchPropertyReviewRequest request, @Nullable Options options) {
         RequestOperation<PatchPropertyReviewRequest, PatchPropertyReviewResponse> operation
-              = new PatchPropertyReview.Sync(sdkConfiguration, _headers);
+              = new PatchPropertyReview.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -981,8 +1405,22 @@ public class Property {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveAnalyticsPropertyResponse removeAnalyticsProperty(@Nonnull RemoveAnalyticsPropertyRequest request) {
+        return removeAnalyticsProperty(request, null);
+    }
+
+    /**
+     * Remove a property
+     * 
+     * <p>Deletes the AnalyticsProperty identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveAnalyticsPropertyResponse removeAnalyticsProperty(@Nonnull RemoveAnalyticsPropertyRequest request, @Nullable Options options) {
         RequestOperation<RemoveAnalyticsPropertyRequest, RemoveAnalyticsPropertyResponse> operation
-              = new RemoveAnalyticsProperty.Sync(sdkConfiguration, _headers);
+              = new RemoveAnalyticsProperty.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1007,8 +1445,22 @@ public class Property {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemovePropertyGuestResponse removePropertyGuest(@Nonnull RemovePropertyGuestRequest request) {
+        return removePropertyGuest(request, null);
+    }
+
+    /**
+     * Remove a guest
+     * 
+     * <p>Deletes the PropertyGuest identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemovePropertyGuestResponse removePropertyGuest(@Nonnull RemovePropertyGuestRequest request, @Nullable Options options) {
         RequestOperation<RemovePropertyGuestRequest, RemovePropertyGuestResponse> operation
-              = new RemovePropertyGuest.Sync(sdkConfiguration, _headers);
+              = new RemovePropertyGuest.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1033,8 +1485,22 @@ public class Property {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemovePropertyListingResponse removePropertyListing(@Nonnull RemovePropertyListingRequest request) {
+        return removePropertyListing(request, null);
+    }
+
+    /**
+     * Remove a listing
+     * 
+     * <p>Deletes the PropertyListing identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemovePropertyListingResponse removePropertyListing(@Nonnull RemovePropertyListingRequest request, @Nullable Options options) {
         RequestOperation<RemovePropertyListingRequest, RemovePropertyListingResponse> operation
-              = new RemovePropertyListing.Sync(sdkConfiguration, _headers);
+              = new RemovePropertyListing.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1059,8 +1525,22 @@ public class Property {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemovePropertyReservationResponse removePropertyReservation(@Nonnull RemovePropertyReservationRequest request) {
+        return removePropertyReservation(request, null);
+    }
+
+    /**
+     * Remove a reservation
+     * 
+     * <p>Deletes the PropertyReservation identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemovePropertyReservationResponse removePropertyReservation(@Nonnull RemovePropertyReservationRequest request, @Nullable Options options) {
         RequestOperation<RemovePropertyReservationRequest, RemovePropertyReservationResponse> operation
-              = new RemovePropertyReservation.Sync(sdkConfiguration, _headers);
+              = new RemovePropertyReservation.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1087,8 +1567,23 @@ public class Property {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateAnalyticsPropertyResponse updateAnalyticsProperty(@Nonnull UpdateAnalyticsPropertyRequest request) {
+        return updateAnalyticsProperty(request, null);
+    }
+
+    /**
+     * Update a property
+     * 
+     * <p>Updates the AnalyticsProperty identified by `id`. Provide the unified AnalyticsProperty fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateAnalyticsPropertyResponse updateAnalyticsProperty(@Nonnull UpdateAnalyticsPropertyRequest request, @Nullable Options options) {
         RequestOperation<UpdateAnalyticsPropertyRequest, UpdateAnalyticsPropertyResponse> operation
-              = new UpdateAnalyticsProperty.Sync(sdkConfiguration, _headers);
+              = new UpdateAnalyticsProperty.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1115,8 +1610,23 @@ public class Property {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdatePropertyGuestResponse updatePropertyGuest(@Nonnull UpdatePropertyGuestRequest request) {
+        return updatePropertyGuest(request, null);
+    }
+
+    /**
+     * Update a guest
+     * 
+     * <p>Updates the PropertyGuest identified by `id`. Provide the unified PropertyGuest fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdatePropertyGuestResponse updatePropertyGuest(@Nonnull UpdatePropertyGuestRequest request, @Nullable Options options) {
         RequestOperation<UpdatePropertyGuestRequest, UpdatePropertyGuestResponse> operation
-              = new UpdatePropertyGuest.Sync(sdkConfiguration, _headers);
+              = new UpdatePropertyGuest.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1143,8 +1653,23 @@ public class Property {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdatePropertyListingResponse updatePropertyListing(@Nonnull UpdatePropertyListingRequest request) {
+        return updatePropertyListing(request, null);
+    }
+
+    /**
+     * Update a listing
+     * 
+     * <p>Updates the PropertyListing identified by `id`. Provide the unified PropertyListing fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdatePropertyListingResponse updatePropertyListing(@Nonnull UpdatePropertyListingRequest request, @Nullable Options options) {
         RequestOperation<UpdatePropertyListingRequest, UpdatePropertyListingResponse> operation
-              = new UpdatePropertyListing.Sync(sdkConfiguration, _headers);
+              = new UpdatePropertyListing.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1171,8 +1696,23 @@ public class Property {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdatePropertyReservationResponse updatePropertyReservation(@Nonnull UpdatePropertyReservationRequest request) {
+        return updatePropertyReservation(request, null);
+    }
+
+    /**
+     * Update a reservation
+     * 
+     * <p>Updates the PropertyReservation identified by `id`. Provide the unified PropertyReservation fields
+     * to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdatePropertyReservationResponse updatePropertyReservation(@Nonnull UpdatePropertyReservationRequest request, @Nullable Options options) {
         RequestOperation<UpdatePropertyReservationRequest, UpdatePropertyReservationResponse> operation
-              = new UpdatePropertyReservation.Sync(sdkConfiguration, _headers);
+              = new UpdatePropertyReservation.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1199,8 +1739,23 @@ public class Property {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdatePropertyReviewResponse updatePropertyReview(@Nonnull UpdatePropertyReviewRequest request) {
+        return updatePropertyReview(request, null);
+    }
+
+    /**
+     * Update a review
+     * 
+     * <p>Updates the PropertyReview identified by `id`. Provide the unified PropertyReview fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdatePropertyReviewResponse updatePropertyReview(@Nonnull UpdatePropertyReviewRequest request, @Nullable Options options) {
         RequestOperation<UpdatePropertyReviewRequest, UpdatePropertyReviewResponse> operation
-              = new UpdatePropertyReview.Sync(sdkConfiguration, _headers);
+              = new UpdatePropertyReview.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

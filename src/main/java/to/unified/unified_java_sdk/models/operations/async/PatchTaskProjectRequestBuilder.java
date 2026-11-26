@@ -6,20 +6,30 @@ package to.unified.unified_java_sdk.models.operations.async;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.PatchTaskProjectRequest;
 import to.unified.unified_java_sdk.operations.PatchTaskProject;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class PatchTaskProjectRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private PatchTaskProjectRequest request;
+    private final Options.Builder optionsBuilder;
 
     public PatchTaskProjectRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public PatchTaskProjectRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public PatchTaskProjectRequestBuilder request(@Nonnull PatchTaskProjectRequest request) {
@@ -44,8 +54,9 @@ public class PatchTaskProjectRequestBuilder {
     * @return The response from the server.
     */
     public CompletableFuture<PatchTaskProjectResponse> call() {
+        Options options = optionsBuilder.build();
         AsyncRequestOperation<PatchTaskProjectRequest, PatchTaskProjectResponse> operation
-              = new PatchTaskProject.Async(sdkConfiguration, _headers);
+              = new PatchTaskProject.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

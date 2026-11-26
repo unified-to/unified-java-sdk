@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateAnalyticsEventRequest;
 import to.unified.unified_java_sdk.models.operations.CreateCalendarEventRequest;
@@ -108,6 +109,7 @@ import to.unified.unified_java_sdk.operations.UpdateCdpEvent;
 import to.unified.unified_java_sdk.operations.UpdateCrmEvent;
 import to.unified.unified_java_sdk.operations.UpdateMessagingEvent;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncEvent {
@@ -152,8 +154,22 @@ public class AsyncEvent {
      * @return {@code CompletableFuture<CreateAnalyticsEventResponse>} - The async response
      */
     public CompletableFuture<CreateAnalyticsEventResponse> createAnalyticsEvent(@Nonnull CreateAnalyticsEventRequest request) {
+        return createAnalyticsEvent(request, null);
+    }
+
+    /**
+     * Create an event
+     * 
+     * <p>Creates a AnalyticsEvent. Provide the unified AnalyticsEvent fields in the request body; they are
+     * mapped to the provider's API. Returns the created AnalyticsEvent.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateAnalyticsEventResponse>} - The async response
+     */
+    public CompletableFuture<CreateAnalyticsEventResponse> createAnalyticsEvent(@Nonnull CreateAnalyticsEventRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateAnalyticsEventRequest, CreateAnalyticsEventResponse> operation
-              = new CreateAnalyticsEvent.Async(sdkConfiguration, _headers);
+              = new CreateAnalyticsEvent.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -181,8 +197,22 @@ public class AsyncEvent {
      * @return {@code CompletableFuture<CreateCalendarEventResponse>} - The async response
      */
     public CompletableFuture<CreateCalendarEventResponse> createCalendarEvent(@Nonnull CreateCalendarEventRequest request) {
+        return createCalendarEvent(request, null);
+    }
+
+    /**
+     * Create an event
+     * 
+     * <p>Creates a CalendarEvent. Provide the unified CalendarEvent fields in the request body; they are
+     * mapped to the provider's API. Returns the created CalendarEvent.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateCalendarEventResponse>} - The async response
+     */
+    public CompletableFuture<CreateCalendarEventResponse> createCalendarEvent(@Nonnull CreateCalendarEventRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateCalendarEventRequest, CreateCalendarEventResponse> operation
-              = new CreateCalendarEvent.Async(sdkConfiguration, _headers);
+              = new CreateCalendarEvent.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -210,8 +240,22 @@ public class AsyncEvent {
      * @return {@code CompletableFuture<CreateCdpEventResponse>} - The async response
      */
     public CompletableFuture<CreateCdpEventResponse> createCdpEvent(@Nonnull CreateCdpEventRequest request) {
+        return createCdpEvent(request, null);
+    }
+
+    /**
+     * Create an event
+     * 
+     * <p>Creates a CdpEvent. Provide the unified CdpEvent fields in the request body; they are mapped to the
+     * provider's API. Returns the created CdpEvent.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateCdpEventResponse>} - The async response
+     */
+    public CompletableFuture<CreateCdpEventResponse> createCdpEvent(@Nonnull CreateCdpEventRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateCdpEventRequest, CreateCdpEventResponse> operation
-              = new CreateCdpEvent.Async(sdkConfiguration, _headers);
+              = new CreateCdpEvent.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -239,8 +283,22 @@ public class AsyncEvent {
      * @return {@code CompletableFuture<CreateCrmEventResponse>} - The async response
      */
     public CompletableFuture<CreateCrmEventResponse> createCrmEvent(@Nonnull CreateCrmEventRequest request) {
+        return createCrmEvent(request, null);
+    }
+
+    /**
+     * Create an event
+     * 
+     * <p>Creates a CrmEvent. Provide the unified CrmEvent fields in the request body; they are mapped to the
+     * provider's API. Returns the created CrmEvent.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateCrmEventResponse>} - The async response
+     */
+    public CompletableFuture<CreateCrmEventResponse> createCrmEvent(@Nonnull CreateCrmEventRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateCrmEventRequest, CreateCrmEventResponse> operation
-              = new CreateCrmEvent.Async(sdkConfiguration, _headers);
+              = new CreateCrmEvent.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -268,8 +326,22 @@ public class AsyncEvent {
      * @return {@code CompletableFuture<GetAnalyticsEventResponse>} - The async response
      */
     public CompletableFuture<GetAnalyticsEventResponse> getAnalyticsEvent(@Nonnull GetAnalyticsEventRequest request) {
+        return getAnalyticsEvent(request, null);
+    }
+
+    /**
+     * Retrieve an event
+     * 
+     * <p>Retrieves a single AnalyticsEvent by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetAnalyticsEventResponse>} - The async response
+     */
+    public CompletableFuture<GetAnalyticsEventResponse> getAnalyticsEvent(@Nonnull GetAnalyticsEventRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetAnalyticsEventRequest, GetAnalyticsEventResponse> operation
-              = new GetAnalyticsEvent.Async(sdkConfiguration, _headers);
+              = new GetAnalyticsEvent.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -297,8 +369,22 @@ public class AsyncEvent {
      * @return {@code CompletableFuture<GetCalendarEventResponse>} - The async response
      */
     public CompletableFuture<GetCalendarEventResponse> getCalendarEvent(@Nonnull GetCalendarEventRequest request) {
+        return getCalendarEvent(request, null);
+    }
+
+    /**
+     * Retrieve an event
+     * 
+     * <p>Retrieves a single CalendarEvent by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetCalendarEventResponse>} - The async response
+     */
+    public CompletableFuture<GetCalendarEventResponse> getCalendarEvent(@Nonnull GetCalendarEventRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetCalendarEventRequest, GetCalendarEventResponse> operation
-              = new GetCalendarEvent.Async(sdkConfiguration, _headers);
+              = new GetCalendarEvent.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -326,8 +412,22 @@ public class AsyncEvent {
      * @return {@code CompletableFuture<GetCdpEventResponse>} - The async response
      */
     public CompletableFuture<GetCdpEventResponse> getCdpEvent(@Nonnull GetCdpEventRequest request) {
+        return getCdpEvent(request, null);
+    }
+
+    /**
+     * Retrieve an event
+     * 
+     * <p>Retrieves a single CdpEvent by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetCdpEventResponse>} - The async response
+     */
+    public CompletableFuture<GetCdpEventResponse> getCdpEvent(@Nonnull GetCdpEventRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetCdpEventRequest, GetCdpEventResponse> operation
-              = new GetCdpEvent.Async(sdkConfiguration, _headers);
+              = new GetCdpEvent.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -355,8 +455,22 @@ public class AsyncEvent {
      * @return {@code CompletableFuture<GetClubsEventResponse>} - The async response
      */
     public CompletableFuture<GetClubsEventResponse> getClubsEvent(@Nonnull GetClubsEventRequest request) {
+        return getClubsEvent(request, null);
+    }
+
+    /**
+     * Retrieve an event
+     * 
+     * <p>Retrieves a single ClubsEvent by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetClubsEventResponse>} - The async response
+     */
+    public CompletableFuture<GetClubsEventResponse> getClubsEvent(@Nonnull GetClubsEventRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetClubsEventRequest, GetClubsEventResponse> operation
-              = new GetClubsEvent.Async(sdkConfiguration, _headers);
+              = new GetClubsEvent.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -384,8 +498,22 @@ public class AsyncEvent {
      * @return {@code CompletableFuture<GetCrmEventResponse>} - The async response
      */
     public CompletableFuture<GetCrmEventResponse> getCrmEvent(@Nonnull GetCrmEventRequest request) {
+        return getCrmEvent(request, null);
+    }
+
+    /**
+     * Retrieve an event
+     * 
+     * <p>Retrieves a single CrmEvent by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetCrmEventResponse>} - The async response
+     */
+    public CompletableFuture<GetCrmEventResponse> getCrmEvent(@Nonnull GetCrmEventRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetCrmEventRequest, GetCrmEventResponse> operation
-              = new GetCrmEvent.Async(sdkConfiguration, _headers);
+              = new GetCrmEvent.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -421,8 +549,26 @@ public class AsyncEvent {
      * @return {@code CompletableFuture<ListAnalyticsEventsResponse>} - The async response
      */
     public CompletableFuture<ListAnalyticsEventsResponse> listAnalyticsEvents(@Nonnull ListAnalyticsEventsRequest request) {
+        return listAnalyticsEvents(request, null);
+    }
+
+    /**
+     * List all events
+     * 
+     * <p>Returns a list of AnalyticsEvents. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListAnalyticsEventsResponse>} - The async response
+     */
+    public CompletableFuture<ListAnalyticsEventsResponse> listAnalyticsEvents(@Nonnull ListAnalyticsEventsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListAnalyticsEventsRequest, ListAnalyticsEventsResponse> operation
-              = new ListAnalyticsEvents.Async(sdkConfiguration, _headers);
+              = new ListAnalyticsEvents.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -458,8 +604,26 @@ public class AsyncEvent {
      * @return {@code CompletableFuture<ListCalendarEventsResponse>} - The async response
      */
     public CompletableFuture<ListCalendarEventsResponse> listCalendarEvents(@Nonnull ListCalendarEventsRequest request) {
+        return listCalendarEvents(request, null);
+    }
+
+    /**
+     * List all events
+     * 
+     * <p>Returns a list of CalendarEvents. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListCalendarEventsResponse>} - The async response
+     */
+    public CompletableFuture<ListCalendarEventsResponse> listCalendarEvents(@Nonnull ListCalendarEventsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListCalendarEventsRequest, ListCalendarEventsResponse> operation
-              = new ListCalendarEvents.Async(sdkConfiguration, _headers);
+              = new ListCalendarEvents.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -495,8 +659,26 @@ public class AsyncEvent {
      * @return {@code CompletableFuture<ListCdpEventsResponse>} - The async response
      */
     public CompletableFuture<ListCdpEventsResponse> listCdpEvents(@Nonnull ListCdpEventsRequest request) {
+        return listCdpEvents(request, null);
+    }
+
+    /**
+     * List all events
+     * 
+     * <p>Returns a list of CdpEvents. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListCdpEventsResponse>} - The async response
+     */
+    public CompletableFuture<ListCdpEventsResponse> listCdpEvents(@Nonnull ListCdpEventsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListCdpEventsRequest, ListCdpEventsResponse> operation
-              = new ListCdpEvents.Async(sdkConfiguration, _headers);
+              = new ListCdpEvents.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -532,8 +714,26 @@ public class AsyncEvent {
      * @return {@code CompletableFuture<ListClubsEventsResponse>} - The async response
      */
     public CompletableFuture<ListClubsEventsResponse> listClubsEvents(@Nonnull ListClubsEventsRequest request) {
+        return listClubsEvents(request, null);
+    }
+
+    /**
+     * List all events
+     * 
+     * <p>Returns a list of ClubsEvents. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListClubsEventsResponse>} - The async response
+     */
+    public CompletableFuture<ListClubsEventsResponse> listClubsEvents(@Nonnull ListClubsEventsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListClubsEventsRequest, ListClubsEventsResponse> operation
-              = new ListClubsEvents.Async(sdkConfiguration, _headers);
+              = new ListClubsEvents.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -569,8 +769,26 @@ public class AsyncEvent {
      * @return {@code CompletableFuture<ListCrmEventsResponse>} - The async response
      */
     public CompletableFuture<ListCrmEventsResponse> listCrmEvents(@Nonnull ListCrmEventsRequest request) {
+        return listCrmEvents(request, null);
+    }
+
+    /**
+     * List all events
+     * 
+     * <p>Returns a list of CrmEvents. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListCrmEventsResponse>} - The async response
+     */
+    public CompletableFuture<ListCrmEventsResponse> listCrmEvents(@Nonnull ListCrmEventsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListCrmEventsRequest, ListCrmEventsResponse> operation
-              = new ListCrmEvents.Async(sdkConfiguration, _headers);
+              = new ListCrmEvents.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -598,8 +816,22 @@ public class AsyncEvent {
      * @return {@code CompletableFuture<PatchCalendarEventResponse>} - The async response
      */
     public CompletableFuture<PatchCalendarEventResponse> patchCalendarEvent(@Nonnull PatchCalendarEventRequest request) {
+        return patchCalendarEvent(request, null);
+    }
+
+    /**
+     * Update an event
+     * 
+     * <p>Updates the CalendarEvent identified by `id`. Provide the unified CalendarEvent fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchCalendarEventResponse>} - The async response
+     */
+    public CompletableFuture<PatchCalendarEventResponse> patchCalendarEvent(@Nonnull PatchCalendarEventRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchCalendarEventRequest, PatchCalendarEventResponse> operation
-              = new PatchCalendarEvent.Async(sdkConfiguration, _headers);
+              = new PatchCalendarEvent.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -627,8 +859,22 @@ public class AsyncEvent {
      * @return {@code CompletableFuture<PatchCdpEventResponse>} - The async response
      */
     public CompletableFuture<PatchCdpEventResponse> patchCdpEvent(@Nonnull PatchCdpEventRequest request) {
+        return patchCdpEvent(request, null);
+    }
+
+    /**
+     * Update an event
+     * 
+     * <p>Updates the CdpEvent identified by `id`. Provide the unified CdpEvent fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchCdpEventResponse>} - The async response
+     */
+    public CompletableFuture<PatchCdpEventResponse> patchCdpEvent(@Nonnull PatchCdpEventRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchCdpEventRequest, PatchCdpEventResponse> operation
-              = new PatchCdpEvent.Async(sdkConfiguration, _headers);
+              = new PatchCdpEvent.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -656,8 +902,22 @@ public class AsyncEvent {
      * @return {@code CompletableFuture<PatchCrmEventResponse>} - The async response
      */
     public CompletableFuture<PatchCrmEventResponse> patchCrmEvent(@Nonnull PatchCrmEventRequest request) {
+        return patchCrmEvent(request, null);
+    }
+
+    /**
+     * Update an event
+     * 
+     * <p>Updates the CrmEvent identified by `id`. Provide the unified CrmEvent fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchCrmEventResponse>} - The async response
+     */
+    public CompletableFuture<PatchCrmEventResponse> patchCrmEvent(@Nonnull PatchCrmEventRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchCrmEventRequest, PatchCrmEventResponse> operation
-              = new PatchCrmEvent.Async(sdkConfiguration, _headers);
+              = new PatchCrmEvent.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -685,8 +945,22 @@ public class AsyncEvent {
      * @return {@code CompletableFuture<PatchMessagingEventResponse>} - The async response
      */
     public CompletableFuture<PatchMessagingEventResponse> patchMessagingEvent(@Nonnull PatchMessagingEventRequest request) {
+        return patchMessagingEvent(request, null);
+    }
+
+    /**
+     * Update an event
+     * 
+     * <p>Updates the MessagingEvent identified by `id`. Provide the unified MessagingEvent fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchMessagingEventResponse>} - The async response
+     */
+    public CompletableFuture<PatchMessagingEventResponse> patchMessagingEvent(@Nonnull PatchMessagingEventRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchMessagingEventRequest, PatchMessagingEventResponse> operation
-              = new PatchMessagingEvent.Async(sdkConfiguration, _headers);
+              = new PatchMessagingEvent.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -712,8 +986,21 @@ public class AsyncEvent {
      * @return {@code CompletableFuture<RemoveCalendarEventResponse>} - The async response
      */
     public CompletableFuture<RemoveCalendarEventResponse> removeCalendarEvent(@Nonnull RemoveCalendarEventRequest request) {
+        return removeCalendarEvent(request, null);
+    }
+
+    /**
+     * Remove an event
+     * 
+     * <p>Deletes the CalendarEvent identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveCalendarEventResponse>} - The async response
+     */
+    public CompletableFuture<RemoveCalendarEventResponse> removeCalendarEvent(@Nonnull RemoveCalendarEventRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveCalendarEventRequest, RemoveCalendarEventResponse> operation
-              = new RemoveCalendarEvent.Async(sdkConfiguration, _headers);
+              = new RemoveCalendarEvent.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -739,8 +1026,21 @@ public class AsyncEvent {
      * @return {@code CompletableFuture<RemoveCdpEventResponse>} - The async response
      */
     public CompletableFuture<RemoveCdpEventResponse> removeCdpEvent(@Nonnull RemoveCdpEventRequest request) {
+        return removeCdpEvent(request, null);
+    }
+
+    /**
+     * Remove an event
+     * 
+     * <p>Deletes the CdpEvent identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveCdpEventResponse>} - The async response
+     */
+    public CompletableFuture<RemoveCdpEventResponse> removeCdpEvent(@Nonnull RemoveCdpEventRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveCdpEventRequest, RemoveCdpEventResponse> operation
-              = new RemoveCdpEvent.Async(sdkConfiguration, _headers);
+              = new RemoveCdpEvent.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -766,8 +1066,21 @@ public class AsyncEvent {
      * @return {@code CompletableFuture<RemoveCrmEventResponse>} - The async response
      */
     public CompletableFuture<RemoveCrmEventResponse> removeCrmEvent(@Nonnull RemoveCrmEventRequest request) {
+        return removeCrmEvent(request, null);
+    }
+
+    /**
+     * Remove an event
+     * 
+     * <p>Deletes the CrmEvent identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveCrmEventResponse>} - The async response
+     */
+    public CompletableFuture<RemoveCrmEventResponse> removeCrmEvent(@Nonnull RemoveCrmEventRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveCrmEventRequest, RemoveCrmEventResponse> operation
-              = new RemoveCrmEvent.Async(sdkConfiguration, _headers);
+              = new RemoveCrmEvent.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -795,8 +1108,22 @@ public class AsyncEvent {
      * @return {@code CompletableFuture<UpdateCalendarEventResponse>} - The async response
      */
     public CompletableFuture<UpdateCalendarEventResponse> updateCalendarEvent(@Nonnull UpdateCalendarEventRequest request) {
+        return updateCalendarEvent(request, null);
+    }
+
+    /**
+     * Update an event
+     * 
+     * <p>Updates the CalendarEvent identified by `id`. Provide the unified CalendarEvent fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateCalendarEventResponse>} - The async response
+     */
+    public CompletableFuture<UpdateCalendarEventResponse> updateCalendarEvent(@Nonnull UpdateCalendarEventRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateCalendarEventRequest, UpdateCalendarEventResponse> operation
-              = new UpdateCalendarEvent.Async(sdkConfiguration, _headers);
+              = new UpdateCalendarEvent.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -824,8 +1151,22 @@ public class AsyncEvent {
      * @return {@code CompletableFuture<UpdateCdpEventResponse>} - The async response
      */
     public CompletableFuture<UpdateCdpEventResponse> updateCdpEvent(@Nonnull UpdateCdpEventRequest request) {
+        return updateCdpEvent(request, null);
+    }
+
+    /**
+     * Update an event
+     * 
+     * <p>Updates the CdpEvent identified by `id`. Provide the unified CdpEvent fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateCdpEventResponse>} - The async response
+     */
+    public CompletableFuture<UpdateCdpEventResponse> updateCdpEvent(@Nonnull UpdateCdpEventRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateCdpEventRequest, UpdateCdpEventResponse> operation
-              = new UpdateCdpEvent.Async(sdkConfiguration, _headers);
+              = new UpdateCdpEvent.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -853,8 +1194,22 @@ public class AsyncEvent {
      * @return {@code CompletableFuture<UpdateCrmEventResponse>} - The async response
      */
     public CompletableFuture<UpdateCrmEventResponse> updateCrmEvent(@Nonnull UpdateCrmEventRequest request) {
+        return updateCrmEvent(request, null);
+    }
+
+    /**
+     * Update an event
+     * 
+     * <p>Updates the CrmEvent identified by `id`. Provide the unified CrmEvent fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateCrmEventResponse>} - The async response
+     */
+    public CompletableFuture<UpdateCrmEventResponse> updateCrmEvent(@Nonnull UpdateCrmEventRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateCrmEventRequest, UpdateCrmEventResponse> operation
-              = new UpdateCrmEvent.Async(sdkConfiguration, _headers);
+              = new UpdateCrmEvent.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -882,8 +1237,22 @@ public class AsyncEvent {
      * @return {@code CompletableFuture<UpdateMessagingEventResponse>} - The async response
      */
     public CompletableFuture<UpdateMessagingEventResponse> updateMessagingEvent(@Nonnull UpdateMessagingEventRequest request) {
+        return updateMessagingEvent(request, null);
+    }
+
+    /**
+     * Update an event
+     * 
+     * <p>Updates the MessagingEvent identified by `id`. Provide the unified MessagingEvent fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateMessagingEventResponse>} - The async response
+     */
+    public CompletableFuture<UpdateMessagingEventResponse> updateMessagingEvent(@Nonnull UpdateMessagingEventRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateMessagingEventRequest, UpdateMessagingEventResponse> operation
-              = new UpdateMessagingEvent.Async(sdkConfiguration, _headers);
+              = new UpdateMessagingEvent.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

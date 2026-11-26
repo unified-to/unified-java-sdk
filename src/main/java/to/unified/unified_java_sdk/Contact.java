@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingContactRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingContactRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingContactResponse;
@@ -79,6 +80,7 @@ import to.unified.unified_java_sdk.operations.UpdateAccountingContact;
 import to.unified.unified_java_sdk.operations.UpdateCrmContact;
 import to.unified.unified_java_sdk.operations.UpdateUcContact;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Contact {
@@ -123,8 +125,23 @@ public class Contact {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateAccountingContactResponse createAccountingContact(@Nonnull CreateAccountingContactRequest request) {
+        return createAccountingContact(request, null);
+    }
+
+    /**
+     * Create a contact
+     * 
+     * <p>Creates a AccountingContact. Provide the unified AccountingContact fields in the request body; they
+     * are mapped to the provider's API. Returns the created AccountingContact.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateAccountingContactResponse createAccountingContact(@Nonnull CreateAccountingContactRequest request, @Nullable Options options) {
         RequestOperation<CreateAccountingContactRequest, CreateAccountingContactResponse> operation
-              = new CreateAccountingContact.Sync(sdkConfiguration, _headers);
+              = new CreateAccountingContact.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -151,8 +168,23 @@ public class Contact {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateCrmContactResponse createCrmContact(@Nonnull CreateCrmContactRequest request) {
+        return createCrmContact(request, null);
+    }
+
+    /**
+     * Create a contact
+     * 
+     * <p>Creates a CrmContact. Provide the unified CrmContact fields in the request body; they are mapped to
+     * the provider's API. Returns the created CrmContact.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateCrmContactResponse createCrmContact(@Nonnull CreateCrmContactRequest request, @Nullable Options options) {
         RequestOperation<CreateCrmContactRequest, CreateCrmContactResponse> operation
-              = new CreateCrmContact.Sync(sdkConfiguration, _headers);
+              = new CreateCrmContact.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -179,8 +211,23 @@ public class Contact {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateUcContactResponse createUcContact(@Nonnull CreateUcContactRequest request) {
+        return createUcContact(request, null);
+    }
+
+    /**
+     * Create a contact
+     * 
+     * <p>Creates a UcContact. Provide the unified UcContact fields in the request body; they are mapped to
+     * the provider's API. Returns the created UcContact.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateUcContactResponse createUcContact(@Nonnull CreateUcContactRequest request, @Nullable Options options) {
         RequestOperation<CreateUcContactRequest, CreateUcContactResponse> operation
-              = new CreateUcContact.Sync(sdkConfiguration, _headers);
+              = new CreateUcContact.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -207,8 +254,23 @@ public class Contact {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAccountingContactResponse getAccountingContact(@Nonnull GetAccountingContactRequest request) {
+        return getAccountingContact(request, null);
+    }
+
+    /**
+     * Retrieve a contact
+     * 
+     * <p>Retrieves a single AccountingContact by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAccountingContactResponse getAccountingContact(@Nonnull GetAccountingContactRequest request, @Nullable Options options) {
         RequestOperation<GetAccountingContactRequest, GetAccountingContactResponse> operation
-              = new GetAccountingContact.Sync(sdkConfiguration, _headers);
+              = new GetAccountingContact.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -235,8 +297,23 @@ public class Contact {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetCrmContactResponse getCrmContact(@Nonnull GetCrmContactRequest request) {
+        return getCrmContact(request, null);
+    }
+
+    /**
+     * Retrieve a contact
+     * 
+     * <p>Retrieves a single CrmContact by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetCrmContactResponse getCrmContact(@Nonnull GetCrmContactRequest request, @Nullable Options options) {
         RequestOperation<GetCrmContactRequest, GetCrmContactResponse> operation
-              = new GetCrmContact.Sync(sdkConfiguration, _headers);
+              = new GetCrmContact.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -263,8 +340,23 @@ public class Contact {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetUcContactResponse getUcContact(@Nonnull GetUcContactRequest request) {
+        return getUcContact(request, null);
+    }
+
+    /**
+     * Retrieve a contact
+     * 
+     * <p>Retrieves a single UcContact by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetUcContactResponse getUcContact(@Nonnull GetUcContactRequest request, @Nullable Options options) {
         RequestOperation<GetUcContactRequest, GetUcContactResponse> operation
-              = new GetUcContact.Sync(sdkConfiguration, _headers);
+              = new GetUcContact.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -299,8 +391,27 @@ public class Contact {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAccountingContactsResponse listAccountingContacts(@Nonnull ListAccountingContactsRequest request) {
+        return listAccountingContacts(request, null);
+    }
+
+    /**
+     * List all contacts
+     * 
+     * <p>Returns a list of AccountingContacts. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAccountingContactsResponse listAccountingContacts(@Nonnull ListAccountingContactsRequest request, @Nullable Options options) {
         RequestOperation<ListAccountingContactsRequest, ListAccountingContactsResponse> operation
-              = new ListAccountingContacts.Sync(sdkConfiguration, _headers);
+              = new ListAccountingContacts.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -335,8 +446,27 @@ public class Contact {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListCrmContactsResponse listCrmContacts(@Nonnull ListCrmContactsRequest request) {
+        return listCrmContacts(request, null);
+    }
+
+    /**
+     * List all contacts
+     * 
+     * <p>Returns a list of CrmContacts. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListCrmContactsResponse listCrmContacts(@Nonnull ListCrmContactsRequest request, @Nullable Options options) {
         RequestOperation<ListCrmContactsRequest, ListCrmContactsResponse> operation
-              = new ListCrmContacts.Sync(sdkConfiguration, _headers);
+              = new ListCrmContacts.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -371,8 +501,27 @@ public class Contact {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListUcContactsResponse listUcContacts(@Nonnull ListUcContactsRequest request) {
+        return listUcContacts(request, null);
+    }
+
+    /**
+     * List all contacts
+     * 
+     * <p>Returns a list of UcContacts. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListUcContactsResponse listUcContacts(@Nonnull ListUcContactsRequest request, @Nullable Options options) {
         RequestOperation<ListUcContactsRequest, ListUcContactsResponse> operation
-              = new ListUcContacts.Sync(sdkConfiguration, _headers);
+              = new ListUcContacts.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -399,8 +548,23 @@ public class Contact {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchAccountingContactResponse patchAccountingContact(@Nonnull PatchAccountingContactRequest request) {
+        return patchAccountingContact(request, null);
+    }
+
+    /**
+     * Update a contact
+     * 
+     * <p>Updates the AccountingContact identified by `id`. Provide the unified AccountingContact fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchAccountingContactResponse patchAccountingContact(@Nonnull PatchAccountingContactRequest request, @Nullable Options options) {
         RequestOperation<PatchAccountingContactRequest, PatchAccountingContactResponse> operation
-              = new PatchAccountingContact.Sync(sdkConfiguration, _headers);
+              = new PatchAccountingContact.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -427,8 +591,23 @@ public class Contact {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchCrmContactResponse patchCrmContact(@Nonnull PatchCrmContactRequest request) {
+        return patchCrmContact(request, null);
+    }
+
+    /**
+     * Update a contact
+     * 
+     * <p>Updates the CrmContact identified by `id`. Provide the unified CrmContact fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchCrmContactResponse patchCrmContact(@Nonnull PatchCrmContactRequest request, @Nullable Options options) {
         RequestOperation<PatchCrmContactRequest, PatchCrmContactResponse> operation
-              = new PatchCrmContact.Sync(sdkConfiguration, _headers);
+              = new PatchCrmContact.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -455,8 +634,23 @@ public class Contact {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchUcContactResponse patchUcContact(@Nonnull PatchUcContactRequest request) {
+        return patchUcContact(request, null);
+    }
+
+    /**
+     * Update a contact
+     * 
+     * <p>Updates the UcContact identified by `id`. Provide the unified UcContact fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchUcContactResponse patchUcContact(@Nonnull PatchUcContactRequest request, @Nullable Options options) {
         RequestOperation<PatchUcContactRequest, PatchUcContactResponse> operation
-              = new PatchUcContact.Sync(sdkConfiguration, _headers);
+              = new PatchUcContact.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -481,8 +675,22 @@ public class Contact {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveAccountingContactResponse removeAccountingContact(@Nonnull RemoveAccountingContactRequest request) {
+        return removeAccountingContact(request, null);
+    }
+
+    /**
+     * Remove a contact
+     * 
+     * <p>Deletes the AccountingContact identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveAccountingContactResponse removeAccountingContact(@Nonnull RemoveAccountingContactRequest request, @Nullable Options options) {
         RequestOperation<RemoveAccountingContactRequest, RemoveAccountingContactResponse> operation
-              = new RemoveAccountingContact.Sync(sdkConfiguration, _headers);
+              = new RemoveAccountingContact.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -507,8 +715,22 @@ public class Contact {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveCrmContactResponse removeCrmContact(@Nonnull RemoveCrmContactRequest request) {
+        return removeCrmContact(request, null);
+    }
+
+    /**
+     * Remove a contact
+     * 
+     * <p>Deletes the CrmContact identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveCrmContactResponse removeCrmContact(@Nonnull RemoveCrmContactRequest request, @Nullable Options options) {
         RequestOperation<RemoveCrmContactRequest, RemoveCrmContactResponse> operation
-              = new RemoveCrmContact.Sync(sdkConfiguration, _headers);
+              = new RemoveCrmContact.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -533,8 +755,22 @@ public class Contact {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveUcContactResponse removeUcContact(@Nonnull RemoveUcContactRequest request) {
+        return removeUcContact(request, null);
+    }
+
+    /**
+     * Remove a contact
+     * 
+     * <p>Deletes the UcContact identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveUcContactResponse removeUcContact(@Nonnull RemoveUcContactRequest request, @Nullable Options options) {
         RequestOperation<RemoveUcContactRequest, RemoveUcContactResponse> operation
-              = new RemoveUcContact.Sync(sdkConfiguration, _headers);
+              = new RemoveUcContact.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -561,8 +797,23 @@ public class Contact {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateAccountingContactResponse updateAccountingContact(@Nonnull UpdateAccountingContactRequest request) {
+        return updateAccountingContact(request, null);
+    }
+
+    /**
+     * Update a contact
+     * 
+     * <p>Updates the AccountingContact identified by `id`. Provide the unified AccountingContact fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateAccountingContactResponse updateAccountingContact(@Nonnull UpdateAccountingContactRequest request, @Nullable Options options) {
         RequestOperation<UpdateAccountingContactRequest, UpdateAccountingContactResponse> operation
-              = new UpdateAccountingContact.Sync(sdkConfiguration, _headers);
+              = new UpdateAccountingContact.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -589,8 +840,23 @@ public class Contact {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateCrmContactResponse updateCrmContact(@Nonnull UpdateCrmContactRequest request) {
+        return updateCrmContact(request, null);
+    }
+
+    /**
+     * Update a contact
+     * 
+     * <p>Updates the CrmContact identified by `id`. Provide the unified CrmContact fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateCrmContactResponse updateCrmContact(@Nonnull UpdateCrmContactRequest request, @Nullable Options options) {
         RequestOperation<UpdateCrmContactRequest, UpdateCrmContactResponse> operation
-              = new UpdateCrmContact.Sync(sdkConfiguration, _headers);
+              = new UpdateCrmContact.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -617,8 +883,23 @@ public class Contact {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateUcContactResponse updateUcContact(@Nonnull UpdateUcContactRequest request) {
+        return updateUcContact(request, null);
+    }
+
+    /**
+     * Update a contact
+     * 
+     * <p>Updates the UcContact identified by `id`. Provide the unified UcContact fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateUcContactResponse updateUcContact(@Nonnull UpdateUcContactRequest request, @Nullable Options options) {
         RequestOperation<UpdateUcContactRequest, UpdateUcContactResponse> operation
-              = new UpdateUcContact.Sync(sdkConfiguration, _headers);
+              = new UpdateUcContact.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

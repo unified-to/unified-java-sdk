@@ -6,20 +6,30 @@ package to.unified.unified_java_sdk.models.operations.async;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.RemoveTicketingCustomerRequest;
 import to.unified.unified_java_sdk.operations.RemoveTicketingCustomer;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveTicketingCustomerRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private RemoveTicketingCustomerRequest request;
+    private final Options.Builder optionsBuilder;
 
     public RemoveTicketingCustomerRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public RemoveTicketingCustomerRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public RemoveTicketingCustomerRequestBuilder request(@Nonnull RemoveTicketingCustomerRequest request) {
@@ -44,8 +54,9 @@ public class RemoveTicketingCustomerRequestBuilder {
     * @return The response from the server.
     */
     public CompletableFuture<RemoveTicketingCustomerResponse> call() {
+        Options options = optionsBuilder.build();
         AsyncRequestOperation<RemoveTicketingCustomerRequest, RemoveTicketingCustomerResponse> operation
-              = new RemoveTicketingCustomer.Async(sdkConfiguration, _headers);
+              = new RemoveTicketingCustomer.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

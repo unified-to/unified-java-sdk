@@ -6,18 +6,28 @@ package to.unified.unified_java_sdk.models.operations;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.PatchComputeDomain;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class PatchComputeDomainRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private PatchComputeDomainRequest request;
+    private final Options.Builder optionsBuilder;
 
     public PatchComputeDomainRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public PatchComputeDomainRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public PatchComputeDomainRequestBuilder request(@Nonnull PatchComputeDomainRequest request) {
@@ -42,8 +52,9 @@ public class PatchComputeDomainRequestBuilder {
     * @return The response from the server.
     */
     public PatchComputeDomainResponse call() {
+        Options options = optionsBuilder.build();
         RequestOperation<PatchComputeDomainRequest, PatchComputeDomainResponse> operation
-              = new PatchComputeDomain.Sync(sdkConfiguration, _headers);
+              = new PatchComputeDomain.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

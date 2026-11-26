@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateComputeDeploymentRequest;
 import to.unified.unified_java_sdk.models.operations.CreateComputeDomainRequest;
@@ -244,6 +245,7 @@ import to.unified.unified_java_sdk.operations.UpdateComputeSnapshot;
 import to.unified.unified_java_sdk.operations.UpdateComputeTemplate;
 import to.unified.unified_java_sdk.operations.UpdateComputeVolume;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncCompute {
@@ -288,8 +290,22 @@ public class AsyncCompute {
      * @return {@code CompletableFuture<CreateComputeDeploymentResponse>} - The async response
      */
     public CompletableFuture<CreateComputeDeploymentResponse> createComputeDeployment(@Nonnull CreateComputeDeploymentRequest request) {
+        return createComputeDeployment(request, null);
+    }
+
+    /**
+     * Create a deployment
+     * 
+     * <p>Creates a ComputeDeployment. Provide the unified ComputeDeployment fields in the request body; they
+     * are mapped to the provider's API. Returns the created ComputeDeployment.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateComputeDeploymentResponse>} - The async response
+     */
+    public CompletableFuture<CreateComputeDeploymentResponse> createComputeDeployment(@Nonnull CreateComputeDeploymentRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateComputeDeploymentRequest, CreateComputeDeploymentResponse> operation
-              = new CreateComputeDeployment.Async(sdkConfiguration, _headers);
+              = new CreateComputeDeployment.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -317,8 +333,22 @@ public class AsyncCompute {
      * @return {@code CompletableFuture<CreateComputeDomainResponse>} - The async response
      */
     public CompletableFuture<CreateComputeDomainResponse> createComputeDomain(@Nonnull CreateComputeDomainRequest request) {
+        return createComputeDomain(request, null);
+    }
+
+    /**
+     * Create a domain
+     * 
+     * <p>Creates a ComputeDomain. Provide the unified ComputeDomain fields in the request body; they are
+     * mapped to the provider's API. Returns the created ComputeDomain.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateComputeDomainResponse>} - The async response
+     */
+    public CompletableFuture<CreateComputeDomainResponse> createComputeDomain(@Nonnull CreateComputeDomainRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateComputeDomainRequest, CreateComputeDomainResponse> operation
-              = new CreateComputeDomain.Async(sdkConfiguration, _headers);
+              = new CreateComputeDomain.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -346,8 +376,22 @@ public class AsyncCompute {
      * @return {@code CompletableFuture<CreateComputeEnvvarResponse>} - The async response
      */
     public CompletableFuture<CreateComputeEnvvarResponse> createComputeEnvvar(@Nonnull CreateComputeEnvvarRequest request) {
+        return createComputeEnvvar(request, null);
+    }
+
+    /**
+     * Create an envvar
+     * 
+     * <p>Creates a ComputeEnvvar. Provide the unified ComputeEnvvar fields in the request body; they are
+     * mapped to the provider's API. Returns the created ComputeEnvvar.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateComputeEnvvarResponse>} - The async response
+     */
+    public CompletableFuture<CreateComputeEnvvarResponse> createComputeEnvvar(@Nonnull CreateComputeEnvvarRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateComputeEnvvarRequest, CreateComputeEnvvarResponse> operation
-              = new CreateComputeEnvvar.Async(sdkConfiguration, _headers);
+              = new CreateComputeEnvvar.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -375,8 +419,22 @@ public class AsyncCompute {
      * @return {@code CompletableFuture<CreateComputeInstanceResponse>} - The async response
      */
     public CompletableFuture<CreateComputeInstanceResponse> createComputeInstance(@Nonnull CreateComputeInstanceRequest request) {
+        return createComputeInstance(request, null);
+    }
+
+    /**
+     * Create an instance
+     * 
+     * <p>Creates a ComputeInstance. Provide the unified ComputeInstance fields in the request body; they are
+     * mapped to the provider's API. Returns the created ComputeInstance.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateComputeInstanceResponse>} - The async response
+     */
+    public CompletableFuture<CreateComputeInstanceResponse> createComputeInstance(@Nonnull CreateComputeInstanceRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateComputeInstanceRequest, CreateComputeInstanceResponse> operation
-              = new CreateComputeInstance.Async(sdkConfiguration, _headers);
+              = new CreateComputeInstance.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -404,8 +462,22 @@ public class AsyncCompute {
      * @return {@code CompletableFuture<CreateComputeKeyResponse>} - The async response
      */
     public CompletableFuture<CreateComputeKeyResponse> createComputeKey(@Nonnull CreateComputeKeyRequest request) {
+        return createComputeKey(request, null);
+    }
+
+    /**
+     * Create a key
+     * 
+     * <p>Creates a ComputeKey. Provide the unified ComputeKey fields in the request body; they are mapped to
+     * the provider's API. Returns the created ComputeKey.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateComputeKeyResponse>} - The async response
+     */
+    public CompletableFuture<CreateComputeKeyResponse> createComputeKey(@Nonnull CreateComputeKeyRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateComputeKeyRequest, CreateComputeKeyResponse> operation
-              = new CreateComputeKey.Async(sdkConfiguration, _headers);
+              = new CreateComputeKey.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -433,8 +505,22 @@ public class AsyncCompute {
      * @return {@code CompletableFuture<CreateComputeServiceResponse>} - The async response
      */
     public CompletableFuture<CreateComputeServiceResponse> createComputeService(@Nonnull CreateComputeServiceRequest request) {
+        return createComputeService(request, null);
+    }
+
+    /**
+     * Create a service
+     * 
+     * <p>Creates a ComputeService. Provide the unified ComputeService fields in the request body; they are
+     * mapped to the provider's API. Returns the created ComputeService.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateComputeServiceResponse>} - The async response
+     */
+    public CompletableFuture<CreateComputeServiceResponse> createComputeService(@Nonnull CreateComputeServiceRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateComputeServiceRequest, CreateComputeServiceResponse> operation
-              = new CreateComputeService.Async(sdkConfiguration, _headers);
+              = new CreateComputeService.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -462,8 +548,22 @@ public class AsyncCompute {
      * @return {@code CompletableFuture<CreateComputeSnapshotResponse>} - The async response
      */
     public CompletableFuture<CreateComputeSnapshotResponse> createComputeSnapshot(@Nonnull CreateComputeSnapshotRequest request) {
+        return createComputeSnapshot(request, null);
+    }
+
+    /**
+     * Create a snapshot
+     * 
+     * <p>Creates a ComputeSnapshot. Provide the unified ComputeSnapshot fields in the request body; they are
+     * mapped to the provider's API. Returns the created ComputeSnapshot.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateComputeSnapshotResponse>} - The async response
+     */
+    public CompletableFuture<CreateComputeSnapshotResponse> createComputeSnapshot(@Nonnull CreateComputeSnapshotRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateComputeSnapshotRequest, CreateComputeSnapshotResponse> operation
-              = new CreateComputeSnapshot.Async(sdkConfiguration, _headers);
+              = new CreateComputeSnapshot.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -491,8 +591,22 @@ public class AsyncCompute {
      * @return {@code CompletableFuture<CreateComputeTemplateResponse>} - The async response
      */
     public CompletableFuture<CreateComputeTemplateResponse> createComputeTemplate(@Nonnull CreateComputeTemplateRequest request) {
+        return createComputeTemplate(request, null);
+    }
+
+    /**
+     * Create a template
+     * 
+     * <p>Creates a ComputeTemplate. Provide the unified ComputeTemplate fields in the request body; they are
+     * mapped to the provider's API. Returns the created ComputeTemplate.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateComputeTemplateResponse>} - The async response
+     */
+    public CompletableFuture<CreateComputeTemplateResponse> createComputeTemplate(@Nonnull CreateComputeTemplateRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateComputeTemplateRequest, CreateComputeTemplateResponse> operation
-              = new CreateComputeTemplate.Async(sdkConfiguration, _headers);
+              = new CreateComputeTemplate.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -520,8 +634,22 @@ public class AsyncCompute {
      * @return {@code CompletableFuture<CreateComputeVolumeResponse>} - The async response
      */
     public CompletableFuture<CreateComputeVolumeResponse> createComputeVolume(@Nonnull CreateComputeVolumeRequest request) {
+        return createComputeVolume(request, null);
+    }
+
+    /**
+     * Create a volume
+     * 
+     * <p>Creates a ComputeVolume. Provide the unified ComputeVolume fields in the request body; they are
+     * mapped to the provider's API. Returns the created ComputeVolume.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateComputeVolumeResponse>} - The async response
+     */
+    public CompletableFuture<CreateComputeVolumeResponse> createComputeVolume(@Nonnull CreateComputeVolumeRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateComputeVolumeRequest, CreateComputeVolumeResponse> operation
-              = new CreateComputeVolume.Async(sdkConfiguration, _headers);
+              = new CreateComputeVolume.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -549,8 +677,22 @@ public class AsyncCompute {
      * @return {@code CompletableFuture<GetComputeDeploymentResponse>} - The async response
      */
     public CompletableFuture<GetComputeDeploymentResponse> getComputeDeployment(@Nonnull GetComputeDeploymentRequest request) {
+        return getComputeDeployment(request, null);
+    }
+
+    /**
+     * Retrieve a deployment
+     * 
+     * <p>Retrieves a single ComputeDeployment by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetComputeDeploymentResponse>} - The async response
+     */
+    public CompletableFuture<GetComputeDeploymentResponse> getComputeDeployment(@Nonnull GetComputeDeploymentRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetComputeDeploymentRequest, GetComputeDeploymentResponse> operation
-              = new GetComputeDeployment.Async(sdkConfiguration, _headers);
+              = new GetComputeDeployment.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -578,8 +720,22 @@ public class AsyncCompute {
      * @return {@code CompletableFuture<GetComputeDomainResponse>} - The async response
      */
     public CompletableFuture<GetComputeDomainResponse> getComputeDomain(@Nonnull GetComputeDomainRequest request) {
+        return getComputeDomain(request, null);
+    }
+
+    /**
+     * Retrieve a domain
+     * 
+     * <p>Retrieves a single ComputeDomain by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetComputeDomainResponse>} - The async response
+     */
+    public CompletableFuture<GetComputeDomainResponse> getComputeDomain(@Nonnull GetComputeDomainRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetComputeDomainRequest, GetComputeDomainResponse> operation
-              = new GetComputeDomain.Async(sdkConfiguration, _headers);
+              = new GetComputeDomain.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -607,8 +763,22 @@ public class AsyncCompute {
      * @return {@code CompletableFuture<GetComputeEnvvarResponse>} - The async response
      */
     public CompletableFuture<GetComputeEnvvarResponse> getComputeEnvvar(@Nonnull GetComputeEnvvarRequest request) {
+        return getComputeEnvvar(request, null);
+    }
+
+    /**
+     * Retrieve an envvar
+     * 
+     * <p>Retrieves a single ComputeEnvvar by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetComputeEnvvarResponse>} - The async response
+     */
+    public CompletableFuture<GetComputeEnvvarResponse> getComputeEnvvar(@Nonnull GetComputeEnvvarRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetComputeEnvvarRequest, GetComputeEnvvarResponse> operation
-              = new GetComputeEnvvar.Async(sdkConfiguration, _headers);
+              = new GetComputeEnvvar.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -636,8 +806,22 @@ public class AsyncCompute {
      * @return {@code CompletableFuture<GetComputeGputypeResponse>} - The async response
      */
     public CompletableFuture<GetComputeGputypeResponse> getComputeGputype(@Nonnull GetComputeGputypeRequest request) {
+        return getComputeGputype(request, null);
+    }
+
+    /**
+     * Retrieve a gputype
+     * 
+     * <p>Retrieves a single ComputeGputype by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetComputeGputypeResponse>} - The async response
+     */
+    public CompletableFuture<GetComputeGputypeResponse> getComputeGputype(@Nonnull GetComputeGputypeRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetComputeGputypeRequest, GetComputeGputypeResponse> operation
-              = new GetComputeGputype.Async(sdkConfiguration, _headers);
+              = new GetComputeGputype.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -665,8 +849,22 @@ public class AsyncCompute {
      * @return {@code CompletableFuture<GetComputeInstanceResponse>} - The async response
      */
     public CompletableFuture<GetComputeInstanceResponse> getComputeInstance(@Nonnull GetComputeInstanceRequest request) {
+        return getComputeInstance(request, null);
+    }
+
+    /**
+     * Retrieve an instance
+     * 
+     * <p>Retrieves a single ComputeInstance by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetComputeInstanceResponse>} - The async response
+     */
+    public CompletableFuture<GetComputeInstanceResponse> getComputeInstance(@Nonnull GetComputeInstanceRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetComputeInstanceRequest, GetComputeInstanceResponse> operation
-              = new GetComputeInstance.Async(sdkConfiguration, _headers);
+              = new GetComputeInstance.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -694,8 +892,22 @@ public class AsyncCompute {
      * @return {@code CompletableFuture<GetComputeKeyResponse>} - The async response
      */
     public CompletableFuture<GetComputeKeyResponse> getComputeKey(@Nonnull GetComputeKeyRequest request) {
+        return getComputeKey(request, null);
+    }
+
+    /**
+     * Retrieve a key
+     * 
+     * <p>Retrieves a single ComputeKey by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetComputeKeyResponse>} - The async response
+     */
+    public CompletableFuture<GetComputeKeyResponse> getComputeKey(@Nonnull GetComputeKeyRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetComputeKeyRequest, GetComputeKeyResponse> operation
-              = new GetComputeKey.Async(sdkConfiguration, _headers);
+              = new GetComputeKey.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -723,8 +935,22 @@ public class AsyncCompute {
      * @return {@code CompletableFuture<GetComputeRegionResponse>} - The async response
      */
     public CompletableFuture<GetComputeRegionResponse> getComputeRegion(@Nonnull GetComputeRegionRequest request) {
+        return getComputeRegion(request, null);
+    }
+
+    /**
+     * Retrieve a region
+     * 
+     * <p>Retrieves a single ComputeRegion by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetComputeRegionResponse>} - The async response
+     */
+    public CompletableFuture<GetComputeRegionResponse> getComputeRegion(@Nonnull GetComputeRegionRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetComputeRegionRequest, GetComputeRegionResponse> operation
-              = new GetComputeRegion.Async(sdkConfiguration, _headers);
+              = new GetComputeRegion.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -752,8 +978,22 @@ public class AsyncCompute {
      * @return {@code CompletableFuture<GetComputeServiceResponse>} - The async response
      */
     public CompletableFuture<GetComputeServiceResponse> getComputeService(@Nonnull GetComputeServiceRequest request) {
+        return getComputeService(request, null);
+    }
+
+    /**
+     * Retrieve a service
+     * 
+     * <p>Retrieves a single ComputeService by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetComputeServiceResponse>} - The async response
+     */
+    public CompletableFuture<GetComputeServiceResponse> getComputeService(@Nonnull GetComputeServiceRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetComputeServiceRequest, GetComputeServiceResponse> operation
-              = new GetComputeService.Async(sdkConfiguration, _headers);
+              = new GetComputeService.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -781,8 +1021,22 @@ public class AsyncCompute {
      * @return {@code CompletableFuture<GetComputeSnapshotResponse>} - The async response
      */
     public CompletableFuture<GetComputeSnapshotResponse> getComputeSnapshot(@Nonnull GetComputeSnapshotRequest request) {
+        return getComputeSnapshot(request, null);
+    }
+
+    /**
+     * Retrieve a snapshot
+     * 
+     * <p>Retrieves a single ComputeSnapshot by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetComputeSnapshotResponse>} - The async response
+     */
+    public CompletableFuture<GetComputeSnapshotResponse> getComputeSnapshot(@Nonnull GetComputeSnapshotRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetComputeSnapshotRequest, GetComputeSnapshotResponse> operation
-              = new GetComputeSnapshot.Async(sdkConfiguration, _headers);
+              = new GetComputeSnapshot.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -810,8 +1064,22 @@ public class AsyncCompute {
      * @return {@code CompletableFuture<GetComputeTemplateResponse>} - The async response
      */
     public CompletableFuture<GetComputeTemplateResponse> getComputeTemplate(@Nonnull GetComputeTemplateRequest request) {
+        return getComputeTemplate(request, null);
+    }
+
+    /**
+     * Retrieve a template
+     * 
+     * <p>Retrieves a single ComputeTemplate by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetComputeTemplateResponse>} - The async response
+     */
+    public CompletableFuture<GetComputeTemplateResponse> getComputeTemplate(@Nonnull GetComputeTemplateRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetComputeTemplateRequest, GetComputeTemplateResponse> operation
-              = new GetComputeTemplate.Async(sdkConfiguration, _headers);
+              = new GetComputeTemplate.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -839,8 +1107,22 @@ public class AsyncCompute {
      * @return {@code CompletableFuture<GetComputeVolumeResponse>} - The async response
      */
     public CompletableFuture<GetComputeVolumeResponse> getComputeVolume(@Nonnull GetComputeVolumeRequest request) {
+        return getComputeVolume(request, null);
+    }
+
+    /**
+     * Retrieve a volume
+     * 
+     * <p>Retrieves a single ComputeVolume by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetComputeVolumeResponse>} - The async response
+     */
+    public CompletableFuture<GetComputeVolumeResponse> getComputeVolume(@Nonnull GetComputeVolumeRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetComputeVolumeRequest, GetComputeVolumeResponse> operation
-              = new GetComputeVolume.Async(sdkConfiguration, _headers);
+              = new GetComputeVolume.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -876,8 +1158,26 @@ public class AsyncCompute {
      * @return {@code CompletableFuture<ListComputeDeploymentsResponse>} - The async response
      */
     public CompletableFuture<ListComputeDeploymentsResponse> listComputeDeployments(@Nonnull ListComputeDeploymentsRequest request) {
+        return listComputeDeployments(request, null);
+    }
+
+    /**
+     * List all deployments
+     * 
+     * <p>Returns a list of ComputeDeployments. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListComputeDeploymentsResponse>} - The async response
+     */
+    public CompletableFuture<ListComputeDeploymentsResponse> listComputeDeployments(@Nonnull ListComputeDeploymentsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListComputeDeploymentsRequest, ListComputeDeploymentsResponse> operation
-              = new ListComputeDeployments.Async(sdkConfiguration, _headers);
+              = new ListComputeDeployments.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -913,8 +1213,26 @@ public class AsyncCompute {
      * @return {@code CompletableFuture<ListComputeDomainsResponse>} - The async response
      */
     public CompletableFuture<ListComputeDomainsResponse> listComputeDomains(@Nonnull ListComputeDomainsRequest request) {
+        return listComputeDomains(request, null);
+    }
+
+    /**
+     * List all domains
+     * 
+     * <p>Returns a list of ComputeDomains. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListComputeDomainsResponse>} - The async response
+     */
+    public CompletableFuture<ListComputeDomainsResponse> listComputeDomains(@Nonnull ListComputeDomainsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListComputeDomainsRequest, ListComputeDomainsResponse> operation
-              = new ListComputeDomains.Async(sdkConfiguration, _headers);
+              = new ListComputeDomains.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -950,8 +1268,26 @@ public class AsyncCompute {
      * @return {@code CompletableFuture<ListComputeEnvvarsResponse>} - The async response
      */
     public CompletableFuture<ListComputeEnvvarsResponse> listComputeEnvvars(@Nonnull ListComputeEnvvarsRequest request) {
+        return listComputeEnvvars(request, null);
+    }
+
+    /**
+     * List all envvars
+     * 
+     * <p>Returns a list of ComputeEnvvars. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListComputeEnvvarsResponse>} - The async response
+     */
+    public CompletableFuture<ListComputeEnvvarsResponse> listComputeEnvvars(@Nonnull ListComputeEnvvarsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListComputeEnvvarsRequest, ListComputeEnvvarsResponse> operation
-              = new ListComputeEnvvars.Async(sdkConfiguration, _headers);
+              = new ListComputeEnvvars.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -987,8 +1323,26 @@ public class AsyncCompute {
      * @return {@code CompletableFuture<ListComputeGputypesResponse>} - The async response
      */
     public CompletableFuture<ListComputeGputypesResponse> listComputeGputypes(@Nonnull ListComputeGputypesRequest request) {
+        return listComputeGputypes(request, null);
+    }
+
+    /**
+     * List all gputypes
+     * 
+     * <p>Returns a list of ComputeGputypes. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListComputeGputypesResponse>} - The async response
+     */
+    public CompletableFuture<ListComputeGputypesResponse> listComputeGputypes(@Nonnull ListComputeGputypesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListComputeGputypesRequest, ListComputeGputypesResponse> operation
-              = new ListComputeGputypes.Async(sdkConfiguration, _headers);
+              = new ListComputeGputypes.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1024,8 +1378,26 @@ public class AsyncCompute {
      * @return {@code CompletableFuture<ListComputeInstancesResponse>} - The async response
      */
     public CompletableFuture<ListComputeInstancesResponse> listComputeInstances(@Nonnull ListComputeInstancesRequest request) {
+        return listComputeInstances(request, null);
+    }
+
+    /**
+     * List all instances
+     * 
+     * <p>Returns a list of ComputeInstances. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListComputeInstancesResponse>} - The async response
+     */
+    public CompletableFuture<ListComputeInstancesResponse> listComputeInstances(@Nonnull ListComputeInstancesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListComputeInstancesRequest, ListComputeInstancesResponse> operation
-              = new ListComputeInstances.Async(sdkConfiguration, _headers);
+              = new ListComputeInstances.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1061,8 +1433,26 @@ public class AsyncCompute {
      * @return {@code CompletableFuture<ListComputeKeysResponse>} - The async response
      */
     public CompletableFuture<ListComputeKeysResponse> listComputeKeys(@Nonnull ListComputeKeysRequest request) {
+        return listComputeKeys(request, null);
+    }
+
+    /**
+     * List all keys
+     * 
+     * <p>Returns a list of ComputeKeys. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListComputeKeysResponse>} - The async response
+     */
+    public CompletableFuture<ListComputeKeysResponse> listComputeKeys(@Nonnull ListComputeKeysRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListComputeKeysRequest, ListComputeKeysResponse> operation
-              = new ListComputeKeys.Async(sdkConfiguration, _headers);
+              = new ListComputeKeys.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1098,8 +1488,26 @@ public class AsyncCompute {
      * @return {@code CompletableFuture<ListComputeRegionsResponse>} - The async response
      */
     public CompletableFuture<ListComputeRegionsResponse> listComputeRegions(@Nonnull ListComputeRegionsRequest request) {
+        return listComputeRegions(request, null);
+    }
+
+    /**
+     * List all regions
+     * 
+     * <p>Returns a list of ComputeRegions. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListComputeRegionsResponse>} - The async response
+     */
+    public CompletableFuture<ListComputeRegionsResponse> listComputeRegions(@Nonnull ListComputeRegionsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListComputeRegionsRequest, ListComputeRegionsResponse> operation
-              = new ListComputeRegions.Async(sdkConfiguration, _headers);
+              = new ListComputeRegions.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1135,8 +1543,26 @@ public class AsyncCompute {
      * @return {@code CompletableFuture<ListComputeServicesResponse>} - The async response
      */
     public CompletableFuture<ListComputeServicesResponse> listComputeServices(@Nonnull ListComputeServicesRequest request) {
+        return listComputeServices(request, null);
+    }
+
+    /**
+     * List all services
+     * 
+     * <p>Returns a list of ComputeServices. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListComputeServicesResponse>} - The async response
+     */
+    public CompletableFuture<ListComputeServicesResponse> listComputeServices(@Nonnull ListComputeServicesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListComputeServicesRequest, ListComputeServicesResponse> operation
-              = new ListComputeServices.Async(sdkConfiguration, _headers);
+              = new ListComputeServices.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1172,8 +1598,26 @@ public class AsyncCompute {
      * @return {@code CompletableFuture<ListComputeSnapshotsResponse>} - The async response
      */
     public CompletableFuture<ListComputeSnapshotsResponse> listComputeSnapshots(@Nonnull ListComputeSnapshotsRequest request) {
+        return listComputeSnapshots(request, null);
+    }
+
+    /**
+     * List all snapshots
+     * 
+     * <p>Returns a list of ComputeSnapshots. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListComputeSnapshotsResponse>} - The async response
+     */
+    public CompletableFuture<ListComputeSnapshotsResponse> listComputeSnapshots(@Nonnull ListComputeSnapshotsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListComputeSnapshotsRequest, ListComputeSnapshotsResponse> operation
-              = new ListComputeSnapshots.Async(sdkConfiguration, _headers);
+              = new ListComputeSnapshots.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1209,8 +1653,26 @@ public class AsyncCompute {
      * @return {@code CompletableFuture<ListComputeTemplatesResponse>} - The async response
      */
     public CompletableFuture<ListComputeTemplatesResponse> listComputeTemplates(@Nonnull ListComputeTemplatesRequest request) {
+        return listComputeTemplates(request, null);
+    }
+
+    /**
+     * List all templates
+     * 
+     * <p>Returns a list of ComputeTemplates. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListComputeTemplatesResponse>} - The async response
+     */
+    public CompletableFuture<ListComputeTemplatesResponse> listComputeTemplates(@Nonnull ListComputeTemplatesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListComputeTemplatesRequest, ListComputeTemplatesResponse> operation
-              = new ListComputeTemplates.Async(sdkConfiguration, _headers);
+              = new ListComputeTemplates.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1246,8 +1708,26 @@ public class AsyncCompute {
      * @return {@code CompletableFuture<ListComputeUsagesResponse>} - The async response
      */
     public CompletableFuture<ListComputeUsagesResponse> listComputeUsages(@Nonnull ListComputeUsagesRequest request) {
+        return listComputeUsages(request, null);
+    }
+
+    /**
+     * List all usages
+     * 
+     * <p>Returns a list of ComputeUsages. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListComputeUsagesResponse>} - The async response
+     */
+    public CompletableFuture<ListComputeUsagesResponse> listComputeUsages(@Nonnull ListComputeUsagesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListComputeUsagesRequest, ListComputeUsagesResponse> operation
-              = new ListComputeUsages.Async(sdkConfiguration, _headers);
+              = new ListComputeUsages.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1283,8 +1763,26 @@ public class AsyncCompute {
      * @return {@code CompletableFuture<ListComputeVolumesResponse>} - The async response
      */
     public CompletableFuture<ListComputeVolumesResponse> listComputeVolumes(@Nonnull ListComputeVolumesRequest request) {
+        return listComputeVolumes(request, null);
+    }
+
+    /**
+     * List all volumes
+     * 
+     * <p>Returns a list of ComputeVolumes. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListComputeVolumesResponse>} - The async response
+     */
+    public CompletableFuture<ListComputeVolumesResponse> listComputeVolumes(@Nonnull ListComputeVolumesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListComputeVolumesRequest, ListComputeVolumesResponse> operation
-              = new ListComputeVolumes.Async(sdkConfiguration, _headers);
+              = new ListComputeVolumes.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1312,8 +1810,22 @@ public class AsyncCompute {
      * @return {@code CompletableFuture<PatchComputeDeploymentResponse>} - The async response
      */
     public CompletableFuture<PatchComputeDeploymentResponse> patchComputeDeployment(@Nonnull PatchComputeDeploymentRequest request) {
+        return patchComputeDeployment(request, null);
+    }
+
+    /**
+     * Update a deployment
+     * 
+     * <p>Updates the ComputeDeployment identified by `id`. Provide the unified ComputeDeployment fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchComputeDeploymentResponse>} - The async response
+     */
+    public CompletableFuture<PatchComputeDeploymentResponse> patchComputeDeployment(@Nonnull PatchComputeDeploymentRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchComputeDeploymentRequest, PatchComputeDeploymentResponse> operation
-              = new PatchComputeDeployment.Async(sdkConfiguration, _headers);
+              = new PatchComputeDeployment.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1341,8 +1853,22 @@ public class AsyncCompute {
      * @return {@code CompletableFuture<PatchComputeDomainResponse>} - The async response
      */
     public CompletableFuture<PatchComputeDomainResponse> patchComputeDomain(@Nonnull PatchComputeDomainRequest request) {
+        return patchComputeDomain(request, null);
+    }
+
+    /**
+     * Update a domain
+     * 
+     * <p>Updates the ComputeDomain identified by `id`. Provide the unified ComputeDomain fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchComputeDomainResponse>} - The async response
+     */
+    public CompletableFuture<PatchComputeDomainResponse> patchComputeDomain(@Nonnull PatchComputeDomainRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchComputeDomainRequest, PatchComputeDomainResponse> operation
-              = new PatchComputeDomain.Async(sdkConfiguration, _headers);
+              = new PatchComputeDomain.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1370,8 +1896,22 @@ public class AsyncCompute {
      * @return {@code CompletableFuture<PatchComputeEnvvarResponse>} - The async response
      */
     public CompletableFuture<PatchComputeEnvvarResponse> patchComputeEnvvar(@Nonnull PatchComputeEnvvarRequest request) {
+        return patchComputeEnvvar(request, null);
+    }
+
+    /**
+     * Update an envvar
+     * 
+     * <p>Updates the ComputeEnvvar identified by `id`. Provide the unified ComputeEnvvar fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchComputeEnvvarResponse>} - The async response
+     */
+    public CompletableFuture<PatchComputeEnvvarResponse> patchComputeEnvvar(@Nonnull PatchComputeEnvvarRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchComputeEnvvarRequest, PatchComputeEnvvarResponse> operation
-              = new PatchComputeEnvvar.Async(sdkConfiguration, _headers);
+              = new PatchComputeEnvvar.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1399,8 +1939,22 @@ public class AsyncCompute {
      * @return {@code CompletableFuture<PatchComputeInstanceResponse>} - The async response
      */
     public CompletableFuture<PatchComputeInstanceResponse> patchComputeInstance(@Nonnull PatchComputeInstanceRequest request) {
+        return patchComputeInstance(request, null);
+    }
+
+    /**
+     * Update an instance
+     * 
+     * <p>Updates the ComputeInstance identified by `id`. Provide the unified ComputeInstance fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchComputeInstanceResponse>} - The async response
+     */
+    public CompletableFuture<PatchComputeInstanceResponse> patchComputeInstance(@Nonnull PatchComputeInstanceRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchComputeInstanceRequest, PatchComputeInstanceResponse> operation
-              = new PatchComputeInstance.Async(sdkConfiguration, _headers);
+              = new PatchComputeInstance.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1428,8 +1982,22 @@ public class AsyncCompute {
      * @return {@code CompletableFuture<PatchComputeKeyResponse>} - The async response
      */
     public CompletableFuture<PatchComputeKeyResponse> patchComputeKey(@Nonnull PatchComputeKeyRequest request) {
+        return patchComputeKey(request, null);
+    }
+
+    /**
+     * Update a key
+     * 
+     * <p>Updates the ComputeKey identified by `id`. Provide the unified ComputeKey fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchComputeKeyResponse>} - The async response
+     */
+    public CompletableFuture<PatchComputeKeyResponse> patchComputeKey(@Nonnull PatchComputeKeyRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchComputeKeyRequest, PatchComputeKeyResponse> operation
-              = new PatchComputeKey.Async(sdkConfiguration, _headers);
+              = new PatchComputeKey.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1457,8 +2025,22 @@ public class AsyncCompute {
      * @return {@code CompletableFuture<PatchComputeServiceResponse>} - The async response
      */
     public CompletableFuture<PatchComputeServiceResponse> patchComputeService(@Nonnull PatchComputeServiceRequest request) {
+        return patchComputeService(request, null);
+    }
+
+    /**
+     * Update a service
+     * 
+     * <p>Updates the ComputeService identified by `id`. Provide the unified ComputeService fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchComputeServiceResponse>} - The async response
+     */
+    public CompletableFuture<PatchComputeServiceResponse> patchComputeService(@Nonnull PatchComputeServiceRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchComputeServiceRequest, PatchComputeServiceResponse> operation
-              = new PatchComputeService.Async(sdkConfiguration, _headers);
+              = new PatchComputeService.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1486,8 +2068,22 @@ public class AsyncCompute {
      * @return {@code CompletableFuture<PatchComputeSnapshotResponse>} - The async response
      */
     public CompletableFuture<PatchComputeSnapshotResponse> patchComputeSnapshot(@Nonnull PatchComputeSnapshotRequest request) {
+        return patchComputeSnapshot(request, null);
+    }
+
+    /**
+     * Update a snapshot
+     * 
+     * <p>Updates the ComputeSnapshot identified by `id`. Provide the unified ComputeSnapshot fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchComputeSnapshotResponse>} - The async response
+     */
+    public CompletableFuture<PatchComputeSnapshotResponse> patchComputeSnapshot(@Nonnull PatchComputeSnapshotRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchComputeSnapshotRequest, PatchComputeSnapshotResponse> operation
-              = new PatchComputeSnapshot.Async(sdkConfiguration, _headers);
+              = new PatchComputeSnapshot.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1515,8 +2111,22 @@ public class AsyncCompute {
      * @return {@code CompletableFuture<PatchComputeTemplateResponse>} - The async response
      */
     public CompletableFuture<PatchComputeTemplateResponse> patchComputeTemplate(@Nonnull PatchComputeTemplateRequest request) {
+        return patchComputeTemplate(request, null);
+    }
+
+    /**
+     * Update a template
+     * 
+     * <p>Updates the ComputeTemplate identified by `id`. Provide the unified ComputeTemplate fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchComputeTemplateResponse>} - The async response
+     */
+    public CompletableFuture<PatchComputeTemplateResponse> patchComputeTemplate(@Nonnull PatchComputeTemplateRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchComputeTemplateRequest, PatchComputeTemplateResponse> operation
-              = new PatchComputeTemplate.Async(sdkConfiguration, _headers);
+              = new PatchComputeTemplate.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1544,8 +2154,22 @@ public class AsyncCompute {
      * @return {@code CompletableFuture<PatchComputeVolumeResponse>} - The async response
      */
     public CompletableFuture<PatchComputeVolumeResponse> patchComputeVolume(@Nonnull PatchComputeVolumeRequest request) {
+        return patchComputeVolume(request, null);
+    }
+
+    /**
+     * Update a volume
+     * 
+     * <p>Updates the ComputeVolume identified by `id`. Provide the unified ComputeVolume fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchComputeVolumeResponse>} - The async response
+     */
+    public CompletableFuture<PatchComputeVolumeResponse> patchComputeVolume(@Nonnull PatchComputeVolumeRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchComputeVolumeRequest, PatchComputeVolumeResponse> operation
-              = new PatchComputeVolume.Async(sdkConfiguration, _headers);
+              = new PatchComputeVolume.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1571,8 +2195,21 @@ public class AsyncCompute {
      * @return {@code CompletableFuture<RemoveComputeDeploymentResponse>} - The async response
      */
     public CompletableFuture<RemoveComputeDeploymentResponse> removeComputeDeployment(@Nonnull RemoveComputeDeploymentRequest request) {
+        return removeComputeDeployment(request, null);
+    }
+
+    /**
+     * Remove a deployment
+     * 
+     * <p>Deletes the ComputeDeployment identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveComputeDeploymentResponse>} - The async response
+     */
+    public CompletableFuture<RemoveComputeDeploymentResponse> removeComputeDeployment(@Nonnull RemoveComputeDeploymentRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveComputeDeploymentRequest, RemoveComputeDeploymentResponse> operation
-              = new RemoveComputeDeployment.Async(sdkConfiguration, _headers);
+              = new RemoveComputeDeployment.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1598,8 +2235,21 @@ public class AsyncCompute {
      * @return {@code CompletableFuture<RemoveComputeDomainResponse>} - The async response
      */
     public CompletableFuture<RemoveComputeDomainResponse> removeComputeDomain(@Nonnull RemoveComputeDomainRequest request) {
+        return removeComputeDomain(request, null);
+    }
+
+    /**
+     * Remove a domain
+     * 
+     * <p>Deletes the ComputeDomain identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveComputeDomainResponse>} - The async response
+     */
+    public CompletableFuture<RemoveComputeDomainResponse> removeComputeDomain(@Nonnull RemoveComputeDomainRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveComputeDomainRequest, RemoveComputeDomainResponse> operation
-              = new RemoveComputeDomain.Async(sdkConfiguration, _headers);
+              = new RemoveComputeDomain.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1625,8 +2275,21 @@ public class AsyncCompute {
      * @return {@code CompletableFuture<RemoveComputeEnvvarResponse>} - The async response
      */
     public CompletableFuture<RemoveComputeEnvvarResponse> removeComputeEnvvar(@Nonnull RemoveComputeEnvvarRequest request) {
+        return removeComputeEnvvar(request, null);
+    }
+
+    /**
+     * Remove an envvar
+     * 
+     * <p>Deletes the ComputeEnvvar identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveComputeEnvvarResponse>} - The async response
+     */
+    public CompletableFuture<RemoveComputeEnvvarResponse> removeComputeEnvvar(@Nonnull RemoveComputeEnvvarRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveComputeEnvvarRequest, RemoveComputeEnvvarResponse> operation
-              = new RemoveComputeEnvvar.Async(sdkConfiguration, _headers);
+              = new RemoveComputeEnvvar.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1652,8 +2315,21 @@ public class AsyncCompute {
      * @return {@code CompletableFuture<RemoveComputeInstanceResponse>} - The async response
      */
     public CompletableFuture<RemoveComputeInstanceResponse> removeComputeInstance(@Nonnull RemoveComputeInstanceRequest request) {
+        return removeComputeInstance(request, null);
+    }
+
+    /**
+     * Remove an instance
+     * 
+     * <p>Deletes the ComputeInstance identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveComputeInstanceResponse>} - The async response
+     */
+    public CompletableFuture<RemoveComputeInstanceResponse> removeComputeInstance(@Nonnull RemoveComputeInstanceRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveComputeInstanceRequest, RemoveComputeInstanceResponse> operation
-              = new RemoveComputeInstance.Async(sdkConfiguration, _headers);
+              = new RemoveComputeInstance.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1679,8 +2355,21 @@ public class AsyncCompute {
      * @return {@code CompletableFuture<RemoveComputeKeyResponse>} - The async response
      */
     public CompletableFuture<RemoveComputeKeyResponse> removeComputeKey(@Nonnull RemoveComputeKeyRequest request) {
+        return removeComputeKey(request, null);
+    }
+
+    /**
+     * Remove a key
+     * 
+     * <p>Deletes the ComputeKey identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveComputeKeyResponse>} - The async response
+     */
+    public CompletableFuture<RemoveComputeKeyResponse> removeComputeKey(@Nonnull RemoveComputeKeyRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveComputeKeyRequest, RemoveComputeKeyResponse> operation
-              = new RemoveComputeKey.Async(sdkConfiguration, _headers);
+              = new RemoveComputeKey.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1706,8 +2395,21 @@ public class AsyncCompute {
      * @return {@code CompletableFuture<RemoveComputeServiceResponse>} - The async response
      */
     public CompletableFuture<RemoveComputeServiceResponse> removeComputeService(@Nonnull RemoveComputeServiceRequest request) {
+        return removeComputeService(request, null);
+    }
+
+    /**
+     * Remove a service
+     * 
+     * <p>Deletes the ComputeService identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveComputeServiceResponse>} - The async response
+     */
+    public CompletableFuture<RemoveComputeServiceResponse> removeComputeService(@Nonnull RemoveComputeServiceRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveComputeServiceRequest, RemoveComputeServiceResponse> operation
-              = new RemoveComputeService.Async(sdkConfiguration, _headers);
+              = new RemoveComputeService.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1733,8 +2435,21 @@ public class AsyncCompute {
      * @return {@code CompletableFuture<RemoveComputeSnapshotResponse>} - The async response
      */
     public CompletableFuture<RemoveComputeSnapshotResponse> removeComputeSnapshot(@Nonnull RemoveComputeSnapshotRequest request) {
+        return removeComputeSnapshot(request, null);
+    }
+
+    /**
+     * Remove a snapshot
+     * 
+     * <p>Deletes the ComputeSnapshot identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveComputeSnapshotResponse>} - The async response
+     */
+    public CompletableFuture<RemoveComputeSnapshotResponse> removeComputeSnapshot(@Nonnull RemoveComputeSnapshotRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveComputeSnapshotRequest, RemoveComputeSnapshotResponse> operation
-              = new RemoveComputeSnapshot.Async(sdkConfiguration, _headers);
+              = new RemoveComputeSnapshot.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1760,8 +2475,21 @@ public class AsyncCompute {
      * @return {@code CompletableFuture<RemoveComputeTemplateResponse>} - The async response
      */
     public CompletableFuture<RemoveComputeTemplateResponse> removeComputeTemplate(@Nonnull RemoveComputeTemplateRequest request) {
+        return removeComputeTemplate(request, null);
+    }
+
+    /**
+     * Remove a template
+     * 
+     * <p>Deletes the ComputeTemplate identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveComputeTemplateResponse>} - The async response
+     */
+    public CompletableFuture<RemoveComputeTemplateResponse> removeComputeTemplate(@Nonnull RemoveComputeTemplateRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveComputeTemplateRequest, RemoveComputeTemplateResponse> operation
-              = new RemoveComputeTemplate.Async(sdkConfiguration, _headers);
+              = new RemoveComputeTemplate.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1787,8 +2515,21 @@ public class AsyncCompute {
      * @return {@code CompletableFuture<RemoveComputeVolumeResponse>} - The async response
      */
     public CompletableFuture<RemoveComputeVolumeResponse> removeComputeVolume(@Nonnull RemoveComputeVolumeRequest request) {
+        return removeComputeVolume(request, null);
+    }
+
+    /**
+     * Remove a volume
+     * 
+     * <p>Deletes the ComputeVolume identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveComputeVolumeResponse>} - The async response
+     */
+    public CompletableFuture<RemoveComputeVolumeResponse> removeComputeVolume(@Nonnull RemoveComputeVolumeRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveComputeVolumeRequest, RemoveComputeVolumeResponse> operation
-              = new RemoveComputeVolume.Async(sdkConfiguration, _headers);
+              = new RemoveComputeVolume.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1816,8 +2557,22 @@ public class AsyncCompute {
      * @return {@code CompletableFuture<UpdateComputeDeploymentResponse>} - The async response
      */
     public CompletableFuture<UpdateComputeDeploymentResponse> updateComputeDeployment(@Nonnull UpdateComputeDeploymentRequest request) {
+        return updateComputeDeployment(request, null);
+    }
+
+    /**
+     * Update a deployment
+     * 
+     * <p>Updates the ComputeDeployment identified by `id`. Provide the unified ComputeDeployment fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateComputeDeploymentResponse>} - The async response
+     */
+    public CompletableFuture<UpdateComputeDeploymentResponse> updateComputeDeployment(@Nonnull UpdateComputeDeploymentRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateComputeDeploymentRequest, UpdateComputeDeploymentResponse> operation
-              = new UpdateComputeDeployment.Async(sdkConfiguration, _headers);
+              = new UpdateComputeDeployment.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1845,8 +2600,22 @@ public class AsyncCompute {
      * @return {@code CompletableFuture<UpdateComputeDomainResponse>} - The async response
      */
     public CompletableFuture<UpdateComputeDomainResponse> updateComputeDomain(@Nonnull UpdateComputeDomainRequest request) {
+        return updateComputeDomain(request, null);
+    }
+
+    /**
+     * Update a domain
+     * 
+     * <p>Updates the ComputeDomain identified by `id`. Provide the unified ComputeDomain fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateComputeDomainResponse>} - The async response
+     */
+    public CompletableFuture<UpdateComputeDomainResponse> updateComputeDomain(@Nonnull UpdateComputeDomainRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateComputeDomainRequest, UpdateComputeDomainResponse> operation
-              = new UpdateComputeDomain.Async(sdkConfiguration, _headers);
+              = new UpdateComputeDomain.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1874,8 +2643,22 @@ public class AsyncCompute {
      * @return {@code CompletableFuture<UpdateComputeEnvvarResponse>} - The async response
      */
     public CompletableFuture<UpdateComputeEnvvarResponse> updateComputeEnvvar(@Nonnull UpdateComputeEnvvarRequest request) {
+        return updateComputeEnvvar(request, null);
+    }
+
+    /**
+     * Update an envvar
+     * 
+     * <p>Updates the ComputeEnvvar identified by `id`. Provide the unified ComputeEnvvar fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateComputeEnvvarResponse>} - The async response
+     */
+    public CompletableFuture<UpdateComputeEnvvarResponse> updateComputeEnvvar(@Nonnull UpdateComputeEnvvarRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateComputeEnvvarRequest, UpdateComputeEnvvarResponse> operation
-              = new UpdateComputeEnvvar.Async(sdkConfiguration, _headers);
+              = new UpdateComputeEnvvar.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1903,8 +2686,22 @@ public class AsyncCompute {
      * @return {@code CompletableFuture<UpdateComputeInstanceResponse>} - The async response
      */
     public CompletableFuture<UpdateComputeInstanceResponse> updateComputeInstance(@Nonnull UpdateComputeInstanceRequest request) {
+        return updateComputeInstance(request, null);
+    }
+
+    /**
+     * Update an instance
+     * 
+     * <p>Updates the ComputeInstance identified by `id`. Provide the unified ComputeInstance fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateComputeInstanceResponse>} - The async response
+     */
+    public CompletableFuture<UpdateComputeInstanceResponse> updateComputeInstance(@Nonnull UpdateComputeInstanceRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateComputeInstanceRequest, UpdateComputeInstanceResponse> operation
-              = new UpdateComputeInstance.Async(sdkConfiguration, _headers);
+              = new UpdateComputeInstance.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1932,8 +2729,22 @@ public class AsyncCompute {
      * @return {@code CompletableFuture<UpdateComputeKeyResponse>} - The async response
      */
     public CompletableFuture<UpdateComputeKeyResponse> updateComputeKey(@Nonnull UpdateComputeKeyRequest request) {
+        return updateComputeKey(request, null);
+    }
+
+    /**
+     * Update a key
+     * 
+     * <p>Updates the ComputeKey identified by `id`. Provide the unified ComputeKey fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateComputeKeyResponse>} - The async response
+     */
+    public CompletableFuture<UpdateComputeKeyResponse> updateComputeKey(@Nonnull UpdateComputeKeyRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateComputeKeyRequest, UpdateComputeKeyResponse> operation
-              = new UpdateComputeKey.Async(sdkConfiguration, _headers);
+              = new UpdateComputeKey.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1961,8 +2772,22 @@ public class AsyncCompute {
      * @return {@code CompletableFuture<UpdateComputeServiceResponse>} - The async response
      */
     public CompletableFuture<UpdateComputeServiceResponse> updateComputeService(@Nonnull UpdateComputeServiceRequest request) {
+        return updateComputeService(request, null);
+    }
+
+    /**
+     * Update a service
+     * 
+     * <p>Updates the ComputeService identified by `id`. Provide the unified ComputeService fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateComputeServiceResponse>} - The async response
+     */
+    public CompletableFuture<UpdateComputeServiceResponse> updateComputeService(@Nonnull UpdateComputeServiceRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateComputeServiceRequest, UpdateComputeServiceResponse> operation
-              = new UpdateComputeService.Async(sdkConfiguration, _headers);
+              = new UpdateComputeService.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1990,8 +2815,22 @@ public class AsyncCompute {
      * @return {@code CompletableFuture<UpdateComputeSnapshotResponse>} - The async response
      */
     public CompletableFuture<UpdateComputeSnapshotResponse> updateComputeSnapshot(@Nonnull UpdateComputeSnapshotRequest request) {
+        return updateComputeSnapshot(request, null);
+    }
+
+    /**
+     * Update a snapshot
+     * 
+     * <p>Updates the ComputeSnapshot identified by `id`. Provide the unified ComputeSnapshot fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateComputeSnapshotResponse>} - The async response
+     */
+    public CompletableFuture<UpdateComputeSnapshotResponse> updateComputeSnapshot(@Nonnull UpdateComputeSnapshotRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateComputeSnapshotRequest, UpdateComputeSnapshotResponse> operation
-              = new UpdateComputeSnapshot.Async(sdkConfiguration, _headers);
+              = new UpdateComputeSnapshot.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -2019,8 +2858,22 @@ public class AsyncCompute {
      * @return {@code CompletableFuture<UpdateComputeTemplateResponse>} - The async response
      */
     public CompletableFuture<UpdateComputeTemplateResponse> updateComputeTemplate(@Nonnull UpdateComputeTemplateRequest request) {
+        return updateComputeTemplate(request, null);
+    }
+
+    /**
+     * Update a template
+     * 
+     * <p>Updates the ComputeTemplate identified by `id`. Provide the unified ComputeTemplate fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateComputeTemplateResponse>} - The async response
+     */
+    public CompletableFuture<UpdateComputeTemplateResponse> updateComputeTemplate(@Nonnull UpdateComputeTemplateRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateComputeTemplateRequest, UpdateComputeTemplateResponse> operation
-              = new UpdateComputeTemplate.Async(sdkConfiguration, _headers);
+              = new UpdateComputeTemplate.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -2048,8 +2901,22 @@ public class AsyncCompute {
      * @return {@code CompletableFuture<UpdateComputeVolumeResponse>} - The async response
      */
     public CompletableFuture<UpdateComputeVolumeResponse> updateComputeVolume(@Nonnull UpdateComputeVolumeRequest request) {
+        return updateComputeVolume(request, null);
+    }
+
+    /**
+     * Update a volume
+     * 
+     * <p>Updates the ComputeVolume identified by `id`. Provide the unified ComputeVolume fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateComputeVolumeResponse>} - The async response
+     */
+    public CompletableFuture<UpdateComputeVolumeResponse> updateComputeVolume(@Nonnull UpdateComputeVolumeRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateComputeVolumeRequest, UpdateComputeVolumeResponse> operation
-              = new UpdateComputeVolume.Async(sdkConfiguration, _headers);
+              = new UpdateComputeVolume.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

@@ -6,20 +6,30 @@ package to.unified.unified_java_sdk.models.operations.async;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.GetLegalPracticeareaRequest;
 import to.unified.unified_java_sdk.operations.GetLegalPracticearea;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetLegalPracticeareaRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private GetLegalPracticeareaRequest request;
+    private final Options.Builder optionsBuilder;
 
     public GetLegalPracticeareaRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public GetLegalPracticeareaRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public GetLegalPracticeareaRequestBuilder request(@Nonnull GetLegalPracticeareaRequest request) {
@@ -44,8 +54,9 @@ public class GetLegalPracticeareaRequestBuilder {
     * @return The response from the server.
     */
     public CompletableFuture<GetLegalPracticeareaResponse> call() {
+        Options options = optionsBuilder.build();
         AsyncRequestOperation<GetLegalPracticeareaRequest, GetLegalPracticeareaResponse> operation
-              = new GetLegalPracticearea.Async(sdkConfiguration, _headers);
+              = new GetLegalPracticearea.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

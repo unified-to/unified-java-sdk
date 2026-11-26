@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreatePaymentSubscriptionRequest;
 import to.unified.unified_java_sdk.models.operations.GetPaymentSubscriptionRequest;
@@ -32,6 +33,7 @@ import to.unified.unified_java_sdk.operations.PatchPaymentSubscription;
 import to.unified.unified_java_sdk.operations.RemovePaymentSubscription;
 import to.unified.unified_java_sdk.operations.UpdatePaymentSubscription;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncSubscription {
@@ -76,8 +78,22 @@ public class AsyncSubscription {
      * @return {@code CompletableFuture<CreatePaymentSubscriptionResponse>} - The async response
      */
     public CompletableFuture<CreatePaymentSubscriptionResponse> createPaymentSubscription(@Nonnull CreatePaymentSubscriptionRequest request) {
+        return createPaymentSubscription(request, null);
+    }
+
+    /**
+     * Create a subscription
+     * 
+     * <p>Creates a PaymentSubscription. Provide the unified PaymentSubscription fields in the request body;
+     * they are mapped to the provider's API. Returns the created PaymentSubscription.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreatePaymentSubscriptionResponse>} - The async response
+     */
+    public CompletableFuture<CreatePaymentSubscriptionResponse> createPaymentSubscription(@Nonnull CreatePaymentSubscriptionRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreatePaymentSubscriptionRequest, CreatePaymentSubscriptionResponse> operation
-              = new CreatePaymentSubscription.Async(sdkConfiguration, _headers);
+              = new CreatePaymentSubscription.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -105,8 +121,22 @@ public class AsyncSubscription {
      * @return {@code CompletableFuture<GetPaymentSubscriptionResponse>} - The async response
      */
     public CompletableFuture<GetPaymentSubscriptionResponse> getPaymentSubscription(@Nonnull GetPaymentSubscriptionRequest request) {
+        return getPaymentSubscription(request, null);
+    }
+
+    /**
+     * Retrieve a subscription
+     * 
+     * <p>Retrieves a single PaymentSubscription by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetPaymentSubscriptionResponse>} - The async response
+     */
+    public CompletableFuture<GetPaymentSubscriptionResponse> getPaymentSubscription(@Nonnull GetPaymentSubscriptionRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetPaymentSubscriptionRequest, GetPaymentSubscriptionResponse> operation
-              = new GetPaymentSubscription.Async(sdkConfiguration, _headers);
+              = new GetPaymentSubscription.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -142,8 +172,26 @@ public class AsyncSubscription {
      * @return {@code CompletableFuture<ListPaymentSubscriptionsResponse>} - The async response
      */
     public CompletableFuture<ListPaymentSubscriptionsResponse> listPaymentSubscriptions(@Nonnull ListPaymentSubscriptionsRequest request) {
+        return listPaymentSubscriptions(request, null);
+    }
+
+    /**
+     * List all subscriptions
+     * 
+     * <p>Returns a list of PaymentSubscriptions. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListPaymentSubscriptionsResponse>} - The async response
+     */
+    public CompletableFuture<ListPaymentSubscriptionsResponse> listPaymentSubscriptions(@Nonnull ListPaymentSubscriptionsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListPaymentSubscriptionsRequest, ListPaymentSubscriptionsResponse> operation
-              = new ListPaymentSubscriptions.Async(sdkConfiguration, _headers);
+              = new ListPaymentSubscriptions.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -171,8 +219,22 @@ public class AsyncSubscription {
      * @return {@code CompletableFuture<PatchPaymentSubscriptionResponse>} - The async response
      */
     public CompletableFuture<PatchPaymentSubscriptionResponse> patchPaymentSubscription(@Nonnull PatchPaymentSubscriptionRequest request) {
+        return patchPaymentSubscription(request, null);
+    }
+
+    /**
+     * Update a subscription
+     * 
+     * <p>Updates the PaymentSubscription identified by `id`. Provide the unified PaymentSubscription fields
+     * to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchPaymentSubscriptionResponse>} - The async response
+     */
+    public CompletableFuture<PatchPaymentSubscriptionResponse> patchPaymentSubscription(@Nonnull PatchPaymentSubscriptionRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchPaymentSubscriptionRequest, PatchPaymentSubscriptionResponse> operation
-              = new PatchPaymentSubscription.Async(sdkConfiguration, _headers);
+              = new PatchPaymentSubscription.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -198,8 +260,21 @@ public class AsyncSubscription {
      * @return {@code CompletableFuture<RemovePaymentSubscriptionResponse>} - The async response
      */
     public CompletableFuture<RemovePaymentSubscriptionResponse> removePaymentSubscription(@Nonnull RemovePaymentSubscriptionRequest request) {
+        return removePaymentSubscription(request, null);
+    }
+
+    /**
+     * Remove a subscription
+     * 
+     * <p>Deletes the PaymentSubscription identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemovePaymentSubscriptionResponse>} - The async response
+     */
+    public CompletableFuture<RemovePaymentSubscriptionResponse> removePaymentSubscription(@Nonnull RemovePaymentSubscriptionRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemovePaymentSubscriptionRequest, RemovePaymentSubscriptionResponse> operation
-              = new RemovePaymentSubscription.Async(sdkConfiguration, _headers);
+              = new RemovePaymentSubscription.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -227,8 +302,22 @@ public class AsyncSubscription {
      * @return {@code CompletableFuture<UpdatePaymentSubscriptionResponse>} - The async response
      */
     public CompletableFuture<UpdatePaymentSubscriptionResponse> updatePaymentSubscription(@Nonnull UpdatePaymentSubscriptionRequest request) {
+        return updatePaymentSubscription(request, null);
+    }
+
+    /**
+     * Update a subscription
+     * 
+     * <p>Updates the PaymentSubscription identified by `id`. Provide the unified PaymentSubscription fields
+     * to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdatePaymentSubscriptionResponse>} - The async response
+     */
+    public CompletableFuture<UpdatePaymentSubscriptionResponse> updatePaymentSubscription(@Nonnull UpdatePaymentSubscriptionRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdatePaymentSubscriptionRequest, UpdatePaymentSubscriptionResponse> operation
-              = new UpdatePaymentSubscription.Async(sdkConfiguration, _headers);
+              = new UpdatePaymentSubscription.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

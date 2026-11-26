@@ -6,20 +6,30 @@ package to.unified.unified_java_sdk.models.operations.async;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.PatchCommerceSaleschannelRequest;
 import to.unified.unified_java_sdk.operations.PatchCommerceSaleschannel;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class PatchCommerceSaleschannelRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private PatchCommerceSaleschannelRequest request;
+    private final Options.Builder optionsBuilder;
 
     public PatchCommerceSaleschannelRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public PatchCommerceSaleschannelRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public PatchCommerceSaleschannelRequestBuilder request(@Nonnull PatchCommerceSaleschannelRequest request) {
@@ -44,8 +54,9 @@ public class PatchCommerceSaleschannelRequestBuilder {
     * @return The response from the server.
     */
     public CompletableFuture<PatchCommerceSaleschannelResponse> call() {
+        Options options = optionsBuilder.build();
         AsyncRequestOperation<PatchCommerceSaleschannelRequest, PatchCommerceSaleschannelResponse> operation
-              = new PatchCommerceSaleschannel.Async(sdkConfiguration, _headers);
+              = new PatchCommerceSaleschannel.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

@@ -39,7 +39,7 @@ The samples below show how a published SDK artifact is used:
 
 Gradle:
 ```groovy
-implementation 'to.unified:unified-java-sdk:0.50.29'
+implementation 'to.unified:unified-java-sdk:0.50.30'
 ```
 
 Maven:
@@ -47,7 +47,7 @@ Maven:
 <dependency>
     <groupId>to.unified</groupId>
     <artifactId>unified-java-sdk</artifactId>
-    <version>0.50.29</version>
+    <version>0.50.30</version>
 </dependency>
 ```
 
@@ -98,20 +98,20 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-07-03T17:57:07.391Z"))
                     .currency("CAD")
                     .customerDefinedCode("6170")
-                    .description("Voluptatibus valde spoliatio.")
-                    .id("3ac58e37-edf9-49e0-bcde-23814767273b")
+                    .description("Comedo vilitas harum cupiditate animus quo iste.")
+                    .id("926fabf4-6cc0-44df-a63c-7b44d67d1db4")
                     .isPayable(false)
                     .metadata(List.of())
-                    .name("Auto Loan Account")
+                    .name("Savings Account")
                     .status(Status.ARCHIVED)
                     .taxonomy(List.of(
                         AccountingAccountTaxonomy.builder()
                             .type(AccountingAccountTaxonomyType.SUBGROUP)
-                            .value("comedo")
-                            .originalType("vilitas")
+                            .value("vesper")
+                            .originalType("peccatus")
                             .build()))
                     .type(Type.ACCOUNTS_RECEIVABLE)
-                    .updatedAt(OffsetDateTime.parse("2023-08-14T12:48:07.131Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-16T01:01:05.981Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -157,20 +157,20 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-07-03T17:57:07.391Z"))
                     .currency("CAD")
                     .customerDefinedCode("6170")
-                    .description("Voluptatibus valde spoliatio.")
-                    .id("3ac58e37-edf9-49e0-bcde-23814767273b")
+                    .description("Comedo vilitas harum cupiditate animus quo iste.")
+                    .id("926fabf4-6cc0-44df-a63c-7b44d67d1db4")
                     .isPayable(false)
                     .metadata(List.of())
-                    .name("Auto Loan Account")
+                    .name("Savings Account")
                     .status(Status.ARCHIVED)
                     .taxonomy(List.of(
                         AccountingAccountTaxonomy.builder()
                             .type(AccountingAccountTaxonomyType.SUBGROUP)
-                            .value("comedo")
-                            .originalType("vilitas")
+                            .value("vesper")
+                            .originalType("peccatus")
                             .build()))
                     .type(Type.ACCOUNTS_RECEIVABLE)
-                    .updatedAt(OffsetDateTime.parse("2023-08-14T12:48:07.131Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-16T01:01:05.981Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -472,6 +472,11 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [getHealthcareAllergy](docs/sdks/allergy/README.md#gethealthcareallergy) - Retrieve an allergy
 * [listHealthcareAllergies](docs/sdks/allergy/README.md#listhealthcareallergies) - List all allergies
 
+### [Allergyintolerance](docs/sdks/allergyintolerance/README.md)
+
+* [getFhirAllergyintolerance](docs/sdks/allergyintolerance/README.md#getfhirallergyintolerance) - Read a AllergyIntolerance
+* [listFhirAllergyintolerances](docs/sdks/allergyintolerance/README.md#listfhirallergyintolerances) - Search AllergyIntolerance resources
+
 ### [Analytics](docs/sdks/analytics/README.md)
 
 * [createAnalyticsEvent](docs/sdks/analytics/README.md#createanalyticsevent) - Create an event
@@ -514,11 +519,17 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 
 ### [Appointment](docs/sdks/appointment/README.md)
 
+* [createDmsAppointment](docs/sdks/appointment/README.md#createdmsappointment) - Create an appointment
 * [createHealthcareAppointment](docs/sdks/appointment/README.md#createhealthcareappointment) - Create an appointment
+* [getDmsAppointment](docs/sdks/appointment/README.md#getdmsappointment) - Retrieve an appointment
 * [getHealthcareAppointment](docs/sdks/appointment/README.md#gethealthcareappointment) - Retrieve an appointment
+* [listDmsAppointments](docs/sdks/appointment/README.md#listdmsappointments) - List all appointments
 * [listHealthcareAppointments](docs/sdks/appointment/README.md#listhealthcareappointments) - List all appointments
+* [patchDmsAppointment](docs/sdks/appointment/README.md#patchdmsappointment) - Update an appointment
 * [patchHealthcareAppointment](docs/sdks/appointment/README.md#patchhealthcareappointment) - Update an appointment
+* [removeDmsAppointment](docs/sdks/appointment/README.md#removedmsappointment) - Remove an appointment
 * [removeHealthcareAppointment](docs/sdks/appointment/README.md#removehealthcareappointment) - Remove an appointment
+* [updateDmsAppointment](docs/sdks/appointment/README.md#updatedmsappointment) - Update an appointment
 * [updateHealthcareAppointment](docs/sdks/appointment/README.md#updatehealthcareappointment) - Update an appointment
 
 ### [Assessment](docs/sdks/assessment/README.md)
@@ -1079,7 +1090,9 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 
 ### [Condition](docs/sdks/condition/README.md)
 
+* [getFhirCondition](docs/sdks/condition/README.md#getfhircondition) - Read a Condition
 * [getHealthcareCondition](docs/sdks/condition/README.md#gethealthcarecondition) - Retrieve a condition
+* [listFhirConditions](docs/sdks/condition/README.md#listfhirconditions) - Search Condition resources
 * [listHealthcareConditions](docs/sdks/condition/README.md#listhealthcareconditions) - List all conditions
 
 ### [Connection](docs/sdks/connection/README.md)
@@ -1290,6 +1303,50 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [removeHrisDevice](docs/sdks/device/README.md#removehrisdevice) - Remove a device
 * [updateHrisDevice](docs/sdks/device/README.md#updatehrisdevice) - Update a device
 
+### [Diagnosticreport](docs/sdks/diagnosticreport/README.md)
+
+* [getFhirDiagnosticreport](docs/sdks/diagnosticreport/README.md#getfhirdiagnosticreport) - Read a DiagnosticReport
+* [listFhirDiagnosticreports](docs/sdks/diagnosticreport/README.md#listfhirdiagnosticreports) - Search DiagnosticReport resources
+
+### [Dms](docs/sdks/dms/README.md)
+
+* [createDmsAppointment](docs/sdks/dms/README.md#createdmsappointment) - Create an appointment
+* [createDmsOpcode](docs/sdks/dms/README.md#createdmsopcode) - Create an opcode
+* [createDmsPart](docs/sdks/dms/README.md#createdmspart) - Create a part
+* [createDmsPartsale](docs/sdks/dms/README.md#createdmspartsale) - Create a partsale
+* [createDmsRepairorder](docs/sdks/dms/README.md#createdmsrepairorder) - Create a repairorder
+* [createDmsVehicle](docs/sdks/dms/README.md#createdmsvehicle) - Create a vehicle
+* [createDmsVehiclesale](docs/sdks/dms/README.md#createdmsvehiclesale) - Create a vehiclesale
+* [getDmsAppointment](docs/sdks/dms/README.md#getdmsappointment) - Retrieve an appointment
+* [getDmsOpcode](docs/sdks/dms/README.md#getdmsopcode) - Retrieve an opcode
+* [getDmsPart](docs/sdks/dms/README.md#getdmspart) - Retrieve a part
+* [getDmsPartsale](docs/sdks/dms/README.md#getdmspartsale) - Retrieve a partsale
+* [getDmsRepairorder](docs/sdks/dms/README.md#getdmsrepairorder) - Retrieve a repairorder
+* [getDmsVehicle](docs/sdks/dms/README.md#getdmsvehicle) - Retrieve a vehicle
+* [getDmsVehiclesale](docs/sdks/dms/README.md#getdmsvehiclesale) - Retrieve a vehiclesale
+* [listDmsAppointments](docs/sdks/dms/README.md#listdmsappointments) - List all appointments
+* [listDmsOpcodes](docs/sdks/dms/README.md#listdmsopcodes) - List all opcodes
+* [listDmsParts](docs/sdks/dms/README.md#listdmsparts) - List all parts
+* [listDmsPartsales](docs/sdks/dms/README.md#listdmspartsales) - List all partsales
+* [listDmsRepairorders](docs/sdks/dms/README.md#listdmsrepairorders) - List all repairorders
+* [listDmsVehicles](docs/sdks/dms/README.md#listdmsvehicles) - List all vehicles
+* [listDmsVehiclesales](docs/sdks/dms/README.md#listdmsvehiclesales) - List all vehiclesales
+* [patchDmsAppointment](docs/sdks/dms/README.md#patchdmsappointment) - Update an appointment
+* [patchDmsOpcode](docs/sdks/dms/README.md#patchdmsopcode) - Update an opcode
+* [patchDmsPart](docs/sdks/dms/README.md#patchdmspart) - Update a part
+* [patchDmsPartsale](docs/sdks/dms/README.md#patchdmspartsale) - Update a partsale
+* [patchDmsRepairorder](docs/sdks/dms/README.md#patchdmsrepairorder) - Update a repairorder
+* [patchDmsVehicle](docs/sdks/dms/README.md#patchdmsvehicle) - Update a vehicle
+* [patchDmsVehiclesale](docs/sdks/dms/README.md#patchdmsvehiclesale) - Update a vehiclesale
+* [removeDmsAppointment](docs/sdks/dms/README.md#removedmsappointment) - Remove an appointment
+* [updateDmsAppointment](docs/sdks/dms/README.md#updatedmsappointment) - Update an appointment
+* [updateDmsOpcode](docs/sdks/dms/README.md#updatedmsopcode) - Update an opcode
+* [updateDmsPart](docs/sdks/dms/README.md#updatedmspart) - Update a part
+* [updateDmsPartsale](docs/sdks/dms/README.md#updatedmspartsale) - Update a partsale
+* [updateDmsRepairorder](docs/sdks/dms/README.md#updatedmsrepairorder) - Update a repairorder
+* [updateDmsVehicle](docs/sdks/dms/README.md#updatedmsvehicle) - Update a vehicle
+* [updateDmsVehiclesale](docs/sdks/dms/README.md#updatedmsvehiclesale) - Update a vehiclesale
+
 ### [Document](docs/sdks/document/README.md)
 
 * [createAtsDocument](docs/sdks/document/README.md#createatsdocument) - Create a document
@@ -1352,7 +1409,9 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 
 ### [Encounter](docs/sdks/encounter/README.md)
 
+* [getFhirEncounter](docs/sdks/encounter/README.md#getfhirencounter) - Read a Encounter
 * [getHealthcareEncounter](docs/sdks/encounter/README.md#gethealthcareencounter) - Retrieve an encounter
+* [listFhirEncounters](docs/sdks/encounter/README.md#listfhirencounters) - Search Encounter resources
 * [listHealthcareEncounters](docs/sdks/encounter/README.md#listhealthcareencounters) - List all encounters
 
 ### [Enrich](docs/sdks/enrich/README.md)
@@ -1440,10 +1499,35 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [getPerformanceFeedback](docs/sdks/feedback/README.md#getperformancefeedback) - Retrieve a feedback
 * [listPerformanceFeedbacks](docs/sdks/feedback/README.md#listperformancefeedbacks) - List all feedbacks
 
+### [Fhir](docs/sdks/fhir/README.md)
+
+* [getFhirAllergyintolerance](docs/sdks/fhir/README.md#getfhirallergyintolerance) - Read a AllergyIntolerance
+* [getFhirCondition](docs/sdks/fhir/README.md#getfhircondition) - Read a Condition
+* [getFhirDiagnosticreport](docs/sdks/fhir/README.md#getfhirdiagnosticreport) - Read a DiagnosticReport
+* [getFhirEncounter](docs/sdks/fhir/README.md#getfhirencounter) - Read a Encounter
+* [getFhirImmunization](docs/sdks/fhir/README.md#getfhirimmunization) - Read a Immunization
+* [getFhirMedicationrequest](docs/sdks/fhir/README.md#getfhirmedicationrequest) - Read a MedicationRequest
+* [getFhirObservation](docs/sdks/fhir/README.md#getfhirobservation) - Read a Observation
+* [getFhirPatient](docs/sdks/fhir/README.md#getfhirpatient) - Read a Patient
+* [getFhirPractitioner](docs/sdks/fhir/README.md#getfhirpractitioner) - Read a Practitioner
+* [listFhirAllergyintolerances](docs/sdks/fhir/README.md#listfhirallergyintolerances) - Search AllergyIntolerance resources
+* [listFhirConditions](docs/sdks/fhir/README.md#listfhirconditions) - Search Condition resources
+* [listFhirDiagnosticreports](docs/sdks/fhir/README.md#listfhirdiagnosticreports) - Search DiagnosticReport resources
+* [listFhirEncounters](docs/sdks/fhir/README.md#listfhirencounters) - Search Encounter resources
+* [listFhirImmunizations](docs/sdks/fhir/README.md#listfhirimmunizations) - Search Immunization resources
+* [listFhirMedicationrequests](docs/sdks/fhir/README.md#listfhirmedicationrequests) - Search MedicationRequest resources
+* [listFhirMetadatas](docs/sdks/fhir/README.md#listfhirmetadatas) - Get the CapabilityStatement
+* [listFhirObservations](docs/sdks/fhir/README.md#listfhirobservations) - Search Observation resources
+* [listFhirPatients](docs/sdks/fhir/README.md#listfhirpatients) - Search Patient resources
+* [listFhirPractitioners](docs/sdks/fhir/README.md#listfhirpractitioners) - Search Practitioner resources
+
 ### [File](docs/sdks/file/README.md)
 
+* [createPrintingFile](docs/sdks/file/README.md#createprintingfile) - Create a file
 * [createStorageFile](docs/sdks/file/README.md#createstoragefile) - Create a file
+* [getPrintingFile](docs/sdks/file/README.md#getprintingfile) - Retrieve a file
 * [getStorageFile](docs/sdks/file/README.md#getstoragefile) - Retrieve a file
+* [listPrintingFiles](docs/sdks/file/README.md#listprintingfiles) - List all files
 * [listStorageFiles](docs/sdks/file/README.md#liststoragefiles) - List all files
 * [patchStorageFile](docs/sdks/file/README.md#patchstoragefile) - Update a file
 * [removeStorageFile](docs/sdks/file/README.md#removestoragefile) - Remove a file
@@ -1704,7 +1788,9 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 
 ### [Immunization](docs/sdks/immunization/README.md)
 
+* [getFhirImmunization](docs/sdks/immunization/README.md#getfhirimmunization) - Read a Immunization
 * [getHealthcareImmunization](docs/sdks/immunization/README.md#gethealthcareimmunization) - Retrieve an immunization
+* [listFhirImmunizations](docs/sdks/immunization/README.md#listfhirimmunizations) - Search Immunization resources
 * [listHealthcareImmunizations](docs/sdks/immunization/README.md#listhealthcareimmunizations) - List all immunizations
 
 ### [Insertionorder](docs/sdks/insertionorder/README.md)
@@ -2048,6 +2134,11 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [getHealthcareMedication](docs/sdks/medication/README.md#gethealthcaremedication) - Retrieve a medication
 * [listHealthcareMedications](docs/sdks/medication/README.md#listhealthcaremedications) - List all medications
 
+### [Medicationrequest](docs/sdks/medicationrequest/README.md)
+
+* [getFhirMedicationrequest](docs/sdks/medicationrequest/README.md#getfhirmedicationrequest) - Read a MedicationRequest
+* [listFhirMedicationrequests](docs/sdks/medicationrequest/README.md#listfhirmedicationrequests) - Search MedicationRequest resources
+
 ### [Member](docs/sdks/member/README.md)
 
 * [createMartechMember](docs/sdks/member/README.md#createmartechmember) - Create a member
@@ -2098,6 +2189,7 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 
 * [createMetadataMetadata](docs/sdks/metadata/README.md#createmetadatametadata) - Create a metadata
 * [getMetadataMetadata](docs/sdks/metadata/README.md#getmetadatametadata) - Retrieve a metadata
+* [listFhirMetadatas](docs/sdks/metadata/README.md#listfhirmetadatas) - Get the CapabilityStatement
 * [listMetadataMetadatas](docs/sdks/metadata/README.md#listmetadatametadatas) - List all metadatas
 * [patchMetadataMetadata](docs/sdks/metadata/README.md#patchmetadatametadata) - Update a metadata
 * [removeMetadataMetadata](docs/sdks/metadata/README.md#removemetadatametadata) - Remove a metadata
@@ -2124,21 +2216,37 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 ### [Observation](docs/sdks/observation/README.md)
 
 * [createHealthcareObservation](docs/sdks/observation/README.md#createhealthcareobservation) - Create an observation
+* [getFhirObservation](docs/sdks/observation/README.md#getfhirobservation) - Read a Observation
 * [getHealthcareObservation](docs/sdks/observation/README.md#gethealthcareobservation) - Retrieve an observation
+* [listFhirObservations](docs/sdks/observation/README.md#listfhirobservations) - Search Observation resources
 * [listHealthcareObservations](docs/sdks/observation/README.md#listhealthcareobservations) - List all observations
+
+### [Opcode](docs/sdks/opcode/README.md)
+
+* [createDmsOpcode](docs/sdks/opcode/README.md#createdmsopcode) - Create an opcode
+* [getDmsOpcode](docs/sdks/opcode/README.md#getdmsopcode) - Retrieve an opcode
+* [listDmsOpcodes](docs/sdks/opcode/README.md#listdmsopcodes) - List all opcodes
+* [patchDmsOpcode](docs/sdks/opcode/README.md#patchdmsopcode) - Update an opcode
+* [updateDmsOpcode](docs/sdks/opcode/README.md#updatedmsopcode) - Update an opcode
 
 ### [Order](docs/sdks/order/README.md)
 
 * [~~createAccountingOrder~~](docs/sdks/order/README.md#createaccountingorder) - Create an order :warning: **Deprecated**
 * [createAssessmentOrder](docs/sdks/order/README.md#createassessmentorder) - Create an order
+* [createPrintingOrder](docs/sdks/order/README.md#createprintingorder) - Create an order
 * [~~getAccountingOrder~~](docs/sdks/order/README.md#getaccountingorder) - Retrieve an order :warning: **Deprecated**
 * [getAssessmentOrder](docs/sdks/order/README.md#getassessmentorder) - Retrieve an order
+* [getPrintingOrder](docs/sdks/order/README.md#getprintingorder) - Retrieve an order
 * [~~listAccountingOrders~~](docs/sdks/order/README.md#listaccountingorders) - List all orders :warning: **Deprecated**
+* [listPrintingOrders](docs/sdks/order/README.md#listprintingorders) - List all orders
 * [~~patchAccountingOrder~~](docs/sdks/order/README.md#patchaccountingorder) - Update an order :warning: **Deprecated**
 * [patchAssessmentOrder](docs/sdks/order/README.md#patchassessmentorder) - Update an order
+* [patchPrintingOrder](docs/sdks/order/README.md#patchprintingorder) - Update an order
 * [~~removeAccountingOrder~~](docs/sdks/order/README.md#removeaccountingorder) - Remove an order :warning: **Deprecated**
+* [removePrintingOrder](docs/sdks/order/README.md#removeprintingorder) - Remove an order
 * [~~updateAccountingOrder~~](docs/sdks/order/README.md#updateaccountingorder) - Update an order :warning: **Deprecated**
 * [updateAssessmentOrder](docs/sdks/order/README.md#updateassessmentorder) - Update an order
+* [updatePrintingOrder](docs/sdks/order/README.md#updateprintingorder) - Update an order
 
 ### [Organization](docs/sdks/organization/README.md)
 
@@ -2185,12 +2293,25 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 
 ### [Part](docs/sdks/part/README.md)
 
+* [createDmsPart](docs/sdks/part/README.md#createdmspart) - Create a part
 * [createPlmPart](docs/sdks/part/README.md#createplmpart) - Create a part
+* [getDmsPart](docs/sdks/part/README.md#getdmspart) - Retrieve a part
 * [getPlmPart](docs/sdks/part/README.md#getplmpart) - Retrieve a part
+* [listDmsParts](docs/sdks/part/README.md#listdmsparts) - List all parts
 * [listPlmParts](docs/sdks/part/README.md#listplmparts) - List all parts
+* [patchDmsPart](docs/sdks/part/README.md#patchdmspart) - Update a part
 * [patchPlmPart](docs/sdks/part/README.md#patchplmpart) - Update a part
 * [removePlmPart](docs/sdks/part/README.md#removeplmpart) - Remove a part
+* [updateDmsPart](docs/sdks/part/README.md#updatedmspart) - Update a part
 * [updatePlmPart](docs/sdks/part/README.md#updateplmpart) - Update a part
+
+### [Partsale](docs/sdks/partsale/README.md)
+
+* [createDmsPartsale](docs/sdks/partsale/README.md#createdmspartsale) - Create a partsale
+* [getDmsPartsale](docs/sdks/partsale/README.md#getdmspartsale) - Retrieve a partsale
+* [listDmsPartsales](docs/sdks/partsale/README.md#listdmspartsales) - List all partsales
+* [patchDmsPartsale](docs/sdks/partsale/README.md#patchdmspartsale) - Update a partsale
+* [updateDmsPartsale](docs/sdks/partsale/README.md#updatedmspartsale) - Update a partsale
 
 ### [Passthrough](docs/sdks/passthrough/README.md)
 
@@ -2206,7 +2327,9 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 ### [Patient](docs/sdks/patient/README.md)
 
 * [createHealthcarePatient](docs/sdks/patient/README.md#createhealthcarepatient) - Create a patient
+* [getFhirPatient](docs/sdks/patient/README.md#getfhirpatient) - Read a Patient
 * [getHealthcarePatient](docs/sdks/patient/README.md#gethealthcarepatient) - Retrieve a patient
+* [listFhirPatients](docs/sdks/patient/README.md#listfhirpatients) - Search Patient resources
 * [listHealthcarePatients](docs/sdks/patient/README.md#listhealthcarepatients) - List all patients
 * [patchHealthcarePatient](docs/sdks/patient/README.md#patchhealthcarepatient) - Update a patient
 * [updateHealthcarePatient](docs/sdks/patient/README.md#updatehealthcarepatient) - Update a patient
@@ -2341,13 +2464,37 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 
 ### [Practitioner](docs/sdks/practitioner/README.md)
 
+* [getFhirPractitioner](docs/sdks/practitioner/README.md#getfhirpractitioner) - Read a Practitioner
 * [getHealthcarePractitioner](docs/sdks/practitioner/README.md#gethealthcarepractitioner) - Retrieve a practitioner
+* [listFhirPractitioners](docs/sdks/practitioner/README.md#listfhirpractitioners) - Search Practitioner resources
 * [listHealthcarePractitioners](docs/sdks/practitioner/README.md#listhealthcarepractitioners) - List all practitioners
+
+### [Printing](docs/sdks/printing/README.md)
+
+* [createPrintingFile](docs/sdks/printing/README.md#createprintingfile) - Create a file
+* [createPrintingOrder](docs/sdks/printing/README.md#createprintingorder) - Create an order
+* [createPrintingQuote](docs/sdks/printing/README.md#createprintingquote) - Create a quote
+* [getPrintingFile](docs/sdks/printing/README.md#getprintingfile) - Retrieve a file
+* [getPrintingOrder](docs/sdks/printing/README.md#getprintingorder) - Retrieve an order
+* [getPrintingProduct](docs/sdks/printing/README.md#getprintingproduct) - Retrieve a product
+* [getPrintingTemplate](docs/sdks/printing/README.md#getprintingtemplate) - Retrieve a template
+* [listPrintingFiles](docs/sdks/printing/README.md#listprintingfiles) - List all files
+* [listPrintingOrders](docs/sdks/printing/README.md#listprintingorders) - List all orders
+* [listPrintingProducts](docs/sdks/printing/README.md#listprintingproducts) - List all products
+* [listPrintingTemplates](docs/sdks/printing/README.md#listprintingtemplates) - List all templates
+* [patchPrintingOrder](docs/sdks/printing/README.md#patchprintingorder) - Update an order
+* [removePrintingOrder](docs/sdks/printing/README.md#removeprintingorder) - Remove an order
+* [updatePrintingOrder](docs/sdks/printing/README.md#updateprintingorder) - Update an order
 
 ### [Procedure](docs/sdks/procedure/README.md)
 
 * [getHealthcareProcedure](docs/sdks/procedure/README.md#gethealthcareprocedure) - Retrieve a procedure
 * [listHealthcareProcedures](docs/sdks/procedure/README.md#listhealthcareprocedures) - List all procedures
+
+### [Product](docs/sdks/product/README.md)
+
+* [getPrintingProduct](docs/sdks/product/README.md#getprintingproduct) - Retrieve a product
+* [listPrintingProducts](docs/sdks/product/README.md#listprintingproducts) - List all products
 
 ### [Profile](docs/sdks/profile/README.md)
 
@@ -2480,6 +2627,7 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 ### [Quote](docs/sdks/quote/README.md)
 
 * [createAccountingQuote](docs/sdks/quote/README.md#createaccountingquote) - Create a quote
+* [createPrintingQuote](docs/sdks/quote/README.md#createprintingquote) - Create a quote
 * [createPropertyQuote](docs/sdks/quote/README.md#createpropertyquote) - Create a quote
 * [getAccountingQuote](docs/sdks/quote/README.md#getaccountingquote) - Retrieve a quote
 * [listAccountingQuotes](docs/sdks/quote/README.md#listaccountingquotes) - List all quotes
@@ -2520,6 +2668,14 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 
 * [getComputeRegion](docs/sdks/region/README.md#getcomputeregion) - Retrieve a region
 * [listComputeRegions](docs/sdks/region/README.md#listcomputeregions) - List all regions
+
+### [Repairorder](docs/sdks/repairorder/README.md)
+
+* [createDmsRepairorder](docs/sdks/repairorder/README.md#createdmsrepairorder) - Create a repairorder
+* [getDmsRepairorder](docs/sdks/repairorder/README.md#getdmsrepairorder) - Retrieve a repairorder
+* [listDmsRepairorders](docs/sdks/repairorder/README.md#listdmsrepairorders) - List all repairorders
+* [patchDmsRepairorder](docs/sdks/repairorder/README.md#patchdmsrepairorder) - Update a repairorder
+* [updateDmsRepairorder](docs/sdks/repairorder/README.md#updatedmsrepairorder) - Update a repairorder
 
 ### [Repo](docs/sdks/repo/README.md)
 
@@ -2941,8 +3097,10 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 
 * [createComputeTemplate](docs/sdks/template/README.md#createcomputetemplate) - Create a template
 * [getComputeTemplate](docs/sdks/template/README.md#getcomputetemplate) - Retrieve a template
+* [getPrintingTemplate](docs/sdks/template/README.md#getprintingtemplate) - Retrieve a template
 * [getSigningTemplate](docs/sdks/template/README.md#getsigningtemplate) - Retrieve a template
 * [listComputeTemplates](docs/sdks/template/README.md#listcomputetemplates) - List all templates
+* [listPrintingTemplates](docs/sdks/template/README.md#listprintingtemplates) - List all templates
 * [listSigningTemplates](docs/sdks/template/README.md#listsigningtemplates) - List all templates
 * [patchComputeTemplate](docs/sdks/template/README.md#patchcomputetemplate) - Update a template
 * [removeComputeTemplate](docs/sdks/template/README.md#removecomputetemplate) - Remove a template
@@ -3127,6 +3285,22 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [removeScimUsers](docs/sdks/user/README.md#removescimusers) - Delete user
 * [updateScimUsers](docs/sdks/user/README.md#updatescimusers) - Update user
 
+### [Vehicle](docs/sdks/vehicle/README.md)
+
+* [createDmsVehicle](docs/sdks/vehicle/README.md#createdmsvehicle) - Create a vehicle
+* [getDmsVehicle](docs/sdks/vehicle/README.md#getdmsvehicle) - Retrieve a vehicle
+* [listDmsVehicles](docs/sdks/vehicle/README.md#listdmsvehicles) - List all vehicles
+* [patchDmsVehicle](docs/sdks/vehicle/README.md#patchdmsvehicle) - Update a vehicle
+* [updateDmsVehicle](docs/sdks/vehicle/README.md#updatedmsvehicle) - Update a vehicle
+
+### [Vehiclesale](docs/sdks/vehiclesale/README.md)
+
+* [createDmsVehiclesale](docs/sdks/vehiclesale/README.md#createdmsvehiclesale) - Create a vehiclesale
+* [getDmsVehiclesale](docs/sdks/vehiclesale/README.md#getdmsvehiclesale) - Retrieve a vehiclesale
+* [listDmsVehiclesales](docs/sdks/vehiclesale/README.md#listdmsvehiclesales) - List all vehiclesales
+* [patchDmsVehiclesale](docs/sdks/vehiclesale/README.md#patchdmsvehiclesale) - Update a vehiclesale
+* [updateDmsVehiclesale](docs/sdks/vehiclesale/README.md#updatedmsvehiclesale) - Update a vehiclesale
+
 ### [Vendorcredit](docs/sdks/vendorcredit/README.md)
 
 * [createAccountingVendorcredit](docs/sdks/vendorcredit/README.md#createaccountingvendorcredit) - Create a vendorcredit
@@ -3244,20 +3418,20 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-07-03T17:57:07.391Z"))
                     .currency("CAD")
                     .customerDefinedCode("6170")
-                    .description("Voluptatibus valde spoliatio.")
-                    .id("3ac58e37-edf9-49e0-bcde-23814767273b")
+                    .description("Comedo vilitas harum cupiditate animus quo iste.")
+                    .id("926fabf4-6cc0-44df-a63c-7b44d67d1db4")
                     .isPayable(false)
                     .metadata(List.of())
-                    .name("Auto Loan Account")
+                    .name("Savings Account")
                     .status(Status.ARCHIVED)
                     .taxonomy(List.of(
                         AccountingAccountTaxonomy.builder()
                             .type(AccountingAccountTaxonomyType.SUBGROUP)
-                            .value("comedo")
-                            .originalType("vilitas")
+                            .value("vesper")
+                            .originalType("peccatus")
                             .build()))
                     .type(Type.ACCOUNTS_RECEIVABLE)
-                    .updatedAt(OffsetDateTime.parse("2023-08-14T12:48:07.131Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-16T01:01:05.981Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -3304,20 +3478,20 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-07-03T17:57:07.391Z"))
                     .currency("CAD")
                     .customerDefinedCode("6170")
-                    .description("Voluptatibus valde spoliatio.")
-                    .id("3ac58e37-edf9-49e0-bcde-23814767273b")
+                    .description("Comedo vilitas harum cupiditate animus quo iste.")
+                    .id("926fabf4-6cc0-44df-a63c-7b44d67d1db4")
                     .isPayable(false)
                     .metadata(List.of())
-                    .name("Auto Loan Account")
+                    .name("Savings Account")
                     .status(Status.ARCHIVED)
                     .taxonomy(List.of(
                         AccountingAccountTaxonomy.builder()
                             .type(AccountingAccountTaxonomyType.SUBGROUP)
-                            .value("comedo")
-                            .originalType("vilitas")
+                            .value("vesper")
+                            .originalType("peccatus")
                             .build()))
                     .type(Type.ACCOUNTS_RECEIVABLE)
-                    .updatedAt(OffsetDateTime.parse("2023-08-14T12:48:07.131Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-16T01:01:05.981Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -3383,20 +3557,20 @@ public class Application {
                         .createdAt(OffsetDateTime.parse("2022-07-03T17:57:07.391Z"))
                         .currency("CAD")
                         .customerDefinedCode("6170")
-                        .description("Voluptatibus valde spoliatio.")
-                        .id("3ac58e37-edf9-49e0-bcde-23814767273b")
+                        .description("Comedo vilitas harum cupiditate animus quo iste.")
+                        .id("926fabf4-6cc0-44df-a63c-7b44d67d1db4")
                         .isPayable(false)
                         .metadata(List.of())
-                        .name("Auto Loan Account")
+                        .name("Savings Account")
                         .status(Status.ARCHIVED)
                         .taxonomy(List.of(
                             AccountingAccountTaxonomy.builder()
                                 .type(AccountingAccountTaxonomyType.SUBGROUP)
-                                .value("comedo")
-                                .originalType("vilitas")
+                                .value("vesper")
+                                .originalType("peccatus")
                                 .build()))
                         .type(Type.ACCOUNTS_RECEIVABLE)
-                        .updatedAt(OffsetDateTime.parse("2023-08-14T12:48:07.131Z"))
+                        .updatedAt(OffsetDateTime.parse("2023-08-16T01:01:05.981Z"))
                         .build())
                     .connectionId("<id>")
                     .build();
@@ -3550,20 +3724,20 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-07-03T17:57:07.391Z"))
                     .currency("CAD")
                     .customerDefinedCode("6170")
-                    .description("Voluptatibus valde spoliatio.")
-                    .id("3ac58e37-edf9-49e0-bcde-23814767273b")
+                    .description("Comedo vilitas harum cupiditate animus quo iste.")
+                    .id("926fabf4-6cc0-44df-a63c-7b44d67d1db4")
                     .isPayable(false)
                     .metadata(List.of())
-                    .name("Auto Loan Account")
+                    .name("Savings Account")
                     .status(Status.ARCHIVED)
                     .taxonomy(List.of(
                         AccountingAccountTaxonomy.builder()
                             .type(AccountingAccountTaxonomyType.SUBGROUP)
-                            .value("comedo")
-                            .originalType("vilitas")
+                            .value("vesper")
+                            .originalType("peccatus")
                             .build()))
                     .type(Type.ACCOUNTS_RECEIVABLE)
-                    .updatedAt(OffsetDateTime.parse("2023-08-14T12:48:07.131Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-16T01:01:05.981Z"))
                     .build())
                 .connectionId("<id>")
                 .build();

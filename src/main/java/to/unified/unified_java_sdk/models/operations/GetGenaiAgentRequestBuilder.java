@@ -6,18 +6,28 @@ package to.unified.unified_java_sdk.models.operations;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.GetGenaiAgent;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetGenaiAgentRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private GetGenaiAgentRequest request;
+    private final Options.Builder optionsBuilder;
 
     public GetGenaiAgentRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public GetGenaiAgentRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public GetGenaiAgentRequestBuilder request(@Nonnull GetGenaiAgentRequest request) {
@@ -42,8 +52,9 @@ public class GetGenaiAgentRequestBuilder {
     * @return The response from the server.
     */
     public GetGenaiAgentResponse call() {
+        Options options = optionsBuilder.build();
         RequestOperation<GetGenaiAgentRequest, GetGenaiAgentResponse> operation
-              = new GetGenaiAgent.Sync(sdkConfiguration, _headers);
+              = new GetGenaiAgent.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

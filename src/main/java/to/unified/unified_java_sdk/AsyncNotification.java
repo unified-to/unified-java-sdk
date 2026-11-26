@@ -6,12 +6,14 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.ListUnifiedNotificationsRequest;
 import to.unified.unified_java_sdk.models.operations.async.ListUnifiedNotificationsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListUnifiedNotificationsResponse;
 import to.unified.unified_java_sdk.operations.ListUnifiedNotifications;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncNotification {
@@ -50,8 +52,19 @@ public class AsyncNotification {
      * @return {@code CompletableFuture<ListUnifiedNotificationsResponse>} - The async response
      */
     public CompletableFuture<ListUnifiedNotificationsResponse> listUnifiedNotifications(@Nonnull ListUnifiedNotificationsRequest request) {
+        return listUnifiedNotifications(request, null);
+    }
+
+    /**
+     * List event notifications
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListUnifiedNotificationsResponse>} - The async response
+     */
+    public CompletableFuture<ListUnifiedNotificationsResponse> listUnifiedNotifications(@Nonnull ListUnifiedNotificationsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListUnifiedNotificationsRequest, ListUnifiedNotificationsResponse> operation
-              = new ListUnifiedNotifications.Async(sdkConfiguration, _headers);
+              = new ListUnifiedNotifications.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

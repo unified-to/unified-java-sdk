@@ -477,6 +477,30 @@ public class PropertyWorkspaceIntegrationPermissions {
     public static final PropertyWorkspaceIntegrationPermissions QMS_INSPECTION_WRITE = new PropertyWorkspaceIntegrationPermissions("qms_inspection_write");
     public static final PropertyWorkspaceIntegrationPermissions QMS_AUDIT_READ = new PropertyWorkspaceIntegrationPermissions("qms_audit_read");
     public static final PropertyWorkspaceIntegrationPermissions QMS_AUDIT_WRITE = new PropertyWorkspaceIntegrationPermissions("qms_audit_write");
+    public static final PropertyWorkspaceIntegrationPermissions DMS_VEHICLE_READ = new PropertyWorkspaceIntegrationPermissions("dms_vehicle_read");
+    public static final PropertyWorkspaceIntegrationPermissions DMS_VEHICLE_WRITE = new PropertyWorkspaceIntegrationPermissions("dms_vehicle_write");
+    public static final PropertyWorkspaceIntegrationPermissions DMS_VEHICLESALE_READ = new PropertyWorkspaceIntegrationPermissions("dms_vehiclesale_read");
+    public static final PropertyWorkspaceIntegrationPermissions DMS_VEHICLESALE_WRITE = new PropertyWorkspaceIntegrationPermissions("dms_vehiclesale_write");
+    public static final PropertyWorkspaceIntegrationPermissions DMS_REPAIRORDER_READ = new PropertyWorkspaceIntegrationPermissions("dms_repairorder_read");
+    public static final PropertyWorkspaceIntegrationPermissions DMS_REPAIRORDER_WRITE = new PropertyWorkspaceIntegrationPermissions("dms_repairorder_write");
+    public static final PropertyWorkspaceIntegrationPermissions DMS_APPOINTMENT_READ = new PropertyWorkspaceIntegrationPermissions("dms_appointment_read");
+    public static final PropertyWorkspaceIntegrationPermissions DMS_APPOINTMENT_WRITE = new PropertyWorkspaceIntegrationPermissions("dms_appointment_write");
+    public static final PropertyWorkspaceIntegrationPermissions DMS_PART_READ = new PropertyWorkspaceIntegrationPermissions("dms_part_read");
+    public static final PropertyWorkspaceIntegrationPermissions DMS_PART_WRITE = new PropertyWorkspaceIntegrationPermissions("dms_part_write");
+    public static final PropertyWorkspaceIntegrationPermissions DMS_PARTSALE_READ = new PropertyWorkspaceIntegrationPermissions("dms_partsale_read");
+    public static final PropertyWorkspaceIntegrationPermissions DMS_PARTSALE_WRITE = new PropertyWorkspaceIntegrationPermissions("dms_partsale_write");
+    public static final PropertyWorkspaceIntegrationPermissions DMS_OPCODE_READ = new PropertyWorkspaceIntegrationPermissions("dms_opcode_read");
+    public static final PropertyWorkspaceIntegrationPermissions DMS_OPCODE_WRITE = new PropertyWorkspaceIntegrationPermissions("dms_opcode_write");
+    public static final PropertyWorkspaceIntegrationPermissions PRINTING_PRODUCT_READ = new PropertyWorkspaceIntegrationPermissions("printing_product_read");
+    public static final PropertyWorkspaceIntegrationPermissions PRINTING_PRODUCT_WRITE = new PropertyWorkspaceIntegrationPermissions("printing_product_write");
+    public static final PropertyWorkspaceIntegrationPermissions PRINTING_TEMPLATE_READ = new PropertyWorkspaceIntegrationPermissions("printing_template_read");
+    public static final PropertyWorkspaceIntegrationPermissions PRINTING_TEMPLATE_WRITE = new PropertyWorkspaceIntegrationPermissions("printing_template_write");
+    public static final PropertyWorkspaceIntegrationPermissions PRINTING_FILE_READ = new PropertyWorkspaceIntegrationPermissions("printing_file_read");
+    public static final PropertyWorkspaceIntegrationPermissions PRINTING_FILE_WRITE = new PropertyWorkspaceIntegrationPermissions("printing_file_write");
+    public static final PropertyWorkspaceIntegrationPermissions PRINTING_QUOTE_READ = new PropertyWorkspaceIntegrationPermissions("printing_quote_read");
+    public static final PropertyWorkspaceIntegrationPermissions PRINTING_QUOTE_WRITE = new PropertyWorkspaceIntegrationPermissions("printing_quote_write");
+    public static final PropertyWorkspaceIntegrationPermissions PRINTING_ORDER_READ = new PropertyWorkspaceIntegrationPermissions("printing_order_read");
+    public static final PropertyWorkspaceIntegrationPermissions PRINTING_ORDER_WRITE = new PropertyWorkspaceIntegrationPermissions("printing_order_write");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -1007,6 +1031,30 @@ public class PropertyWorkspaceIntegrationPermissions {
         map.put("qms_inspection_write", QMS_INSPECTION_WRITE);
         map.put("qms_audit_read", QMS_AUDIT_READ);
         map.put("qms_audit_write", QMS_AUDIT_WRITE);
+        map.put("dms_vehicle_read", DMS_VEHICLE_READ);
+        map.put("dms_vehicle_write", DMS_VEHICLE_WRITE);
+        map.put("dms_vehiclesale_read", DMS_VEHICLESALE_READ);
+        map.put("dms_vehiclesale_write", DMS_VEHICLESALE_WRITE);
+        map.put("dms_repairorder_read", DMS_REPAIRORDER_READ);
+        map.put("dms_repairorder_write", DMS_REPAIRORDER_WRITE);
+        map.put("dms_appointment_read", DMS_APPOINTMENT_READ);
+        map.put("dms_appointment_write", DMS_APPOINTMENT_WRITE);
+        map.put("dms_part_read", DMS_PART_READ);
+        map.put("dms_part_write", DMS_PART_WRITE);
+        map.put("dms_partsale_read", DMS_PARTSALE_READ);
+        map.put("dms_partsale_write", DMS_PARTSALE_WRITE);
+        map.put("dms_opcode_read", DMS_OPCODE_READ);
+        map.put("dms_opcode_write", DMS_OPCODE_WRITE);
+        map.put("printing_product_read", PRINTING_PRODUCT_READ);
+        map.put("printing_product_write", PRINTING_PRODUCT_WRITE);
+        map.put("printing_template_read", PRINTING_TEMPLATE_READ);
+        map.put("printing_template_write", PRINTING_TEMPLATE_WRITE);
+        map.put("printing_file_read", PRINTING_FILE_READ);
+        map.put("printing_file_write", PRINTING_FILE_WRITE);
+        map.put("printing_quote_read", PRINTING_QUOTE_READ);
+        map.put("printing_quote_write", PRINTING_QUOTE_WRITE);
+        map.put("printing_order_read", PRINTING_ORDER_READ);
+        map.put("printing_order_write", PRINTING_ORDER_WRITE);
         return map;
     }
 
@@ -1469,6 +1517,30 @@ public class PropertyWorkspaceIntegrationPermissions {
         map.put("qms_inspection_write", PropertyWorkspaceIntegrationPermissionsEnum.QMS_INSPECTION_WRITE);
         map.put("qms_audit_read", PropertyWorkspaceIntegrationPermissionsEnum.QMS_AUDIT_READ);
         map.put("qms_audit_write", PropertyWorkspaceIntegrationPermissionsEnum.QMS_AUDIT_WRITE);
+        map.put("dms_vehicle_read", PropertyWorkspaceIntegrationPermissionsEnum.DMS_VEHICLE_READ);
+        map.put("dms_vehicle_write", PropertyWorkspaceIntegrationPermissionsEnum.DMS_VEHICLE_WRITE);
+        map.put("dms_vehiclesale_read", PropertyWorkspaceIntegrationPermissionsEnum.DMS_VEHICLESALE_READ);
+        map.put("dms_vehiclesale_write", PropertyWorkspaceIntegrationPermissionsEnum.DMS_VEHICLESALE_WRITE);
+        map.put("dms_repairorder_read", PropertyWorkspaceIntegrationPermissionsEnum.DMS_REPAIRORDER_READ);
+        map.put("dms_repairorder_write", PropertyWorkspaceIntegrationPermissionsEnum.DMS_REPAIRORDER_WRITE);
+        map.put("dms_appointment_read", PropertyWorkspaceIntegrationPermissionsEnum.DMS_APPOINTMENT_READ);
+        map.put("dms_appointment_write", PropertyWorkspaceIntegrationPermissionsEnum.DMS_APPOINTMENT_WRITE);
+        map.put("dms_part_read", PropertyWorkspaceIntegrationPermissionsEnum.DMS_PART_READ);
+        map.put("dms_part_write", PropertyWorkspaceIntegrationPermissionsEnum.DMS_PART_WRITE);
+        map.put("dms_partsale_read", PropertyWorkspaceIntegrationPermissionsEnum.DMS_PARTSALE_READ);
+        map.put("dms_partsale_write", PropertyWorkspaceIntegrationPermissionsEnum.DMS_PARTSALE_WRITE);
+        map.put("dms_opcode_read", PropertyWorkspaceIntegrationPermissionsEnum.DMS_OPCODE_READ);
+        map.put("dms_opcode_write", PropertyWorkspaceIntegrationPermissionsEnum.DMS_OPCODE_WRITE);
+        map.put("printing_product_read", PropertyWorkspaceIntegrationPermissionsEnum.PRINTING_PRODUCT_READ);
+        map.put("printing_product_write", PropertyWorkspaceIntegrationPermissionsEnum.PRINTING_PRODUCT_WRITE);
+        map.put("printing_template_read", PropertyWorkspaceIntegrationPermissionsEnum.PRINTING_TEMPLATE_READ);
+        map.put("printing_template_write", PropertyWorkspaceIntegrationPermissionsEnum.PRINTING_TEMPLATE_WRITE);
+        map.put("printing_file_read", PropertyWorkspaceIntegrationPermissionsEnum.PRINTING_FILE_READ);
+        map.put("printing_file_write", PropertyWorkspaceIntegrationPermissionsEnum.PRINTING_FILE_WRITE);
+        map.put("printing_quote_read", PropertyWorkspaceIntegrationPermissionsEnum.PRINTING_QUOTE_READ);
+        map.put("printing_quote_write", PropertyWorkspaceIntegrationPermissionsEnum.PRINTING_QUOTE_WRITE);
+        map.put("printing_order_read", PropertyWorkspaceIntegrationPermissionsEnum.PRINTING_ORDER_READ);
+        map.put("printing_order_write", PropertyWorkspaceIntegrationPermissionsEnum.PRINTING_ORDER_WRITE);
         return map;
     }
     
@@ -1931,7 +2003,31 @@ public class PropertyWorkspaceIntegrationPermissions {
         QMS_INSPECTION_READ("qms_inspection_read"),
         QMS_INSPECTION_WRITE("qms_inspection_write"),
         QMS_AUDIT_READ("qms_audit_read"),
-        QMS_AUDIT_WRITE("qms_audit_write"),;
+        QMS_AUDIT_WRITE("qms_audit_write"),
+        DMS_VEHICLE_READ("dms_vehicle_read"),
+        DMS_VEHICLE_WRITE("dms_vehicle_write"),
+        DMS_VEHICLESALE_READ("dms_vehiclesale_read"),
+        DMS_VEHICLESALE_WRITE("dms_vehiclesale_write"),
+        DMS_REPAIRORDER_READ("dms_repairorder_read"),
+        DMS_REPAIRORDER_WRITE("dms_repairorder_write"),
+        DMS_APPOINTMENT_READ("dms_appointment_read"),
+        DMS_APPOINTMENT_WRITE("dms_appointment_write"),
+        DMS_PART_READ("dms_part_read"),
+        DMS_PART_WRITE("dms_part_write"),
+        DMS_PARTSALE_READ("dms_partsale_read"),
+        DMS_PARTSALE_WRITE("dms_partsale_write"),
+        DMS_OPCODE_READ("dms_opcode_read"),
+        DMS_OPCODE_WRITE("dms_opcode_write"),
+        PRINTING_PRODUCT_READ("printing_product_read"),
+        PRINTING_PRODUCT_WRITE("printing_product_write"),
+        PRINTING_TEMPLATE_READ("printing_template_read"),
+        PRINTING_TEMPLATE_WRITE("printing_template_write"),
+        PRINTING_FILE_READ("printing_file_read"),
+        PRINTING_FILE_WRITE("printing_file_write"),
+        PRINTING_QUOTE_READ("printing_quote_read"),
+        PRINTING_QUOTE_WRITE("printing_quote_write"),
+        PRINTING_ORDER_READ("printing_order_read"),
+        PRINTING_ORDER_WRITE("printing_order_write"),;
 
         private final String value;
 

@@ -6,18 +6,28 @@ package to.unified.unified_java_sdk.models.operations;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.UpdatePropertyListing;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class UpdatePropertyListingRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private UpdatePropertyListingRequest request;
+    private final Options.Builder optionsBuilder;
 
     public UpdatePropertyListingRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public UpdatePropertyListingRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public UpdatePropertyListingRequestBuilder request(@Nonnull UpdatePropertyListingRequest request) {
@@ -42,8 +52,9 @@ public class UpdatePropertyListingRequestBuilder {
     * @return The response from the server.
     */
     public UpdatePropertyListingResponse call() {
+        Options options = optionsBuilder.build();
         RequestOperation<UpdatePropertyListingRequest, UpdatePropertyListingResponse> operation
-              = new UpdatePropertyListing.Sync(sdkConfiguration, _headers);
+              = new UpdatePropertyListing.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

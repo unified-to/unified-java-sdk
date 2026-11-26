@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateCdpActivationRequest;
 import to.unified.unified_java_sdk.models.operations.CreateCdpActivationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateCdpActivationResponse;
@@ -151,6 +152,7 @@ import to.unified.unified_java_sdk.operations.UpdateCdpProfile;
 import to.unified.unified_java_sdk.operations.UpdateCdpSegment;
 import to.unified.unified_java_sdk.operations.UpdateCdpSource;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Cdp {
@@ -195,8 +197,23 @@ public class Cdp {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateCdpActivationResponse createCdpActivation(@Nonnull CreateCdpActivationRequest request) {
+        return createCdpActivation(request, null);
+    }
+
+    /**
+     * Create an activation
+     * 
+     * <p>Creates a CdpActivation. Provide the unified CdpActivation fields in the request body; they are
+     * mapped to the provider's API. Returns the created CdpActivation.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateCdpActivationResponse createCdpActivation(@Nonnull CreateCdpActivationRequest request, @Nullable Options options) {
         RequestOperation<CreateCdpActivationRequest, CreateCdpActivationResponse> operation
-              = new CreateCdpActivation.Sync(sdkConfiguration, _headers);
+              = new CreateCdpActivation.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -223,8 +240,23 @@ public class Cdp {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateCdpDestinationResponse createCdpDestination(@Nonnull CreateCdpDestinationRequest request) {
+        return createCdpDestination(request, null);
+    }
+
+    /**
+     * Create a destination
+     * 
+     * <p>Creates a CdpDestination. Provide the unified CdpDestination fields in the request body; they are
+     * mapped to the provider's API. Returns the created CdpDestination.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateCdpDestinationResponse createCdpDestination(@Nonnull CreateCdpDestinationRequest request, @Nullable Options options) {
         RequestOperation<CreateCdpDestinationRequest, CreateCdpDestinationResponse> operation
-              = new CreateCdpDestination.Sync(sdkConfiguration, _headers);
+              = new CreateCdpDestination.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -251,8 +283,23 @@ public class Cdp {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateCdpEventResponse createCdpEvent(@Nonnull CreateCdpEventRequest request) {
+        return createCdpEvent(request, null);
+    }
+
+    /**
+     * Create an event
+     * 
+     * <p>Creates a CdpEvent. Provide the unified CdpEvent fields in the request body; they are mapped to the
+     * provider's API. Returns the created CdpEvent.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateCdpEventResponse createCdpEvent(@Nonnull CreateCdpEventRequest request, @Nullable Options options) {
         RequestOperation<CreateCdpEventRequest, CreateCdpEventResponse> operation
-              = new CreateCdpEvent.Sync(sdkConfiguration, _headers);
+              = new CreateCdpEvent.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -279,8 +326,23 @@ public class Cdp {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateCdpProfileResponse createCdpProfile(@Nonnull CreateCdpProfileRequest request) {
+        return createCdpProfile(request, null);
+    }
+
+    /**
+     * Create a profile
+     * 
+     * <p>Creates a CdpProfile. Provide the unified CdpProfile fields in the request body; they are mapped to
+     * the provider's API. Returns the created CdpProfile.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateCdpProfileResponse createCdpProfile(@Nonnull CreateCdpProfileRequest request, @Nullable Options options) {
         RequestOperation<CreateCdpProfileRequest, CreateCdpProfileResponse> operation
-              = new CreateCdpProfile.Sync(sdkConfiguration, _headers);
+              = new CreateCdpProfile.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -307,8 +369,23 @@ public class Cdp {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateCdpSegmentResponse createCdpSegment(@Nonnull CreateCdpSegmentRequest request) {
+        return createCdpSegment(request, null);
+    }
+
+    /**
+     * Create a segment
+     * 
+     * <p>Creates a CdpSegment. Provide the unified CdpSegment fields in the request body; they are mapped to
+     * the provider's API. Returns the created CdpSegment.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateCdpSegmentResponse createCdpSegment(@Nonnull CreateCdpSegmentRequest request, @Nullable Options options) {
         RequestOperation<CreateCdpSegmentRequest, CreateCdpSegmentResponse> operation
-              = new CreateCdpSegment.Sync(sdkConfiguration, _headers);
+              = new CreateCdpSegment.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -335,8 +412,23 @@ public class Cdp {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateCdpSourceResponse createCdpSource(@Nonnull CreateCdpSourceRequest request) {
+        return createCdpSource(request, null);
+    }
+
+    /**
+     * Create a source
+     * 
+     * <p>Creates a CdpSource. Provide the unified CdpSource fields in the request body; they are mapped to
+     * the provider's API. Returns the created CdpSource.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateCdpSourceResponse createCdpSource(@Nonnull CreateCdpSourceRequest request, @Nullable Options options) {
         RequestOperation<CreateCdpSourceRequest, CreateCdpSourceResponse> operation
-              = new CreateCdpSource.Sync(sdkConfiguration, _headers);
+              = new CreateCdpSource.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -363,8 +455,23 @@ public class Cdp {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetCdpActivationResponse getCdpActivation(@Nonnull GetCdpActivationRequest request) {
+        return getCdpActivation(request, null);
+    }
+
+    /**
+     * Retrieve an activation
+     * 
+     * <p>Retrieves a single CdpActivation by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetCdpActivationResponse getCdpActivation(@Nonnull GetCdpActivationRequest request, @Nullable Options options) {
         RequestOperation<GetCdpActivationRequest, GetCdpActivationResponse> operation
-              = new GetCdpActivation.Sync(sdkConfiguration, _headers);
+              = new GetCdpActivation.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -391,8 +498,23 @@ public class Cdp {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetCdpDestinationResponse getCdpDestination(@Nonnull GetCdpDestinationRequest request) {
+        return getCdpDestination(request, null);
+    }
+
+    /**
+     * Retrieve a destination
+     * 
+     * <p>Retrieves a single CdpDestination by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetCdpDestinationResponse getCdpDestination(@Nonnull GetCdpDestinationRequest request, @Nullable Options options) {
         RequestOperation<GetCdpDestinationRequest, GetCdpDestinationResponse> operation
-              = new GetCdpDestination.Sync(sdkConfiguration, _headers);
+              = new GetCdpDestination.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -419,8 +541,23 @@ public class Cdp {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetCdpEventResponse getCdpEvent(@Nonnull GetCdpEventRequest request) {
+        return getCdpEvent(request, null);
+    }
+
+    /**
+     * Retrieve an event
+     * 
+     * <p>Retrieves a single CdpEvent by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetCdpEventResponse getCdpEvent(@Nonnull GetCdpEventRequest request, @Nullable Options options) {
         RequestOperation<GetCdpEventRequest, GetCdpEventResponse> operation
-              = new GetCdpEvent.Sync(sdkConfiguration, _headers);
+              = new GetCdpEvent.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -447,8 +584,23 @@ public class Cdp {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetCdpProfileResponse getCdpProfile(@Nonnull GetCdpProfileRequest request) {
+        return getCdpProfile(request, null);
+    }
+
+    /**
+     * Retrieve a profile
+     * 
+     * <p>Retrieves a single CdpProfile by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetCdpProfileResponse getCdpProfile(@Nonnull GetCdpProfileRequest request, @Nullable Options options) {
         RequestOperation<GetCdpProfileRequest, GetCdpProfileResponse> operation
-              = new GetCdpProfile.Sync(sdkConfiguration, _headers);
+              = new GetCdpProfile.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -475,8 +627,23 @@ public class Cdp {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetCdpSegmentResponse getCdpSegment(@Nonnull GetCdpSegmentRequest request) {
+        return getCdpSegment(request, null);
+    }
+
+    /**
+     * Retrieve a segment
+     * 
+     * <p>Retrieves a single CdpSegment by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetCdpSegmentResponse getCdpSegment(@Nonnull GetCdpSegmentRequest request, @Nullable Options options) {
         RequestOperation<GetCdpSegmentRequest, GetCdpSegmentResponse> operation
-              = new GetCdpSegment.Sync(sdkConfiguration, _headers);
+              = new GetCdpSegment.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -503,8 +670,23 @@ public class Cdp {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetCdpSourceResponse getCdpSource(@Nonnull GetCdpSourceRequest request) {
+        return getCdpSource(request, null);
+    }
+
+    /**
+     * Retrieve a source
+     * 
+     * <p>Retrieves a single CdpSource by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetCdpSourceResponse getCdpSource(@Nonnull GetCdpSourceRequest request, @Nullable Options options) {
         RequestOperation<GetCdpSourceRequest, GetCdpSourceResponse> operation
-              = new GetCdpSource.Sync(sdkConfiguration, _headers);
+              = new GetCdpSource.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -539,8 +721,27 @@ public class Cdp {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListCdpActivationsResponse listCdpActivations(@Nonnull ListCdpActivationsRequest request) {
+        return listCdpActivations(request, null);
+    }
+
+    /**
+     * List all activations
+     * 
+     * <p>Returns a list of CdpActivations. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListCdpActivationsResponse listCdpActivations(@Nonnull ListCdpActivationsRequest request, @Nullable Options options) {
         RequestOperation<ListCdpActivationsRequest, ListCdpActivationsResponse> operation
-              = new ListCdpActivations.Sync(sdkConfiguration, _headers);
+              = new ListCdpActivations.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -575,8 +776,27 @@ public class Cdp {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListCdpDestinationsResponse listCdpDestinations(@Nonnull ListCdpDestinationsRequest request) {
+        return listCdpDestinations(request, null);
+    }
+
+    /**
+     * List all destinations
+     * 
+     * <p>Returns a list of CdpDestinations. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListCdpDestinationsResponse listCdpDestinations(@Nonnull ListCdpDestinationsRequest request, @Nullable Options options) {
         RequestOperation<ListCdpDestinationsRequest, ListCdpDestinationsResponse> operation
-              = new ListCdpDestinations.Sync(sdkConfiguration, _headers);
+              = new ListCdpDestinations.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -611,8 +831,27 @@ public class Cdp {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListCdpEventsResponse listCdpEvents(@Nonnull ListCdpEventsRequest request) {
+        return listCdpEvents(request, null);
+    }
+
+    /**
+     * List all events
+     * 
+     * <p>Returns a list of CdpEvents. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListCdpEventsResponse listCdpEvents(@Nonnull ListCdpEventsRequest request, @Nullable Options options) {
         RequestOperation<ListCdpEventsRequest, ListCdpEventsResponse> operation
-              = new ListCdpEvents.Sync(sdkConfiguration, _headers);
+              = new ListCdpEvents.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -647,8 +886,27 @@ public class Cdp {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListCdpProfilesResponse listCdpProfiles(@Nonnull ListCdpProfilesRequest request) {
+        return listCdpProfiles(request, null);
+    }
+
+    /**
+     * List all profiles
+     * 
+     * <p>Returns a list of CdpProfiles. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListCdpProfilesResponse listCdpProfiles(@Nonnull ListCdpProfilesRequest request, @Nullable Options options) {
         RequestOperation<ListCdpProfilesRequest, ListCdpProfilesResponse> operation
-              = new ListCdpProfiles.Sync(sdkConfiguration, _headers);
+              = new ListCdpProfiles.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -683,8 +941,27 @@ public class Cdp {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListCdpSegmentsResponse listCdpSegments(@Nonnull ListCdpSegmentsRequest request) {
+        return listCdpSegments(request, null);
+    }
+
+    /**
+     * List all segments
+     * 
+     * <p>Returns a list of CdpSegments. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListCdpSegmentsResponse listCdpSegments(@Nonnull ListCdpSegmentsRequest request, @Nullable Options options) {
         RequestOperation<ListCdpSegmentsRequest, ListCdpSegmentsResponse> operation
-              = new ListCdpSegments.Sync(sdkConfiguration, _headers);
+              = new ListCdpSegments.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -719,8 +996,27 @@ public class Cdp {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListCdpSourcesResponse listCdpSources(@Nonnull ListCdpSourcesRequest request) {
+        return listCdpSources(request, null);
+    }
+
+    /**
+     * List all sources
+     * 
+     * <p>Returns a list of CdpSources. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListCdpSourcesResponse listCdpSources(@Nonnull ListCdpSourcesRequest request, @Nullable Options options) {
         RequestOperation<ListCdpSourcesRequest, ListCdpSourcesResponse> operation
-              = new ListCdpSources.Sync(sdkConfiguration, _headers);
+              = new ListCdpSources.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -747,8 +1043,23 @@ public class Cdp {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchCdpActivationResponse patchCdpActivation(@Nonnull PatchCdpActivationRequest request) {
+        return patchCdpActivation(request, null);
+    }
+
+    /**
+     * Update an activation
+     * 
+     * <p>Updates the CdpActivation identified by `id`. Provide the unified CdpActivation fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchCdpActivationResponse patchCdpActivation(@Nonnull PatchCdpActivationRequest request, @Nullable Options options) {
         RequestOperation<PatchCdpActivationRequest, PatchCdpActivationResponse> operation
-              = new PatchCdpActivation.Sync(sdkConfiguration, _headers);
+              = new PatchCdpActivation.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -775,8 +1086,23 @@ public class Cdp {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchCdpDestinationResponse patchCdpDestination(@Nonnull PatchCdpDestinationRequest request) {
+        return patchCdpDestination(request, null);
+    }
+
+    /**
+     * Update a destination
+     * 
+     * <p>Updates the CdpDestination identified by `id`. Provide the unified CdpDestination fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchCdpDestinationResponse patchCdpDestination(@Nonnull PatchCdpDestinationRequest request, @Nullable Options options) {
         RequestOperation<PatchCdpDestinationRequest, PatchCdpDestinationResponse> operation
-              = new PatchCdpDestination.Sync(sdkConfiguration, _headers);
+              = new PatchCdpDestination.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -803,8 +1129,23 @@ public class Cdp {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchCdpEventResponse patchCdpEvent(@Nonnull PatchCdpEventRequest request) {
+        return patchCdpEvent(request, null);
+    }
+
+    /**
+     * Update an event
+     * 
+     * <p>Updates the CdpEvent identified by `id`. Provide the unified CdpEvent fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchCdpEventResponse patchCdpEvent(@Nonnull PatchCdpEventRequest request, @Nullable Options options) {
         RequestOperation<PatchCdpEventRequest, PatchCdpEventResponse> operation
-              = new PatchCdpEvent.Sync(sdkConfiguration, _headers);
+              = new PatchCdpEvent.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -831,8 +1172,23 @@ public class Cdp {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchCdpProfileResponse patchCdpProfile(@Nonnull PatchCdpProfileRequest request) {
+        return patchCdpProfile(request, null);
+    }
+
+    /**
+     * Update a profile
+     * 
+     * <p>Updates the CdpProfile identified by `id`. Provide the unified CdpProfile fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchCdpProfileResponse patchCdpProfile(@Nonnull PatchCdpProfileRequest request, @Nullable Options options) {
         RequestOperation<PatchCdpProfileRequest, PatchCdpProfileResponse> operation
-              = new PatchCdpProfile.Sync(sdkConfiguration, _headers);
+              = new PatchCdpProfile.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -859,8 +1215,23 @@ public class Cdp {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchCdpSegmentResponse patchCdpSegment(@Nonnull PatchCdpSegmentRequest request) {
+        return patchCdpSegment(request, null);
+    }
+
+    /**
+     * Update a segment
+     * 
+     * <p>Updates the CdpSegment identified by `id`. Provide the unified CdpSegment fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchCdpSegmentResponse patchCdpSegment(@Nonnull PatchCdpSegmentRequest request, @Nullable Options options) {
         RequestOperation<PatchCdpSegmentRequest, PatchCdpSegmentResponse> operation
-              = new PatchCdpSegment.Sync(sdkConfiguration, _headers);
+              = new PatchCdpSegment.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -887,8 +1258,23 @@ public class Cdp {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchCdpSourceResponse patchCdpSource(@Nonnull PatchCdpSourceRequest request) {
+        return patchCdpSource(request, null);
+    }
+
+    /**
+     * Update a source
+     * 
+     * <p>Updates the CdpSource identified by `id`. Provide the unified CdpSource fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchCdpSourceResponse patchCdpSource(@Nonnull PatchCdpSourceRequest request, @Nullable Options options) {
         RequestOperation<PatchCdpSourceRequest, PatchCdpSourceResponse> operation
-              = new PatchCdpSource.Sync(sdkConfiguration, _headers);
+              = new PatchCdpSource.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -913,8 +1299,22 @@ public class Cdp {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveCdpActivationResponse removeCdpActivation(@Nonnull RemoveCdpActivationRequest request) {
+        return removeCdpActivation(request, null);
+    }
+
+    /**
+     * Remove an activation
+     * 
+     * <p>Deletes the CdpActivation identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveCdpActivationResponse removeCdpActivation(@Nonnull RemoveCdpActivationRequest request, @Nullable Options options) {
         RequestOperation<RemoveCdpActivationRequest, RemoveCdpActivationResponse> operation
-              = new RemoveCdpActivation.Sync(sdkConfiguration, _headers);
+              = new RemoveCdpActivation.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -939,8 +1339,22 @@ public class Cdp {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveCdpDestinationResponse removeCdpDestination(@Nonnull RemoveCdpDestinationRequest request) {
+        return removeCdpDestination(request, null);
+    }
+
+    /**
+     * Remove a destination
+     * 
+     * <p>Deletes the CdpDestination identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveCdpDestinationResponse removeCdpDestination(@Nonnull RemoveCdpDestinationRequest request, @Nullable Options options) {
         RequestOperation<RemoveCdpDestinationRequest, RemoveCdpDestinationResponse> operation
-              = new RemoveCdpDestination.Sync(sdkConfiguration, _headers);
+              = new RemoveCdpDestination.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -965,8 +1379,22 @@ public class Cdp {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveCdpEventResponse removeCdpEvent(@Nonnull RemoveCdpEventRequest request) {
+        return removeCdpEvent(request, null);
+    }
+
+    /**
+     * Remove an event
+     * 
+     * <p>Deletes the CdpEvent identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveCdpEventResponse removeCdpEvent(@Nonnull RemoveCdpEventRequest request, @Nullable Options options) {
         RequestOperation<RemoveCdpEventRequest, RemoveCdpEventResponse> operation
-              = new RemoveCdpEvent.Sync(sdkConfiguration, _headers);
+              = new RemoveCdpEvent.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -991,8 +1419,22 @@ public class Cdp {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveCdpProfileResponse removeCdpProfile(@Nonnull RemoveCdpProfileRequest request) {
+        return removeCdpProfile(request, null);
+    }
+
+    /**
+     * Remove a profile
+     * 
+     * <p>Deletes the CdpProfile identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveCdpProfileResponse removeCdpProfile(@Nonnull RemoveCdpProfileRequest request, @Nullable Options options) {
         RequestOperation<RemoveCdpProfileRequest, RemoveCdpProfileResponse> operation
-              = new RemoveCdpProfile.Sync(sdkConfiguration, _headers);
+              = new RemoveCdpProfile.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1017,8 +1459,22 @@ public class Cdp {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveCdpSegmentResponse removeCdpSegment(@Nonnull RemoveCdpSegmentRequest request) {
+        return removeCdpSegment(request, null);
+    }
+
+    /**
+     * Remove a segment
+     * 
+     * <p>Deletes the CdpSegment identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveCdpSegmentResponse removeCdpSegment(@Nonnull RemoveCdpSegmentRequest request, @Nullable Options options) {
         RequestOperation<RemoveCdpSegmentRequest, RemoveCdpSegmentResponse> operation
-              = new RemoveCdpSegment.Sync(sdkConfiguration, _headers);
+              = new RemoveCdpSegment.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1043,8 +1499,22 @@ public class Cdp {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveCdpSourceResponse removeCdpSource(@Nonnull RemoveCdpSourceRequest request) {
+        return removeCdpSource(request, null);
+    }
+
+    /**
+     * Remove a source
+     * 
+     * <p>Deletes the CdpSource identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveCdpSourceResponse removeCdpSource(@Nonnull RemoveCdpSourceRequest request, @Nullable Options options) {
         RequestOperation<RemoveCdpSourceRequest, RemoveCdpSourceResponse> operation
-              = new RemoveCdpSource.Sync(sdkConfiguration, _headers);
+              = new RemoveCdpSource.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1071,8 +1541,23 @@ public class Cdp {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateCdpActivationResponse updateCdpActivation(@Nonnull UpdateCdpActivationRequest request) {
+        return updateCdpActivation(request, null);
+    }
+
+    /**
+     * Update an activation
+     * 
+     * <p>Updates the CdpActivation identified by `id`. Provide the unified CdpActivation fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateCdpActivationResponse updateCdpActivation(@Nonnull UpdateCdpActivationRequest request, @Nullable Options options) {
         RequestOperation<UpdateCdpActivationRequest, UpdateCdpActivationResponse> operation
-              = new UpdateCdpActivation.Sync(sdkConfiguration, _headers);
+              = new UpdateCdpActivation.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1099,8 +1584,23 @@ public class Cdp {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateCdpDestinationResponse updateCdpDestination(@Nonnull UpdateCdpDestinationRequest request) {
+        return updateCdpDestination(request, null);
+    }
+
+    /**
+     * Update a destination
+     * 
+     * <p>Updates the CdpDestination identified by `id`. Provide the unified CdpDestination fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateCdpDestinationResponse updateCdpDestination(@Nonnull UpdateCdpDestinationRequest request, @Nullable Options options) {
         RequestOperation<UpdateCdpDestinationRequest, UpdateCdpDestinationResponse> operation
-              = new UpdateCdpDestination.Sync(sdkConfiguration, _headers);
+              = new UpdateCdpDestination.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1127,8 +1627,23 @@ public class Cdp {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateCdpEventResponse updateCdpEvent(@Nonnull UpdateCdpEventRequest request) {
+        return updateCdpEvent(request, null);
+    }
+
+    /**
+     * Update an event
+     * 
+     * <p>Updates the CdpEvent identified by `id`. Provide the unified CdpEvent fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateCdpEventResponse updateCdpEvent(@Nonnull UpdateCdpEventRequest request, @Nullable Options options) {
         RequestOperation<UpdateCdpEventRequest, UpdateCdpEventResponse> operation
-              = new UpdateCdpEvent.Sync(sdkConfiguration, _headers);
+              = new UpdateCdpEvent.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1155,8 +1670,23 @@ public class Cdp {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateCdpProfileResponse updateCdpProfile(@Nonnull UpdateCdpProfileRequest request) {
+        return updateCdpProfile(request, null);
+    }
+
+    /**
+     * Update a profile
+     * 
+     * <p>Updates the CdpProfile identified by `id`. Provide the unified CdpProfile fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateCdpProfileResponse updateCdpProfile(@Nonnull UpdateCdpProfileRequest request, @Nullable Options options) {
         RequestOperation<UpdateCdpProfileRequest, UpdateCdpProfileResponse> operation
-              = new UpdateCdpProfile.Sync(sdkConfiguration, _headers);
+              = new UpdateCdpProfile.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1183,8 +1713,23 @@ public class Cdp {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateCdpSegmentResponse updateCdpSegment(@Nonnull UpdateCdpSegmentRequest request) {
+        return updateCdpSegment(request, null);
+    }
+
+    /**
+     * Update a segment
+     * 
+     * <p>Updates the CdpSegment identified by `id`. Provide the unified CdpSegment fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateCdpSegmentResponse updateCdpSegment(@Nonnull UpdateCdpSegmentRequest request, @Nullable Options options) {
         RequestOperation<UpdateCdpSegmentRequest, UpdateCdpSegmentResponse> operation
-              = new UpdateCdpSegment.Sync(sdkConfiguration, _headers);
+              = new UpdateCdpSegment.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1211,8 +1756,23 @@ public class Cdp {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateCdpSourceResponse updateCdpSource(@Nonnull UpdateCdpSourceRequest request) {
+        return updateCdpSource(request, null);
+    }
+
+    /**
+     * Update a source
+     * 
+     * <p>Updates the CdpSource identified by `id`. Provide the unified CdpSource fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateCdpSourceResponse updateCdpSource(@Nonnull UpdateCdpSourceRequest request, @Nullable Options options) {
         RequestOperation<UpdateCdpSourceRequest, UpdateCdpSourceResponse> operation
-              = new UpdateCdpSource.Sync(sdkConfiguration, _headers);
+              = new UpdateCdpSource.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

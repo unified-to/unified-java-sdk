@@ -6,20 +6,30 @@ package to.unified.unified_java_sdk.models.operations.async;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.ListHrisBankaccountsRequest;
 import to.unified.unified_java_sdk.operations.ListHrisBankaccounts;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListHrisBankaccountsRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private ListHrisBankaccountsRequest request;
+    private final Options.Builder optionsBuilder;
 
     public ListHrisBankaccountsRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public ListHrisBankaccountsRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public ListHrisBankaccountsRequestBuilder request(@Nonnull ListHrisBankaccountsRequest request) {
@@ -44,8 +54,9 @@ public class ListHrisBankaccountsRequestBuilder {
     * @return The response from the server.
     */
     public CompletableFuture<ListHrisBankaccountsResponse> call() {
+        Options options = optionsBuilder.build();
         AsyncRequestOperation<ListHrisBankaccountsRequest, ListHrisBankaccountsResponse> operation
-              = new ListHrisBankaccounts.Async(sdkConfiguration, _headers);
+              = new ListHrisBankaccounts.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

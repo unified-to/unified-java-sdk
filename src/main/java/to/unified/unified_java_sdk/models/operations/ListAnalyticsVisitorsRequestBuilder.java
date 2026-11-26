@@ -6,18 +6,28 @@ package to.unified.unified_java_sdk.models.operations;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.ListAnalyticsVisitors;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListAnalyticsVisitorsRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private ListAnalyticsVisitorsRequest request;
+    private final Options.Builder optionsBuilder;
 
     public ListAnalyticsVisitorsRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public ListAnalyticsVisitorsRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public ListAnalyticsVisitorsRequestBuilder request(@Nonnull ListAnalyticsVisitorsRequest request) {
@@ -42,8 +52,9 @@ public class ListAnalyticsVisitorsRequestBuilder {
     * @return The response from the server.
     */
     public ListAnalyticsVisitorsResponse call() {
+        Options options = optionsBuilder.build();
         RequestOperation<ListAnalyticsVisitorsRequest, ListAnalyticsVisitorsResponse> operation
-              = new ListAnalyticsVisitors.Sync(sdkConfiguration, _headers);
+              = new ListAnalyticsVisitors.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

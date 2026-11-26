@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateCrmLeadRequest;
 import to.unified.unified_java_sdk.models.operations.CreateCrmLeadRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateCrmLeadResponse;
@@ -31,6 +32,7 @@ import to.unified.unified_java_sdk.operations.PatchCrmLead;
 import to.unified.unified_java_sdk.operations.RemoveCrmLead;
 import to.unified.unified_java_sdk.operations.UpdateCrmLead;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Lead {
@@ -75,8 +77,23 @@ public class Lead {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateCrmLeadResponse createCrmLead(@Nonnull CreateCrmLeadRequest request) {
+        return createCrmLead(request, null);
+    }
+
+    /**
+     * Create a lead
+     * 
+     * <p>Creates a CrmLead. Provide the unified CrmLead fields in the request body; they are mapped to the
+     * provider's API. Returns the created CrmLead.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateCrmLeadResponse createCrmLead(@Nonnull CreateCrmLeadRequest request, @Nullable Options options) {
         RequestOperation<CreateCrmLeadRequest, CreateCrmLeadResponse> operation
-              = new CreateCrmLead.Sync(sdkConfiguration, _headers);
+              = new CreateCrmLead.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -103,8 +120,23 @@ public class Lead {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetCrmLeadResponse getCrmLead(@Nonnull GetCrmLeadRequest request) {
+        return getCrmLead(request, null);
+    }
+
+    /**
+     * Retrieve a lead
+     * 
+     * <p>Retrieves a single CrmLead by its `id`. Obtain `id` values from the corresponding list endpoint. Use
+     * `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetCrmLeadResponse getCrmLead(@Nonnull GetCrmLeadRequest request, @Nullable Options options) {
         RequestOperation<GetCrmLeadRequest, GetCrmLeadResponse> operation
-              = new GetCrmLead.Sync(sdkConfiguration, _headers);
+              = new GetCrmLead.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -139,8 +171,27 @@ public class Lead {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListCrmLeadsResponse listCrmLeads(@Nonnull ListCrmLeadsRequest request) {
+        return listCrmLeads(request, null);
+    }
+
+    /**
+     * List all leads
+     * 
+     * <p>Returns a list of CrmLeads. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListCrmLeadsResponse listCrmLeads(@Nonnull ListCrmLeadsRequest request, @Nullable Options options) {
         RequestOperation<ListCrmLeadsRequest, ListCrmLeadsResponse> operation
-              = new ListCrmLeads.Sync(sdkConfiguration, _headers);
+              = new ListCrmLeads.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +218,23 @@ public class Lead {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchCrmLeadResponse patchCrmLead(@Nonnull PatchCrmLeadRequest request) {
+        return patchCrmLead(request, null);
+    }
+
+    /**
+     * Update a lead
+     * 
+     * <p>Updates the CrmLead identified by `id`. Provide the unified CrmLead fields to change in the request
+     * body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchCrmLeadResponse patchCrmLead(@Nonnull PatchCrmLeadRequest request, @Nullable Options options) {
         RequestOperation<PatchCrmLeadRequest, PatchCrmLeadResponse> operation
-              = new PatchCrmLead.Sync(sdkConfiguration, _headers);
+              = new PatchCrmLead.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -193,8 +259,22 @@ public class Lead {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveCrmLeadResponse removeCrmLead(@Nonnull RemoveCrmLeadRequest request) {
+        return removeCrmLead(request, null);
+    }
+
+    /**
+     * Remove a lead
+     * 
+     * <p>Deletes the CrmLead identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveCrmLeadResponse removeCrmLead(@Nonnull RemoveCrmLeadRequest request, @Nullable Options options) {
         RequestOperation<RemoveCrmLeadRequest, RemoveCrmLeadResponse> operation
-              = new RemoveCrmLead.Sync(sdkConfiguration, _headers);
+              = new RemoveCrmLead.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -221,8 +301,23 @@ public class Lead {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateCrmLeadResponse updateCrmLead(@Nonnull UpdateCrmLeadRequest request) {
+        return updateCrmLead(request, null);
+    }
+
+    /**
+     * Update a lead
+     * 
+     * <p>Updates the CrmLead identified by `id`. Provide the unified CrmLead fields to change in the request
+     * body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateCrmLeadResponse updateCrmLead(@Nonnull UpdateCrmLeadRequest request, @Nullable Options options) {
         RequestOperation<UpdateCrmLeadRequest, UpdateCrmLeadResponse> operation
-              = new UpdateCrmLead.Sync(sdkConfiguration, _headers);
+              = new UpdateCrmLead.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

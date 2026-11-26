@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateFormsFormRequest;
 import to.unified.unified_java_sdk.models.operations.GetFormsFormRequest;
@@ -40,6 +41,7 @@ import to.unified.unified_java_sdk.operations.PatchFormsForm;
 import to.unified.unified_java_sdk.operations.RemoveFormsForm;
 import to.unified.unified_java_sdk.operations.UpdateFormsForm;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncForms {
@@ -84,8 +86,22 @@ public class AsyncForms {
      * @return {@code CompletableFuture<CreateFormsFormResponse>} - The async response
      */
     public CompletableFuture<CreateFormsFormResponse> createFormsForm(@Nonnull CreateFormsFormRequest request) {
+        return createFormsForm(request, null);
+    }
+
+    /**
+     * Create a form
+     * 
+     * <p>Creates a FormsForm. Provide the unified FormsForm fields in the request body; they are mapped to
+     * the provider's API. Returns the created FormsForm.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateFormsFormResponse>} - The async response
+     */
+    public CompletableFuture<CreateFormsFormResponse> createFormsForm(@Nonnull CreateFormsFormRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateFormsFormRequest, CreateFormsFormResponse> operation
-              = new CreateFormsForm.Async(sdkConfiguration, _headers);
+              = new CreateFormsForm.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -113,8 +129,22 @@ public class AsyncForms {
      * @return {@code CompletableFuture<GetFormsFormResponse>} - The async response
      */
     public CompletableFuture<GetFormsFormResponse> getFormsForm(@Nonnull GetFormsFormRequest request) {
+        return getFormsForm(request, null);
+    }
+
+    /**
+     * Retrieve a form
+     * 
+     * <p>Retrieves a single FormsForm by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetFormsFormResponse>} - The async response
+     */
+    public CompletableFuture<GetFormsFormResponse> getFormsForm(@Nonnull GetFormsFormRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetFormsFormRequest, GetFormsFormResponse> operation
-              = new GetFormsForm.Async(sdkConfiguration, _headers);
+              = new GetFormsForm.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -142,8 +172,22 @@ public class AsyncForms {
      * @return {@code CompletableFuture<GetFormsSubmissionResponse>} - The async response
      */
     public CompletableFuture<GetFormsSubmissionResponse> getFormsSubmission(@Nonnull GetFormsSubmissionRequest request) {
+        return getFormsSubmission(request, null);
+    }
+
+    /**
+     * Retrieve a submission
+     * 
+     * <p>Retrieves a single FormsSubmission by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetFormsSubmissionResponse>} - The async response
+     */
+    public CompletableFuture<GetFormsSubmissionResponse> getFormsSubmission(@Nonnull GetFormsSubmissionRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetFormsSubmissionRequest, GetFormsSubmissionResponse> operation
-              = new GetFormsSubmission.Async(sdkConfiguration, _headers);
+              = new GetFormsSubmission.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -179,8 +223,26 @@ public class AsyncForms {
      * @return {@code CompletableFuture<ListFormsFormsResponse>} - The async response
      */
     public CompletableFuture<ListFormsFormsResponse> listFormsForms(@Nonnull ListFormsFormsRequest request) {
+        return listFormsForms(request, null);
+    }
+
+    /**
+     * List all forms
+     * 
+     * <p>Returns a list of FormsForms. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListFormsFormsResponse>} - The async response
+     */
+    public CompletableFuture<ListFormsFormsResponse> listFormsForms(@Nonnull ListFormsFormsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListFormsFormsRequest, ListFormsFormsResponse> operation
-              = new ListFormsForms.Async(sdkConfiguration, _headers);
+              = new ListFormsForms.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -216,8 +278,26 @@ public class AsyncForms {
      * @return {@code CompletableFuture<ListFormsSubmissionsResponse>} - The async response
      */
     public CompletableFuture<ListFormsSubmissionsResponse> listFormsSubmissions(@Nonnull ListFormsSubmissionsRequest request) {
+        return listFormsSubmissions(request, null);
+    }
+
+    /**
+     * List all submissions
+     * 
+     * <p>Returns a list of FormsSubmissions. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListFormsSubmissionsResponse>} - The async response
+     */
+    public CompletableFuture<ListFormsSubmissionsResponse> listFormsSubmissions(@Nonnull ListFormsSubmissionsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListFormsSubmissionsRequest, ListFormsSubmissionsResponse> operation
-              = new ListFormsSubmissions.Async(sdkConfiguration, _headers);
+              = new ListFormsSubmissions.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -245,8 +325,22 @@ public class AsyncForms {
      * @return {@code CompletableFuture<PatchFormsFormResponse>} - The async response
      */
     public CompletableFuture<PatchFormsFormResponse> patchFormsForm(@Nonnull PatchFormsFormRequest request) {
+        return patchFormsForm(request, null);
+    }
+
+    /**
+     * Update a form
+     * 
+     * <p>Updates the FormsForm identified by `id`. Provide the unified FormsForm fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchFormsFormResponse>} - The async response
+     */
+    public CompletableFuture<PatchFormsFormResponse> patchFormsForm(@Nonnull PatchFormsFormRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchFormsFormRequest, PatchFormsFormResponse> operation
-              = new PatchFormsForm.Async(sdkConfiguration, _headers);
+              = new PatchFormsForm.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -272,8 +366,21 @@ public class AsyncForms {
      * @return {@code CompletableFuture<RemoveFormsFormResponse>} - The async response
      */
     public CompletableFuture<RemoveFormsFormResponse> removeFormsForm(@Nonnull RemoveFormsFormRequest request) {
+        return removeFormsForm(request, null);
+    }
+
+    /**
+     * Remove a form
+     * 
+     * <p>Deletes the FormsForm identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveFormsFormResponse>} - The async response
+     */
+    public CompletableFuture<RemoveFormsFormResponse> removeFormsForm(@Nonnull RemoveFormsFormRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveFormsFormRequest, RemoveFormsFormResponse> operation
-              = new RemoveFormsForm.Async(sdkConfiguration, _headers);
+              = new RemoveFormsForm.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -301,8 +408,22 @@ public class AsyncForms {
      * @return {@code CompletableFuture<UpdateFormsFormResponse>} - The async response
      */
     public CompletableFuture<UpdateFormsFormResponse> updateFormsForm(@Nonnull UpdateFormsFormRequest request) {
+        return updateFormsForm(request, null);
+    }
+
+    /**
+     * Update a form
+     * 
+     * <p>Updates the FormsForm identified by `id`. Provide the unified FormsForm fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateFormsFormResponse>} - The async response
+     */
+    public CompletableFuture<UpdateFormsFormResponse> updateFormsForm(@Nonnull UpdateFormsFormRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateFormsFormRequest, UpdateFormsFormResponse> operation
-              = new UpdateFormsForm.Async(sdkConfiguration, _headers);
+              = new UpdateFormsForm.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

@@ -27,11 +27,32 @@ public class PaymentLink {
     private Double amount;
 
     /**
+     * payer's email
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("contact_email")
+    private String contactEmail;
+
+    /**
      * ID of the AccountingContact (reference to AccountingContact)
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contact_id")
     private String contactId;
+
+    /**
+     * payer's name, for providers that take payer details on the link rather than a contact_id
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("contact_name")
+    private String contactName;
+
+    /**
+     * payer's phone
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("contact_phone")
+    private String contactPhone;
 
     /**
      * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
@@ -109,7 +130,10 @@ public class PaymentLink {
     @JsonCreator
     public PaymentLink(
             @JsonProperty("amount") @Nullable Double amount,
+            @JsonProperty("contact_email") @Nullable String contactEmail,
             @JsonProperty("contact_id") @Nullable String contactId,
+            @JsonProperty("contact_name") @Nullable String contactName,
+            @JsonProperty("contact_phone") @Nullable String contactPhone,
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
             @JsonProperty("currency") @Nullable String currency,
             @JsonProperty("description") @Nullable String description,
@@ -124,7 +148,10 @@ public class PaymentLink {
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
             @JsonProperty("url") @Nullable String url) {
         this.amount = amount;
+        this.contactEmail = contactEmail;
         this.contactId = contactId;
+        this.contactName = contactName;
+        this.contactPhone = contactPhone;
         this.createdAt = createdAt;
         this.currency = currency;
         this.description = description;
@@ -145,6 +172,7 @@ public class PaymentLink {
             null, null, null,
             null, null, null,
             null, null, null,
+            null, null, null,
             null, null, null);
     }
 
@@ -153,10 +181,31 @@ public class PaymentLink {
     }
 
     /**
+     * payer's email
+     */
+    public Optional<String> contactEmail() {
+        return Optional.ofNullable(this.contactEmail);
+    }
+
+    /**
      * ID of the AccountingContact (reference to AccountingContact)
      */
     public Optional<String> contactId() {
         return Optional.ofNullable(this.contactId);
+    }
+
+    /**
+     * payer's name, for providers that take payer details on the link rather than a contact_id
+     */
+    public Optional<String> contactName() {
+        return Optional.ofNullable(this.contactName);
+    }
+
+    /**
+     * payer's phone
+     */
+    public Optional<String> contactPhone() {
+        return Optional.ofNullable(this.contactPhone);
     }
 
     /**
@@ -235,10 +284,37 @@ public class PaymentLink {
 
 
     /**
+     * payer's email
+     */
+    public PaymentLink withContactEmail(@Nullable String contactEmail) {
+        this.contactEmail = contactEmail;
+        return this;
+    }
+
+
+    /**
      * ID of the AccountingContact (reference to AccountingContact)
      */
     public PaymentLink withContactId(@Nullable String contactId) {
         this.contactId = contactId;
+        return this;
+    }
+
+
+    /**
+     * payer's name, for providers that take payer details on the link rather than a contact_id
+     */
+    public PaymentLink withContactName(@Nullable String contactName) {
+        this.contactName = contactName;
+        return this;
+    }
+
+
+    /**
+     * payer's phone
+     */
+    public PaymentLink withContactPhone(@Nullable String contactPhone) {
+        this.contactPhone = contactPhone;
         return this;
     }
 
@@ -344,7 +420,10 @@ public class PaymentLink {
         PaymentLink other = (PaymentLink) o;
         return 
             Utils.enhancedDeepEquals(this.amount, other.amount) &&
+            Utils.enhancedDeepEquals(this.contactEmail, other.contactEmail) &&
             Utils.enhancedDeepEquals(this.contactId, other.contactId) &&
+            Utils.enhancedDeepEquals(this.contactName, other.contactName) &&
+            Utils.enhancedDeepEquals(this.contactPhone, other.contactPhone) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.currency, other.currency) &&
             Utils.enhancedDeepEquals(this.description, other.description) &&
@@ -363,7 +442,8 @@ public class PaymentLink {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            amount, contactId, createdAt,
+            amount, contactEmail, contactId,
+            contactName, contactPhone, createdAt,
             currency, description, id,
             isActive, isChargeableNow, lineitems,
             metadata, paymentId, raw,
@@ -374,7 +454,10 @@ public class PaymentLink {
     public String toString() {
         return Utils.toString(PaymentLink.class,
                 "amount", amount,
+                "contactEmail", contactEmail,
                 "contactId", contactId,
+                "contactName", contactName,
+                "contactPhone", contactPhone,
                 "createdAt", createdAt,
                 "currency", currency,
                 "description", description,
@@ -395,7 +478,13 @@ public class PaymentLink {
 
         private Double amount;
 
+        private String contactEmail;
+
         private String contactId;
+
+        private String contactName;
+
+        private String contactPhone;
 
         private OffsetDateTime createdAt;
 
@@ -433,10 +522,34 @@ public class PaymentLink {
         }
 
         /**
+         * payer's email
+         */
+        public Builder contactEmail(@Nullable String contactEmail) {
+            this.contactEmail = contactEmail;
+            return this;
+        }
+
+        /**
          * ID of the AccountingContact (reference to AccountingContact)
          */
         public Builder contactId(@Nullable String contactId) {
             this.contactId = contactId;
+            return this;
+        }
+
+        /**
+         * payer's name, for providers that take payer details on the link rather than a contact_id
+         */
+        public Builder contactName(@Nullable String contactName) {
+            this.contactName = contactName;
+            return this;
+        }
+
+        /**
+         * payer's phone
+         */
+        public Builder contactPhone(@Nullable String contactPhone) {
+            this.contactPhone = contactPhone;
             return this;
         }
 
@@ -519,7 +632,8 @@ public class PaymentLink {
 
         public PaymentLink build() {
             return new PaymentLink(
-                amount, contactId, createdAt,
+                amount, contactEmail, contactId,
+                contactName, contactPhone, createdAt,
                 currency, description, id,
                 isActive, isChargeableNow, lineitems,
                 metadata, paymentId, raw,

@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateComputeVolumeRequest;
 import to.unified.unified_java_sdk.models.operations.GetComputeVolumeRequest;
@@ -32,6 +33,7 @@ import to.unified.unified_java_sdk.operations.PatchComputeVolume;
 import to.unified.unified_java_sdk.operations.RemoveComputeVolume;
 import to.unified.unified_java_sdk.operations.UpdateComputeVolume;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncVolume {
@@ -76,8 +78,22 @@ public class AsyncVolume {
      * @return {@code CompletableFuture<CreateComputeVolumeResponse>} - The async response
      */
     public CompletableFuture<CreateComputeVolumeResponse> createComputeVolume(@Nonnull CreateComputeVolumeRequest request) {
+        return createComputeVolume(request, null);
+    }
+
+    /**
+     * Create a volume
+     * 
+     * <p>Creates a ComputeVolume. Provide the unified ComputeVolume fields in the request body; they are
+     * mapped to the provider's API. Returns the created ComputeVolume.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateComputeVolumeResponse>} - The async response
+     */
+    public CompletableFuture<CreateComputeVolumeResponse> createComputeVolume(@Nonnull CreateComputeVolumeRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateComputeVolumeRequest, CreateComputeVolumeResponse> operation
-              = new CreateComputeVolume.Async(sdkConfiguration, _headers);
+              = new CreateComputeVolume.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -105,8 +121,22 @@ public class AsyncVolume {
      * @return {@code CompletableFuture<GetComputeVolumeResponse>} - The async response
      */
     public CompletableFuture<GetComputeVolumeResponse> getComputeVolume(@Nonnull GetComputeVolumeRequest request) {
+        return getComputeVolume(request, null);
+    }
+
+    /**
+     * Retrieve a volume
+     * 
+     * <p>Retrieves a single ComputeVolume by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetComputeVolumeResponse>} - The async response
+     */
+    public CompletableFuture<GetComputeVolumeResponse> getComputeVolume(@Nonnull GetComputeVolumeRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetComputeVolumeRequest, GetComputeVolumeResponse> operation
-              = new GetComputeVolume.Async(sdkConfiguration, _headers);
+              = new GetComputeVolume.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -142,8 +172,26 @@ public class AsyncVolume {
      * @return {@code CompletableFuture<ListComputeVolumesResponse>} - The async response
      */
     public CompletableFuture<ListComputeVolumesResponse> listComputeVolumes(@Nonnull ListComputeVolumesRequest request) {
+        return listComputeVolumes(request, null);
+    }
+
+    /**
+     * List all volumes
+     * 
+     * <p>Returns a list of ComputeVolumes. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListComputeVolumesResponse>} - The async response
+     */
+    public CompletableFuture<ListComputeVolumesResponse> listComputeVolumes(@Nonnull ListComputeVolumesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListComputeVolumesRequest, ListComputeVolumesResponse> operation
-              = new ListComputeVolumes.Async(sdkConfiguration, _headers);
+              = new ListComputeVolumes.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -171,8 +219,22 @@ public class AsyncVolume {
      * @return {@code CompletableFuture<PatchComputeVolumeResponse>} - The async response
      */
     public CompletableFuture<PatchComputeVolumeResponse> patchComputeVolume(@Nonnull PatchComputeVolumeRequest request) {
+        return patchComputeVolume(request, null);
+    }
+
+    /**
+     * Update a volume
+     * 
+     * <p>Updates the ComputeVolume identified by `id`. Provide the unified ComputeVolume fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchComputeVolumeResponse>} - The async response
+     */
+    public CompletableFuture<PatchComputeVolumeResponse> patchComputeVolume(@Nonnull PatchComputeVolumeRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchComputeVolumeRequest, PatchComputeVolumeResponse> operation
-              = new PatchComputeVolume.Async(sdkConfiguration, _headers);
+              = new PatchComputeVolume.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -198,8 +260,21 @@ public class AsyncVolume {
      * @return {@code CompletableFuture<RemoveComputeVolumeResponse>} - The async response
      */
     public CompletableFuture<RemoveComputeVolumeResponse> removeComputeVolume(@Nonnull RemoveComputeVolumeRequest request) {
+        return removeComputeVolume(request, null);
+    }
+
+    /**
+     * Remove a volume
+     * 
+     * <p>Deletes the ComputeVolume identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveComputeVolumeResponse>} - The async response
+     */
+    public CompletableFuture<RemoveComputeVolumeResponse> removeComputeVolume(@Nonnull RemoveComputeVolumeRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveComputeVolumeRequest, RemoveComputeVolumeResponse> operation
-              = new RemoveComputeVolume.Async(sdkConfiguration, _headers);
+              = new RemoveComputeVolume.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -227,8 +302,22 @@ public class AsyncVolume {
      * @return {@code CompletableFuture<UpdateComputeVolumeResponse>} - The async response
      */
     public CompletableFuture<UpdateComputeVolumeResponse> updateComputeVolume(@Nonnull UpdateComputeVolumeRequest request) {
+        return updateComputeVolume(request, null);
+    }
+
+    /**
+     * Update a volume
+     * 
+     * <p>Updates the ComputeVolume identified by `id`. Provide the unified ComputeVolume fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateComputeVolumeResponse>} - The async response
+     */
+    public CompletableFuture<UpdateComputeVolumeResponse> updateComputeVolume(@Nonnull UpdateComputeVolumeRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateComputeVolumeRequest, UpdateComputeVolumeResponse> operation
-              = new UpdateComputeVolume.Async(sdkConfiguration, _headers);
+              = new UpdateComputeVolume.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

@@ -4,7 +4,9 @@
 
 package to.unified.unified_java_sdk;
 
+import java.lang.IllegalArgumentException;
 import java.lang.String;
+import java.time.Duration;
 import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.HTTPClient;
@@ -359,10 +361,67 @@ public class UnifiedTo {
     private final Record record;
 
 
+    private final Dms dms;
+
+
+    private final Appointment appointment;
+
+
+    private final Opcode opcode;
+
+
+    private final Part part;
+
+
+    private final Partsale partsale;
+
+
+    private final Repairorder repairorder;
+
+
+    private final Vehicle vehicle;
+
+
+    private final Vehiclesale vehiclesale;
+
+
     private final Enrich enrich;
 
 
     private final Person person;
+
+
+    private final Fhir fhir;
+
+
+    private final Allergyintolerance allergyintolerance;
+
+
+    private final Condition condition;
+
+
+    private final Diagnosticreport diagnosticreport;
+
+
+    private final Encounter encounter;
+
+
+    private final Immunization immunization;
+
+
+    private final Medicationrequest medicationrequest;
+
+
+    private final Observation observation;
+
+
+    private final Patient patient;
+
+
+    private final Practitioner practitioner;
+
+
+    private final Metadata metadata;
 
 
     private final Forms forms;
@@ -404,37 +463,16 @@ public class UnifiedTo {
     private final Allergy allergy;
 
 
-    private final Appointment appointment;
-
-
     private final Careplan careplan;
-
-
-    private final Condition condition;
 
 
     private final Coverage coverage;
 
 
-    private final Encounter encounter;
-
-
     private final Goal goal;
 
 
-    private final Immunization immunization;
-
-
     private final Medication medication;
-
-
-    private final Observation observation;
-
-
-    private final Patient patient;
-
-
-    private final Practitioner practitioner;
 
 
     private final Procedure procedure;
@@ -542,9 +580,6 @@ public class UnifiedTo {
     private final Message message;
 
 
-    private final Metadata metadata;
-
-
     private final Passthrough passthrough;
 
 
@@ -578,7 +613,13 @@ public class UnifiedTo {
     private final Change change;
 
 
-    private final Part part;
+    private final Printing printing;
+
+
+    private final File file;
+
+
+    private final Product product;
 
 
     private final Conversation conversation;
@@ -663,9 +704,6 @@ public class UnifiedTo {
 
 
     private final Storage storage;
-
-
-    private final File file;
 
 
     private final Ticketing ticketing;
@@ -1264,6 +1302,46 @@ public class UnifiedTo {
     }
 
 
+    public Dms dms() {
+        return dms;
+    }
+
+
+    public Appointment appointment() {
+        return appointment;
+    }
+
+
+    public Opcode opcode() {
+        return opcode;
+    }
+
+
+    public Part part() {
+        return part;
+    }
+
+
+    public Partsale partsale() {
+        return partsale;
+    }
+
+
+    public Repairorder repairorder() {
+        return repairorder;
+    }
+
+
+    public Vehicle vehicle() {
+        return vehicle;
+    }
+
+
+    public Vehiclesale vehiclesale() {
+        return vehiclesale;
+    }
+
+
     public Enrich enrich() {
         return enrich;
     }
@@ -1271,6 +1349,61 @@ public class UnifiedTo {
 
     public Person person() {
         return person;
+    }
+
+
+    public Fhir fhir() {
+        return fhir;
+    }
+
+
+    public Allergyintolerance allergyintolerance() {
+        return allergyintolerance;
+    }
+
+
+    public Condition condition() {
+        return condition;
+    }
+
+
+    public Diagnosticreport diagnosticreport() {
+        return diagnosticreport;
+    }
+
+
+    public Encounter encounter() {
+        return encounter;
+    }
+
+
+    public Immunization immunization() {
+        return immunization;
+    }
+
+
+    public Medicationrequest medicationrequest() {
+        return medicationrequest;
+    }
+
+
+    public Observation observation() {
+        return observation;
+    }
+
+
+    public Patient patient() {
+        return patient;
+    }
+
+
+    public Practitioner practitioner() {
+        return practitioner;
+    }
+
+
+    public Metadata metadata() {
+        return metadata;
     }
 
 
@@ -1339,18 +1472,8 @@ public class UnifiedTo {
     }
 
 
-    public Appointment appointment() {
-        return appointment;
-    }
-
-
     public Careplan careplan() {
         return careplan;
-    }
-
-
-    public Condition condition() {
-        return condition;
     }
 
 
@@ -1359,38 +1482,13 @@ public class UnifiedTo {
     }
 
 
-    public Encounter encounter() {
-        return encounter;
-    }
-
-
     public Goal goal() {
         return goal;
     }
 
 
-    public Immunization immunization() {
-        return immunization;
-    }
-
-
     public Medication medication() {
         return medication;
-    }
-
-
-    public Observation observation() {
-        return observation;
-    }
-
-
-    public Patient patient() {
-        return patient;
-    }
-
-
-    public Practitioner practitioner() {
-        return practitioner;
     }
 
 
@@ -1569,11 +1667,6 @@ public class UnifiedTo {
     }
 
 
-    public Metadata metadata() {
-        return metadata;
-    }
-
-
     public Passthrough passthrough() {
         return passthrough;
     }
@@ -1629,8 +1722,18 @@ public class UnifiedTo {
     }
 
 
-    public Part part() {
-        return part;
+    public Printing printing() {
+        return printing;
+    }
+
+
+    public File file() {
+        return file;
+    }
+
+
+    public Product product() {
+        return product;
     }
 
 
@@ -1771,11 +1874,6 @@ public class UnifiedTo {
 
     public Storage storage() {
         return storage;
-    }
-
-
-    public File file() {
-        return file;
     }
 
 
@@ -1983,6 +2081,23 @@ public class UnifiedTo {
         }
 
         /**
+         * Sets the default timeout for each request attempt. A per-call {@code timeout}
+         * takes precedence; this takes precedence over {@code x-speakeasy-timeout}.
+         * It bounds the whole call, including reading the response body.
+         *
+         * @param timeout The timeout to apply to every request; must be positive.
+         * @return The builder instance.
+         */
+        public Builder timeout(Duration timeout) {
+            Utils.checkNotNull(timeout, "timeout");
+            if (timeout.isZero() || timeout.isNegative()) {
+                throw new IllegalArgumentException("timeout must be positive");
+            }
+            this.sdkConfiguration.setTimeout(Optional.of(timeout));
+            return this;
+        }
+
+        /**
          * Enables debug logging for HTTP requests and responses, including JSON body content.
          * <p>
          * Convenience method that calls {@link HTTPClient#enableDebugLogging(boolean)}.
@@ -2131,8 +2246,27 @@ public class UnifiedTo {
         this.database = new Database(sdkConfiguration);
         this.query = new Query(sdkConfiguration);
         this.record = new Record(sdkConfiguration);
+        this.dms = new Dms(sdkConfiguration);
+        this.appointment = new Appointment(sdkConfiguration);
+        this.opcode = new Opcode(sdkConfiguration);
+        this.part = new Part(sdkConfiguration);
+        this.partsale = new Partsale(sdkConfiguration);
+        this.repairorder = new Repairorder(sdkConfiguration);
+        this.vehicle = new Vehicle(sdkConfiguration);
+        this.vehiclesale = new Vehiclesale(sdkConfiguration);
         this.enrich = new Enrich(sdkConfiguration);
         this.person = new Person(sdkConfiguration);
+        this.fhir = new Fhir(sdkConfiguration);
+        this.allergyintolerance = new Allergyintolerance(sdkConfiguration);
+        this.condition = new Condition(sdkConfiguration);
+        this.diagnosticreport = new Diagnosticreport(sdkConfiguration);
+        this.encounter = new Encounter(sdkConfiguration);
+        this.immunization = new Immunization(sdkConfiguration);
+        this.medicationrequest = new Medicationrequest(sdkConfiguration);
+        this.observation = new Observation(sdkConfiguration);
+        this.patient = new Patient(sdkConfiguration);
+        this.practitioner = new Practitioner(sdkConfiguration);
+        this.metadata = new Metadata(sdkConfiguration);
         this.forms = new Forms(sdkConfiguration);
         this.form = new Form(sdkConfiguration);
         this.submission = new Submission(sdkConfiguration);
@@ -2146,17 +2280,10 @@ public class UnifiedTo {
         this.task = new Task(sdkConfiguration);
         this.healthcare = new Healthcare(sdkConfiguration);
         this.allergy = new Allergy(sdkConfiguration);
-        this.appointment = new Appointment(sdkConfiguration);
         this.careplan = new Careplan(sdkConfiguration);
-        this.condition = new Condition(sdkConfiguration);
         this.coverage = new Coverage(sdkConfiguration);
-        this.encounter = new Encounter(sdkConfiguration);
         this.goal = new Goal(sdkConfiguration);
-        this.immunization = new Immunization(sdkConfiguration);
         this.medication = new Medication(sdkConfiguration);
-        this.observation = new Observation(sdkConfiguration);
-        this.patient = new Patient(sdkConfiguration);
-        this.practitioner = new Practitioner(sdkConfiguration);
         this.procedure = new Procedure(sdkConfiguration);
         this.slot = new Slot(sdkConfiguration);
         this.hris = new Hris(sdkConfiguration);
@@ -2192,7 +2319,6 @@ public class UnifiedTo {
         this.messaging = new Messaging(sdkConfiguration);
         this.channel = new Channel(sdkConfiguration);
         this.message = new Message(sdkConfiguration);
-        this.metadata = new Metadata(sdkConfiguration);
         this.passthrough = new Passthrough(sdkConfiguration);
         this.payment = new Payment(sdkConfiguration);
         this.payout = new Payout(sdkConfiguration);
@@ -2204,7 +2330,9 @@ public class UnifiedTo {
         this.plm = new Plm(sdkConfiguration);
         this.bomline = new Bomline(sdkConfiguration);
         this.change = new Change(sdkConfiguration);
-        this.part = new Part(sdkConfiguration);
+        this.printing = new Printing(sdkConfiguration);
+        this.file = new File(sdkConfiguration);
+        this.product = new Product(sdkConfiguration);
         this.conversation = new Conversation(sdkConfiguration);
         this.guest = new Guest(sdkConfiguration);
         this.listing = new Listing(sdkConfiguration);
@@ -2233,7 +2361,6 @@ public class UnifiedTo {
         this.insight = new Insight(sdkConfiguration);
         this.post = new Post(sdkConfiguration);
         this.storage = new Storage(sdkConfiguration);
-        this.file = new File(sdkConfiguration);
         this.ticketing = new Ticketing(sdkConfiguration);
         this.customer = new Customer(sdkConfiguration);
         this.note = new Note(sdkConfiguration);

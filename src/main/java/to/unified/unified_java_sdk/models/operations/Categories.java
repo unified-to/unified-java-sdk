@@ -49,7 +49,10 @@ public enum Categories {
     HEALTHCARE("healthcare"),
     PROPERTY("property"),
     PLM("plm"),
-    QMS("qms");
+    QMS("qms"),
+    DMS("dms"),
+    FHIR("fhir"),
+    PRINTING("printing");
 
     @JsonValue
     private final String value;

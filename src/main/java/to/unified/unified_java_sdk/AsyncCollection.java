@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceCollectionRequest;
 import to.unified.unified_java_sdk.models.operations.CreateLmsCollectionRequest;
@@ -56,6 +57,7 @@ import to.unified.unified_java_sdk.operations.RemoveLmsCollection;
 import to.unified.unified_java_sdk.operations.UpdateCommerceCollection;
 import to.unified.unified_java_sdk.operations.UpdateLmsCollection;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncCollection {
@@ -100,8 +102,22 @@ public class AsyncCollection {
      * @return {@code CompletableFuture<CreateCommerceCollectionResponse>} - The async response
      */
     public CompletableFuture<CreateCommerceCollectionResponse> createCommerceCollection(@Nonnull CreateCommerceCollectionRequest request) {
+        return createCommerceCollection(request, null);
+    }
+
+    /**
+     * Create a collection
+     * 
+     * <p>Creates a CommerceCollection. Provide the unified CommerceCollection fields in the request body;
+     * they are mapped to the provider's API. Returns the created CommerceCollection.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateCommerceCollectionResponse>} - The async response
+     */
+    public CompletableFuture<CreateCommerceCollectionResponse> createCommerceCollection(@Nonnull CreateCommerceCollectionRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateCommerceCollectionRequest, CreateCommerceCollectionResponse> operation
-              = new CreateCommerceCollection.Async(sdkConfiguration, _headers);
+              = new CreateCommerceCollection.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -129,8 +145,22 @@ public class AsyncCollection {
      * @return {@code CompletableFuture<CreateLmsCollectionResponse>} - The async response
      */
     public CompletableFuture<CreateLmsCollectionResponse> createLmsCollection(@Nonnull CreateLmsCollectionRequest request) {
+        return createLmsCollection(request, null);
+    }
+
+    /**
+     * Create a collection
+     * 
+     * <p>Creates a LmsCollection. Provide the unified LmsCollection fields in the request body; they are
+     * mapped to the provider's API. Returns the created LmsCollection.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateLmsCollectionResponse>} - The async response
+     */
+    public CompletableFuture<CreateLmsCollectionResponse> createLmsCollection(@Nonnull CreateLmsCollectionRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateLmsCollectionRequest, CreateLmsCollectionResponse> operation
-              = new CreateLmsCollection.Async(sdkConfiguration, _headers);
+              = new CreateLmsCollection.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -158,8 +188,22 @@ public class AsyncCollection {
      * @return {@code CompletableFuture<GetCommerceCollectionResponse>} - The async response
      */
     public CompletableFuture<GetCommerceCollectionResponse> getCommerceCollection(@Nonnull GetCommerceCollectionRequest request) {
+        return getCommerceCollection(request, null);
+    }
+
+    /**
+     * Retrieve a collection
+     * 
+     * <p>Retrieves a single CommerceCollection by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetCommerceCollectionResponse>} - The async response
+     */
+    public CompletableFuture<GetCommerceCollectionResponse> getCommerceCollection(@Nonnull GetCommerceCollectionRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetCommerceCollectionRequest, GetCommerceCollectionResponse> operation
-              = new GetCommerceCollection.Async(sdkConfiguration, _headers);
+              = new GetCommerceCollection.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -187,8 +231,22 @@ public class AsyncCollection {
      * @return {@code CompletableFuture<GetLmsCollectionResponse>} - The async response
      */
     public CompletableFuture<GetLmsCollectionResponse> getLmsCollection(@Nonnull GetLmsCollectionRequest request) {
+        return getLmsCollection(request, null);
+    }
+
+    /**
+     * Retrieve a collection
+     * 
+     * <p>Retrieves a single LmsCollection by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetLmsCollectionResponse>} - The async response
+     */
+    public CompletableFuture<GetLmsCollectionResponse> getLmsCollection(@Nonnull GetLmsCollectionRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetLmsCollectionRequest, GetLmsCollectionResponse> operation
-              = new GetLmsCollection.Async(sdkConfiguration, _headers);
+              = new GetLmsCollection.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -224,8 +282,26 @@ public class AsyncCollection {
      * @return {@code CompletableFuture<ListCommerceCollectionsResponse>} - The async response
      */
     public CompletableFuture<ListCommerceCollectionsResponse> listCommerceCollections(@Nonnull ListCommerceCollectionsRequest request) {
+        return listCommerceCollections(request, null);
+    }
+
+    /**
+     * List all collections
+     * 
+     * <p>Returns a list of CommerceCollections. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListCommerceCollectionsResponse>} - The async response
+     */
+    public CompletableFuture<ListCommerceCollectionsResponse> listCommerceCollections(@Nonnull ListCommerceCollectionsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListCommerceCollectionsRequest, ListCommerceCollectionsResponse> operation
-              = new ListCommerceCollections.Async(sdkConfiguration, _headers);
+              = new ListCommerceCollections.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -261,8 +337,26 @@ public class AsyncCollection {
      * @return {@code CompletableFuture<ListLmsCollectionsResponse>} - The async response
      */
     public CompletableFuture<ListLmsCollectionsResponse> listLmsCollections(@Nonnull ListLmsCollectionsRequest request) {
+        return listLmsCollections(request, null);
+    }
+
+    /**
+     * List all collections
+     * 
+     * <p>Returns a list of LmsCollections. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListLmsCollectionsResponse>} - The async response
+     */
+    public CompletableFuture<ListLmsCollectionsResponse> listLmsCollections(@Nonnull ListLmsCollectionsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListLmsCollectionsRequest, ListLmsCollectionsResponse> operation
-              = new ListLmsCollections.Async(sdkConfiguration, _headers);
+              = new ListLmsCollections.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -290,8 +384,22 @@ public class AsyncCollection {
      * @return {@code CompletableFuture<PatchCommerceCollectionResponse>} - The async response
      */
     public CompletableFuture<PatchCommerceCollectionResponse> patchCommerceCollection(@Nonnull PatchCommerceCollectionRequest request) {
+        return patchCommerceCollection(request, null);
+    }
+
+    /**
+     * Update a collection
+     * 
+     * <p>Updates the CommerceCollection identified by `id`. Provide the unified CommerceCollection fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchCommerceCollectionResponse>} - The async response
+     */
+    public CompletableFuture<PatchCommerceCollectionResponse> patchCommerceCollection(@Nonnull PatchCommerceCollectionRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchCommerceCollectionRequest, PatchCommerceCollectionResponse> operation
-              = new PatchCommerceCollection.Async(sdkConfiguration, _headers);
+              = new PatchCommerceCollection.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -319,8 +427,22 @@ public class AsyncCollection {
      * @return {@code CompletableFuture<PatchLmsCollectionResponse>} - The async response
      */
     public CompletableFuture<PatchLmsCollectionResponse> patchLmsCollection(@Nonnull PatchLmsCollectionRequest request) {
+        return patchLmsCollection(request, null);
+    }
+
+    /**
+     * Update a collection
+     * 
+     * <p>Updates the LmsCollection identified by `id`. Provide the unified LmsCollection fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchLmsCollectionResponse>} - The async response
+     */
+    public CompletableFuture<PatchLmsCollectionResponse> patchLmsCollection(@Nonnull PatchLmsCollectionRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchLmsCollectionRequest, PatchLmsCollectionResponse> operation
-              = new PatchLmsCollection.Async(sdkConfiguration, _headers);
+              = new PatchLmsCollection.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -346,8 +468,21 @@ public class AsyncCollection {
      * @return {@code CompletableFuture<RemoveCommerceCollectionResponse>} - The async response
      */
     public CompletableFuture<RemoveCommerceCollectionResponse> removeCommerceCollection(@Nonnull RemoveCommerceCollectionRequest request) {
+        return removeCommerceCollection(request, null);
+    }
+
+    /**
+     * Remove a collection
+     * 
+     * <p>Deletes the CommerceCollection identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveCommerceCollectionResponse>} - The async response
+     */
+    public CompletableFuture<RemoveCommerceCollectionResponse> removeCommerceCollection(@Nonnull RemoveCommerceCollectionRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveCommerceCollectionRequest, RemoveCommerceCollectionResponse> operation
-              = new RemoveCommerceCollection.Async(sdkConfiguration, _headers);
+              = new RemoveCommerceCollection.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -373,8 +508,21 @@ public class AsyncCollection {
      * @return {@code CompletableFuture<RemoveLmsCollectionResponse>} - The async response
      */
     public CompletableFuture<RemoveLmsCollectionResponse> removeLmsCollection(@Nonnull RemoveLmsCollectionRequest request) {
+        return removeLmsCollection(request, null);
+    }
+
+    /**
+     * Remove a collection
+     * 
+     * <p>Deletes the LmsCollection identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveLmsCollectionResponse>} - The async response
+     */
+    public CompletableFuture<RemoveLmsCollectionResponse> removeLmsCollection(@Nonnull RemoveLmsCollectionRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveLmsCollectionRequest, RemoveLmsCollectionResponse> operation
-              = new RemoveLmsCollection.Async(sdkConfiguration, _headers);
+              = new RemoveLmsCollection.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -402,8 +550,22 @@ public class AsyncCollection {
      * @return {@code CompletableFuture<UpdateCommerceCollectionResponse>} - The async response
      */
     public CompletableFuture<UpdateCommerceCollectionResponse> updateCommerceCollection(@Nonnull UpdateCommerceCollectionRequest request) {
+        return updateCommerceCollection(request, null);
+    }
+
+    /**
+     * Update a collection
+     * 
+     * <p>Updates the CommerceCollection identified by `id`. Provide the unified CommerceCollection fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateCommerceCollectionResponse>} - The async response
+     */
+    public CompletableFuture<UpdateCommerceCollectionResponse> updateCommerceCollection(@Nonnull UpdateCommerceCollectionRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateCommerceCollectionRequest, UpdateCommerceCollectionResponse> operation
-              = new UpdateCommerceCollection.Async(sdkConfiguration, _headers);
+              = new UpdateCommerceCollection.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -431,8 +593,22 @@ public class AsyncCollection {
      * @return {@code CompletableFuture<UpdateLmsCollectionResponse>} - The async response
      */
     public CompletableFuture<UpdateLmsCollectionResponse> updateLmsCollection(@Nonnull UpdateLmsCollectionRequest request) {
+        return updateLmsCollection(request, null);
+    }
+
+    /**
+     * Update a collection
+     * 
+     * <p>Updates the LmsCollection identified by `id`. Provide the unified LmsCollection fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateLmsCollectionResponse>} - The async response
+     */
+    public CompletableFuture<UpdateLmsCollectionResponse> updateLmsCollection(@Nonnull UpdateLmsCollectionRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateLmsCollectionRequest, UpdateLmsCollectionResponse> operation
-              = new UpdateLmsCollection.Async(sdkConfiguration, _headers);
+              = new UpdateLmsCollection.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

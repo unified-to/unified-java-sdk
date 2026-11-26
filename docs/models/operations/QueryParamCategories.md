@@ -54,3 +54,6 @@ QueryParamCategories value = QueryParamCategories.PASSTHROUGH;
 | `PROPERTY`     | property       |
 | `PLM`          | plm            |
 | `QMS`          | qms            |
+| `DMS`          | dms            |
+| `FHIR`         | fhir           |
+| `PRINTING`     | printing       |

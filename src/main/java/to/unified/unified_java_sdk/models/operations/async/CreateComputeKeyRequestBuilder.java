@@ -6,20 +6,30 @@ package to.unified.unified_java_sdk.models.operations.async;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.CreateComputeKeyRequest;
 import to.unified.unified_java_sdk.operations.CreateComputeKey;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class CreateComputeKeyRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private CreateComputeKeyRequest request;
+    private final Options.Builder optionsBuilder;
 
     public CreateComputeKeyRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public CreateComputeKeyRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public CreateComputeKeyRequestBuilder request(@Nonnull CreateComputeKeyRequest request) {
@@ -44,8 +54,9 @@ public class CreateComputeKeyRequestBuilder {
     * @return The response from the server.
     */
     public CompletableFuture<CreateComputeKeyResponse> call() {
+        Options options = optionsBuilder.build();
         AsyncRequestOperation<CreateComputeKeyRequest, CreateComputeKeyResponse> operation
-              = new CreateComputeKey.Async(sdkConfiguration, _headers);
+              = new CreateComputeKey.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateGenaiAgentRequest;
 import to.unified.unified_java_sdk.models.operations.CreateGenaiAgentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateGenaiAgentResponse;
@@ -31,6 +32,7 @@ import to.unified.unified_java_sdk.operations.PatchGenaiAgent;
 import to.unified.unified_java_sdk.operations.RemoveGenaiAgent;
 import to.unified.unified_java_sdk.operations.UpdateGenaiAgent;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Agent {
@@ -75,8 +77,23 @@ public class Agent {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateGenaiAgentResponse createGenaiAgent(@Nonnull CreateGenaiAgentRequest request) {
+        return createGenaiAgent(request, null);
+    }
+
+    /**
+     * Create an agent
+     * 
+     * <p>Creates a GenaiAgent. Provide the unified GenaiAgent fields in the request body; they are mapped to
+     * the provider's API. Returns the created GenaiAgent.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateGenaiAgentResponse createGenaiAgent(@Nonnull CreateGenaiAgentRequest request, @Nullable Options options) {
         RequestOperation<CreateGenaiAgentRequest, CreateGenaiAgentResponse> operation
-              = new CreateGenaiAgent.Sync(sdkConfiguration, _headers);
+              = new CreateGenaiAgent.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -103,8 +120,23 @@ public class Agent {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetGenaiAgentResponse getGenaiAgent(@Nonnull GetGenaiAgentRequest request) {
+        return getGenaiAgent(request, null);
+    }
+
+    /**
+     * Retrieve an agent
+     * 
+     * <p>Retrieves a single GenaiAgent by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetGenaiAgentResponse getGenaiAgent(@Nonnull GetGenaiAgentRequest request, @Nullable Options options) {
         RequestOperation<GetGenaiAgentRequest, GetGenaiAgentResponse> operation
-              = new GetGenaiAgent.Sync(sdkConfiguration, _headers);
+              = new GetGenaiAgent.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -139,8 +171,27 @@ public class Agent {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListGenaiAgentsResponse listGenaiAgents(@Nonnull ListGenaiAgentsRequest request) {
+        return listGenaiAgents(request, null);
+    }
+
+    /**
+     * List all agents
+     * 
+     * <p>Returns a list of GenaiAgents. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListGenaiAgentsResponse listGenaiAgents(@Nonnull ListGenaiAgentsRequest request, @Nullable Options options) {
         RequestOperation<ListGenaiAgentsRequest, ListGenaiAgentsResponse> operation
-              = new ListGenaiAgents.Sync(sdkConfiguration, _headers);
+              = new ListGenaiAgents.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +218,23 @@ public class Agent {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchGenaiAgentResponse patchGenaiAgent(@Nonnull PatchGenaiAgentRequest request) {
+        return patchGenaiAgent(request, null);
+    }
+
+    /**
+     * Update an agent
+     * 
+     * <p>Updates the GenaiAgent identified by `id`. Provide the unified GenaiAgent fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchGenaiAgentResponse patchGenaiAgent(@Nonnull PatchGenaiAgentRequest request, @Nullable Options options) {
         RequestOperation<PatchGenaiAgentRequest, PatchGenaiAgentResponse> operation
-              = new PatchGenaiAgent.Sync(sdkConfiguration, _headers);
+              = new PatchGenaiAgent.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -193,8 +259,22 @@ public class Agent {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveGenaiAgentResponse removeGenaiAgent(@Nonnull RemoveGenaiAgentRequest request) {
+        return removeGenaiAgent(request, null);
+    }
+
+    /**
+     * Remove an agent
+     * 
+     * <p>Deletes the GenaiAgent identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveGenaiAgentResponse removeGenaiAgent(@Nonnull RemoveGenaiAgentRequest request, @Nullable Options options) {
         RequestOperation<RemoveGenaiAgentRequest, RemoveGenaiAgentResponse> operation
-              = new RemoveGenaiAgent.Sync(sdkConfiguration, _headers);
+              = new RemoveGenaiAgent.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -221,8 +301,23 @@ public class Agent {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateGenaiAgentResponse updateGenaiAgent(@Nonnull UpdateGenaiAgentRequest request) {
+        return updateGenaiAgent(request, null);
+    }
+
+    /**
+     * Update an agent
+     * 
+     * <p>Updates the GenaiAgent identified by `id`. Provide the unified GenaiAgent fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateGenaiAgentResponse updateGenaiAgent(@Nonnull UpdateGenaiAgentRequest request, @Nullable Options options) {
         RequestOperation<UpdateGenaiAgentRequest, UpdateGenaiAgentResponse> operation
-              = new UpdateGenaiAgent.Sync(sdkConfiguration, _headers);
+              = new UpdateGenaiAgent.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

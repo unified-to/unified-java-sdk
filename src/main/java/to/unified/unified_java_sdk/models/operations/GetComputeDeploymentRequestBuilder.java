@@ -6,18 +6,28 @@ package to.unified.unified_java_sdk.models.operations;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.GetComputeDeployment;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetComputeDeploymentRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private GetComputeDeploymentRequest request;
+    private final Options.Builder optionsBuilder;
 
     public GetComputeDeploymentRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public GetComputeDeploymentRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public GetComputeDeploymentRequestBuilder request(@Nonnull GetComputeDeploymentRequest request) {
@@ -42,8 +52,9 @@ public class GetComputeDeploymentRequestBuilder {
     * @return The response from the server.
     */
     public GetComputeDeploymentResponse call() {
+        Options options = optionsBuilder.build();
         RequestOperation<GetComputeDeploymentRequest, GetComputeDeploymentResponse> operation
-              = new GetComputeDeployment.Sync(sdkConfiguration, _headers);
+              = new GetComputeDeployment.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

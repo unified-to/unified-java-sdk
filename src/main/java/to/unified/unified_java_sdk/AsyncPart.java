@@ -6,32 +6,54 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
+import to.unified.unified_java_sdk.models.operations.CreateDmsPartRequest;
 import to.unified.unified_java_sdk.models.operations.CreatePlmPartRequest;
+import to.unified.unified_java_sdk.models.operations.GetDmsPartRequest;
 import to.unified.unified_java_sdk.models.operations.GetPlmPartRequest;
+import to.unified.unified_java_sdk.models.operations.ListDmsPartsRequest;
 import to.unified.unified_java_sdk.models.operations.ListPlmPartsRequest;
+import to.unified.unified_java_sdk.models.operations.PatchDmsPartRequest;
 import to.unified.unified_java_sdk.models.operations.PatchPlmPartRequest;
 import to.unified.unified_java_sdk.models.operations.RemovePlmPartRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateDmsPartRequest;
 import to.unified.unified_java_sdk.models.operations.UpdatePlmPartRequest;
+import to.unified.unified_java_sdk.models.operations.async.CreateDmsPartRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateDmsPartResponse;
 import to.unified.unified_java_sdk.models.operations.async.CreatePlmPartRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.CreatePlmPartResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetDmsPartRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetDmsPartResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetPlmPartRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetPlmPartResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListDmsPartsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListDmsPartsResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListPlmPartsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListPlmPartsResponse;
+import to.unified.unified_java_sdk.models.operations.async.PatchDmsPartRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchDmsPartResponse;
 import to.unified.unified_java_sdk.models.operations.async.PatchPlmPartRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.PatchPlmPartResponse;
 import to.unified.unified_java_sdk.models.operations.async.RemovePlmPartRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.RemovePlmPartResponse;
+import to.unified.unified_java_sdk.models.operations.async.UpdateDmsPartRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateDmsPartResponse;
 import to.unified.unified_java_sdk.models.operations.async.UpdatePlmPartRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.UpdatePlmPartResponse;
+import to.unified.unified_java_sdk.operations.CreateDmsPart;
 import to.unified.unified_java_sdk.operations.CreatePlmPart;
+import to.unified.unified_java_sdk.operations.GetDmsPart;
 import to.unified.unified_java_sdk.operations.GetPlmPart;
+import to.unified.unified_java_sdk.operations.ListDmsParts;
 import to.unified.unified_java_sdk.operations.ListPlmParts;
+import to.unified.unified_java_sdk.operations.PatchDmsPart;
 import to.unified.unified_java_sdk.operations.PatchPlmPart;
 import to.unified.unified_java_sdk.operations.RemovePlmPart;
+import to.unified.unified_java_sdk.operations.UpdateDmsPart;
 import to.unified.unified_java_sdk.operations.UpdatePlmPart;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncPart {
@@ -57,6 +79,49 @@ public class AsyncPart {
     /**
      * Create a part
      * 
+     * <p>Creates a DmsPart. Provide the unified DmsPart fields in the request body; they are mapped to the
+     * provider's API. Returns the created DmsPart.
+     * 
+     * @return The async call builder
+     */
+    public CreateDmsPartRequestBuilder createDmsPart() {
+        return new CreateDmsPartRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Create a part
+     * 
+     * <p>Creates a DmsPart. Provide the unified DmsPart fields in the request body; they are mapped to the
+     * provider's API. Returns the created DmsPart.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<CreateDmsPartResponse>} - The async response
+     */
+    public CompletableFuture<CreateDmsPartResponse> createDmsPart(@Nonnull CreateDmsPartRequest request) {
+        return createDmsPart(request, null);
+    }
+
+    /**
+     * Create a part
+     * 
+     * <p>Creates a DmsPart. Provide the unified DmsPart fields in the request body; they are mapped to the
+     * provider's API. Returns the created DmsPart.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateDmsPartResponse>} - The async response
+     */
+    public CompletableFuture<CreateDmsPartResponse> createDmsPart(@Nonnull CreateDmsPartRequest request, @Nullable Options options) {
+        AsyncRequestOperation<CreateDmsPartRequest, CreateDmsPartResponse> operation
+              = new CreateDmsPart.Async(sdkConfiguration, options, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Create a part
+     * 
      * <p>Creates a PlmPart. Provide the unified PlmPart fields in the request body; they are mapped to the
      * provider's API. Returns the created PlmPart.
      * 
@@ -76,8 +141,65 @@ public class AsyncPart {
      * @return {@code CompletableFuture<CreatePlmPartResponse>} - The async response
      */
     public CompletableFuture<CreatePlmPartResponse> createPlmPart(@Nonnull CreatePlmPartRequest request) {
+        return createPlmPart(request, null);
+    }
+
+    /**
+     * Create a part
+     * 
+     * <p>Creates a PlmPart. Provide the unified PlmPart fields in the request body; they are mapped to the
+     * provider's API. Returns the created PlmPart.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreatePlmPartResponse>} - The async response
+     */
+    public CompletableFuture<CreatePlmPartResponse> createPlmPart(@Nonnull CreatePlmPartRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreatePlmPartRequest, CreatePlmPartResponse> operation
-              = new CreatePlmPart.Async(sdkConfiguration, _headers);
+              = new CreatePlmPart.Async(sdkConfiguration, options, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Retrieve a part
+     * 
+     * <p>Retrieves a single DmsPart by its `id`. Obtain `id` values from the corresponding list endpoint. Use
+     * `fields` to return only the fields you need.
+     * 
+     * @return The async call builder
+     */
+    public GetDmsPartRequestBuilder getDmsPart() {
+        return new GetDmsPartRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a part
+     * 
+     * <p>Retrieves a single DmsPart by its `id`. Obtain `id` values from the corresponding list endpoint. Use
+     * `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<GetDmsPartResponse>} - The async response
+     */
+    public CompletableFuture<GetDmsPartResponse> getDmsPart(@Nonnull GetDmsPartRequest request) {
+        return getDmsPart(request, null);
+    }
+
+    /**
+     * Retrieve a part
+     * 
+     * <p>Retrieves a single DmsPart by its `id`. Obtain `id` values from the corresponding list endpoint. Use
+     * `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetDmsPartResponse>} - The async response
+     */
+    public CompletableFuture<GetDmsPartResponse> getDmsPart(@Nonnull GetDmsPartRequest request, @Nullable Options options) {
+        AsyncRequestOperation<GetDmsPartRequest, GetDmsPartResponse> operation
+              = new GetDmsPart.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -105,8 +227,77 @@ public class AsyncPart {
      * @return {@code CompletableFuture<GetPlmPartResponse>} - The async response
      */
     public CompletableFuture<GetPlmPartResponse> getPlmPart(@Nonnull GetPlmPartRequest request) {
+        return getPlmPart(request, null);
+    }
+
+    /**
+     * Retrieve a part
+     * 
+     * <p>Retrieves a single PlmPart by its `id`. Obtain `id` values from the corresponding list endpoint. Use
+     * `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetPlmPartResponse>} - The async response
+     */
+    public CompletableFuture<GetPlmPartResponse> getPlmPart(@Nonnull GetPlmPartRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetPlmPartRequest, GetPlmPartResponse> operation
-              = new GetPlmPart.Async(sdkConfiguration, _headers);
+              = new GetPlmPart.Async(sdkConfiguration, options, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * List all parts
+     * 
+     * <p>Returns a list of DmsParts. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @return The async call builder
+     */
+    public ListDmsPartsRequestBuilder listDmsParts() {
+        return new ListDmsPartsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all parts
+     * 
+     * <p>Returns a list of DmsParts. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<ListDmsPartsResponse>} - The async response
+     */
+    public CompletableFuture<ListDmsPartsResponse> listDmsParts(@Nonnull ListDmsPartsRequest request) {
+        return listDmsParts(request, null);
+    }
+
+    /**
+     * List all parts
+     * 
+     * <p>Returns a list of DmsParts. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListDmsPartsResponse>} - The async response
+     */
+    public CompletableFuture<ListDmsPartsResponse> listDmsParts(@Nonnull ListDmsPartsRequest request, @Nullable Options options) {
+        AsyncRequestOperation<ListDmsPartsRequest, ListDmsPartsResponse> operation
+              = new ListDmsParts.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -142,8 +333,69 @@ public class AsyncPart {
      * @return {@code CompletableFuture<ListPlmPartsResponse>} - The async response
      */
     public CompletableFuture<ListPlmPartsResponse> listPlmParts(@Nonnull ListPlmPartsRequest request) {
+        return listPlmParts(request, null);
+    }
+
+    /**
+     * List all parts
+     * 
+     * <p>Returns a list of PlmParts. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListPlmPartsResponse>} - The async response
+     */
+    public CompletableFuture<ListPlmPartsResponse> listPlmParts(@Nonnull ListPlmPartsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListPlmPartsRequest, ListPlmPartsResponse> operation
-              = new ListPlmParts.Async(sdkConfiguration, _headers);
+              = new ListPlmParts.Async(sdkConfiguration, options, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Update a part
+     * 
+     * <p>Updates the DmsPart identified by `id`. Provide the unified DmsPart fields to change in the request
+     * body.
+     * 
+     * @return The async call builder
+     */
+    public PatchDmsPartRequestBuilder patchDmsPart() {
+        return new PatchDmsPartRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a part
+     * 
+     * <p>Updates the DmsPart identified by `id`. Provide the unified DmsPart fields to change in the request
+     * body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<PatchDmsPartResponse>} - The async response
+     */
+    public CompletableFuture<PatchDmsPartResponse> patchDmsPart(@Nonnull PatchDmsPartRequest request) {
+        return patchDmsPart(request, null);
+    }
+
+    /**
+     * Update a part
+     * 
+     * <p>Updates the DmsPart identified by `id`. Provide the unified DmsPart fields to change in the request
+     * body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchDmsPartResponse>} - The async response
+     */
+    public CompletableFuture<PatchDmsPartResponse> patchDmsPart(@Nonnull PatchDmsPartRequest request, @Nullable Options options) {
+        AsyncRequestOperation<PatchDmsPartRequest, PatchDmsPartResponse> operation
+              = new PatchDmsPart.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -171,8 +423,22 @@ public class AsyncPart {
      * @return {@code CompletableFuture<PatchPlmPartResponse>} - The async response
      */
     public CompletableFuture<PatchPlmPartResponse> patchPlmPart(@Nonnull PatchPlmPartRequest request) {
+        return patchPlmPart(request, null);
+    }
+
+    /**
+     * Update a part
+     * 
+     * <p>Updates the PlmPart identified by `id`. Provide the unified PlmPart fields to change in the request
+     * body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchPlmPartResponse>} - The async response
+     */
+    public CompletableFuture<PatchPlmPartResponse> patchPlmPart(@Nonnull PatchPlmPartRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchPlmPartRequest, PatchPlmPartResponse> operation
-              = new PatchPlmPart.Async(sdkConfiguration, _headers);
+              = new PatchPlmPart.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -198,8 +464,64 @@ public class AsyncPart {
      * @return {@code CompletableFuture<RemovePlmPartResponse>} - The async response
      */
     public CompletableFuture<RemovePlmPartResponse> removePlmPart(@Nonnull RemovePlmPartRequest request) {
+        return removePlmPart(request, null);
+    }
+
+    /**
+     * Remove a part
+     * 
+     * <p>Deletes the PlmPart identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemovePlmPartResponse>} - The async response
+     */
+    public CompletableFuture<RemovePlmPartResponse> removePlmPart(@Nonnull RemovePlmPartRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemovePlmPartRequest, RemovePlmPartResponse> operation
-              = new RemovePlmPart.Async(sdkConfiguration, _headers);
+              = new RemovePlmPart.Async(sdkConfiguration, options, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Update a part
+     * 
+     * <p>Updates the DmsPart identified by `id`. Provide the unified DmsPart fields to change in the request
+     * body.
+     * 
+     * @return The async call builder
+     */
+    public UpdateDmsPartRequestBuilder updateDmsPart() {
+        return new UpdateDmsPartRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a part
+     * 
+     * <p>Updates the DmsPart identified by `id`. Provide the unified DmsPart fields to change in the request
+     * body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<UpdateDmsPartResponse>} - The async response
+     */
+    public CompletableFuture<UpdateDmsPartResponse> updateDmsPart(@Nonnull UpdateDmsPartRequest request) {
+        return updateDmsPart(request, null);
+    }
+
+    /**
+     * Update a part
+     * 
+     * <p>Updates the DmsPart identified by `id`. Provide the unified DmsPart fields to change in the request
+     * body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateDmsPartResponse>} - The async response
+     */
+    public CompletableFuture<UpdateDmsPartResponse> updateDmsPart(@Nonnull UpdateDmsPartRequest request, @Nullable Options options) {
+        AsyncRequestOperation<UpdateDmsPartRequest, UpdateDmsPartResponse> operation
+              = new UpdateDmsPart.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -227,8 +549,22 @@ public class AsyncPart {
      * @return {@code CompletableFuture<UpdatePlmPartResponse>} - The async response
      */
     public CompletableFuture<UpdatePlmPartResponse> updatePlmPart(@Nonnull UpdatePlmPartRequest request) {
+        return updatePlmPart(request, null);
+    }
+
+    /**
+     * Update a part
+     * 
+     * <p>Updates the PlmPart identified by `id`. Provide the unified PlmPart fields to change in the request
+     * body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdatePlmPartResponse>} - The async response
+     */
+    public CompletableFuture<UpdatePlmPartResponse> updatePlmPart(@Nonnull UpdatePlmPartRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdatePlmPartRequest, UpdatePlmPartResponse> operation
-              = new UpdatePlmPart.Async(sdkConfiguration, _headers);
+              = new UpdatePlmPart.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

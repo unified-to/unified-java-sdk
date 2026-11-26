@@ -6,18 +6,25 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateComputeTemplateRequest;
 import to.unified.unified_java_sdk.models.operations.CreateComputeTemplateRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateComputeTemplateResponse;
 import to.unified.unified_java_sdk.models.operations.GetComputeTemplateRequest;
 import to.unified.unified_java_sdk.models.operations.GetComputeTemplateRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetComputeTemplateResponse;
+import to.unified.unified_java_sdk.models.operations.GetPrintingTemplateRequest;
+import to.unified.unified_java_sdk.models.operations.GetPrintingTemplateRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetPrintingTemplateResponse;
 import to.unified.unified_java_sdk.models.operations.GetSigningTemplateRequest;
 import to.unified.unified_java_sdk.models.operations.GetSigningTemplateRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetSigningTemplateResponse;
 import to.unified.unified_java_sdk.models.operations.ListComputeTemplatesRequest;
 import to.unified.unified_java_sdk.models.operations.ListComputeTemplatesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListComputeTemplatesResponse;
+import to.unified.unified_java_sdk.models.operations.ListPrintingTemplatesRequest;
+import to.unified.unified_java_sdk.models.operations.ListPrintingTemplatesRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListPrintingTemplatesResponse;
 import to.unified.unified_java_sdk.models.operations.ListSigningTemplatesRequest;
 import to.unified.unified_java_sdk.models.operations.ListSigningTemplatesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListSigningTemplatesResponse;
@@ -32,13 +39,16 @@ import to.unified.unified_java_sdk.models.operations.UpdateComputeTemplateReques
 import to.unified.unified_java_sdk.models.operations.UpdateComputeTemplateResponse;
 import to.unified.unified_java_sdk.operations.CreateComputeTemplate;
 import to.unified.unified_java_sdk.operations.GetComputeTemplate;
+import to.unified.unified_java_sdk.operations.GetPrintingTemplate;
 import to.unified.unified_java_sdk.operations.GetSigningTemplate;
 import to.unified.unified_java_sdk.operations.ListComputeTemplates;
+import to.unified.unified_java_sdk.operations.ListPrintingTemplates;
 import to.unified.unified_java_sdk.operations.ListSigningTemplates;
 import to.unified.unified_java_sdk.operations.PatchComputeTemplate;
 import to.unified.unified_java_sdk.operations.RemoveComputeTemplate;
 import to.unified.unified_java_sdk.operations.UpdateComputeTemplate;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Template {
@@ -83,8 +93,23 @@ public class Template {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateComputeTemplateResponse createComputeTemplate(@Nonnull CreateComputeTemplateRequest request) {
+        return createComputeTemplate(request, null);
+    }
+
+    /**
+     * Create a template
+     * 
+     * <p>Creates a ComputeTemplate. Provide the unified ComputeTemplate fields in the request body; they are
+     * mapped to the provider's API. Returns the created ComputeTemplate.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateComputeTemplateResponse createComputeTemplate(@Nonnull CreateComputeTemplateRequest request, @Nullable Options options) {
         RequestOperation<CreateComputeTemplateRequest, CreateComputeTemplateResponse> operation
-              = new CreateComputeTemplate.Sync(sdkConfiguration, _headers);
+              = new CreateComputeTemplate.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -111,8 +136,66 @@ public class Template {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetComputeTemplateResponse getComputeTemplate(@Nonnull GetComputeTemplateRequest request) {
+        return getComputeTemplate(request, null);
+    }
+
+    /**
+     * Retrieve a template
+     * 
+     * <p>Retrieves a single ComputeTemplate by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetComputeTemplateResponse getComputeTemplate(@Nonnull GetComputeTemplateRequest request, @Nullable Options options) {
         RequestOperation<GetComputeTemplateRequest, GetComputeTemplateResponse> operation
-              = new GetComputeTemplate.Sync(sdkConfiguration, _headers);
+              = new GetComputeTemplate.Sync(sdkConfiguration, options, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Retrieve a template
+     * 
+     * <p>Retrieves a single PrintingTemplate by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @return The call builder
+     */
+    public GetPrintingTemplateRequestBuilder getPrintingTemplate() {
+        return new GetPrintingTemplateRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a template
+     * 
+     * <p>Retrieves a single PrintingTemplate by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetPrintingTemplateResponse getPrintingTemplate(@Nonnull GetPrintingTemplateRequest request) {
+        return getPrintingTemplate(request, null);
+    }
+
+    /**
+     * Retrieve a template
+     * 
+     * <p>Retrieves a single PrintingTemplate by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetPrintingTemplateResponse getPrintingTemplate(@Nonnull GetPrintingTemplateRequest request, @Nullable Options options) {
+        RequestOperation<GetPrintingTemplateRequest, GetPrintingTemplateResponse> operation
+              = new GetPrintingTemplate.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -139,8 +222,23 @@ public class Template {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetSigningTemplateResponse getSigningTemplate(@Nonnull GetSigningTemplateRequest request) {
+        return getSigningTemplate(request, null);
+    }
+
+    /**
+     * Retrieve a template
+     * 
+     * <p>Retrieves a single SigningTemplate by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetSigningTemplateResponse getSigningTemplate(@Nonnull GetSigningTemplateRequest request, @Nullable Options options) {
         RequestOperation<GetSigningTemplateRequest, GetSigningTemplateResponse> operation
-              = new GetSigningTemplate.Sync(sdkConfiguration, _headers);
+              = new GetSigningTemplate.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -175,8 +273,82 @@ public class Template {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListComputeTemplatesResponse listComputeTemplates(@Nonnull ListComputeTemplatesRequest request) {
+        return listComputeTemplates(request, null);
+    }
+
+    /**
+     * List all templates
+     * 
+     * <p>Returns a list of ComputeTemplates. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListComputeTemplatesResponse listComputeTemplates(@Nonnull ListComputeTemplatesRequest request, @Nullable Options options) {
         RequestOperation<ListComputeTemplatesRequest, ListComputeTemplatesResponse> operation
-              = new ListComputeTemplates.Sync(sdkConfiguration, _headers);
+              = new ListComputeTemplates.Sync(sdkConfiguration, options, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * List all templates
+     * 
+     * <p>Returns a list of PrintingTemplates. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @return The call builder
+     */
+    public ListPrintingTemplatesRequestBuilder listPrintingTemplates() {
+        return new ListPrintingTemplatesRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all templates
+     * 
+     * <p>Returns a list of PrintingTemplates. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListPrintingTemplatesResponse listPrintingTemplates(@Nonnull ListPrintingTemplatesRequest request) {
+        return listPrintingTemplates(request, null);
+    }
+
+    /**
+     * List all templates
+     * 
+     * <p>Returns a list of PrintingTemplates. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListPrintingTemplatesResponse listPrintingTemplates(@Nonnull ListPrintingTemplatesRequest request, @Nullable Options options) {
+        RequestOperation<ListPrintingTemplatesRequest, ListPrintingTemplatesResponse> operation
+              = new ListPrintingTemplates.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -211,8 +383,27 @@ public class Template {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListSigningTemplatesResponse listSigningTemplates(@Nonnull ListSigningTemplatesRequest request) {
+        return listSigningTemplates(request, null);
+    }
+
+    /**
+     * List all templates
+     * 
+     * <p>Returns a list of SigningTemplates. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListSigningTemplatesResponse listSigningTemplates(@Nonnull ListSigningTemplatesRequest request, @Nullable Options options) {
         RequestOperation<ListSigningTemplatesRequest, ListSigningTemplatesResponse> operation
-              = new ListSigningTemplates.Sync(sdkConfiguration, _headers);
+              = new ListSigningTemplates.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -239,8 +430,23 @@ public class Template {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchComputeTemplateResponse patchComputeTemplate(@Nonnull PatchComputeTemplateRequest request) {
+        return patchComputeTemplate(request, null);
+    }
+
+    /**
+     * Update a template
+     * 
+     * <p>Updates the ComputeTemplate identified by `id`. Provide the unified ComputeTemplate fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchComputeTemplateResponse patchComputeTemplate(@Nonnull PatchComputeTemplateRequest request, @Nullable Options options) {
         RequestOperation<PatchComputeTemplateRequest, PatchComputeTemplateResponse> operation
-              = new PatchComputeTemplate.Sync(sdkConfiguration, _headers);
+              = new PatchComputeTemplate.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -265,8 +471,22 @@ public class Template {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveComputeTemplateResponse removeComputeTemplate(@Nonnull RemoveComputeTemplateRequest request) {
+        return removeComputeTemplate(request, null);
+    }
+
+    /**
+     * Remove a template
+     * 
+     * <p>Deletes the ComputeTemplate identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveComputeTemplateResponse removeComputeTemplate(@Nonnull RemoveComputeTemplateRequest request, @Nullable Options options) {
         RequestOperation<RemoveComputeTemplateRequest, RemoveComputeTemplateResponse> operation
-              = new RemoveComputeTemplate.Sync(sdkConfiguration, _headers);
+              = new RemoveComputeTemplate.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -293,8 +513,23 @@ public class Template {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateComputeTemplateResponse updateComputeTemplate(@Nonnull UpdateComputeTemplateRequest request) {
+        return updateComputeTemplate(request, null);
+    }
+
+    /**
+     * Update a template
+     * 
+     * <p>Updates the ComputeTemplate identified by `id`. Provide the unified ComputeTemplate fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateComputeTemplateResponse updateComputeTemplate(@Nonnull UpdateComputeTemplateRequest request, @Nullable Options options) {
         RequestOperation<UpdateComputeTemplateRequest, UpdateComputeTemplateResponse> operation
-              = new UpdateComputeTemplate.Sync(sdkConfiguration, _headers);
+              = new UpdateComputeTemplate.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

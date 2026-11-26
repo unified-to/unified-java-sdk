@@ -6,18 +6,28 @@ package to.unified.unified_java_sdk.models.operations;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.CreateComputeService;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class CreateComputeServiceRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private CreateComputeServiceRequest request;
+    private final Options.Builder optionsBuilder;
 
     public CreateComputeServiceRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public CreateComputeServiceRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public CreateComputeServiceRequestBuilder request(@Nonnull CreateComputeServiceRequest request) {
@@ -42,8 +52,9 @@ public class CreateComputeServiceRequestBuilder {
     * @return The response from the server.
     */
     public CreateComputeServiceResponse call() {
+        Options options = optionsBuilder.build();
         RequestOperation<CreateComputeServiceRequest, CreateComputeServiceResponse> operation
-              = new CreateComputeService.Sync(sdkConfiguration, _headers);
+              = new CreateComputeService.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

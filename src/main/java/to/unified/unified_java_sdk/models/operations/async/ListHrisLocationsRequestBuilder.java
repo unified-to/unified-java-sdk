@@ -6,20 +6,30 @@ package to.unified.unified_java_sdk.models.operations.async;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.ListHrisLocationsRequest;
 import to.unified.unified_java_sdk.operations.ListHrisLocations;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListHrisLocationsRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private ListHrisLocationsRequest request;
+    private final Options.Builder optionsBuilder;
 
     public ListHrisLocationsRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public ListHrisLocationsRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public ListHrisLocationsRequestBuilder request(@Nonnull ListHrisLocationsRequest request) {
@@ -44,8 +54,9 @@ public class ListHrisLocationsRequestBuilder {
     * @return The response from the server.
     */
     public CompletableFuture<ListHrisLocationsResponse> call() {
+        Options options = optionsBuilder.build();
         AsyncRequestOperation<ListHrisLocationsRequest, ListHrisLocationsResponse> operation
-              = new ListHrisLocations.Async(sdkConfiguration, _headers);
+              = new ListHrisLocations.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

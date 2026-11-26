@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceCollectionRequest;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceInventoryRequest;
@@ -220,6 +221,7 @@ import to.unified.unified_java_sdk.operations.UpdateCommerceReservation;
 import to.unified.unified_java_sdk.operations.UpdateCommerceReview;
 import to.unified.unified_java_sdk.operations.UpdateCommerceSaleschannel;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncCommerce {
@@ -264,8 +266,22 @@ public class AsyncCommerce {
      * @return {@code CompletableFuture<CreateCommerceCollectionResponse>} - The async response
      */
     public CompletableFuture<CreateCommerceCollectionResponse> createCommerceCollection(@Nonnull CreateCommerceCollectionRequest request) {
+        return createCommerceCollection(request, null);
+    }
+
+    /**
+     * Create a collection
+     * 
+     * <p>Creates a CommerceCollection. Provide the unified CommerceCollection fields in the request body;
+     * they are mapped to the provider's API. Returns the created CommerceCollection.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateCommerceCollectionResponse>} - The async response
+     */
+    public CompletableFuture<CreateCommerceCollectionResponse> createCommerceCollection(@Nonnull CreateCommerceCollectionRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateCommerceCollectionRequest, CreateCommerceCollectionResponse> operation
-              = new CreateCommerceCollection.Async(sdkConfiguration, _headers);
+              = new CreateCommerceCollection.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -293,8 +309,22 @@ public class AsyncCommerce {
      * @return {@code CompletableFuture<CreateCommerceInventoryResponse>} - The async response
      */
     public CompletableFuture<CreateCommerceInventoryResponse> createCommerceInventory(@Nonnull CreateCommerceInventoryRequest request) {
+        return createCommerceInventory(request, null);
+    }
+
+    /**
+     * Create an inventory
+     * 
+     * <p>Creates a CommerceInventory. Provide the unified CommerceInventory fields in the request body; they
+     * are mapped to the provider's API. Returns the created CommerceInventory.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateCommerceInventoryResponse>} - The async response
+     */
+    public CompletableFuture<CreateCommerceInventoryResponse> createCommerceInventory(@Nonnull CreateCommerceInventoryRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateCommerceInventoryRequest, CreateCommerceInventoryResponse> operation
-              = new CreateCommerceInventory.Async(sdkConfiguration, _headers);
+              = new CreateCommerceInventory.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -322,8 +352,22 @@ public class AsyncCommerce {
      * @return {@code CompletableFuture<CreateCommerceItemResponse>} - The async response
      */
     public CompletableFuture<CreateCommerceItemResponse> createCommerceItem(@Nonnull CreateCommerceItemRequest request) {
+        return createCommerceItem(request, null);
+    }
+
+    /**
+     * Create an item
+     * 
+     * <p>Creates a CommerceItem. Provide the unified CommerceItem fields in the request body; they are mapped
+     * to the provider's API. Returns the created CommerceItem.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateCommerceItemResponse>} - The async response
+     */
+    public CompletableFuture<CreateCommerceItemResponse> createCommerceItem(@Nonnull CreateCommerceItemRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateCommerceItemRequest, CreateCommerceItemResponse> operation
-              = new CreateCommerceItem.Async(sdkConfiguration, _headers);
+              = new CreateCommerceItem.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -351,8 +395,22 @@ public class AsyncCommerce {
      * @return {@code CompletableFuture<CreateCommerceItemvariantResponse>} - The async response
      */
     public CompletableFuture<CreateCommerceItemvariantResponse> createCommerceItemvariant(@Nonnull CreateCommerceItemvariantRequest request) {
+        return createCommerceItemvariant(request, null);
+    }
+
+    /**
+     * Create an itemvariant
+     * 
+     * <p>Creates a CommerceItemvariant. Provide the unified CommerceItemvariant fields in the request body;
+     * they are mapped to the provider's API. Returns the created CommerceItemvariant.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateCommerceItemvariantResponse>} - The async response
+     */
+    public CompletableFuture<CreateCommerceItemvariantResponse> createCommerceItemvariant(@Nonnull CreateCommerceItemvariantRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateCommerceItemvariantRequest, CreateCommerceItemvariantResponse> operation
-              = new CreateCommerceItemvariant.Async(sdkConfiguration, _headers);
+              = new CreateCommerceItemvariant.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -380,8 +438,22 @@ public class AsyncCommerce {
      * @return {@code CompletableFuture<CreateCommerceLocationResponse>} - The async response
      */
     public CompletableFuture<CreateCommerceLocationResponse> createCommerceLocation(@Nonnull CreateCommerceLocationRequest request) {
+        return createCommerceLocation(request, null);
+    }
+
+    /**
+     * Create a location
+     * 
+     * <p>Creates a CommerceLocation. Provide the unified CommerceLocation fields in the request body; they
+     * are mapped to the provider's API. Returns the created CommerceLocation.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateCommerceLocationResponse>} - The async response
+     */
+    public CompletableFuture<CreateCommerceLocationResponse> createCommerceLocation(@Nonnull CreateCommerceLocationRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateCommerceLocationRequest, CreateCommerceLocationResponse> operation
-              = new CreateCommerceLocation.Async(sdkConfiguration, _headers);
+              = new CreateCommerceLocation.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -409,8 +481,22 @@ public class AsyncCommerce {
      * @return {@code CompletableFuture<CreateCommerceReservationResponse>} - The async response
      */
     public CompletableFuture<CreateCommerceReservationResponse> createCommerceReservation(@Nonnull CreateCommerceReservationRequest request) {
+        return createCommerceReservation(request, null);
+    }
+
+    /**
+     * Create a reservation
+     * 
+     * <p>Creates a CommerceReservation. Provide the unified CommerceReservation fields in the request body;
+     * they are mapped to the provider's API. Returns the created CommerceReservation.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateCommerceReservationResponse>} - The async response
+     */
+    public CompletableFuture<CreateCommerceReservationResponse> createCommerceReservation(@Nonnull CreateCommerceReservationRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateCommerceReservationRequest, CreateCommerceReservationResponse> operation
-              = new CreateCommerceReservation.Async(sdkConfiguration, _headers);
+              = new CreateCommerceReservation.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -438,8 +524,22 @@ public class AsyncCommerce {
      * @return {@code CompletableFuture<CreateCommerceReviewResponse>} - The async response
      */
     public CompletableFuture<CreateCommerceReviewResponse> createCommerceReview(@Nonnull CreateCommerceReviewRequest request) {
+        return createCommerceReview(request, null);
+    }
+
+    /**
+     * Create a review
+     * 
+     * <p>Creates a CommerceReview. Provide the unified CommerceReview fields in the request body; they are
+     * mapped to the provider's API. Returns the created CommerceReview.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateCommerceReviewResponse>} - The async response
+     */
+    public CompletableFuture<CreateCommerceReviewResponse> createCommerceReview(@Nonnull CreateCommerceReviewRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateCommerceReviewRequest, CreateCommerceReviewResponse> operation
-              = new CreateCommerceReview.Async(sdkConfiguration, _headers);
+              = new CreateCommerceReview.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -467,8 +567,22 @@ public class AsyncCommerce {
      * @return {@code CompletableFuture<CreateCommerceSaleschannelResponse>} - The async response
      */
     public CompletableFuture<CreateCommerceSaleschannelResponse> createCommerceSaleschannel(@Nonnull CreateCommerceSaleschannelRequest request) {
+        return createCommerceSaleschannel(request, null);
+    }
+
+    /**
+     * Create a saleschannel
+     * 
+     * <p>Creates a CommerceSaleschannel. Provide the unified CommerceSaleschannel fields in the request body;
+     * they are mapped to the provider's API. Returns the created CommerceSaleschannel.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateCommerceSaleschannelResponse>} - The async response
+     */
+    public CompletableFuture<CreateCommerceSaleschannelResponse> createCommerceSaleschannel(@Nonnull CreateCommerceSaleschannelRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateCommerceSaleschannelRequest, CreateCommerceSaleschannelResponse> operation
-              = new CreateCommerceSaleschannel.Async(sdkConfiguration, _headers);
+              = new CreateCommerceSaleschannel.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -496,8 +610,22 @@ public class AsyncCommerce {
      * @return {@code CompletableFuture<GetCommerceCollectionResponse>} - The async response
      */
     public CompletableFuture<GetCommerceCollectionResponse> getCommerceCollection(@Nonnull GetCommerceCollectionRequest request) {
+        return getCommerceCollection(request, null);
+    }
+
+    /**
+     * Retrieve a collection
+     * 
+     * <p>Retrieves a single CommerceCollection by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetCommerceCollectionResponse>} - The async response
+     */
+    public CompletableFuture<GetCommerceCollectionResponse> getCommerceCollection(@Nonnull GetCommerceCollectionRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetCommerceCollectionRequest, GetCommerceCollectionResponse> operation
-              = new GetCommerceCollection.Async(sdkConfiguration, _headers);
+              = new GetCommerceCollection.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -525,8 +653,22 @@ public class AsyncCommerce {
      * @return {@code CompletableFuture<GetCommerceInventoryResponse>} - The async response
      */
     public CompletableFuture<GetCommerceInventoryResponse> getCommerceInventory(@Nonnull GetCommerceInventoryRequest request) {
+        return getCommerceInventory(request, null);
+    }
+
+    /**
+     * Retrieve an inventory
+     * 
+     * <p>Retrieves a single CommerceInventory by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetCommerceInventoryResponse>} - The async response
+     */
+    public CompletableFuture<GetCommerceInventoryResponse> getCommerceInventory(@Nonnull GetCommerceInventoryRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetCommerceInventoryRequest, GetCommerceInventoryResponse> operation
-              = new GetCommerceInventory.Async(sdkConfiguration, _headers);
+              = new GetCommerceInventory.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -554,8 +696,22 @@ public class AsyncCommerce {
      * @return {@code CompletableFuture<GetCommerceItemResponse>} - The async response
      */
     public CompletableFuture<GetCommerceItemResponse> getCommerceItem(@Nonnull GetCommerceItemRequest request) {
+        return getCommerceItem(request, null);
+    }
+
+    /**
+     * Retrieve an item
+     * 
+     * <p>Retrieves a single CommerceItem by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetCommerceItemResponse>} - The async response
+     */
+    public CompletableFuture<GetCommerceItemResponse> getCommerceItem(@Nonnull GetCommerceItemRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetCommerceItemRequest, GetCommerceItemResponse> operation
-              = new GetCommerceItem.Async(sdkConfiguration, _headers);
+              = new GetCommerceItem.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -583,8 +739,22 @@ public class AsyncCommerce {
      * @return {@code CompletableFuture<GetCommerceItemvariantResponse>} - The async response
      */
     public CompletableFuture<GetCommerceItemvariantResponse> getCommerceItemvariant(@Nonnull GetCommerceItemvariantRequest request) {
+        return getCommerceItemvariant(request, null);
+    }
+
+    /**
+     * Retrieve an itemvariant
+     * 
+     * <p>Retrieves a single CommerceItemvariant by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetCommerceItemvariantResponse>} - The async response
+     */
+    public CompletableFuture<GetCommerceItemvariantResponse> getCommerceItemvariant(@Nonnull GetCommerceItemvariantRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetCommerceItemvariantRequest, GetCommerceItemvariantResponse> operation
-              = new GetCommerceItemvariant.Async(sdkConfiguration, _headers);
+              = new GetCommerceItemvariant.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -612,8 +782,22 @@ public class AsyncCommerce {
      * @return {@code CompletableFuture<GetCommerceLocationResponse>} - The async response
      */
     public CompletableFuture<GetCommerceLocationResponse> getCommerceLocation(@Nonnull GetCommerceLocationRequest request) {
+        return getCommerceLocation(request, null);
+    }
+
+    /**
+     * Retrieve a location
+     * 
+     * <p>Retrieves a single CommerceLocation by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetCommerceLocationResponse>} - The async response
+     */
+    public CompletableFuture<GetCommerceLocationResponse> getCommerceLocation(@Nonnull GetCommerceLocationRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetCommerceLocationRequest, GetCommerceLocationResponse> operation
-              = new GetCommerceLocation.Async(sdkConfiguration, _headers);
+              = new GetCommerceLocation.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -641,8 +825,22 @@ public class AsyncCommerce {
      * @return {@code CompletableFuture<GetCommerceReservationResponse>} - The async response
      */
     public CompletableFuture<GetCommerceReservationResponse> getCommerceReservation(@Nonnull GetCommerceReservationRequest request) {
+        return getCommerceReservation(request, null);
+    }
+
+    /**
+     * Retrieve a reservation
+     * 
+     * <p>Retrieves a single CommerceReservation by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetCommerceReservationResponse>} - The async response
+     */
+    public CompletableFuture<GetCommerceReservationResponse> getCommerceReservation(@Nonnull GetCommerceReservationRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetCommerceReservationRequest, GetCommerceReservationResponse> operation
-              = new GetCommerceReservation.Async(sdkConfiguration, _headers);
+              = new GetCommerceReservation.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -670,8 +868,22 @@ public class AsyncCommerce {
      * @return {@code CompletableFuture<GetCommerceReturnResponse>} - The async response
      */
     public CompletableFuture<GetCommerceReturnResponse> getCommerceReturn(@Nonnull GetCommerceReturnRequest request) {
+        return getCommerceReturn(request, null);
+    }
+
+    /**
+     * Retrieve a return
+     * 
+     * <p>Retrieves a single CommerceReturn by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetCommerceReturnResponse>} - The async response
+     */
+    public CompletableFuture<GetCommerceReturnResponse> getCommerceReturn(@Nonnull GetCommerceReturnRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetCommerceReturnRequest, GetCommerceReturnResponse> operation
-              = new GetCommerceReturn.Async(sdkConfiguration, _headers);
+              = new GetCommerceReturn.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -699,8 +911,22 @@ public class AsyncCommerce {
      * @return {@code CompletableFuture<GetCommerceReviewResponse>} - The async response
      */
     public CompletableFuture<GetCommerceReviewResponse> getCommerceReview(@Nonnull GetCommerceReviewRequest request) {
+        return getCommerceReview(request, null);
+    }
+
+    /**
+     * Retrieve a review
+     * 
+     * <p>Retrieves a single CommerceReview by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetCommerceReviewResponse>} - The async response
+     */
+    public CompletableFuture<GetCommerceReviewResponse> getCommerceReview(@Nonnull GetCommerceReviewRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetCommerceReviewRequest, GetCommerceReviewResponse> operation
-              = new GetCommerceReview.Async(sdkConfiguration, _headers);
+              = new GetCommerceReview.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -728,8 +954,22 @@ public class AsyncCommerce {
      * @return {@code CompletableFuture<GetCommerceSaleschannelResponse>} - The async response
      */
     public CompletableFuture<GetCommerceSaleschannelResponse> getCommerceSaleschannel(@Nonnull GetCommerceSaleschannelRequest request) {
+        return getCommerceSaleschannel(request, null);
+    }
+
+    /**
+     * Retrieve a saleschannel
+     * 
+     * <p>Retrieves a single CommerceSaleschannel by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetCommerceSaleschannelResponse>} - The async response
+     */
+    public CompletableFuture<GetCommerceSaleschannelResponse> getCommerceSaleschannel(@Nonnull GetCommerceSaleschannelRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetCommerceSaleschannelRequest, GetCommerceSaleschannelResponse> operation
-              = new GetCommerceSaleschannel.Async(sdkConfiguration, _headers);
+              = new GetCommerceSaleschannel.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -757,8 +997,22 @@ public class AsyncCommerce {
      * @return {@code CompletableFuture<GetCommerceTableResponse>} - The async response
      */
     public CompletableFuture<GetCommerceTableResponse> getCommerceTable(@Nonnull GetCommerceTableRequest request) {
+        return getCommerceTable(request, null);
+    }
+
+    /**
+     * Retrieve a table
+     * 
+     * <p>Retrieves a single CommerceTable by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetCommerceTableResponse>} - The async response
+     */
+    public CompletableFuture<GetCommerceTableResponse> getCommerceTable(@Nonnull GetCommerceTableRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetCommerceTableRequest, GetCommerceTableResponse> operation
-              = new GetCommerceTable.Async(sdkConfiguration, _headers);
+              = new GetCommerceTable.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -794,8 +1048,26 @@ public class AsyncCommerce {
      * @return {@code CompletableFuture<ListCommerceAvailabilitiesResponse>} - The async response
      */
     public CompletableFuture<ListCommerceAvailabilitiesResponse> listCommerceAvailabilities(@Nonnull ListCommerceAvailabilitiesRequest request) {
+        return listCommerceAvailabilities(request, null);
+    }
+
+    /**
+     * List all availabilities
+     * 
+     * <p>Returns a list of CommerceAvailabilities. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListCommerceAvailabilitiesResponse>} - The async response
+     */
+    public CompletableFuture<ListCommerceAvailabilitiesResponse> listCommerceAvailabilities(@Nonnull ListCommerceAvailabilitiesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListCommerceAvailabilitiesRequest, ListCommerceAvailabilitiesResponse> operation
-              = new ListCommerceAvailabilities.Async(sdkConfiguration, _headers);
+              = new ListCommerceAvailabilities.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -831,8 +1103,26 @@ public class AsyncCommerce {
      * @return {@code CompletableFuture<ListCommerceCollectionsResponse>} - The async response
      */
     public CompletableFuture<ListCommerceCollectionsResponse> listCommerceCollections(@Nonnull ListCommerceCollectionsRequest request) {
+        return listCommerceCollections(request, null);
+    }
+
+    /**
+     * List all collections
+     * 
+     * <p>Returns a list of CommerceCollections. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListCommerceCollectionsResponse>} - The async response
+     */
+    public CompletableFuture<ListCommerceCollectionsResponse> listCommerceCollections(@Nonnull ListCommerceCollectionsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListCommerceCollectionsRequest, ListCommerceCollectionsResponse> operation
-              = new ListCommerceCollections.Async(sdkConfiguration, _headers);
+              = new ListCommerceCollections.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -868,8 +1158,26 @@ public class AsyncCommerce {
      * @return {@code CompletableFuture<ListCommerceInventoriesResponse>} - The async response
      */
     public CompletableFuture<ListCommerceInventoriesResponse> listCommerceInventories(@Nonnull ListCommerceInventoriesRequest request) {
+        return listCommerceInventories(request, null);
+    }
+
+    /**
+     * List all inventories
+     * 
+     * <p>Returns a list of CommerceInventories. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListCommerceInventoriesResponse>} - The async response
+     */
+    public CompletableFuture<ListCommerceInventoriesResponse> listCommerceInventories(@Nonnull ListCommerceInventoriesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListCommerceInventoriesRequest, ListCommerceInventoriesResponse> operation
-              = new ListCommerceInventories.Async(sdkConfiguration, _headers);
+              = new ListCommerceInventories.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -905,8 +1213,26 @@ public class AsyncCommerce {
      * @return {@code CompletableFuture<ListCommerceItemsResponse>} - The async response
      */
     public CompletableFuture<ListCommerceItemsResponse> listCommerceItems(@Nonnull ListCommerceItemsRequest request) {
+        return listCommerceItems(request, null);
+    }
+
+    /**
+     * List all items
+     * 
+     * <p>Returns a list of CommerceItems. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListCommerceItemsResponse>} - The async response
+     */
+    public CompletableFuture<ListCommerceItemsResponse> listCommerceItems(@Nonnull ListCommerceItemsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListCommerceItemsRequest, ListCommerceItemsResponse> operation
-              = new ListCommerceItems.Async(sdkConfiguration, _headers);
+              = new ListCommerceItems.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -942,8 +1268,26 @@ public class AsyncCommerce {
      * @return {@code CompletableFuture<ListCommerceItemvariantsResponse>} - The async response
      */
     public CompletableFuture<ListCommerceItemvariantsResponse> listCommerceItemvariants(@Nonnull ListCommerceItemvariantsRequest request) {
+        return listCommerceItemvariants(request, null);
+    }
+
+    /**
+     * List all itemvariants
+     * 
+     * <p>Returns a list of CommerceItemvariants. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListCommerceItemvariantsResponse>} - The async response
+     */
+    public CompletableFuture<ListCommerceItemvariantsResponse> listCommerceItemvariants(@Nonnull ListCommerceItemvariantsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListCommerceItemvariantsRequest, ListCommerceItemvariantsResponse> operation
-              = new ListCommerceItemvariants.Async(sdkConfiguration, _headers);
+              = new ListCommerceItemvariants.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -979,8 +1323,26 @@ public class AsyncCommerce {
      * @return {@code CompletableFuture<ListCommerceLocationsResponse>} - The async response
      */
     public CompletableFuture<ListCommerceLocationsResponse> listCommerceLocations(@Nonnull ListCommerceLocationsRequest request) {
+        return listCommerceLocations(request, null);
+    }
+
+    /**
+     * List all locations
+     * 
+     * <p>Returns a list of CommerceLocations. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListCommerceLocationsResponse>} - The async response
+     */
+    public CompletableFuture<ListCommerceLocationsResponse> listCommerceLocations(@Nonnull ListCommerceLocationsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListCommerceLocationsRequest, ListCommerceLocationsResponse> operation
-              = new ListCommerceLocations.Async(sdkConfiguration, _headers);
+              = new ListCommerceLocations.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1016,8 +1378,26 @@ public class AsyncCommerce {
      * @return {@code CompletableFuture<ListCommerceReservationsResponse>} - The async response
      */
     public CompletableFuture<ListCommerceReservationsResponse> listCommerceReservations(@Nonnull ListCommerceReservationsRequest request) {
+        return listCommerceReservations(request, null);
+    }
+
+    /**
+     * List all reservations
+     * 
+     * <p>Returns a list of CommerceReservations. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListCommerceReservationsResponse>} - The async response
+     */
+    public CompletableFuture<ListCommerceReservationsResponse> listCommerceReservations(@Nonnull ListCommerceReservationsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListCommerceReservationsRequest, ListCommerceReservationsResponse> operation
-              = new ListCommerceReservations.Async(sdkConfiguration, _headers);
+              = new ListCommerceReservations.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1053,8 +1433,26 @@ public class AsyncCommerce {
      * @return {@code CompletableFuture<ListCommerceReturnsResponse>} - The async response
      */
     public CompletableFuture<ListCommerceReturnsResponse> listCommerceReturns(@Nonnull ListCommerceReturnsRequest request) {
+        return listCommerceReturns(request, null);
+    }
+
+    /**
+     * List all returns
+     * 
+     * <p>Returns a list of CommerceReturns. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListCommerceReturnsResponse>} - The async response
+     */
+    public CompletableFuture<ListCommerceReturnsResponse> listCommerceReturns(@Nonnull ListCommerceReturnsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListCommerceReturnsRequest, ListCommerceReturnsResponse> operation
-              = new ListCommerceReturns.Async(sdkConfiguration, _headers);
+              = new ListCommerceReturns.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1090,8 +1488,26 @@ public class AsyncCommerce {
      * @return {@code CompletableFuture<ListCommerceReviewsResponse>} - The async response
      */
     public CompletableFuture<ListCommerceReviewsResponse> listCommerceReviews(@Nonnull ListCommerceReviewsRequest request) {
+        return listCommerceReviews(request, null);
+    }
+
+    /**
+     * List all reviews
+     * 
+     * <p>Returns a list of CommerceReviews. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListCommerceReviewsResponse>} - The async response
+     */
+    public CompletableFuture<ListCommerceReviewsResponse> listCommerceReviews(@Nonnull ListCommerceReviewsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListCommerceReviewsRequest, ListCommerceReviewsResponse> operation
-              = new ListCommerceReviews.Async(sdkConfiguration, _headers);
+              = new ListCommerceReviews.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1127,8 +1543,26 @@ public class AsyncCommerce {
      * @return {@code CompletableFuture<ListCommerceSaleschannelsResponse>} - The async response
      */
     public CompletableFuture<ListCommerceSaleschannelsResponse> listCommerceSaleschannels(@Nonnull ListCommerceSaleschannelsRequest request) {
+        return listCommerceSaleschannels(request, null);
+    }
+
+    /**
+     * List all saleschannels
+     * 
+     * <p>Returns a list of CommerceSaleschannels. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListCommerceSaleschannelsResponse>} - The async response
+     */
+    public CompletableFuture<ListCommerceSaleschannelsResponse> listCommerceSaleschannels(@Nonnull ListCommerceSaleschannelsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListCommerceSaleschannelsRequest, ListCommerceSaleschannelsResponse> operation
-              = new ListCommerceSaleschannels.Async(sdkConfiguration, _headers);
+              = new ListCommerceSaleschannels.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1164,8 +1598,26 @@ public class AsyncCommerce {
      * @return {@code CompletableFuture<ListCommerceTablesResponse>} - The async response
      */
     public CompletableFuture<ListCommerceTablesResponse> listCommerceTables(@Nonnull ListCommerceTablesRequest request) {
+        return listCommerceTables(request, null);
+    }
+
+    /**
+     * List all tables
+     * 
+     * <p>Returns a list of CommerceTables. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListCommerceTablesResponse>} - The async response
+     */
+    public CompletableFuture<ListCommerceTablesResponse> listCommerceTables(@Nonnull ListCommerceTablesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListCommerceTablesRequest, ListCommerceTablesResponse> operation
-              = new ListCommerceTables.Async(sdkConfiguration, _headers);
+              = new ListCommerceTables.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1193,8 +1645,22 @@ public class AsyncCommerce {
      * @return {@code CompletableFuture<PatchCommerceCollectionResponse>} - The async response
      */
     public CompletableFuture<PatchCommerceCollectionResponse> patchCommerceCollection(@Nonnull PatchCommerceCollectionRequest request) {
+        return patchCommerceCollection(request, null);
+    }
+
+    /**
+     * Update a collection
+     * 
+     * <p>Updates the CommerceCollection identified by `id`. Provide the unified CommerceCollection fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchCommerceCollectionResponse>} - The async response
+     */
+    public CompletableFuture<PatchCommerceCollectionResponse> patchCommerceCollection(@Nonnull PatchCommerceCollectionRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchCommerceCollectionRequest, PatchCommerceCollectionResponse> operation
-              = new PatchCommerceCollection.Async(sdkConfiguration, _headers);
+              = new PatchCommerceCollection.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1222,8 +1688,22 @@ public class AsyncCommerce {
      * @return {@code CompletableFuture<PatchCommerceInventoryResponse>} - The async response
      */
     public CompletableFuture<PatchCommerceInventoryResponse> patchCommerceInventory(@Nonnull PatchCommerceInventoryRequest request) {
+        return patchCommerceInventory(request, null);
+    }
+
+    /**
+     * Update an inventory
+     * 
+     * <p>Updates the CommerceInventory identified by `id`. Provide the unified CommerceInventory fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchCommerceInventoryResponse>} - The async response
+     */
+    public CompletableFuture<PatchCommerceInventoryResponse> patchCommerceInventory(@Nonnull PatchCommerceInventoryRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchCommerceInventoryRequest, PatchCommerceInventoryResponse> operation
-              = new PatchCommerceInventory.Async(sdkConfiguration, _headers);
+              = new PatchCommerceInventory.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1251,8 +1731,22 @@ public class AsyncCommerce {
      * @return {@code CompletableFuture<PatchCommerceItemResponse>} - The async response
      */
     public CompletableFuture<PatchCommerceItemResponse> patchCommerceItem(@Nonnull PatchCommerceItemRequest request) {
+        return patchCommerceItem(request, null);
+    }
+
+    /**
+     * Update an item
+     * 
+     * <p>Updates the CommerceItem identified by `id`. Provide the unified CommerceItem fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchCommerceItemResponse>} - The async response
+     */
+    public CompletableFuture<PatchCommerceItemResponse> patchCommerceItem(@Nonnull PatchCommerceItemRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchCommerceItemRequest, PatchCommerceItemResponse> operation
-              = new PatchCommerceItem.Async(sdkConfiguration, _headers);
+              = new PatchCommerceItem.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1280,8 +1774,22 @@ public class AsyncCommerce {
      * @return {@code CompletableFuture<PatchCommerceItemvariantResponse>} - The async response
      */
     public CompletableFuture<PatchCommerceItemvariantResponse> patchCommerceItemvariant(@Nonnull PatchCommerceItemvariantRequest request) {
+        return patchCommerceItemvariant(request, null);
+    }
+
+    /**
+     * Update an itemvariant
+     * 
+     * <p>Updates the CommerceItemvariant identified by `id`. Provide the unified CommerceItemvariant fields
+     * to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchCommerceItemvariantResponse>} - The async response
+     */
+    public CompletableFuture<PatchCommerceItemvariantResponse> patchCommerceItemvariant(@Nonnull PatchCommerceItemvariantRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchCommerceItemvariantRequest, PatchCommerceItemvariantResponse> operation
-              = new PatchCommerceItemvariant.Async(sdkConfiguration, _headers);
+              = new PatchCommerceItemvariant.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1309,8 +1817,22 @@ public class AsyncCommerce {
      * @return {@code CompletableFuture<PatchCommerceLocationResponse>} - The async response
      */
     public CompletableFuture<PatchCommerceLocationResponse> patchCommerceLocation(@Nonnull PatchCommerceLocationRequest request) {
+        return patchCommerceLocation(request, null);
+    }
+
+    /**
+     * Update a location
+     * 
+     * <p>Updates the CommerceLocation identified by `id`. Provide the unified CommerceLocation fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchCommerceLocationResponse>} - The async response
+     */
+    public CompletableFuture<PatchCommerceLocationResponse> patchCommerceLocation(@Nonnull PatchCommerceLocationRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchCommerceLocationRequest, PatchCommerceLocationResponse> operation
-              = new PatchCommerceLocation.Async(sdkConfiguration, _headers);
+              = new PatchCommerceLocation.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1338,8 +1860,22 @@ public class AsyncCommerce {
      * @return {@code CompletableFuture<PatchCommerceReservationResponse>} - The async response
      */
     public CompletableFuture<PatchCommerceReservationResponse> patchCommerceReservation(@Nonnull PatchCommerceReservationRequest request) {
+        return patchCommerceReservation(request, null);
+    }
+
+    /**
+     * Update a reservation
+     * 
+     * <p>Updates the CommerceReservation identified by `id`. Provide the unified CommerceReservation fields
+     * to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchCommerceReservationResponse>} - The async response
+     */
+    public CompletableFuture<PatchCommerceReservationResponse> patchCommerceReservation(@Nonnull PatchCommerceReservationRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchCommerceReservationRequest, PatchCommerceReservationResponse> operation
-              = new PatchCommerceReservation.Async(sdkConfiguration, _headers);
+              = new PatchCommerceReservation.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1367,8 +1903,22 @@ public class AsyncCommerce {
      * @return {@code CompletableFuture<PatchCommerceReviewResponse>} - The async response
      */
     public CompletableFuture<PatchCommerceReviewResponse> patchCommerceReview(@Nonnull PatchCommerceReviewRequest request) {
+        return patchCommerceReview(request, null);
+    }
+
+    /**
+     * Update a review
+     * 
+     * <p>Updates the CommerceReview identified by `id`. Provide the unified CommerceReview fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchCommerceReviewResponse>} - The async response
+     */
+    public CompletableFuture<PatchCommerceReviewResponse> patchCommerceReview(@Nonnull PatchCommerceReviewRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchCommerceReviewRequest, PatchCommerceReviewResponse> operation
-              = new PatchCommerceReview.Async(sdkConfiguration, _headers);
+              = new PatchCommerceReview.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1396,8 +1946,22 @@ public class AsyncCommerce {
      * @return {@code CompletableFuture<PatchCommerceSaleschannelResponse>} - The async response
      */
     public CompletableFuture<PatchCommerceSaleschannelResponse> patchCommerceSaleschannel(@Nonnull PatchCommerceSaleschannelRequest request) {
+        return patchCommerceSaleschannel(request, null);
+    }
+
+    /**
+     * Update a saleschannel
+     * 
+     * <p>Updates the CommerceSaleschannel identified by `id`. Provide the unified CommerceSaleschannel fields
+     * to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchCommerceSaleschannelResponse>} - The async response
+     */
+    public CompletableFuture<PatchCommerceSaleschannelResponse> patchCommerceSaleschannel(@Nonnull PatchCommerceSaleschannelRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchCommerceSaleschannelRequest, PatchCommerceSaleschannelResponse> operation
-              = new PatchCommerceSaleschannel.Async(sdkConfiguration, _headers);
+              = new PatchCommerceSaleschannel.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1423,8 +1987,21 @@ public class AsyncCommerce {
      * @return {@code CompletableFuture<RemoveCommerceCollectionResponse>} - The async response
      */
     public CompletableFuture<RemoveCommerceCollectionResponse> removeCommerceCollection(@Nonnull RemoveCommerceCollectionRequest request) {
+        return removeCommerceCollection(request, null);
+    }
+
+    /**
+     * Remove a collection
+     * 
+     * <p>Deletes the CommerceCollection identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveCommerceCollectionResponse>} - The async response
+     */
+    public CompletableFuture<RemoveCommerceCollectionResponse> removeCommerceCollection(@Nonnull RemoveCommerceCollectionRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveCommerceCollectionRequest, RemoveCommerceCollectionResponse> operation
-              = new RemoveCommerceCollection.Async(sdkConfiguration, _headers);
+              = new RemoveCommerceCollection.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1450,8 +2027,21 @@ public class AsyncCommerce {
      * @return {@code CompletableFuture<RemoveCommerceInventoryResponse>} - The async response
      */
     public CompletableFuture<RemoveCommerceInventoryResponse> removeCommerceInventory(@Nonnull RemoveCommerceInventoryRequest request) {
+        return removeCommerceInventory(request, null);
+    }
+
+    /**
+     * Remove an inventory
+     * 
+     * <p>Deletes the CommerceInventory identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveCommerceInventoryResponse>} - The async response
+     */
+    public CompletableFuture<RemoveCommerceInventoryResponse> removeCommerceInventory(@Nonnull RemoveCommerceInventoryRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveCommerceInventoryRequest, RemoveCommerceInventoryResponse> operation
-              = new RemoveCommerceInventory.Async(sdkConfiguration, _headers);
+              = new RemoveCommerceInventory.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1477,8 +2067,21 @@ public class AsyncCommerce {
      * @return {@code CompletableFuture<RemoveCommerceItemResponse>} - The async response
      */
     public CompletableFuture<RemoveCommerceItemResponse> removeCommerceItem(@Nonnull RemoveCommerceItemRequest request) {
+        return removeCommerceItem(request, null);
+    }
+
+    /**
+     * Remove an item
+     * 
+     * <p>Deletes the CommerceItem identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveCommerceItemResponse>} - The async response
+     */
+    public CompletableFuture<RemoveCommerceItemResponse> removeCommerceItem(@Nonnull RemoveCommerceItemRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveCommerceItemRequest, RemoveCommerceItemResponse> operation
-              = new RemoveCommerceItem.Async(sdkConfiguration, _headers);
+              = new RemoveCommerceItem.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1504,8 +2107,21 @@ public class AsyncCommerce {
      * @return {@code CompletableFuture<RemoveCommerceItemvariantResponse>} - The async response
      */
     public CompletableFuture<RemoveCommerceItemvariantResponse> removeCommerceItemvariant(@Nonnull RemoveCommerceItemvariantRequest request) {
+        return removeCommerceItemvariant(request, null);
+    }
+
+    /**
+     * Remove an itemvariant
+     * 
+     * <p>Deletes the CommerceItemvariant identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveCommerceItemvariantResponse>} - The async response
+     */
+    public CompletableFuture<RemoveCommerceItemvariantResponse> removeCommerceItemvariant(@Nonnull RemoveCommerceItemvariantRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveCommerceItemvariantRequest, RemoveCommerceItemvariantResponse> operation
-              = new RemoveCommerceItemvariant.Async(sdkConfiguration, _headers);
+              = new RemoveCommerceItemvariant.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1531,8 +2147,21 @@ public class AsyncCommerce {
      * @return {@code CompletableFuture<RemoveCommerceLocationResponse>} - The async response
      */
     public CompletableFuture<RemoveCommerceLocationResponse> removeCommerceLocation(@Nonnull RemoveCommerceLocationRequest request) {
+        return removeCommerceLocation(request, null);
+    }
+
+    /**
+     * Remove a location
+     * 
+     * <p>Deletes the CommerceLocation identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveCommerceLocationResponse>} - The async response
+     */
+    public CompletableFuture<RemoveCommerceLocationResponse> removeCommerceLocation(@Nonnull RemoveCommerceLocationRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveCommerceLocationRequest, RemoveCommerceLocationResponse> operation
-              = new RemoveCommerceLocation.Async(sdkConfiguration, _headers);
+              = new RemoveCommerceLocation.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1558,8 +2187,21 @@ public class AsyncCommerce {
      * @return {@code CompletableFuture<RemoveCommerceReservationResponse>} - The async response
      */
     public CompletableFuture<RemoveCommerceReservationResponse> removeCommerceReservation(@Nonnull RemoveCommerceReservationRequest request) {
+        return removeCommerceReservation(request, null);
+    }
+
+    /**
+     * Remove a reservation
+     * 
+     * <p>Deletes the CommerceReservation identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveCommerceReservationResponse>} - The async response
+     */
+    public CompletableFuture<RemoveCommerceReservationResponse> removeCommerceReservation(@Nonnull RemoveCommerceReservationRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveCommerceReservationRequest, RemoveCommerceReservationResponse> operation
-              = new RemoveCommerceReservation.Async(sdkConfiguration, _headers);
+              = new RemoveCommerceReservation.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1585,8 +2227,21 @@ public class AsyncCommerce {
      * @return {@code CompletableFuture<RemoveCommerceReviewResponse>} - The async response
      */
     public CompletableFuture<RemoveCommerceReviewResponse> removeCommerceReview(@Nonnull RemoveCommerceReviewRequest request) {
+        return removeCommerceReview(request, null);
+    }
+
+    /**
+     * Remove a review
+     * 
+     * <p>Deletes the CommerceReview identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveCommerceReviewResponse>} - The async response
+     */
+    public CompletableFuture<RemoveCommerceReviewResponse> removeCommerceReview(@Nonnull RemoveCommerceReviewRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveCommerceReviewRequest, RemoveCommerceReviewResponse> operation
-              = new RemoveCommerceReview.Async(sdkConfiguration, _headers);
+              = new RemoveCommerceReview.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1612,8 +2267,21 @@ public class AsyncCommerce {
      * @return {@code CompletableFuture<RemoveCommerceSaleschannelResponse>} - The async response
      */
     public CompletableFuture<RemoveCommerceSaleschannelResponse> removeCommerceSaleschannel(@Nonnull RemoveCommerceSaleschannelRequest request) {
+        return removeCommerceSaleschannel(request, null);
+    }
+
+    /**
+     * Remove a saleschannel
+     * 
+     * <p>Deletes the CommerceSaleschannel identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveCommerceSaleschannelResponse>} - The async response
+     */
+    public CompletableFuture<RemoveCommerceSaleschannelResponse> removeCommerceSaleschannel(@Nonnull RemoveCommerceSaleschannelRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveCommerceSaleschannelRequest, RemoveCommerceSaleschannelResponse> operation
-              = new RemoveCommerceSaleschannel.Async(sdkConfiguration, _headers);
+              = new RemoveCommerceSaleschannel.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1641,8 +2309,22 @@ public class AsyncCommerce {
      * @return {@code CompletableFuture<UpdateCommerceCollectionResponse>} - The async response
      */
     public CompletableFuture<UpdateCommerceCollectionResponse> updateCommerceCollection(@Nonnull UpdateCommerceCollectionRequest request) {
+        return updateCommerceCollection(request, null);
+    }
+
+    /**
+     * Update a collection
+     * 
+     * <p>Updates the CommerceCollection identified by `id`. Provide the unified CommerceCollection fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateCommerceCollectionResponse>} - The async response
+     */
+    public CompletableFuture<UpdateCommerceCollectionResponse> updateCommerceCollection(@Nonnull UpdateCommerceCollectionRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateCommerceCollectionRequest, UpdateCommerceCollectionResponse> operation
-              = new UpdateCommerceCollection.Async(sdkConfiguration, _headers);
+              = new UpdateCommerceCollection.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1670,8 +2352,22 @@ public class AsyncCommerce {
      * @return {@code CompletableFuture<UpdateCommerceInventoryResponse>} - The async response
      */
     public CompletableFuture<UpdateCommerceInventoryResponse> updateCommerceInventory(@Nonnull UpdateCommerceInventoryRequest request) {
+        return updateCommerceInventory(request, null);
+    }
+
+    /**
+     * Update an inventory
+     * 
+     * <p>Updates the CommerceInventory identified by `id`. Provide the unified CommerceInventory fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateCommerceInventoryResponse>} - The async response
+     */
+    public CompletableFuture<UpdateCommerceInventoryResponse> updateCommerceInventory(@Nonnull UpdateCommerceInventoryRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateCommerceInventoryRequest, UpdateCommerceInventoryResponse> operation
-              = new UpdateCommerceInventory.Async(sdkConfiguration, _headers);
+              = new UpdateCommerceInventory.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1699,8 +2395,22 @@ public class AsyncCommerce {
      * @return {@code CompletableFuture<UpdateCommerceItemResponse>} - The async response
      */
     public CompletableFuture<UpdateCommerceItemResponse> updateCommerceItem(@Nonnull UpdateCommerceItemRequest request) {
+        return updateCommerceItem(request, null);
+    }
+
+    /**
+     * Update an item
+     * 
+     * <p>Updates the CommerceItem identified by `id`. Provide the unified CommerceItem fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateCommerceItemResponse>} - The async response
+     */
+    public CompletableFuture<UpdateCommerceItemResponse> updateCommerceItem(@Nonnull UpdateCommerceItemRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateCommerceItemRequest, UpdateCommerceItemResponse> operation
-              = new UpdateCommerceItem.Async(sdkConfiguration, _headers);
+              = new UpdateCommerceItem.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1728,8 +2438,22 @@ public class AsyncCommerce {
      * @return {@code CompletableFuture<UpdateCommerceItemvariantResponse>} - The async response
      */
     public CompletableFuture<UpdateCommerceItemvariantResponse> updateCommerceItemvariant(@Nonnull UpdateCommerceItemvariantRequest request) {
+        return updateCommerceItemvariant(request, null);
+    }
+
+    /**
+     * Update an itemvariant
+     * 
+     * <p>Updates the CommerceItemvariant identified by `id`. Provide the unified CommerceItemvariant fields
+     * to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateCommerceItemvariantResponse>} - The async response
+     */
+    public CompletableFuture<UpdateCommerceItemvariantResponse> updateCommerceItemvariant(@Nonnull UpdateCommerceItemvariantRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateCommerceItemvariantRequest, UpdateCommerceItemvariantResponse> operation
-              = new UpdateCommerceItemvariant.Async(sdkConfiguration, _headers);
+              = new UpdateCommerceItemvariant.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1757,8 +2481,22 @@ public class AsyncCommerce {
      * @return {@code CompletableFuture<UpdateCommerceLocationResponse>} - The async response
      */
     public CompletableFuture<UpdateCommerceLocationResponse> updateCommerceLocation(@Nonnull UpdateCommerceLocationRequest request) {
+        return updateCommerceLocation(request, null);
+    }
+
+    /**
+     * Update a location
+     * 
+     * <p>Updates the CommerceLocation identified by `id`. Provide the unified CommerceLocation fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateCommerceLocationResponse>} - The async response
+     */
+    public CompletableFuture<UpdateCommerceLocationResponse> updateCommerceLocation(@Nonnull UpdateCommerceLocationRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateCommerceLocationRequest, UpdateCommerceLocationResponse> operation
-              = new UpdateCommerceLocation.Async(sdkConfiguration, _headers);
+              = new UpdateCommerceLocation.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1786,8 +2524,22 @@ public class AsyncCommerce {
      * @return {@code CompletableFuture<UpdateCommerceReservationResponse>} - The async response
      */
     public CompletableFuture<UpdateCommerceReservationResponse> updateCommerceReservation(@Nonnull UpdateCommerceReservationRequest request) {
+        return updateCommerceReservation(request, null);
+    }
+
+    /**
+     * Update a reservation
+     * 
+     * <p>Updates the CommerceReservation identified by `id`. Provide the unified CommerceReservation fields
+     * to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateCommerceReservationResponse>} - The async response
+     */
+    public CompletableFuture<UpdateCommerceReservationResponse> updateCommerceReservation(@Nonnull UpdateCommerceReservationRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateCommerceReservationRequest, UpdateCommerceReservationResponse> operation
-              = new UpdateCommerceReservation.Async(sdkConfiguration, _headers);
+              = new UpdateCommerceReservation.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1815,8 +2567,22 @@ public class AsyncCommerce {
      * @return {@code CompletableFuture<UpdateCommerceReviewResponse>} - The async response
      */
     public CompletableFuture<UpdateCommerceReviewResponse> updateCommerceReview(@Nonnull UpdateCommerceReviewRequest request) {
+        return updateCommerceReview(request, null);
+    }
+
+    /**
+     * Update a review
+     * 
+     * <p>Updates the CommerceReview identified by `id`. Provide the unified CommerceReview fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateCommerceReviewResponse>} - The async response
+     */
+    public CompletableFuture<UpdateCommerceReviewResponse> updateCommerceReview(@Nonnull UpdateCommerceReviewRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateCommerceReviewRequest, UpdateCommerceReviewResponse> operation
-              = new UpdateCommerceReview.Async(sdkConfiguration, _headers);
+              = new UpdateCommerceReview.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1844,8 +2610,22 @@ public class AsyncCommerce {
      * @return {@code CompletableFuture<UpdateCommerceSaleschannelResponse>} - The async response
      */
     public CompletableFuture<UpdateCommerceSaleschannelResponse> updateCommerceSaleschannel(@Nonnull UpdateCommerceSaleschannelRequest request) {
+        return updateCommerceSaleschannel(request, null);
+    }
+
+    /**
+     * Update a saleschannel
+     * 
+     * <p>Updates the CommerceSaleschannel identified by `id`. Provide the unified CommerceSaleschannel fields
+     * to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateCommerceSaleschannelResponse>} - The async response
+     */
+    public CompletableFuture<UpdateCommerceSaleschannelResponse> updateCommerceSaleschannel(@Nonnull UpdateCommerceSaleschannelRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateCommerceSaleschannelRequest, UpdateCommerceSaleschannelResponse> operation
-              = new UpdateCommerceSaleschannel.Async(sdkConfiguration, _headers);
+              = new UpdateCommerceSaleschannel.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

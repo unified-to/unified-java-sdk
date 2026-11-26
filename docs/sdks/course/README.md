@@ -42,43 +42,43 @@ public class Application {
         CreateLmsCourseRequest req = CreateLmsCourseRequest.builder()
                 .lmsCourse(LmsCourse.builder()
                     .categories(List.of(
-                        "tergiversatio",
-                        "tumultus"))
+                        "deripio",
+                        "tergiversatio"))
                     .createdAt(OffsetDateTime.parse("2022-10-06T09:58:53.559Z"))
-                    .currency("FJD")
-                    .description("Vinco alias aut capitulus.")
+                    .currency("DZD")
+                    .description("Aut.")
                     .durationMinutes(148d)
-                    .id("d9ff98d6-f187-4c17-b806-6dd1a14c740c")
+                    .id("865bf363-6679-49c5-87df-382224ccffbb")
                     .instructors(List.of())
                     .isActive(true)
                     .isPrivate(false)
                     .languages(List.of(
+                        "capitulus",
                         "desparatus",
-                        "earum",
-                        "deripio"))
+                        "earum"))
                     .media(List.of(
                         LmsMedia.builder()
-                            .content("Adeptio crudelis ipsum utrimque quae architecto. Cum eius conitor anser abutor error adsuesco abeo. Denego nihil caries aveho.")
-                            .description("Adipiscor.")
+                            .content("Carbo dapifer adeptio. Ipsum utrimque quae architecto repellendus cum. Conitor anser abutor error adsuesco abeo caelestis.")
+                            .description("Accommodo adipiscor campana aegrotatio.")
                             .languages(List.of(
-                                "ms",
-                                "te"))
-                            .name("tandem")
-                            .thumbnailUrl("https://picsum.photos/seed/syTatRhK03/928/273")
+                                "el",
+                                "hr"))
+                            .name("conduco")
+                            .thumbnailUrl("https://picsum.photos/seed/yTatRhK/3873/3840")
                             .type(LmsMediaType.OTHER)
-                            .url("https://picsum.photos/seed/fQAbsk/2472/1671")
+                            .url("https://picsum.photos/seed/vcfQAbs/3357/2472")
                             .build()))
                     .metadata(List.of())
-                    .name("comptus")
+                    .name("vinco")
                     .priceAmount(84d)
-                    .providerName("Homenick - Wunsch")
-                    .publishedAt(OffsetDateTime.parse("2022-11-06T08:59:52.807Z"))
+                    .providerName("Roberts Group")
+                    .publishedAt(OffsetDateTime.parse("2022-11-06T11:55:39.377Z"))
                     .skills(List.of(
-                        "adiuvo",
-                        "tam"))
+                        "aveho",
+                        "via"))
                     .students(List.of())
                     .timeEstimateMinutes(100d)
-                    .updatedAt(OffsetDateTime.parse("2023-02-12T08:01:09.293Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-02-12T20:13:06.873Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -256,43 +256,43 @@ public class Application {
         PatchLmsCourseRequest req = PatchLmsCourseRequest.builder()
                 .lmsCourse(LmsCourse.builder()
                     .categories(List.of(
-                        "tergiversatio",
-                        "tumultus"))
+                        "deripio",
+                        "tergiversatio"))
                     .createdAt(OffsetDateTime.parse("2022-10-06T09:58:53.559Z"))
-                    .currency("FJD")
-                    .description("Vinco alias aut capitulus.")
+                    .currency("DZD")
+                    .description("Aut.")
                     .durationMinutes(148d)
-                    .id("19bbfd88-8572-4251-b879-5e2715a14feb")
+                    .id("c370ae35-ca9b-482f-9d4a-d04b3bbaa198")
                     .instructors(List.of())
                     .isActive(true)
                     .isPrivate(false)
                     .languages(List.of(
+                        "capitulus",
                         "desparatus",
-                        "earum",
-                        "deripio"))
+                        "earum"))
                     .media(List.of(
                         LmsMedia.builder()
-                            .content("Adeptio crudelis ipsum utrimque quae architecto. Cum eius conitor anser abutor error adsuesco abeo. Denego nihil caries aveho.")
-                            .description("Adipiscor.")
+                            .content("Carbo dapifer adeptio. Ipsum utrimque quae architecto repellendus cum. Conitor anser abutor error adsuesco abeo caelestis.")
+                            .description("Accommodo adipiscor campana aegrotatio.")
                             .languages(List.of(
-                                "ms",
-                                "te"))
-                            .name("tandem")
-                            .thumbnailUrl("https://picsum.photos/seed/syTatRhK03/928/273")
+                                "el",
+                                "hr"))
+                            .name("conduco")
+                            .thumbnailUrl("https://picsum.photos/seed/yTatRhK/3873/3840")
                             .type(LmsMediaType.OTHER)
-                            .url("https://picsum.photos/seed/fQAbsk/2472/1671")
+                            .url("https://picsum.photos/seed/vcfQAbs/3357/2472")
                             .build()))
                     .metadata(List.of())
-                    .name("comptus")
+                    .name("vinco")
                     .priceAmount(84d)
-                    .providerName("Homenick - Wunsch")
-                    .publishedAt(OffsetDateTime.parse("2022-11-06T08:59:52.808Z"))
+                    .providerName("Roberts Group")
+                    .publishedAt(OffsetDateTime.parse("2022-11-06T11:55:39.377Z"))
                     .skills(List.of(
-                        "adiuvo",
-                        "tam"))
+                        "aveho",
+                        "via"))
                     .students(List.of())
                     .timeEstimateMinutes(100d)
-                    .updatedAt(OffsetDateTime.parse("2023-02-12T08:01:09.296Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-02-12T20:13:06.875Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -412,43 +412,43 @@ public class Application {
         UpdateLmsCourseRequest req = UpdateLmsCourseRequest.builder()
                 .lmsCourse(LmsCourse.builder()
                     .categories(List.of(
-                        "tergiversatio",
-                        "tumultus"))
+                        "deripio",
+                        "tergiversatio"))
                     .createdAt(OffsetDateTime.parse("2022-10-06T09:58:53.559Z"))
-                    .currency("FJD")
-                    .description("Vinco alias aut capitulus.")
+                    .currency("DZD")
+                    .description("Aut.")
                     .durationMinutes(148d)
-                    .id("19bbfd88-8572-4251-b879-5e2715a14feb")
+                    .id("c370ae35-ca9b-482f-9d4a-d04b3bbaa198")
                     .instructors(List.of())
                     .isActive(true)
                     .isPrivate(false)
                     .languages(List.of(
+                        "capitulus",
                         "desparatus",
-                        "earum",
-                        "deripio"))
+                        "earum"))
                     .media(List.of(
                         LmsMedia.builder()
-                            .content("Adeptio crudelis ipsum utrimque quae architecto. Cum eius conitor anser abutor error adsuesco abeo. Denego nihil caries aveho.")
-                            .description("Adipiscor.")
+                            .content("Carbo dapifer adeptio. Ipsum utrimque quae architecto repellendus cum. Conitor anser abutor error adsuesco abeo caelestis.")
+                            .description("Accommodo adipiscor campana aegrotatio.")
                             .languages(List.of(
-                                "ms",
-                                "te"))
-                            .name("tandem")
-                            .thumbnailUrl("https://picsum.photos/seed/syTatRhK03/928/273")
+                                "el",
+                                "hr"))
+                            .name("conduco")
+                            .thumbnailUrl("https://picsum.photos/seed/yTatRhK/3873/3840")
                             .type(LmsMediaType.OTHER)
-                            .url("https://picsum.photos/seed/fQAbsk/2472/1671")
+                            .url("https://picsum.photos/seed/vcfQAbs/3357/2472")
                             .build()))
                     .metadata(List.of())
-                    .name("comptus")
+                    .name("vinco")
                     .priceAmount(84d)
-                    .providerName("Homenick - Wunsch")
-                    .publishedAt(OffsetDateTime.parse("2022-11-06T08:59:52.808Z"))
+                    .providerName("Roberts Group")
+                    .publishedAt(OffsetDateTime.parse("2022-11-06T11:55:39.377Z"))
                     .skills(List.of(
-                        "adiuvo",
-                        "tam"))
+                        "aveho",
+                        "via"))
                     .students(List.of())
                     .timeEstimateMinutes(100d)
-                    .updatedAt(OffsetDateTime.parse("2023-02-12T08:01:09.296Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-02-12T20:13:06.875Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

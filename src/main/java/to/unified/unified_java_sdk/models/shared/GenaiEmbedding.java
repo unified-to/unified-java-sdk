@@ -42,8 +42,8 @@ public class GenaiEmbedding {
 
 
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("enconding_format")
-    private EncondingFormat encondingFormat;
+    @JsonProperty("encoding_format")
+    private EncodingFormat encodingFormat;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -82,7 +82,7 @@ public class GenaiEmbedding {
             @JsonProperty("content") @Nullable List<GenaiEmbeddingContent> content,
             @JsonProperty("dimension") @Nullable Double dimension,
             @JsonProperty("embeddings") @Nullable String embeddings,
-            @JsonProperty("enconding_format") @Nullable EncondingFormat encondingFormat,
+            @JsonProperty("encoding_format") @Nullable EncodingFormat encodingFormat,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("max_tokens") @Nullable Double maxTokens,
             @JsonProperty("model_id") @Nullable String modelId,
@@ -92,7 +92,7 @@ public class GenaiEmbedding {
         this.content = content;
         this.dimension = dimension;
         this.embeddings = embeddings;
-        this.encondingFormat = encondingFormat;
+        this.encodingFormat = encodingFormat;
         this.id = id;
         this.maxTokens = maxTokens;
         this.modelId = modelId;
@@ -129,8 +129,8 @@ public class GenaiEmbedding {
         return Optional.ofNullable(this.embeddings);
     }
 
-    public Optional<EncondingFormat> encondingFormat() {
-        return Optional.ofNullable(this.encondingFormat);
+    public Optional<EncodingFormat> encodingFormat() {
+        return Optional.ofNullable(this.encodingFormat);
     }
 
     public Optional<String> id() {
@@ -192,8 +192,8 @@ public class GenaiEmbedding {
     }
 
 
-    public GenaiEmbedding withEncondingFormat(@Nullable EncondingFormat encondingFormat) {
-        this.encondingFormat = encondingFormat;
+    public GenaiEmbedding withEncodingFormat(@Nullable EncodingFormat encodingFormat) {
+        this.encodingFormat = encodingFormat;
         return this;
     }
 
@@ -250,7 +250,7 @@ public class GenaiEmbedding {
             Utils.enhancedDeepEquals(this.content, other.content) &&
             Utils.enhancedDeepEquals(this.dimension, other.dimension) &&
             Utils.enhancedDeepEquals(this.embeddings, other.embeddings) &&
-            Utils.enhancedDeepEquals(this.encondingFormat, other.encondingFormat) &&
+            Utils.enhancedDeepEquals(this.encodingFormat, other.encodingFormat) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.maxTokens, other.maxTokens) &&
             Utils.enhancedDeepEquals(this.modelId, other.modelId) &&
@@ -263,7 +263,7 @@ public class GenaiEmbedding {
     public int hashCode() {
         return Utils.enhancedHash(
             content, dimension, embeddings,
-            encondingFormat, id, maxTokens,
+            encodingFormat, id, maxTokens,
             modelId, raw, tokensUsed,
             type);
     }
@@ -274,7 +274,7 @@ public class GenaiEmbedding {
                 "content", content,
                 "dimension", dimension,
                 "embeddings", embeddings,
-                "encondingFormat", encondingFormat,
+                "encodingFormat", encodingFormat,
                 "id", id,
                 "maxTokens", maxTokens,
                 "modelId", modelId,
@@ -292,7 +292,7 @@ public class GenaiEmbedding {
 
         private String embeddings;
 
-        private EncondingFormat encondingFormat;
+        private EncodingFormat encodingFormat;
 
         private String id;
 
@@ -334,8 +334,8 @@ public class GenaiEmbedding {
             return this;
         }
 
-        public Builder encondingFormat(@Nullable EncondingFormat encondingFormat) {
-            this.encondingFormat = encondingFormat;
+        public Builder encodingFormat(@Nullable EncodingFormat encodingFormat) {
+            this.encodingFormat = encodingFormat;
             return this;
         }
 
@@ -375,7 +375,7 @@ public class GenaiEmbedding {
         public GenaiEmbedding build() {
             return new GenaiEmbedding(
                 content, dimension, embeddings,
-                encondingFormat, id, maxTokens,
+                encodingFormat, id, maxTokens,
                 modelId, raw, tokensUsed,
                 type);
         }

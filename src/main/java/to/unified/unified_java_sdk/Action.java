@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateQmsActionRequest;
 import to.unified.unified_java_sdk.models.operations.CreateQmsActionRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateQmsActionResponse;
@@ -27,6 +28,7 @@ import to.unified.unified_java_sdk.operations.ListQmsActions;
 import to.unified.unified_java_sdk.operations.PatchQmsAction;
 import to.unified.unified_java_sdk.operations.UpdateQmsAction;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Action {
@@ -71,8 +73,23 @@ public class Action {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateQmsActionResponse createQmsAction(@Nonnull CreateQmsActionRequest request) {
+        return createQmsAction(request, null);
+    }
+
+    /**
+     * Create an action
+     * 
+     * <p>Creates a QmsAction. Provide the unified QmsAction fields in the request body; they are mapped to
+     * the provider's API. Returns the created QmsAction.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateQmsActionResponse createQmsAction(@Nonnull CreateQmsActionRequest request, @Nullable Options options) {
         RequestOperation<CreateQmsActionRequest, CreateQmsActionResponse> operation
-              = new CreateQmsAction.Sync(sdkConfiguration, _headers);
+              = new CreateQmsAction.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -99,8 +116,23 @@ public class Action {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetQmsActionResponse getQmsAction(@Nonnull GetQmsActionRequest request) {
+        return getQmsAction(request, null);
+    }
+
+    /**
+     * Retrieve an action
+     * 
+     * <p>Retrieves a single QmsAction by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetQmsActionResponse getQmsAction(@Nonnull GetQmsActionRequest request, @Nullable Options options) {
         RequestOperation<GetQmsActionRequest, GetQmsActionResponse> operation
-              = new GetQmsAction.Sync(sdkConfiguration, _headers);
+              = new GetQmsAction.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -135,8 +167,27 @@ public class Action {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListQmsActionsResponse listQmsActions(@Nonnull ListQmsActionsRequest request) {
+        return listQmsActions(request, null);
+    }
+
+    /**
+     * List all actions
+     * 
+     * <p>Returns a list of QmsActions. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListQmsActionsResponse listQmsActions(@Nonnull ListQmsActionsRequest request, @Nullable Options options) {
         RequestOperation<ListQmsActionsRequest, ListQmsActionsResponse> operation
-              = new ListQmsActions.Sync(sdkConfiguration, _headers);
+              = new ListQmsActions.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -163,8 +214,23 @@ public class Action {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchQmsActionResponse patchQmsAction(@Nonnull PatchQmsActionRequest request) {
+        return patchQmsAction(request, null);
+    }
+
+    /**
+     * Update an action
+     * 
+     * <p>Updates the QmsAction identified by `id`. Provide the unified QmsAction fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchQmsActionResponse patchQmsAction(@Nonnull PatchQmsActionRequest request, @Nullable Options options) {
         RequestOperation<PatchQmsActionRequest, PatchQmsActionResponse> operation
-              = new PatchQmsAction.Sync(sdkConfiguration, _headers);
+              = new PatchQmsAction.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -191,8 +257,23 @@ public class Action {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateQmsActionResponse updateQmsAction(@Nonnull UpdateQmsActionRequest request) {
+        return updateQmsAction(request, null);
+    }
+
+    /**
+     * Update an action
+     * 
+     * <p>Updates the QmsAction identified by `id`. Provide the unified QmsAction fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateQmsActionResponse updateQmsAction(@Nonnull UpdateQmsActionRequest request, @Nullable Options options) {
         RequestOperation<UpdateQmsActionRequest, UpdateQmsActionResponse> operation
-              = new UpdateQmsAction.Sync(sdkConfiguration, _headers);
+              = new UpdateQmsAction.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

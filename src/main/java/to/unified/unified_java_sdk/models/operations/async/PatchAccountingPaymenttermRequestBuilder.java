@@ -6,20 +6,30 @@ package to.unified.unified_java_sdk.models.operations.async;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingPaymenttermRequest;
 import to.unified.unified_java_sdk.operations.PatchAccountingPaymentterm;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class PatchAccountingPaymenttermRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private PatchAccountingPaymenttermRequest request;
+    private final Options.Builder optionsBuilder;
 
     public PatchAccountingPaymenttermRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public PatchAccountingPaymenttermRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public PatchAccountingPaymenttermRequestBuilder request(@Nonnull PatchAccountingPaymenttermRequest request) {
@@ -44,8 +54,9 @@ public class PatchAccountingPaymenttermRequestBuilder {
     * @return The response from the server.
     */
     public CompletableFuture<PatchAccountingPaymenttermResponse> call() {
+        Options options = optionsBuilder.build();
         AsyncRequestOperation<PatchAccountingPaymenttermRequest, PatchAccountingPaymenttermResponse> operation
-              = new PatchAccountingPaymentterm.Async(sdkConfiguration, _headers);
+              = new PatchAccountingPaymentterm.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

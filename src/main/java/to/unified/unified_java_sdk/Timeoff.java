@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateHrisTimeoffRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisTimeoffRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateHrisTimeoffResponse;
@@ -31,6 +32,7 @@ import to.unified.unified_java_sdk.operations.PatchHrisTimeoff;
 import to.unified.unified_java_sdk.operations.RemoveHrisTimeoff;
 import to.unified.unified_java_sdk.operations.UpdateHrisTimeoff;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Timeoff {
@@ -75,8 +77,23 @@ public class Timeoff {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateHrisTimeoffResponse createHrisTimeoff(@Nonnull CreateHrisTimeoffRequest request) {
+        return createHrisTimeoff(request, null);
+    }
+
+    /**
+     * Create a timeoff
+     * 
+     * <p>Creates a HrisTimeoff. Provide the unified HrisTimeoff fields in the request body; they are mapped
+     * to the provider's API. Returns the created HrisTimeoff.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateHrisTimeoffResponse createHrisTimeoff(@Nonnull CreateHrisTimeoffRequest request, @Nullable Options options) {
         RequestOperation<CreateHrisTimeoffRequest, CreateHrisTimeoffResponse> operation
-              = new CreateHrisTimeoff.Sync(sdkConfiguration, _headers);
+              = new CreateHrisTimeoff.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -103,8 +120,23 @@ public class Timeoff {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetHrisTimeoffResponse getHrisTimeoff(@Nonnull GetHrisTimeoffRequest request) {
+        return getHrisTimeoff(request, null);
+    }
+
+    /**
+     * Retrieve a timeoff
+     * 
+     * <p>Retrieves a single HrisTimeoff by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetHrisTimeoffResponse getHrisTimeoff(@Nonnull GetHrisTimeoffRequest request, @Nullable Options options) {
         RequestOperation<GetHrisTimeoffRequest, GetHrisTimeoffResponse> operation
-              = new GetHrisTimeoff.Sync(sdkConfiguration, _headers);
+              = new GetHrisTimeoff.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -139,8 +171,27 @@ public class Timeoff {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListHrisTimeoffsResponse listHrisTimeoffs(@Nonnull ListHrisTimeoffsRequest request) {
+        return listHrisTimeoffs(request, null);
+    }
+
+    /**
+     * List all timeoffs
+     * 
+     * <p>Returns a list of HrisTimeoffs. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListHrisTimeoffsResponse listHrisTimeoffs(@Nonnull ListHrisTimeoffsRequest request, @Nullable Options options) {
         RequestOperation<ListHrisTimeoffsRequest, ListHrisTimeoffsResponse> operation
-              = new ListHrisTimeoffs.Sync(sdkConfiguration, _headers);
+              = new ListHrisTimeoffs.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +218,23 @@ public class Timeoff {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchHrisTimeoffResponse patchHrisTimeoff(@Nonnull PatchHrisTimeoffRequest request) {
+        return patchHrisTimeoff(request, null);
+    }
+
+    /**
+     * Update a timeoff
+     * 
+     * <p>Updates the HrisTimeoff identified by `id`. Provide the unified HrisTimeoff fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchHrisTimeoffResponse patchHrisTimeoff(@Nonnull PatchHrisTimeoffRequest request, @Nullable Options options) {
         RequestOperation<PatchHrisTimeoffRequest, PatchHrisTimeoffResponse> operation
-              = new PatchHrisTimeoff.Sync(sdkConfiguration, _headers);
+              = new PatchHrisTimeoff.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -193,8 +259,22 @@ public class Timeoff {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveHrisTimeoffResponse removeHrisTimeoff(@Nonnull RemoveHrisTimeoffRequest request) {
+        return removeHrisTimeoff(request, null);
+    }
+
+    /**
+     * Remove a timeoff
+     * 
+     * <p>Deletes the HrisTimeoff identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveHrisTimeoffResponse removeHrisTimeoff(@Nonnull RemoveHrisTimeoffRequest request, @Nullable Options options) {
         RequestOperation<RemoveHrisTimeoffRequest, RemoveHrisTimeoffResponse> operation
-              = new RemoveHrisTimeoff.Sync(sdkConfiguration, _headers);
+              = new RemoveHrisTimeoff.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -221,8 +301,23 @@ public class Timeoff {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateHrisTimeoffResponse updateHrisTimeoff(@Nonnull UpdateHrisTimeoffRequest request) {
+        return updateHrisTimeoff(request, null);
+    }
+
+    /**
+     * Update a timeoff
+     * 
+     * <p>Updates the HrisTimeoff identified by `id`. Provide the unified HrisTimeoff fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateHrisTimeoffResponse updateHrisTimeoff(@Nonnull UpdateHrisTimeoffRequest request, @Nullable Options options) {
         RequestOperation<UpdateHrisTimeoffRequest, UpdateHrisTimeoffResponse> operation
-              = new UpdateHrisTimeoff.Sync(sdkConfiguration, _headers);
+              = new UpdateHrisTimeoff.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

@@ -52,6 +52,13 @@ public class AtsOffer {
     @JsonProperty("employee_user_id")
     private String employeeUserId;
 
+    /**
+     * The placement fee earned on this hire
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("fees")
+    private List<AtsFee> fees;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
@@ -97,6 +104,7 @@ public class AtsOffer {
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
             @JsonProperty("creator_user_id") @Nullable String creatorUserId,
             @JsonProperty("employee_user_id") @Nullable String employeeUserId,
+            @JsonProperty("fees") @Nullable List<AtsFee> fees,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("rejected_at") @Nullable OffsetDateTime rejectedAt,
             @JsonProperty("sent_at") @Nullable OffsetDateTime sentAt,
@@ -108,6 +116,7 @@ public class AtsOffer {
         this.createdAt = createdAt;
         this.creatorUserId = creatorUserId;
         this.employeeUserId = employeeUserId;
+        this.fees = fees;
         this.id = id;
         this.rejectedAt = rejectedAt;
         this.sentAt = sentAt;
@@ -120,7 +129,7 @@ public class AtsOffer {
         this(null, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null, null, null);
     }
 
     /**
@@ -156,6 +165,13 @@ public class AtsOffer {
      */
     public Optional<String> employeeUserId() {
         return Optional.ofNullable(this.employeeUserId);
+    }
+
+    /**
+     * The placement fee earned on this hire
+     */
+    public Optional<List<AtsFee>> fees() {
+        return Optional.ofNullable(this.fees);
     }
 
     public Optional<String> id() {
@@ -244,6 +260,15 @@ public class AtsOffer {
     }
 
 
+    /**
+     * The placement fee earned on this hire
+     */
+    public AtsOffer withFees(@Nullable List<AtsFee> fees) {
+        this.fees = fees;
+        return this;
+    }
+
+
     public AtsOffer withId(@Nullable String id) {
         this.id = id;
         return this;
@@ -307,6 +332,7 @@ public class AtsOffer {
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.creatorUserId, other.creatorUserId) &&
             Utils.enhancedDeepEquals(this.employeeUserId, other.employeeUserId) &&
+            Utils.enhancedDeepEquals(this.fees, other.fees) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.rejectedAt, other.rejectedAt) &&
             Utils.enhancedDeepEquals(this.sentAt, other.sentAt) &&
@@ -319,9 +345,9 @@ public class AtsOffer {
     public int hashCode() {
         return Utils.enhancedHash(
             acceptedAt, compensation, createdAt,
-            creatorUserId, employeeUserId, id,
-            rejectedAt, sentAt, startAt,
-            status, updatedAt);
+            creatorUserId, employeeUserId, fees,
+            id, rejectedAt, sentAt,
+            startAt, status, updatedAt);
     }
     
     @Override
@@ -332,6 +358,7 @@ public class AtsOffer {
                 "createdAt", createdAt,
                 "creatorUserId", creatorUserId,
                 "employeeUserId", employeeUserId,
+                "fees", fees,
                 "id", id,
                 "rejectedAt", rejectedAt,
                 "sentAt", sentAt,
@@ -352,6 +379,8 @@ public class AtsOffer {
         private String creatorUserId;
 
         private String employeeUserId;
+
+        private List<AtsFee> fees;
 
         private String id;
 
@@ -409,6 +438,14 @@ public class AtsOffer {
             return this;
         }
 
+        /**
+         * The placement fee earned on this hire
+         */
+        public Builder fees(@Nullable List<AtsFee> fees) {
+            this.fees = fees;
+            return this;
+        }
+
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
@@ -454,9 +491,9 @@ public class AtsOffer {
         public AtsOffer build() {
             return new AtsOffer(
                 acceptedAt, compensation, createdAt,
-                creatorUserId, employeeUserId, id,
-                rejectedAt, sentAt, startAt,
-                status, updatedAt);
+                creatorUserId, employeeUserId, fees,
+                id, rejectedAt, sentAt,
+                startAt, status, updatedAt);
         }
 
     }

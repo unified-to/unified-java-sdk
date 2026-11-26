@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateAtsCandidateRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAtsCandidateRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateAtsCandidateResponse;
@@ -31,6 +32,7 @@ import to.unified.unified_java_sdk.operations.PatchAtsCandidate;
 import to.unified.unified_java_sdk.operations.RemoveAtsCandidate;
 import to.unified.unified_java_sdk.operations.UpdateAtsCandidate;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Candidate {
@@ -75,8 +77,23 @@ public class Candidate {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateAtsCandidateResponse createAtsCandidate(@Nonnull CreateAtsCandidateRequest request) {
+        return createAtsCandidate(request, null);
+    }
+
+    /**
+     * Create a candidate
+     * 
+     * <p>Creates a AtsCandidate. Provide the unified AtsCandidate fields in the request body; they are mapped
+     * to the provider's API. Returns the created AtsCandidate.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateAtsCandidateResponse createAtsCandidate(@Nonnull CreateAtsCandidateRequest request, @Nullable Options options) {
         RequestOperation<CreateAtsCandidateRequest, CreateAtsCandidateResponse> operation
-              = new CreateAtsCandidate.Sync(sdkConfiguration, _headers);
+              = new CreateAtsCandidate.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -103,8 +120,23 @@ public class Candidate {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAtsCandidateResponse getAtsCandidate(@Nonnull GetAtsCandidateRequest request) {
+        return getAtsCandidate(request, null);
+    }
+
+    /**
+     * Retrieve a candidate
+     * 
+     * <p>Retrieves a single AtsCandidate by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAtsCandidateResponse getAtsCandidate(@Nonnull GetAtsCandidateRequest request, @Nullable Options options) {
         RequestOperation<GetAtsCandidateRequest, GetAtsCandidateResponse> operation
-              = new GetAtsCandidate.Sync(sdkConfiguration, _headers);
+              = new GetAtsCandidate.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -139,8 +171,27 @@ public class Candidate {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAtsCandidatesResponse listAtsCandidates(@Nonnull ListAtsCandidatesRequest request) {
+        return listAtsCandidates(request, null);
+    }
+
+    /**
+     * List all candidates
+     * 
+     * <p>Returns a list of AtsCandidates. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAtsCandidatesResponse listAtsCandidates(@Nonnull ListAtsCandidatesRequest request, @Nullable Options options) {
         RequestOperation<ListAtsCandidatesRequest, ListAtsCandidatesResponse> operation
-              = new ListAtsCandidates.Sync(sdkConfiguration, _headers);
+              = new ListAtsCandidates.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +218,23 @@ public class Candidate {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchAtsCandidateResponse patchAtsCandidate(@Nonnull PatchAtsCandidateRequest request) {
+        return patchAtsCandidate(request, null);
+    }
+
+    /**
+     * Update a candidate
+     * 
+     * <p>Updates the AtsCandidate identified by `id`. Provide the unified AtsCandidate fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchAtsCandidateResponse patchAtsCandidate(@Nonnull PatchAtsCandidateRequest request, @Nullable Options options) {
         RequestOperation<PatchAtsCandidateRequest, PatchAtsCandidateResponse> operation
-              = new PatchAtsCandidate.Sync(sdkConfiguration, _headers);
+              = new PatchAtsCandidate.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -193,8 +259,22 @@ public class Candidate {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveAtsCandidateResponse removeAtsCandidate(@Nonnull RemoveAtsCandidateRequest request) {
+        return removeAtsCandidate(request, null);
+    }
+
+    /**
+     * Remove a candidate
+     * 
+     * <p>Deletes the AtsCandidate identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveAtsCandidateResponse removeAtsCandidate(@Nonnull RemoveAtsCandidateRequest request, @Nullable Options options) {
         RequestOperation<RemoveAtsCandidateRequest, RemoveAtsCandidateResponse> operation
-              = new RemoveAtsCandidate.Sync(sdkConfiguration, _headers);
+              = new RemoveAtsCandidate.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -221,8 +301,23 @@ public class Candidate {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateAtsCandidateResponse updateAtsCandidate(@Nonnull UpdateAtsCandidateRequest request) {
+        return updateAtsCandidate(request, null);
+    }
+
+    /**
+     * Update a candidate
+     * 
+     * <p>Updates the AtsCandidate identified by `id`. Provide the unified AtsCandidate fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateAtsCandidateResponse updateAtsCandidate(@Nonnull UpdateAtsCandidateRequest request, @Nullable Options options) {
         RequestOperation<UpdateAtsCandidateRequest, UpdateAtsCandidateResponse> operation
-              = new UpdateAtsCandidate.Sync(sdkConfiguration, _headers);
+              = new UpdateAtsCandidate.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

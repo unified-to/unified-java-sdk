@@ -6,18 +6,28 @@ package to.unified.unified_java_sdk.models.operations;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.CreateLegalTimeentry;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class CreateLegalTimeentryRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private CreateLegalTimeentryRequest request;
+    private final Options.Builder optionsBuilder;
 
     public CreateLegalTimeentryRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public CreateLegalTimeentryRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public CreateLegalTimeentryRequestBuilder request(@Nonnull CreateLegalTimeentryRequest request) {
@@ -42,8 +52,9 @@ public class CreateLegalTimeentryRequestBuilder {
     * @return The response from the server.
     */
     public CreateLegalTimeentryResponse call() {
+        Options options = optionsBuilder.build();
         RequestOperation<CreateLegalTimeentryRequest, CreateLegalTimeentryResponse> operation
-              = new CreateLegalTimeentry.Sync(sdkConfiguration, _headers);
+              = new CreateLegalTimeentry.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

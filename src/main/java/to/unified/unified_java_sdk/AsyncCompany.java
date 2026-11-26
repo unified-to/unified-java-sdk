@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateAtsCompanyRequest;
 import to.unified.unified_java_sdk.models.operations.CreateCrmCompanyRequest;
@@ -84,6 +85,7 @@ import to.unified.unified_java_sdk.operations.UpdateAtsCompany;
 import to.unified.unified_java_sdk.operations.UpdateCrmCompany;
 import to.unified.unified_java_sdk.operations.UpdateHrisCompany;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncCompany {
@@ -128,8 +130,22 @@ public class AsyncCompany {
      * @return {@code CompletableFuture<CreateAtsCompanyResponse>} - The async response
      */
     public CompletableFuture<CreateAtsCompanyResponse> createAtsCompany(@Nonnull CreateAtsCompanyRequest request) {
+        return createAtsCompany(request, null);
+    }
+
+    /**
+     * Create a company
+     * 
+     * <p>Creates a AtsCompany. Provide the unified AtsCompany fields in the request body; they are mapped to
+     * the provider's API. Returns the created AtsCompany.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateAtsCompanyResponse>} - The async response
+     */
+    public CompletableFuture<CreateAtsCompanyResponse> createAtsCompany(@Nonnull CreateAtsCompanyRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateAtsCompanyRequest, CreateAtsCompanyResponse> operation
-              = new CreateAtsCompany.Async(sdkConfiguration, _headers);
+              = new CreateAtsCompany.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -157,8 +173,22 @@ public class AsyncCompany {
      * @return {@code CompletableFuture<CreateCrmCompanyResponse>} - The async response
      */
     public CompletableFuture<CreateCrmCompanyResponse> createCrmCompany(@Nonnull CreateCrmCompanyRequest request) {
+        return createCrmCompany(request, null);
+    }
+
+    /**
+     * Create a company
+     * 
+     * <p>Creates a CrmCompany. Provide the unified CrmCompany fields in the request body; they are mapped to
+     * the provider's API. Returns the created CrmCompany.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateCrmCompanyResponse>} - The async response
+     */
+    public CompletableFuture<CreateCrmCompanyResponse> createCrmCompany(@Nonnull CreateCrmCompanyRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateCrmCompanyRequest, CreateCrmCompanyResponse> operation
-              = new CreateCrmCompany.Async(sdkConfiguration, _headers);
+              = new CreateCrmCompany.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -186,8 +216,22 @@ public class AsyncCompany {
      * @return {@code CompletableFuture<CreateHrisCompanyResponse>} - The async response
      */
     public CompletableFuture<CreateHrisCompanyResponse> createHrisCompany(@Nonnull CreateHrisCompanyRequest request) {
+        return createHrisCompany(request, null);
+    }
+
+    /**
+     * Create a company
+     * 
+     * <p>Creates a HrisCompany. Provide the unified HrisCompany fields in the request body; they are mapped
+     * to the provider's API. Returns the created HrisCompany.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateHrisCompanyResponse>} - The async response
+     */
+    public CompletableFuture<CreateHrisCompanyResponse> createHrisCompany(@Nonnull CreateHrisCompanyRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateHrisCompanyRequest, CreateHrisCompanyResponse> operation
-              = new CreateHrisCompany.Async(sdkConfiguration, _headers);
+              = new CreateHrisCompany.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -215,8 +259,22 @@ public class AsyncCompany {
      * @return {@code CompletableFuture<GetAtsCompanyResponse>} - The async response
      */
     public CompletableFuture<GetAtsCompanyResponse> getAtsCompany(@Nonnull GetAtsCompanyRequest request) {
+        return getAtsCompany(request, null);
+    }
+
+    /**
+     * Retrieve a company
+     * 
+     * <p>Retrieves a single AtsCompany by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetAtsCompanyResponse>} - The async response
+     */
+    public CompletableFuture<GetAtsCompanyResponse> getAtsCompany(@Nonnull GetAtsCompanyRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetAtsCompanyRequest, GetAtsCompanyResponse> operation
-              = new GetAtsCompany.Async(sdkConfiguration, _headers);
+              = new GetAtsCompany.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -244,8 +302,22 @@ public class AsyncCompany {
      * @return {@code CompletableFuture<GetCrmCompanyResponse>} - The async response
      */
     public CompletableFuture<GetCrmCompanyResponse> getCrmCompany(@Nonnull GetCrmCompanyRequest request) {
+        return getCrmCompany(request, null);
+    }
+
+    /**
+     * Retrieve a company
+     * 
+     * <p>Retrieves a single CrmCompany by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetCrmCompanyResponse>} - The async response
+     */
+    public CompletableFuture<GetCrmCompanyResponse> getCrmCompany(@Nonnull GetCrmCompanyRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetCrmCompanyRequest, GetCrmCompanyResponse> operation
-              = new GetCrmCompany.Async(sdkConfiguration, _headers);
+              = new GetCrmCompany.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -273,8 +345,22 @@ public class AsyncCompany {
      * @return {@code CompletableFuture<GetHrisCompanyResponse>} - The async response
      */
     public CompletableFuture<GetHrisCompanyResponse> getHrisCompany(@Nonnull GetHrisCompanyRequest request) {
+        return getHrisCompany(request, null);
+    }
+
+    /**
+     * Retrieve a company
+     * 
+     * <p>Retrieves a single HrisCompany by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetHrisCompanyResponse>} - The async response
+     */
+    public CompletableFuture<GetHrisCompanyResponse> getHrisCompany(@Nonnull GetHrisCompanyRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetHrisCompanyRequest, GetHrisCompanyResponse> operation
-              = new GetHrisCompany.Async(sdkConfiguration, _headers);
+              = new GetHrisCompany.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -310,8 +396,26 @@ public class AsyncCompany {
      * @return {@code CompletableFuture<ListAtsCompaniesResponse>} - The async response
      */
     public CompletableFuture<ListAtsCompaniesResponse> listAtsCompanies(@Nonnull ListAtsCompaniesRequest request) {
+        return listAtsCompanies(request, null);
+    }
+
+    /**
+     * List all companies
+     * 
+     * <p>Returns a list of AtsCompanies. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListAtsCompaniesResponse>} - The async response
+     */
+    public CompletableFuture<ListAtsCompaniesResponse> listAtsCompanies(@Nonnull ListAtsCompaniesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListAtsCompaniesRequest, ListAtsCompaniesResponse> operation
-              = new ListAtsCompanies.Async(sdkConfiguration, _headers);
+              = new ListAtsCompanies.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -347,8 +451,26 @@ public class AsyncCompany {
      * @return {@code CompletableFuture<ListCrmCompaniesResponse>} - The async response
      */
     public CompletableFuture<ListCrmCompaniesResponse> listCrmCompanies(@Nonnull ListCrmCompaniesRequest request) {
+        return listCrmCompanies(request, null);
+    }
+
+    /**
+     * List all companies
+     * 
+     * <p>Returns a list of CrmCompanies. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListCrmCompaniesResponse>} - The async response
+     */
+    public CompletableFuture<ListCrmCompaniesResponse> listCrmCompanies(@Nonnull ListCrmCompaniesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListCrmCompaniesRequest, ListCrmCompaniesResponse> operation
-              = new ListCrmCompanies.Async(sdkConfiguration, _headers);
+              = new ListCrmCompanies.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -370,8 +492,19 @@ public class AsyncCompany {
      * @return {@code CompletableFuture<ListEnrichCompaniesResponse>} - The async response
      */
     public CompletableFuture<ListEnrichCompaniesResponse> listEnrichCompanies(@Nonnull ListEnrichCompaniesRequest request) {
+        return listEnrichCompanies(request, null);
+    }
+
+    /**
+     * Retrieve enrichment information for a company
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListEnrichCompaniesResponse>} - The async response
+     */
+    public CompletableFuture<ListEnrichCompaniesResponse> listEnrichCompanies(@Nonnull ListEnrichCompaniesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListEnrichCompaniesRequest, ListEnrichCompaniesResponse> operation
-              = new ListEnrichCompanies.Async(sdkConfiguration, _headers);
+              = new ListEnrichCompanies.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -407,8 +540,26 @@ public class AsyncCompany {
      * @return {@code CompletableFuture<ListHrisCompaniesResponse>} - The async response
      */
     public CompletableFuture<ListHrisCompaniesResponse> listHrisCompanies(@Nonnull ListHrisCompaniesRequest request) {
+        return listHrisCompanies(request, null);
+    }
+
+    /**
+     * List all companies
+     * 
+     * <p>Returns a list of HrisCompanies. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListHrisCompaniesResponse>} - The async response
+     */
+    public CompletableFuture<ListHrisCompaniesResponse> listHrisCompanies(@Nonnull ListHrisCompaniesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListHrisCompaniesRequest, ListHrisCompaniesResponse> operation
-              = new ListHrisCompanies.Async(sdkConfiguration, _headers);
+              = new ListHrisCompanies.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -436,8 +587,22 @@ public class AsyncCompany {
      * @return {@code CompletableFuture<PatchAtsCompanyResponse>} - The async response
      */
     public CompletableFuture<PatchAtsCompanyResponse> patchAtsCompany(@Nonnull PatchAtsCompanyRequest request) {
+        return patchAtsCompany(request, null);
+    }
+
+    /**
+     * Update a company
+     * 
+     * <p>Updates the AtsCompany identified by `id`. Provide the unified AtsCompany fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchAtsCompanyResponse>} - The async response
+     */
+    public CompletableFuture<PatchAtsCompanyResponse> patchAtsCompany(@Nonnull PatchAtsCompanyRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchAtsCompanyRequest, PatchAtsCompanyResponse> operation
-              = new PatchAtsCompany.Async(sdkConfiguration, _headers);
+              = new PatchAtsCompany.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -465,8 +630,22 @@ public class AsyncCompany {
      * @return {@code CompletableFuture<PatchCrmCompanyResponse>} - The async response
      */
     public CompletableFuture<PatchCrmCompanyResponse> patchCrmCompany(@Nonnull PatchCrmCompanyRequest request) {
+        return patchCrmCompany(request, null);
+    }
+
+    /**
+     * Update a company
+     * 
+     * <p>Updates the CrmCompany identified by `id`. Provide the unified CrmCompany fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchCrmCompanyResponse>} - The async response
+     */
+    public CompletableFuture<PatchCrmCompanyResponse> patchCrmCompany(@Nonnull PatchCrmCompanyRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchCrmCompanyRequest, PatchCrmCompanyResponse> operation
-              = new PatchCrmCompany.Async(sdkConfiguration, _headers);
+              = new PatchCrmCompany.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -494,8 +673,22 @@ public class AsyncCompany {
      * @return {@code CompletableFuture<PatchHrisCompanyResponse>} - The async response
      */
     public CompletableFuture<PatchHrisCompanyResponse> patchHrisCompany(@Nonnull PatchHrisCompanyRequest request) {
+        return patchHrisCompany(request, null);
+    }
+
+    /**
+     * Update a company
+     * 
+     * <p>Updates the HrisCompany identified by `id`. Provide the unified HrisCompany fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchHrisCompanyResponse>} - The async response
+     */
+    public CompletableFuture<PatchHrisCompanyResponse> patchHrisCompany(@Nonnull PatchHrisCompanyRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchHrisCompanyRequest, PatchHrisCompanyResponse> operation
-              = new PatchHrisCompany.Async(sdkConfiguration, _headers);
+              = new PatchHrisCompany.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -521,8 +714,21 @@ public class AsyncCompany {
      * @return {@code CompletableFuture<RemoveAtsCompanyResponse>} - The async response
      */
     public CompletableFuture<RemoveAtsCompanyResponse> removeAtsCompany(@Nonnull RemoveAtsCompanyRequest request) {
+        return removeAtsCompany(request, null);
+    }
+
+    /**
+     * Remove a company
+     * 
+     * <p>Deletes the AtsCompany identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveAtsCompanyResponse>} - The async response
+     */
+    public CompletableFuture<RemoveAtsCompanyResponse> removeAtsCompany(@Nonnull RemoveAtsCompanyRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveAtsCompanyRequest, RemoveAtsCompanyResponse> operation
-              = new RemoveAtsCompany.Async(sdkConfiguration, _headers);
+              = new RemoveAtsCompany.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -548,8 +754,21 @@ public class AsyncCompany {
      * @return {@code CompletableFuture<RemoveCrmCompanyResponse>} - The async response
      */
     public CompletableFuture<RemoveCrmCompanyResponse> removeCrmCompany(@Nonnull RemoveCrmCompanyRequest request) {
+        return removeCrmCompany(request, null);
+    }
+
+    /**
+     * Remove a company
+     * 
+     * <p>Deletes the CrmCompany identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveCrmCompanyResponse>} - The async response
+     */
+    public CompletableFuture<RemoveCrmCompanyResponse> removeCrmCompany(@Nonnull RemoveCrmCompanyRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveCrmCompanyRequest, RemoveCrmCompanyResponse> operation
-              = new RemoveCrmCompany.Async(sdkConfiguration, _headers);
+              = new RemoveCrmCompany.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -575,8 +794,21 @@ public class AsyncCompany {
      * @return {@code CompletableFuture<RemoveHrisCompanyResponse>} - The async response
      */
     public CompletableFuture<RemoveHrisCompanyResponse> removeHrisCompany(@Nonnull RemoveHrisCompanyRequest request) {
+        return removeHrisCompany(request, null);
+    }
+
+    /**
+     * Remove a company
+     * 
+     * <p>Deletes the HrisCompany identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveHrisCompanyResponse>} - The async response
+     */
+    public CompletableFuture<RemoveHrisCompanyResponse> removeHrisCompany(@Nonnull RemoveHrisCompanyRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveHrisCompanyRequest, RemoveHrisCompanyResponse> operation
-              = new RemoveHrisCompany.Async(sdkConfiguration, _headers);
+              = new RemoveHrisCompany.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -604,8 +836,22 @@ public class AsyncCompany {
      * @return {@code CompletableFuture<UpdateAtsCompanyResponse>} - The async response
      */
     public CompletableFuture<UpdateAtsCompanyResponse> updateAtsCompany(@Nonnull UpdateAtsCompanyRequest request) {
+        return updateAtsCompany(request, null);
+    }
+
+    /**
+     * Update a company
+     * 
+     * <p>Updates the AtsCompany identified by `id`. Provide the unified AtsCompany fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateAtsCompanyResponse>} - The async response
+     */
+    public CompletableFuture<UpdateAtsCompanyResponse> updateAtsCompany(@Nonnull UpdateAtsCompanyRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateAtsCompanyRequest, UpdateAtsCompanyResponse> operation
-              = new UpdateAtsCompany.Async(sdkConfiguration, _headers);
+              = new UpdateAtsCompany.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -633,8 +879,22 @@ public class AsyncCompany {
      * @return {@code CompletableFuture<UpdateCrmCompanyResponse>} - The async response
      */
     public CompletableFuture<UpdateCrmCompanyResponse> updateCrmCompany(@Nonnull UpdateCrmCompanyRequest request) {
+        return updateCrmCompany(request, null);
+    }
+
+    /**
+     * Update a company
+     * 
+     * <p>Updates the CrmCompany identified by `id`. Provide the unified CrmCompany fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateCrmCompanyResponse>} - The async response
+     */
+    public CompletableFuture<UpdateCrmCompanyResponse> updateCrmCompany(@Nonnull UpdateCrmCompanyRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateCrmCompanyRequest, UpdateCrmCompanyResponse> operation
-              = new UpdateCrmCompany.Async(sdkConfiguration, _headers);
+              = new UpdateCrmCompany.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -662,8 +922,22 @@ public class AsyncCompany {
      * @return {@code CompletableFuture<UpdateHrisCompanyResponse>} - The async response
      */
     public CompletableFuture<UpdateHrisCompanyResponse> updateHrisCompany(@Nonnull UpdateHrisCompanyRequest request) {
+        return updateHrisCompany(request, null);
+    }
+
+    /**
+     * Update a company
+     * 
+     * <p>Updates the HrisCompany identified by `id`. Provide the unified HrisCompany fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateHrisCompanyResponse>} - The async response
+     */
+    public CompletableFuture<UpdateHrisCompanyResponse> updateHrisCompany(@Nonnull UpdateHrisCompanyRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateHrisCompanyRequest, UpdateHrisCompanyResponse> operation
-              = new UpdateHrisCompany.Async(sdkConfiguration, _headers);
+              = new UpdateHrisCompany.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

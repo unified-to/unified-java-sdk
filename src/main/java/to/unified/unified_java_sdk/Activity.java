@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateAtsActivityRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAtsActivityRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateAtsActivityResponse;
@@ -63,6 +64,7 @@ import to.unified.unified_java_sdk.operations.RemoveLmsActivity;
 import to.unified.unified_java_sdk.operations.UpdateAtsActivity;
 import to.unified.unified_java_sdk.operations.UpdateLmsActivity;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Activity {
@@ -107,8 +109,23 @@ public class Activity {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateAtsActivityResponse createAtsActivity(@Nonnull CreateAtsActivityRequest request) {
+        return createAtsActivity(request, null);
+    }
+
+    /**
+     * Create an activity
+     * 
+     * <p>Creates a AtsActivity. Provide the unified AtsActivity fields in the request body; they are mapped
+     * to the provider's API. Returns the created AtsActivity.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateAtsActivityResponse createAtsActivity(@Nonnull CreateAtsActivityRequest request, @Nullable Options options) {
         RequestOperation<CreateAtsActivityRequest, CreateAtsActivityResponse> operation
-              = new CreateAtsActivity.Sync(sdkConfiguration, _headers);
+              = new CreateAtsActivity.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -135,8 +152,23 @@ public class Activity {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateLmsActivityResponse createLmsActivity(@Nonnull CreateLmsActivityRequest request) {
+        return createLmsActivity(request, null);
+    }
+
+    /**
+     * Create an activity
+     * 
+     * <p>Creates a LmsActivity. Provide the unified LmsActivity fields in the request body; they are mapped
+     * to the provider's API. Returns the created LmsActivity.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateLmsActivityResponse createLmsActivity(@Nonnull CreateLmsActivityRequest request, @Nullable Options options) {
         RequestOperation<CreateLmsActivityRequest, CreateLmsActivityResponse> operation
-              = new CreateLmsActivity.Sync(sdkConfiguration, _headers);
+              = new CreateLmsActivity.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -163,8 +195,23 @@ public class Activity {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAtsActivityResponse getAtsActivity(@Nonnull GetAtsActivityRequest request) {
+        return getAtsActivity(request, null);
+    }
+
+    /**
+     * Retrieve an activity
+     * 
+     * <p>Retrieves a single AtsActivity by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAtsActivityResponse getAtsActivity(@Nonnull GetAtsActivityRequest request, @Nullable Options options) {
         RequestOperation<GetAtsActivityRequest, GetAtsActivityResponse> operation
-              = new GetAtsActivity.Sync(sdkConfiguration, _headers);
+              = new GetAtsActivity.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -191,8 +238,23 @@ public class Activity {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetClubsActivityResponse getClubsActivity(@Nonnull GetClubsActivityRequest request) {
+        return getClubsActivity(request, null);
+    }
+
+    /**
+     * Retrieve an activity
+     * 
+     * <p>Retrieves a single ClubsActivity by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetClubsActivityResponse getClubsActivity(@Nonnull GetClubsActivityRequest request, @Nullable Options options) {
         RequestOperation<GetClubsActivityRequest, GetClubsActivityResponse> operation
-              = new GetClubsActivity.Sync(sdkConfiguration, _headers);
+              = new GetClubsActivity.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -219,8 +281,23 @@ public class Activity {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetLmsActivityResponse getLmsActivity(@Nonnull GetLmsActivityRequest request) {
+        return getLmsActivity(request, null);
+    }
+
+    /**
+     * Retrieve an activity
+     * 
+     * <p>Retrieves a single LmsActivity by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetLmsActivityResponse getLmsActivity(@Nonnull GetLmsActivityRequest request, @Nullable Options options) {
         RequestOperation<GetLmsActivityRequest, GetLmsActivityResponse> operation
-              = new GetLmsActivity.Sync(sdkConfiguration, _headers);
+              = new GetLmsActivity.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -255,8 +332,27 @@ public class Activity {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAtsActivitiesResponse listAtsActivities(@Nonnull ListAtsActivitiesRequest request) {
+        return listAtsActivities(request, null);
+    }
+
+    /**
+     * List all activities
+     * 
+     * <p>Returns a list of AtsActivities. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAtsActivitiesResponse listAtsActivities(@Nonnull ListAtsActivitiesRequest request, @Nullable Options options) {
         RequestOperation<ListAtsActivitiesRequest, ListAtsActivitiesResponse> operation
-              = new ListAtsActivities.Sync(sdkConfiguration, _headers);
+              = new ListAtsActivities.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -291,8 +387,27 @@ public class Activity {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListClubsActivitiesResponse listClubsActivities(@Nonnull ListClubsActivitiesRequest request) {
+        return listClubsActivities(request, null);
+    }
+
+    /**
+     * List all activities
+     * 
+     * <p>Returns a list of ClubsActivities. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListClubsActivitiesResponse listClubsActivities(@Nonnull ListClubsActivitiesRequest request, @Nullable Options options) {
         RequestOperation<ListClubsActivitiesRequest, ListClubsActivitiesResponse> operation
-              = new ListClubsActivities.Sync(sdkConfiguration, _headers);
+              = new ListClubsActivities.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -327,8 +442,27 @@ public class Activity {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListLmsActivitiesResponse listLmsActivities(@Nonnull ListLmsActivitiesRequest request) {
+        return listLmsActivities(request, null);
+    }
+
+    /**
+     * List all activities
+     * 
+     * <p>Returns a list of LmsActivities. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListLmsActivitiesResponse listLmsActivities(@Nonnull ListLmsActivitiesRequest request, @Nullable Options options) {
         RequestOperation<ListLmsActivitiesRequest, ListLmsActivitiesResponse> operation
-              = new ListLmsActivities.Sync(sdkConfiguration, _headers);
+              = new ListLmsActivities.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -355,8 +489,23 @@ public class Activity {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchAtsActivityResponse patchAtsActivity(@Nonnull PatchAtsActivityRequest request) {
+        return patchAtsActivity(request, null);
+    }
+
+    /**
+     * Update an activity
+     * 
+     * <p>Updates the AtsActivity identified by `id`. Provide the unified AtsActivity fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchAtsActivityResponse patchAtsActivity(@Nonnull PatchAtsActivityRequest request, @Nullable Options options) {
         RequestOperation<PatchAtsActivityRequest, PatchAtsActivityResponse> operation
-              = new PatchAtsActivity.Sync(sdkConfiguration, _headers);
+              = new PatchAtsActivity.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -383,8 +532,23 @@ public class Activity {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchLmsActivityResponse patchLmsActivity(@Nonnull PatchLmsActivityRequest request) {
+        return patchLmsActivity(request, null);
+    }
+
+    /**
+     * Update an activity
+     * 
+     * <p>Updates the LmsActivity identified by `id`. Provide the unified LmsActivity fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchLmsActivityResponse patchLmsActivity(@Nonnull PatchLmsActivityRequest request, @Nullable Options options) {
         RequestOperation<PatchLmsActivityRequest, PatchLmsActivityResponse> operation
-              = new PatchLmsActivity.Sync(sdkConfiguration, _headers);
+              = new PatchLmsActivity.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -409,8 +573,22 @@ public class Activity {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveAtsActivityResponse removeAtsActivity(@Nonnull RemoveAtsActivityRequest request) {
+        return removeAtsActivity(request, null);
+    }
+
+    /**
+     * Remove an activity
+     * 
+     * <p>Deletes the AtsActivity identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveAtsActivityResponse removeAtsActivity(@Nonnull RemoveAtsActivityRequest request, @Nullable Options options) {
         RequestOperation<RemoveAtsActivityRequest, RemoveAtsActivityResponse> operation
-              = new RemoveAtsActivity.Sync(sdkConfiguration, _headers);
+              = new RemoveAtsActivity.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -435,8 +613,22 @@ public class Activity {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveLmsActivityResponse removeLmsActivity(@Nonnull RemoveLmsActivityRequest request) {
+        return removeLmsActivity(request, null);
+    }
+
+    /**
+     * Remove an activity
+     * 
+     * <p>Deletes the LmsActivity identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveLmsActivityResponse removeLmsActivity(@Nonnull RemoveLmsActivityRequest request, @Nullable Options options) {
         RequestOperation<RemoveLmsActivityRequest, RemoveLmsActivityResponse> operation
-              = new RemoveLmsActivity.Sync(sdkConfiguration, _headers);
+              = new RemoveLmsActivity.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -463,8 +655,23 @@ public class Activity {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateAtsActivityResponse updateAtsActivity(@Nonnull UpdateAtsActivityRequest request) {
+        return updateAtsActivity(request, null);
+    }
+
+    /**
+     * Update an activity
+     * 
+     * <p>Updates the AtsActivity identified by `id`. Provide the unified AtsActivity fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateAtsActivityResponse updateAtsActivity(@Nonnull UpdateAtsActivityRequest request, @Nullable Options options) {
         RequestOperation<UpdateAtsActivityRequest, UpdateAtsActivityResponse> operation
-              = new UpdateAtsActivity.Sync(sdkConfiguration, _headers);
+              = new UpdateAtsActivity.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -491,8 +698,23 @@ public class Activity {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateLmsActivityResponse updateLmsActivity(@Nonnull UpdateLmsActivityRequest request) {
+        return updateLmsActivity(request, null);
+    }
+
+    /**
+     * Update an activity
+     * 
+     * <p>Updates the LmsActivity identified by `id`. Provide the unified LmsActivity fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateLmsActivityResponse updateLmsActivity(@Nonnull UpdateLmsActivityRequest request, @Nullable Options options) {
         RequestOperation<UpdateLmsActivityRequest, UpdateLmsActivityResponse> operation
-              = new UpdateLmsActivity.Sync(sdkConfiguration, _headers);
+              = new UpdateLmsActivity.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

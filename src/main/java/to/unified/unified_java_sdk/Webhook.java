@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateUnifiedWebhookRequest;
 import to.unified.unified_java_sdk.models.operations.CreateUnifiedWebhookRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateUnifiedWebhookResponse;
@@ -47,6 +48,7 @@ import to.unified.unified_java_sdk.operations.UpdateUnifiedWebhook;
 import to.unified.unified_java_sdk.operations.UpdateUnifiedWebhookResume;
 import to.unified.unified_java_sdk.operations.UpdateUnifiedWebhookTrigger;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Webhook {
@@ -93,8 +95,24 @@ public class Webhook {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateUnifiedWebhookResponse createUnifiedWebhook(@Nonnull CreateUnifiedWebhookRequest request) {
+        return createUnifiedWebhook(request, null);
+    }
+
+    /**
+     * Create webhook subscription
+     * 
+     * <p>The data payload received by your server is described at https://docs.unified.to/unified/overview.
+     * The `interval` field can be set as low as 1 minute for paid accounts, and 60 minutes for free
+     * accounts.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateUnifiedWebhookResponse createUnifiedWebhook(@Nonnull CreateUnifiedWebhookRequest request, @Nullable Options options) {
         RequestOperation<CreateUnifiedWebhookRequest, CreateUnifiedWebhookResponse> operation
-              = new CreateUnifiedWebhook.Sync(sdkConfiguration, _headers);
+              = new CreateUnifiedWebhook.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -115,8 +133,20 @@ public class Webhook {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetUnifiedWebhookResponse getUnifiedWebhook(@Nonnull GetUnifiedWebhookRequest request) {
+        return getUnifiedWebhook(request, null);
+    }
+
+    /**
+     * Retrieve webhook by its ID
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetUnifiedWebhookResponse getUnifiedWebhook(@Nonnull GetUnifiedWebhookRequest request, @Nullable Options options) {
         RequestOperation<GetUnifiedWebhookRequest, GetUnifiedWebhookResponse> operation
-              = new GetUnifiedWebhook.Sync(sdkConfiguration, _headers);
+              = new GetUnifiedWebhook.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -137,8 +167,20 @@ public class Webhook {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListUnifiedWebhooksResponse listUnifiedWebhooks(@Nonnull ListUnifiedWebhooksRequest request) {
+        return listUnifiedWebhooks(request, null);
+    }
+
+    /**
+     * Returns all registered webhooks
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListUnifiedWebhooksResponse listUnifiedWebhooks(@Nonnull ListUnifiedWebhooksRequest request, @Nullable Options options) {
         RequestOperation<ListUnifiedWebhooksRequest, ListUnifiedWebhooksResponse> operation
-              = new ListUnifiedWebhooks.Sync(sdkConfiguration, _headers);
+              = new ListUnifiedWebhooks.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -159,8 +201,20 @@ public class Webhook {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchUnifiedWebhookResponse patchUnifiedWebhook(@Nonnull PatchUnifiedWebhookRequest request) {
+        return patchUnifiedWebhook(request, null);
+    }
+
+    /**
+     * Update webhook subscription
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchUnifiedWebhookResponse patchUnifiedWebhook(@Nonnull PatchUnifiedWebhookRequest request, @Nullable Options options) {
         RequestOperation<PatchUnifiedWebhookRequest, PatchUnifiedWebhookResponse> operation
-              = new PatchUnifiedWebhook.Sync(sdkConfiguration, _headers);
+              = new PatchUnifiedWebhook.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -209,8 +263,34 @@ public class Webhook {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchUnifiedWebhookResumeResponse patchUnifiedWebhookResume(@Nonnull PatchUnifiedWebhookResumeRequest request) {
+        return patchUnifiedWebhookResume(request, null);
+    }
+
+    /**
+     * Resume an unhealthy webhook subscription
+     * 
+     * <p>Sets is_healthy back to true and restarts the webhook. Fix the cause first (hook_url, connection
+     * auth); the connection must be healthy. Virtual: continues from where it stopped.
+     * 
+     * <p>A webhook that went unhealthy mid-initial-sync before resume was available restarts its initial
+     * sync, so deleting and recreating it is safer. Native: re-subscribes if the provider subscription is
+     * missing or expired. Events received while the webhook was unhealthy are not re-sent.
+     * 
+     * <p>Webhook sync (beta): continues from the stored sync token. Page cursors are not stored yet, so a
+     * resume can re-send some records. Virtual and initial-sync webhooks that have been unhealthy for more
+     * than 7 days cannot be resumed, because resuming would re-send every change since then; delete and
+     * recreate them instead.
+     * 
+     * <p>MCP Events subscriptions cannot be resumed; they are managed by their MCP client.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchUnifiedWebhookResumeResponse patchUnifiedWebhookResume(@Nonnull PatchUnifiedWebhookResumeRequest request, @Nullable Options options) {
         RequestOperation<PatchUnifiedWebhookResumeRequest, PatchUnifiedWebhookResumeResponse> operation
-              = new PatchUnifiedWebhookResume.Sync(sdkConfiguration, _headers);
+              = new PatchUnifiedWebhookResume.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -231,8 +311,20 @@ public class Webhook {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchUnifiedWebhookTriggerResponse patchUnifiedWebhookTrigger(@Nonnull PatchUnifiedWebhookTriggerRequest request) {
+        return patchUnifiedWebhookTrigger(request, null);
+    }
+
+    /**
+     * Trigger webhook
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchUnifiedWebhookTriggerResponse patchUnifiedWebhookTrigger(@Nonnull PatchUnifiedWebhookTriggerRequest request, @Nullable Options options) {
         RequestOperation<PatchUnifiedWebhookTriggerRequest, PatchUnifiedWebhookTriggerResponse> operation
-              = new PatchUnifiedWebhookTrigger.Sync(sdkConfiguration, _headers);
+              = new PatchUnifiedWebhookTrigger.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -253,8 +345,20 @@ public class Webhook {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveUnifiedWebhookResponse removeUnifiedWebhook(@Nonnull RemoveUnifiedWebhookRequest request) {
+        return removeUnifiedWebhook(request, null);
+    }
+
+    /**
+     * Remove webhook subscription
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveUnifiedWebhookResponse removeUnifiedWebhook(@Nonnull RemoveUnifiedWebhookRequest request, @Nullable Options options) {
         RequestOperation<RemoveUnifiedWebhookRequest, RemoveUnifiedWebhookResponse> operation
-              = new RemoveUnifiedWebhook.Sync(sdkConfiguration, _headers);
+              = new RemoveUnifiedWebhook.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -275,8 +379,20 @@ public class Webhook {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateUnifiedWebhookResponse updateUnifiedWebhook(@Nonnull UpdateUnifiedWebhookRequest request) {
+        return updateUnifiedWebhook(request, null);
+    }
+
+    /**
+     * Update webhook subscription
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateUnifiedWebhookResponse updateUnifiedWebhook(@Nonnull UpdateUnifiedWebhookRequest request, @Nullable Options options) {
         RequestOperation<UpdateUnifiedWebhookRequest, UpdateUnifiedWebhookResponse> operation
-              = new UpdateUnifiedWebhook.Sync(sdkConfiguration, _headers);
+              = new UpdateUnifiedWebhook.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -325,8 +441,34 @@ public class Webhook {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateUnifiedWebhookResumeResponse updateUnifiedWebhookResume(@Nonnull UpdateUnifiedWebhookResumeRequest request) {
+        return updateUnifiedWebhookResume(request, null);
+    }
+
+    /**
+     * Resume an unhealthy webhook subscription
+     * 
+     * <p>Sets is_healthy back to true and restarts the webhook. Fix the cause first (hook_url, connection
+     * auth); the connection must be healthy. Virtual: continues from where it stopped.
+     * 
+     * <p>A webhook that went unhealthy mid-initial-sync before resume was available restarts its initial
+     * sync, so deleting and recreating it is safer. Native: re-subscribes if the provider subscription is
+     * missing or expired. Events received while the webhook was unhealthy are not re-sent.
+     * 
+     * <p>Webhook sync (beta): continues from the stored sync token. Page cursors are not stored yet, so a
+     * resume can re-send some records. Virtual and initial-sync webhooks that have been unhealthy for more
+     * than 7 days cannot be resumed, because resuming would re-send every change since then; delete and
+     * recreate them instead.
+     * 
+     * <p>MCP Events subscriptions cannot be resumed; they are managed by their MCP client.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateUnifiedWebhookResumeResponse updateUnifiedWebhookResume(@Nonnull UpdateUnifiedWebhookResumeRequest request, @Nullable Options options) {
         RequestOperation<UpdateUnifiedWebhookResumeRequest, UpdateUnifiedWebhookResumeResponse> operation
-              = new UpdateUnifiedWebhookResume.Sync(sdkConfiguration, _headers);
+              = new UpdateUnifiedWebhookResume.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -347,8 +489,20 @@ public class Webhook {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateUnifiedWebhookTriggerResponse updateUnifiedWebhookTrigger(@Nonnull UpdateUnifiedWebhookTriggerRequest request) {
+        return updateUnifiedWebhookTrigger(request, null);
+    }
+
+    /**
+     * Trigger webhook
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateUnifiedWebhookTriggerResponse updateUnifiedWebhookTrigger(@Nonnull UpdateUnifiedWebhookTriggerRequest request, @Nullable Options options) {
         RequestOperation<UpdateUnifiedWebhookTriggerRequest, UpdateUnifiedWebhookTriggerResponse> operation
-              = new UpdateUnifiedWebhookTrigger.Sync(sdkConfiguration, _headers);
+              = new UpdateUnifiedWebhookTrigger.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

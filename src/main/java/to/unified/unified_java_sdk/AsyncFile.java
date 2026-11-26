@@ -6,17 +6,27 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
+import to.unified.unified_java_sdk.models.operations.CreatePrintingFileRequest;
 import to.unified.unified_java_sdk.models.operations.CreateStorageFileRequest;
+import to.unified.unified_java_sdk.models.operations.GetPrintingFileRequest;
 import to.unified.unified_java_sdk.models.operations.GetStorageFileRequest;
+import to.unified.unified_java_sdk.models.operations.ListPrintingFilesRequest;
 import to.unified.unified_java_sdk.models.operations.ListStorageFilesRequest;
 import to.unified.unified_java_sdk.models.operations.PatchStorageFileRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveStorageFileRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateStorageFileRequest;
+import to.unified.unified_java_sdk.models.operations.async.CreatePrintingFileRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreatePrintingFileResponse;
 import to.unified.unified_java_sdk.models.operations.async.CreateStorageFileRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.CreateStorageFileResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetPrintingFileRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetPrintingFileResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetStorageFileRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetStorageFileResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListPrintingFilesRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListPrintingFilesResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListStorageFilesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListStorageFilesResponse;
 import to.unified.unified_java_sdk.models.operations.async.PatchStorageFileRequestBuilder;
@@ -25,13 +35,17 @@ import to.unified.unified_java_sdk.models.operations.async.RemoveStorageFileRequ
 import to.unified.unified_java_sdk.models.operations.async.RemoveStorageFileResponse;
 import to.unified.unified_java_sdk.models.operations.async.UpdateStorageFileRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.UpdateStorageFileResponse;
+import to.unified.unified_java_sdk.operations.CreatePrintingFile;
 import to.unified.unified_java_sdk.operations.CreateStorageFile;
+import to.unified.unified_java_sdk.operations.GetPrintingFile;
 import to.unified.unified_java_sdk.operations.GetStorageFile;
+import to.unified.unified_java_sdk.operations.ListPrintingFiles;
 import to.unified.unified_java_sdk.operations.ListStorageFiles;
 import to.unified.unified_java_sdk.operations.PatchStorageFile;
 import to.unified.unified_java_sdk.operations.RemoveStorageFile;
 import to.unified.unified_java_sdk.operations.UpdateStorageFile;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncFile {
@@ -57,6 +71,49 @@ public class AsyncFile {
     /**
      * Create a file
      * 
+     * <p>Creates a PrintingFile. Provide the unified PrintingFile fields in the request body; they are mapped
+     * to the provider's API. Returns the created PrintingFile.
+     * 
+     * @return The async call builder
+     */
+    public CreatePrintingFileRequestBuilder createPrintingFile() {
+        return new CreatePrintingFileRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Create a file
+     * 
+     * <p>Creates a PrintingFile. Provide the unified PrintingFile fields in the request body; they are mapped
+     * to the provider's API. Returns the created PrintingFile.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<CreatePrintingFileResponse>} - The async response
+     */
+    public CompletableFuture<CreatePrintingFileResponse> createPrintingFile(@Nonnull CreatePrintingFileRequest request) {
+        return createPrintingFile(request, null);
+    }
+
+    /**
+     * Create a file
+     * 
+     * <p>Creates a PrintingFile. Provide the unified PrintingFile fields in the request body; they are mapped
+     * to the provider's API. Returns the created PrintingFile.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreatePrintingFileResponse>} - The async response
+     */
+    public CompletableFuture<CreatePrintingFileResponse> createPrintingFile(@Nonnull CreatePrintingFileRequest request, @Nullable Options options) {
+        AsyncRequestOperation<CreatePrintingFileRequest, CreatePrintingFileResponse> operation
+              = new CreatePrintingFile.Async(sdkConfiguration, options, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Create a file
+     * 
      * <p>Creates a StorageFile. Provide the unified StorageFile fields in the request body; they are mapped
      * to the provider's API. Returns the created StorageFile.
      * 
@@ -76,8 +133,65 @@ public class AsyncFile {
      * @return {@code CompletableFuture<CreateStorageFileResponse>} - The async response
      */
     public CompletableFuture<CreateStorageFileResponse> createStorageFile(@Nonnull CreateStorageFileRequest request) {
+        return createStorageFile(request, null);
+    }
+
+    /**
+     * Create a file
+     * 
+     * <p>Creates a StorageFile. Provide the unified StorageFile fields in the request body; they are mapped
+     * to the provider's API. Returns the created StorageFile.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateStorageFileResponse>} - The async response
+     */
+    public CompletableFuture<CreateStorageFileResponse> createStorageFile(@Nonnull CreateStorageFileRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateStorageFileRequest, CreateStorageFileResponse> operation
-              = new CreateStorageFile.Async(sdkConfiguration, _headers);
+              = new CreateStorageFile.Async(sdkConfiguration, options, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Retrieve a file
+     * 
+     * <p>Retrieves a single PrintingFile by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @return The async call builder
+     */
+    public GetPrintingFileRequestBuilder getPrintingFile() {
+        return new GetPrintingFileRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a file
+     * 
+     * <p>Retrieves a single PrintingFile by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<GetPrintingFileResponse>} - The async response
+     */
+    public CompletableFuture<GetPrintingFileResponse> getPrintingFile(@Nonnull GetPrintingFileRequest request) {
+        return getPrintingFile(request, null);
+    }
+
+    /**
+     * Retrieve a file
+     * 
+     * <p>Retrieves a single PrintingFile by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetPrintingFileResponse>} - The async response
+     */
+    public CompletableFuture<GetPrintingFileResponse> getPrintingFile(@Nonnull GetPrintingFileRequest request, @Nullable Options options) {
+        AsyncRequestOperation<GetPrintingFileRequest, GetPrintingFileResponse> operation
+              = new GetPrintingFile.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -105,8 +219,77 @@ public class AsyncFile {
      * @return {@code CompletableFuture<GetStorageFileResponse>} - The async response
      */
     public CompletableFuture<GetStorageFileResponse> getStorageFile(@Nonnull GetStorageFileRequest request) {
+        return getStorageFile(request, null);
+    }
+
+    /**
+     * Retrieve a file
+     * 
+     * <p>Retrieves a single StorageFile by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetStorageFileResponse>} - The async response
+     */
+    public CompletableFuture<GetStorageFileResponse> getStorageFile(@Nonnull GetStorageFileRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetStorageFileRequest, GetStorageFileResponse> operation
-              = new GetStorageFile.Async(sdkConfiguration, _headers);
+              = new GetStorageFile.Async(sdkConfiguration, options, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * List all files
+     * 
+     * <p>Returns a list of PrintingFiles. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @return The async call builder
+     */
+    public ListPrintingFilesRequestBuilder listPrintingFiles() {
+        return new ListPrintingFilesRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all files
+     * 
+     * <p>Returns a list of PrintingFiles. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<ListPrintingFilesResponse>} - The async response
+     */
+    public CompletableFuture<ListPrintingFilesResponse> listPrintingFiles(@Nonnull ListPrintingFilesRequest request) {
+        return listPrintingFiles(request, null);
+    }
+
+    /**
+     * List all files
+     * 
+     * <p>Returns a list of PrintingFiles. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListPrintingFilesResponse>} - The async response
+     */
+    public CompletableFuture<ListPrintingFilesResponse> listPrintingFiles(@Nonnull ListPrintingFilesRequest request, @Nullable Options options) {
+        AsyncRequestOperation<ListPrintingFilesRequest, ListPrintingFilesResponse> operation
+              = new ListPrintingFiles.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -142,8 +325,26 @@ public class AsyncFile {
      * @return {@code CompletableFuture<ListStorageFilesResponse>} - The async response
      */
     public CompletableFuture<ListStorageFilesResponse> listStorageFiles(@Nonnull ListStorageFilesRequest request) {
+        return listStorageFiles(request, null);
+    }
+
+    /**
+     * List all files
+     * 
+     * <p>Returns a list of StorageFiles. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListStorageFilesResponse>} - The async response
+     */
+    public CompletableFuture<ListStorageFilesResponse> listStorageFiles(@Nonnull ListStorageFilesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListStorageFilesRequest, ListStorageFilesResponse> operation
-              = new ListStorageFiles.Async(sdkConfiguration, _headers);
+              = new ListStorageFiles.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -171,8 +372,22 @@ public class AsyncFile {
      * @return {@code CompletableFuture<PatchStorageFileResponse>} - The async response
      */
     public CompletableFuture<PatchStorageFileResponse> patchStorageFile(@Nonnull PatchStorageFileRequest request) {
+        return patchStorageFile(request, null);
+    }
+
+    /**
+     * Update a file
+     * 
+     * <p>Updates the StorageFile identified by `id`. Provide the unified StorageFile fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchStorageFileResponse>} - The async response
+     */
+    public CompletableFuture<PatchStorageFileResponse> patchStorageFile(@Nonnull PatchStorageFileRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchStorageFileRequest, PatchStorageFileResponse> operation
-              = new PatchStorageFile.Async(sdkConfiguration, _headers);
+              = new PatchStorageFile.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -198,8 +413,21 @@ public class AsyncFile {
      * @return {@code CompletableFuture<RemoveStorageFileResponse>} - The async response
      */
     public CompletableFuture<RemoveStorageFileResponse> removeStorageFile(@Nonnull RemoveStorageFileRequest request) {
+        return removeStorageFile(request, null);
+    }
+
+    /**
+     * Remove a file
+     * 
+     * <p>Deletes the StorageFile identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveStorageFileResponse>} - The async response
+     */
+    public CompletableFuture<RemoveStorageFileResponse> removeStorageFile(@Nonnull RemoveStorageFileRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveStorageFileRequest, RemoveStorageFileResponse> operation
-              = new RemoveStorageFile.Async(sdkConfiguration, _headers);
+              = new RemoveStorageFile.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -227,8 +455,22 @@ public class AsyncFile {
      * @return {@code CompletableFuture<UpdateStorageFileResponse>} - The async response
      */
     public CompletableFuture<UpdateStorageFileResponse> updateStorageFile(@Nonnull UpdateStorageFileRequest request) {
+        return updateStorageFile(request, null);
+    }
+
+    /**
+     * Update a file
+     * 
+     * <p>Updates the StorageFile identified by `id`. Provide the unified StorageFile fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateStorageFileResponse>} - The async response
+     */
+    public CompletableFuture<UpdateStorageFileResponse> updateStorageFile(@Nonnull UpdateStorageFileRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateStorageFileRequest, UpdateStorageFileResponse> operation
-              = new UpdateStorageFile.Async(sdkConfiguration, _headers);
+              = new UpdateStorageFile.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

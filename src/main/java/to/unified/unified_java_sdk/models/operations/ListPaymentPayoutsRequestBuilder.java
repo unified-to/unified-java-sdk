@@ -6,18 +6,28 @@ package to.unified.unified_java_sdk.models.operations;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.ListPaymentPayouts;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListPaymentPayoutsRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private ListPaymentPayoutsRequest request;
+    private final Options.Builder optionsBuilder;
 
     public ListPaymentPayoutsRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public ListPaymentPayoutsRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public ListPaymentPayoutsRequestBuilder request(@Nonnull ListPaymentPayoutsRequest request) {
@@ -42,8 +52,9 @@ public class ListPaymentPayoutsRequestBuilder {
     * @return The response from the server.
     */
     public ListPaymentPayoutsResponse call() {
+        Options options = optionsBuilder.build();
         RequestOperation<ListPaymentPayoutsRequest, ListPaymentPayoutsResponse> operation
-              = new ListPaymentPayouts.Sync(sdkConfiguration, _headers);
+              = new ListPaymentPayouts.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

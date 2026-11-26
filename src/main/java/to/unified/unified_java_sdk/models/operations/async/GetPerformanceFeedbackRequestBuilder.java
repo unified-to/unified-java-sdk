@@ -6,20 +6,30 @@ package to.unified.unified_java_sdk.models.operations.async;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.GetPerformanceFeedbackRequest;
 import to.unified.unified_java_sdk.operations.GetPerformanceFeedback;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetPerformanceFeedbackRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private GetPerformanceFeedbackRequest request;
+    private final Options.Builder optionsBuilder;
 
     public GetPerformanceFeedbackRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public GetPerformanceFeedbackRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public GetPerformanceFeedbackRequestBuilder request(@Nonnull GetPerformanceFeedbackRequest request) {
@@ -44,8 +54,9 @@ public class GetPerformanceFeedbackRequestBuilder {
     * @return The response from the server.
     */
     public CompletableFuture<GetPerformanceFeedbackResponse> call() {
+        Options options = optionsBuilder.build();
         AsyncRequestOperation<GetPerformanceFeedbackRequest, GetPerformanceFeedbackResponse> operation
-              = new GetPerformanceFeedback.Async(sdkConfiguration, _headers);
+              = new GetPerformanceFeedback.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

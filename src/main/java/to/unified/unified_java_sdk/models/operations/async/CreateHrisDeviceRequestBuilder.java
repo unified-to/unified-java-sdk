@@ -6,20 +6,30 @@ package to.unified.unified_java_sdk.models.operations.async;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.CreateHrisDeviceRequest;
 import to.unified.unified_java_sdk.operations.CreateHrisDevice;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class CreateHrisDeviceRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private CreateHrisDeviceRequest request;
+    private final Options.Builder optionsBuilder;
 
     public CreateHrisDeviceRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public CreateHrisDeviceRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public CreateHrisDeviceRequestBuilder request(@Nonnull CreateHrisDeviceRequest request) {
@@ -44,8 +54,9 @@ public class CreateHrisDeviceRequestBuilder {
     * @return The response from the server.
     */
     public CompletableFuture<CreateHrisDeviceResponse> call() {
+        Options options = optionsBuilder.build();
         AsyncRequestOperation<CreateHrisDeviceRequest, CreateHrisDeviceResponse> operation
-              = new CreateHrisDevice.Async(sdkConfiguration, _headers);
+              = new CreateHrisDevice.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

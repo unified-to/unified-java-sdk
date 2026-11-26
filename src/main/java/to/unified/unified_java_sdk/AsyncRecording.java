@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateUcRecordingRequest;
 import to.unified.unified_java_sdk.models.operations.GetCalendarRecordingRequest;
@@ -40,6 +41,7 @@ import to.unified.unified_java_sdk.operations.PatchUcRecording;
 import to.unified.unified_java_sdk.operations.RemoveUcRecording;
 import to.unified.unified_java_sdk.operations.UpdateUcRecording;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncRecording {
@@ -84,8 +86,22 @@ public class AsyncRecording {
      * @return {@code CompletableFuture<CreateUcRecordingResponse>} - The async response
      */
     public CompletableFuture<CreateUcRecordingResponse> createUcRecording(@Nonnull CreateUcRecordingRequest request) {
+        return createUcRecording(request, null);
+    }
+
+    /**
+     * Create a recording
+     * 
+     * <p>Creates a UcRecording. Provide the unified UcRecording fields in the request body; they are mapped
+     * to the provider's API. Returns the created UcRecording.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateUcRecordingResponse>} - The async response
+     */
+    public CompletableFuture<CreateUcRecordingResponse> createUcRecording(@Nonnull CreateUcRecordingRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateUcRecordingRequest, CreateUcRecordingResponse> operation
-              = new CreateUcRecording.Async(sdkConfiguration, _headers);
+              = new CreateUcRecording.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -113,8 +129,22 @@ public class AsyncRecording {
      * @return {@code CompletableFuture<GetCalendarRecordingResponse>} - The async response
      */
     public CompletableFuture<GetCalendarRecordingResponse> getCalendarRecording(@Nonnull GetCalendarRecordingRequest request) {
+        return getCalendarRecording(request, null);
+    }
+
+    /**
+     * Retrieve a recording
+     * 
+     * <p>Retrieves a single CalendarRecording by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetCalendarRecordingResponse>} - The async response
+     */
+    public CompletableFuture<GetCalendarRecordingResponse> getCalendarRecording(@Nonnull GetCalendarRecordingRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetCalendarRecordingRequest, GetCalendarRecordingResponse> operation
-              = new GetCalendarRecording.Async(sdkConfiguration, _headers);
+              = new GetCalendarRecording.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -142,8 +172,22 @@ public class AsyncRecording {
      * @return {@code CompletableFuture<GetUcRecordingResponse>} - The async response
      */
     public CompletableFuture<GetUcRecordingResponse> getUcRecording(@Nonnull GetUcRecordingRequest request) {
+        return getUcRecording(request, null);
+    }
+
+    /**
+     * Retrieve a recording
+     * 
+     * <p>Retrieves a single UcRecording by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetUcRecordingResponse>} - The async response
+     */
+    public CompletableFuture<GetUcRecordingResponse> getUcRecording(@Nonnull GetUcRecordingRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetUcRecordingRequest, GetUcRecordingResponse> operation
-              = new GetUcRecording.Async(sdkConfiguration, _headers);
+              = new GetUcRecording.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -179,8 +223,26 @@ public class AsyncRecording {
      * @return {@code CompletableFuture<ListCalendarRecordingsResponse>} - The async response
      */
     public CompletableFuture<ListCalendarRecordingsResponse> listCalendarRecordings(@Nonnull ListCalendarRecordingsRequest request) {
+        return listCalendarRecordings(request, null);
+    }
+
+    /**
+     * List all recordings
+     * 
+     * <p>Returns a list of CalendarRecordings. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListCalendarRecordingsResponse>} - The async response
+     */
+    public CompletableFuture<ListCalendarRecordingsResponse> listCalendarRecordings(@Nonnull ListCalendarRecordingsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListCalendarRecordingsRequest, ListCalendarRecordingsResponse> operation
-              = new ListCalendarRecordings.Async(sdkConfiguration, _headers);
+              = new ListCalendarRecordings.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -216,8 +278,26 @@ public class AsyncRecording {
      * @return {@code CompletableFuture<ListUcRecordingsResponse>} - The async response
      */
     public CompletableFuture<ListUcRecordingsResponse> listUcRecordings(@Nonnull ListUcRecordingsRequest request) {
+        return listUcRecordings(request, null);
+    }
+
+    /**
+     * List all recordings
+     * 
+     * <p>Returns a list of UcRecordings. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListUcRecordingsResponse>} - The async response
+     */
+    public CompletableFuture<ListUcRecordingsResponse> listUcRecordings(@Nonnull ListUcRecordingsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListUcRecordingsRequest, ListUcRecordingsResponse> operation
-              = new ListUcRecordings.Async(sdkConfiguration, _headers);
+              = new ListUcRecordings.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -245,8 +325,22 @@ public class AsyncRecording {
      * @return {@code CompletableFuture<PatchUcRecordingResponse>} - The async response
      */
     public CompletableFuture<PatchUcRecordingResponse> patchUcRecording(@Nonnull PatchUcRecordingRequest request) {
+        return patchUcRecording(request, null);
+    }
+
+    /**
+     * Update a recording
+     * 
+     * <p>Updates the UcRecording identified by `id`. Provide the unified UcRecording fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchUcRecordingResponse>} - The async response
+     */
+    public CompletableFuture<PatchUcRecordingResponse> patchUcRecording(@Nonnull PatchUcRecordingRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchUcRecordingRequest, PatchUcRecordingResponse> operation
-              = new PatchUcRecording.Async(sdkConfiguration, _headers);
+              = new PatchUcRecording.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -272,8 +366,21 @@ public class AsyncRecording {
      * @return {@code CompletableFuture<RemoveUcRecordingResponse>} - The async response
      */
     public CompletableFuture<RemoveUcRecordingResponse> removeUcRecording(@Nonnull RemoveUcRecordingRequest request) {
+        return removeUcRecording(request, null);
+    }
+
+    /**
+     * Remove a recording
+     * 
+     * <p>Deletes the UcRecording identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveUcRecordingResponse>} - The async response
+     */
+    public CompletableFuture<RemoveUcRecordingResponse> removeUcRecording(@Nonnull RemoveUcRecordingRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveUcRecordingRequest, RemoveUcRecordingResponse> operation
-              = new RemoveUcRecording.Async(sdkConfiguration, _headers);
+              = new RemoveUcRecording.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -301,8 +408,22 @@ public class AsyncRecording {
      * @return {@code CompletableFuture<UpdateUcRecordingResponse>} - The async response
      */
     public CompletableFuture<UpdateUcRecordingResponse> updateUcRecording(@Nonnull UpdateUcRecordingRequest request) {
+        return updateUcRecording(request, null);
+    }
+
+    /**
+     * Update a recording
+     * 
+     * <p>Updates the UcRecording identified by `id`. Provide the unified UcRecording fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateUcRecordingResponse>} - The async response
+     */
+    public CompletableFuture<UpdateUcRecordingResponse> updateUcRecording(@Nonnull UpdateUcRecordingRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateUcRecordingRequest, UpdateUcRecordingResponse> operation
-              = new UpdateUcRecording.Async(sdkConfiguration, _headers);
+              = new UpdateUcRecording.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

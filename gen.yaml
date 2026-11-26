@@ -31,7 +31,7 @@ generation:
   baseServerURL: ""
   flattenGlobalSecurity: true
 java:
-  version: 0.50.29
+  version: 0.50.30
   additionalDependencies: []
   additionalPlugins: []
   artifactID: unified-java-sdk
@@ -46,6 +46,7 @@ java:
   enableFormatting: false
   enableSlf4jLogging: false
   enableStreamingUploads: false
+  enforceOperationTimeout: false
   explicitDocImports: false
   flattenGlobalSecurity: false
   forwardCompatibleEnumsByDefault: false

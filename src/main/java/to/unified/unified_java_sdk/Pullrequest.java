@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateRepoPullrequestRequest;
 import to.unified.unified_java_sdk.models.operations.CreateRepoPullrequestRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateRepoPullrequestResponse;
@@ -31,6 +32,7 @@ import to.unified.unified_java_sdk.operations.PatchRepoPullrequest;
 import to.unified.unified_java_sdk.operations.RemoveRepoPullrequest;
 import to.unified.unified_java_sdk.operations.UpdateRepoPullrequest;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Pullrequest {
@@ -75,8 +77,23 @@ public class Pullrequest {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateRepoPullrequestResponse createRepoPullrequest(@Nonnull CreateRepoPullrequestRequest request) {
+        return createRepoPullrequest(request, null);
+    }
+
+    /**
+     * Create a pullrequest
+     * 
+     * <p>Creates a RepoPullrequest. Provide the unified RepoPullrequest fields in the request body; they are
+     * mapped to the provider's API. Returns the created RepoPullrequest.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateRepoPullrequestResponse createRepoPullrequest(@Nonnull CreateRepoPullrequestRequest request, @Nullable Options options) {
         RequestOperation<CreateRepoPullrequestRequest, CreateRepoPullrequestResponse> operation
-              = new CreateRepoPullrequest.Sync(sdkConfiguration, _headers);
+              = new CreateRepoPullrequest.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -103,8 +120,23 @@ public class Pullrequest {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetRepoPullrequestResponse getRepoPullrequest(@Nonnull GetRepoPullrequestRequest request) {
+        return getRepoPullrequest(request, null);
+    }
+
+    /**
+     * Retrieve a pullrequest
+     * 
+     * <p>Retrieves a single RepoPullrequest by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetRepoPullrequestResponse getRepoPullrequest(@Nonnull GetRepoPullrequestRequest request, @Nullable Options options) {
         RequestOperation<GetRepoPullrequestRequest, GetRepoPullrequestResponse> operation
-              = new GetRepoPullrequest.Sync(sdkConfiguration, _headers);
+              = new GetRepoPullrequest.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -139,8 +171,27 @@ public class Pullrequest {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListRepoPullrequestsResponse listRepoPullrequests(@Nonnull ListRepoPullrequestsRequest request) {
+        return listRepoPullrequests(request, null);
+    }
+
+    /**
+     * List all pullrequests
+     * 
+     * <p>Returns a list of RepoPullrequests. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListRepoPullrequestsResponse listRepoPullrequests(@Nonnull ListRepoPullrequestsRequest request, @Nullable Options options) {
         RequestOperation<ListRepoPullrequestsRequest, ListRepoPullrequestsResponse> operation
-              = new ListRepoPullrequests.Sync(sdkConfiguration, _headers);
+              = new ListRepoPullrequests.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +218,23 @@ public class Pullrequest {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchRepoPullrequestResponse patchRepoPullrequest(@Nonnull PatchRepoPullrequestRequest request) {
+        return patchRepoPullrequest(request, null);
+    }
+
+    /**
+     * Update a pullrequest
+     * 
+     * <p>Updates the RepoPullrequest identified by `id`. Provide the unified RepoPullrequest fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchRepoPullrequestResponse patchRepoPullrequest(@Nonnull PatchRepoPullrequestRequest request, @Nullable Options options) {
         RequestOperation<PatchRepoPullrequestRequest, PatchRepoPullrequestResponse> operation
-              = new PatchRepoPullrequest.Sync(sdkConfiguration, _headers);
+              = new PatchRepoPullrequest.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -193,8 +259,22 @@ public class Pullrequest {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveRepoPullrequestResponse removeRepoPullrequest(@Nonnull RemoveRepoPullrequestRequest request) {
+        return removeRepoPullrequest(request, null);
+    }
+
+    /**
+     * Remove a pullrequest
+     * 
+     * <p>Deletes the RepoPullrequest identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveRepoPullrequestResponse removeRepoPullrequest(@Nonnull RemoveRepoPullrequestRequest request, @Nullable Options options) {
         RequestOperation<RemoveRepoPullrequestRequest, RemoveRepoPullrequestResponse> operation
-              = new RemoveRepoPullrequest.Sync(sdkConfiguration, _headers);
+              = new RemoveRepoPullrequest.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -221,8 +301,23 @@ public class Pullrequest {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateRepoPullrequestResponse updateRepoPullrequest(@Nonnull UpdateRepoPullrequestRequest request) {
+        return updateRepoPullrequest(request, null);
+    }
+
+    /**
+     * Update a pullrequest
+     * 
+     * <p>Updates the RepoPullrequest identified by `id`. Provide the unified RepoPullrequest fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateRepoPullrequestResponse updateRepoPullrequest(@Nonnull UpdateRepoPullrequestRequest request, @Nullable Options options) {
         RequestOperation<UpdateRepoPullrequestRequest, UpdateRepoPullrequestResponse> operation
-              = new UpdateRepoPullrequest.Sync(sdkConfiguration, _headers);
+              = new UpdateRepoPullrequest.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

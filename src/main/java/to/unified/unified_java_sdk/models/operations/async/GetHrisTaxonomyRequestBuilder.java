@@ -6,20 +6,30 @@ package to.unified.unified_java_sdk.models.operations.async;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.GetHrisTaxonomyRequest;
 import to.unified.unified_java_sdk.operations.GetHrisTaxonomy;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetHrisTaxonomyRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private GetHrisTaxonomyRequest request;
+    private final Options.Builder optionsBuilder;
 
     public GetHrisTaxonomyRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public GetHrisTaxonomyRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public GetHrisTaxonomyRequestBuilder request(@Nonnull GetHrisTaxonomyRequest request) {
@@ -44,8 +54,9 @@ public class GetHrisTaxonomyRequestBuilder {
     * @return The response from the server.
     */
     public CompletableFuture<GetHrisTaxonomyResponse> call() {
+        Options options = optionsBuilder.build();
         AsyncRequestOperation<GetHrisTaxonomyRequest, GetHrisTaxonomyResponse> operation
-              = new GetHrisTaxonomy.Async(sdkConfiguration, _headers);
+              = new GetHrisTaxonomy.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateAdsOrganizationRequest;
 import to.unified.unified_java_sdk.models.operations.CreateGenaiOrganizationRequest;
@@ -88,6 +89,7 @@ import to.unified.unified_java_sdk.operations.UpdateAdsOrganization;
 import to.unified.unified_java_sdk.operations.UpdateGenaiOrganization;
 import to.unified.unified_java_sdk.operations.UpdateRepoOrganization;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncOrganization {
@@ -132,8 +134,22 @@ public class AsyncOrganization {
      * @return {@code CompletableFuture<CreateAdsOrganizationResponse>} - The async response
      */
     public CompletableFuture<CreateAdsOrganizationResponse> createAdsOrganization(@Nonnull CreateAdsOrganizationRequest request) {
+        return createAdsOrganization(request, null);
+    }
+
+    /**
+     * Create an organization
+     * 
+     * <p>Creates a AdsOrganization. Provide the unified AdsOrganization fields in the request body; they are
+     * mapped to the provider's API. Returns the created AdsOrganization.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateAdsOrganizationResponse>} - The async response
+     */
+    public CompletableFuture<CreateAdsOrganizationResponse> createAdsOrganization(@Nonnull CreateAdsOrganizationRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateAdsOrganizationRequest, CreateAdsOrganizationResponse> operation
-              = new CreateAdsOrganization.Async(sdkConfiguration, _headers);
+              = new CreateAdsOrganization.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -161,8 +177,22 @@ public class AsyncOrganization {
      * @return {@code CompletableFuture<CreateGenaiOrganizationResponse>} - The async response
      */
     public CompletableFuture<CreateGenaiOrganizationResponse> createGenaiOrganization(@Nonnull CreateGenaiOrganizationRequest request) {
+        return createGenaiOrganization(request, null);
+    }
+
+    /**
+     * Create an organization
+     * 
+     * <p>Creates a GenaiOrganization. Provide the unified GenaiOrganization fields in the request body; they
+     * are mapped to the provider's API. Returns the created GenaiOrganization.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateGenaiOrganizationResponse>} - The async response
+     */
+    public CompletableFuture<CreateGenaiOrganizationResponse> createGenaiOrganization(@Nonnull CreateGenaiOrganizationRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateGenaiOrganizationRequest, CreateGenaiOrganizationResponse> operation
-              = new CreateGenaiOrganization.Async(sdkConfiguration, _headers);
+              = new CreateGenaiOrganization.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -190,8 +220,22 @@ public class AsyncOrganization {
      * @return {@code CompletableFuture<CreateRepoOrganizationResponse>} - The async response
      */
     public CompletableFuture<CreateRepoOrganizationResponse> createRepoOrganization(@Nonnull CreateRepoOrganizationRequest request) {
+        return createRepoOrganization(request, null);
+    }
+
+    /**
+     * Create an organization
+     * 
+     * <p>Creates a RepoOrganization. Provide the unified RepoOrganization fields in the request body; they
+     * are mapped to the provider's API. Returns the created RepoOrganization.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateRepoOrganizationResponse>} - The async response
+     */
+    public CompletableFuture<CreateRepoOrganizationResponse> createRepoOrganization(@Nonnull CreateRepoOrganizationRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateRepoOrganizationRequest, CreateRepoOrganizationResponse> operation
-              = new CreateRepoOrganization.Async(sdkConfiguration, _headers);
+              = new CreateRepoOrganization.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -219,8 +263,22 @@ public class AsyncOrganization {
      * @return {@code CompletableFuture<GetAccountingOrganizationResponse>} - The async response
      */
     public CompletableFuture<GetAccountingOrganizationResponse> getAccountingOrganization(@Nonnull GetAccountingOrganizationRequest request) {
+        return getAccountingOrganization(request, null);
+    }
+
+    /**
+     * Retrieve an organization
+     * 
+     * <p>Retrieves a single AccountingOrganization by its `id`. Obtain `id` values from the corresponding
+     * list endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetAccountingOrganizationResponse>} - The async response
+     */
+    public CompletableFuture<GetAccountingOrganizationResponse> getAccountingOrganization(@Nonnull GetAccountingOrganizationRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetAccountingOrganizationRequest, GetAccountingOrganizationResponse> operation
-              = new GetAccountingOrganization.Async(sdkConfiguration, _headers);
+              = new GetAccountingOrganization.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -248,8 +306,22 @@ public class AsyncOrganization {
      * @return {@code CompletableFuture<GetAdsOrganizationResponse>} - The async response
      */
     public CompletableFuture<GetAdsOrganizationResponse> getAdsOrganization(@Nonnull GetAdsOrganizationRequest request) {
+        return getAdsOrganization(request, null);
+    }
+
+    /**
+     * Retrieve an organization
+     * 
+     * <p>Retrieves a single AdsOrganization by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetAdsOrganizationResponse>} - The async response
+     */
+    public CompletableFuture<GetAdsOrganizationResponse> getAdsOrganization(@Nonnull GetAdsOrganizationRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetAdsOrganizationRequest, GetAdsOrganizationResponse> operation
-              = new GetAdsOrganization.Async(sdkConfiguration, _headers);
+              = new GetAdsOrganization.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -277,8 +349,22 @@ public class AsyncOrganization {
      * @return {@code CompletableFuture<GetGenaiOrganizationResponse>} - The async response
      */
     public CompletableFuture<GetGenaiOrganizationResponse> getGenaiOrganization(@Nonnull GetGenaiOrganizationRequest request) {
+        return getGenaiOrganization(request, null);
+    }
+
+    /**
+     * Retrieve an organization
+     * 
+     * <p>Retrieves a single GenaiOrganization by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetGenaiOrganizationResponse>} - The async response
+     */
+    public CompletableFuture<GetGenaiOrganizationResponse> getGenaiOrganization(@Nonnull GetGenaiOrganizationRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetGenaiOrganizationRequest, GetGenaiOrganizationResponse> operation
-              = new GetGenaiOrganization.Async(sdkConfiguration, _headers);
+              = new GetGenaiOrganization.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -306,8 +392,22 @@ public class AsyncOrganization {
      * @return {@code CompletableFuture<GetRepoOrganizationResponse>} - The async response
      */
     public CompletableFuture<GetRepoOrganizationResponse> getRepoOrganization(@Nonnull GetRepoOrganizationRequest request) {
+        return getRepoOrganization(request, null);
+    }
+
+    /**
+     * Retrieve an organization
+     * 
+     * <p>Retrieves a single RepoOrganization by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetRepoOrganizationResponse>} - The async response
+     */
+    public CompletableFuture<GetRepoOrganizationResponse> getRepoOrganization(@Nonnull GetRepoOrganizationRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetRepoOrganizationRequest, GetRepoOrganizationResponse> operation
-              = new GetRepoOrganization.Async(sdkConfiguration, _headers);
+              = new GetRepoOrganization.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -343,8 +443,26 @@ public class AsyncOrganization {
      * @return {@code CompletableFuture<ListAccountingOrganizationsResponse>} - The async response
      */
     public CompletableFuture<ListAccountingOrganizationsResponse> listAccountingOrganizations(@Nonnull ListAccountingOrganizationsRequest request) {
+        return listAccountingOrganizations(request, null);
+    }
+
+    /**
+     * List all organizations
+     * 
+     * <p>Returns a list of AccountingOrganizations. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListAccountingOrganizationsResponse>} - The async response
+     */
+    public CompletableFuture<ListAccountingOrganizationsResponse> listAccountingOrganizations(@Nonnull ListAccountingOrganizationsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListAccountingOrganizationsRequest, ListAccountingOrganizationsResponse> operation
-              = new ListAccountingOrganizations.Async(sdkConfiguration, _headers);
+              = new ListAccountingOrganizations.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -380,8 +498,26 @@ public class AsyncOrganization {
      * @return {@code CompletableFuture<ListAdsOrganizationsResponse>} - The async response
      */
     public CompletableFuture<ListAdsOrganizationsResponse> listAdsOrganizations(@Nonnull ListAdsOrganizationsRequest request) {
+        return listAdsOrganizations(request, null);
+    }
+
+    /**
+     * List all organizations
+     * 
+     * <p>Returns a list of AdsOrganizations. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListAdsOrganizationsResponse>} - The async response
+     */
+    public CompletableFuture<ListAdsOrganizationsResponse> listAdsOrganizations(@Nonnull ListAdsOrganizationsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListAdsOrganizationsRequest, ListAdsOrganizationsResponse> operation
-              = new ListAdsOrganizations.Async(sdkConfiguration, _headers);
+              = new ListAdsOrganizations.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -417,8 +553,26 @@ public class AsyncOrganization {
      * @return {@code CompletableFuture<ListGenaiOrganizationsResponse>} - The async response
      */
     public CompletableFuture<ListGenaiOrganizationsResponse> listGenaiOrganizations(@Nonnull ListGenaiOrganizationsRequest request) {
+        return listGenaiOrganizations(request, null);
+    }
+
+    /**
+     * List all organizations
+     * 
+     * <p>Returns a list of GenaiOrganizations. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListGenaiOrganizationsResponse>} - The async response
+     */
+    public CompletableFuture<ListGenaiOrganizationsResponse> listGenaiOrganizations(@Nonnull ListGenaiOrganizationsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListGenaiOrganizationsRequest, ListGenaiOrganizationsResponse> operation
-              = new ListGenaiOrganizations.Async(sdkConfiguration, _headers);
+              = new ListGenaiOrganizations.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -454,8 +608,26 @@ public class AsyncOrganization {
      * @return {@code CompletableFuture<ListRepoOrganizationsResponse>} - The async response
      */
     public CompletableFuture<ListRepoOrganizationsResponse> listRepoOrganizations(@Nonnull ListRepoOrganizationsRequest request) {
+        return listRepoOrganizations(request, null);
+    }
+
+    /**
+     * List all organizations
+     * 
+     * <p>Returns a list of RepoOrganizations. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListRepoOrganizationsResponse>} - The async response
+     */
+    public CompletableFuture<ListRepoOrganizationsResponse> listRepoOrganizations(@Nonnull ListRepoOrganizationsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListRepoOrganizationsRequest, ListRepoOrganizationsResponse> operation
-              = new ListRepoOrganizations.Async(sdkConfiguration, _headers);
+              = new ListRepoOrganizations.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -483,8 +655,22 @@ public class AsyncOrganization {
      * @return {@code CompletableFuture<PatchAdsOrganizationResponse>} - The async response
      */
     public CompletableFuture<PatchAdsOrganizationResponse> patchAdsOrganization(@Nonnull PatchAdsOrganizationRequest request) {
+        return patchAdsOrganization(request, null);
+    }
+
+    /**
+     * Update an organization
+     * 
+     * <p>Updates the AdsOrganization identified by `id`. Provide the unified AdsOrganization fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchAdsOrganizationResponse>} - The async response
+     */
+    public CompletableFuture<PatchAdsOrganizationResponse> patchAdsOrganization(@Nonnull PatchAdsOrganizationRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchAdsOrganizationRequest, PatchAdsOrganizationResponse> operation
-              = new PatchAdsOrganization.Async(sdkConfiguration, _headers);
+              = new PatchAdsOrganization.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -512,8 +698,22 @@ public class AsyncOrganization {
      * @return {@code CompletableFuture<PatchGenaiOrganizationResponse>} - The async response
      */
     public CompletableFuture<PatchGenaiOrganizationResponse> patchGenaiOrganization(@Nonnull PatchGenaiOrganizationRequest request) {
+        return patchGenaiOrganization(request, null);
+    }
+
+    /**
+     * Update an organization
+     * 
+     * <p>Updates the GenaiOrganization identified by `id`. Provide the unified GenaiOrganization fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchGenaiOrganizationResponse>} - The async response
+     */
+    public CompletableFuture<PatchGenaiOrganizationResponse> patchGenaiOrganization(@Nonnull PatchGenaiOrganizationRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchGenaiOrganizationRequest, PatchGenaiOrganizationResponse> operation
-              = new PatchGenaiOrganization.Async(sdkConfiguration, _headers);
+              = new PatchGenaiOrganization.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -541,8 +741,22 @@ public class AsyncOrganization {
      * @return {@code CompletableFuture<PatchRepoOrganizationResponse>} - The async response
      */
     public CompletableFuture<PatchRepoOrganizationResponse> patchRepoOrganization(@Nonnull PatchRepoOrganizationRequest request) {
+        return patchRepoOrganization(request, null);
+    }
+
+    /**
+     * Update an organization
+     * 
+     * <p>Updates the RepoOrganization identified by `id`. Provide the unified RepoOrganization fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchRepoOrganizationResponse>} - The async response
+     */
+    public CompletableFuture<PatchRepoOrganizationResponse> patchRepoOrganization(@Nonnull PatchRepoOrganizationRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchRepoOrganizationRequest, PatchRepoOrganizationResponse> operation
-              = new PatchRepoOrganization.Async(sdkConfiguration, _headers);
+              = new PatchRepoOrganization.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -568,8 +782,21 @@ public class AsyncOrganization {
      * @return {@code CompletableFuture<RemoveAdsOrganizationResponse>} - The async response
      */
     public CompletableFuture<RemoveAdsOrganizationResponse> removeAdsOrganization(@Nonnull RemoveAdsOrganizationRequest request) {
+        return removeAdsOrganization(request, null);
+    }
+
+    /**
+     * Remove an organization
+     * 
+     * <p>Deletes the AdsOrganization identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveAdsOrganizationResponse>} - The async response
+     */
+    public CompletableFuture<RemoveAdsOrganizationResponse> removeAdsOrganization(@Nonnull RemoveAdsOrganizationRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveAdsOrganizationRequest, RemoveAdsOrganizationResponse> operation
-              = new RemoveAdsOrganization.Async(sdkConfiguration, _headers);
+              = new RemoveAdsOrganization.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -595,8 +822,21 @@ public class AsyncOrganization {
      * @return {@code CompletableFuture<RemoveGenaiOrganizationResponse>} - The async response
      */
     public CompletableFuture<RemoveGenaiOrganizationResponse> removeGenaiOrganization(@Nonnull RemoveGenaiOrganizationRequest request) {
+        return removeGenaiOrganization(request, null);
+    }
+
+    /**
+     * Remove an organization
+     * 
+     * <p>Deletes the GenaiOrganization identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveGenaiOrganizationResponse>} - The async response
+     */
+    public CompletableFuture<RemoveGenaiOrganizationResponse> removeGenaiOrganization(@Nonnull RemoveGenaiOrganizationRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveGenaiOrganizationRequest, RemoveGenaiOrganizationResponse> operation
-              = new RemoveGenaiOrganization.Async(sdkConfiguration, _headers);
+              = new RemoveGenaiOrganization.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -622,8 +862,21 @@ public class AsyncOrganization {
      * @return {@code CompletableFuture<RemoveRepoOrganizationResponse>} - The async response
      */
     public CompletableFuture<RemoveRepoOrganizationResponse> removeRepoOrganization(@Nonnull RemoveRepoOrganizationRequest request) {
+        return removeRepoOrganization(request, null);
+    }
+
+    /**
+     * Remove an organization
+     * 
+     * <p>Deletes the RepoOrganization identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveRepoOrganizationResponse>} - The async response
+     */
+    public CompletableFuture<RemoveRepoOrganizationResponse> removeRepoOrganization(@Nonnull RemoveRepoOrganizationRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveRepoOrganizationRequest, RemoveRepoOrganizationResponse> operation
-              = new RemoveRepoOrganization.Async(sdkConfiguration, _headers);
+              = new RemoveRepoOrganization.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -651,8 +904,22 @@ public class AsyncOrganization {
      * @return {@code CompletableFuture<UpdateAdsOrganizationResponse>} - The async response
      */
     public CompletableFuture<UpdateAdsOrganizationResponse> updateAdsOrganization(@Nonnull UpdateAdsOrganizationRequest request) {
+        return updateAdsOrganization(request, null);
+    }
+
+    /**
+     * Update an organization
+     * 
+     * <p>Updates the AdsOrganization identified by `id`. Provide the unified AdsOrganization fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateAdsOrganizationResponse>} - The async response
+     */
+    public CompletableFuture<UpdateAdsOrganizationResponse> updateAdsOrganization(@Nonnull UpdateAdsOrganizationRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateAdsOrganizationRequest, UpdateAdsOrganizationResponse> operation
-              = new UpdateAdsOrganization.Async(sdkConfiguration, _headers);
+              = new UpdateAdsOrganization.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -680,8 +947,22 @@ public class AsyncOrganization {
      * @return {@code CompletableFuture<UpdateGenaiOrganizationResponse>} - The async response
      */
     public CompletableFuture<UpdateGenaiOrganizationResponse> updateGenaiOrganization(@Nonnull UpdateGenaiOrganizationRequest request) {
+        return updateGenaiOrganization(request, null);
+    }
+
+    /**
+     * Update an organization
+     * 
+     * <p>Updates the GenaiOrganization identified by `id`. Provide the unified GenaiOrganization fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateGenaiOrganizationResponse>} - The async response
+     */
+    public CompletableFuture<UpdateGenaiOrganizationResponse> updateGenaiOrganization(@Nonnull UpdateGenaiOrganizationRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateGenaiOrganizationRequest, UpdateGenaiOrganizationResponse> operation
-              = new UpdateGenaiOrganization.Async(sdkConfiguration, _headers);
+              = new UpdateGenaiOrganization.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -709,8 +990,22 @@ public class AsyncOrganization {
      * @return {@code CompletableFuture<UpdateRepoOrganizationResponse>} - The async response
      */
     public CompletableFuture<UpdateRepoOrganizationResponse> updateRepoOrganization(@Nonnull UpdateRepoOrganizationRequest request) {
+        return updateRepoOrganization(request, null);
+    }
+
+    /**
+     * Update an organization
+     * 
+     * <p>Updates the RepoOrganization identified by `id`. Provide the unified RepoOrganization fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateRepoOrganizationResponse>} - The async response
+     */
+    public CompletableFuture<UpdateRepoOrganizationResponse> updateRepoOrganization(@Nonnull UpdateRepoOrganizationRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateRepoOrganizationRequest, UpdateRepoOrganizationResponse> operation
-              = new UpdateRepoOrganization.Async(sdkConfiguration, _headers);
+              = new UpdateRepoOrganization.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

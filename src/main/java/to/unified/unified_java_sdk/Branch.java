@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateRepoBranchRequest;
 import to.unified.unified_java_sdk.models.operations.CreateRepoBranchRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateRepoBranchResponse;
@@ -31,6 +32,7 @@ import to.unified.unified_java_sdk.operations.PatchRepoBranch;
 import to.unified.unified_java_sdk.operations.RemoveRepoBranch;
 import to.unified.unified_java_sdk.operations.UpdateRepoBranch;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Branch {
@@ -75,8 +77,23 @@ public class Branch {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateRepoBranchResponse createRepoBranch(@Nonnull CreateRepoBranchRequest request) {
+        return createRepoBranch(request, null);
+    }
+
+    /**
+     * Create a branch
+     * 
+     * <p>Creates a RepoBranch. Provide the unified RepoBranch fields in the request body; they are mapped to
+     * the provider's API. Returns the created RepoBranch.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateRepoBranchResponse createRepoBranch(@Nonnull CreateRepoBranchRequest request, @Nullable Options options) {
         RequestOperation<CreateRepoBranchRequest, CreateRepoBranchResponse> operation
-              = new CreateRepoBranch.Sync(sdkConfiguration, _headers);
+              = new CreateRepoBranch.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -103,8 +120,23 @@ public class Branch {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetRepoBranchResponse getRepoBranch(@Nonnull GetRepoBranchRequest request) {
+        return getRepoBranch(request, null);
+    }
+
+    /**
+     * Retrieve a branch
+     * 
+     * <p>Retrieves a single RepoBranch by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetRepoBranchResponse getRepoBranch(@Nonnull GetRepoBranchRequest request, @Nullable Options options) {
         RequestOperation<GetRepoBranchRequest, GetRepoBranchResponse> operation
-              = new GetRepoBranch.Sync(sdkConfiguration, _headers);
+              = new GetRepoBranch.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -139,8 +171,27 @@ public class Branch {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListRepoBranchesResponse listRepoBranches(@Nonnull ListRepoBranchesRequest request) {
+        return listRepoBranches(request, null);
+    }
+
+    /**
+     * List all branches
+     * 
+     * <p>Returns a list of RepoBranches. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListRepoBranchesResponse listRepoBranches(@Nonnull ListRepoBranchesRequest request, @Nullable Options options) {
         RequestOperation<ListRepoBranchesRequest, ListRepoBranchesResponse> operation
-              = new ListRepoBranches.Sync(sdkConfiguration, _headers);
+              = new ListRepoBranches.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +218,23 @@ public class Branch {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchRepoBranchResponse patchRepoBranch(@Nonnull PatchRepoBranchRequest request) {
+        return patchRepoBranch(request, null);
+    }
+
+    /**
+     * Update a branch
+     * 
+     * <p>Updates the RepoBranch identified by `id`. Provide the unified RepoBranch fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchRepoBranchResponse patchRepoBranch(@Nonnull PatchRepoBranchRequest request, @Nullable Options options) {
         RequestOperation<PatchRepoBranchRequest, PatchRepoBranchResponse> operation
-              = new PatchRepoBranch.Sync(sdkConfiguration, _headers);
+              = new PatchRepoBranch.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -193,8 +259,22 @@ public class Branch {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveRepoBranchResponse removeRepoBranch(@Nonnull RemoveRepoBranchRequest request) {
+        return removeRepoBranch(request, null);
+    }
+
+    /**
+     * Remove a branch
+     * 
+     * <p>Deletes the RepoBranch identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveRepoBranchResponse removeRepoBranch(@Nonnull RemoveRepoBranchRequest request, @Nullable Options options) {
         RequestOperation<RemoveRepoBranchRequest, RemoveRepoBranchResponse> operation
-              = new RemoveRepoBranch.Sync(sdkConfiguration, _headers);
+              = new RemoveRepoBranch.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -221,8 +301,23 @@ public class Branch {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateRepoBranchResponse updateRepoBranch(@Nonnull UpdateRepoBranchRequest request) {
+        return updateRepoBranch(request, null);
+    }
+
+    /**
+     * Update a branch
+     * 
+     * <p>Updates the RepoBranch identified by `id`. Provide the unified RepoBranch fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateRepoBranchResponse updateRepoBranch(@Nonnull UpdateRepoBranchRequest request, @Nullable Options options) {
         RequestOperation<UpdateRepoBranchRequest, UpdateRepoBranchResponse> operation
-              = new UpdateRepoBranch.Sync(sdkConfiguration, _headers);
+              = new UpdateRepoBranch.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

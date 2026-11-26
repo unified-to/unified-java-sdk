@@ -6,20 +6,30 @@ package to.unified.unified_java_sdk.models.operations.async;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.CreateSocialCommentRequest;
 import to.unified.unified_java_sdk.operations.CreateSocialComment;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class CreateSocialCommentRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private CreateSocialCommentRequest request;
+    private final Options.Builder optionsBuilder;
 
     public CreateSocialCommentRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public CreateSocialCommentRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public CreateSocialCommentRequestBuilder request(@Nonnull CreateSocialCommentRequest request) {
@@ -44,8 +54,9 @@ public class CreateSocialCommentRequestBuilder {
     * @return The response from the server.
     */
     public CompletableFuture<CreateSocialCommentResponse> call() {
+        Options options = optionsBuilder.build();
         AsyncRequestOperation<CreateSocialCommentRequest, CreateSocialCommentResponse> operation
-              = new CreateSocialComment.Async(sdkConfiguration, _headers);
+              = new CreateSocialComment.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

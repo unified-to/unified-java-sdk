@@ -6,20 +6,30 @@ package to.unified.unified_java_sdk.models.operations.async;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.RemoveLmsCollectionRequest;
 import to.unified.unified_java_sdk.operations.RemoveLmsCollection;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveLmsCollectionRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private RemoveLmsCollectionRequest request;
+    private final Options.Builder optionsBuilder;
 
     public RemoveLmsCollectionRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public RemoveLmsCollectionRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public RemoveLmsCollectionRequestBuilder request(@Nonnull RemoveLmsCollectionRequest request) {
@@ -44,8 +54,9 @@ public class RemoveLmsCollectionRequestBuilder {
     * @return The response from the server.
     */
     public CompletableFuture<RemoveLmsCollectionResponse> call() {
+        Options options = optionsBuilder.build();
         AsyncRequestOperation<RemoveLmsCollectionRequest, RemoveLmsCollectionResponse> operation
-              = new RemoveLmsCollection.Async(sdkConfiguration, _headers);
+              = new RemoveLmsCollection.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

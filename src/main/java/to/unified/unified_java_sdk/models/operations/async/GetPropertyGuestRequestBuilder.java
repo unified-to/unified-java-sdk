@@ -6,20 +6,30 @@ package to.unified.unified_java_sdk.models.operations.async;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.GetPropertyGuestRequest;
 import to.unified.unified_java_sdk.operations.GetPropertyGuest;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetPropertyGuestRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private GetPropertyGuestRequest request;
+    private final Options.Builder optionsBuilder;
 
     public GetPropertyGuestRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public GetPropertyGuestRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public GetPropertyGuestRequestBuilder request(@Nonnull GetPropertyGuestRequest request) {
@@ -44,8 +54,9 @@ public class GetPropertyGuestRequestBuilder {
     * @return The response from the server.
     */
     public CompletableFuture<GetPropertyGuestResponse> call() {
+        Options options = optionsBuilder.build();
         AsyncRequestOperation<GetPropertyGuestRequest, GetPropertyGuestResponse> operation
-              = new GetPropertyGuest.Async(sdkConfiguration, _headers);
+              = new GetPropertyGuest.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

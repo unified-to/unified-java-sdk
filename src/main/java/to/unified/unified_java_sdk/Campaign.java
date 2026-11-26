@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateAdsCampaignRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAdsCampaignRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateAdsCampaignResponse;
@@ -55,6 +56,7 @@ import to.unified.unified_java_sdk.operations.RemoveMartechCampaign;
 import to.unified.unified_java_sdk.operations.UpdateAdsCampaign;
 import to.unified.unified_java_sdk.operations.UpdateMartechCampaign;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Campaign {
@@ -99,8 +101,23 @@ public class Campaign {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateAdsCampaignResponse createAdsCampaign(@Nonnull CreateAdsCampaignRequest request) {
+        return createAdsCampaign(request, null);
+    }
+
+    /**
+     * Create a campaign
+     * 
+     * <p>Creates a AdsCampaign. Provide the unified AdsCampaign fields in the request body; they are mapped
+     * to the provider's API. Returns the created AdsCampaign.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateAdsCampaignResponse createAdsCampaign(@Nonnull CreateAdsCampaignRequest request, @Nullable Options options) {
         RequestOperation<CreateAdsCampaignRequest, CreateAdsCampaignResponse> operation
-              = new CreateAdsCampaign.Sync(sdkConfiguration, _headers);
+              = new CreateAdsCampaign.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -127,8 +144,23 @@ public class Campaign {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateMartechCampaignResponse createMartechCampaign(@Nonnull CreateMartechCampaignRequest request) {
+        return createMartechCampaign(request, null);
+    }
+
+    /**
+     * Create a campaign
+     * 
+     * <p>Creates a MarketingCampaign. Provide the unified MarketingCampaign fields in the request body; they
+     * are mapped to the provider's API. Returns the created MarketingCampaign.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateMartechCampaignResponse createMartechCampaign(@Nonnull CreateMartechCampaignRequest request, @Nullable Options options) {
         RequestOperation<CreateMartechCampaignRequest, CreateMartechCampaignResponse> operation
-              = new CreateMartechCampaign.Sync(sdkConfiguration, _headers);
+              = new CreateMartechCampaign.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -155,8 +187,23 @@ public class Campaign {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAdsCampaignResponse getAdsCampaign(@Nonnull GetAdsCampaignRequest request) {
+        return getAdsCampaign(request, null);
+    }
+
+    /**
+     * Retrieve a campaign
+     * 
+     * <p>Retrieves a single AdsCampaign by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAdsCampaignResponse getAdsCampaign(@Nonnull GetAdsCampaignRequest request, @Nullable Options options) {
         RequestOperation<GetAdsCampaignRequest, GetAdsCampaignResponse> operation
-              = new GetAdsCampaign.Sync(sdkConfiguration, _headers);
+              = new GetAdsCampaign.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -183,8 +230,23 @@ public class Campaign {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetMartechCampaignResponse getMartechCampaign(@Nonnull GetMartechCampaignRequest request) {
+        return getMartechCampaign(request, null);
+    }
+
+    /**
+     * Retrieve a campaign
+     * 
+     * <p>Retrieves a single MarketingCampaign by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetMartechCampaignResponse getMartechCampaign(@Nonnull GetMartechCampaignRequest request, @Nullable Options options) {
         RequestOperation<GetMartechCampaignRequest, GetMartechCampaignResponse> operation
-              = new GetMartechCampaign.Sync(sdkConfiguration, _headers);
+              = new GetMartechCampaign.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -219,8 +281,27 @@ public class Campaign {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAdsCampaignsResponse listAdsCampaigns(@Nonnull ListAdsCampaignsRequest request) {
+        return listAdsCampaigns(request, null);
+    }
+
+    /**
+     * List all campaigns
+     * 
+     * <p>Returns a list of AdsCampaigns. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAdsCampaignsResponse listAdsCampaigns(@Nonnull ListAdsCampaignsRequest request, @Nullable Options options) {
         RequestOperation<ListAdsCampaignsRequest, ListAdsCampaignsResponse> operation
-              = new ListAdsCampaigns.Sync(sdkConfiguration, _headers);
+              = new ListAdsCampaigns.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -255,8 +336,27 @@ public class Campaign {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListMartechCampaignsResponse listMartechCampaigns(@Nonnull ListMartechCampaignsRequest request) {
+        return listMartechCampaigns(request, null);
+    }
+
+    /**
+     * List all campaigns
+     * 
+     * <p>Returns a list of MarketingCampaigns. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListMartechCampaignsResponse listMartechCampaigns(@Nonnull ListMartechCampaignsRequest request, @Nullable Options options) {
         RequestOperation<ListMartechCampaignsRequest, ListMartechCampaignsResponse> operation
-              = new ListMartechCampaigns.Sync(sdkConfiguration, _headers);
+              = new ListMartechCampaigns.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -283,8 +383,23 @@ public class Campaign {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchAdsCampaignResponse patchAdsCampaign(@Nonnull PatchAdsCampaignRequest request) {
+        return patchAdsCampaign(request, null);
+    }
+
+    /**
+     * Update a campaign
+     * 
+     * <p>Updates the AdsCampaign identified by `id`. Provide the unified AdsCampaign fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchAdsCampaignResponse patchAdsCampaign(@Nonnull PatchAdsCampaignRequest request, @Nullable Options options) {
         RequestOperation<PatchAdsCampaignRequest, PatchAdsCampaignResponse> operation
-              = new PatchAdsCampaign.Sync(sdkConfiguration, _headers);
+              = new PatchAdsCampaign.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -311,8 +426,23 @@ public class Campaign {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchMartechCampaignResponse patchMartechCampaign(@Nonnull PatchMartechCampaignRequest request) {
+        return patchMartechCampaign(request, null);
+    }
+
+    /**
+     * Update a campaign
+     * 
+     * <p>Updates the MarketingCampaign identified by `id`. Provide the unified MarketingCampaign fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchMartechCampaignResponse patchMartechCampaign(@Nonnull PatchMartechCampaignRequest request, @Nullable Options options) {
         RequestOperation<PatchMartechCampaignRequest, PatchMartechCampaignResponse> operation
-              = new PatchMartechCampaign.Sync(sdkConfiguration, _headers);
+              = new PatchMartechCampaign.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -337,8 +467,22 @@ public class Campaign {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveAdsCampaignResponse removeAdsCampaign(@Nonnull RemoveAdsCampaignRequest request) {
+        return removeAdsCampaign(request, null);
+    }
+
+    /**
+     * Remove a campaign
+     * 
+     * <p>Deletes the AdsCampaign identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveAdsCampaignResponse removeAdsCampaign(@Nonnull RemoveAdsCampaignRequest request, @Nullable Options options) {
         RequestOperation<RemoveAdsCampaignRequest, RemoveAdsCampaignResponse> operation
-              = new RemoveAdsCampaign.Sync(sdkConfiguration, _headers);
+              = new RemoveAdsCampaign.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -363,8 +507,22 @@ public class Campaign {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveMartechCampaignResponse removeMartechCampaign(@Nonnull RemoveMartechCampaignRequest request) {
+        return removeMartechCampaign(request, null);
+    }
+
+    /**
+     * Remove a campaign
+     * 
+     * <p>Deletes the MarketingCampaign identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveMartechCampaignResponse removeMartechCampaign(@Nonnull RemoveMartechCampaignRequest request, @Nullable Options options) {
         RequestOperation<RemoveMartechCampaignRequest, RemoveMartechCampaignResponse> operation
-              = new RemoveMartechCampaign.Sync(sdkConfiguration, _headers);
+              = new RemoveMartechCampaign.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -391,8 +549,23 @@ public class Campaign {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateAdsCampaignResponse updateAdsCampaign(@Nonnull UpdateAdsCampaignRequest request) {
+        return updateAdsCampaign(request, null);
+    }
+
+    /**
+     * Update a campaign
+     * 
+     * <p>Updates the AdsCampaign identified by `id`. Provide the unified AdsCampaign fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateAdsCampaignResponse updateAdsCampaign(@Nonnull UpdateAdsCampaignRequest request, @Nullable Options options) {
         RequestOperation<UpdateAdsCampaignRequest, UpdateAdsCampaignResponse> operation
-              = new UpdateAdsCampaign.Sync(sdkConfiguration, _headers);
+              = new UpdateAdsCampaign.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -419,8 +592,23 @@ public class Campaign {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateMartechCampaignResponse updateMartechCampaign(@Nonnull UpdateMartechCampaignRequest request) {
+        return updateMartechCampaign(request, null);
+    }
+
+    /**
+     * Update a campaign
+     * 
+     * <p>Updates the MarketingCampaign identified by `id`. Provide the unified MarketingCampaign fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateMartechCampaignResponse updateMartechCampaign(@Nonnull UpdateMartechCampaignRequest request, @Nullable Options options) {
         RequestOperation<UpdateMartechCampaignRequest, UpdateMartechCampaignResponse> operation
-              = new UpdateMartechCampaign.Sync(sdkConfiguration, _headers);
+              = new UpdateMartechCampaign.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

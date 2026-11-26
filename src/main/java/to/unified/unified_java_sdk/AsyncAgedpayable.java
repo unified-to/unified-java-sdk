@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.GetAccountingAgedpayableRequest;
 import to.unified.unified_java_sdk.models.operations.ListAccountingAgedpayablesRequest;
@@ -16,6 +17,7 @@ import to.unified.unified_java_sdk.models.operations.async.ListAccountingAgedpay
 import to.unified.unified_java_sdk.operations.GetAccountingAgedpayable;
 import to.unified.unified_java_sdk.operations.ListAccountingAgedpayables;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncAgedpayable {
@@ -60,8 +62,22 @@ public class AsyncAgedpayable {
      * @return {@code CompletableFuture<GetAccountingAgedpayableResponse>} - The async response
      */
     public CompletableFuture<GetAccountingAgedpayableResponse> getAccountingAgedpayable(@Nonnull GetAccountingAgedpayableRequest request) {
+        return getAccountingAgedpayable(request, null);
+    }
+
+    /**
+     * Retrieve an agedpayable
+     * 
+     * <p>Retrieves a single AccountingAgedpayable by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetAccountingAgedpayableResponse>} - The async response
+     */
+    public CompletableFuture<GetAccountingAgedpayableResponse> getAccountingAgedpayable(@Nonnull GetAccountingAgedpayableRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetAccountingAgedpayableRequest, GetAccountingAgedpayableResponse> operation
-              = new GetAccountingAgedpayable.Async(sdkConfiguration, _headers);
+              = new GetAccountingAgedpayable.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -97,8 +113,26 @@ public class AsyncAgedpayable {
      * @return {@code CompletableFuture<ListAccountingAgedpayablesResponse>} - The async response
      */
     public CompletableFuture<ListAccountingAgedpayablesResponse> listAccountingAgedpayables(@Nonnull ListAccountingAgedpayablesRequest request) {
+        return listAccountingAgedpayables(request, null);
+    }
+
+    /**
+     * List all agedpayables
+     * 
+     * <p>Returns a list of AccountingAgedpayables. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListAccountingAgedpayablesResponse>} - The async response
+     */
+    public CompletableFuture<ListAccountingAgedpayablesResponse> listAccountingAgedpayables(@Nonnull ListAccountingAgedpayablesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListAccountingAgedpayablesRequest, ListAccountingAgedpayablesResponse> operation
-              = new ListAccountingAgedpayables.Async(sdkConfiguration, _headers);
+              = new ListAccountingAgedpayables.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

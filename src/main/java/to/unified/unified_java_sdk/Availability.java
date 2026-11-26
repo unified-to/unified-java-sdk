@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.ListCommerceAvailabilitiesRequest;
 import to.unified.unified_java_sdk.models.operations.ListCommerceAvailabilitiesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListCommerceAvailabilitiesResponse;
@@ -15,6 +16,7 @@ import to.unified.unified_java_sdk.models.operations.ListPropertyAvailabilitiesR
 import to.unified.unified_java_sdk.operations.ListCommerceAvailabilities;
 import to.unified.unified_java_sdk.operations.ListPropertyAvailabilities;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Availability {
@@ -67,8 +69,27 @@ public class Availability {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListCommerceAvailabilitiesResponse listCommerceAvailabilities(@Nonnull ListCommerceAvailabilitiesRequest request) {
+        return listCommerceAvailabilities(request, null);
+    }
+
+    /**
+     * List all availabilities
+     * 
+     * <p>Returns a list of CommerceAvailabilities. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListCommerceAvailabilitiesResponse listCommerceAvailabilities(@Nonnull ListCommerceAvailabilitiesRequest request, @Nullable Options options) {
         RequestOperation<ListCommerceAvailabilitiesRequest, ListCommerceAvailabilitiesResponse> operation
-              = new ListCommerceAvailabilities.Sync(sdkConfiguration, _headers);
+              = new ListCommerceAvailabilities.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -103,8 +124,27 @@ public class Availability {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListPropertyAvailabilitiesResponse listPropertyAvailabilities(@Nonnull ListPropertyAvailabilitiesRequest request) {
+        return listPropertyAvailabilities(request, null);
+    }
+
+    /**
+     * List all availabilities
+     * 
+     * <p>Returns a list of PropertyAvailabilities. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListPropertyAvailabilitiesResponse listPropertyAvailabilities(@Nonnull ListPropertyAvailabilitiesRequest request, @Nullable Options options) {
         RequestOperation<ListPropertyAvailabilitiesRequest, ListPropertyAvailabilitiesResponse> operation
-              = new ListPropertyAvailabilities.Sync(sdkConfiguration, _headers);
+              = new ListPropertyAvailabilities.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

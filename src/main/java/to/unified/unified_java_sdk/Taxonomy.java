@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateHrisTaxonomyRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisTaxonomyRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateHrisTaxonomyResponse;
@@ -35,6 +36,7 @@ import to.unified.unified_java_sdk.operations.PatchHrisTaxonomy;
 import to.unified.unified_java_sdk.operations.RemoveHrisTaxonomy;
 import to.unified.unified_java_sdk.operations.UpdateHrisTaxonomy;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Taxonomy {
@@ -79,8 +81,23 @@ public class Taxonomy {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateHrisTaxonomyResponse createHrisTaxonomy(@Nonnull CreateHrisTaxonomyRequest request) {
+        return createHrisTaxonomy(request, null);
+    }
+
+    /**
+     * Create a taxonomy
+     * 
+     * <p>Creates a HrisTaxonomy. Provide the unified HrisTaxonomy fields in the request body; they are mapped
+     * to the provider's API. Returns the created HrisTaxonomy.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateHrisTaxonomyResponse createHrisTaxonomy(@Nonnull CreateHrisTaxonomyRequest request, @Nullable Options options) {
         RequestOperation<CreateHrisTaxonomyRequest, CreateHrisTaxonomyResponse> operation
-              = new CreateHrisTaxonomy.Sync(sdkConfiguration, _headers);
+              = new CreateHrisTaxonomy.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -107,8 +124,23 @@ public class Taxonomy {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetHrisTaxonomyResponse getHrisTaxonomy(@Nonnull GetHrisTaxonomyRequest request) {
+        return getHrisTaxonomy(request, null);
+    }
+
+    /**
+     * Retrieve a taxonomy
+     * 
+     * <p>Retrieves a single HrisTaxonomy by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetHrisTaxonomyResponse getHrisTaxonomy(@Nonnull GetHrisTaxonomyRequest request, @Nullable Options options) {
         RequestOperation<GetHrisTaxonomyRequest, GetHrisTaxonomyResponse> operation
-              = new GetHrisTaxonomy.Sync(sdkConfiguration, _headers);
+              = new GetHrisTaxonomy.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -143,8 +175,27 @@ public class Taxonomy {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListCrmTaxonomiesResponse listCrmTaxonomies(@Nonnull ListCrmTaxonomiesRequest request) {
+        return listCrmTaxonomies(request, null);
+    }
+
+    /**
+     * List all taxonomies
+     * 
+     * <p>Returns a list of CrmTaxonomies. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListCrmTaxonomiesResponse listCrmTaxonomies(@Nonnull ListCrmTaxonomiesRequest request, @Nullable Options options) {
         RequestOperation<ListCrmTaxonomiesRequest, ListCrmTaxonomiesResponse> operation
-              = new ListCrmTaxonomies.Sync(sdkConfiguration, _headers);
+              = new ListCrmTaxonomies.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -179,8 +230,27 @@ public class Taxonomy {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListHrisTaxonomiesResponse listHrisTaxonomies(@Nonnull ListHrisTaxonomiesRequest request) {
+        return listHrisTaxonomies(request, null);
+    }
+
+    /**
+     * List all taxonomies
+     * 
+     * <p>Returns a list of HrisTaxonomies. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListHrisTaxonomiesResponse listHrisTaxonomies(@Nonnull ListHrisTaxonomiesRequest request, @Nullable Options options) {
         RequestOperation<ListHrisTaxonomiesRequest, ListHrisTaxonomiesResponse> operation
-              = new ListHrisTaxonomies.Sync(sdkConfiguration, _headers);
+              = new ListHrisTaxonomies.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -207,8 +277,23 @@ public class Taxonomy {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchHrisTaxonomyResponse patchHrisTaxonomy(@Nonnull PatchHrisTaxonomyRequest request) {
+        return patchHrisTaxonomy(request, null);
+    }
+
+    /**
+     * Update a taxonomy
+     * 
+     * <p>Updates the HrisTaxonomy identified by `id`. Provide the unified HrisTaxonomy fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchHrisTaxonomyResponse patchHrisTaxonomy(@Nonnull PatchHrisTaxonomyRequest request, @Nullable Options options) {
         RequestOperation<PatchHrisTaxonomyRequest, PatchHrisTaxonomyResponse> operation
-              = new PatchHrisTaxonomy.Sync(sdkConfiguration, _headers);
+              = new PatchHrisTaxonomy.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -233,8 +318,22 @@ public class Taxonomy {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveHrisTaxonomyResponse removeHrisTaxonomy(@Nonnull RemoveHrisTaxonomyRequest request) {
+        return removeHrisTaxonomy(request, null);
+    }
+
+    /**
+     * Remove a taxonomy
+     * 
+     * <p>Deletes the HrisTaxonomy identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveHrisTaxonomyResponse removeHrisTaxonomy(@Nonnull RemoveHrisTaxonomyRequest request, @Nullable Options options) {
         RequestOperation<RemoveHrisTaxonomyRequest, RemoveHrisTaxonomyResponse> operation
-              = new RemoveHrisTaxonomy.Sync(sdkConfiguration, _headers);
+              = new RemoveHrisTaxonomy.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -261,8 +360,23 @@ public class Taxonomy {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateHrisTaxonomyResponse updateHrisTaxonomy(@Nonnull UpdateHrisTaxonomyRequest request) {
+        return updateHrisTaxonomy(request, null);
+    }
+
+    /**
+     * Update a taxonomy
+     * 
+     * <p>Updates the HrisTaxonomy identified by `id`. Provide the unified HrisTaxonomy fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateHrisTaxonomyResponse updateHrisTaxonomy(@Nonnull UpdateHrisTaxonomyRequest request, @Nullable Options options) {
         RequestOperation<UpdateHrisTaxonomyRequest, UpdateHrisTaxonomyResponse> operation
-              = new UpdateHrisTaxonomy.Sync(sdkConfiguration, _headers);
+              = new UpdateHrisTaxonomy.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

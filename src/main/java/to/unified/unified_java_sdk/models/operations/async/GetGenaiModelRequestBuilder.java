@@ -6,20 +6,30 @@ package to.unified.unified_java_sdk.models.operations.async;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.GetGenaiModelRequest;
 import to.unified.unified_java_sdk.operations.GetGenaiModel;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetGenaiModelRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private GetGenaiModelRequest request;
+    private final Options.Builder optionsBuilder;
 
     public GetGenaiModelRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public GetGenaiModelRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public GetGenaiModelRequestBuilder request(@Nonnull GetGenaiModelRequest request) {
@@ -44,8 +54,9 @@ public class GetGenaiModelRequestBuilder {
     * @return The response from the server.
     */
     public CompletableFuture<GetGenaiModelResponse> call() {
+        Options options = optionsBuilder.build();
         AsyncRequestOperation<GetGenaiModelRequest, GetGenaiModelResponse> operation
-              = new GetGenaiModel.Async(sdkConfiguration, _headers);
+              = new GetGenaiModel.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

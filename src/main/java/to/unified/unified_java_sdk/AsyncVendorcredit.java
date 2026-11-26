@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingVendorcreditRequest;
 import to.unified.unified_java_sdk.models.operations.GetAccountingVendorcreditRequest;
@@ -32,6 +33,7 @@ import to.unified.unified_java_sdk.operations.PatchAccountingVendorcredit;
 import to.unified.unified_java_sdk.operations.RemoveAccountingVendorcredit;
 import to.unified.unified_java_sdk.operations.UpdateAccountingVendorcredit;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncVendorcredit {
@@ -76,8 +78,22 @@ public class AsyncVendorcredit {
      * @return {@code CompletableFuture<CreateAccountingVendorcreditResponse>} - The async response
      */
     public CompletableFuture<CreateAccountingVendorcreditResponse> createAccountingVendorcredit(@Nonnull CreateAccountingVendorcreditRequest request) {
+        return createAccountingVendorcredit(request, null);
+    }
+
+    /**
+     * Create a vendorcredit
+     * 
+     * <p>Creates a AccountingVendorcredit. Provide the unified AccountingVendorcredit fields in the request
+     * body; they are mapped to the provider's API. Returns the created AccountingVendorcredit.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateAccountingVendorcreditResponse>} - The async response
+     */
+    public CompletableFuture<CreateAccountingVendorcreditResponse> createAccountingVendorcredit(@Nonnull CreateAccountingVendorcreditRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateAccountingVendorcreditRequest, CreateAccountingVendorcreditResponse> operation
-              = new CreateAccountingVendorcredit.Async(sdkConfiguration, _headers);
+              = new CreateAccountingVendorcredit.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -105,8 +121,22 @@ public class AsyncVendorcredit {
      * @return {@code CompletableFuture<GetAccountingVendorcreditResponse>} - The async response
      */
     public CompletableFuture<GetAccountingVendorcreditResponse> getAccountingVendorcredit(@Nonnull GetAccountingVendorcreditRequest request) {
+        return getAccountingVendorcredit(request, null);
+    }
+
+    /**
+     * Retrieve a vendorcredit
+     * 
+     * <p>Retrieves a single AccountingVendorcredit by its `id`. Obtain `id` values from the corresponding
+     * list endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetAccountingVendorcreditResponse>} - The async response
+     */
+    public CompletableFuture<GetAccountingVendorcreditResponse> getAccountingVendorcredit(@Nonnull GetAccountingVendorcreditRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetAccountingVendorcreditRequest, GetAccountingVendorcreditResponse> operation
-              = new GetAccountingVendorcredit.Async(sdkConfiguration, _headers);
+              = new GetAccountingVendorcredit.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -142,8 +172,26 @@ public class AsyncVendorcredit {
      * @return {@code CompletableFuture<ListAccountingVendorcreditsResponse>} - The async response
      */
     public CompletableFuture<ListAccountingVendorcreditsResponse> listAccountingVendorcredits(@Nonnull ListAccountingVendorcreditsRequest request) {
+        return listAccountingVendorcredits(request, null);
+    }
+
+    /**
+     * List all vendorcredits
+     * 
+     * <p>Returns a list of AccountingVendorcredits. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListAccountingVendorcreditsResponse>} - The async response
+     */
+    public CompletableFuture<ListAccountingVendorcreditsResponse> listAccountingVendorcredits(@Nonnull ListAccountingVendorcreditsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListAccountingVendorcreditsRequest, ListAccountingVendorcreditsResponse> operation
-              = new ListAccountingVendorcredits.Async(sdkConfiguration, _headers);
+              = new ListAccountingVendorcredits.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -171,8 +219,22 @@ public class AsyncVendorcredit {
      * @return {@code CompletableFuture<PatchAccountingVendorcreditResponse>} - The async response
      */
     public CompletableFuture<PatchAccountingVendorcreditResponse> patchAccountingVendorcredit(@Nonnull PatchAccountingVendorcreditRequest request) {
+        return patchAccountingVendorcredit(request, null);
+    }
+
+    /**
+     * Update a vendorcredit
+     * 
+     * <p>Updates the AccountingVendorcredit identified by `id`. Provide the unified AccountingVendorcredit
+     * fields to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchAccountingVendorcreditResponse>} - The async response
+     */
+    public CompletableFuture<PatchAccountingVendorcreditResponse> patchAccountingVendorcredit(@Nonnull PatchAccountingVendorcreditRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchAccountingVendorcreditRequest, PatchAccountingVendorcreditResponse> operation
-              = new PatchAccountingVendorcredit.Async(sdkConfiguration, _headers);
+              = new PatchAccountingVendorcredit.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -198,8 +260,21 @@ public class AsyncVendorcredit {
      * @return {@code CompletableFuture<RemoveAccountingVendorcreditResponse>} - The async response
      */
     public CompletableFuture<RemoveAccountingVendorcreditResponse> removeAccountingVendorcredit(@Nonnull RemoveAccountingVendorcreditRequest request) {
+        return removeAccountingVendorcredit(request, null);
+    }
+
+    /**
+     * Remove a vendorcredit
+     * 
+     * <p>Deletes the AccountingVendorcredit identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveAccountingVendorcreditResponse>} - The async response
+     */
+    public CompletableFuture<RemoveAccountingVendorcreditResponse> removeAccountingVendorcredit(@Nonnull RemoveAccountingVendorcreditRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveAccountingVendorcreditRequest, RemoveAccountingVendorcreditResponse> operation
-              = new RemoveAccountingVendorcredit.Async(sdkConfiguration, _headers);
+              = new RemoveAccountingVendorcredit.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -227,8 +302,22 @@ public class AsyncVendorcredit {
      * @return {@code CompletableFuture<UpdateAccountingVendorcreditResponse>} - The async response
      */
     public CompletableFuture<UpdateAccountingVendorcreditResponse> updateAccountingVendorcredit(@Nonnull UpdateAccountingVendorcreditRequest request) {
+        return updateAccountingVendorcredit(request, null);
+    }
+
+    /**
+     * Update a vendorcredit
+     * 
+     * <p>Updates the AccountingVendorcredit identified by `id`. Provide the unified AccountingVendorcredit
+     * fields to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateAccountingVendorcreditResponse>} - The async response
+     */
+    public CompletableFuture<UpdateAccountingVendorcreditResponse> updateAccountingVendorcredit(@Nonnull UpdateAccountingVendorcreditRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateAccountingVendorcreditRequest, UpdateAccountingVendorcreditResponse> operation
-              = new UpdateAccountingVendorcredit.Async(sdkConfiguration, _headers);
+              = new UpdateAccountingVendorcredit.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

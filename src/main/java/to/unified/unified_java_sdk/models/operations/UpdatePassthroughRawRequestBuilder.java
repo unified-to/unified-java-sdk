@@ -6,18 +6,28 @@ package to.unified.unified_java_sdk.models.operations;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.UpdatePassthroughRaw;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class UpdatePassthroughRawRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private UpdatePassthroughRawRequest request;
+    private final Options.Builder optionsBuilder;
 
     public UpdatePassthroughRawRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public UpdatePassthroughRawRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public UpdatePassthroughRawRequestBuilder request(@Nonnull UpdatePassthroughRawRequest request) {
@@ -42,8 +52,9 @@ public class UpdatePassthroughRawRequestBuilder {
     * @return The response from the server.
     */
     public UpdatePassthroughRawResponse call() {
+        Options options = optionsBuilder.build();
         RequestOperation<UpdatePassthroughRawRequest, UpdatePassthroughRawResponse> operation
-              = new UpdatePassthroughRaw.Sync(sdkConfiguration, _headers);
+              = new UpdatePassthroughRaw.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

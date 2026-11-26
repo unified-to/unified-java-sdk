@@ -7,6 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestlessOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.String;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
@@ -176,6 +177,7 @@ import to.unified.unified_java_sdk.operations.UpdateUnifiedWebhookResume;
 import to.unified.unified_java_sdk.operations.UpdateUnifiedWebhookTrigger;
 import to.unified.unified_java_sdk.operations.UpdateUnifiedWorkspaceintegration;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncUnified {
@@ -222,8 +224,23 @@ public class AsyncUnified {
      * @return {@code CompletableFuture<CreateUnifiedConnectionResponse>} - The async response
      */
     public CompletableFuture<CreateUnifiedConnectionResponse> createUnifiedConnection(@Nonnull Connection request) {
+        return createUnifiedConnection(request, null);
+    }
+
+    /**
+     * Create connection
+     * 
+     * <p>Used only to import existing customer credentials. To connect a new account, use the "Authorize or
+     * re-authorize a connection" auth URL instead. To change credentials on an existing connection, use
+     * "Update connection".
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateUnifiedConnectionResponse>} - The async response
+     */
+    public CompletableFuture<CreateUnifiedConnectionResponse> createUnifiedConnection(@Nonnull Connection request, @Nullable Options options) {
         AsyncRequestOperation<Connection, CreateUnifiedConnectionResponse> operation
-              = new CreateUnifiedConnection.Async(sdkConfiguration, _headers);
+              = new CreateUnifiedConnection.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -253,8 +270,23 @@ public class AsyncUnified {
      * @return {@code CompletableFuture<CreateUnifiedConnectionReauthResponse>} - The async response
      */
     public CompletableFuture<CreateUnifiedConnectionReauthResponse> createUnifiedConnectionReauth(@Nonnull CreateUnifiedConnectionReauthRequest request) {
+        return createUnifiedConnectionReauth(request, null);
+    }
+
+    /**
+     * Create a re-authorization token for a connection
+     * 
+     * <p>Returns a short-lived, single-use token that lets your end-user re-authorize this existing
+     * connection in place via the "Authorize or re-authorize a connection" URL with connection_id and
+     * reauth_token.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateUnifiedConnectionReauthResponse>} - The async response
+     */
+    public CompletableFuture<CreateUnifiedConnectionReauthResponse> createUnifiedConnectionReauth(@Nonnull CreateUnifiedConnectionReauthRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateUnifiedConnectionReauthRequest, CreateUnifiedConnectionReauthResponse> operation
-              = new CreateUnifiedConnectionReauth.Async(sdkConfiguration, _headers);
+              = new CreateUnifiedConnectionReauth.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -276,8 +308,19 @@ public class AsyncUnified {
      * @return {@code CompletableFuture<CreateUnifiedEnvironmentResponse>} - The async response
      */
     public CompletableFuture<CreateUnifiedEnvironmentResponse> createUnifiedEnvironment(@Nonnull List<String> request) {
+        return createUnifiedEnvironment(request, null);
+    }
+
+    /**
+     * Create new environments
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateUnifiedEnvironmentResponse>} - The async response
+     */
+    public CompletableFuture<CreateUnifiedEnvironmentResponse> createUnifiedEnvironment(@Nonnull List<String> request, @Nullable Options options) {
         AsyncRequestOperation<List<String>, CreateUnifiedEnvironmentResponse> operation
-              = new CreateUnifiedEnvironment.Async(sdkConfiguration, _headers);
+              = new CreateUnifiedEnvironment.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -299,8 +342,19 @@ public class AsyncUnified {
      * @return {@code CompletableFuture<CreateUnifiedSecretsmanagerResponse>} - The async response
      */
     public CompletableFuture<CreateUnifiedSecretsmanagerResponse> createUnifiedSecretsmanager(@Nonnull SecretsManager request) {
+        return createUnifiedSecretsmanager(request, null);
+    }
+
+    /**
+     * Create secrets manager
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateUnifiedSecretsmanagerResponse>} - The async response
+     */
+    public CompletableFuture<CreateUnifiedSecretsmanagerResponse> createUnifiedSecretsmanager(@Nonnull SecretsManager request, @Nullable Options options) {
         AsyncRequestOperation<SecretsManager, CreateUnifiedSecretsmanagerResponse> operation
-              = new CreateUnifiedSecretsmanager.Async(sdkConfiguration, _headers);
+              = new CreateUnifiedSecretsmanager.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -330,8 +384,23 @@ public class AsyncUnified {
      * @return {@code CompletableFuture<CreateUnifiedWebhookResponse>} - The async response
      */
     public CompletableFuture<CreateUnifiedWebhookResponse> createUnifiedWebhook(@Nonnull CreateUnifiedWebhookRequest request) {
+        return createUnifiedWebhook(request, null);
+    }
+
+    /**
+     * Create webhook subscription
+     * 
+     * <p>The data payload received by your server is described at https://docs.unified.to/unified/overview.
+     * The `interval` field can be set as low as 1 minute for paid accounts, and 60 minutes for free
+     * accounts.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateUnifiedWebhookResponse>} - The async response
+     */
+    public CompletableFuture<CreateUnifiedWebhookResponse> createUnifiedWebhook(@Nonnull CreateUnifiedWebhookRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateUnifiedWebhookRequest, CreateUnifiedWebhookResponse> operation
-              = new CreateUnifiedWebhook.Async(sdkConfiguration, _headers);
+              = new CreateUnifiedWebhook.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -353,8 +422,19 @@ public class AsyncUnified {
      * @return {@code CompletableFuture<CreateUnifiedWorkspaceintegrationResponse>} - The async response
      */
     public CompletableFuture<CreateUnifiedWorkspaceintegrationResponse> createUnifiedWorkspaceintegration(@Nonnull WorkspaceIntegration request) {
+        return createUnifiedWorkspaceintegration(request, null);
+    }
+
+    /**
+     * Create workspace integration
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateUnifiedWorkspaceintegrationResponse>} - The async response
+     */
+    public CompletableFuture<CreateUnifiedWorkspaceintegrationResponse> createUnifiedWorkspaceintegration(@Nonnull WorkspaceIntegration request, @Nullable Options options) {
         AsyncRequestOperation<WorkspaceIntegration, CreateUnifiedWorkspaceintegrationResponse> operation
-              = new CreateUnifiedWorkspaceintegration.Async(sdkConfiguration, _headers);
+              = new CreateUnifiedWorkspaceintegration.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -376,8 +456,19 @@ public class AsyncUnified {
      * @return {@code CompletableFuture<GetUnifiedApicallResponse>} - The async response
      */
     public CompletableFuture<GetUnifiedApicallResponse> getUnifiedApicall(@Nonnull GetUnifiedApicallRequest request) {
+        return getUnifiedApicall(request, null);
+    }
+
+    /**
+     * Retrieve specific API Call by its ID
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetUnifiedApicallResponse>} - The async response
+     */
+    public CompletableFuture<GetUnifiedApicallResponse> getUnifiedApicall(@Nonnull GetUnifiedApicallRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetUnifiedApicallRequest, GetUnifiedApicallResponse> operation
-              = new GetUnifiedApicall.Async(sdkConfiguration, _headers);
+              = new GetUnifiedApicall.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -399,8 +490,19 @@ public class AsyncUnified {
      * @return {@code CompletableFuture<GetUnifiedConnectionResponse>} - The async response
      */
     public CompletableFuture<GetUnifiedConnectionResponse> getUnifiedConnection(@Nonnull GetUnifiedConnectionRequest request) {
+        return getUnifiedConnection(request, null);
+    }
+
+    /**
+     * Retrieve connection
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetUnifiedConnectionResponse>} - The async response
+     */
+    public CompletableFuture<GetUnifiedConnectionResponse> getUnifiedConnection(@Nonnull GetUnifiedConnectionRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetUnifiedConnectionRequest, GetUnifiedConnectionResponse> operation
-              = new GetUnifiedConnection.Async(sdkConfiguration, _headers);
+              = new GetUnifiedConnection.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -430,8 +532,23 @@ public class AsyncUnified {
      * @return {@code CompletableFuture<GetUnifiedIntegrationAuthResponse>} - The async response
      */
     public CompletableFuture<GetUnifiedIntegrationAuthResponse> getUnifiedIntegrationAuth(@Nonnull GetUnifiedIntegrationAuthRequest request) {
+        return getUnifiedIntegrationAuth(request, null);
+    }
+
+    /**
+     * Authorize or re-authorize a connection
+     * 
+     * <p>Returns an authorization URL for the specified integration. After successful authorization, a new
+     * connection is created unless connection_id and reauth_token are provided, in which case the existing
+     * connection is updated in place.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetUnifiedIntegrationAuthResponse>} - The async response
+     */
+    public CompletableFuture<GetUnifiedIntegrationAuthResponse> getUnifiedIntegrationAuth(@Nonnull GetUnifiedIntegrationAuthRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetUnifiedIntegrationAuthRequest, GetUnifiedIntegrationAuthResponse> operation
-              = new GetUnifiedIntegrationAuth.Async(sdkConfiguration, _headers);
+              = new GetUnifiedIntegrationAuth.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -453,8 +570,19 @@ public class AsyncUnified {
      * @return {@code CompletableFuture<GetUnifiedIssueResponse>} - The async response
      */
     public CompletableFuture<GetUnifiedIssueResponse> getUnifiedIssue(@Nonnull GetUnifiedIssueRequest request) {
+        return getUnifiedIssue(request, null);
+    }
+
+    /**
+     * Retrieve support issue
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetUnifiedIssueResponse>} - The async response
+     */
+    public CompletableFuture<GetUnifiedIssueResponse> getUnifiedIssue(@Nonnull GetUnifiedIssueRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetUnifiedIssueRequest, GetUnifiedIssueResponse> operation
-              = new GetUnifiedIssue.Async(sdkConfiguration, _headers);
+              = new GetUnifiedIssue.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -476,8 +604,19 @@ public class AsyncUnified {
      * @return {@code CompletableFuture<GetUnifiedSecretsmanagerResponse>} - The async response
      */
     public CompletableFuture<GetUnifiedSecretsmanagerResponse> getUnifiedSecretsmanager(@Nonnull GetUnifiedSecretsmanagerRequest request) {
+        return getUnifiedSecretsmanager(request, null);
+    }
+
+    /**
+     * Retrieve secrets manager
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetUnifiedSecretsmanagerResponse>} - The async response
+     */
+    public CompletableFuture<GetUnifiedSecretsmanagerResponse> getUnifiedSecretsmanager(@Nonnull GetUnifiedSecretsmanagerRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetUnifiedSecretsmanagerRequest, GetUnifiedSecretsmanagerResponse> operation
-              = new GetUnifiedSecretsmanager.Async(sdkConfiguration, _headers);
+              = new GetUnifiedSecretsmanager.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -499,8 +638,19 @@ public class AsyncUnified {
      * @return {@code CompletableFuture<GetUnifiedWebhookResponse>} - The async response
      */
     public CompletableFuture<GetUnifiedWebhookResponse> getUnifiedWebhook(@Nonnull GetUnifiedWebhookRequest request) {
+        return getUnifiedWebhook(request, null);
+    }
+
+    /**
+     * Retrieve webhook by its ID
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetUnifiedWebhookResponse>} - The async response
+     */
+    public CompletableFuture<GetUnifiedWebhookResponse> getUnifiedWebhook(@Nonnull GetUnifiedWebhookRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetUnifiedWebhookRequest, GetUnifiedWebhookResponse> operation
-              = new GetUnifiedWebhook.Async(sdkConfiguration, _headers);
+              = new GetUnifiedWebhook.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -522,8 +672,19 @@ public class AsyncUnified {
      * @return {@code CompletableFuture<GetUnifiedWorkspaceintegrationResponse>} - The async response
      */
     public CompletableFuture<GetUnifiedWorkspaceintegrationResponse> getUnifiedWorkspaceintegration(@Nonnull GetUnifiedWorkspaceintegrationRequest request) {
+        return getUnifiedWorkspaceintegration(request, null);
+    }
+
+    /**
+     * Retrieve workspace integration
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetUnifiedWorkspaceintegrationResponse>} - The async response
+     */
+    public CompletableFuture<GetUnifiedWorkspaceintegrationResponse> getUnifiedWorkspaceintegration(@Nonnull GetUnifiedWorkspaceintegrationRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetUnifiedWorkspaceintegrationRequest, GetUnifiedWorkspaceintegrationResponse> operation
-              = new GetUnifiedWorkspaceintegration.Async(sdkConfiguration, _headers);
+              = new GetUnifiedWorkspaceintegration.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -545,8 +706,19 @@ public class AsyncUnified {
      * @return {@code CompletableFuture<ListUnifiedApicallsResponse>} - The async response
      */
     public CompletableFuture<ListUnifiedApicallsResponse> listUnifiedApicalls(@Nonnull ListUnifiedApicallsRequest request) {
+        return listUnifiedApicalls(request, null);
+    }
+
+    /**
+     * Returns API Calls
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListUnifiedApicallsResponse>} - The async response
+     */
+    public CompletableFuture<ListUnifiedApicallsResponse> listUnifiedApicalls(@Nonnull ListUnifiedApicallsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListUnifiedApicallsRequest, ListUnifiedApicallsResponse> operation
-              = new ListUnifiedApicalls.Async(sdkConfiguration, _headers);
+              = new ListUnifiedApicalls.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -568,8 +740,19 @@ public class AsyncUnified {
      * @return {@code CompletableFuture<ListUnifiedConnectionsResponse>} - The async response
      */
     public CompletableFuture<ListUnifiedConnectionsResponse> listUnifiedConnections(@Nonnull ListUnifiedConnectionsRequest request) {
+        return listUnifiedConnections(request, null);
+    }
+
+    /**
+     * List all connections
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListUnifiedConnectionsResponse>} - The async response
+     */
+    public CompletableFuture<ListUnifiedConnectionsResponse> listUnifiedConnections(@Nonnull ListUnifiedConnectionsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListUnifiedConnectionsRequest, ListUnifiedConnectionsResponse> operation
-              = new ListUnifiedConnections.Async(sdkConfiguration, _headers);
+              = new ListUnifiedConnections.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -590,8 +773,18 @@ public class AsyncUnified {
      * @return {@code CompletableFuture<ListUnifiedEnvironmentsResponse>} - The async response
      */
     public CompletableFuture<ListUnifiedEnvironmentsResponse> listUnifiedEnvironmentsDirect() {
+        return listUnifiedEnvironments(null);
+    }
+
+    /**
+     * Returns all environments
+     * 
+     * @param options additional options
+     * @return {@code CompletableFuture<ListUnifiedEnvironmentsResponse>} - The async response
+     */
+    public CompletableFuture<ListUnifiedEnvironmentsResponse> listUnifiedEnvironments(@Nullable Options options) {
         AsyncRequestlessOperation<ListUnifiedEnvironmentsResponse> operation
-            = new ListUnifiedEnvironments.Async(sdkConfiguration, _headers);
+            = new ListUnifiedEnvironments.Async(sdkConfiguration, options, _headers);
         return operation.doRequest()
             .thenCompose(operation::handleResponse);
     }
@@ -617,8 +810,21 @@ public class AsyncUnified {
      * @return {@code CompletableFuture<ListUnifiedIntegrationWorkspacesResponse>} - The async response
      */
     public CompletableFuture<ListUnifiedIntegrationWorkspacesResponse> listUnifiedIntegrationWorkspaces(@Nonnull ListUnifiedIntegrationWorkspacesRequest request) {
+        return listUnifiedIntegrationWorkspaces(request, null);
+    }
+
+    /**
+     * Returns all activated integrations in a workspace
+     * 
+     * <p>No authentication required as this is to be used by front-end interface
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListUnifiedIntegrationWorkspacesResponse>} - The async response
+     */
+    public CompletableFuture<ListUnifiedIntegrationWorkspacesResponse> listUnifiedIntegrationWorkspaces(@Nonnull ListUnifiedIntegrationWorkspacesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListUnifiedIntegrationWorkspacesRequest, ListUnifiedIntegrationWorkspacesResponse> operation
-              = new ListUnifiedIntegrationWorkspaces.Async(sdkConfiguration, _headers);
+              = new ListUnifiedIntegrationWorkspaces.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -640,8 +846,19 @@ public class AsyncUnified {
      * @return {@code CompletableFuture<ListUnifiedIntegrationsResponse>} - The async response
      */
     public CompletableFuture<ListUnifiedIntegrationsResponse> listUnifiedIntegrations(@Nonnull ListUnifiedIntegrationsRequest request) {
+        return listUnifiedIntegrations(request, null);
+    }
+
+    /**
+     * Returns all integrations
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListUnifiedIntegrationsResponse>} - The async response
+     */
+    public CompletableFuture<ListUnifiedIntegrationsResponse> listUnifiedIntegrations(@Nonnull ListUnifiedIntegrationsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListUnifiedIntegrationsRequest, ListUnifiedIntegrationsResponse> operation
-              = new ListUnifiedIntegrations.Async(sdkConfiguration, _headers);
+              = new ListUnifiedIntegrations.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -663,8 +880,19 @@ public class AsyncUnified {
      * @return {@code CompletableFuture<ListUnifiedIssuesResponse>} - The async response
      */
     public CompletableFuture<ListUnifiedIssuesResponse> listUnifiedIssues(@Nonnull ListUnifiedIssuesRequest request) {
+        return listUnifiedIssues(request, null);
+    }
+
+    /**
+     * List support issues
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListUnifiedIssuesResponse>} - The async response
+     */
+    public CompletableFuture<ListUnifiedIssuesResponse> listUnifiedIssues(@Nonnull ListUnifiedIssuesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListUnifiedIssuesRequest, ListUnifiedIssuesResponse> operation
-              = new ListUnifiedIssues.Async(sdkConfiguration, _headers);
+              = new ListUnifiedIssues.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -686,8 +914,19 @@ public class AsyncUnified {
      * @return {@code CompletableFuture<ListUnifiedNotificationsResponse>} - The async response
      */
     public CompletableFuture<ListUnifiedNotificationsResponse> listUnifiedNotifications(@Nonnull ListUnifiedNotificationsRequest request) {
+        return listUnifiedNotifications(request, null);
+    }
+
+    /**
+     * List event notifications
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListUnifiedNotificationsResponse>} - The async response
+     */
+    public CompletableFuture<ListUnifiedNotificationsResponse> listUnifiedNotifications(@Nonnull ListUnifiedNotificationsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListUnifiedNotificationsRequest, ListUnifiedNotificationsResponse> operation
-              = new ListUnifiedNotifications.Async(sdkConfiguration, _headers);
+              = new ListUnifiedNotifications.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -708,8 +947,18 @@ public class AsyncUnified {
      * @return {@code CompletableFuture<ListUnifiedSecretsmanagerInstructionsResponse>} - The async response
      */
     public CompletableFuture<ListUnifiedSecretsmanagerInstructionsResponse> listUnifiedSecretsmanagerInstructionsDirect() {
+        return listUnifiedSecretsmanagerInstructions(null);
+    }
+
+    /**
+     * List secrets manager setup instructions
+     * 
+     * @param options additional options
+     * @return {@code CompletableFuture<ListUnifiedSecretsmanagerInstructionsResponse>} - The async response
+     */
+    public CompletableFuture<ListUnifiedSecretsmanagerInstructionsResponse> listUnifiedSecretsmanagerInstructions(@Nullable Options options) {
         AsyncRequestlessOperation<ListUnifiedSecretsmanagerInstructionsResponse> operation
-            = new ListUnifiedSecretsmanagerInstructions.Async(sdkConfiguration, _headers);
+            = new ListUnifiedSecretsmanagerInstructions.Async(sdkConfiguration, options, _headers);
         return operation.doRequest()
             .thenCompose(operation::handleResponse);
     }
@@ -731,8 +980,19 @@ public class AsyncUnified {
      * @return {@code CompletableFuture<ListUnifiedSecretsmanagerSecretsResponse>} - The async response
      */
     public CompletableFuture<ListUnifiedSecretsmanagerSecretsResponse> listUnifiedSecretsmanagerSecrets(@Nonnull ListUnifiedSecretsmanagerSecretsRequest request) {
+        return listUnifiedSecretsmanagerSecrets(request, null);
+    }
+
+    /**
+     * List secrets in a secrets manager
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListUnifiedSecretsmanagerSecretsResponse>} - The async response
+     */
+    public CompletableFuture<ListUnifiedSecretsmanagerSecretsResponse> listUnifiedSecretsmanagerSecrets(@Nonnull ListUnifiedSecretsmanagerSecretsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListUnifiedSecretsmanagerSecretsRequest, ListUnifiedSecretsmanagerSecretsResponse> operation
-              = new ListUnifiedSecretsmanagerSecrets.Async(sdkConfiguration, _headers);
+              = new ListUnifiedSecretsmanagerSecrets.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -754,8 +1014,19 @@ public class AsyncUnified {
      * @return {@code CompletableFuture<ListUnifiedSecretsmanagersResponse>} - The async response
      */
     public CompletableFuture<ListUnifiedSecretsmanagersResponse> listUnifiedSecretsmanagers(@Nonnull ListUnifiedSecretsmanagersRequest request) {
+        return listUnifiedSecretsmanagers(request, null);
+    }
+
+    /**
+     * List secrets managers
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListUnifiedSecretsmanagersResponse>} - The async response
+     */
+    public CompletableFuture<ListUnifiedSecretsmanagersResponse> listUnifiedSecretsmanagers(@Nonnull ListUnifiedSecretsmanagersRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListUnifiedSecretsmanagersRequest, ListUnifiedSecretsmanagersResponse> operation
-              = new ListUnifiedSecretsmanagers.Async(sdkConfiguration, _headers);
+              = new ListUnifiedSecretsmanagers.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -777,8 +1048,19 @@ public class AsyncUnified {
      * @return {@code CompletableFuture<ListUnifiedWebhooksResponse>} - The async response
      */
     public CompletableFuture<ListUnifiedWebhooksResponse> listUnifiedWebhooks(@Nonnull ListUnifiedWebhooksRequest request) {
+        return listUnifiedWebhooks(request, null);
+    }
+
+    /**
+     * Returns all registered webhooks
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListUnifiedWebhooksResponse>} - The async response
+     */
+    public CompletableFuture<ListUnifiedWebhooksResponse> listUnifiedWebhooks(@Nonnull ListUnifiedWebhooksRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListUnifiedWebhooksRequest, ListUnifiedWebhooksResponse> operation
-              = new ListUnifiedWebhooks.Async(sdkConfiguration, _headers);
+              = new ListUnifiedWebhooks.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -800,8 +1082,19 @@ public class AsyncUnified {
      * @return {@code CompletableFuture<ListUnifiedWorkspaceintegrationsResponse>} - The async response
      */
     public CompletableFuture<ListUnifiedWorkspaceintegrationsResponse> listUnifiedWorkspaceintegrations(@Nonnull ListUnifiedWorkspaceintegrationsRequest request) {
+        return listUnifiedWorkspaceintegrations(request, null);
+    }
+
+    /**
+     * List workspace integrations
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListUnifiedWorkspaceintegrationsResponse>} - The async response
+     */
+    public CompletableFuture<ListUnifiedWorkspaceintegrationsResponse> listUnifiedWorkspaceintegrations(@Nonnull ListUnifiedWorkspaceintegrationsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListUnifiedWorkspaceintegrationsRequest, ListUnifiedWorkspaceintegrationsResponse> operation
-              = new ListUnifiedWorkspaceintegrations.Async(sdkConfiguration, _headers);
+              = new ListUnifiedWorkspaceintegrations.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -823,8 +1116,19 @@ public class AsyncUnified {
      * @return {@code CompletableFuture<PatchUnifiedConnectionResponse>} - The async response
      */
     public CompletableFuture<PatchUnifiedConnectionResponse> patchUnifiedConnection(@Nonnull PatchUnifiedConnectionRequest request) {
+        return patchUnifiedConnection(request, null);
+    }
+
+    /**
+     * Update connection
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchUnifiedConnectionResponse>} - The async response
+     */
+    public CompletableFuture<PatchUnifiedConnectionResponse> patchUnifiedConnection(@Nonnull PatchUnifiedConnectionRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchUnifiedConnectionRequest, PatchUnifiedConnectionResponse> operation
-              = new PatchUnifiedConnection.Async(sdkConfiguration, _headers);
+              = new PatchUnifiedConnection.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -846,8 +1150,19 @@ public class AsyncUnified {
      * @return {@code CompletableFuture<PatchUnifiedSecretsmanagerResponse>} - The async response
      */
     public CompletableFuture<PatchUnifiedSecretsmanagerResponse> patchUnifiedSecretsmanager(@Nonnull PatchUnifiedSecretsmanagerRequest request) {
+        return patchUnifiedSecretsmanager(request, null);
+    }
+
+    /**
+     * Update secrets manager
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchUnifiedSecretsmanagerResponse>} - The async response
+     */
+    public CompletableFuture<PatchUnifiedSecretsmanagerResponse> patchUnifiedSecretsmanager(@Nonnull PatchUnifiedSecretsmanagerRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchUnifiedSecretsmanagerRequest, PatchUnifiedSecretsmanagerResponse> operation
-              = new PatchUnifiedSecretsmanager.Async(sdkConfiguration, _headers);
+              = new PatchUnifiedSecretsmanager.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -869,8 +1184,19 @@ public class AsyncUnified {
      * @return {@code CompletableFuture<PatchUnifiedWebhookResponse>} - The async response
      */
     public CompletableFuture<PatchUnifiedWebhookResponse> patchUnifiedWebhook(@Nonnull PatchUnifiedWebhookRequest request) {
+        return patchUnifiedWebhook(request, null);
+    }
+
+    /**
+     * Update webhook subscription
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchUnifiedWebhookResponse>} - The async response
+     */
+    public CompletableFuture<PatchUnifiedWebhookResponse> patchUnifiedWebhook(@Nonnull PatchUnifiedWebhookRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchUnifiedWebhookRequest, PatchUnifiedWebhookResponse> operation
-              = new PatchUnifiedWebhook.Async(sdkConfiguration, _headers);
+              = new PatchUnifiedWebhook.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -920,8 +1246,33 @@ public class AsyncUnified {
      * @return {@code CompletableFuture<PatchUnifiedWebhookResumeResponse>} - The async response
      */
     public CompletableFuture<PatchUnifiedWebhookResumeResponse> patchUnifiedWebhookResume(@Nonnull PatchUnifiedWebhookResumeRequest request) {
+        return patchUnifiedWebhookResume(request, null);
+    }
+
+    /**
+     * Resume an unhealthy webhook subscription
+     * 
+     * <p>Sets is_healthy back to true and restarts the webhook. Fix the cause first (hook_url, connection
+     * auth); the connection must be healthy. Virtual: continues from where it stopped.
+     * 
+     * <p>A webhook that went unhealthy mid-initial-sync before resume was available restarts its initial
+     * sync, so deleting and recreating it is safer. Native: re-subscribes if the provider subscription is
+     * missing or expired. Events received while the webhook was unhealthy are not re-sent.
+     * 
+     * <p>Webhook sync (beta): continues from the stored sync token. Page cursors are not stored yet, so a
+     * resume can re-send some records. Virtual and initial-sync webhooks that have been unhealthy for more
+     * than 7 days cannot be resumed, because resuming would re-send every change since then; delete and
+     * recreate them instead.
+     * 
+     * <p>MCP Events subscriptions cannot be resumed; they are managed by their MCP client.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchUnifiedWebhookResumeResponse>} - The async response
+     */
+    public CompletableFuture<PatchUnifiedWebhookResumeResponse> patchUnifiedWebhookResume(@Nonnull PatchUnifiedWebhookResumeRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchUnifiedWebhookResumeRequest, PatchUnifiedWebhookResumeResponse> operation
-              = new PatchUnifiedWebhookResume.Async(sdkConfiguration, _headers);
+              = new PatchUnifiedWebhookResume.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -943,8 +1294,19 @@ public class AsyncUnified {
      * @return {@code CompletableFuture<PatchUnifiedWebhookTriggerResponse>} - The async response
      */
     public CompletableFuture<PatchUnifiedWebhookTriggerResponse> patchUnifiedWebhookTrigger(@Nonnull PatchUnifiedWebhookTriggerRequest request) {
+        return patchUnifiedWebhookTrigger(request, null);
+    }
+
+    /**
+     * Trigger webhook
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchUnifiedWebhookTriggerResponse>} - The async response
+     */
+    public CompletableFuture<PatchUnifiedWebhookTriggerResponse> patchUnifiedWebhookTrigger(@Nonnull PatchUnifiedWebhookTriggerRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchUnifiedWebhookTriggerRequest, PatchUnifiedWebhookTriggerResponse> operation
-              = new PatchUnifiedWebhookTrigger.Async(sdkConfiguration, _headers);
+              = new PatchUnifiedWebhookTrigger.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -966,8 +1328,19 @@ public class AsyncUnified {
      * @return {@code CompletableFuture<PatchUnifiedWorkspaceintegrationResponse>} - The async response
      */
     public CompletableFuture<PatchUnifiedWorkspaceintegrationResponse> patchUnifiedWorkspaceintegration(@Nonnull PatchUnifiedWorkspaceintegrationRequest request) {
+        return patchUnifiedWorkspaceintegration(request, null);
+    }
+
+    /**
+     * Update workspace integration
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchUnifiedWorkspaceintegrationResponse>} - The async response
+     */
+    public CompletableFuture<PatchUnifiedWorkspaceintegrationResponse> patchUnifiedWorkspaceintegration(@Nonnull PatchUnifiedWorkspaceintegrationRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchUnifiedWorkspaceintegrationRequest, PatchUnifiedWorkspaceintegrationResponse> operation
-              = new PatchUnifiedWorkspaceintegration.Async(sdkConfiguration, _headers);
+              = new PatchUnifiedWorkspaceintegration.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -989,8 +1362,19 @@ public class AsyncUnified {
      * @return {@code CompletableFuture<RemoveUnifiedConnectionResponse>} - The async response
      */
     public CompletableFuture<RemoveUnifiedConnectionResponse> removeUnifiedConnection(@Nonnull RemoveUnifiedConnectionRequest request) {
+        return removeUnifiedConnection(request, null);
+    }
+
+    /**
+     * Remove connection
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveUnifiedConnectionResponse>} - The async response
+     */
+    public CompletableFuture<RemoveUnifiedConnectionResponse> removeUnifiedConnection(@Nonnull RemoveUnifiedConnectionRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveUnifiedConnectionRequest, RemoveUnifiedConnectionResponse> operation
-              = new RemoveUnifiedConnection.Async(sdkConfiguration, _headers);
+              = new RemoveUnifiedConnection.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1012,8 +1396,19 @@ public class AsyncUnified {
      * @return {@code CompletableFuture<RemoveUnifiedEnvironmentResponse>} - The async response
      */
     public CompletableFuture<RemoveUnifiedEnvironmentResponse> removeUnifiedEnvironment(@Nonnull RemoveUnifiedEnvironmentRequest request) {
+        return removeUnifiedEnvironment(request, null);
+    }
+
+    /**
+     * Remove an environment
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveUnifiedEnvironmentResponse>} - The async response
+     */
+    public CompletableFuture<RemoveUnifiedEnvironmentResponse> removeUnifiedEnvironment(@Nonnull RemoveUnifiedEnvironmentRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveUnifiedEnvironmentRequest, RemoveUnifiedEnvironmentResponse> operation
-              = new RemoveUnifiedEnvironment.Async(sdkConfiguration, _headers);
+              = new RemoveUnifiedEnvironment.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1035,8 +1430,19 @@ public class AsyncUnified {
      * @return {@code CompletableFuture<RemoveUnifiedSecretsmanagerResponse>} - The async response
      */
     public CompletableFuture<RemoveUnifiedSecretsmanagerResponse> removeUnifiedSecretsmanager(@Nonnull RemoveUnifiedSecretsmanagerRequest request) {
+        return removeUnifiedSecretsmanager(request, null);
+    }
+
+    /**
+     * Remove secrets manager
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveUnifiedSecretsmanagerResponse>} - The async response
+     */
+    public CompletableFuture<RemoveUnifiedSecretsmanagerResponse> removeUnifiedSecretsmanager(@Nonnull RemoveUnifiedSecretsmanagerRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveUnifiedSecretsmanagerRequest, RemoveUnifiedSecretsmanagerResponse> operation
-              = new RemoveUnifiedSecretsmanager.Async(sdkConfiguration, _headers);
+              = new RemoveUnifiedSecretsmanager.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1058,8 +1464,19 @@ public class AsyncUnified {
      * @return {@code CompletableFuture<RemoveUnifiedWebhookResponse>} - The async response
      */
     public CompletableFuture<RemoveUnifiedWebhookResponse> removeUnifiedWebhook(@Nonnull RemoveUnifiedWebhookRequest request) {
+        return removeUnifiedWebhook(request, null);
+    }
+
+    /**
+     * Remove webhook subscription
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveUnifiedWebhookResponse>} - The async response
+     */
+    public CompletableFuture<RemoveUnifiedWebhookResponse> removeUnifiedWebhook(@Nonnull RemoveUnifiedWebhookRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveUnifiedWebhookRequest, RemoveUnifiedWebhookResponse> operation
-              = new RemoveUnifiedWebhook.Async(sdkConfiguration, _headers);
+              = new RemoveUnifiedWebhook.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1081,8 +1498,19 @@ public class AsyncUnified {
      * @return {@code CompletableFuture<RemoveUnifiedWorkspaceintegrationResponse>} - The async response
      */
     public CompletableFuture<RemoveUnifiedWorkspaceintegrationResponse> removeUnifiedWorkspaceintegration(@Nonnull RemoveUnifiedWorkspaceintegrationRequest request) {
+        return removeUnifiedWorkspaceintegration(request, null);
+    }
+
+    /**
+     * Remove workspace integration
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveUnifiedWorkspaceintegrationResponse>} - The async response
+     */
+    public CompletableFuture<RemoveUnifiedWorkspaceintegrationResponse> removeUnifiedWorkspaceintegration(@Nonnull RemoveUnifiedWorkspaceintegrationRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveUnifiedWorkspaceintegrationRequest, RemoveUnifiedWorkspaceintegrationResponse> operation
-              = new RemoveUnifiedWorkspaceintegration.Async(sdkConfiguration, _headers);
+              = new RemoveUnifiedWorkspaceintegration.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1104,8 +1532,19 @@ public class AsyncUnified {
      * @return {@code CompletableFuture<UpdateUnifiedConnectionResponse>} - The async response
      */
     public CompletableFuture<UpdateUnifiedConnectionResponse> updateUnifiedConnection(@Nonnull UpdateUnifiedConnectionRequest request) {
+        return updateUnifiedConnection(request, null);
+    }
+
+    /**
+     * Update connection
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateUnifiedConnectionResponse>} - The async response
+     */
+    public CompletableFuture<UpdateUnifiedConnectionResponse> updateUnifiedConnection(@Nonnull UpdateUnifiedConnectionRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateUnifiedConnectionRequest, UpdateUnifiedConnectionResponse> operation
-              = new UpdateUnifiedConnection.Async(sdkConfiguration, _headers);
+              = new UpdateUnifiedConnection.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1127,8 +1566,19 @@ public class AsyncUnified {
      * @return {@code CompletableFuture<UpdateUnifiedSecretsmanagerResponse>} - The async response
      */
     public CompletableFuture<UpdateUnifiedSecretsmanagerResponse> updateUnifiedSecretsmanager(@Nonnull UpdateUnifiedSecretsmanagerRequest request) {
+        return updateUnifiedSecretsmanager(request, null);
+    }
+
+    /**
+     * Update secrets manager
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateUnifiedSecretsmanagerResponse>} - The async response
+     */
+    public CompletableFuture<UpdateUnifiedSecretsmanagerResponse> updateUnifiedSecretsmanager(@Nonnull UpdateUnifiedSecretsmanagerRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateUnifiedSecretsmanagerRequest, UpdateUnifiedSecretsmanagerResponse> operation
-              = new UpdateUnifiedSecretsmanager.Async(sdkConfiguration, _headers);
+              = new UpdateUnifiedSecretsmanager.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1150,8 +1600,19 @@ public class AsyncUnified {
      * @return {@code CompletableFuture<UpdateUnifiedWebhookResponse>} - The async response
      */
     public CompletableFuture<UpdateUnifiedWebhookResponse> updateUnifiedWebhook(@Nonnull UpdateUnifiedWebhookRequest request) {
+        return updateUnifiedWebhook(request, null);
+    }
+
+    /**
+     * Update webhook subscription
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateUnifiedWebhookResponse>} - The async response
+     */
+    public CompletableFuture<UpdateUnifiedWebhookResponse> updateUnifiedWebhook(@Nonnull UpdateUnifiedWebhookRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateUnifiedWebhookRequest, UpdateUnifiedWebhookResponse> operation
-              = new UpdateUnifiedWebhook.Async(sdkConfiguration, _headers);
+              = new UpdateUnifiedWebhook.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1201,8 +1662,33 @@ public class AsyncUnified {
      * @return {@code CompletableFuture<UpdateUnifiedWebhookResumeResponse>} - The async response
      */
     public CompletableFuture<UpdateUnifiedWebhookResumeResponse> updateUnifiedWebhookResume(@Nonnull UpdateUnifiedWebhookResumeRequest request) {
+        return updateUnifiedWebhookResume(request, null);
+    }
+
+    /**
+     * Resume an unhealthy webhook subscription
+     * 
+     * <p>Sets is_healthy back to true and restarts the webhook. Fix the cause first (hook_url, connection
+     * auth); the connection must be healthy. Virtual: continues from where it stopped.
+     * 
+     * <p>A webhook that went unhealthy mid-initial-sync before resume was available restarts its initial
+     * sync, so deleting and recreating it is safer. Native: re-subscribes if the provider subscription is
+     * missing or expired. Events received while the webhook was unhealthy are not re-sent.
+     * 
+     * <p>Webhook sync (beta): continues from the stored sync token. Page cursors are not stored yet, so a
+     * resume can re-send some records. Virtual and initial-sync webhooks that have been unhealthy for more
+     * than 7 days cannot be resumed, because resuming would re-send every change since then; delete and
+     * recreate them instead.
+     * 
+     * <p>MCP Events subscriptions cannot be resumed; they are managed by their MCP client.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateUnifiedWebhookResumeResponse>} - The async response
+     */
+    public CompletableFuture<UpdateUnifiedWebhookResumeResponse> updateUnifiedWebhookResume(@Nonnull UpdateUnifiedWebhookResumeRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateUnifiedWebhookResumeRequest, UpdateUnifiedWebhookResumeResponse> operation
-              = new UpdateUnifiedWebhookResume.Async(sdkConfiguration, _headers);
+              = new UpdateUnifiedWebhookResume.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1224,8 +1710,19 @@ public class AsyncUnified {
      * @return {@code CompletableFuture<UpdateUnifiedWebhookTriggerResponse>} - The async response
      */
     public CompletableFuture<UpdateUnifiedWebhookTriggerResponse> updateUnifiedWebhookTrigger(@Nonnull UpdateUnifiedWebhookTriggerRequest request) {
+        return updateUnifiedWebhookTrigger(request, null);
+    }
+
+    /**
+     * Trigger webhook
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateUnifiedWebhookTriggerResponse>} - The async response
+     */
+    public CompletableFuture<UpdateUnifiedWebhookTriggerResponse> updateUnifiedWebhookTrigger(@Nonnull UpdateUnifiedWebhookTriggerRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateUnifiedWebhookTriggerRequest, UpdateUnifiedWebhookTriggerResponse> operation
-              = new UpdateUnifiedWebhookTrigger.Async(sdkConfiguration, _headers);
+              = new UpdateUnifiedWebhookTrigger.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1247,8 +1744,19 @@ public class AsyncUnified {
      * @return {@code CompletableFuture<UpdateUnifiedWorkspaceintegrationResponse>} - The async response
      */
     public CompletableFuture<UpdateUnifiedWorkspaceintegrationResponse> updateUnifiedWorkspaceintegration(@Nonnull UpdateUnifiedWorkspaceintegrationRequest request) {
+        return updateUnifiedWorkspaceintegration(request, null);
+    }
+
+    /**
+     * Update workspace integration
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateUnifiedWorkspaceintegrationResponse>} - The async response
+     */
+    public CompletableFuture<UpdateUnifiedWorkspaceintegrationResponse> updateUnifiedWorkspaceintegration(@Nonnull UpdateUnifiedWorkspaceintegrationRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateUnifiedWorkspaceintegrationRequest, UpdateUnifiedWorkspaceintegrationResponse> operation
-              = new UpdateUnifiedWorkspaceintegration.Async(sdkConfiguration, _headers);
+              = new UpdateUnifiedWorkspaceintegration.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

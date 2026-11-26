@@ -6,20 +6,30 @@ package to.unified.unified_java_sdk.models.operations.async;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.ListAccountingProjectsRequest;
 import to.unified.unified_java_sdk.operations.ListAccountingProjects;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListAccountingProjectsRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private ListAccountingProjectsRequest request;
+    private final Options.Builder optionsBuilder;
 
     public ListAccountingProjectsRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public ListAccountingProjectsRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public ListAccountingProjectsRequestBuilder request(@Nonnull ListAccountingProjectsRequest request) {
@@ -44,8 +54,9 @@ public class ListAccountingProjectsRequestBuilder {
     * @return The response from the server.
     */
     public CompletableFuture<ListAccountingProjectsResponse> call() {
+        Options options = optionsBuilder.build();
         AsyncRequestOperation<ListAccountingProjectsRequest, ListAccountingProjectsResponse> operation
-              = new ListAccountingProjects.Async(sdkConfiguration, _headers);
+              = new ListAccountingProjects.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

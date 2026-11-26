@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateAnalyticsEventRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAnalyticsEventRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateAnalyticsEventResponse;
@@ -107,6 +108,7 @@ import to.unified.unified_java_sdk.operations.UpdateCdpEvent;
 import to.unified.unified_java_sdk.operations.UpdateCrmEvent;
 import to.unified.unified_java_sdk.operations.UpdateMessagingEvent;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Event {
@@ -151,8 +153,23 @@ public class Event {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateAnalyticsEventResponse createAnalyticsEvent(@Nonnull CreateAnalyticsEventRequest request) {
+        return createAnalyticsEvent(request, null);
+    }
+
+    /**
+     * Create an event
+     * 
+     * <p>Creates a AnalyticsEvent. Provide the unified AnalyticsEvent fields in the request body; they are
+     * mapped to the provider's API. Returns the created AnalyticsEvent.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateAnalyticsEventResponse createAnalyticsEvent(@Nonnull CreateAnalyticsEventRequest request, @Nullable Options options) {
         RequestOperation<CreateAnalyticsEventRequest, CreateAnalyticsEventResponse> operation
-              = new CreateAnalyticsEvent.Sync(sdkConfiguration, _headers);
+              = new CreateAnalyticsEvent.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -179,8 +196,23 @@ public class Event {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateCalendarEventResponse createCalendarEvent(@Nonnull CreateCalendarEventRequest request) {
+        return createCalendarEvent(request, null);
+    }
+
+    /**
+     * Create an event
+     * 
+     * <p>Creates a CalendarEvent. Provide the unified CalendarEvent fields in the request body; they are
+     * mapped to the provider's API. Returns the created CalendarEvent.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateCalendarEventResponse createCalendarEvent(@Nonnull CreateCalendarEventRequest request, @Nullable Options options) {
         RequestOperation<CreateCalendarEventRequest, CreateCalendarEventResponse> operation
-              = new CreateCalendarEvent.Sync(sdkConfiguration, _headers);
+              = new CreateCalendarEvent.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -207,8 +239,23 @@ public class Event {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateCdpEventResponse createCdpEvent(@Nonnull CreateCdpEventRequest request) {
+        return createCdpEvent(request, null);
+    }
+
+    /**
+     * Create an event
+     * 
+     * <p>Creates a CdpEvent. Provide the unified CdpEvent fields in the request body; they are mapped to the
+     * provider's API. Returns the created CdpEvent.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateCdpEventResponse createCdpEvent(@Nonnull CreateCdpEventRequest request, @Nullable Options options) {
         RequestOperation<CreateCdpEventRequest, CreateCdpEventResponse> operation
-              = new CreateCdpEvent.Sync(sdkConfiguration, _headers);
+              = new CreateCdpEvent.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -235,8 +282,23 @@ public class Event {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateCrmEventResponse createCrmEvent(@Nonnull CreateCrmEventRequest request) {
+        return createCrmEvent(request, null);
+    }
+
+    /**
+     * Create an event
+     * 
+     * <p>Creates a CrmEvent. Provide the unified CrmEvent fields in the request body; they are mapped to the
+     * provider's API. Returns the created CrmEvent.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateCrmEventResponse createCrmEvent(@Nonnull CreateCrmEventRequest request, @Nullable Options options) {
         RequestOperation<CreateCrmEventRequest, CreateCrmEventResponse> operation
-              = new CreateCrmEvent.Sync(sdkConfiguration, _headers);
+              = new CreateCrmEvent.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -263,8 +325,23 @@ public class Event {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAnalyticsEventResponse getAnalyticsEvent(@Nonnull GetAnalyticsEventRequest request) {
+        return getAnalyticsEvent(request, null);
+    }
+
+    /**
+     * Retrieve an event
+     * 
+     * <p>Retrieves a single AnalyticsEvent by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAnalyticsEventResponse getAnalyticsEvent(@Nonnull GetAnalyticsEventRequest request, @Nullable Options options) {
         RequestOperation<GetAnalyticsEventRequest, GetAnalyticsEventResponse> operation
-              = new GetAnalyticsEvent.Sync(sdkConfiguration, _headers);
+              = new GetAnalyticsEvent.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -291,8 +368,23 @@ public class Event {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetCalendarEventResponse getCalendarEvent(@Nonnull GetCalendarEventRequest request) {
+        return getCalendarEvent(request, null);
+    }
+
+    /**
+     * Retrieve an event
+     * 
+     * <p>Retrieves a single CalendarEvent by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetCalendarEventResponse getCalendarEvent(@Nonnull GetCalendarEventRequest request, @Nullable Options options) {
         RequestOperation<GetCalendarEventRequest, GetCalendarEventResponse> operation
-              = new GetCalendarEvent.Sync(sdkConfiguration, _headers);
+              = new GetCalendarEvent.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -319,8 +411,23 @@ public class Event {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetCdpEventResponse getCdpEvent(@Nonnull GetCdpEventRequest request) {
+        return getCdpEvent(request, null);
+    }
+
+    /**
+     * Retrieve an event
+     * 
+     * <p>Retrieves a single CdpEvent by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetCdpEventResponse getCdpEvent(@Nonnull GetCdpEventRequest request, @Nullable Options options) {
         RequestOperation<GetCdpEventRequest, GetCdpEventResponse> operation
-              = new GetCdpEvent.Sync(sdkConfiguration, _headers);
+              = new GetCdpEvent.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -347,8 +454,23 @@ public class Event {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetClubsEventResponse getClubsEvent(@Nonnull GetClubsEventRequest request) {
+        return getClubsEvent(request, null);
+    }
+
+    /**
+     * Retrieve an event
+     * 
+     * <p>Retrieves a single ClubsEvent by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetClubsEventResponse getClubsEvent(@Nonnull GetClubsEventRequest request, @Nullable Options options) {
         RequestOperation<GetClubsEventRequest, GetClubsEventResponse> operation
-              = new GetClubsEvent.Sync(sdkConfiguration, _headers);
+              = new GetClubsEvent.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -375,8 +497,23 @@ public class Event {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetCrmEventResponse getCrmEvent(@Nonnull GetCrmEventRequest request) {
+        return getCrmEvent(request, null);
+    }
+
+    /**
+     * Retrieve an event
+     * 
+     * <p>Retrieves a single CrmEvent by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetCrmEventResponse getCrmEvent(@Nonnull GetCrmEventRequest request, @Nullable Options options) {
         RequestOperation<GetCrmEventRequest, GetCrmEventResponse> operation
-              = new GetCrmEvent.Sync(sdkConfiguration, _headers);
+              = new GetCrmEvent.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -411,8 +548,27 @@ public class Event {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAnalyticsEventsResponse listAnalyticsEvents(@Nonnull ListAnalyticsEventsRequest request) {
+        return listAnalyticsEvents(request, null);
+    }
+
+    /**
+     * List all events
+     * 
+     * <p>Returns a list of AnalyticsEvents. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAnalyticsEventsResponse listAnalyticsEvents(@Nonnull ListAnalyticsEventsRequest request, @Nullable Options options) {
         RequestOperation<ListAnalyticsEventsRequest, ListAnalyticsEventsResponse> operation
-              = new ListAnalyticsEvents.Sync(sdkConfiguration, _headers);
+              = new ListAnalyticsEvents.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -447,8 +603,27 @@ public class Event {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListCalendarEventsResponse listCalendarEvents(@Nonnull ListCalendarEventsRequest request) {
+        return listCalendarEvents(request, null);
+    }
+
+    /**
+     * List all events
+     * 
+     * <p>Returns a list of CalendarEvents. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListCalendarEventsResponse listCalendarEvents(@Nonnull ListCalendarEventsRequest request, @Nullable Options options) {
         RequestOperation<ListCalendarEventsRequest, ListCalendarEventsResponse> operation
-              = new ListCalendarEvents.Sync(sdkConfiguration, _headers);
+              = new ListCalendarEvents.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -483,8 +658,27 @@ public class Event {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListCdpEventsResponse listCdpEvents(@Nonnull ListCdpEventsRequest request) {
+        return listCdpEvents(request, null);
+    }
+
+    /**
+     * List all events
+     * 
+     * <p>Returns a list of CdpEvents. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListCdpEventsResponse listCdpEvents(@Nonnull ListCdpEventsRequest request, @Nullable Options options) {
         RequestOperation<ListCdpEventsRequest, ListCdpEventsResponse> operation
-              = new ListCdpEvents.Sync(sdkConfiguration, _headers);
+              = new ListCdpEvents.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -519,8 +713,27 @@ public class Event {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListClubsEventsResponse listClubsEvents(@Nonnull ListClubsEventsRequest request) {
+        return listClubsEvents(request, null);
+    }
+
+    /**
+     * List all events
+     * 
+     * <p>Returns a list of ClubsEvents. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListClubsEventsResponse listClubsEvents(@Nonnull ListClubsEventsRequest request, @Nullable Options options) {
         RequestOperation<ListClubsEventsRequest, ListClubsEventsResponse> operation
-              = new ListClubsEvents.Sync(sdkConfiguration, _headers);
+              = new ListClubsEvents.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -555,8 +768,27 @@ public class Event {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListCrmEventsResponse listCrmEvents(@Nonnull ListCrmEventsRequest request) {
+        return listCrmEvents(request, null);
+    }
+
+    /**
+     * List all events
+     * 
+     * <p>Returns a list of CrmEvents. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListCrmEventsResponse listCrmEvents(@Nonnull ListCrmEventsRequest request, @Nullable Options options) {
         RequestOperation<ListCrmEventsRequest, ListCrmEventsResponse> operation
-              = new ListCrmEvents.Sync(sdkConfiguration, _headers);
+              = new ListCrmEvents.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -583,8 +815,23 @@ public class Event {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchCalendarEventResponse patchCalendarEvent(@Nonnull PatchCalendarEventRequest request) {
+        return patchCalendarEvent(request, null);
+    }
+
+    /**
+     * Update an event
+     * 
+     * <p>Updates the CalendarEvent identified by `id`. Provide the unified CalendarEvent fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchCalendarEventResponse patchCalendarEvent(@Nonnull PatchCalendarEventRequest request, @Nullable Options options) {
         RequestOperation<PatchCalendarEventRequest, PatchCalendarEventResponse> operation
-              = new PatchCalendarEvent.Sync(sdkConfiguration, _headers);
+              = new PatchCalendarEvent.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -611,8 +858,23 @@ public class Event {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchCdpEventResponse patchCdpEvent(@Nonnull PatchCdpEventRequest request) {
+        return patchCdpEvent(request, null);
+    }
+
+    /**
+     * Update an event
+     * 
+     * <p>Updates the CdpEvent identified by `id`. Provide the unified CdpEvent fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchCdpEventResponse patchCdpEvent(@Nonnull PatchCdpEventRequest request, @Nullable Options options) {
         RequestOperation<PatchCdpEventRequest, PatchCdpEventResponse> operation
-              = new PatchCdpEvent.Sync(sdkConfiguration, _headers);
+              = new PatchCdpEvent.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -639,8 +901,23 @@ public class Event {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchCrmEventResponse patchCrmEvent(@Nonnull PatchCrmEventRequest request) {
+        return patchCrmEvent(request, null);
+    }
+
+    /**
+     * Update an event
+     * 
+     * <p>Updates the CrmEvent identified by `id`. Provide the unified CrmEvent fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchCrmEventResponse patchCrmEvent(@Nonnull PatchCrmEventRequest request, @Nullable Options options) {
         RequestOperation<PatchCrmEventRequest, PatchCrmEventResponse> operation
-              = new PatchCrmEvent.Sync(sdkConfiguration, _headers);
+              = new PatchCrmEvent.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -667,8 +944,23 @@ public class Event {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchMessagingEventResponse patchMessagingEvent(@Nonnull PatchMessagingEventRequest request) {
+        return patchMessagingEvent(request, null);
+    }
+
+    /**
+     * Update an event
+     * 
+     * <p>Updates the MessagingEvent identified by `id`. Provide the unified MessagingEvent fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchMessagingEventResponse patchMessagingEvent(@Nonnull PatchMessagingEventRequest request, @Nullable Options options) {
         RequestOperation<PatchMessagingEventRequest, PatchMessagingEventResponse> operation
-              = new PatchMessagingEvent.Sync(sdkConfiguration, _headers);
+              = new PatchMessagingEvent.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -693,8 +985,22 @@ public class Event {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveCalendarEventResponse removeCalendarEvent(@Nonnull RemoveCalendarEventRequest request) {
+        return removeCalendarEvent(request, null);
+    }
+
+    /**
+     * Remove an event
+     * 
+     * <p>Deletes the CalendarEvent identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveCalendarEventResponse removeCalendarEvent(@Nonnull RemoveCalendarEventRequest request, @Nullable Options options) {
         RequestOperation<RemoveCalendarEventRequest, RemoveCalendarEventResponse> operation
-              = new RemoveCalendarEvent.Sync(sdkConfiguration, _headers);
+              = new RemoveCalendarEvent.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -719,8 +1025,22 @@ public class Event {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveCdpEventResponse removeCdpEvent(@Nonnull RemoveCdpEventRequest request) {
+        return removeCdpEvent(request, null);
+    }
+
+    /**
+     * Remove an event
+     * 
+     * <p>Deletes the CdpEvent identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveCdpEventResponse removeCdpEvent(@Nonnull RemoveCdpEventRequest request, @Nullable Options options) {
         RequestOperation<RemoveCdpEventRequest, RemoveCdpEventResponse> operation
-              = new RemoveCdpEvent.Sync(sdkConfiguration, _headers);
+              = new RemoveCdpEvent.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -745,8 +1065,22 @@ public class Event {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveCrmEventResponse removeCrmEvent(@Nonnull RemoveCrmEventRequest request) {
+        return removeCrmEvent(request, null);
+    }
+
+    /**
+     * Remove an event
+     * 
+     * <p>Deletes the CrmEvent identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveCrmEventResponse removeCrmEvent(@Nonnull RemoveCrmEventRequest request, @Nullable Options options) {
         RequestOperation<RemoveCrmEventRequest, RemoveCrmEventResponse> operation
-              = new RemoveCrmEvent.Sync(sdkConfiguration, _headers);
+              = new RemoveCrmEvent.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -773,8 +1107,23 @@ public class Event {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateCalendarEventResponse updateCalendarEvent(@Nonnull UpdateCalendarEventRequest request) {
+        return updateCalendarEvent(request, null);
+    }
+
+    /**
+     * Update an event
+     * 
+     * <p>Updates the CalendarEvent identified by `id`. Provide the unified CalendarEvent fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateCalendarEventResponse updateCalendarEvent(@Nonnull UpdateCalendarEventRequest request, @Nullable Options options) {
         RequestOperation<UpdateCalendarEventRequest, UpdateCalendarEventResponse> operation
-              = new UpdateCalendarEvent.Sync(sdkConfiguration, _headers);
+              = new UpdateCalendarEvent.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -801,8 +1150,23 @@ public class Event {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateCdpEventResponse updateCdpEvent(@Nonnull UpdateCdpEventRequest request) {
+        return updateCdpEvent(request, null);
+    }
+
+    /**
+     * Update an event
+     * 
+     * <p>Updates the CdpEvent identified by `id`. Provide the unified CdpEvent fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateCdpEventResponse updateCdpEvent(@Nonnull UpdateCdpEventRequest request, @Nullable Options options) {
         RequestOperation<UpdateCdpEventRequest, UpdateCdpEventResponse> operation
-              = new UpdateCdpEvent.Sync(sdkConfiguration, _headers);
+              = new UpdateCdpEvent.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -829,8 +1193,23 @@ public class Event {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateCrmEventResponse updateCrmEvent(@Nonnull UpdateCrmEventRequest request) {
+        return updateCrmEvent(request, null);
+    }
+
+    /**
+     * Update an event
+     * 
+     * <p>Updates the CrmEvent identified by `id`. Provide the unified CrmEvent fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateCrmEventResponse updateCrmEvent(@Nonnull UpdateCrmEventRequest request, @Nullable Options options) {
         RequestOperation<UpdateCrmEventRequest, UpdateCrmEventResponse> operation
-              = new UpdateCrmEvent.Sync(sdkConfiguration, _headers);
+              = new UpdateCrmEvent.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -857,8 +1236,23 @@ public class Event {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateMessagingEventResponse updateMessagingEvent(@Nonnull UpdateMessagingEventRequest request) {
+        return updateMessagingEvent(request, null);
+    }
+
+    /**
+     * Update an event
+     * 
+     * <p>Updates the MessagingEvent identified by `id`. Provide the unified MessagingEvent fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateMessagingEventResponse updateMessagingEvent(@Nonnull UpdateMessagingEventRequest request, @Nullable Options options) {
         RequestOperation<UpdateMessagingEventRequest, UpdateMessagingEventResponse> operation
-              = new UpdateMessagingEvent.Sync(sdkConfiguration, _headers);
+              = new UpdateMessagingEvent.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

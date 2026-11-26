@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.ListCommerceAvailabilitiesRequest;
 import to.unified.unified_java_sdk.models.operations.ListPropertyAvailabilitiesRequest;
@@ -16,6 +17,7 @@ import to.unified.unified_java_sdk.models.operations.async.ListPropertyAvailabil
 import to.unified.unified_java_sdk.operations.ListCommerceAvailabilities;
 import to.unified.unified_java_sdk.operations.ListPropertyAvailabilities;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncAvailability {
@@ -68,8 +70,26 @@ public class AsyncAvailability {
      * @return {@code CompletableFuture<ListCommerceAvailabilitiesResponse>} - The async response
      */
     public CompletableFuture<ListCommerceAvailabilitiesResponse> listCommerceAvailabilities(@Nonnull ListCommerceAvailabilitiesRequest request) {
+        return listCommerceAvailabilities(request, null);
+    }
+
+    /**
+     * List all availabilities
+     * 
+     * <p>Returns a list of CommerceAvailabilities. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListCommerceAvailabilitiesResponse>} - The async response
+     */
+    public CompletableFuture<ListCommerceAvailabilitiesResponse> listCommerceAvailabilities(@Nonnull ListCommerceAvailabilitiesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListCommerceAvailabilitiesRequest, ListCommerceAvailabilitiesResponse> operation
-              = new ListCommerceAvailabilities.Async(sdkConfiguration, _headers);
+              = new ListCommerceAvailabilities.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -105,8 +125,26 @@ public class AsyncAvailability {
      * @return {@code CompletableFuture<ListPropertyAvailabilitiesResponse>} - The async response
      */
     public CompletableFuture<ListPropertyAvailabilitiesResponse> listPropertyAvailabilities(@Nonnull ListPropertyAvailabilitiesRequest request) {
+        return listPropertyAvailabilities(request, null);
+    }
+
+    /**
+     * List all availabilities
+     * 
+     * <p>Returns a list of PropertyAvailabilities. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListPropertyAvailabilitiesResponse>} - The async response
+     */
+    public CompletableFuture<ListPropertyAvailabilitiesResponse> listPropertyAvailabilities(@Nonnull ListPropertyAvailabilitiesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListPropertyAvailabilitiesRequest, ListPropertyAvailabilitiesResponse> operation
-              = new ListPropertyAvailabilities.Async(sdkConfiguration, _headers);
+              = new ListPropertyAvailabilities.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

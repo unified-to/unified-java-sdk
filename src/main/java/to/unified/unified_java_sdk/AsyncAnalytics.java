@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateAnalyticsEventRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAnalyticsPropertyRequest;
@@ -80,6 +81,7 @@ import to.unified.unified_java_sdk.operations.RemoveAnalyticsVisitor;
 import to.unified.unified_java_sdk.operations.UpdateAnalyticsProperty;
 import to.unified.unified_java_sdk.operations.UpdateAnalyticsVisitor;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncAnalytics {
@@ -124,8 +126,22 @@ public class AsyncAnalytics {
      * @return {@code CompletableFuture<CreateAnalyticsEventResponse>} - The async response
      */
     public CompletableFuture<CreateAnalyticsEventResponse> createAnalyticsEvent(@Nonnull CreateAnalyticsEventRequest request) {
+        return createAnalyticsEvent(request, null);
+    }
+
+    /**
+     * Create an event
+     * 
+     * <p>Creates a AnalyticsEvent. Provide the unified AnalyticsEvent fields in the request body; they are
+     * mapped to the provider's API. Returns the created AnalyticsEvent.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateAnalyticsEventResponse>} - The async response
+     */
+    public CompletableFuture<CreateAnalyticsEventResponse> createAnalyticsEvent(@Nonnull CreateAnalyticsEventRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateAnalyticsEventRequest, CreateAnalyticsEventResponse> operation
-              = new CreateAnalyticsEvent.Async(sdkConfiguration, _headers);
+              = new CreateAnalyticsEvent.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -153,8 +169,22 @@ public class AsyncAnalytics {
      * @return {@code CompletableFuture<CreateAnalyticsPropertyResponse>} - The async response
      */
     public CompletableFuture<CreateAnalyticsPropertyResponse> createAnalyticsProperty(@Nonnull CreateAnalyticsPropertyRequest request) {
+        return createAnalyticsProperty(request, null);
+    }
+
+    /**
+     * Create a property
+     * 
+     * <p>Creates a AnalyticsProperty. Provide the unified AnalyticsProperty fields in the request body; they
+     * are mapped to the provider's API. Returns the created AnalyticsProperty.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateAnalyticsPropertyResponse>} - The async response
+     */
+    public CompletableFuture<CreateAnalyticsPropertyResponse> createAnalyticsProperty(@Nonnull CreateAnalyticsPropertyRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateAnalyticsPropertyRequest, CreateAnalyticsPropertyResponse> operation
-              = new CreateAnalyticsProperty.Async(sdkConfiguration, _headers);
+              = new CreateAnalyticsProperty.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -182,8 +212,22 @@ public class AsyncAnalytics {
      * @return {@code CompletableFuture<CreateAnalyticsVisitorResponse>} - The async response
      */
     public CompletableFuture<CreateAnalyticsVisitorResponse> createAnalyticsVisitor(@Nonnull CreateAnalyticsVisitorRequest request) {
+        return createAnalyticsVisitor(request, null);
+    }
+
+    /**
+     * Create a visitor
+     * 
+     * <p>Creates a AnalyticsVisitor. Provide the unified AnalyticsVisitor fields in the request body; they
+     * are mapped to the provider's API. Returns the created AnalyticsVisitor.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateAnalyticsVisitorResponse>} - The async response
+     */
+    public CompletableFuture<CreateAnalyticsVisitorResponse> createAnalyticsVisitor(@Nonnull CreateAnalyticsVisitorRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateAnalyticsVisitorRequest, CreateAnalyticsVisitorResponse> operation
-              = new CreateAnalyticsVisitor.Async(sdkConfiguration, _headers);
+              = new CreateAnalyticsVisitor.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -211,8 +255,22 @@ public class AsyncAnalytics {
      * @return {@code CompletableFuture<GetAnalyticsEventResponse>} - The async response
      */
     public CompletableFuture<GetAnalyticsEventResponse> getAnalyticsEvent(@Nonnull GetAnalyticsEventRequest request) {
+        return getAnalyticsEvent(request, null);
+    }
+
+    /**
+     * Retrieve an event
+     * 
+     * <p>Retrieves a single AnalyticsEvent by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetAnalyticsEventResponse>} - The async response
+     */
+    public CompletableFuture<GetAnalyticsEventResponse> getAnalyticsEvent(@Nonnull GetAnalyticsEventRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetAnalyticsEventRequest, GetAnalyticsEventResponse> operation
-              = new GetAnalyticsEvent.Async(sdkConfiguration, _headers);
+              = new GetAnalyticsEvent.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -240,8 +298,22 @@ public class AsyncAnalytics {
      * @return {@code CompletableFuture<GetAnalyticsPropertyResponse>} - The async response
      */
     public CompletableFuture<GetAnalyticsPropertyResponse> getAnalyticsProperty(@Nonnull GetAnalyticsPropertyRequest request) {
+        return getAnalyticsProperty(request, null);
+    }
+
+    /**
+     * Retrieve a property
+     * 
+     * <p>Retrieves a single AnalyticsProperty by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetAnalyticsPropertyResponse>} - The async response
+     */
+    public CompletableFuture<GetAnalyticsPropertyResponse> getAnalyticsProperty(@Nonnull GetAnalyticsPropertyRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetAnalyticsPropertyRequest, GetAnalyticsPropertyResponse> operation
-              = new GetAnalyticsProperty.Async(sdkConfiguration, _headers);
+              = new GetAnalyticsProperty.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -269,8 +341,22 @@ public class AsyncAnalytics {
      * @return {@code CompletableFuture<GetAnalyticsSessionResponse>} - The async response
      */
     public CompletableFuture<GetAnalyticsSessionResponse> getAnalyticsSession(@Nonnull GetAnalyticsSessionRequest request) {
+        return getAnalyticsSession(request, null);
+    }
+
+    /**
+     * Retrieve a session
+     * 
+     * <p>Retrieves a single AnalyticsSession by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetAnalyticsSessionResponse>} - The async response
+     */
+    public CompletableFuture<GetAnalyticsSessionResponse> getAnalyticsSession(@Nonnull GetAnalyticsSessionRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetAnalyticsSessionRequest, GetAnalyticsSessionResponse> operation
-              = new GetAnalyticsSession.Async(sdkConfiguration, _headers);
+              = new GetAnalyticsSession.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -298,8 +384,22 @@ public class AsyncAnalytics {
      * @return {@code CompletableFuture<GetAnalyticsVisitorResponse>} - The async response
      */
     public CompletableFuture<GetAnalyticsVisitorResponse> getAnalyticsVisitor(@Nonnull GetAnalyticsVisitorRequest request) {
+        return getAnalyticsVisitor(request, null);
+    }
+
+    /**
+     * Retrieve a visitor
+     * 
+     * <p>Retrieves a single AnalyticsVisitor by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetAnalyticsVisitorResponse>} - The async response
+     */
+    public CompletableFuture<GetAnalyticsVisitorResponse> getAnalyticsVisitor(@Nonnull GetAnalyticsVisitorRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetAnalyticsVisitorRequest, GetAnalyticsVisitorResponse> operation
-              = new GetAnalyticsVisitor.Async(sdkConfiguration, _headers);
+              = new GetAnalyticsVisitor.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -335,8 +435,26 @@ public class AsyncAnalytics {
      * @return {@code CompletableFuture<ListAnalyticsEventsResponse>} - The async response
      */
     public CompletableFuture<ListAnalyticsEventsResponse> listAnalyticsEvents(@Nonnull ListAnalyticsEventsRequest request) {
+        return listAnalyticsEvents(request, null);
+    }
+
+    /**
+     * List all events
+     * 
+     * <p>Returns a list of AnalyticsEvents. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListAnalyticsEventsResponse>} - The async response
+     */
+    public CompletableFuture<ListAnalyticsEventsResponse> listAnalyticsEvents(@Nonnull ListAnalyticsEventsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListAnalyticsEventsRequest, ListAnalyticsEventsResponse> operation
-              = new ListAnalyticsEvents.Async(sdkConfiguration, _headers);
+              = new ListAnalyticsEvents.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -372,8 +490,26 @@ public class AsyncAnalytics {
      * @return {@code CompletableFuture<ListAnalyticsPropertiesResponse>} - The async response
      */
     public CompletableFuture<ListAnalyticsPropertiesResponse> listAnalyticsProperties(@Nonnull ListAnalyticsPropertiesRequest request) {
+        return listAnalyticsProperties(request, null);
+    }
+
+    /**
+     * List all properties
+     * 
+     * <p>Returns a list of AnalyticsProperties. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListAnalyticsPropertiesResponse>} - The async response
+     */
+    public CompletableFuture<ListAnalyticsPropertiesResponse> listAnalyticsProperties(@Nonnull ListAnalyticsPropertiesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListAnalyticsPropertiesRequest, ListAnalyticsPropertiesResponse> operation
-              = new ListAnalyticsProperties.Async(sdkConfiguration, _headers);
+              = new ListAnalyticsProperties.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -409,8 +545,26 @@ public class AsyncAnalytics {
      * @return {@code CompletableFuture<ListAnalyticsReportsResponse>} - The async response
      */
     public CompletableFuture<ListAnalyticsReportsResponse> listAnalyticsReports(@Nonnull ListAnalyticsReportsRequest request) {
+        return listAnalyticsReports(request, null);
+    }
+
+    /**
+     * List all reports
+     * 
+     * <p>Returns a list of AnalyticsReports. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListAnalyticsReportsResponse>} - The async response
+     */
+    public CompletableFuture<ListAnalyticsReportsResponse> listAnalyticsReports(@Nonnull ListAnalyticsReportsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListAnalyticsReportsRequest, ListAnalyticsReportsResponse> operation
-              = new ListAnalyticsReports.Async(sdkConfiguration, _headers);
+              = new ListAnalyticsReports.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -446,8 +600,26 @@ public class AsyncAnalytics {
      * @return {@code CompletableFuture<ListAnalyticsSessionsResponse>} - The async response
      */
     public CompletableFuture<ListAnalyticsSessionsResponse> listAnalyticsSessions(@Nonnull ListAnalyticsSessionsRequest request) {
+        return listAnalyticsSessions(request, null);
+    }
+
+    /**
+     * List all sessions
+     * 
+     * <p>Returns a list of AnalyticsSessions. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListAnalyticsSessionsResponse>} - The async response
+     */
+    public CompletableFuture<ListAnalyticsSessionsResponse> listAnalyticsSessions(@Nonnull ListAnalyticsSessionsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListAnalyticsSessionsRequest, ListAnalyticsSessionsResponse> operation
-              = new ListAnalyticsSessions.Async(sdkConfiguration, _headers);
+              = new ListAnalyticsSessions.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -483,8 +655,26 @@ public class AsyncAnalytics {
      * @return {@code CompletableFuture<ListAnalyticsVisitorsResponse>} - The async response
      */
     public CompletableFuture<ListAnalyticsVisitorsResponse> listAnalyticsVisitors(@Nonnull ListAnalyticsVisitorsRequest request) {
+        return listAnalyticsVisitors(request, null);
+    }
+
+    /**
+     * List all visitors
+     * 
+     * <p>Returns a list of AnalyticsVisitors. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListAnalyticsVisitorsResponse>} - The async response
+     */
+    public CompletableFuture<ListAnalyticsVisitorsResponse> listAnalyticsVisitors(@Nonnull ListAnalyticsVisitorsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListAnalyticsVisitorsRequest, ListAnalyticsVisitorsResponse> operation
-              = new ListAnalyticsVisitors.Async(sdkConfiguration, _headers);
+              = new ListAnalyticsVisitors.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -512,8 +702,22 @@ public class AsyncAnalytics {
      * @return {@code CompletableFuture<PatchAnalyticsPropertyResponse>} - The async response
      */
     public CompletableFuture<PatchAnalyticsPropertyResponse> patchAnalyticsProperty(@Nonnull PatchAnalyticsPropertyRequest request) {
+        return patchAnalyticsProperty(request, null);
+    }
+
+    /**
+     * Update a property
+     * 
+     * <p>Updates the AnalyticsProperty identified by `id`. Provide the unified AnalyticsProperty fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchAnalyticsPropertyResponse>} - The async response
+     */
+    public CompletableFuture<PatchAnalyticsPropertyResponse> patchAnalyticsProperty(@Nonnull PatchAnalyticsPropertyRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchAnalyticsPropertyRequest, PatchAnalyticsPropertyResponse> operation
-              = new PatchAnalyticsProperty.Async(sdkConfiguration, _headers);
+              = new PatchAnalyticsProperty.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -541,8 +745,22 @@ public class AsyncAnalytics {
      * @return {@code CompletableFuture<PatchAnalyticsVisitorResponse>} - The async response
      */
     public CompletableFuture<PatchAnalyticsVisitorResponse> patchAnalyticsVisitor(@Nonnull PatchAnalyticsVisitorRequest request) {
+        return patchAnalyticsVisitor(request, null);
+    }
+
+    /**
+     * Update a visitor
+     * 
+     * <p>Updates the AnalyticsVisitor identified by `id`. Provide the unified AnalyticsVisitor fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchAnalyticsVisitorResponse>} - The async response
+     */
+    public CompletableFuture<PatchAnalyticsVisitorResponse> patchAnalyticsVisitor(@Nonnull PatchAnalyticsVisitorRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchAnalyticsVisitorRequest, PatchAnalyticsVisitorResponse> operation
-              = new PatchAnalyticsVisitor.Async(sdkConfiguration, _headers);
+              = new PatchAnalyticsVisitor.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -568,8 +786,21 @@ public class AsyncAnalytics {
      * @return {@code CompletableFuture<RemoveAnalyticsPropertyResponse>} - The async response
      */
     public CompletableFuture<RemoveAnalyticsPropertyResponse> removeAnalyticsProperty(@Nonnull RemoveAnalyticsPropertyRequest request) {
+        return removeAnalyticsProperty(request, null);
+    }
+
+    /**
+     * Remove a property
+     * 
+     * <p>Deletes the AnalyticsProperty identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveAnalyticsPropertyResponse>} - The async response
+     */
+    public CompletableFuture<RemoveAnalyticsPropertyResponse> removeAnalyticsProperty(@Nonnull RemoveAnalyticsPropertyRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveAnalyticsPropertyRequest, RemoveAnalyticsPropertyResponse> operation
-              = new RemoveAnalyticsProperty.Async(sdkConfiguration, _headers);
+              = new RemoveAnalyticsProperty.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -595,8 +826,21 @@ public class AsyncAnalytics {
      * @return {@code CompletableFuture<RemoveAnalyticsVisitorResponse>} - The async response
      */
     public CompletableFuture<RemoveAnalyticsVisitorResponse> removeAnalyticsVisitor(@Nonnull RemoveAnalyticsVisitorRequest request) {
+        return removeAnalyticsVisitor(request, null);
+    }
+
+    /**
+     * Remove a visitor
+     * 
+     * <p>Deletes the AnalyticsVisitor identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveAnalyticsVisitorResponse>} - The async response
+     */
+    public CompletableFuture<RemoveAnalyticsVisitorResponse> removeAnalyticsVisitor(@Nonnull RemoveAnalyticsVisitorRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveAnalyticsVisitorRequest, RemoveAnalyticsVisitorResponse> operation
-              = new RemoveAnalyticsVisitor.Async(sdkConfiguration, _headers);
+              = new RemoveAnalyticsVisitor.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -624,8 +868,22 @@ public class AsyncAnalytics {
      * @return {@code CompletableFuture<UpdateAnalyticsPropertyResponse>} - The async response
      */
     public CompletableFuture<UpdateAnalyticsPropertyResponse> updateAnalyticsProperty(@Nonnull UpdateAnalyticsPropertyRequest request) {
+        return updateAnalyticsProperty(request, null);
+    }
+
+    /**
+     * Update a property
+     * 
+     * <p>Updates the AnalyticsProperty identified by `id`. Provide the unified AnalyticsProperty fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateAnalyticsPropertyResponse>} - The async response
+     */
+    public CompletableFuture<UpdateAnalyticsPropertyResponse> updateAnalyticsProperty(@Nonnull UpdateAnalyticsPropertyRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateAnalyticsPropertyRequest, UpdateAnalyticsPropertyResponse> operation
-              = new UpdateAnalyticsProperty.Async(sdkConfiguration, _headers);
+              = new UpdateAnalyticsProperty.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -653,8 +911,22 @@ public class AsyncAnalytics {
      * @return {@code CompletableFuture<UpdateAnalyticsVisitorResponse>} - The async response
      */
     public CompletableFuture<UpdateAnalyticsVisitorResponse> updateAnalyticsVisitor(@Nonnull UpdateAnalyticsVisitorRequest request) {
+        return updateAnalyticsVisitor(request, null);
+    }
+
+    /**
+     * Update a visitor
+     * 
+     * <p>Updates the AnalyticsVisitor identified by `id`. Provide the unified AnalyticsVisitor fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateAnalyticsVisitorResponse>} - The async response
+     */
+    public CompletableFuture<UpdateAnalyticsVisitorResponse> updateAnalyticsVisitor(@Nonnull UpdateAnalyticsVisitorRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateAnalyticsVisitorRequest, UpdateAnalyticsVisitorResponse> operation
-              = new UpdateAnalyticsVisitor.Async(sdkConfiguration, _headers);
+              = new UpdateAnalyticsVisitor.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

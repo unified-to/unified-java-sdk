@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingBankfeedaccountRequest;
 import to.unified.unified_java_sdk.models.operations.GetAccountingBankfeedaccountRequest;
@@ -32,6 +33,7 @@ import to.unified.unified_java_sdk.operations.PatchAccountingBankfeedaccount;
 import to.unified.unified_java_sdk.operations.RemoveAccountingBankfeedaccount;
 import to.unified.unified_java_sdk.operations.UpdateAccountingBankfeedaccount;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncBankfeedaccount {
@@ -76,8 +78,22 @@ public class AsyncBankfeedaccount {
      * @return {@code CompletableFuture<CreateAccountingBankfeedaccountResponse>} - The async response
      */
     public CompletableFuture<CreateAccountingBankfeedaccountResponse> createAccountingBankfeedaccount(@Nonnull CreateAccountingBankfeedaccountRequest request) {
+        return createAccountingBankfeedaccount(request, null);
+    }
+
+    /**
+     * Create a bankfeedaccount
+     * 
+     * <p>Creates a AccountingBankfeedaccount. Provide the unified AccountingBankfeedaccount fields in the
+     * request body; they are mapped to the provider's API. Returns the created AccountingBankfeedaccount.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateAccountingBankfeedaccountResponse>} - The async response
+     */
+    public CompletableFuture<CreateAccountingBankfeedaccountResponse> createAccountingBankfeedaccount(@Nonnull CreateAccountingBankfeedaccountRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateAccountingBankfeedaccountRequest, CreateAccountingBankfeedaccountResponse> operation
-              = new CreateAccountingBankfeedaccount.Async(sdkConfiguration, _headers);
+              = new CreateAccountingBankfeedaccount.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -105,8 +121,22 @@ public class AsyncBankfeedaccount {
      * @return {@code CompletableFuture<GetAccountingBankfeedaccountResponse>} - The async response
      */
     public CompletableFuture<GetAccountingBankfeedaccountResponse> getAccountingBankfeedaccount(@Nonnull GetAccountingBankfeedaccountRequest request) {
+        return getAccountingBankfeedaccount(request, null);
+    }
+
+    /**
+     * Retrieve a bankfeedaccount
+     * 
+     * <p>Retrieves a single AccountingBankfeedaccount by its `id`. Obtain `id` values from the corresponding
+     * list endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetAccountingBankfeedaccountResponse>} - The async response
+     */
+    public CompletableFuture<GetAccountingBankfeedaccountResponse> getAccountingBankfeedaccount(@Nonnull GetAccountingBankfeedaccountRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetAccountingBankfeedaccountRequest, GetAccountingBankfeedaccountResponse> operation
-              = new GetAccountingBankfeedaccount.Async(sdkConfiguration, _headers);
+              = new GetAccountingBankfeedaccount.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -142,8 +172,26 @@ public class AsyncBankfeedaccount {
      * @return {@code CompletableFuture<ListAccountingBankfeedaccountsResponse>} - The async response
      */
     public CompletableFuture<ListAccountingBankfeedaccountsResponse> listAccountingBankfeedaccounts(@Nonnull ListAccountingBankfeedaccountsRequest request) {
+        return listAccountingBankfeedaccounts(request, null);
+    }
+
+    /**
+     * List all bankfeedaccounts
+     * 
+     * <p>Returns a list of AccountingBankfeedaccounts. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListAccountingBankfeedaccountsResponse>} - The async response
+     */
+    public CompletableFuture<ListAccountingBankfeedaccountsResponse> listAccountingBankfeedaccounts(@Nonnull ListAccountingBankfeedaccountsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListAccountingBankfeedaccountsRequest, ListAccountingBankfeedaccountsResponse> operation
-              = new ListAccountingBankfeedaccounts.Async(sdkConfiguration, _headers);
+              = new ListAccountingBankfeedaccounts.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -171,8 +219,22 @@ public class AsyncBankfeedaccount {
      * @return {@code CompletableFuture<PatchAccountingBankfeedaccountResponse>} - The async response
      */
     public CompletableFuture<PatchAccountingBankfeedaccountResponse> patchAccountingBankfeedaccount(@Nonnull PatchAccountingBankfeedaccountRequest request) {
+        return patchAccountingBankfeedaccount(request, null);
+    }
+
+    /**
+     * Update a bankfeedaccount
+     * 
+     * <p>Updates the AccountingBankfeedaccount identified by `id`. Provide the unified
+     * AccountingBankfeedaccount fields to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchAccountingBankfeedaccountResponse>} - The async response
+     */
+    public CompletableFuture<PatchAccountingBankfeedaccountResponse> patchAccountingBankfeedaccount(@Nonnull PatchAccountingBankfeedaccountRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchAccountingBankfeedaccountRequest, PatchAccountingBankfeedaccountResponse> operation
-              = new PatchAccountingBankfeedaccount.Async(sdkConfiguration, _headers);
+              = new PatchAccountingBankfeedaccount.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -198,8 +260,21 @@ public class AsyncBankfeedaccount {
      * @return {@code CompletableFuture<RemoveAccountingBankfeedaccountResponse>} - The async response
      */
     public CompletableFuture<RemoveAccountingBankfeedaccountResponse> removeAccountingBankfeedaccount(@Nonnull RemoveAccountingBankfeedaccountRequest request) {
+        return removeAccountingBankfeedaccount(request, null);
+    }
+
+    /**
+     * Remove a bankfeedaccount
+     * 
+     * <p>Deletes the AccountingBankfeedaccount identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveAccountingBankfeedaccountResponse>} - The async response
+     */
+    public CompletableFuture<RemoveAccountingBankfeedaccountResponse> removeAccountingBankfeedaccount(@Nonnull RemoveAccountingBankfeedaccountRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveAccountingBankfeedaccountRequest, RemoveAccountingBankfeedaccountResponse> operation
-              = new RemoveAccountingBankfeedaccount.Async(sdkConfiguration, _headers);
+              = new RemoveAccountingBankfeedaccount.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -227,8 +302,22 @@ public class AsyncBankfeedaccount {
      * @return {@code CompletableFuture<UpdateAccountingBankfeedaccountResponse>} - The async response
      */
     public CompletableFuture<UpdateAccountingBankfeedaccountResponse> updateAccountingBankfeedaccount(@Nonnull UpdateAccountingBankfeedaccountRequest request) {
+        return updateAccountingBankfeedaccount(request, null);
+    }
+
+    /**
+     * Update a bankfeedaccount
+     * 
+     * <p>Updates the AccountingBankfeedaccount identified by `id`. Provide the unified
+     * AccountingBankfeedaccount fields to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateAccountingBankfeedaccountResponse>} - The async response
+     */
+    public CompletableFuture<UpdateAccountingBankfeedaccountResponse> updateAccountingBankfeedaccount(@Nonnull UpdateAccountingBankfeedaccountRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateAccountingBankfeedaccountRequest, UpdateAccountingBankfeedaccountResponse> operation
-              = new UpdateAccountingBankfeedaccount.Async(sdkConfiguration, _headers);
+              = new UpdateAccountingBankfeedaccount.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

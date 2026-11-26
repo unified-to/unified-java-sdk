@@ -6,20 +6,30 @@ package to.unified.unified_java_sdk.models.operations.async;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.CreatePassthroughRawRequest;
 import to.unified.unified_java_sdk.operations.CreatePassthroughRaw;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class CreatePassthroughRawRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private CreatePassthroughRawRequest request;
+    private final Options.Builder optionsBuilder;
 
     public CreatePassthroughRawRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public CreatePassthroughRawRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public CreatePassthroughRawRequestBuilder request(@Nonnull CreatePassthroughRawRequest request) {
@@ -44,8 +54,9 @@ public class CreatePassthroughRawRequestBuilder {
     * @return The response from the server.
     */
     public CompletableFuture<CreatePassthroughRawResponse> call() {
+        Options options = optionsBuilder.build();
         AsyncRequestOperation<CreatePassthroughRawRequest, CreatePassthroughRawResponse> operation
-              = new CreatePassthroughRaw.Async(sdkConfiguration, _headers);
+              = new CreatePassthroughRaw.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

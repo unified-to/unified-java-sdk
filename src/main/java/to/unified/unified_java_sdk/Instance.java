@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateComputeInstanceRequest;
 import to.unified.unified_java_sdk.models.operations.CreateComputeInstanceRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateComputeInstanceResponse;
@@ -31,6 +32,7 @@ import to.unified.unified_java_sdk.operations.PatchComputeInstance;
 import to.unified.unified_java_sdk.operations.RemoveComputeInstance;
 import to.unified.unified_java_sdk.operations.UpdateComputeInstance;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Instance {
@@ -75,8 +77,23 @@ public class Instance {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateComputeInstanceResponse createComputeInstance(@Nonnull CreateComputeInstanceRequest request) {
+        return createComputeInstance(request, null);
+    }
+
+    /**
+     * Create an instance
+     * 
+     * <p>Creates a ComputeInstance. Provide the unified ComputeInstance fields in the request body; they are
+     * mapped to the provider's API. Returns the created ComputeInstance.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateComputeInstanceResponse createComputeInstance(@Nonnull CreateComputeInstanceRequest request, @Nullable Options options) {
         RequestOperation<CreateComputeInstanceRequest, CreateComputeInstanceResponse> operation
-              = new CreateComputeInstance.Sync(sdkConfiguration, _headers);
+              = new CreateComputeInstance.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -103,8 +120,23 @@ public class Instance {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetComputeInstanceResponse getComputeInstance(@Nonnull GetComputeInstanceRequest request) {
+        return getComputeInstance(request, null);
+    }
+
+    /**
+     * Retrieve an instance
+     * 
+     * <p>Retrieves a single ComputeInstance by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetComputeInstanceResponse getComputeInstance(@Nonnull GetComputeInstanceRequest request, @Nullable Options options) {
         RequestOperation<GetComputeInstanceRequest, GetComputeInstanceResponse> operation
-              = new GetComputeInstance.Sync(sdkConfiguration, _headers);
+              = new GetComputeInstance.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -139,8 +171,27 @@ public class Instance {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListComputeInstancesResponse listComputeInstances(@Nonnull ListComputeInstancesRequest request) {
+        return listComputeInstances(request, null);
+    }
+
+    /**
+     * List all instances
+     * 
+     * <p>Returns a list of ComputeInstances. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListComputeInstancesResponse listComputeInstances(@Nonnull ListComputeInstancesRequest request, @Nullable Options options) {
         RequestOperation<ListComputeInstancesRequest, ListComputeInstancesResponse> operation
-              = new ListComputeInstances.Sync(sdkConfiguration, _headers);
+              = new ListComputeInstances.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +218,23 @@ public class Instance {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchComputeInstanceResponse patchComputeInstance(@Nonnull PatchComputeInstanceRequest request) {
+        return patchComputeInstance(request, null);
+    }
+
+    /**
+     * Update an instance
+     * 
+     * <p>Updates the ComputeInstance identified by `id`. Provide the unified ComputeInstance fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchComputeInstanceResponse patchComputeInstance(@Nonnull PatchComputeInstanceRequest request, @Nullable Options options) {
         RequestOperation<PatchComputeInstanceRequest, PatchComputeInstanceResponse> operation
-              = new PatchComputeInstance.Sync(sdkConfiguration, _headers);
+              = new PatchComputeInstance.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -193,8 +259,22 @@ public class Instance {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveComputeInstanceResponse removeComputeInstance(@Nonnull RemoveComputeInstanceRequest request) {
+        return removeComputeInstance(request, null);
+    }
+
+    /**
+     * Remove an instance
+     * 
+     * <p>Deletes the ComputeInstance identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveComputeInstanceResponse removeComputeInstance(@Nonnull RemoveComputeInstanceRequest request, @Nullable Options options) {
         RequestOperation<RemoveComputeInstanceRequest, RemoveComputeInstanceResponse> operation
-              = new RemoveComputeInstance.Sync(sdkConfiguration, _headers);
+              = new RemoveComputeInstance.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -221,8 +301,23 @@ public class Instance {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateComputeInstanceResponse updateComputeInstance(@Nonnull UpdateComputeInstanceRequest request) {
+        return updateComputeInstance(request, null);
+    }
+
+    /**
+     * Update an instance
+     * 
+     * <p>Updates the ComputeInstance identified by `id`. Provide the unified ComputeInstance fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateComputeInstanceResponse updateComputeInstance(@Nonnull UpdateComputeInstanceRequest request, @Nullable Options options) {
         RequestOperation<UpdateComputeInstanceRequest, UpdateComputeInstanceResponse> operation
-              = new UpdateComputeInstance.Sync(sdkConfiguration, _headers);
+              = new UpdateComputeInstance.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

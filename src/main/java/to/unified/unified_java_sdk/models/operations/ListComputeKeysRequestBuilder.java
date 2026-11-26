@@ -6,18 +6,28 @@ package to.unified.unified_java_sdk.models.operations;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.ListComputeKeys;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListComputeKeysRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private ListComputeKeysRequest request;
+    private final Options.Builder optionsBuilder;
 
     public ListComputeKeysRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public ListComputeKeysRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public ListComputeKeysRequestBuilder request(@Nonnull ListComputeKeysRequest request) {
@@ -42,8 +52,9 @@ public class ListComputeKeysRequestBuilder {
     * @return The response from the server.
     */
     public ListComputeKeysResponse call() {
+        Options options = optionsBuilder.build();
         RequestOperation<ListComputeKeysRequest, ListComputeKeysResponse> operation
-              = new ListComputeKeys.Sync(sdkConfiguration, _headers);
+              = new ListComputeKeys.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

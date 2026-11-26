@@ -6,31 +6,53 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import to.unified.unified_java_sdk.models.operations.CreateDmsPartRequest;
+import to.unified.unified_java_sdk.models.operations.CreateDmsPartRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateDmsPartResponse;
 import to.unified.unified_java_sdk.models.operations.CreatePlmPartRequest;
 import to.unified.unified_java_sdk.models.operations.CreatePlmPartRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreatePlmPartResponse;
+import to.unified.unified_java_sdk.models.operations.GetDmsPartRequest;
+import to.unified.unified_java_sdk.models.operations.GetDmsPartRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetDmsPartResponse;
 import to.unified.unified_java_sdk.models.operations.GetPlmPartRequest;
 import to.unified.unified_java_sdk.models.operations.GetPlmPartRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetPlmPartResponse;
+import to.unified.unified_java_sdk.models.operations.ListDmsPartsRequest;
+import to.unified.unified_java_sdk.models.operations.ListDmsPartsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListDmsPartsResponse;
 import to.unified.unified_java_sdk.models.operations.ListPlmPartsRequest;
 import to.unified.unified_java_sdk.models.operations.ListPlmPartsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListPlmPartsResponse;
+import to.unified.unified_java_sdk.models.operations.PatchDmsPartRequest;
+import to.unified.unified_java_sdk.models.operations.PatchDmsPartRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchDmsPartResponse;
 import to.unified.unified_java_sdk.models.operations.PatchPlmPartRequest;
 import to.unified.unified_java_sdk.models.operations.PatchPlmPartRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.PatchPlmPartResponse;
 import to.unified.unified_java_sdk.models.operations.RemovePlmPartRequest;
 import to.unified.unified_java_sdk.models.operations.RemovePlmPartRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.RemovePlmPartResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateDmsPartRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateDmsPartRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateDmsPartResponse;
 import to.unified.unified_java_sdk.models.operations.UpdatePlmPartRequest;
 import to.unified.unified_java_sdk.models.operations.UpdatePlmPartRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdatePlmPartResponse;
+import to.unified.unified_java_sdk.operations.CreateDmsPart;
 import to.unified.unified_java_sdk.operations.CreatePlmPart;
+import to.unified.unified_java_sdk.operations.GetDmsPart;
 import to.unified.unified_java_sdk.operations.GetPlmPart;
+import to.unified.unified_java_sdk.operations.ListDmsParts;
 import to.unified.unified_java_sdk.operations.ListPlmParts;
+import to.unified.unified_java_sdk.operations.PatchDmsPart;
 import to.unified.unified_java_sdk.operations.PatchPlmPart;
 import to.unified.unified_java_sdk.operations.RemovePlmPart;
+import to.unified.unified_java_sdk.operations.UpdateDmsPart;
 import to.unified.unified_java_sdk.operations.UpdatePlmPart;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Part {
@@ -50,6 +72,49 @@ public class Part {
      */
     public AsyncPart async() {
         return asyncSDK;
+    }
+
+    /**
+     * Create a part
+     * 
+     * <p>Creates a DmsPart. Provide the unified DmsPart fields in the request body; they are mapped to the
+     * provider's API. Returns the created DmsPart.
+     * 
+     * @return The call builder
+     */
+    public CreateDmsPartRequestBuilder createDmsPart() {
+        return new CreateDmsPartRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Create a part
+     * 
+     * <p>Creates a DmsPart. Provide the unified DmsPart fields in the request body; they are mapped to the
+     * provider's API. Returns the created DmsPart.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateDmsPartResponse createDmsPart(@Nonnull CreateDmsPartRequest request) {
+        return createDmsPart(request, null);
+    }
+
+    /**
+     * Create a part
+     * 
+     * <p>Creates a DmsPart. Provide the unified DmsPart fields in the request body; they are mapped to the
+     * provider's API. Returns the created DmsPart.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateDmsPartResponse createDmsPart(@Nonnull CreateDmsPartRequest request, @Nullable Options options) {
+        RequestOperation<CreateDmsPartRequest, CreateDmsPartResponse> operation
+              = new CreateDmsPart.Sync(sdkConfiguration, options, _headers);
+        return operation.handleResponse(operation.doRequest(request));
     }
 
     /**
@@ -75,8 +140,66 @@ public class Part {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreatePlmPartResponse createPlmPart(@Nonnull CreatePlmPartRequest request) {
+        return createPlmPart(request, null);
+    }
+
+    /**
+     * Create a part
+     * 
+     * <p>Creates a PlmPart. Provide the unified PlmPart fields in the request body; they are mapped to the
+     * provider's API. Returns the created PlmPart.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreatePlmPartResponse createPlmPart(@Nonnull CreatePlmPartRequest request, @Nullable Options options) {
         RequestOperation<CreatePlmPartRequest, CreatePlmPartResponse> operation
-              = new CreatePlmPart.Sync(sdkConfiguration, _headers);
+              = new CreatePlmPart.Sync(sdkConfiguration, options, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Retrieve a part
+     * 
+     * <p>Retrieves a single DmsPart by its `id`. Obtain `id` values from the corresponding list endpoint. Use
+     * `fields` to return only the fields you need.
+     * 
+     * @return The call builder
+     */
+    public GetDmsPartRequestBuilder getDmsPart() {
+        return new GetDmsPartRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a part
+     * 
+     * <p>Retrieves a single DmsPart by its `id`. Obtain `id` values from the corresponding list endpoint. Use
+     * `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetDmsPartResponse getDmsPart(@Nonnull GetDmsPartRequest request) {
+        return getDmsPart(request, null);
+    }
+
+    /**
+     * Retrieve a part
+     * 
+     * <p>Retrieves a single DmsPart by its `id`. Obtain `id` values from the corresponding list endpoint. Use
+     * `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetDmsPartResponse getDmsPart(@Nonnull GetDmsPartRequest request, @Nullable Options options) {
+        RequestOperation<GetDmsPartRequest, GetDmsPartResponse> operation
+              = new GetDmsPart.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -103,8 +226,78 @@ public class Part {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetPlmPartResponse getPlmPart(@Nonnull GetPlmPartRequest request) {
+        return getPlmPart(request, null);
+    }
+
+    /**
+     * Retrieve a part
+     * 
+     * <p>Retrieves a single PlmPart by its `id`. Obtain `id` values from the corresponding list endpoint. Use
+     * `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetPlmPartResponse getPlmPart(@Nonnull GetPlmPartRequest request, @Nullable Options options) {
         RequestOperation<GetPlmPartRequest, GetPlmPartResponse> operation
-              = new GetPlmPart.Sync(sdkConfiguration, _headers);
+              = new GetPlmPart.Sync(sdkConfiguration, options, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * List all parts
+     * 
+     * <p>Returns a list of DmsParts. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @return The call builder
+     */
+    public ListDmsPartsRequestBuilder listDmsParts() {
+        return new ListDmsPartsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all parts
+     * 
+     * <p>Returns a list of DmsParts. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListDmsPartsResponse listDmsParts(@Nonnull ListDmsPartsRequest request) {
+        return listDmsParts(request, null);
+    }
+
+    /**
+     * List all parts
+     * 
+     * <p>Returns a list of DmsParts. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListDmsPartsResponse listDmsParts(@Nonnull ListDmsPartsRequest request, @Nullable Options options) {
+        RequestOperation<ListDmsPartsRequest, ListDmsPartsResponse> operation
+              = new ListDmsParts.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -139,8 +332,70 @@ public class Part {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListPlmPartsResponse listPlmParts(@Nonnull ListPlmPartsRequest request) {
+        return listPlmParts(request, null);
+    }
+
+    /**
+     * List all parts
+     * 
+     * <p>Returns a list of PlmParts. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListPlmPartsResponse listPlmParts(@Nonnull ListPlmPartsRequest request, @Nullable Options options) {
         RequestOperation<ListPlmPartsRequest, ListPlmPartsResponse> operation
-              = new ListPlmParts.Sync(sdkConfiguration, _headers);
+              = new ListPlmParts.Sync(sdkConfiguration, options, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Update a part
+     * 
+     * <p>Updates the DmsPart identified by `id`. Provide the unified DmsPart fields to change in the request
+     * body.
+     * 
+     * @return The call builder
+     */
+    public PatchDmsPartRequestBuilder patchDmsPart() {
+        return new PatchDmsPartRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a part
+     * 
+     * <p>Updates the DmsPart identified by `id`. Provide the unified DmsPart fields to change in the request
+     * body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchDmsPartResponse patchDmsPart(@Nonnull PatchDmsPartRequest request) {
+        return patchDmsPart(request, null);
+    }
+
+    /**
+     * Update a part
+     * 
+     * <p>Updates the DmsPart identified by `id`. Provide the unified DmsPart fields to change in the request
+     * body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchDmsPartResponse patchDmsPart(@Nonnull PatchDmsPartRequest request, @Nullable Options options) {
+        RequestOperation<PatchDmsPartRequest, PatchDmsPartResponse> operation
+              = new PatchDmsPart.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +422,23 @@ public class Part {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchPlmPartResponse patchPlmPart(@Nonnull PatchPlmPartRequest request) {
+        return patchPlmPart(request, null);
+    }
+
+    /**
+     * Update a part
+     * 
+     * <p>Updates the PlmPart identified by `id`. Provide the unified PlmPart fields to change in the request
+     * body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchPlmPartResponse patchPlmPart(@Nonnull PatchPlmPartRequest request, @Nullable Options options) {
         RequestOperation<PatchPlmPartRequest, PatchPlmPartResponse> operation
-              = new PatchPlmPart.Sync(sdkConfiguration, _headers);
+              = new PatchPlmPart.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -193,8 +463,65 @@ public class Part {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemovePlmPartResponse removePlmPart(@Nonnull RemovePlmPartRequest request) {
+        return removePlmPart(request, null);
+    }
+
+    /**
+     * Remove a part
+     * 
+     * <p>Deletes the PlmPart identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemovePlmPartResponse removePlmPart(@Nonnull RemovePlmPartRequest request, @Nullable Options options) {
         RequestOperation<RemovePlmPartRequest, RemovePlmPartResponse> operation
-              = new RemovePlmPart.Sync(sdkConfiguration, _headers);
+              = new RemovePlmPart.Sync(sdkConfiguration, options, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Update a part
+     * 
+     * <p>Updates the DmsPart identified by `id`. Provide the unified DmsPart fields to change in the request
+     * body.
+     * 
+     * @return The call builder
+     */
+    public UpdateDmsPartRequestBuilder updateDmsPart() {
+        return new UpdateDmsPartRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a part
+     * 
+     * <p>Updates the DmsPart identified by `id`. Provide the unified DmsPart fields to change in the request
+     * body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateDmsPartResponse updateDmsPart(@Nonnull UpdateDmsPartRequest request) {
+        return updateDmsPart(request, null);
+    }
+
+    /**
+     * Update a part
+     * 
+     * <p>Updates the DmsPart identified by `id`. Provide the unified DmsPart fields to change in the request
+     * body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateDmsPartResponse updateDmsPart(@Nonnull UpdateDmsPartRequest request, @Nullable Options options) {
+        RequestOperation<UpdateDmsPartRequest, UpdateDmsPartResponse> operation
+              = new UpdateDmsPart.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -221,8 +548,23 @@ public class Part {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdatePlmPartResponse updatePlmPart(@Nonnull UpdatePlmPartRequest request) {
+        return updatePlmPart(request, null);
+    }
+
+    /**
+     * Update a part
+     * 
+     * <p>Updates the PlmPart identified by `id`. Provide the unified PlmPart fields to change in the request
+     * body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdatePlmPartResponse updatePlmPart(@Nonnull UpdatePlmPartRequest request, @Nullable Options options) {
         RequestOperation<UpdatePlmPartRequest, UpdatePlmPartResponse> operation
-              = new UpdatePlmPart.Sync(sdkConfiguration, _headers);
+              = new UpdatePlmPart.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

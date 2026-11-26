@@ -6,19 +6,29 @@ package to.unified.unified_java_sdk.models.operations;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.shared.Connection;
 import to.unified.unified_java_sdk.operations.CreateUnifiedConnection;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class CreateUnifiedConnectionRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private Connection request;
+    private final Options.Builder optionsBuilder;
 
     public CreateUnifiedConnectionRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public CreateUnifiedConnectionRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public CreateUnifiedConnectionRequestBuilder request(@Nonnull Connection request) {
@@ -43,8 +53,9 @@ public class CreateUnifiedConnectionRequestBuilder {
     * @return The response from the server.
     */
     public CreateUnifiedConnectionResponse call() {
+        Options options = optionsBuilder.build();
         RequestOperation<Connection, CreateUnifiedConnectionResponse> operation
-              = new CreateUnifiedConnection.Sync(sdkConfiguration, _headers);
+              = new CreateUnifiedConnection.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

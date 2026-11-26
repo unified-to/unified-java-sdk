@@ -11,6 +11,7 @@ import jakarta.annotation.Nullable;
 import java.lang.Double;
 import java.lang.Override;
 import java.lang.String;
+import java.time.OffsetDateTime;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -25,6 +26,13 @@ public class HrisCompensation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     private String currency;
+
+    /**
+     * date this pay stopped (empty = still current) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("end_at")
+    private OffsetDateTime endAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -43,6 +51,13 @@ public class HrisCompensation {
     @JsonProperty("notes")
     private String notes;
 
+    /**
+     * date this pay became effective (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("start_at")
+    private OffsetDateTime startAt;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
@@ -52,21 +67,26 @@ public class HrisCompensation {
     public HrisCompensation(
             @JsonProperty("amount") @Nullable Double amount,
             @JsonProperty("currency") @Nullable String currency,
+            @JsonProperty("end_at") @Nullable OffsetDateTime endAt,
             @JsonProperty("frequency") @Nullable HrisCompensationFrequency frequency,
             @JsonProperty("group_id") @Nullable String groupId,
             @JsonProperty("notes") @Nullable String notes,
+            @JsonProperty("start_at") @Nullable OffsetDateTime startAt,
             @JsonProperty("type") @Nullable HrisCompensationType type) {
         this.amount = amount;
         this.currency = currency;
+        this.endAt = endAt;
         this.frequency = frequency;
         this.groupId = groupId;
         this.notes = notes;
+        this.startAt = startAt;
         this.type = type;
     }
     
     public HrisCompensation() {
         this(null, null, null,
-            null, null, null);
+            null, null, null,
+            null, null);
     }
 
     public Optional<Double> amount() {
@@ -75,6 +95,13 @@ public class HrisCompensation {
 
     public Optional<String> currency() {
         return Optional.ofNullable(this.currency);
+    }
+
+    /**
+     * date this pay stopped (empty = still current) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
+    public Optional<OffsetDateTime> endAt() {
+        return Optional.ofNullable(this.endAt);
     }
 
     public Optional<HrisCompensationFrequency> frequency() {
@@ -90,6 +117,13 @@ public class HrisCompensation {
 
     public Optional<String> notes() {
         return Optional.ofNullable(this.notes);
+    }
+
+    /**
+     * date this pay became effective (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
+    public Optional<OffsetDateTime> startAt() {
+        return Optional.ofNullable(this.startAt);
     }
 
     public Optional<HrisCompensationType> type() {
@@ -109,6 +143,15 @@ public class HrisCompensation {
 
     public HrisCompensation withCurrency(@Nullable String currency) {
         this.currency = currency;
+        return this;
+    }
+
+
+    /**
+     * date this pay stopped (empty = still current) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
+    public HrisCompensation withEndAt(@Nullable OffsetDateTime endAt) {
+        this.endAt = endAt;
         return this;
     }
 
@@ -134,6 +177,15 @@ public class HrisCompensation {
     }
 
 
+    /**
+     * date this pay became effective (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
+    public HrisCompensation withStartAt(@Nullable OffsetDateTime startAt) {
+        this.startAt = startAt;
+        return this;
+    }
+
+
     public HrisCompensation withType(@Nullable HrisCompensationType type) {
         this.type = type;
         return this;
@@ -152,17 +204,20 @@ public class HrisCompensation {
         return 
             Utils.enhancedDeepEquals(this.amount, other.amount) &&
             Utils.enhancedDeepEquals(this.currency, other.currency) &&
+            Utils.enhancedDeepEquals(this.endAt, other.endAt) &&
             Utils.enhancedDeepEquals(this.frequency, other.frequency) &&
             Utils.enhancedDeepEquals(this.groupId, other.groupId) &&
             Utils.enhancedDeepEquals(this.notes, other.notes) &&
+            Utils.enhancedDeepEquals(this.startAt, other.startAt) &&
             Utils.enhancedDeepEquals(this.type, other.type);
     }
     
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            amount, currency, frequency,
-            groupId, notes, type);
+            amount, currency, endAt,
+            frequency, groupId, notes,
+            startAt, type);
     }
     
     @Override
@@ -170,9 +225,11 @@ public class HrisCompensation {
         return Utils.toString(HrisCompensation.class,
                 "amount", amount,
                 "currency", currency,
+                "endAt", endAt,
                 "frequency", frequency,
                 "groupId", groupId,
                 "notes", notes,
+                "startAt", startAt,
                 "type", type);
     }
 
@@ -183,11 +240,15 @@ public class HrisCompensation {
 
         private String currency;
 
+        private OffsetDateTime endAt;
+
         private HrisCompensationFrequency frequency;
 
         private String groupId;
 
         private String notes;
+
+        private OffsetDateTime startAt;
 
         private HrisCompensationType type;
 
@@ -202,6 +263,14 @@ public class HrisCompensation {
 
         public Builder currency(@Nullable String currency) {
             this.currency = currency;
+            return this;
+        }
+
+        /**
+         * date this pay stopped (empty = still current) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
+        public Builder endAt(@Nullable OffsetDateTime endAt) {
+            this.endAt = endAt;
             return this;
         }
 
@@ -223,6 +292,14 @@ public class HrisCompensation {
             return this;
         }
 
+        /**
+         * date this pay became effective (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
+        public Builder startAt(@Nullable OffsetDateTime startAt) {
+            this.startAt = startAt;
+            return this;
+        }
+
         public Builder type(@Nullable HrisCompensationType type) {
             this.type = type;
             return this;
@@ -230,8 +307,9 @@ public class HrisCompensation {
 
         public HrisCompensation build() {
             return new HrisCompensation(
-                amount, currency, frequency,
-                groupId, notes, type);
+                amount, currency, endAt,
+                frequency, groupId, notes,
+                startAt, type);
         }
 
     }

@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.GetUnifiedApicallRequest;
 import to.unified.unified_java_sdk.models.operations.GetUnifiedApicallRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetUnifiedApicallResponse;
@@ -15,6 +16,7 @@ import to.unified.unified_java_sdk.models.operations.ListUnifiedApicallsResponse
 import to.unified.unified_java_sdk.operations.GetUnifiedApicall;
 import to.unified.unified_java_sdk.operations.ListUnifiedApicalls;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Apicall {
@@ -53,8 +55,20 @@ public class Apicall {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetUnifiedApicallResponse getUnifiedApicall(@Nonnull GetUnifiedApicallRequest request) {
+        return getUnifiedApicall(request, null);
+    }
+
+    /**
+     * Retrieve specific API Call by its ID
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetUnifiedApicallResponse getUnifiedApicall(@Nonnull GetUnifiedApicallRequest request, @Nullable Options options) {
         RequestOperation<GetUnifiedApicallRequest, GetUnifiedApicallResponse> operation
-              = new GetUnifiedApicall.Sync(sdkConfiguration, _headers);
+              = new GetUnifiedApicall.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -75,8 +89,20 @@ public class Apicall {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListUnifiedApicallsResponse listUnifiedApicalls(@Nonnull ListUnifiedApicallsRequest request) {
+        return listUnifiedApicalls(request, null);
+    }
+
+    /**
+     * Returns API Calls
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListUnifiedApicallsResponse listUnifiedApicalls(@Nonnull ListUnifiedApicallsRequest request, @Nullable Options options) {
         RequestOperation<ListUnifiedApicallsRequest, ListUnifiedApicallsResponse> operation
-              = new ListUnifiedApicalls.Sync(sdkConfiguration, _headers);
+              = new ListUnifiedApicalls.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

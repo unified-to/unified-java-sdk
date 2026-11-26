@@ -6,11 +6,13 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateDatastoreQueryRequest;
 import to.unified.unified_java_sdk.models.operations.CreateDatastoreQueryRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateDatastoreQueryResponse;
 import to.unified.unified_java_sdk.operations.CreateDatastoreQuery;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Query {
@@ -55,8 +57,23 @@ public class Query {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateDatastoreQueryResponse createDatastoreQuery(@Nonnull CreateDatastoreQueryRequest request) {
+        return createDatastoreQuery(request, null);
+    }
+
+    /**
+     * Create a query
+     * 
+     * <p>Creates a DatastoreQuery. Provide the unified DatastoreQuery fields in the request body; they are
+     * mapped to the provider's API. Returns the created DatastoreQuery.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateDatastoreQueryResponse createDatastoreQuery(@Nonnull CreateDatastoreQueryRequest request, @Nullable Options options) {
         RequestOperation<CreateDatastoreQueryRequest, CreateDatastoreQueryResponse> operation
-              = new CreateDatastoreQuery.Sync(sdkConfiguration, _headers);
+              = new CreateDatastoreQuery.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

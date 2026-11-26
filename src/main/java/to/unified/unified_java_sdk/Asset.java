@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateAdsAssetRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAdsAssetRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateAdsAssetResponse;
@@ -19,6 +20,7 @@ import to.unified.unified_java_sdk.operations.CreateAdsAsset;
 import to.unified.unified_java_sdk.operations.GetAdsAsset;
 import to.unified.unified_java_sdk.operations.ListAdsAssets;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Asset {
@@ -63,8 +65,23 @@ public class Asset {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateAdsAssetResponse createAdsAsset(@Nonnull CreateAdsAssetRequest request) {
+        return createAdsAsset(request, null);
+    }
+
+    /**
+     * Create an asset
+     * 
+     * <p>Creates a AdsAsset. Provide the unified AdsAsset fields in the request body; they are mapped to the
+     * provider's API. Returns the created AdsAsset.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateAdsAssetResponse createAdsAsset(@Nonnull CreateAdsAssetRequest request, @Nullable Options options) {
         RequestOperation<CreateAdsAssetRequest, CreateAdsAssetResponse> operation
-              = new CreateAdsAsset.Sync(sdkConfiguration, _headers);
+              = new CreateAdsAsset.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -91,8 +108,23 @@ public class Asset {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAdsAssetResponse getAdsAsset(@Nonnull GetAdsAssetRequest request) {
+        return getAdsAsset(request, null);
+    }
+
+    /**
+     * Retrieve an asset
+     * 
+     * <p>Retrieves a single AdsAsset by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAdsAssetResponse getAdsAsset(@Nonnull GetAdsAssetRequest request, @Nullable Options options) {
         RequestOperation<GetAdsAssetRequest, GetAdsAssetResponse> operation
-              = new GetAdsAsset.Sync(sdkConfiguration, _headers);
+              = new GetAdsAsset.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -127,8 +159,27 @@ public class Asset {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAdsAssetsResponse listAdsAssets(@Nonnull ListAdsAssetsRequest request) {
+        return listAdsAssets(request, null);
+    }
+
+    /**
+     * List all assets
+     * 
+     * <p>Returns a list of AdsAssets. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAdsAssetsResponse listAdsAssets(@Nonnull ListAdsAssetsRequest request, @Nullable Options options) {
         RequestOperation<ListAdsAssetsRequest, ListAdsAssetsResponse> operation
-              = new ListAdsAssets.Sync(sdkConfiguration, _headers);
+              = new ListAdsAssets.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

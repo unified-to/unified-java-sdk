@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateQmsAuditRequest;
 import to.unified.unified_java_sdk.models.operations.GetQmsAuditRequest;
@@ -28,6 +29,7 @@ import to.unified.unified_java_sdk.operations.ListQmsAudits;
 import to.unified.unified_java_sdk.operations.PatchQmsAudit;
 import to.unified.unified_java_sdk.operations.UpdateQmsAudit;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncAudit {
@@ -72,8 +74,22 @@ public class AsyncAudit {
      * @return {@code CompletableFuture<CreateQmsAuditResponse>} - The async response
      */
     public CompletableFuture<CreateQmsAuditResponse> createQmsAudit(@Nonnull CreateQmsAuditRequest request) {
+        return createQmsAudit(request, null);
+    }
+
+    /**
+     * Create an audit
+     * 
+     * <p>Creates a QmsAudit. Provide the unified QmsAudit fields in the request body; they are mapped to the
+     * provider's API. Returns the created QmsAudit.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateQmsAuditResponse>} - The async response
+     */
+    public CompletableFuture<CreateQmsAuditResponse> createQmsAudit(@Nonnull CreateQmsAuditRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateQmsAuditRequest, CreateQmsAuditResponse> operation
-              = new CreateQmsAudit.Async(sdkConfiguration, _headers);
+              = new CreateQmsAudit.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -101,8 +117,22 @@ public class AsyncAudit {
      * @return {@code CompletableFuture<GetQmsAuditResponse>} - The async response
      */
     public CompletableFuture<GetQmsAuditResponse> getQmsAudit(@Nonnull GetQmsAuditRequest request) {
+        return getQmsAudit(request, null);
+    }
+
+    /**
+     * Retrieve an audit
+     * 
+     * <p>Retrieves a single QmsAudit by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetQmsAuditResponse>} - The async response
+     */
+    public CompletableFuture<GetQmsAuditResponse> getQmsAudit(@Nonnull GetQmsAuditRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetQmsAuditRequest, GetQmsAuditResponse> operation
-              = new GetQmsAudit.Async(sdkConfiguration, _headers);
+              = new GetQmsAudit.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -138,8 +168,26 @@ public class AsyncAudit {
      * @return {@code CompletableFuture<ListQmsAuditsResponse>} - The async response
      */
     public CompletableFuture<ListQmsAuditsResponse> listQmsAudits(@Nonnull ListQmsAuditsRequest request) {
+        return listQmsAudits(request, null);
+    }
+
+    /**
+     * List all audits
+     * 
+     * <p>Returns a list of QmsAudits. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListQmsAuditsResponse>} - The async response
+     */
+    public CompletableFuture<ListQmsAuditsResponse> listQmsAudits(@Nonnull ListQmsAuditsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListQmsAuditsRequest, ListQmsAuditsResponse> operation
-              = new ListQmsAudits.Async(sdkConfiguration, _headers);
+              = new ListQmsAudits.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -167,8 +215,22 @@ public class AsyncAudit {
      * @return {@code CompletableFuture<PatchQmsAuditResponse>} - The async response
      */
     public CompletableFuture<PatchQmsAuditResponse> patchQmsAudit(@Nonnull PatchQmsAuditRequest request) {
+        return patchQmsAudit(request, null);
+    }
+
+    /**
+     * Update an audit
+     * 
+     * <p>Updates the QmsAudit identified by `id`. Provide the unified QmsAudit fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchQmsAuditResponse>} - The async response
+     */
+    public CompletableFuture<PatchQmsAuditResponse> patchQmsAudit(@Nonnull PatchQmsAuditRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchQmsAuditRequest, PatchQmsAuditResponse> operation
-              = new PatchQmsAudit.Async(sdkConfiguration, _headers);
+              = new PatchQmsAudit.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -196,8 +258,22 @@ public class AsyncAudit {
      * @return {@code CompletableFuture<UpdateQmsAuditResponse>} - The async response
      */
     public CompletableFuture<UpdateQmsAuditResponse> updateQmsAudit(@Nonnull UpdateQmsAuditRequest request) {
+        return updateQmsAudit(request, null);
+    }
+
+    /**
+     * Update an audit
+     * 
+     * <p>Updates the QmsAudit identified by `id`. Provide the unified QmsAudit fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateQmsAuditResponse>} - The async response
+     */
+    public CompletableFuture<UpdateQmsAuditResponse> updateQmsAudit(@Nonnull UpdateQmsAuditRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateQmsAuditRequest, UpdateQmsAuditResponse> operation
-              = new UpdateQmsAudit.Async(sdkConfiguration, _headers);
+              = new UpdateQmsAudit.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateFormsFormRequest;
 import to.unified.unified_java_sdk.models.operations.CreateFormsFormRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateFormsFormResponse;
@@ -39,6 +40,7 @@ import to.unified.unified_java_sdk.operations.PatchFormsForm;
 import to.unified.unified_java_sdk.operations.RemoveFormsForm;
 import to.unified.unified_java_sdk.operations.UpdateFormsForm;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Forms {
@@ -83,8 +85,23 @@ public class Forms {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateFormsFormResponse createFormsForm(@Nonnull CreateFormsFormRequest request) {
+        return createFormsForm(request, null);
+    }
+
+    /**
+     * Create a form
+     * 
+     * <p>Creates a FormsForm. Provide the unified FormsForm fields in the request body; they are mapped to
+     * the provider's API. Returns the created FormsForm.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateFormsFormResponse createFormsForm(@Nonnull CreateFormsFormRequest request, @Nullable Options options) {
         RequestOperation<CreateFormsFormRequest, CreateFormsFormResponse> operation
-              = new CreateFormsForm.Sync(sdkConfiguration, _headers);
+              = new CreateFormsForm.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -111,8 +128,23 @@ public class Forms {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetFormsFormResponse getFormsForm(@Nonnull GetFormsFormRequest request) {
+        return getFormsForm(request, null);
+    }
+
+    /**
+     * Retrieve a form
+     * 
+     * <p>Retrieves a single FormsForm by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetFormsFormResponse getFormsForm(@Nonnull GetFormsFormRequest request, @Nullable Options options) {
         RequestOperation<GetFormsFormRequest, GetFormsFormResponse> operation
-              = new GetFormsForm.Sync(sdkConfiguration, _headers);
+              = new GetFormsForm.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -139,8 +171,23 @@ public class Forms {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetFormsSubmissionResponse getFormsSubmission(@Nonnull GetFormsSubmissionRequest request) {
+        return getFormsSubmission(request, null);
+    }
+
+    /**
+     * Retrieve a submission
+     * 
+     * <p>Retrieves a single FormsSubmission by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetFormsSubmissionResponse getFormsSubmission(@Nonnull GetFormsSubmissionRequest request, @Nullable Options options) {
         RequestOperation<GetFormsSubmissionRequest, GetFormsSubmissionResponse> operation
-              = new GetFormsSubmission.Sync(sdkConfiguration, _headers);
+              = new GetFormsSubmission.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -175,8 +222,27 @@ public class Forms {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListFormsFormsResponse listFormsForms(@Nonnull ListFormsFormsRequest request) {
+        return listFormsForms(request, null);
+    }
+
+    /**
+     * List all forms
+     * 
+     * <p>Returns a list of FormsForms. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListFormsFormsResponse listFormsForms(@Nonnull ListFormsFormsRequest request, @Nullable Options options) {
         RequestOperation<ListFormsFormsRequest, ListFormsFormsResponse> operation
-              = new ListFormsForms.Sync(sdkConfiguration, _headers);
+              = new ListFormsForms.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -211,8 +277,27 @@ public class Forms {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListFormsSubmissionsResponse listFormsSubmissions(@Nonnull ListFormsSubmissionsRequest request) {
+        return listFormsSubmissions(request, null);
+    }
+
+    /**
+     * List all submissions
+     * 
+     * <p>Returns a list of FormsSubmissions. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListFormsSubmissionsResponse listFormsSubmissions(@Nonnull ListFormsSubmissionsRequest request, @Nullable Options options) {
         RequestOperation<ListFormsSubmissionsRequest, ListFormsSubmissionsResponse> operation
-              = new ListFormsSubmissions.Sync(sdkConfiguration, _headers);
+              = new ListFormsSubmissions.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -239,8 +324,23 @@ public class Forms {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchFormsFormResponse patchFormsForm(@Nonnull PatchFormsFormRequest request) {
+        return patchFormsForm(request, null);
+    }
+
+    /**
+     * Update a form
+     * 
+     * <p>Updates the FormsForm identified by `id`. Provide the unified FormsForm fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchFormsFormResponse patchFormsForm(@Nonnull PatchFormsFormRequest request, @Nullable Options options) {
         RequestOperation<PatchFormsFormRequest, PatchFormsFormResponse> operation
-              = new PatchFormsForm.Sync(sdkConfiguration, _headers);
+              = new PatchFormsForm.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -265,8 +365,22 @@ public class Forms {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveFormsFormResponse removeFormsForm(@Nonnull RemoveFormsFormRequest request) {
+        return removeFormsForm(request, null);
+    }
+
+    /**
+     * Remove a form
+     * 
+     * <p>Deletes the FormsForm identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveFormsFormResponse removeFormsForm(@Nonnull RemoveFormsFormRequest request, @Nullable Options options) {
         RequestOperation<RemoveFormsFormRequest, RemoveFormsFormResponse> operation
-              = new RemoveFormsForm.Sync(sdkConfiguration, _headers);
+              = new RemoveFormsForm.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -293,8 +407,23 @@ public class Forms {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateFormsFormResponse updateFormsForm(@Nonnull UpdateFormsFormRequest request) {
+        return updateFormsForm(request, null);
+    }
+
+    /**
+     * Update a form
+     * 
+     * <p>Updates the FormsForm identified by `id`. Provide the unified FormsForm fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateFormsFormResponse updateFormsForm(@Nonnull UpdateFormsFormRequest request, @Nullable Options options) {
         RequestOperation<UpdateFormsFormRequest, UpdateFormsFormResponse> operation
-              = new UpdateFormsForm.Sync(sdkConfiguration, _headers);
+              = new UpdateFormsForm.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

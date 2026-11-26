@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateAtsActivityRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAtsApplicationRequest;
@@ -208,6 +209,7 @@ import to.unified.unified_java_sdk.operations.UpdateAtsInterview;
 import to.unified.unified_java_sdk.operations.UpdateAtsJob;
 import to.unified.unified_java_sdk.operations.UpdateAtsScorecard;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncAts {
@@ -252,8 +254,22 @@ public class AsyncAts {
      * @return {@code CompletableFuture<CreateAtsActivityResponse>} - The async response
      */
     public CompletableFuture<CreateAtsActivityResponse> createAtsActivity(@Nonnull CreateAtsActivityRequest request) {
+        return createAtsActivity(request, null);
+    }
+
+    /**
+     * Create an activity
+     * 
+     * <p>Creates a AtsActivity. Provide the unified AtsActivity fields in the request body; they are mapped
+     * to the provider's API. Returns the created AtsActivity.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateAtsActivityResponse>} - The async response
+     */
+    public CompletableFuture<CreateAtsActivityResponse> createAtsActivity(@Nonnull CreateAtsActivityRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateAtsActivityRequest, CreateAtsActivityResponse> operation
-              = new CreateAtsActivity.Async(sdkConfiguration, _headers);
+              = new CreateAtsActivity.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -281,8 +297,22 @@ public class AsyncAts {
      * @return {@code CompletableFuture<CreateAtsApplicationResponse>} - The async response
      */
     public CompletableFuture<CreateAtsApplicationResponse> createAtsApplication(@Nonnull CreateAtsApplicationRequest request) {
+        return createAtsApplication(request, null);
+    }
+
+    /**
+     * Create an application
+     * 
+     * <p>Creates a AtsApplication. Provide the unified AtsApplication fields in the request body; they are
+     * mapped to the provider's API. Returns the created AtsApplication.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateAtsApplicationResponse>} - The async response
+     */
+    public CompletableFuture<CreateAtsApplicationResponse> createAtsApplication(@Nonnull CreateAtsApplicationRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateAtsApplicationRequest, CreateAtsApplicationResponse> operation
-              = new CreateAtsApplication.Async(sdkConfiguration, _headers);
+              = new CreateAtsApplication.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -310,8 +340,22 @@ public class AsyncAts {
      * @return {@code CompletableFuture<CreateAtsCandidateResponse>} - The async response
      */
     public CompletableFuture<CreateAtsCandidateResponse> createAtsCandidate(@Nonnull CreateAtsCandidateRequest request) {
+        return createAtsCandidate(request, null);
+    }
+
+    /**
+     * Create a candidate
+     * 
+     * <p>Creates a AtsCandidate. Provide the unified AtsCandidate fields in the request body; they are mapped
+     * to the provider's API. Returns the created AtsCandidate.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateAtsCandidateResponse>} - The async response
+     */
+    public CompletableFuture<CreateAtsCandidateResponse> createAtsCandidate(@Nonnull CreateAtsCandidateRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateAtsCandidateRequest, CreateAtsCandidateResponse> operation
-              = new CreateAtsCandidate.Async(sdkConfiguration, _headers);
+              = new CreateAtsCandidate.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -339,8 +383,22 @@ public class AsyncAts {
      * @return {@code CompletableFuture<CreateAtsCompanyResponse>} - The async response
      */
     public CompletableFuture<CreateAtsCompanyResponse> createAtsCompany(@Nonnull CreateAtsCompanyRequest request) {
+        return createAtsCompany(request, null);
+    }
+
+    /**
+     * Create a company
+     * 
+     * <p>Creates a AtsCompany. Provide the unified AtsCompany fields in the request body; they are mapped to
+     * the provider's API. Returns the created AtsCompany.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateAtsCompanyResponse>} - The async response
+     */
+    public CompletableFuture<CreateAtsCompanyResponse> createAtsCompany(@Nonnull CreateAtsCompanyRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateAtsCompanyRequest, CreateAtsCompanyResponse> operation
-              = new CreateAtsCompany.Async(sdkConfiguration, _headers);
+              = new CreateAtsCompany.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -368,8 +426,22 @@ public class AsyncAts {
      * @return {@code CompletableFuture<CreateAtsDocumentResponse>} - The async response
      */
     public CompletableFuture<CreateAtsDocumentResponse> createAtsDocument(@Nonnull CreateAtsDocumentRequest request) {
+        return createAtsDocument(request, null);
+    }
+
+    /**
+     * Create a document
+     * 
+     * <p>Creates a AtsDocument. Provide the unified AtsDocument fields in the request body; they are mapped
+     * to the provider's API. Returns the created AtsDocument.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateAtsDocumentResponse>} - The async response
+     */
+    public CompletableFuture<CreateAtsDocumentResponse> createAtsDocument(@Nonnull CreateAtsDocumentRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateAtsDocumentRequest, CreateAtsDocumentResponse> operation
-              = new CreateAtsDocument.Async(sdkConfiguration, _headers);
+              = new CreateAtsDocument.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -397,8 +469,22 @@ public class AsyncAts {
      * @return {@code CompletableFuture<CreateAtsInterviewResponse>} - The async response
      */
     public CompletableFuture<CreateAtsInterviewResponse> createAtsInterview(@Nonnull CreateAtsInterviewRequest request) {
+        return createAtsInterview(request, null);
+    }
+
+    /**
+     * Create an interview
+     * 
+     * <p>Creates a AtsInterview. Provide the unified AtsInterview fields in the request body; they are mapped
+     * to the provider's API. Returns the created AtsInterview.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateAtsInterviewResponse>} - The async response
+     */
+    public CompletableFuture<CreateAtsInterviewResponse> createAtsInterview(@Nonnull CreateAtsInterviewRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateAtsInterviewRequest, CreateAtsInterviewResponse> operation
-              = new CreateAtsInterview.Async(sdkConfiguration, _headers);
+              = new CreateAtsInterview.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -426,8 +512,22 @@ public class AsyncAts {
      * @return {@code CompletableFuture<CreateAtsJobResponse>} - The async response
      */
     public CompletableFuture<CreateAtsJobResponse> createAtsJob(@Nonnull CreateAtsJobRequest request) {
+        return createAtsJob(request, null);
+    }
+
+    /**
+     * Create a job
+     * 
+     * <p>Creates a AtsJob. Provide the unified AtsJob fields in the request body; they are mapped to the
+     * provider's API. Returns the created AtsJob.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateAtsJobResponse>} - The async response
+     */
+    public CompletableFuture<CreateAtsJobResponse> createAtsJob(@Nonnull CreateAtsJobRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateAtsJobRequest, CreateAtsJobResponse> operation
-              = new CreateAtsJob.Async(sdkConfiguration, _headers);
+              = new CreateAtsJob.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -455,8 +555,22 @@ public class AsyncAts {
      * @return {@code CompletableFuture<CreateAtsScorecardResponse>} - The async response
      */
     public CompletableFuture<CreateAtsScorecardResponse> createAtsScorecard(@Nonnull CreateAtsScorecardRequest request) {
+        return createAtsScorecard(request, null);
+    }
+
+    /**
+     * Create a scorecard
+     * 
+     * <p>Creates a AtsScorecard. Provide the unified AtsScorecard fields in the request body; they are mapped
+     * to the provider's API. Returns the created AtsScorecard.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateAtsScorecardResponse>} - The async response
+     */
+    public CompletableFuture<CreateAtsScorecardResponse> createAtsScorecard(@Nonnull CreateAtsScorecardRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateAtsScorecardRequest, CreateAtsScorecardResponse> operation
-              = new CreateAtsScorecard.Async(sdkConfiguration, _headers);
+              = new CreateAtsScorecard.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -484,8 +598,22 @@ public class AsyncAts {
      * @return {@code CompletableFuture<GetAtsActivityResponse>} - The async response
      */
     public CompletableFuture<GetAtsActivityResponse> getAtsActivity(@Nonnull GetAtsActivityRequest request) {
+        return getAtsActivity(request, null);
+    }
+
+    /**
+     * Retrieve an activity
+     * 
+     * <p>Retrieves a single AtsActivity by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetAtsActivityResponse>} - The async response
+     */
+    public CompletableFuture<GetAtsActivityResponse> getAtsActivity(@Nonnull GetAtsActivityRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetAtsActivityRequest, GetAtsActivityResponse> operation
-              = new GetAtsActivity.Async(sdkConfiguration, _headers);
+              = new GetAtsActivity.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -513,8 +641,22 @@ public class AsyncAts {
      * @return {@code CompletableFuture<GetAtsApplicationResponse>} - The async response
      */
     public CompletableFuture<GetAtsApplicationResponse> getAtsApplication(@Nonnull GetAtsApplicationRequest request) {
+        return getAtsApplication(request, null);
+    }
+
+    /**
+     * Retrieve an application
+     * 
+     * <p>Retrieves a single AtsApplication by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetAtsApplicationResponse>} - The async response
+     */
+    public CompletableFuture<GetAtsApplicationResponse> getAtsApplication(@Nonnull GetAtsApplicationRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetAtsApplicationRequest, GetAtsApplicationResponse> operation
-              = new GetAtsApplication.Async(sdkConfiguration, _headers);
+              = new GetAtsApplication.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -542,8 +684,22 @@ public class AsyncAts {
      * @return {@code CompletableFuture<GetAtsApplicationstatusResponse>} - The async response
      */
     public CompletableFuture<GetAtsApplicationstatusResponse> getAtsApplicationstatus(@Nonnull GetAtsApplicationstatusRequest request) {
+        return getAtsApplicationstatus(request, null);
+    }
+
+    /**
+     * Retrieve an applicationstatus
+     * 
+     * <p>Retrieves a single AtsStatus by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetAtsApplicationstatusResponse>} - The async response
+     */
+    public CompletableFuture<GetAtsApplicationstatusResponse> getAtsApplicationstatus(@Nonnull GetAtsApplicationstatusRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetAtsApplicationstatusRequest, GetAtsApplicationstatusResponse> operation
-              = new GetAtsApplicationstatus.Async(sdkConfiguration, _headers);
+              = new GetAtsApplicationstatus.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -571,8 +727,22 @@ public class AsyncAts {
      * @return {@code CompletableFuture<GetAtsCandidateResponse>} - The async response
      */
     public CompletableFuture<GetAtsCandidateResponse> getAtsCandidate(@Nonnull GetAtsCandidateRequest request) {
+        return getAtsCandidate(request, null);
+    }
+
+    /**
+     * Retrieve a candidate
+     * 
+     * <p>Retrieves a single AtsCandidate by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetAtsCandidateResponse>} - The async response
+     */
+    public CompletableFuture<GetAtsCandidateResponse> getAtsCandidate(@Nonnull GetAtsCandidateRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetAtsCandidateRequest, GetAtsCandidateResponse> operation
-              = new GetAtsCandidate.Async(sdkConfiguration, _headers);
+              = new GetAtsCandidate.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -600,8 +770,22 @@ public class AsyncAts {
      * @return {@code CompletableFuture<GetAtsCompanyResponse>} - The async response
      */
     public CompletableFuture<GetAtsCompanyResponse> getAtsCompany(@Nonnull GetAtsCompanyRequest request) {
+        return getAtsCompany(request, null);
+    }
+
+    /**
+     * Retrieve a company
+     * 
+     * <p>Retrieves a single AtsCompany by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetAtsCompanyResponse>} - The async response
+     */
+    public CompletableFuture<GetAtsCompanyResponse> getAtsCompany(@Nonnull GetAtsCompanyRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetAtsCompanyRequest, GetAtsCompanyResponse> operation
-              = new GetAtsCompany.Async(sdkConfiguration, _headers);
+              = new GetAtsCompany.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -629,8 +813,22 @@ public class AsyncAts {
      * @return {@code CompletableFuture<GetAtsDocumentResponse>} - The async response
      */
     public CompletableFuture<GetAtsDocumentResponse> getAtsDocument(@Nonnull GetAtsDocumentRequest request) {
+        return getAtsDocument(request, null);
+    }
+
+    /**
+     * Retrieve a document
+     * 
+     * <p>Retrieves a single AtsDocument by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetAtsDocumentResponse>} - The async response
+     */
+    public CompletableFuture<GetAtsDocumentResponse> getAtsDocument(@Nonnull GetAtsDocumentRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetAtsDocumentRequest, GetAtsDocumentResponse> operation
-              = new GetAtsDocument.Async(sdkConfiguration, _headers);
+              = new GetAtsDocument.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -658,8 +856,22 @@ public class AsyncAts {
      * @return {@code CompletableFuture<GetAtsInterviewResponse>} - The async response
      */
     public CompletableFuture<GetAtsInterviewResponse> getAtsInterview(@Nonnull GetAtsInterviewRequest request) {
+        return getAtsInterview(request, null);
+    }
+
+    /**
+     * Retrieve an interview
+     * 
+     * <p>Retrieves a single AtsInterview by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetAtsInterviewResponse>} - The async response
+     */
+    public CompletableFuture<GetAtsInterviewResponse> getAtsInterview(@Nonnull GetAtsInterviewRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetAtsInterviewRequest, GetAtsInterviewResponse> operation
-              = new GetAtsInterview.Async(sdkConfiguration, _headers);
+              = new GetAtsInterview.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -687,8 +899,22 @@ public class AsyncAts {
      * @return {@code CompletableFuture<GetAtsJobResponse>} - The async response
      */
     public CompletableFuture<GetAtsJobResponse> getAtsJob(@Nonnull GetAtsJobRequest request) {
+        return getAtsJob(request, null);
+    }
+
+    /**
+     * Retrieve a job
+     * 
+     * <p>Retrieves a single AtsJob by its `id`. Obtain `id` values from the corresponding list endpoint. Use
+     * `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetAtsJobResponse>} - The async response
+     */
+    public CompletableFuture<GetAtsJobResponse> getAtsJob(@Nonnull GetAtsJobRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetAtsJobRequest, GetAtsJobResponse> operation
-              = new GetAtsJob.Async(sdkConfiguration, _headers);
+              = new GetAtsJob.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -716,8 +942,22 @@ public class AsyncAts {
      * @return {@code CompletableFuture<GetAtsScorecardResponse>} - The async response
      */
     public CompletableFuture<GetAtsScorecardResponse> getAtsScorecard(@Nonnull GetAtsScorecardRequest request) {
+        return getAtsScorecard(request, null);
+    }
+
+    /**
+     * Retrieve a scorecard
+     * 
+     * <p>Retrieves a single AtsScorecard by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetAtsScorecardResponse>} - The async response
+     */
+    public CompletableFuture<GetAtsScorecardResponse> getAtsScorecard(@Nonnull GetAtsScorecardRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetAtsScorecardRequest, GetAtsScorecardResponse> operation
-              = new GetAtsScorecard.Async(sdkConfiguration, _headers);
+              = new GetAtsScorecard.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -753,8 +993,26 @@ public class AsyncAts {
      * @return {@code CompletableFuture<ListAtsActivitiesResponse>} - The async response
      */
     public CompletableFuture<ListAtsActivitiesResponse> listAtsActivities(@Nonnull ListAtsActivitiesRequest request) {
+        return listAtsActivities(request, null);
+    }
+
+    /**
+     * List all activities
+     * 
+     * <p>Returns a list of AtsActivities. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListAtsActivitiesResponse>} - The async response
+     */
+    public CompletableFuture<ListAtsActivitiesResponse> listAtsActivities(@Nonnull ListAtsActivitiesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListAtsActivitiesRequest, ListAtsActivitiesResponse> operation
-              = new ListAtsActivities.Async(sdkConfiguration, _headers);
+              = new ListAtsActivities.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -790,8 +1048,26 @@ public class AsyncAts {
      * @return {@code CompletableFuture<ListAtsApplicationsResponse>} - The async response
      */
     public CompletableFuture<ListAtsApplicationsResponse> listAtsApplications(@Nonnull ListAtsApplicationsRequest request) {
+        return listAtsApplications(request, null);
+    }
+
+    /**
+     * List all applications
+     * 
+     * <p>Returns a list of AtsApplications. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListAtsApplicationsResponse>} - The async response
+     */
+    public CompletableFuture<ListAtsApplicationsResponse> listAtsApplications(@Nonnull ListAtsApplicationsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListAtsApplicationsRequest, ListAtsApplicationsResponse> operation
-              = new ListAtsApplications.Async(sdkConfiguration, _headers);
+              = new ListAtsApplications.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -827,8 +1103,26 @@ public class AsyncAts {
      * @return {@code CompletableFuture<ListAtsApplicationstatusesResponse>} - The async response
      */
     public CompletableFuture<ListAtsApplicationstatusesResponse> listAtsApplicationstatuses(@Nonnull ListAtsApplicationstatusesRequest request) {
+        return listAtsApplicationstatuses(request, null);
+    }
+
+    /**
+     * List all applicationstatuses
+     * 
+     * <p>Returns a list of AtsStatuses. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListAtsApplicationstatusesResponse>} - The async response
+     */
+    public CompletableFuture<ListAtsApplicationstatusesResponse> listAtsApplicationstatuses(@Nonnull ListAtsApplicationstatusesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListAtsApplicationstatusesRequest, ListAtsApplicationstatusesResponse> operation
-              = new ListAtsApplicationstatuses.Async(sdkConfiguration, _headers);
+              = new ListAtsApplicationstatuses.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -864,8 +1158,26 @@ public class AsyncAts {
      * @return {@code CompletableFuture<ListAtsCandidatesResponse>} - The async response
      */
     public CompletableFuture<ListAtsCandidatesResponse> listAtsCandidates(@Nonnull ListAtsCandidatesRequest request) {
+        return listAtsCandidates(request, null);
+    }
+
+    /**
+     * List all candidates
+     * 
+     * <p>Returns a list of AtsCandidates. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListAtsCandidatesResponse>} - The async response
+     */
+    public CompletableFuture<ListAtsCandidatesResponse> listAtsCandidates(@Nonnull ListAtsCandidatesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListAtsCandidatesRequest, ListAtsCandidatesResponse> operation
-              = new ListAtsCandidates.Async(sdkConfiguration, _headers);
+              = new ListAtsCandidates.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -901,8 +1213,26 @@ public class AsyncAts {
      * @return {@code CompletableFuture<ListAtsCompaniesResponse>} - The async response
      */
     public CompletableFuture<ListAtsCompaniesResponse> listAtsCompanies(@Nonnull ListAtsCompaniesRequest request) {
+        return listAtsCompanies(request, null);
+    }
+
+    /**
+     * List all companies
+     * 
+     * <p>Returns a list of AtsCompanies. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListAtsCompaniesResponse>} - The async response
+     */
+    public CompletableFuture<ListAtsCompaniesResponse> listAtsCompanies(@Nonnull ListAtsCompaniesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListAtsCompaniesRequest, ListAtsCompaniesResponse> operation
-              = new ListAtsCompanies.Async(sdkConfiguration, _headers);
+              = new ListAtsCompanies.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -938,8 +1268,26 @@ public class AsyncAts {
      * @return {@code CompletableFuture<ListAtsDocumentsResponse>} - The async response
      */
     public CompletableFuture<ListAtsDocumentsResponse> listAtsDocuments(@Nonnull ListAtsDocumentsRequest request) {
+        return listAtsDocuments(request, null);
+    }
+
+    /**
+     * List all documents
+     * 
+     * <p>Returns a list of AtsDocuments. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListAtsDocumentsResponse>} - The async response
+     */
+    public CompletableFuture<ListAtsDocumentsResponse> listAtsDocuments(@Nonnull ListAtsDocumentsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListAtsDocumentsRequest, ListAtsDocumentsResponse> operation
-              = new ListAtsDocuments.Async(sdkConfiguration, _headers);
+              = new ListAtsDocuments.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -975,8 +1323,26 @@ public class AsyncAts {
      * @return {@code CompletableFuture<ListAtsInterviewsResponse>} - The async response
      */
     public CompletableFuture<ListAtsInterviewsResponse> listAtsInterviews(@Nonnull ListAtsInterviewsRequest request) {
+        return listAtsInterviews(request, null);
+    }
+
+    /**
+     * List all interviews
+     * 
+     * <p>Returns a list of AtsInterviews. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListAtsInterviewsResponse>} - The async response
+     */
+    public CompletableFuture<ListAtsInterviewsResponse> listAtsInterviews(@Nonnull ListAtsInterviewsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListAtsInterviewsRequest, ListAtsInterviewsResponse> operation
-              = new ListAtsInterviews.Async(sdkConfiguration, _headers);
+              = new ListAtsInterviews.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1012,8 +1378,26 @@ public class AsyncAts {
      * @return {@code CompletableFuture<ListAtsJobsResponse>} - The async response
      */
     public CompletableFuture<ListAtsJobsResponse> listAtsJobs(@Nonnull ListAtsJobsRequest request) {
+        return listAtsJobs(request, null);
+    }
+
+    /**
+     * List all jobs
+     * 
+     * <p>Returns a list of AtsJobs. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListAtsJobsResponse>} - The async response
+     */
+    public CompletableFuture<ListAtsJobsResponse> listAtsJobs(@Nonnull ListAtsJobsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListAtsJobsRequest, ListAtsJobsResponse> operation
-              = new ListAtsJobs.Async(sdkConfiguration, _headers);
+              = new ListAtsJobs.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1049,8 +1433,26 @@ public class AsyncAts {
      * @return {@code CompletableFuture<ListAtsScorecardsResponse>} - The async response
      */
     public CompletableFuture<ListAtsScorecardsResponse> listAtsScorecards(@Nonnull ListAtsScorecardsRequest request) {
+        return listAtsScorecards(request, null);
+    }
+
+    /**
+     * List all scorecards
+     * 
+     * <p>Returns a list of AtsScorecards. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListAtsScorecardsResponse>} - The async response
+     */
+    public CompletableFuture<ListAtsScorecardsResponse> listAtsScorecards(@Nonnull ListAtsScorecardsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListAtsScorecardsRequest, ListAtsScorecardsResponse> operation
-              = new ListAtsScorecards.Async(sdkConfiguration, _headers);
+              = new ListAtsScorecards.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1078,8 +1480,22 @@ public class AsyncAts {
      * @return {@code CompletableFuture<PatchAtsActivityResponse>} - The async response
      */
     public CompletableFuture<PatchAtsActivityResponse> patchAtsActivity(@Nonnull PatchAtsActivityRequest request) {
+        return patchAtsActivity(request, null);
+    }
+
+    /**
+     * Update an activity
+     * 
+     * <p>Updates the AtsActivity identified by `id`. Provide the unified AtsActivity fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchAtsActivityResponse>} - The async response
+     */
+    public CompletableFuture<PatchAtsActivityResponse> patchAtsActivity(@Nonnull PatchAtsActivityRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchAtsActivityRequest, PatchAtsActivityResponse> operation
-              = new PatchAtsActivity.Async(sdkConfiguration, _headers);
+              = new PatchAtsActivity.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1107,8 +1523,22 @@ public class AsyncAts {
      * @return {@code CompletableFuture<PatchAtsApplicationResponse>} - The async response
      */
     public CompletableFuture<PatchAtsApplicationResponse> patchAtsApplication(@Nonnull PatchAtsApplicationRequest request) {
+        return patchAtsApplication(request, null);
+    }
+
+    /**
+     * Update an application
+     * 
+     * <p>Updates the AtsApplication identified by `id`. Provide the unified AtsApplication fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchAtsApplicationResponse>} - The async response
+     */
+    public CompletableFuture<PatchAtsApplicationResponse> patchAtsApplication(@Nonnull PatchAtsApplicationRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchAtsApplicationRequest, PatchAtsApplicationResponse> operation
-              = new PatchAtsApplication.Async(sdkConfiguration, _headers);
+              = new PatchAtsApplication.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1136,8 +1566,22 @@ public class AsyncAts {
      * @return {@code CompletableFuture<PatchAtsCandidateResponse>} - The async response
      */
     public CompletableFuture<PatchAtsCandidateResponse> patchAtsCandidate(@Nonnull PatchAtsCandidateRequest request) {
+        return patchAtsCandidate(request, null);
+    }
+
+    /**
+     * Update a candidate
+     * 
+     * <p>Updates the AtsCandidate identified by `id`. Provide the unified AtsCandidate fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchAtsCandidateResponse>} - The async response
+     */
+    public CompletableFuture<PatchAtsCandidateResponse> patchAtsCandidate(@Nonnull PatchAtsCandidateRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchAtsCandidateRequest, PatchAtsCandidateResponse> operation
-              = new PatchAtsCandidate.Async(sdkConfiguration, _headers);
+              = new PatchAtsCandidate.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1165,8 +1609,22 @@ public class AsyncAts {
      * @return {@code CompletableFuture<PatchAtsCompanyResponse>} - The async response
      */
     public CompletableFuture<PatchAtsCompanyResponse> patchAtsCompany(@Nonnull PatchAtsCompanyRequest request) {
+        return patchAtsCompany(request, null);
+    }
+
+    /**
+     * Update a company
+     * 
+     * <p>Updates the AtsCompany identified by `id`. Provide the unified AtsCompany fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchAtsCompanyResponse>} - The async response
+     */
+    public CompletableFuture<PatchAtsCompanyResponse> patchAtsCompany(@Nonnull PatchAtsCompanyRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchAtsCompanyRequest, PatchAtsCompanyResponse> operation
-              = new PatchAtsCompany.Async(sdkConfiguration, _headers);
+              = new PatchAtsCompany.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1194,8 +1652,22 @@ public class AsyncAts {
      * @return {@code CompletableFuture<PatchAtsDocumentResponse>} - The async response
      */
     public CompletableFuture<PatchAtsDocumentResponse> patchAtsDocument(@Nonnull PatchAtsDocumentRequest request) {
+        return patchAtsDocument(request, null);
+    }
+
+    /**
+     * Update a document
+     * 
+     * <p>Updates the AtsDocument identified by `id`. Provide the unified AtsDocument fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchAtsDocumentResponse>} - The async response
+     */
+    public CompletableFuture<PatchAtsDocumentResponse> patchAtsDocument(@Nonnull PatchAtsDocumentRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchAtsDocumentRequest, PatchAtsDocumentResponse> operation
-              = new PatchAtsDocument.Async(sdkConfiguration, _headers);
+              = new PatchAtsDocument.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1223,8 +1695,22 @@ public class AsyncAts {
      * @return {@code CompletableFuture<PatchAtsInterviewResponse>} - The async response
      */
     public CompletableFuture<PatchAtsInterviewResponse> patchAtsInterview(@Nonnull PatchAtsInterviewRequest request) {
+        return patchAtsInterview(request, null);
+    }
+
+    /**
+     * Update an interview
+     * 
+     * <p>Updates the AtsInterview identified by `id`. Provide the unified AtsInterview fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchAtsInterviewResponse>} - The async response
+     */
+    public CompletableFuture<PatchAtsInterviewResponse> patchAtsInterview(@Nonnull PatchAtsInterviewRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchAtsInterviewRequest, PatchAtsInterviewResponse> operation
-              = new PatchAtsInterview.Async(sdkConfiguration, _headers);
+              = new PatchAtsInterview.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1252,8 +1738,22 @@ public class AsyncAts {
      * @return {@code CompletableFuture<PatchAtsJobResponse>} - The async response
      */
     public CompletableFuture<PatchAtsJobResponse> patchAtsJob(@Nonnull PatchAtsJobRequest request) {
+        return patchAtsJob(request, null);
+    }
+
+    /**
+     * Update a job
+     * 
+     * <p>Updates the AtsJob identified by `id`. Provide the unified AtsJob fields to change in the request
+     * body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchAtsJobResponse>} - The async response
+     */
+    public CompletableFuture<PatchAtsJobResponse> patchAtsJob(@Nonnull PatchAtsJobRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchAtsJobRequest, PatchAtsJobResponse> operation
-              = new PatchAtsJob.Async(sdkConfiguration, _headers);
+              = new PatchAtsJob.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1281,8 +1781,22 @@ public class AsyncAts {
      * @return {@code CompletableFuture<PatchAtsScorecardResponse>} - The async response
      */
     public CompletableFuture<PatchAtsScorecardResponse> patchAtsScorecard(@Nonnull PatchAtsScorecardRequest request) {
+        return patchAtsScorecard(request, null);
+    }
+
+    /**
+     * Update a scorecard
+     * 
+     * <p>Updates the AtsScorecard identified by `id`. Provide the unified AtsScorecard fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchAtsScorecardResponse>} - The async response
+     */
+    public CompletableFuture<PatchAtsScorecardResponse> patchAtsScorecard(@Nonnull PatchAtsScorecardRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchAtsScorecardRequest, PatchAtsScorecardResponse> operation
-              = new PatchAtsScorecard.Async(sdkConfiguration, _headers);
+              = new PatchAtsScorecard.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1308,8 +1822,21 @@ public class AsyncAts {
      * @return {@code CompletableFuture<RemoveAtsActivityResponse>} - The async response
      */
     public CompletableFuture<RemoveAtsActivityResponse> removeAtsActivity(@Nonnull RemoveAtsActivityRequest request) {
+        return removeAtsActivity(request, null);
+    }
+
+    /**
+     * Remove an activity
+     * 
+     * <p>Deletes the AtsActivity identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveAtsActivityResponse>} - The async response
+     */
+    public CompletableFuture<RemoveAtsActivityResponse> removeAtsActivity(@Nonnull RemoveAtsActivityRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveAtsActivityRequest, RemoveAtsActivityResponse> operation
-              = new RemoveAtsActivity.Async(sdkConfiguration, _headers);
+              = new RemoveAtsActivity.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1335,8 +1862,21 @@ public class AsyncAts {
      * @return {@code CompletableFuture<RemoveAtsApplicationResponse>} - The async response
      */
     public CompletableFuture<RemoveAtsApplicationResponse> removeAtsApplication(@Nonnull RemoveAtsApplicationRequest request) {
+        return removeAtsApplication(request, null);
+    }
+
+    /**
+     * Remove an application
+     * 
+     * <p>Deletes the AtsApplication identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveAtsApplicationResponse>} - The async response
+     */
+    public CompletableFuture<RemoveAtsApplicationResponse> removeAtsApplication(@Nonnull RemoveAtsApplicationRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveAtsApplicationRequest, RemoveAtsApplicationResponse> operation
-              = new RemoveAtsApplication.Async(sdkConfiguration, _headers);
+              = new RemoveAtsApplication.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1362,8 +1902,21 @@ public class AsyncAts {
      * @return {@code CompletableFuture<RemoveAtsCandidateResponse>} - The async response
      */
     public CompletableFuture<RemoveAtsCandidateResponse> removeAtsCandidate(@Nonnull RemoveAtsCandidateRequest request) {
+        return removeAtsCandidate(request, null);
+    }
+
+    /**
+     * Remove a candidate
+     * 
+     * <p>Deletes the AtsCandidate identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveAtsCandidateResponse>} - The async response
+     */
+    public CompletableFuture<RemoveAtsCandidateResponse> removeAtsCandidate(@Nonnull RemoveAtsCandidateRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveAtsCandidateRequest, RemoveAtsCandidateResponse> operation
-              = new RemoveAtsCandidate.Async(sdkConfiguration, _headers);
+              = new RemoveAtsCandidate.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1389,8 +1942,21 @@ public class AsyncAts {
      * @return {@code CompletableFuture<RemoveAtsCompanyResponse>} - The async response
      */
     public CompletableFuture<RemoveAtsCompanyResponse> removeAtsCompany(@Nonnull RemoveAtsCompanyRequest request) {
+        return removeAtsCompany(request, null);
+    }
+
+    /**
+     * Remove a company
+     * 
+     * <p>Deletes the AtsCompany identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveAtsCompanyResponse>} - The async response
+     */
+    public CompletableFuture<RemoveAtsCompanyResponse> removeAtsCompany(@Nonnull RemoveAtsCompanyRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveAtsCompanyRequest, RemoveAtsCompanyResponse> operation
-              = new RemoveAtsCompany.Async(sdkConfiguration, _headers);
+              = new RemoveAtsCompany.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1416,8 +1982,21 @@ public class AsyncAts {
      * @return {@code CompletableFuture<RemoveAtsDocumentResponse>} - The async response
      */
     public CompletableFuture<RemoveAtsDocumentResponse> removeAtsDocument(@Nonnull RemoveAtsDocumentRequest request) {
+        return removeAtsDocument(request, null);
+    }
+
+    /**
+     * Remove a document
+     * 
+     * <p>Deletes the AtsDocument identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveAtsDocumentResponse>} - The async response
+     */
+    public CompletableFuture<RemoveAtsDocumentResponse> removeAtsDocument(@Nonnull RemoveAtsDocumentRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveAtsDocumentRequest, RemoveAtsDocumentResponse> operation
-              = new RemoveAtsDocument.Async(sdkConfiguration, _headers);
+              = new RemoveAtsDocument.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1443,8 +2022,21 @@ public class AsyncAts {
      * @return {@code CompletableFuture<RemoveAtsInterviewResponse>} - The async response
      */
     public CompletableFuture<RemoveAtsInterviewResponse> removeAtsInterview(@Nonnull RemoveAtsInterviewRequest request) {
+        return removeAtsInterview(request, null);
+    }
+
+    /**
+     * Remove an interview
+     * 
+     * <p>Deletes the AtsInterview identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveAtsInterviewResponse>} - The async response
+     */
+    public CompletableFuture<RemoveAtsInterviewResponse> removeAtsInterview(@Nonnull RemoveAtsInterviewRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveAtsInterviewRequest, RemoveAtsInterviewResponse> operation
-              = new RemoveAtsInterview.Async(sdkConfiguration, _headers);
+              = new RemoveAtsInterview.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1470,8 +2062,21 @@ public class AsyncAts {
      * @return {@code CompletableFuture<RemoveAtsJobResponse>} - The async response
      */
     public CompletableFuture<RemoveAtsJobResponse> removeAtsJob(@Nonnull RemoveAtsJobRequest request) {
+        return removeAtsJob(request, null);
+    }
+
+    /**
+     * Remove a job
+     * 
+     * <p>Deletes the AtsJob identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveAtsJobResponse>} - The async response
+     */
+    public CompletableFuture<RemoveAtsJobResponse> removeAtsJob(@Nonnull RemoveAtsJobRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveAtsJobRequest, RemoveAtsJobResponse> operation
-              = new RemoveAtsJob.Async(sdkConfiguration, _headers);
+              = new RemoveAtsJob.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1497,8 +2102,21 @@ public class AsyncAts {
      * @return {@code CompletableFuture<RemoveAtsScorecardResponse>} - The async response
      */
     public CompletableFuture<RemoveAtsScorecardResponse> removeAtsScorecard(@Nonnull RemoveAtsScorecardRequest request) {
+        return removeAtsScorecard(request, null);
+    }
+
+    /**
+     * Remove a scorecard
+     * 
+     * <p>Deletes the AtsScorecard identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveAtsScorecardResponse>} - The async response
+     */
+    public CompletableFuture<RemoveAtsScorecardResponse> removeAtsScorecard(@Nonnull RemoveAtsScorecardRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveAtsScorecardRequest, RemoveAtsScorecardResponse> operation
-              = new RemoveAtsScorecard.Async(sdkConfiguration, _headers);
+              = new RemoveAtsScorecard.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1526,8 +2144,22 @@ public class AsyncAts {
      * @return {@code CompletableFuture<UpdateAtsActivityResponse>} - The async response
      */
     public CompletableFuture<UpdateAtsActivityResponse> updateAtsActivity(@Nonnull UpdateAtsActivityRequest request) {
+        return updateAtsActivity(request, null);
+    }
+
+    /**
+     * Update an activity
+     * 
+     * <p>Updates the AtsActivity identified by `id`. Provide the unified AtsActivity fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateAtsActivityResponse>} - The async response
+     */
+    public CompletableFuture<UpdateAtsActivityResponse> updateAtsActivity(@Nonnull UpdateAtsActivityRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateAtsActivityRequest, UpdateAtsActivityResponse> operation
-              = new UpdateAtsActivity.Async(sdkConfiguration, _headers);
+              = new UpdateAtsActivity.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1555,8 +2187,22 @@ public class AsyncAts {
      * @return {@code CompletableFuture<UpdateAtsApplicationResponse>} - The async response
      */
     public CompletableFuture<UpdateAtsApplicationResponse> updateAtsApplication(@Nonnull UpdateAtsApplicationRequest request) {
+        return updateAtsApplication(request, null);
+    }
+
+    /**
+     * Update an application
+     * 
+     * <p>Updates the AtsApplication identified by `id`. Provide the unified AtsApplication fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateAtsApplicationResponse>} - The async response
+     */
+    public CompletableFuture<UpdateAtsApplicationResponse> updateAtsApplication(@Nonnull UpdateAtsApplicationRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateAtsApplicationRequest, UpdateAtsApplicationResponse> operation
-              = new UpdateAtsApplication.Async(sdkConfiguration, _headers);
+              = new UpdateAtsApplication.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1584,8 +2230,22 @@ public class AsyncAts {
      * @return {@code CompletableFuture<UpdateAtsCandidateResponse>} - The async response
      */
     public CompletableFuture<UpdateAtsCandidateResponse> updateAtsCandidate(@Nonnull UpdateAtsCandidateRequest request) {
+        return updateAtsCandidate(request, null);
+    }
+
+    /**
+     * Update a candidate
+     * 
+     * <p>Updates the AtsCandidate identified by `id`. Provide the unified AtsCandidate fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateAtsCandidateResponse>} - The async response
+     */
+    public CompletableFuture<UpdateAtsCandidateResponse> updateAtsCandidate(@Nonnull UpdateAtsCandidateRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateAtsCandidateRequest, UpdateAtsCandidateResponse> operation
-              = new UpdateAtsCandidate.Async(sdkConfiguration, _headers);
+              = new UpdateAtsCandidate.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1613,8 +2273,22 @@ public class AsyncAts {
      * @return {@code CompletableFuture<UpdateAtsCompanyResponse>} - The async response
      */
     public CompletableFuture<UpdateAtsCompanyResponse> updateAtsCompany(@Nonnull UpdateAtsCompanyRequest request) {
+        return updateAtsCompany(request, null);
+    }
+
+    /**
+     * Update a company
+     * 
+     * <p>Updates the AtsCompany identified by `id`. Provide the unified AtsCompany fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateAtsCompanyResponse>} - The async response
+     */
+    public CompletableFuture<UpdateAtsCompanyResponse> updateAtsCompany(@Nonnull UpdateAtsCompanyRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateAtsCompanyRequest, UpdateAtsCompanyResponse> operation
-              = new UpdateAtsCompany.Async(sdkConfiguration, _headers);
+              = new UpdateAtsCompany.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1642,8 +2316,22 @@ public class AsyncAts {
      * @return {@code CompletableFuture<UpdateAtsDocumentResponse>} - The async response
      */
     public CompletableFuture<UpdateAtsDocumentResponse> updateAtsDocument(@Nonnull UpdateAtsDocumentRequest request) {
+        return updateAtsDocument(request, null);
+    }
+
+    /**
+     * Update a document
+     * 
+     * <p>Updates the AtsDocument identified by `id`. Provide the unified AtsDocument fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateAtsDocumentResponse>} - The async response
+     */
+    public CompletableFuture<UpdateAtsDocumentResponse> updateAtsDocument(@Nonnull UpdateAtsDocumentRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateAtsDocumentRequest, UpdateAtsDocumentResponse> operation
-              = new UpdateAtsDocument.Async(sdkConfiguration, _headers);
+              = new UpdateAtsDocument.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1671,8 +2359,22 @@ public class AsyncAts {
      * @return {@code CompletableFuture<UpdateAtsInterviewResponse>} - The async response
      */
     public CompletableFuture<UpdateAtsInterviewResponse> updateAtsInterview(@Nonnull UpdateAtsInterviewRequest request) {
+        return updateAtsInterview(request, null);
+    }
+
+    /**
+     * Update an interview
+     * 
+     * <p>Updates the AtsInterview identified by `id`. Provide the unified AtsInterview fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateAtsInterviewResponse>} - The async response
+     */
+    public CompletableFuture<UpdateAtsInterviewResponse> updateAtsInterview(@Nonnull UpdateAtsInterviewRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateAtsInterviewRequest, UpdateAtsInterviewResponse> operation
-              = new UpdateAtsInterview.Async(sdkConfiguration, _headers);
+              = new UpdateAtsInterview.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1700,8 +2402,22 @@ public class AsyncAts {
      * @return {@code CompletableFuture<UpdateAtsJobResponse>} - The async response
      */
     public CompletableFuture<UpdateAtsJobResponse> updateAtsJob(@Nonnull UpdateAtsJobRequest request) {
+        return updateAtsJob(request, null);
+    }
+
+    /**
+     * Update a job
+     * 
+     * <p>Updates the AtsJob identified by `id`. Provide the unified AtsJob fields to change in the request
+     * body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateAtsJobResponse>} - The async response
+     */
+    public CompletableFuture<UpdateAtsJobResponse> updateAtsJob(@Nonnull UpdateAtsJobRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateAtsJobRequest, UpdateAtsJobResponse> operation
-              = new UpdateAtsJob.Async(sdkConfiguration, _headers);
+              = new UpdateAtsJob.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1729,8 +2445,22 @@ public class AsyncAts {
      * @return {@code CompletableFuture<UpdateAtsScorecardResponse>} - The async response
      */
     public CompletableFuture<UpdateAtsScorecardResponse> updateAtsScorecard(@Nonnull UpdateAtsScorecardRequest request) {
+        return updateAtsScorecard(request, null);
+    }
+
+    /**
+     * Update a scorecard
+     * 
+     * <p>Updates the AtsScorecard identified by `id`. Provide the unified AtsScorecard fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateAtsScorecardResponse>} - The async response
+     */
+    public CompletableFuture<UpdateAtsScorecardResponse> updateAtsScorecard(@Nonnull UpdateAtsScorecardRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateAtsScorecardRequest, UpdateAtsScorecardResponse> operation
-              = new UpdateAtsScorecard.Async(sdkConfiguration, _headers);
+              = new UpdateAtsScorecard.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

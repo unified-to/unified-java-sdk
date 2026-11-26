@@ -6,20 +6,30 @@ package to.unified.unified_java_sdk.models.operations.async;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.ListLmsInstructorsRequest;
 import to.unified.unified_java_sdk.operations.ListLmsInstructors;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListLmsInstructorsRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private ListLmsInstructorsRequest request;
+    private final Options.Builder optionsBuilder;
 
     public ListLmsInstructorsRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public ListLmsInstructorsRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public ListLmsInstructorsRequestBuilder request(@Nonnull ListLmsInstructorsRequest request) {
@@ -44,8 +54,9 @@ public class ListLmsInstructorsRequestBuilder {
     * @return The response from the server.
     */
     public CompletableFuture<ListLmsInstructorsResponse> call() {
+        Options options = optionsBuilder.build();
         AsyncRequestOperation<ListLmsInstructorsRequest, ListLmsInstructorsResponse> operation
-              = new ListLmsInstructors.Async(sdkConfiguration, _headers);
+              = new ListLmsInstructors.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

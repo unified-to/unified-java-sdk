@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateComputeServiceRequest;
 import to.unified.unified_java_sdk.models.operations.CreateComputeServiceRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateComputeServiceResponse;
@@ -31,6 +32,7 @@ import to.unified.unified_java_sdk.operations.PatchComputeService;
 import to.unified.unified_java_sdk.operations.RemoveComputeService;
 import to.unified.unified_java_sdk.operations.UpdateComputeService;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Service {
@@ -75,8 +77,23 @@ public class Service {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateComputeServiceResponse createComputeService(@Nonnull CreateComputeServiceRequest request) {
+        return createComputeService(request, null);
+    }
+
+    /**
+     * Create a service
+     * 
+     * <p>Creates a ComputeService. Provide the unified ComputeService fields in the request body; they are
+     * mapped to the provider's API. Returns the created ComputeService.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateComputeServiceResponse createComputeService(@Nonnull CreateComputeServiceRequest request, @Nullable Options options) {
         RequestOperation<CreateComputeServiceRequest, CreateComputeServiceResponse> operation
-              = new CreateComputeService.Sync(sdkConfiguration, _headers);
+              = new CreateComputeService.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -103,8 +120,23 @@ public class Service {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetComputeServiceResponse getComputeService(@Nonnull GetComputeServiceRequest request) {
+        return getComputeService(request, null);
+    }
+
+    /**
+     * Retrieve a service
+     * 
+     * <p>Retrieves a single ComputeService by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetComputeServiceResponse getComputeService(@Nonnull GetComputeServiceRequest request, @Nullable Options options) {
         RequestOperation<GetComputeServiceRequest, GetComputeServiceResponse> operation
-              = new GetComputeService.Sync(sdkConfiguration, _headers);
+              = new GetComputeService.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -139,8 +171,27 @@ public class Service {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListComputeServicesResponse listComputeServices(@Nonnull ListComputeServicesRequest request) {
+        return listComputeServices(request, null);
+    }
+
+    /**
+     * List all services
+     * 
+     * <p>Returns a list of ComputeServices. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListComputeServicesResponse listComputeServices(@Nonnull ListComputeServicesRequest request, @Nullable Options options) {
         RequestOperation<ListComputeServicesRequest, ListComputeServicesResponse> operation
-              = new ListComputeServices.Sync(sdkConfiguration, _headers);
+              = new ListComputeServices.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +218,23 @@ public class Service {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchComputeServiceResponse patchComputeService(@Nonnull PatchComputeServiceRequest request) {
+        return patchComputeService(request, null);
+    }
+
+    /**
+     * Update a service
+     * 
+     * <p>Updates the ComputeService identified by `id`. Provide the unified ComputeService fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchComputeServiceResponse patchComputeService(@Nonnull PatchComputeServiceRequest request, @Nullable Options options) {
         RequestOperation<PatchComputeServiceRequest, PatchComputeServiceResponse> operation
-              = new PatchComputeService.Sync(sdkConfiguration, _headers);
+              = new PatchComputeService.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -193,8 +259,22 @@ public class Service {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveComputeServiceResponse removeComputeService(@Nonnull RemoveComputeServiceRequest request) {
+        return removeComputeService(request, null);
+    }
+
+    /**
+     * Remove a service
+     * 
+     * <p>Deletes the ComputeService identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveComputeServiceResponse removeComputeService(@Nonnull RemoveComputeServiceRequest request, @Nullable Options options) {
         RequestOperation<RemoveComputeServiceRequest, RemoveComputeServiceResponse> operation
-              = new RemoveComputeService.Sync(sdkConfiguration, _headers);
+              = new RemoveComputeService.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -221,8 +301,23 @@ public class Service {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateComputeServiceResponse updateComputeService(@Nonnull UpdateComputeServiceRequest request) {
+        return updateComputeService(request, null);
+    }
+
+    /**
+     * Update a service
+     * 
+     * <p>Updates the ComputeService identified by `id`. Provide the unified ComputeService fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateComputeServiceResponse updateComputeService(@Nonnull UpdateComputeServiceRequest request, @Nullable Options options) {
         RequestOperation<UpdateComputeServiceRequest, UpdateComputeServiceResponse> operation
-              = new UpdateComputeService.Sync(sdkConfiguration, _headers);
+              = new UpdateComputeService.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

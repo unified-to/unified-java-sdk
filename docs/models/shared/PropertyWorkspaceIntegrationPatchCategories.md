@@ -57,3 +57,6 @@ PropertyWorkspaceIntegrationPatchCategories custom = PropertyWorkspaceIntegratio
 | `PROPERTY`     | property       |
 | `PLM`          | plm            |
 | `QMS`          | qms            |
+| `DMS`          | dms            |
+| `FHIR`         | fhir           |
+| `PRINTING`     | printing       |

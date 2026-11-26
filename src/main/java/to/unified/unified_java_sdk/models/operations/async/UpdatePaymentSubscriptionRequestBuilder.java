@@ -6,20 +6,30 @@ package to.unified.unified_java_sdk.models.operations.async;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.UpdatePaymentSubscriptionRequest;
 import to.unified.unified_java_sdk.operations.UpdatePaymentSubscription;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class UpdatePaymentSubscriptionRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private UpdatePaymentSubscriptionRequest request;
+    private final Options.Builder optionsBuilder;
 
     public UpdatePaymentSubscriptionRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public UpdatePaymentSubscriptionRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public UpdatePaymentSubscriptionRequestBuilder request(@Nonnull UpdatePaymentSubscriptionRequest request) {
@@ -44,8 +54,9 @@ public class UpdatePaymentSubscriptionRequestBuilder {
     * @return The response from the server.
     */
     public CompletableFuture<UpdatePaymentSubscriptionResponse> call() {
+        Options options = optionsBuilder.build();
         AsyncRequestOperation<UpdatePaymentSubscriptionRequest, UpdatePaymentSubscriptionResponse> operation
-              = new UpdatePaymentSubscription.Async(sdkConfiguration, _headers);
+              = new UpdatePaymentSubscription.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

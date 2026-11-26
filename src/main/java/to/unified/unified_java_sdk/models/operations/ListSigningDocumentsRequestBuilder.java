@@ -6,18 +6,28 @@ package to.unified.unified_java_sdk.models.operations;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.ListSigningDocuments;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListSigningDocumentsRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private ListSigningDocumentsRequest request;
+    private final Options.Builder optionsBuilder;
 
     public ListSigningDocumentsRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public ListSigningDocumentsRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public ListSigningDocumentsRequestBuilder request(@Nonnull ListSigningDocumentsRequest request) {
@@ -42,8 +52,9 @@ public class ListSigningDocumentsRequestBuilder {
     * @return The response from the server.
     */
     public ListSigningDocumentsResponse call() {
+        Options options = optionsBuilder.build();
         RequestOperation<ListSigningDocumentsRequest, ListSigningDocumentsResponse> operation
-              = new ListSigningDocuments.Sync(sdkConfiguration, _headers);
+              = new ListSigningDocuments.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

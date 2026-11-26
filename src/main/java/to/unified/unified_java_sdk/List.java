@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateMartechListRequest;
 import to.unified.unified_java_sdk.models.operations.CreateMartechListRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateMartechListResponse;
@@ -31,6 +32,7 @@ import to.unified.unified_java_sdk.operations.PatchMartechList;
 import to.unified.unified_java_sdk.operations.RemoveMartechList;
 import to.unified.unified_java_sdk.operations.UpdateMartechList;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class List {
@@ -75,8 +77,23 @@ public class List {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateMartechListResponse createMartechList(@Nonnull CreateMartechListRequest request) {
+        return createMartechList(request, null);
+    }
+
+    /**
+     * Create a list
+     * 
+     * <p>Creates a MarketingList. Provide the unified MarketingList fields in the request body; they are
+     * mapped to the provider's API. Returns the created MarketingList.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateMartechListResponse createMartechList(@Nonnull CreateMartechListRequest request, @Nullable Options options) {
         RequestOperation<CreateMartechListRequest, CreateMartechListResponse> operation
-              = new CreateMartechList.Sync(sdkConfiguration, _headers);
+              = new CreateMartechList.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -103,8 +120,23 @@ public class List {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetMartechListResponse getMartechList(@Nonnull GetMartechListRequest request) {
+        return getMartechList(request, null);
+    }
+
+    /**
+     * Retrieve a list
+     * 
+     * <p>Retrieves a single MarketingList by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetMartechListResponse getMartechList(@Nonnull GetMartechListRequest request, @Nullable Options options) {
         RequestOperation<GetMartechListRequest, GetMartechListResponse> operation
-              = new GetMartechList.Sync(sdkConfiguration, _headers);
+              = new GetMartechList.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -139,8 +171,27 @@ public class List {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListMartechListsResponse listMartechLists(@Nonnull ListMartechListsRequest request) {
+        return listMartechLists(request, null);
+    }
+
+    /**
+     * List all lists
+     * 
+     * <p>Returns a list of MarketingLists. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListMartechListsResponse listMartechLists(@Nonnull ListMartechListsRequest request, @Nullable Options options) {
         RequestOperation<ListMartechListsRequest, ListMartechListsResponse> operation
-              = new ListMartechLists.Sync(sdkConfiguration, _headers);
+              = new ListMartechLists.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +218,23 @@ public class List {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchMartechListResponse patchMartechList(@Nonnull PatchMartechListRequest request) {
+        return patchMartechList(request, null);
+    }
+
+    /**
+     * Update a list
+     * 
+     * <p>Updates the MarketingList identified by `id`. Provide the unified MarketingList fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchMartechListResponse patchMartechList(@Nonnull PatchMartechListRequest request, @Nullable Options options) {
         RequestOperation<PatchMartechListRequest, PatchMartechListResponse> operation
-              = new PatchMartechList.Sync(sdkConfiguration, _headers);
+              = new PatchMartechList.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -193,8 +259,22 @@ public class List {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveMartechListResponse removeMartechList(@Nonnull RemoveMartechListRequest request) {
+        return removeMartechList(request, null);
+    }
+
+    /**
+     * Remove a list
+     * 
+     * <p>Deletes the MarketingList identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveMartechListResponse removeMartechList(@Nonnull RemoveMartechListRequest request, @Nullable Options options) {
         RequestOperation<RemoveMartechListRequest, RemoveMartechListResponse> operation
-              = new RemoveMartechList.Sync(sdkConfiguration, _headers);
+              = new RemoveMartechList.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -221,8 +301,23 @@ public class List {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateMartechListResponse updateMartechList(@Nonnull UpdateMartechListRequest request) {
+        return updateMartechList(request, null);
+    }
+
+    /**
+     * Update a list
+     * 
+     * <p>Updates the MarketingList identified by `id`. Provide the unified MarketingList fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateMartechListResponse updateMartechList(@Nonnull UpdateMartechListRequest request, @Nullable Options options) {
         RequestOperation<UpdateMartechListRequest, UpdateMartechListResponse> operation
-              = new UpdateMartechList.Sync(sdkConfiguration, _headers);
+              = new UpdateMartechList.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

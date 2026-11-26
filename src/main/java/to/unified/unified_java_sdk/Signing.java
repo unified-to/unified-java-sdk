@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateSigningDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.CreateSigningDocumentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateSigningDocumentResponse;
@@ -63,6 +64,7 @@ import to.unified.unified_java_sdk.operations.RemoveSigningSignatory;
 import to.unified.unified_java_sdk.operations.UpdateSigningDocument;
 import to.unified.unified_java_sdk.operations.UpdateSigningSignatory;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Signing {
@@ -107,8 +109,23 @@ public class Signing {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateSigningDocumentResponse createSigningDocument(@Nonnull CreateSigningDocumentRequest request) {
+        return createSigningDocument(request, null);
+    }
+
+    /**
+     * Create a document
+     * 
+     * <p>Creates a SigningDocument. Provide the unified SigningDocument fields in the request body; they are
+     * mapped to the provider's API. Returns the created SigningDocument.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateSigningDocumentResponse createSigningDocument(@Nonnull CreateSigningDocumentRequest request, @Nullable Options options) {
         RequestOperation<CreateSigningDocumentRequest, CreateSigningDocumentResponse> operation
-              = new CreateSigningDocument.Sync(sdkConfiguration, _headers);
+              = new CreateSigningDocument.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -135,8 +152,23 @@ public class Signing {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateSigningSignatoryResponse createSigningSignatory(@Nonnull CreateSigningSignatoryRequest request) {
+        return createSigningSignatory(request, null);
+    }
+
+    /**
+     * Create a signatory
+     * 
+     * <p>Creates a SigningSignatory. Provide the unified SigningSignatory fields in the request body; they
+     * are mapped to the provider's API. Returns the created SigningSignatory.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateSigningSignatoryResponse createSigningSignatory(@Nonnull CreateSigningSignatoryRequest request, @Nullable Options options) {
         RequestOperation<CreateSigningSignatoryRequest, CreateSigningSignatoryResponse> operation
-              = new CreateSigningSignatory.Sync(sdkConfiguration, _headers);
+              = new CreateSigningSignatory.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -163,8 +195,23 @@ public class Signing {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetSigningDocumentResponse getSigningDocument(@Nonnull GetSigningDocumentRequest request) {
+        return getSigningDocument(request, null);
+    }
+
+    /**
+     * Retrieve a document
+     * 
+     * <p>Retrieves a single SigningDocument by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetSigningDocumentResponse getSigningDocument(@Nonnull GetSigningDocumentRequest request, @Nullable Options options) {
         RequestOperation<GetSigningDocumentRequest, GetSigningDocumentResponse> operation
-              = new GetSigningDocument.Sync(sdkConfiguration, _headers);
+              = new GetSigningDocument.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -191,8 +238,23 @@ public class Signing {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetSigningSignatoryResponse getSigningSignatory(@Nonnull GetSigningSignatoryRequest request) {
+        return getSigningSignatory(request, null);
+    }
+
+    /**
+     * Retrieve a signatory
+     * 
+     * <p>Retrieves a single SigningSignatory by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetSigningSignatoryResponse getSigningSignatory(@Nonnull GetSigningSignatoryRequest request, @Nullable Options options) {
         RequestOperation<GetSigningSignatoryRequest, GetSigningSignatoryResponse> operation
-              = new GetSigningSignatory.Sync(sdkConfiguration, _headers);
+              = new GetSigningSignatory.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -219,8 +281,23 @@ public class Signing {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetSigningTemplateResponse getSigningTemplate(@Nonnull GetSigningTemplateRequest request) {
+        return getSigningTemplate(request, null);
+    }
+
+    /**
+     * Retrieve a template
+     * 
+     * <p>Retrieves a single SigningTemplate by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetSigningTemplateResponse getSigningTemplate(@Nonnull GetSigningTemplateRequest request, @Nullable Options options) {
         RequestOperation<GetSigningTemplateRequest, GetSigningTemplateResponse> operation
-              = new GetSigningTemplate.Sync(sdkConfiguration, _headers);
+              = new GetSigningTemplate.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -255,8 +332,27 @@ public class Signing {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListSigningDocumentsResponse listSigningDocuments(@Nonnull ListSigningDocumentsRequest request) {
+        return listSigningDocuments(request, null);
+    }
+
+    /**
+     * List all documents
+     * 
+     * <p>Returns a list of SigningDocuments. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListSigningDocumentsResponse listSigningDocuments(@Nonnull ListSigningDocumentsRequest request, @Nullable Options options) {
         RequestOperation<ListSigningDocumentsRequest, ListSigningDocumentsResponse> operation
-              = new ListSigningDocuments.Sync(sdkConfiguration, _headers);
+              = new ListSigningDocuments.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -291,8 +387,27 @@ public class Signing {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListSigningSignatoriesResponse listSigningSignatories(@Nonnull ListSigningSignatoriesRequest request) {
+        return listSigningSignatories(request, null);
+    }
+
+    /**
+     * List all signatories
+     * 
+     * <p>Returns a list of SigningSignatories. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListSigningSignatoriesResponse listSigningSignatories(@Nonnull ListSigningSignatoriesRequest request, @Nullable Options options) {
         RequestOperation<ListSigningSignatoriesRequest, ListSigningSignatoriesResponse> operation
-              = new ListSigningSignatories.Sync(sdkConfiguration, _headers);
+              = new ListSigningSignatories.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -327,8 +442,27 @@ public class Signing {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListSigningTemplatesResponse listSigningTemplates(@Nonnull ListSigningTemplatesRequest request) {
+        return listSigningTemplates(request, null);
+    }
+
+    /**
+     * List all templates
+     * 
+     * <p>Returns a list of SigningTemplates. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListSigningTemplatesResponse listSigningTemplates(@Nonnull ListSigningTemplatesRequest request, @Nullable Options options) {
         RequestOperation<ListSigningTemplatesRequest, ListSigningTemplatesResponse> operation
-              = new ListSigningTemplates.Sync(sdkConfiguration, _headers);
+              = new ListSigningTemplates.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -355,8 +489,23 @@ public class Signing {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchSigningDocumentResponse patchSigningDocument(@Nonnull PatchSigningDocumentRequest request) {
+        return patchSigningDocument(request, null);
+    }
+
+    /**
+     * Update a document
+     * 
+     * <p>Updates the SigningDocument identified by `id`. Provide the unified SigningDocument fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchSigningDocumentResponse patchSigningDocument(@Nonnull PatchSigningDocumentRequest request, @Nullable Options options) {
         RequestOperation<PatchSigningDocumentRequest, PatchSigningDocumentResponse> operation
-              = new PatchSigningDocument.Sync(sdkConfiguration, _headers);
+              = new PatchSigningDocument.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -383,8 +532,23 @@ public class Signing {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchSigningSignatoryResponse patchSigningSignatory(@Nonnull PatchSigningSignatoryRequest request) {
+        return patchSigningSignatory(request, null);
+    }
+
+    /**
+     * Update a signatory
+     * 
+     * <p>Updates the SigningSignatory identified by `id`. Provide the unified SigningSignatory fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchSigningSignatoryResponse patchSigningSignatory(@Nonnull PatchSigningSignatoryRequest request, @Nullable Options options) {
         RequestOperation<PatchSigningSignatoryRequest, PatchSigningSignatoryResponse> operation
-              = new PatchSigningSignatory.Sync(sdkConfiguration, _headers);
+              = new PatchSigningSignatory.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -409,8 +573,22 @@ public class Signing {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveSigningDocumentResponse removeSigningDocument(@Nonnull RemoveSigningDocumentRequest request) {
+        return removeSigningDocument(request, null);
+    }
+
+    /**
+     * Remove a document
+     * 
+     * <p>Deletes the SigningDocument identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveSigningDocumentResponse removeSigningDocument(@Nonnull RemoveSigningDocumentRequest request, @Nullable Options options) {
         RequestOperation<RemoveSigningDocumentRequest, RemoveSigningDocumentResponse> operation
-              = new RemoveSigningDocument.Sync(sdkConfiguration, _headers);
+              = new RemoveSigningDocument.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -435,8 +613,22 @@ public class Signing {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveSigningSignatoryResponse removeSigningSignatory(@Nonnull RemoveSigningSignatoryRequest request) {
+        return removeSigningSignatory(request, null);
+    }
+
+    /**
+     * Remove a signatory
+     * 
+     * <p>Deletes the SigningSignatory identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveSigningSignatoryResponse removeSigningSignatory(@Nonnull RemoveSigningSignatoryRequest request, @Nullable Options options) {
         RequestOperation<RemoveSigningSignatoryRequest, RemoveSigningSignatoryResponse> operation
-              = new RemoveSigningSignatory.Sync(sdkConfiguration, _headers);
+              = new RemoveSigningSignatory.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -463,8 +655,23 @@ public class Signing {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateSigningDocumentResponse updateSigningDocument(@Nonnull UpdateSigningDocumentRequest request) {
+        return updateSigningDocument(request, null);
+    }
+
+    /**
+     * Update a document
+     * 
+     * <p>Updates the SigningDocument identified by `id`. Provide the unified SigningDocument fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateSigningDocumentResponse updateSigningDocument(@Nonnull UpdateSigningDocumentRequest request, @Nullable Options options) {
         RequestOperation<UpdateSigningDocumentRequest, UpdateSigningDocumentResponse> operation
-              = new UpdateSigningDocument.Sync(sdkConfiguration, _headers);
+              = new UpdateSigningDocument.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -491,8 +698,23 @@ public class Signing {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateSigningSignatoryResponse updateSigningSignatory(@Nonnull UpdateSigningSignatoryRequest request) {
+        return updateSigningSignatory(request, null);
+    }
+
+    /**
+     * Update a signatory
+     * 
+     * <p>Updates the SigningSignatory identified by `id`. Provide the unified SigningSignatory fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateSigningSignatoryResponse updateSigningSignatory(@Nonnull UpdateSigningSignatoryRequest request, @Nullable Options options) {
         RequestOperation<UpdateSigningSignatoryRequest, UpdateSigningSignatoryResponse> operation
-              = new UpdateSigningSignatory.Sync(sdkConfiguration, _headers);
+              = new UpdateSigningSignatory.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

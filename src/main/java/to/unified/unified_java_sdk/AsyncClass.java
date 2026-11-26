@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateLmsClassRequest;
 import to.unified.unified_java_sdk.models.operations.GetLmsClassRequest;
@@ -32,6 +33,7 @@ import to.unified.unified_java_sdk.operations.PatchLmsClass;
 import to.unified.unified_java_sdk.operations.RemoveLmsClass;
 import to.unified.unified_java_sdk.operations.UpdateLmsClass;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncClass {
@@ -76,8 +78,22 @@ public class AsyncClass {
      * @return {@code CompletableFuture<CreateLmsClassResponse>} - The async response
      */
     public CompletableFuture<CreateLmsClassResponse> createLmsClass(@Nonnull CreateLmsClassRequest request) {
+        return createLmsClass(request, null);
+    }
+
+    /**
+     * Create a class
+     * 
+     * <p>Creates a LmsClass. Provide the unified LmsClass fields in the request body; they are mapped to the
+     * provider's API. Returns the created LmsClass.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateLmsClassResponse>} - The async response
+     */
+    public CompletableFuture<CreateLmsClassResponse> createLmsClass(@Nonnull CreateLmsClassRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateLmsClassRequest, CreateLmsClassResponse> operation
-              = new CreateLmsClass.Async(sdkConfiguration, _headers);
+              = new CreateLmsClass.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -105,8 +121,22 @@ public class AsyncClass {
      * @return {@code CompletableFuture<GetLmsClassResponse>} - The async response
      */
     public CompletableFuture<GetLmsClassResponse> getLmsClass(@Nonnull GetLmsClassRequest request) {
+        return getLmsClass(request, null);
+    }
+
+    /**
+     * Retrieve a class
+     * 
+     * <p>Retrieves a single LmsClass by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetLmsClassResponse>} - The async response
+     */
+    public CompletableFuture<GetLmsClassResponse> getLmsClass(@Nonnull GetLmsClassRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetLmsClassRequest, GetLmsClassResponse> operation
-              = new GetLmsClass.Async(sdkConfiguration, _headers);
+              = new GetLmsClass.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -142,8 +172,26 @@ public class AsyncClass {
      * @return {@code CompletableFuture<ListLmsClassesResponse>} - The async response
      */
     public CompletableFuture<ListLmsClassesResponse> listLmsClasses(@Nonnull ListLmsClassesRequest request) {
+        return listLmsClasses(request, null);
+    }
+
+    /**
+     * List all classes
+     * 
+     * <p>Returns a list of LmsClasses. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListLmsClassesResponse>} - The async response
+     */
+    public CompletableFuture<ListLmsClassesResponse> listLmsClasses(@Nonnull ListLmsClassesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListLmsClassesRequest, ListLmsClassesResponse> operation
-              = new ListLmsClasses.Async(sdkConfiguration, _headers);
+              = new ListLmsClasses.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -171,8 +219,22 @@ public class AsyncClass {
      * @return {@code CompletableFuture<PatchLmsClassResponse>} - The async response
      */
     public CompletableFuture<PatchLmsClassResponse> patchLmsClass(@Nonnull PatchLmsClassRequest request) {
+        return patchLmsClass(request, null);
+    }
+
+    /**
+     * Update a class
+     * 
+     * <p>Updates the LmsClass identified by `id`. Provide the unified LmsClass fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchLmsClassResponse>} - The async response
+     */
+    public CompletableFuture<PatchLmsClassResponse> patchLmsClass(@Nonnull PatchLmsClassRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchLmsClassRequest, PatchLmsClassResponse> operation
-              = new PatchLmsClass.Async(sdkConfiguration, _headers);
+              = new PatchLmsClass.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -198,8 +260,21 @@ public class AsyncClass {
      * @return {@code CompletableFuture<RemoveLmsClassResponse>} - The async response
      */
     public CompletableFuture<RemoveLmsClassResponse> removeLmsClass(@Nonnull RemoveLmsClassRequest request) {
+        return removeLmsClass(request, null);
+    }
+
+    /**
+     * Remove a class
+     * 
+     * <p>Deletes the LmsClass identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveLmsClassResponse>} - The async response
+     */
+    public CompletableFuture<RemoveLmsClassResponse> removeLmsClass(@Nonnull RemoveLmsClassRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveLmsClassRequest, RemoveLmsClassResponse> operation
-              = new RemoveLmsClass.Async(sdkConfiguration, _headers);
+              = new RemoveLmsClass.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -227,8 +302,22 @@ public class AsyncClass {
      * @return {@code CompletableFuture<UpdateLmsClassResponse>} - The async response
      */
     public CompletableFuture<UpdateLmsClassResponse> updateLmsClass(@Nonnull UpdateLmsClassRequest request) {
+        return updateLmsClass(request, null);
+    }
+
+    /**
+     * Update a class
+     * 
+     * <p>Updates the LmsClass identified by `id`. Provide the unified LmsClass fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateLmsClassResponse>} - The async response
+     */
+    public CompletableFuture<UpdateLmsClassResponse> updateLmsClass(@Nonnull UpdateLmsClassRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateLmsClassRequest, UpdateLmsClassResponse> operation
-              = new UpdateLmsClass.Async(sdkConfiguration, _headers);
+              = new UpdateLmsClass.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

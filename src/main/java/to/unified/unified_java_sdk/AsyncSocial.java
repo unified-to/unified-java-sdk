@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateSocialCommentRequest;
 import to.unified.unified_java_sdk.models.operations.CreateSocialPostRequest;
@@ -88,6 +89,7 @@ import to.unified.unified_java_sdk.operations.UpdateSocialComment;
 import to.unified.unified_java_sdk.operations.UpdateSocialPost;
 import to.unified.unified_java_sdk.operations.UpdateSocialReview;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncSocial {
@@ -132,8 +134,22 @@ public class AsyncSocial {
      * @return {@code CompletableFuture<CreateSocialCommentResponse>} - The async response
      */
     public CompletableFuture<CreateSocialCommentResponse> createSocialComment(@Nonnull CreateSocialCommentRequest request) {
+        return createSocialComment(request, null);
+    }
+
+    /**
+     * Create a comment
+     * 
+     * <p>Creates a SocialComment. Provide the unified SocialComment fields in the request body; they are
+     * mapped to the provider's API. Returns the created SocialComment.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateSocialCommentResponse>} - The async response
+     */
+    public CompletableFuture<CreateSocialCommentResponse> createSocialComment(@Nonnull CreateSocialCommentRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateSocialCommentRequest, CreateSocialCommentResponse> operation
-              = new CreateSocialComment.Async(sdkConfiguration, _headers);
+              = new CreateSocialComment.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -161,8 +177,22 @@ public class AsyncSocial {
      * @return {@code CompletableFuture<CreateSocialPostResponse>} - The async response
      */
     public CompletableFuture<CreateSocialPostResponse> createSocialPost(@Nonnull CreateSocialPostRequest request) {
+        return createSocialPost(request, null);
+    }
+
+    /**
+     * Create a post
+     * 
+     * <p>Creates a SocialPost. Provide the unified SocialPost fields in the request body; they are mapped to
+     * the provider's API. Returns the created SocialPost.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateSocialPostResponse>} - The async response
+     */
+    public CompletableFuture<CreateSocialPostResponse> createSocialPost(@Nonnull CreateSocialPostRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateSocialPostRequest, CreateSocialPostResponse> operation
-              = new CreateSocialPost.Async(sdkConfiguration, _headers);
+              = new CreateSocialPost.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -190,8 +220,22 @@ public class AsyncSocial {
      * @return {@code CompletableFuture<GetSocialCommentResponse>} - The async response
      */
     public CompletableFuture<GetSocialCommentResponse> getSocialComment(@Nonnull GetSocialCommentRequest request) {
+        return getSocialComment(request, null);
+    }
+
+    /**
+     * Retrieve a comment
+     * 
+     * <p>Retrieves a single SocialComment by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetSocialCommentResponse>} - The async response
+     */
+    public CompletableFuture<GetSocialCommentResponse> getSocialComment(@Nonnull GetSocialCommentRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetSocialCommentRequest, GetSocialCommentResponse> operation
-              = new GetSocialComment.Async(sdkConfiguration, _headers);
+              = new GetSocialComment.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -219,8 +263,22 @@ public class AsyncSocial {
      * @return {@code CompletableFuture<GetSocialInsightResponse>} - The async response
      */
     public CompletableFuture<GetSocialInsightResponse> getSocialInsight(@Nonnull GetSocialInsightRequest request) {
+        return getSocialInsight(request, null);
+    }
+
+    /**
+     * Retrieve an insight
+     * 
+     * <p>Retrieves a single SocialInsight by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetSocialInsightResponse>} - The async response
+     */
+    public CompletableFuture<GetSocialInsightResponse> getSocialInsight(@Nonnull GetSocialInsightRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetSocialInsightRequest, GetSocialInsightResponse> operation
-              = new GetSocialInsight.Async(sdkConfiguration, _headers);
+              = new GetSocialInsight.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -248,8 +306,22 @@ public class AsyncSocial {
      * @return {@code CompletableFuture<GetSocialPostResponse>} - The async response
      */
     public CompletableFuture<GetSocialPostResponse> getSocialPost(@Nonnull GetSocialPostRequest request) {
+        return getSocialPost(request, null);
+    }
+
+    /**
+     * Retrieve a post
+     * 
+     * <p>Retrieves a single SocialPost by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetSocialPostResponse>} - The async response
+     */
+    public CompletableFuture<GetSocialPostResponse> getSocialPost(@Nonnull GetSocialPostRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetSocialPostRequest, GetSocialPostResponse> operation
-              = new GetSocialPost.Async(sdkConfiguration, _headers);
+              = new GetSocialPost.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -277,8 +349,22 @@ public class AsyncSocial {
      * @return {@code CompletableFuture<GetSocialProfileResponse>} - The async response
      */
     public CompletableFuture<GetSocialProfileResponse> getSocialProfile(@Nonnull GetSocialProfileRequest request) {
+        return getSocialProfile(request, null);
+    }
+
+    /**
+     * Retrieve a profile
+     * 
+     * <p>Retrieves a single SocialProfile by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetSocialProfileResponse>} - The async response
+     */
+    public CompletableFuture<GetSocialProfileResponse> getSocialProfile(@Nonnull GetSocialProfileRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetSocialProfileRequest, GetSocialProfileResponse> operation
-              = new GetSocialProfile.Async(sdkConfiguration, _headers);
+              = new GetSocialProfile.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -306,8 +392,22 @@ public class AsyncSocial {
      * @return {@code CompletableFuture<GetSocialReviewResponse>} - The async response
      */
     public CompletableFuture<GetSocialReviewResponse> getSocialReview(@Nonnull GetSocialReviewRequest request) {
+        return getSocialReview(request, null);
+    }
+
+    /**
+     * Retrieve a review
+     * 
+     * <p>Retrieves a single SocialReview by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetSocialReviewResponse>} - The async response
+     */
+    public CompletableFuture<GetSocialReviewResponse> getSocialReview(@Nonnull GetSocialReviewRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetSocialReviewRequest, GetSocialReviewResponse> operation
-              = new GetSocialReview.Async(sdkConfiguration, _headers);
+              = new GetSocialReview.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -343,8 +443,26 @@ public class AsyncSocial {
      * @return {@code CompletableFuture<ListSocialCommentsResponse>} - The async response
      */
     public CompletableFuture<ListSocialCommentsResponse> listSocialComments(@Nonnull ListSocialCommentsRequest request) {
+        return listSocialComments(request, null);
+    }
+
+    /**
+     * List all comments
+     * 
+     * <p>Returns a list of SocialComments. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListSocialCommentsResponse>} - The async response
+     */
+    public CompletableFuture<ListSocialCommentsResponse> listSocialComments(@Nonnull ListSocialCommentsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListSocialCommentsRequest, ListSocialCommentsResponse> operation
-              = new ListSocialComments.Async(sdkConfiguration, _headers);
+              = new ListSocialComments.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -380,8 +498,26 @@ public class AsyncSocial {
      * @return {@code CompletableFuture<ListSocialInsightsResponse>} - The async response
      */
     public CompletableFuture<ListSocialInsightsResponse> listSocialInsights(@Nonnull ListSocialInsightsRequest request) {
+        return listSocialInsights(request, null);
+    }
+
+    /**
+     * List all insights
+     * 
+     * <p>Returns a list of SocialInsights. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListSocialInsightsResponse>} - The async response
+     */
+    public CompletableFuture<ListSocialInsightsResponse> listSocialInsights(@Nonnull ListSocialInsightsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListSocialInsightsRequest, ListSocialInsightsResponse> operation
-              = new ListSocialInsights.Async(sdkConfiguration, _headers);
+              = new ListSocialInsights.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -417,8 +553,26 @@ public class AsyncSocial {
      * @return {@code CompletableFuture<ListSocialPostsResponse>} - The async response
      */
     public CompletableFuture<ListSocialPostsResponse> listSocialPosts(@Nonnull ListSocialPostsRequest request) {
+        return listSocialPosts(request, null);
+    }
+
+    /**
+     * List all posts
+     * 
+     * <p>Returns a list of SocialPosts. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListSocialPostsResponse>} - The async response
+     */
+    public CompletableFuture<ListSocialPostsResponse> listSocialPosts(@Nonnull ListSocialPostsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListSocialPostsRequest, ListSocialPostsResponse> operation
-              = new ListSocialPosts.Async(sdkConfiguration, _headers);
+              = new ListSocialPosts.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -454,8 +608,26 @@ public class AsyncSocial {
      * @return {@code CompletableFuture<ListSocialProfilesResponse>} - The async response
      */
     public CompletableFuture<ListSocialProfilesResponse> listSocialProfiles(@Nonnull ListSocialProfilesRequest request) {
+        return listSocialProfiles(request, null);
+    }
+
+    /**
+     * List all profiles
+     * 
+     * <p>Returns a list of SocialProfiles. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListSocialProfilesResponse>} - The async response
+     */
+    public CompletableFuture<ListSocialProfilesResponse> listSocialProfiles(@Nonnull ListSocialProfilesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListSocialProfilesRequest, ListSocialProfilesResponse> operation
-              = new ListSocialProfiles.Async(sdkConfiguration, _headers);
+              = new ListSocialProfiles.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -491,8 +663,26 @@ public class AsyncSocial {
      * @return {@code CompletableFuture<ListSocialReviewsResponse>} - The async response
      */
     public CompletableFuture<ListSocialReviewsResponse> listSocialReviews(@Nonnull ListSocialReviewsRequest request) {
+        return listSocialReviews(request, null);
+    }
+
+    /**
+     * List all reviews
+     * 
+     * <p>Returns a list of SocialReviews. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListSocialReviewsResponse>} - The async response
+     */
+    public CompletableFuture<ListSocialReviewsResponse> listSocialReviews(@Nonnull ListSocialReviewsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListSocialReviewsRequest, ListSocialReviewsResponse> operation
-              = new ListSocialReviews.Async(sdkConfiguration, _headers);
+              = new ListSocialReviews.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -520,8 +710,22 @@ public class AsyncSocial {
      * @return {@code CompletableFuture<PatchSocialCommentResponse>} - The async response
      */
     public CompletableFuture<PatchSocialCommentResponse> patchSocialComment(@Nonnull PatchSocialCommentRequest request) {
+        return patchSocialComment(request, null);
+    }
+
+    /**
+     * Update a comment
+     * 
+     * <p>Updates the SocialComment identified by `id`. Provide the unified SocialComment fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchSocialCommentResponse>} - The async response
+     */
+    public CompletableFuture<PatchSocialCommentResponse> patchSocialComment(@Nonnull PatchSocialCommentRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchSocialCommentRequest, PatchSocialCommentResponse> operation
-              = new PatchSocialComment.Async(sdkConfiguration, _headers);
+              = new PatchSocialComment.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -549,8 +753,22 @@ public class AsyncSocial {
      * @return {@code CompletableFuture<PatchSocialPostResponse>} - The async response
      */
     public CompletableFuture<PatchSocialPostResponse> patchSocialPost(@Nonnull PatchSocialPostRequest request) {
+        return patchSocialPost(request, null);
+    }
+
+    /**
+     * Update a post
+     * 
+     * <p>Updates the SocialPost identified by `id`. Provide the unified SocialPost fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchSocialPostResponse>} - The async response
+     */
+    public CompletableFuture<PatchSocialPostResponse> patchSocialPost(@Nonnull PatchSocialPostRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchSocialPostRequest, PatchSocialPostResponse> operation
-              = new PatchSocialPost.Async(sdkConfiguration, _headers);
+              = new PatchSocialPost.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -578,8 +796,22 @@ public class AsyncSocial {
      * @return {@code CompletableFuture<PatchSocialReviewResponse>} - The async response
      */
     public CompletableFuture<PatchSocialReviewResponse> patchSocialReview(@Nonnull PatchSocialReviewRequest request) {
+        return patchSocialReview(request, null);
+    }
+
+    /**
+     * Update a review
+     * 
+     * <p>Updates the SocialReview identified by `id`. Provide the unified SocialReview fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchSocialReviewResponse>} - The async response
+     */
+    public CompletableFuture<PatchSocialReviewResponse> patchSocialReview(@Nonnull PatchSocialReviewRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchSocialReviewRequest, PatchSocialReviewResponse> operation
-              = new PatchSocialReview.Async(sdkConfiguration, _headers);
+              = new PatchSocialReview.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -605,8 +837,21 @@ public class AsyncSocial {
      * @return {@code CompletableFuture<RemoveSocialCommentResponse>} - The async response
      */
     public CompletableFuture<RemoveSocialCommentResponse> removeSocialComment(@Nonnull RemoveSocialCommentRequest request) {
+        return removeSocialComment(request, null);
+    }
+
+    /**
+     * Remove a comment
+     * 
+     * <p>Deletes the SocialComment identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveSocialCommentResponse>} - The async response
+     */
+    public CompletableFuture<RemoveSocialCommentResponse> removeSocialComment(@Nonnull RemoveSocialCommentRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveSocialCommentRequest, RemoveSocialCommentResponse> operation
-              = new RemoveSocialComment.Async(sdkConfiguration, _headers);
+              = new RemoveSocialComment.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -632,8 +877,21 @@ public class AsyncSocial {
      * @return {@code CompletableFuture<RemoveSocialPostResponse>} - The async response
      */
     public CompletableFuture<RemoveSocialPostResponse> removeSocialPost(@Nonnull RemoveSocialPostRequest request) {
+        return removeSocialPost(request, null);
+    }
+
+    /**
+     * Remove a post
+     * 
+     * <p>Deletes the SocialPost identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveSocialPostResponse>} - The async response
+     */
+    public CompletableFuture<RemoveSocialPostResponse> removeSocialPost(@Nonnull RemoveSocialPostRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveSocialPostRequest, RemoveSocialPostResponse> operation
-              = new RemoveSocialPost.Async(sdkConfiguration, _headers);
+              = new RemoveSocialPost.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -661,8 +919,22 @@ public class AsyncSocial {
      * @return {@code CompletableFuture<UpdateSocialCommentResponse>} - The async response
      */
     public CompletableFuture<UpdateSocialCommentResponse> updateSocialComment(@Nonnull UpdateSocialCommentRequest request) {
+        return updateSocialComment(request, null);
+    }
+
+    /**
+     * Update a comment
+     * 
+     * <p>Updates the SocialComment identified by `id`. Provide the unified SocialComment fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateSocialCommentResponse>} - The async response
+     */
+    public CompletableFuture<UpdateSocialCommentResponse> updateSocialComment(@Nonnull UpdateSocialCommentRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateSocialCommentRequest, UpdateSocialCommentResponse> operation
-              = new UpdateSocialComment.Async(sdkConfiguration, _headers);
+              = new UpdateSocialComment.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -690,8 +962,22 @@ public class AsyncSocial {
      * @return {@code CompletableFuture<UpdateSocialPostResponse>} - The async response
      */
     public CompletableFuture<UpdateSocialPostResponse> updateSocialPost(@Nonnull UpdateSocialPostRequest request) {
+        return updateSocialPost(request, null);
+    }
+
+    /**
+     * Update a post
+     * 
+     * <p>Updates the SocialPost identified by `id`. Provide the unified SocialPost fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateSocialPostResponse>} - The async response
+     */
+    public CompletableFuture<UpdateSocialPostResponse> updateSocialPost(@Nonnull UpdateSocialPostRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateSocialPostRequest, UpdateSocialPostResponse> operation
-              = new UpdateSocialPost.Async(sdkConfiguration, _headers);
+              = new UpdateSocialPost.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -719,8 +1005,22 @@ public class AsyncSocial {
      * @return {@code CompletableFuture<UpdateSocialReviewResponse>} - The async response
      */
     public CompletableFuture<UpdateSocialReviewResponse> updateSocialReview(@Nonnull UpdateSocialReviewRequest request) {
+        return updateSocialReview(request, null);
+    }
+
+    /**
+     * Update a review
+     * 
+     * <p>Updates the SocialReview identified by `id`. Provide the unified SocialReview fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateSocialReviewResponse>} - The async response
+     */
+    public CompletableFuture<UpdateSocialReviewResponse> updateSocialReview(@Nonnull UpdateSocialReviewRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateSocialReviewRequest, UpdateSocialReviewResponse> operation
-              = new UpdateSocialReview.Async(sdkConfiguration, _headers);
+              = new UpdateSocialReview.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

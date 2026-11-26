@@ -9,12 +9,14 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.io.InputStream;
 import java.lang.Exception;
 import java.lang.String;
 import java.lang.Throwable;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
+import java.time.Duration;
 import java.util.List;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
@@ -32,6 +34,7 @@ import to.unified.unified_java_sdk.utils.Headers;
 import to.unified.unified_java_sdk.utils.Hook.AfterErrorContextImpl;
 import to.unified.unified_java_sdk.utils.Hook.AfterSuccessContextImpl;
 import to.unified.unified_java_sdk.utils.Hook.BeforeRequestContextImpl;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
@@ -41,14 +44,20 @@ public class ListMartechMembers {
         final SDKConfiguration sdkConfiguration;
         final String baseUrl;
         final SecuritySource securitySource;
+        final Optional<Duration> timeout;
         final HTTPClient client;
         final Headers _headers;
 
-        public Base(@Nonnull SDKConfiguration sdkConfiguration, Headers _headers) {
+        public Base(
+                @Nonnull SDKConfiguration sdkConfiguration, @Nullable Options options,
+                Headers _headers) {
             this.sdkConfiguration = sdkConfiguration;
             this._headers =_headers;
             this.baseUrl = this.sdkConfiguration.serverUrl();
             this.securitySource = this.sdkConfiguration.securitySource();
+            Optional.ofNullable(options)
+                    .ifPresent(o -> o.validate(List.of(Options.Option.TIMEOUT)));
+            this.timeout = Optional.ofNullable(options).flatMap(Options::timeout).or(sdkConfiguration::timeout);
             this.client = this.sdkConfiguration.client();
         }
 
@@ -88,7 +97,8 @@ public class ListMartechMembers {
                     this.baseUrl,
                     "/martech/{connection_id}/member",
                     request, null);
-            HTTPRequest req = new HTTPRequest(url, "GET");
+            HTTPRequest req = new HTTPRequest(url, "GET")
+                    .timeout(this.timeout);
             req.addHeader("Accept", "application/json")
                     .addHeader("user-agent", SDKConfiguration.USER_AGENT);
             _headers.forEach((k, list) -> list.forEach(v -> req.addHeader(k, v)));
@@ -106,7 +116,16 @@ public class ListMartechMembers {
     public static class Sync extends Base
             implements RequestOperation<ListMartechMembersRequest, ListMartechMembersResponse> {
         public Sync(@Nonnull SDKConfiguration sdkConfiguration, Headers _headers) {
-            super(sdkConfiguration, _headers);
+            this(sdkConfiguration, null,
+                    _headers);
+        }
+
+        public Sync(
+                @Nonnull SDKConfiguration sdkConfiguration, @Nullable Options options,
+                Headers _headers) {
+            super(
+                  sdkConfiguration, options,
+                  _headers);
         }
 
         private HttpRequest onBuildRequest(ListMartechMembersRequest request) throws Exception {
@@ -179,9 +198,17 @@ public class ListMartechMembers {
     }
     public static class Async extends Base
             implements AsyncRequestOperation<ListMartechMembersRequest, to.unified.unified_java_sdk.models.operations.async.ListMartechMembersResponse> {
-
         public Async(@Nonnull SDKConfiguration sdkConfiguration, Headers _headers) {
-            super(sdkConfiguration, _headers);
+            this(sdkConfiguration, null,
+                    _headers);
+        }
+
+        public Async(
+                @Nonnull SDKConfiguration sdkConfiguration, @Nullable Options options,
+                Headers _headers) {
+            super(
+                  sdkConfiguration, options,
+                  _headers);
         }
 
         private CompletableFuture<HttpRequest> onBuildRequest(ListMartechMembersRequest request) throws Exception {

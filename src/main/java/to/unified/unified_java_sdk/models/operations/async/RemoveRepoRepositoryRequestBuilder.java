@@ -6,20 +6,30 @@ package to.unified.unified_java_sdk.models.operations.async;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.RemoveRepoRepositoryRequest;
 import to.unified.unified_java_sdk.operations.RemoveRepoRepository;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveRepoRepositoryRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private RemoveRepoRepositoryRequest request;
+    private final Options.Builder optionsBuilder;
 
     public RemoveRepoRepositoryRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public RemoveRepoRepositoryRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public RemoveRepoRepositoryRequestBuilder request(@Nonnull RemoveRepoRepositoryRequest request) {
@@ -44,8 +54,9 @@ public class RemoveRepoRepositoryRequestBuilder {
     * @return The response from the server.
     */
     public CompletableFuture<RemoveRepoRepositoryResponse> call() {
+        Options options = optionsBuilder.build();
         AsyncRequestOperation<RemoveRepoRepositoryRequest, RemoveRepoRepositoryResponse> operation
-              = new RemoveRepoRepository.Async(sdkConfiguration, _headers);
+              = new RemoveRepoRepository.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

@@ -63,6 +63,13 @@ public class AtsJob {
     private EmploymentType employmentType;
 
     /**
+     * The placement fee agreed with the client for this job
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("fees")
+    private List<AtsFee> fees;
+
+    /**
      * The departments/divisions/teams that this job belongs to
      */
     @JsonInclude(Include.NON_ABSENT)
@@ -204,6 +211,7 @@ public class AtsJob {
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
             @JsonProperty("description") @Nullable String description,
             @JsonProperty("employment_type") @Nullable EmploymentType employmentType,
+            @JsonProperty("fees") @Nullable List<AtsFee> fees,
             @JsonProperty("groups") @Nullable List<AtsGroup> groups,
             @JsonProperty("hiring_manager_ids") @Nullable List<String> hiringManagerIds,
             @JsonProperty("hiring_managers") @Nullable List<AtsReference> hiringManagers,
@@ -234,6 +242,7 @@ public class AtsJob {
         this.createdAt = createdAt;
         this.description = description;
         this.employmentType = employmentType;
+        this.fees = fees;
         this.groups = groups;
         this.hiringManagerIds = hiringManagerIds;
         this.hiringManagers = hiringManagers;
@@ -269,7 +278,8 @@ public class AtsJob {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
     }
 
     public Optional<List<AtsAddress>> addresses() {
@@ -307,6 +317,13 @@ public class AtsJob {
 
     public Optional<EmploymentType> employmentType() {
         return Optional.ofNullable(this.employmentType);
+    }
+
+    /**
+     * The placement fee agreed with the client for this job
+     */
+    public Optional<List<AtsFee>> fees() {
+        return Optional.ofNullable(this.fees);
     }
 
     /**
@@ -480,6 +497,15 @@ public class AtsJob {
 
     public AtsJob withEmploymentType(@Nullable EmploymentType employmentType) {
         this.employmentType = employmentType;
+        return this;
+    }
+
+
+    /**
+     * The placement fee agreed with the client for this job
+     */
+    public AtsJob withFees(@Nullable List<AtsFee> fees) {
+        this.fees = fees;
         return this;
     }
 
@@ -666,6 +692,7 @@ public class AtsJob {
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.description, other.description) &&
             Utils.enhancedDeepEquals(this.employmentType, other.employmentType) &&
+            Utils.enhancedDeepEquals(this.fees, other.fees) &&
             Utils.enhancedDeepEquals(this.groups, other.groups) &&
             Utils.enhancedDeepEquals(this.hiringManagerIds, other.hiringManagerIds) &&
             Utils.enhancedDeepEquals(this.hiringManagers, other.hiringManagers) &&
@@ -696,14 +723,15 @@ public class AtsJob {
         return Utils.enhancedHash(
             addresses, closedAt, companyId,
             compensation, createdAt, description,
-            employmentType, groups, hiringManagerIds,
-            hiringManagers, id, industry,
-            languageLocale, metadata, minimumDegree,
-            minimumExperienceYears, name, numberOfOpenings,
-            openings, postings, publicJobUrls,
-            questions, raw, recruiterIds,
-            remote, skills, status,
-            summary, updatedAt, userId);
+            employmentType, fees, groups,
+            hiringManagerIds, hiringManagers, id,
+            industry, languageLocale, metadata,
+            minimumDegree, minimumExperienceYears, name,
+            numberOfOpenings, openings, postings,
+            publicJobUrls, questions, raw,
+            recruiterIds, remote, skills,
+            status, summary, updatedAt,
+            userId);
     }
     
     @Override
@@ -716,6 +744,7 @@ public class AtsJob {
                 "createdAt", createdAt,
                 "description", description,
                 "employmentType", employmentType,
+                "fees", fees,
                 "groups", groups,
                 "hiringManagerIds", hiringManagerIds,
                 "hiringManagers", hiringManagers,
@@ -757,6 +786,8 @@ public class AtsJob {
         private String description;
 
         private EmploymentType employmentType;
+
+        private List<AtsFee> fees;
 
         private List<AtsGroup> groups;
 
@@ -849,6 +880,14 @@ public class AtsJob {
 
         public Builder employmentType(@Nullable EmploymentType employmentType) {
             this.employmentType = employmentType;
+            return this;
+        }
+
+        /**
+         * The placement fee agreed with the client for this job
+         */
+        public Builder fees(@Nullable List<AtsFee> fees) {
+            this.fees = fees;
             return this;
         }
 
@@ -998,14 +1037,15 @@ public class AtsJob {
             return new AtsJob(
                 addresses, closedAt, companyId,
                 compensation, createdAt, description,
-                employmentType, groups, hiringManagerIds,
-                hiringManagers, id, industry,
-                languageLocale, metadata, minimumDegree,
-                minimumExperienceYears, name, numberOfOpenings,
-                openings, postings, publicJobUrls,
-                questions, raw, recruiterIds,
-                remote, skills, status,
-                summary, updatedAt, userId);
+                employmentType, fees, groups,
+                hiringManagerIds, hiringManagers, id,
+                industry, languageLocale, metadata,
+                minimumDegree, minimumExperienceYears, name,
+                numberOfOpenings, openings, postings,
+                publicJobUrls, questions, raw,
+                recruiterIds, remote, skills,
+                status, summary, updatedAt,
+                userId);
         }
 
     }

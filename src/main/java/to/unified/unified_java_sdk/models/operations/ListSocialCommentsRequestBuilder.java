@@ -6,18 +6,28 @@ package to.unified.unified_java_sdk.models.operations;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.ListSocialComments;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListSocialCommentsRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private ListSocialCommentsRequest request;
+    private final Options.Builder optionsBuilder;
 
     public ListSocialCommentsRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public ListSocialCommentsRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public ListSocialCommentsRequestBuilder request(@Nonnull ListSocialCommentsRequest request) {
@@ -42,8 +52,9 @@ public class ListSocialCommentsRequestBuilder {
     * @return The response from the server.
     */
     public ListSocialCommentsResponse call() {
+        Options options = optionsBuilder.build();
         RequestOperation<ListSocialCommentsRequest, ListSocialCommentsResponse> operation
-              = new ListSocialComments.Sync(sdkConfiguration, _headers);
+              = new ListSocialComments.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

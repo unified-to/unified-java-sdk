@@ -6,12 +6,22 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import to.unified.unified_java_sdk.models.operations.CreatePrintingFileRequest;
+import to.unified.unified_java_sdk.models.operations.CreatePrintingFileRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreatePrintingFileResponse;
 import to.unified.unified_java_sdk.models.operations.CreateStorageFileRequest;
 import to.unified.unified_java_sdk.models.operations.CreateStorageFileRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateStorageFileResponse;
+import to.unified.unified_java_sdk.models.operations.GetPrintingFileRequest;
+import to.unified.unified_java_sdk.models.operations.GetPrintingFileRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetPrintingFileResponse;
 import to.unified.unified_java_sdk.models.operations.GetStorageFileRequest;
 import to.unified.unified_java_sdk.models.operations.GetStorageFileRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetStorageFileResponse;
+import to.unified.unified_java_sdk.models.operations.ListPrintingFilesRequest;
+import to.unified.unified_java_sdk.models.operations.ListPrintingFilesRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListPrintingFilesResponse;
 import to.unified.unified_java_sdk.models.operations.ListStorageFilesRequest;
 import to.unified.unified_java_sdk.models.operations.ListStorageFilesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListStorageFilesResponse;
@@ -24,13 +34,17 @@ import to.unified.unified_java_sdk.models.operations.RemoveStorageFileResponse;
 import to.unified.unified_java_sdk.models.operations.UpdateStorageFileRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateStorageFileRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateStorageFileResponse;
+import to.unified.unified_java_sdk.operations.CreatePrintingFile;
 import to.unified.unified_java_sdk.operations.CreateStorageFile;
+import to.unified.unified_java_sdk.operations.GetPrintingFile;
 import to.unified.unified_java_sdk.operations.GetStorageFile;
+import to.unified.unified_java_sdk.operations.ListPrintingFiles;
 import to.unified.unified_java_sdk.operations.ListStorageFiles;
 import to.unified.unified_java_sdk.operations.PatchStorageFile;
 import to.unified.unified_java_sdk.operations.RemoveStorageFile;
 import to.unified.unified_java_sdk.operations.UpdateStorageFile;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class File {
@@ -50,6 +64,49 @@ public class File {
      */
     public AsyncFile async() {
         return asyncSDK;
+    }
+
+    /**
+     * Create a file
+     * 
+     * <p>Creates a PrintingFile. Provide the unified PrintingFile fields in the request body; they are mapped
+     * to the provider's API. Returns the created PrintingFile.
+     * 
+     * @return The call builder
+     */
+    public CreatePrintingFileRequestBuilder createPrintingFile() {
+        return new CreatePrintingFileRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Create a file
+     * 
+     * <p>Creates a PrintingFile. Provide the unified PrintingFile fields in the request body; they are mapped
+     * to the provider's API. Returns the created PrintingFile.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreatePrintingFileResponse createPrintingFile(@Nonnull CreatePrintingFileRequest request) {
+        return createPrintingFile(request, null);
+    }
+
+    /**
+     * Create a file
+     * 
+     * <p>Creates a PrintingFile. Provide the unified PrintingFile fields in the request body; they are mapped
+     * to the provider's API. Returns the created PrintingFile.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreatePrintingFileResponse createPrintingFile(@Nonnull CreatePrintingFileRequest request, @Nullable Options options) {
+        RequestOperation<CreatePrintingFileRequest, CreatePrintingFileResponse> operation
+              = new CreatePrintingFile.Sync(sdkConfiguration, options, _headers);
+        return operation.handleResponse(operation.doRequest(request));
     }
 
     /**
@@ -75,8 +132,66 @@ public class File {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateStorageFileResponse createStorageFile(@Nonnull CreateStorageFileRequest request) {
+        return createStorageFile(request, null);
+    }
+
+    /**
+     * Create a file
+     * 
+     * <p>Creates a StorageFile. Provide the unified StorageFile fields in the request body; they are mapped
+     * to the provider's API. Returns the created StorageFile.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateStorageFileResponse createStorageFile(@Nonnull CreateStorageFileRequest request, @Nullable Options options) {
         RequestOperation<CreateStorageFileRequest, CreateStorageFileResponse> operation
-              = new CreateStorageFile.Sync(sdkConfiguration, _headers);
+              = new CreateStorageFile.Sync(sdkConfiguration, options, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Retrieve a file
+     * 
+     * <p>Retrieves a single PrintingFile by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @return The call builder
+     */
+    public GetPrintingFileRequestBuilder getPrintingFile() {
+        return new GetPrintingFileRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a file
+     * 
+     * <p>Retrieves a single PrintingFile by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetPrintingFileResponse getPrintingFile(@Nonnull GetPrintingFileRequest request) {
+        return getPrintingFile(request, null);
+    }
+
+    /**
+     * Retrieve a file
+     * 
+     * <p>Retrieves a single PrintingFile by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetPrintingFileResponse getPrintingFile(@Nonnull GetPrintingFileRequest request, @Nullable Options options) {
+        RequestOperation<GetPrintingFileRequest, GetPrintingFileResponse> operation
+              = new GetPrintingFile.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -103,8 +218,78 @@ public class File {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetStorageFileResponse getStorageFile(@Nonnull GetStorageFileRequest request) {
+        return getStorageFile(request, null);
+    }
+
+    /**
+     * Retrieve a file
+     * 
+     * <p>Retrieves a single StorageFile by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetStorageFileResponse getStorageFile(@Nonnull GetStorageFileRequest request, @Nullable Options options) {
         RequestOperation<GetStorageFileRequest, GetStorageFileResponse> operation
-              = new GetStorageFile.Sync(sdkConfiguration, _headers);
+              = new GetStorageFile.Sync(sdkConfiguration, options, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * List all files
+     * 
+     * <p>Returns a list of PrintingFiles. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @return The call builder
+     */
+    public ListPrintingFilesRequestBuilder listPrintingFiles() {
+        return new ListPrintingFilesRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all files
+     * 
+     * <p>Returns a list of PrintingFiles. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListPrintingFilesResponse listPrintingFiles(@Nonnull ListPrintingFilesRequest request) {
+        return listPrintingFiles(request, null);
+    }
+
+    /**
+     * List all files
+     * 
+     * <p>Returns a list of PrintingFiles. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListPrintingFilesResponse listPrintingFiles(@Nonnull ListPrintingFilesRequest request, @Nullable Options options) {
+        RequestOperation<ListPrintingFilesRequest, ListPrintingFilesResponse> operation
+              = new ListPrintingFiles.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -139,8 +324,27 @@ public class File {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListStorageFilesResponse listStorageFiles(@Nonnull ListStorageFilesRequest request) {
+        return listStorageFiles(request, null);
+    }
+
+    /**
+     * List all files
+     * 
+     * <p>Returns a list of StorageFiles. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListStorageFilesResponse listStorageFiles(@Nonnull ListStorageFilesRequest request, @Nullable Options options) {
         RequestOperation<ListStorageFilesRequest, ListStorageFilesResponse> operation
-              = new ListStorageFiles.Sync(sdkConfiguration, _headers);
+              = new ListStorageFiles.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +371,23 @@ public class File {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchStorageFileResponse patchStorageFile(@Nonnull PatchStorageFileRequest request) {
+        return patchStorageFile(request, null);
+    }
+
+    /**
+     * Update a file
+     * 
+     * <p>Updates the StorageFile identified by `id`. Provide the unified StorageFile fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchStorageFileResponse patchStorageFile(@Nonnull PatchStorageFileRequest request, @Nullable Options options) {
         RequestOperation<PatchStorageFileRequest, PatchStorageFileResponse> operation
-              = new PatchStorageFile.Sync(sdkConfiguration, _headers);
+              = new PatchStorageFile.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -193,8 +412,22 @@ public class File {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveStorageFileResponse removeStorageFile(@Nonnull RemoveStorageFileRequest request) {
+        return removeStorageFile(request, null);
+    }
+
+    /**
+     * Remove a file
+     * 
+     * <p>Deletes the StorageFile identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveStorageFileResponse removeStorageFile(@Nonnull RemoveStorageFileRequest request, @Nullable Options options) {
         RequestOperation<RemoveStorageFileRequest, RemoveStorageFileResponse> operation
-              = new RemoveStorageFile.Sync(sdkConfiguration, _headers);
+              = new RemoveStorageFile.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -221,8 +454,23 @@ public class File {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateStorageFileResponse updateStorageFile(@Nonnull UpdateStorageFileRequest request) {
+        return updateStorageFile(request, null);
+    }
+
+    /**
+     * Update a file
+     * 
+     * <p>Updates the StorageFile identified by `id`. Provide the unified StorageFile fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateStorageFileResponse updateStorageFile(@Nonnull UpdateStorageFileRequest request, @Nullable Options options) {
         RequestOperation<UpdateStorageFileRequest, UpdateStorageFileResponse> operation
-              = new UpdateStorageFile.Sync(sdkConfiguration, _headers);
+              = new UpdateStorageFile.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

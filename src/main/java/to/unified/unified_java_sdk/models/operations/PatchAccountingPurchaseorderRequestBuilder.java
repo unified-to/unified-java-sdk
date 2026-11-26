@@ -6,18 +6,28 @@ package to.unified.unified_java_sdk.models.operations;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.PatchAccountingPurchaseorder;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class PatchAccountingPurchaseorderRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private PatchAccountingPurchaseorderRequest request;
+    private final Options.Builder optionsBuilder;
 
     public PatchAccountingPurchaseorderRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public PatchAccountingPurchaseorderRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public PatchAccountingPurchaseorderRequestBuilder request(@Nonnull PatchAccountingPurchaseorderRequest request) {
@@ -42,8 +52,9 @@ public class PatchAccountingPurchaseorderRequestBuilder {
     * @return The response from the server.
     */
     public PatchAccountingPurchaseorderResponse call() {
+        Options options = optionsBuilder.build();
         RequestOperation<PatchAccountingPurchaseorderRequest, PatchAccountingPurchaseorderResponse> operation
-              = new PatchAccountingPurchaseorder.Sync(sdkConfiguration, _headers);
+              = new PatchAccountingPurchaseorder.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

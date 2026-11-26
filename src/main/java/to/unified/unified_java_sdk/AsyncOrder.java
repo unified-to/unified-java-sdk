@@ -6,49 +6,75 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Deprecated;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingOrderRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAssessmentOrderRequest;
+import to.unified.unified_java_sdk.models.operations.CreatePrintingOrderRequest;
 import to.unified.unified_java_sdk.models.operations.GetAccountingOrderRequest;
 import to.unified.unified_java_sdk.models.operations.GetAssessmentOrderRequest;
+import to.unified.unified_java_sdk.models.operations.GetPrintingOrderRequest;
 import to.unified.unified_java_sdk.models.operations.ListAccountingOrdersRequest;
+import to.unified.unified_java_sdk.models.operations.ListPrintingOrdersRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingOrderRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAssessmentOrderRequest;
+import to.unified.unified_java_sdk.models.operations.PatchPrintingOrderRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveAccountingOrderRequest;
+import to.unified.unified_java_sdk.models.operations.RemovePrintingOrderRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingOrderRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAssessmentOrderRequest;
+import to.unified.unified_java_sdk.models.operations.UpdatePrintingOrderRequest;
 import to.unified.unified_java_sdk.models.operations.async.CreateAccountingOrderRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.CreateAccountingOrderResponse;
 import to.unified.unified_java_sdk.models.operations.async.CreateAssessmentOrderRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.CreateAssessmentOrderResponse;
+import to.unified.unified_java_sdk.models.operations.async.CreatePrintingOrderRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreatePrintingOrderResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetAccountingOrderRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetAccountingOrderResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetAssessmentOrderRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetAssessmentOrderResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetPrintingOrderRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetPrintingOrderResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListAccountingOrdersRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListAccountingOrdersResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListPrintingOrdersRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListPrintingOrdersResponse;
 import to.unified.unified_java_sdk.models.operations.async.PatchAccountingOrderRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.PatchAccountingOrderResponse;
 import to.unified.unified_java_sdk.models.operations.async.PatchAssessmentOrderRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.PatchAssessmentOrderResponse;
+import to.unified.unified_java_sdk.models.operations.async.PatchPrintingOrderRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchPrintingOrderResponse;
 import to.unified.unified_java_sdk.models.operations.async.RemoveAccountingOrderRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.RemoveAccountingOrderResponse;
+import to.unified.unified_java_sdk.models.operations.async.RemovePrintingOrderRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemovePrintingOrderResponse;
 import to.unified.unified_java_sdk.models.operations.async.UpdateAccountingOrderRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.UpdateAccountingOrderResponse;
 import to.unified.unified_java_sdk.models.operations.async.UpdateAssessmentOrderRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.UpdateAssessmentOrderResponse;
+import to.unified.unified_java_sdk.models.operations.async.UpdatePrintingOrderRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdatePrintingOrderResponse;
 import to.unified.unified_java_sdk.operations.CreateAccountingOrder;
 import to.unified.unified_java_sdk.operations.CreateAssessmentOrder;
+import to.unified.unified_java_sdk.operations.CreatePrintingOrder;
 import to.unified.unified_java_sdk.operations.GetAccountingOrder;
 import to.unified.unified_java_sdk.operations.GetAssessmentOrder;
+import to.unified.unified_java_sdk.operations.GetPrintingOrder;
 import to.unified.unified_java_sdk.operations.ListAccountingOrders;
+import to.unified.unified_java_sdk.operations.ListPrintingOrders;
 import to.unified.unified_java_sdk.operations.PatchAccountingOrder;
 import to.unified.unified_java_sdk.operations.PatchAssessmentOrder;
+import to.unified.unified_java_sdk.operations.PatchPrintingOrder;
 import to.unified.unified_java_sdk.operations.RemoveAccountingOrder;
+import to.unified.unified_java_sdk.operations.RemovePrintingOrder;
 import to.unified.unified_java_sdk.operations.UpdateAccountingOrder;
 import to.unified.unified_java_sdk.operations.UpdateAssessmentOrder;
+import to.unified.unified_java_sdk.operations.UpdatePrintingOrder;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncOrder {
@@ -97,8 +123,24 @@ public class AsyncOrder {
      */
     @Deprecated
     public CompletableFuture<CreateAccountingOrderResponse> createAccountingOrder(@Nonnull CreateAccountingOrderRequest request) {
+        return createAccountingOrder(request, null);
+    }
+
+    /**
+     * Create an order
+     * 
+     * <p>Creates a AccountingOrder. Provide the unified AccountingOrder fields in the request body; they are
+     * mapped to the provider's API. Returns the created AccountingOrder.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateAccountingOrderResponse>} - The async response
+     * @deprecated method: This will be removed in a future release, please migrate away from it as soon as possible.
+     */
+    @Deprecated
+    public CompletableFuture<CreateAccountingOrderResponse> createAccountingOrder(@Nonnull CreateAccountingOrderRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateAccountingOrderRequest, CreateAccountingOrderResponse> operation
-              = new CreateAccountingOrder.Async(sdkConfiguration, _headers);
+              = new CreateAccountingOrder.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -126,8 +168,65 @@ public class AsyncOrder {
      * @return {@code CompletableFuture<CreateAssessmentOrderResponse>} - The async response
      */
     public CompletableFuture<CreateAssessmentOrderResponse> createAssessmentOrder(@Nonnull CreateAssessmentOrderRequest request) {
+        return createAssessmentOrder(request, null);
+    }
+
+    /**
+     * Create an order
+     * 
+     * <p>Creates a AssessmentOrder. Provide the unified AssessmentOrder fields in the request body; they are
+     * mapped to the provider's API. Returns the created AssessmentOrder.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateAssessmentOrderResponse>} - The async response
+     */
+    public CompletableFuture<CreateAssessmentOrderResponse> createAssessmentOrder(@Nonnull CreateAssessmentOrderRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateAssessmentOrderRequest, CreateAssessmentOrderResponse> operation
-              = new CreateAssessmentOrder.Async(sdkConfiguration, _headers);
+              = new CreateAssessmentOrder.Async(sdkConfiguration, options, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Create an order
+     * 
+     * <p>Creates a PrintingOrder. Provide the unified PrintingOrder fields in the request body; they are
+     * mapped to the provider's API. Returns the created PrintingOrder.
+     * 
+     * @return The async call builder
+     */
+    public CreatePrintingOrderRequestBuilder createPrintingOrder() {
+        return new CreatePrintingOrderRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Create an order
+     * 
+     * <p>Creates a PrintingOrder. Provide the unified PrintingOrder fields in the request body; they are
+     * mapped to the provider's API. Returns the created PrintingOrder.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<CreatePrintingOrderResponse>} - The async response
+     */
+    public CompletableFuture<CreatePrintingOrderResponse> createPrintingOrder(@Nonnull CreatePrintingOrderRequest request) {
+        return createPrintingOrder(request, null);
+    }
+
+    /**
+     * Create an order
+     * 
+     * <p>Creates a PrintingOrder. Provide the unified PrintingOrder fields in the request body; they are
+     * mapped to the provider's API. Returns the created PrintingOrder.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreatePrintingOrderResponse>} - The async response
+     */
+    public CompletableFuture<CreatePrintingOrderResponse> createPrintingOrder(@Nonnull CreatePrintingOrderRequest request, @Nullable Options options) {
+        AsyncRequestOperation<CreatePrintingOrderRequest, CreatePrintingOrderResponse> operation
+              = new CreatePrintingOrder.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -159,8 +258,24 @@ public class AsyncOrder {
      */
     @Deprecated
     public CompletableFuture<GetAccountingOrderResponse> getAccountingOrder(@Nonnull GetAccountingOrderRequest request) {
+        return getAccountingOrder(request, null);
+    }
+
+    /**
+     * Retrieve an order
+     * 
+     * <p>Retrieves a single AccountingOrder by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetAccountingOrderResponse>} - The async response
+     * @deprecated method: This will be removed in a future release, please migrate away from it as soon as possible.
+     */
+    @Deprecated
+    public CompletableFuture<GetAccountingOrderResponse> getAccountingOrder(@Nonnull GetAccountingOrderRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetAccountingOrderRequest, GetAccountingOrderResponse> operation
-              = new GetAccountingOrder.Async(sdkConfiguration, _headers);
+              = new GetAccountingOrder.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -188,8 +303,65 @@ public class AsyncOrder {
      * @return {@code CompletableFuture<GetAssessmentOrderResponse>} - The async response
      */
     public CompletableFuture<GetAssessmentOrderResponse> getAssessmentOrder(@Nonnull GetAssessmentOrderRequest request) {
+        return getAssessmentOrder(request, null);
+    }
+
+    /**
+     * Retrieve an order
+     * 
+     * <p>Retrieves a single AssessmentOrder by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetAssessmentOrderResponse>} - The async response
+     */
+    public CompletableFuture<GetAssessmentOrderResponse> getAssessmentOrder(@Nonnull GetAssessmentOrderRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetAssessmentOrderRequest, GetAssessmentOrderResponse> operation
-              = new GetAssessmentOrder.Async(sdkConfiguration, _headers);
+              = new GetAssessmentOrder.Async(sdkConfiguration, options, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Retrieve an order
+     * 
+     * <p>Retrieves a single PrintingOrder by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @return The async call builder
+     */
+    public GetPrintingOrderRequestBuilder getPrintingOrder() {
+        return new GetPrintingOrderRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve an order
+     * 
+     * <p>Retrieves a single PrintingOrder by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<GetPrintingOrderResponse>} - The async response
+     */
+    public CompletableFuture<GetPrintingOrderResponse> getPrintingOrder(@Nonnull GetPrintingOrderRequest request) {
+        return getPrintingOrder(request, null);
+    }
+
+    /**
+     * Retrieve an order
+     * 
+     * <p>Retrieves a single PrintingOrder by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetPrintingOrderResponse>} - The async response
+     */
+    public CompletableFuture<GetPrintingOrderResponse> getPrintingOrder(@Nonnull GetPrintingOrderRequest request, @Nullable Options options) {
+        AsyncRequestOperation<GetPrintingOrderRequest, GetPrintingOrderResponse> operation
+              = new GetPrintingOrder.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -229,8 +401,83 @@ public class AsyncOrder {
      */
     @Deprecated
     public CompletableFuture<ListAccountingOrdersResponse> listAccountingOrders(@Nonnull ListAccountingOrdersRequest request) {
+        return listAccountingOrders(request, null);
+    }
+
+    /**
+     * List all orders
+     * 
+     * <p>Returns a list of AccountingOrders. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListAccountingOrdersResponse>} - The async response
+     * @deprecated method: This will be removed in a future release, please migrate away from it as soon as possible.
+     */
+    @Deprecated
+    public CompletableFuture<ListAccountingOrdersResponse> listAccountingOrders(@Nonnull ListAccountingOrdersRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListAccountingOrdersRequest, ListAccountingOrdersResponse> operation
-              = new ListAccountingOrders.Async(sdkConfiguration, _headers);
+              = new ListAccountingOrders.Async(sdkConfiguration, options, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * List all orders
+     * 
+     * <p>Returns a list of PrintingOrders. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @return The async call builder
+     */
+    public ListPrintingOrdersRequestBuilder listPrintingOrders() {
+        return new ListPrintingOrdersRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all orders
+     * 
+     * <p>Returns a list of PrintingOrders. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<ListPrintingOrdersResponse>} - The async response
+     */
+    public CompletableFuture<ListPrintingOrdersResponse> listPrintingOrders(@Nonnull ListPrintingOrdersRequest request) {
+        return listPrintingOrders(request, null);
+    }
+
+    /**
+     * List all orders
+     * 
+     * <p>Returns a list of PrintingOrders. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListPrintingOrdersResponse>} - The async response
+     */
+    public CompletableFuture<ListPrintingOrdersResponse> listPrintingOrders(@Nonnull ListPrintingOrdersRequest request, @Nullable Options options) {
+        AsyncRequestOperation<ListPrintingOrdersRequest, ListPrintingOrdersResponse> operation
+              = new ListPrintingOrders.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -262,8 +509,24 @@ public class AsyncOrder {
      */
     @Deprecated
     public CompletableFuture<PatchAccountingOrderResponse> patchAccountingOrder(@Nonnull PatchAccountingOrderRequest request) {
+        return patchAccountingOrder(request, null);
+    }
+
+    /**
+     * Update an order
+     * 
+     * <p>Updates the AccountingOrder identified by `id`. Provide the unified AccountingOrder fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchAccountingOrderResponse>} - The async response
+     * @deprecated method: This will be removed in a future release, please migrate away from it as soon as possible.
+     */
+    @Deprecated
+    public CompletableFuture<PatchAccountingOrderResponse> patchAccountingOrder(@Nonnull PatchAccountingOrderRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchAccountingOrderRequest, PatchAccountingOrderResponse> operation
-              = new PatchAccountingOrder.Async(sdkConfiguration, _headers);
+              = new PatchAccountingOrder.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -291,8 +554,65 @@ public class AsyncOrder {
      * @return {@code CompletableFuture<PatchAssessmentOrderResponse>} - The async response
      */
     public CompletableFuture<PatchAssessmentOrderResponse> patchAssessmentOrder(@Nonnull PatchAssessmentOrderRequest request) {
+        return patchAssessmentOrder(request, null);
+    }
+
+    /**
+     * Update an order
+     * 
+     * <p>Updates the AssessmentOrder identified by `id`. Provide the unified AssessmentOrder fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchAssessmentOrderResponse>} - The async response
+     */
+    public CompletableFuture<PatchAssessmentOrderResponse> patchAssessmentOrder(@Nonnull PatchAssessmentOrderRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchAssessmentOrderRequest, PatchAssessmentOrderResponse> operation
-              = new PatchAssessmentOrder.Async(sdkConfiguration, _headers);
+              = new PatchAssessmentOrder.Async(sdkConfiguration, options, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Update an order
+     * 
+     * <p>Updates the PrintingOrder identified by `id`. Provide the unified PrintingOrder fields to change in
+     * the request body.
+     * 
+     * @return The async call builder
+     */
+    public PatchPrintingOrderRequestBuilder patchPrintingOrder() {
+        return new PatchPrintingOrderRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update an order
+     * 
+     * <p>Updates the PrintingOrder identified by `id`. Provide the unified PrintingOrder fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<PatchPrintingOrderResponse>} - The async response
+     */
+    public CompletableFuture<PatchPrintingOrderResponse> patchPrintingOrder(@Nonnull PatchPrintingOrderRequest request) {
+        return patchPrintingOrder(request, null);
+    }
+
+    /**
+     * Update an order
+     * 
+     * <p>Updates the PrintingOrder identified by `id`. Provide the unified PrintingOrder fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchPrintingOrderResponse>} - The async response
+     */
+    public CompletableFuture<PatchPrintingOrderResponse> patchPrintingOrder(@Nonnull PatchPrintingOrderRequest request, @Nullable Options options) {
+        AsyncRequestOperation<PatchPrintingOrderRequest, PatchPrintingOrderResponse> operation
+              = new PatchPrintingOrder.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -322,8 +642,63 @@ public class AsyncOrder {
      */
     @Deprecated
     public CompletableFuture<RemoveAccountingOrderResponse> removeAccountingOrder(@Nonnull RemoveAccountingOrderRequest request) {
+        return removeAccountingOrder(request, null);
+    }
+
+    /**
+     * Remove an order
+     * 
+     * <p>Deletes the AccountingOrder identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveAccountingOrderResponse>} - The async response
+     * @deprecated method: This will be removed in a future release, please migrate away from it as soon as possible.
+     */
+    @Deprecated
+    public CompletableFuture<RemoveAccountingOrderResponse> removeAccountingOrder(@Nonnull RemoveAccountingOrderRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveAccountingOrderRequest, RemoveAccountingOrderResponse> operation
-              = new RemoveAccountingOrder.Async(sdkConfiguration, _headers);
+              = new RemoveAccountingOrder.Async(sdkConfiguration, options, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Remove an order
+     * 
+     * <p>Deletes the PrintingOrder identified by `id`.
+     * 
+     * @return The async call builder
+     */
+    public RemovePrintingOrderRequestBuilder removePrintingOrder() {
+        return new RemovePrintingOrderRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove an order
+     * 
+     * <p>Deletes the PrintingOrder identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<RemovePrintingOrderResponse>} - The async response
+     */
+    public CompletableFuture<RemovePrintingOrderResponse> removePrintingOrder(@Nonnull RemovePrintingOrderRequest request) {
+        return removePrintingOrder(request, null);
+    }
+
+    /**
+     * Remove an order
+     * 
+     * <p>Deletes the PrintingOrder identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemovePrintingOrderResponse>} - The async response
+     */
+    public CompletableFuture<RemovePrintingOrderResponse> removePrintingOrder(@Nonnull RemovePrintingOrderRequest request, @Nullable Options options) {
+        AsyncRequestOperation<RemovePrintingOrderRequest, RemovePrintingOrderResponse> operation
+              = new RemovePrintingOrder.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -355,8 +730,24 @@ public class AsyncOrder {
      */
     @Deprecated
     public CompletableFuture<UpdateAccountingOrderResponse> updateAccountingOrder(@Nonnull UpdateAccountingOrderRequest request) {
+        return updateAccountingOrder(request, null);
+    }
+
+    /**
+     * Update an order
+     * 
+     * <p>Updates the AccountingOrder identified by `id`. Provide the unified AccountingOrder fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateAccountingOrderResponse>} - The async response
+     * @deprecated method: This will be removed in a future release, please migrate away from it as soon as possible.
+     */
+    @Deprecated
+    public CompletableFuture<UpdateAccountingOrderResponse> updateAccountingOrder(@Nonnull UpdateAccountingOrderRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateAccountingOrderRequest, UpdateAccountingOrderResponse> operation
-              = new UpdateAccountingOrder.Async(sdkConfiguration, _headers);
+              = new UpdateAccountingOrder.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -384,8 +775,65 @@ public class AsyncOrder {
      * @return {@code CompletableFuture<UpdateAssessmentOrderResponse>} - The async response
      */
     public CompletableFuture<UpdateAssessmentOrderResponse> updateAssessmentOrder(@Nonnull UpdateAssessmentOrderRequest request) {
+        return updateAssessmentOrder(request, null);
+    }
+
+    /**
+     * Update an order
+     * 
+     * <p>Updates the AssessmentOrder identified by `id`. Provide the unified AssessmentOrder fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateAssessmentOrderResponse>} - The async response
+     */
+    public CompletableFuture<UpdateAssessmentOrderResponse> updateAssessmentOrder(@Nonnull UpdateAssessmentOrderRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateAssessmentOrderRequest, UpdateAssessmentOrderResponse> operation
-              = new UpdateAssessmentOrder.Async(sdkConfiguration, _headers);
+              = new UpdateAssessmentOrder.Async(sdkConfiguration, options, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Update an order
+     * 
+     * <p>Updates the PrintingOrder identified by `id`. Provide the unified PrintingOrder fields to change in
+     * the request body.
+     * 
+     * @return The async call builder
+     */
+    public UpdatePrintingOrderRequestBuilder updatePrintingOrder() {
+        return new UpdatePrintingOrderRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update an order
+     * 
+     * <p>Updates the PrintingOrder identified by `id`. Provide the unified PrintingOrder fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<UpdatePrintingOrderResponse>} - The async response
+     */
+    public CompletableFuture<UpdatePrintingOrderResponse> updatePrintingOrder(@Nonnull UpdatePrintingOrderRequest request) {
+        return updatePrintingOrder(request, null);
+    }
+
+    /**
+     * Update an order
+     * 
+     * <p>Updates the PrintingOrder identified by `id`. Provide the unified PrintingOrder fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdatePrintingOrderResponse>} - The async response
+     */
+    public CompletableFuture<UpdatePrintingOrderResponse> updatePrintingOrder(@Nonnull UpdatePrintingOrderRequest request, @Nullable Options options) {
+        AsyncRequestOperation<UpdatePrintingOrderRequest, UpdatePrintingOrderResponse> operation
+              = new UpdatePrintingOrder.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

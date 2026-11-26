@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateShippingLabelRequest;
 import to.unified.unified_java_sdk.models.operations.CreateShippingLabelRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateShippingLabelResponse;
@@ -31,6 +32,7 @@ import to.unified.unified_java_sdk.operations.PatchShippingLabel;
 import to.unified.unified_java_sdk.operations.RemoveShippingLabel;
 import to.unified.unified_java_sdk.operations.UpdateShippingLabel;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Label {
@@ -75,8 +77,23 @@ public class Label {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateShippingLabelResponse createShippingLabel(@Nonnull CreateShippingLabelRequest request) {
+        return createShippingLabel(request, null);
+    }
+
+    /**
+     * Create a label
+     * 
+     * <p>Creates a ShippingLabel. Provide the unified ShippingLabel fields in the request body; they are
+     * mapped to the provider's API. Returns the created ShippingLabel.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateShippingLabelResponse createShippingLabel(@Nonnull CreateShippingLabelRequest request, @Nullable Options options) {
         RequestOperation<CreateShippingLabelRequest, CreateShippingLabelResponse> operation
-              = new CreateShippingLabel.Sync(sdkConfiguration, _headers);
+              = new CreateShippingLabel.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -103,8 +120,23 @@ public class Label {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetShippingLabelResponse getShippingLabel(@Nonnull GetShippingLabelRequest request) {
+        return getShippingLabel(request, null);
+    }
+
+    /**
+     * Retrieve a label
+     * 
+     * <p>Retrieves a single ShippingLabel by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetShippingLabelResponse getShippingLabel(@Nonnull GetShippingLabelRequest request, @Nullable Options options) {
         RequestOperation<GetShippingLabelRequest, GetShippingLabelResponse> operation
-              = new GetShippingLabel.Sync(sdkConfiguration, _headers);
+              = new GetShippingLabel.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -139,8 +171,27 @@ public class Label {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListShippingLabelsResponse listShippingLabels(@Nonnull ListShippingLabelsRequest request) {
+        return listShippingLabels(request, null);
+    }
+
+    /**
+     * List all labels
+     * 
+     * <p>Returns a list of ShippingLabels. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListShippingLabelsResponse listShippingLabels(@Nonnull ListShippingLabelsRequest request, @Nullable Options options) {
         RequestOperation<ListShippingLabelsRequest, ListShippingLabelsResponse> operation
-              = new ListShippingLabels.Sync(sdkConfiguration, _headers);
+              = new ListShippingLabels.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +218,23 @@ public class Label {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchShippingLabelResponse patchShippingLabel(@Nonnull PatchShippingLabelRequest request) {
+        return patchShippingLabel(request, null);
+    }
+
+    /**
+     * Update a label
+     * 
+     * <p>Updates the ShippingLabel identified by `id`. Provide the unified ShippingLabel fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchShippingLabelResponse patchShippingLabel(@Nonnull PatchShippingLabelRequest request, @Nullable Options options) {
         RequestOperation<PatchShippingLabelRequest, PatchShippingLabelResponse> operation
-              = new PatchShippingLabel.Sync(sdkConfiguration, _headers);
+              = new PatchShippingLabel.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -193,8 +259,22 @@ public class Label {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveShippingLabelResponse removeShippingLabel(@Nonnull RemoveShippingLabelRequest request) {
+        return removeShippingLabel(request, null);
+    }
+
+    /**
+     * Remove a label
+     * 
+     * <p>Deletes the ShippingLabel identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveShippingLabelResponse removeShippingLabel(@Nonnull RemoveShippingLabelRequest request, @Nullable Options options) {
         RequestOperation<RemoveShippingLabelRequest, RemoveShippingLabelResponse> operation
-              = new RemoveShippingLabel.Sync(sdkConfiguration, _headers);
+              = new RemoveShippingLabel.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -221,8 +301,23 @@ public class Label {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateShippingLabelResponse updateShippingLabel(@Nonnull UpdateShippingLabelRequest request) {
+        return updateShippingLabel(request, null);
+    }
+
+    /**
+     * Update a label
+     * 
+     * <p>Updates the ShippingLabel identified by `id`. Provide the unified ShippingLabel fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateShippingLabelResponse updateShippingLabel(@Nonnull UpdateShippingLabelRequest request, @Nullable Options options) {
         RequestOperation<UpdateShippingLabelRequest, UpdateShippingLabelResponse> operation
-              = new UpdateShippingLabel.Sync(sdkConfiguration, _headers);
+              = new UpdateShippingLabel.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

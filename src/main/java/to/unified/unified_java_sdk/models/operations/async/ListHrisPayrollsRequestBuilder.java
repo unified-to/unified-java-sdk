@@ -6,20 +6,30 @@ package to.unified.unified_java_sdk.models.operations.async;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.ListHrisPayrollsRequest;
 import to.unified.unified_java_sdk.operations.ListHrisPayrolls;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListHrisPayrollsRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private ListHrisPayrollsRequest request;
+    private final Options.Builder optionsBuilder;
 
     public ListHrisPayrollsRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public ListHrisPayrollsRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public ListHrisPayrollsRequestBuilder request(@Nonnull ListHrisPayrollsRequest request) {
@@ -44,8 +54,9 @@ public class ListHrisPayrollsRequestBuilder {
     * @return The response from the server.
     */
     public CompletableFuture<ListHrisPayrollsResponse> call() {
+        Options options = optionsBuilder.build();
         AsyncRequestOperation<ListHrisPayrollsRequest, ListHrisPayrollsResponse> operation
-              = new ListHrisPayrolls.Async(sdkConfiguration, _headers);
+              = new ListHrisPayrolls.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

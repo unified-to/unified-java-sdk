@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateCrmCompanyRequest;
 import to.unified.unified_java_sdk.models.operations.CreateCrmCompanyRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateCrmCompanyResponse;
@@ -155,6 +156,7 @@ import to.unified.unified_java_sdk.operations.UpdateCrmEvent;
 import to.unified.unified_java_sdk.operations.UpdateCrmLead;
 import to.unified.unified_java_sdk.operations.UpdateCrmPipeline;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Crm {
@@ -199,8 +201,23 @@ public class Crm {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateCrmCompanyResponse createCrmCompany(@Nonnull CreateCrmCompanyRequest request) {
+        return createCrmCompany(request, null);
+    }
+
+    /**
+     * Create a company
+     * 
+     * <p>Creates a CrmCompany. Provide the unified CrmCompany fields in the request body; they are mapped to
+     * the provider's API. Returns the created CrmCompany.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateCrmCompanyResponse createCrmCompany(@Nonnull CreateCrmCompanyRequest request, @Nullable Options options) {
         RequestOperation<CreateCrmCompanyRequest, CreateCrmCompanyResponse> operation
-              = new CreateCrmCompany.Sync(sdkConfiguration, _headers);
+              = new CreateCrmCompany.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -227,8 +244,23 @@ public class Crm {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateCrmContactResponse createCrmContact(@Nonnull CreateCrmContactRequest request) {
+        return createCrmContact(request, null);
+    }
+
+    /**
+     * Create a contact
+     * 
+     * <p>Creates a CrmContact. Provide the unified CrmContact fields in the request body; they are mapped to
+     * the provider's API. Returns the created CrmContact.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateCrmContactResponse createCrmContact(@Nonnull CreateCrmContactRequest request, @Nullable Options options) {
         RequestOperation<CreateCrmContactRequest, CreateCrmContactResponse> operation
-              = new CreateCrmContact.Sync(sdkConfiguration, _headers);
+              = new CreateCrmContact.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -255,8 +287,23 @@ public class Crm {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateCrmDealResponse createCrmDeal(@Nonnull CreateCrmDealRequest request) {
+        return createCrmDeal(request, null);
+    }
+
+    /**
+     * Create a deal
+     * 
+     * <p>Creates a CrmDeal. Provide the unified CrmDeal fields in the request body; they are mapped to the
+     * provider's API. Returns the created CrmDeal.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateCrmDealResponse createCrmDeal(@Nonnull CreateCrmDealRequest request, @Nullable Options options) {
         RequestOperation<CreateCrmDealRequest, CreateCrmDealResponse> operation
-              = new CreateCrmDeal.Sync(sdkConfiguration, _headers);
+              = new CreateCrmDeal.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -283,8 +330,23 @@ public class Crm {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateCrmEventResponse createCrmEvent(@Nonnull CreateCrmEventRequest request) {
+        return createCrmEvent(request, null);
+    }
+
+    /**
+     * Create an event
+     * 
+     * <p>Creates a CrmEvent. Provide the unified CrmEvent fields in the request body; they are mapped to the
+     * provider's API. Returns the created CrmEvent.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateCrmEventResponse createCrmEvent(@Nonnull CreateCrmEventRequest request, @Nullable Options options) {
         RequestOperation<CreateCrmEventRequest, CreateCrmEventResponse> operation
-              = new CreateCrmEvent.Sync(sdkConfiguration, _headers);
+              = new CreateCrmEvent.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -311,8 +373,23 @@ public class Crm {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateCrmLeadResponse createCrmLead(@Nonnull CreateCrmLeadRequest request) {
+        return createCrmLead(request, null);
+    }
+
+    /**
+     * Create a lead
+     * 
+     * <p>Creates a CrmLead. Provide the unified CrmLead fields in the request body; they are mapped to the
+     * provider's API. Returns the created CrmLead.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateCrmLeadResponse createCrmLead(@Nonnull CreateCrmLeadRequest request, @Nullable Options options) {
         RequestOperation<CreateCrmLeadRequest, CreateCrmLeadResponse> operation
-              = new CreateCrmLead.Sync(sdkConfiguration, _headers);
+              = new CreateCrmLead.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -339,8 +416,23 @@ public class Crm {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateCrmPipelineResponse createCrmPipeline(@Nonnull CreateCrmPipelineRequest request) {
+        return createCrmPipeline(request, null);
+    }
+
+    /**
+     * Create a pipeline
+     * 
+     * <p>Creates a CrmPipeline. Provide the unified CrmPipeline fields in the request body; they are mapped
+     * to the provider's API. Returns the created CrmPipeline.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateCrmPipelineResponse createCrmPipeline(@Nonnull CreateCrmPipelineRequest request, @Nullable Options options) {
         RequestOperation<CreateCrmPipelineRequest, CreateCrmPipelineResponse> operation
-              = new CreateCrmPipeline.Sync(sdkConfiguration, _headers);
+              = new CreateCrmPipeline.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -367,8 +459,23 @@ public class Crm {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetCrmCompanyResponse getCrmCompany(@Nonnull GetCrmCompanyRequest request) {
+        return getCrmCompany(request, null);
+    }
+
+    /**
+     * Retrieve a company
+     * 
+     * <p>Retrieves a single CrmCompany by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetCrmCompanyResponse getCrmCompany(@Nonnull GetCrmCompanyRequest request, @Nullable Options options) {
         RequestOperation<GetCrmCompanyRequest, GetCrmCompanyResponse> operation
-              = new GetCrmCompany.Sync(sdkConfiguration, _headers);
+              = new GetCrmCompany.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -395,8 +502,23 @@ public class Crm {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetCrmContactResponse getCrmContact(@Nonnull GetCrmContactRequest request) {
+        return getCrmContact(request, null);
+    }
+
+    /**
+     * Retrieve a contact
+     * 
+     * <p>Retrieves a single CrmContact by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetCrmContactResponse getCrmContact(@Nonnull GetCrmContactRequest request, @Nullable Options options) {
         RequestOperation<GetCrmContactRequest, GetCrmContactResponse> operation
-              = new GetCrmContact.Sync(sdkConfiguration, _headers);
+              = new GetCrmContact.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -423,8 +545,23 @@ public class Crm {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetCrmDealResponse getCrmDeal(@Nonnull GetCrmDealRequest request) {
+        return getCrmDeal(request, null);
+    }
+
+    /**
+     * Retrieve a deal
+     * 
+     * <p>Retrieves a single CrmDeal by its `id`. Obtain `id` values from the corresponding list endpoint. Use
+     * `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetCrmDealResponse getCrmDeal(@Nonnull GetCrmDealRequest request, @Nullable Options options) {
         RequestOperation<GetCrmDealRequest, GetCrmDealResponse> operation
-              = new GetCrmDeal.Sync(sdkConfiguration, _headers);
+              = new GetCrmDeal.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -451,8 +588,23 @@ public class Crm {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetCrmEventResponse getCrmEvent(@Nonnull GetCrmEventRequest request) {
+        return getCrmEvent(request, null);
+    }
+
+    /**
+     * Retrieve an event
+     * 
+     * <p>Retrieves a single CrmEvent by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetCrmEventResponse getCrmEvent(@Nonnull GetCrmEventRequest request, @Nullable Options options) {
         RequestOperation<GetCrmEventRequest, GetCrmEventResponse> operation
-              = new GetCrmEvent.Sync(sdkConfiguration, _headers);
+              = new GetCrmEvent.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -479,8 +631,23 @@ public class Crm {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetCrmLeadResponse getCrmLead(@Nonnull GetCrmLeadRequest request) {
+        return getCrmLead(request, null);
+    }
+
+    /**
+     * Retrieve a lead
+     * 
+     * <p>Retrieves a single CrmLead by its `id`. Obtain `id` values from the corresponding list endpoint. Use
+     * `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetCrmLeadResponse getCrmLead(@Nonnull GetCrmLeadRequest request, @Nullable Options options) {
         RequestOperation<GetCrmLeadRequest, GetCrmLeadResponse> operation
-              = new GetCrmLead.Sync(sdkConfiguration, _headers);
+              = new GetCrmLead.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -507,8 +674,23 @@ public class Crm {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetCrmPipelineResponse getCrmPipeline(@Nonnull GetCrmPipelineRequest request) {
+        return getCrmPipeline(request, null);
+    }
+
+    /**
+     * Retrieve a pipeline
+     * 
+     * <p>Retrieves a single CrmPipeline by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetCrmPipelineResponse getCrmPipeline(@Nonnull GetCrmPipelineRequest request, @Nullable Options options) {
         RequestOperation<GetCrmPipelineRequest, GetCrmPipelineResponse> operation
-              = new GetCrmPipeline.Sync(sdkConfiguration, _headers);
+              = new GetCrmPipeline.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -543,8 +725,27 @@ public class Crm {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListCrmCompaniesResponse listCrmCompanies(@Nonnull ListCrmCompaniesRequest request) {
+        return listCrmCompanies(request, null);
+    }
+
+    /**
+     * List all companies
+     * 
+     * <p>Returns a list of CrmCompanies. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListCrmCompaniesResponse listCrmCompanies(@Nonnull ListCrmCompaniesRequest request, @Nullable Options options) {
         RequestOperation<ListCrmCompaniesRequest, ListCrmCompaniesResponse> operation
-              = new ListCrmCompanies.Sync(sdkConfiguration, _headers);
+              = new ListCrmCompanies.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -579,8 +780,27 @@ public class Crm {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListCrmContactsResponse listCrmContacts(@Nonnull ListCrmContactsRequest request) {
+        return listCrmContacts(request, null);
+    }
+
+    /**
+     * List all contacts
+     * 
+     * <p>Returns a list of CrmContacts. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListCrmContactsResponse listCrmContacts(@Nonnull ListCrmContactsRequest request, @Nullable Options options) {
         RequestOperation<ListCrmContactsRequest, ListCrmContactsResponse> operation
-              = new ListCrmContacts.Sync(sdkConfiguration, _headers);
+              = new ListCrmContacts.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -615,8 +835,27 @@ public class Crm {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListCrmDealsResponse listCrmDeals(@Nonnull ListCrmDealsRequest request) {
+        return listCrmDeals(request, null);
+    }
+
+    /**
+     * List all deals
+     * 
+     * <p>Returns a list of CrmDeals. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListCrmDealsResponse listCrmDeals(@Nonnull ListCrmDealsRequest request, @Nullable Options options) {
         RequestOperation<ListCrmDealsRequest, ListCrmDealsResponse> operation
-              = new ListCrmDeals.Sync(sdkConfiguration, _headers);
+              = new ListCrmDeals.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -651,8 +890,27 @@ public class Crm {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListCrmEventsResponse listCrmEvents(@Nonnull ListCrmEventsRequest request) {
+        return listCrmEvents(request, null);
+    }
+
+    /**
+     * List all events
+     * 
+     * <p>Returns a list of CrmEvents. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListCrmEventsResponse listCrmEvents(@Nonnull ListCrmEventsRequest request, @Nullable Options options) {
         RequestOperation<ListCrmEventsRequest, ListCrmEventsResponse> operation
-              = new ListCrmEvents.Sync(sdkConfiguration, _headers);
+              = new ListCrmEvents.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -687,8 +945,27 @@ public class Crm {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListCrmLeadsResponse listCrmLeads(@Nonnull ListCrmLeadsRequest request) {
+        return listCrmLeads(request, null);
+    }
+
+    /**
+     * List all leads
+     * 
+     * <p>Returns a list of CrmLeads. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListCrmLeadsResponse listCrmLeads(@Nonnull ListCrmLeadsRequest request, @Nullable Options options) {
         RequestOperation<ListCrmLeadsRequest, ListCrmLeadsResponse> operation
-              = new ListCrmLeads.Sync(sdkConfiguration, _headers);
+              = new ListCrmLeads.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -723,8 +1000,27 @@ public class Crm {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListCrmPipelinesResponse listCrmPipelines(@Nonnull ListCrmPipelinesRequest request) {
+        return listCrmPipelines(request, null);
+    }
+
+    /**
+     * List all pipelines
+     * 
+     * <p>Returns a list of CrmPipelines. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListCrmPipelinesResponse listCrmPipelines(@Nonnull ListCrmPipelinesRequest request, @Nullable Options options) {
         RequestOperation<ListCrmPipelinesRequest, ListCrmPipelinesResponse> operation
-              = new ListCrmPipelines.Sync(sdkConfiguration, _headers);
+              = new ListCrmPipelines.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -759,8 +1055,27 @@ public class Crm {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListCrmTaxonomiesResponse listCrmTaxonomies(@Nonnull ListCrmTaxonomiesRequest request) {
+        return listCrmTaxonomies(request, null);
+    }
+
+    /**
+     * List all taxonomies
+     * 
+     * <p>Returns a list of CrmTaxonomies. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListCrmTaxonomiesResponse listCrmTaxonomies(@Nonnull ListCrmTaxonomiesRequest request, @Nullable Options options) {
         RequestOperation<ListCrmTaxonomiesRequest, ListCrmTaxonomiesResponse> operation
-              = new ListCrmTaxonomies.Sync(sdkConfiguration, _headers);
+              = new ListCrmTaxonomies.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -787,8 +1102,23 @@ public class Crm {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchCrmCompanyResponse patchCrmCompany(@Nonnull PatchCrmCompanyRequest request) {
+        return patchCrmCompany(request, null);
+    }
+
+    /**
+     * Update a company
+     * 
+     * <p>Updates the CrmCompany identified by `id`. Provide the unified CrmCompany fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchCrmCompanyResponse patchCrmCompany(@Nonnull PatchCrmCompanyRequest request, @Nullable Options options) {
         RequestOperation<PatchCrmCompanyRequest, PatchCrmCompanyResponse> operation
-              = new PatchCrmCompany.Sync(sdkConfiguration, _headers);
+              = new PatchCrmCompany.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -815,8 +1145,23 @@ public class Crm {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchCrmContactResponse patchCrmContact(@Nonnull PatchCrmContactRequest request) {
+        return patchCrmContact(request, null);
+    }
+
+    /**
+     * Update a contact
+     * 
+     * <p>Updates the CrmContact identified by `id`. Provide the unified CrmContact fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchCrmContactResponse patchCrmContact(@Nonnull PatchCrmContactRequest request, @Nullable Options options) {
         RequestOperation<PatchCrmContactRequest, PatchCrmContactResponse> operation
-              = new PatchCrmContact.Sync(sdkConfiguration, _headers);
+              = new PatchCrmContact.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -843,8 +1188,23 @@ public class Crm {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchCrmDealResponse patchCrmDeal(@Nonnull PatchCrmDealRequest request) {
+        return patchCrmDeal(request, null);
+    }
+
+    /**
+     * Update a deal
+     * 
+     * <p>Updates the CrmDeal identified by `id`. Provide the unified CrmDeal fields to change in the request
+     * body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchCrmDealResponse patchCrmDeal(@Nonnull PatchCrmDealRequest request, @Nullable Options options) {
         RequestOperation<PatchCrmDealRequest, PatchCrmDealResponse> operation
-              = new PatchCrmDeal.Sync(sdkConfiguration, _headers);
+              = new PatchCrmDeal.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -871,8 +1231,23 @@ public class Crm {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchCrmEventResponse patchCrmEvent(@Nonnull PatchCrmEventRequest request) {
+        return patchCrmEvent(request, null);
+    }
+
+    /**
+     * Update an event
+     * 
+     * <p>Updates the CrmEvent identified by `id`. Provide the unified CrmEvent fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchCrmEventResponse patchCrmEvent(@Nonnull PatchCrmEventRequest request, @Nullable Options options) {
         RequestOperation<PatchCrmEventRequest, PatchCrmEventResponse> operation
-              = new PatchCrmEvent.Sync(sdkConfiguration, _headers);
+              = new PatchCrmEvent.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -899,8 +1274,23 @@ public class Crm {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchCrmLeadResponse patchCrmLead(@Nonnull PatchCrmLeadRequest request) {
+        return patchCrmLead(request, null);
+    }
+
+    /**
+     * Update a lead
+     * 
+     * <p>Updates the CrmLead identified by `id`. Provide the unified CrmLead fields to change in the request
+     * body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchCrmLeadResponse patchCrmLead(@Nonnull PatchCrmLeadRequest request, @Nullable Options options) {
         RequestOperation<PatchCrmLeadRequest, PatchCrmLeadResponse> operation
-              = new PatchCrmLead.Sync(sdkConfiguration, _headers);
+              = new PatchCrmLead.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -927,8 +1317,23 @@ public class Crm {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchCrmPipelineResponse patchCrmPipeline(@Nonnull PatchCrmPipelineRequest request) {
+        return patchCrmPipeline(request, null);
+    }
+
+    /**
+     * Update a pipeline
+     * 
+     * <p>Updates the CrmPipeline identified by `id`. Provide the unified CrmPipeline fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchCrmPipelineResponse patchCrmPipeline(@Nonnull PatchCrmPipelineRequest request, @Nullable Options options) {
         RequestOperation<PatchCrmPipelineRequest, PatchCrmPipelineResponse> operation
-              = new PatchCrmPipeline.Sync(sdkConfiguration, _headers);
+              = new PatchCrmPipeline.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -953,8 +1358,22 @@ public class Crm {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveCrmCompanyResponse removeCrmCompany(@Nonnull RemoveCrmCompanyRequest request) {
+        return removeCrmCompany(request, null);
+    }
+
+    /**
+     * Remove a company
+     * 
+     * <p>Deletes the CrmCompany identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveCrmCompanyResponse removeCrmCompany(@Nonnull RemoveCrmCompanyRequest request, @Nullable Options options) {
         RequestOperation<RemoveCrmCompanyRequest, RemoveCrmCompanyResponse> operation
-              = new RemoveCrmCompany.Sync(sdkConfiguration, _headers);
+              = new RemoveCrmCompany.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -979,8 +1398,22 @@ public class Crm {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveCrmContactResponse removeCrmContact(@Nonnull RemoveCrmContactRequest request) {
+        return removeCrmContact(request, null);
+    }
+
+    /**
+     * Remove a contact
+     * 
+     * <p>Deletes the CrmContact identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveCrmContactResponse removeCrmContact(@Nonnull RemoveCrmContactRequest request, @Nullable Options options) {
         RequestOperation<RemoveCrmContactRequest, RemoveCrmContactResponse> operation
-              = new RemoveCrmContact.Sync(sdkConfiguration, _headers);
+              = new RemoveCrmContact.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1005,8 +1438,22 @@ public class Crm {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveCrmDealResponse removeCrmDeal(@Nonnull RemoveCrmDealRequest request) {
+        return removeCrmDeal(request, null);
+    }
+
+    /**
+     * Remove a deal
+     * 
+     * <p>Deletes the CrmDeal identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveCrmDealResponse removeCrmDeal(@Nonnull RemoveCrmDealRequest request, @Nullable Options options) {
         RequestOperation<RemoveCrmDealRequest, RemoveCrmDealResponse> operation
-              = new RemoveCrmDeal.Sync(sdkConfiguration, _headers);
+              = new RemoveCrmDeal.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1031,8 +1478,22 @@ public class Crm {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveCrmEventResponse removeCrmEvent(@Nonnull RemoveCrmEventRequest request) {
+        return removeCrmEvent(request, null);
+    }
+
+    /**
+     * Remove an event
+     * 
+     * <p>Deletes the CrmEvent identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveCrmEventResponse removeCrmEvent(@Nonnull RemoveCrmEventRequest request, @Nullable Options options) {
         RequestOperation<RemoveCrmEventRequest, RemoveCrmEventResponse> operation
-              = new RemoveCrmEvent.Sync(sdkConfiguration, _headers);
+              = new RemoveCrmEvent.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1057,8 +1518,22 @@ public class Crm {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveCrmLeadResponse removeCrmLead(@Nonnull RemoveCrmLeadRequest request) {
+        return removeCrmLead(request, null);
+    }
+
+    /**
+     * Remove a lead
+     * 
+     * <p>Deletes the CrmLead identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveCrmLeadResponse removeCrmLead(@Nonnull RemoveCrmLeadRequest request, @Nullable Options options) {
         RequestOperation<RemoveCrmLeadRequest, RemoveCrmLeadResponse> operation
-              = new RemoveCrmLead.Sync(sdkConfiguration, _headers);
+              = new RemoveCrmLead.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1083,8 +1558,22 @@ public class Crm {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveCrmPipelineResponse removeCrmPipeline(@Nonnull RemoveCrmPipelineRequest request) {
+        return removeCrmPipeline(request, null);
+    }
+
+    /**
+     * Remove a pipeline
+     * 
+     * <p>Deletes the CrmPipeline identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveCrmPipelineResponse removeCrmPipeline(@Nonnull RemoveCrmPipelineRequest request, @Nullable Options options) {
         RequestOperation<RemoveCrmPipelineRequest, RemoveCrmPipelineResponse> operation
-              = new RemoveCrmPipeline.Sync(sdkConfiguration, _headers);
+              = new RemoveCrmPipeline.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1111,8 +1600,23 @@ public class Crm {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateCrmCompanyResponse updateCrmCompany(@Nonnull UpdateCrmCompanyRequest request) {
+        return updateCrmCompany(request, null);
+    }
+
+    /**
+     * Update a company
+     * 
+     * <p>Updates the CrmCompany identified by `id`. Provide the unified CrmCompany fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateCrmCompanyResponse updateCrmCompany(@Nonnull UpdateCrmCompanyRequest request, @Nullable Options options) {
         RequestOperation<UpdateCrmCompanyRequest, UpdateCrmCompanyResponse> operation
-              = new UpdateCrmCompany.Sync(sdkConfiguration, _headers);
+              = new UpdateCrmCompany.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1139,8 +1643,23 @@ public class Crm {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateCrmContactResponse updateCrmContact(@Nonnull UpdateCrmContactRequest request) {
+        return updateCrmContact(request, null);
+    }
+
+    /**
+     * Update a contact
+     * 
+     * <p>Updates the CrmContact identified by `id`. Provide the unified CrmContact fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateCrmContactResponse updateCrmContact(@Nonnull UpdateCrmContactRequest request, @Nullable Options options) {
         RequestOperation<UpdateCrmContactRequest, UpdateCrmContactResponse> operation
-              = new UpdateCrmContact.Sync(sdkConfiguration, _headers);
+              = new UpdateCrmContact.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1167,8 +1686,23 @@ public class Crm {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateCrmDealResponse updateCrmDeal(@Nonnull UpdateCrmDealRequest request) {
+        return updateCrmDeal(request, null);
+    }
+
+    /**
+     * Update a deal
+     * 
+     * <p>Updates the CrmDeal identified by `id`. Provide the unified CrmDeal fields to change in the request
+     * body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateCrmDealResponse updateCrmDeal(@Nonnull UpdateCrmDealRequest request, @Nullable Options options) {
         RequestOperation<UpdateCrmDealRequest, UpdateCrmDealResponse> operation
-              = new UpdateCrmDeal.Sync(sdkConfiguration, _headers);
+              = new UpdateCrmDeal.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1195,8 +1729,23 @@ public class Crm {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateCrmEventResponse updateCrmEvent(@Nonnull UpdateCrmEventRequest request) {
+        return updateCrmEvent(request, null);
+    }
+
+    /**
+     * Update an event
+     * 
+     * <p>Updates the CrmEvent identified by `id`. Provide the unified CrmEvent fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateCrmEventResponse updateCrmEvent(@Nonnull UpdateCrmEventRequest request, @Nullable Options options) {
         RequestOperation<UpdateCrmEventRequest, UpdateCrmEventResponse> operation
-              = new UpdateCrmEvent.Sync(sdkConfiguration, _headers);
+              = new UpdateCrmEvent.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1223,8 +1772,23 @@ public class Crm {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateCrmLeadResponse updateCrmLead(@Nonnull UpdateCrmLeadRequest request) {
+        return updateCrmLead(request, null);
+    }
+
+    /**
+     * Update a lead
+     * 
+     * <p>Updates the CrmLead identified by `id`. Provide the unified CrmLead fields to change in the request
+     * body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateCrmLeadResponse updateCrmLead(@Nonnull UpdateCrmLeadRequest request, @Nullable Options options) {
         RequestOperation<UpdateCrmLeadRequest, UpdateCrmLeadResponse> operation
-              = new UpdateCrmLead.Sync(sdkConfiguration, _headers);
+              = new UpdateCrmLead.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1251,8 +1815,23 @@ public class Crm {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateCrmPipelineResponse updateCrmPipeline(@Nonnull UpdateCrmPipelineRequest request) {
+        return updateCrmPipeline(request, null);
+    }
+
+    /**
+     * Update a pipeline
+     * 
+     * <p>Updates the CrmPipeline identified by `id`. Provide the unified CrmPipeline fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateCrmPipelineResponse updateCrmPipeline(@Nonnull UpdateCrmPipelineRequest request, @Nullable Options options) {
         RequestOperation<UpdateCrmPipelineRequest, UpdateCrmPipelineResponse> operation
-              = new UpdateCrmPipeline.Sync(sdkConfiguration, _headers);
+              = new UpdateCrmPipeline.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

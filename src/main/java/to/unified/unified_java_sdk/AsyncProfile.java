@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateCdpProfileRequest;
 import to.unified.unified_java_sdk.models.operations.GetCdpProfileRequest;
@@ -40,6 +41,7 @@ import to.unified.unified_java_sdk.operations.PatchCdpProfile;
 import to.unified.unified_java_sdk.operations.RemoveCdpProfile;
 import to.unified.unified_java_sdk.operations.UpdateCdpProfile;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncProfile {
@@ -84,8 +86,22 @@ public class AsyncProfile {
      * @return {@code CompletableFuture<CreateCdpProfileResponse>} - The async response
      */
     public CompletableFuture<CreateCdpProfileResponse> createCdpProfile(@Nonnull CreateCdpProfileRequest request) {
+        return createCdpProfile(request, null);
+    }
+
+    /**
+     * Create a profile
+     * 
+     * <p>Creates a CdpProfile. Provide the unified CdpProfile fields in the request body; they are mapped to
+     * the provider's API. Returns the created CdpProfile.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateCdpProfileResponse>} - The async response
+     */
+    public CompletableFuture<CreateCdpProfileResponse> createCdpProfile(@Nonnull CreateCdpProfileRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateCdpProfileRequest, CreateCdpProfileResponse> operation
-              = new CreateCdpProfile.Async(sdkConfiguration, _headers);
+              = new CreateCdpProfile.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -113,8 +129,22 @@ public class AsyncProfile {
      * @return {@code CompletableFuture<GetCdpProfileResponse>} - The async response
      */
     public CompletableFuture<GetCdpProfileResponse> getCdpProfile(@Nonnull GetCdpProfileRequest request) {
+        return getCdpProfile(request, null);
+    }
+
+    /**
+     * Retrieve a profile
+     * 
+     * <p>Retrieves a single CdpProfile by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetCdpProfileResponse>} - The async response
+     */
+    public CompletableFuture<GetCdpProfileResponse> getCdpProfile(@Nonnull GetCdpProfileRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetCdpProfileRequest, GetCdpProfileResponse> operation
-              = new GetCdpProfile.Async(sdkConfiguration, _headers);
+              = new GetCdpProfile.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -142,8 +172,22 @@ public class AsyncProfile {
      * @return {@code CompletableFuture<GetSocialProfileResponse>} - The async response
      */
     public CompletableFuture<GetSocialProfileResponse> getSocialProfile(@Nonnull GetSocialProfileRequest request) {
+        return getSocialProfile(request, null);
+    }
+
+    /**
+     * Retrieve a profile
+     * 
+     * <p>Retrieves a single SocialProfile by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetSocialProfileResponse>} - The async response
+     */
+    public CompletableFuture<GetSocialProfileResponse> getSocialProfile(@Nonnull GetSocialProfileRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetSocialProfileRequest, GetSocialProfileResponse> operation
-              = new GetSocialProfile.Async(sdkConfiguration, _headers);
+              = new GetSocialProfile.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -179,8 +223,26 @@ public class AsyncProfile {
      * @return {@code CompletableFuture<ListCdpProfilesResponse>} - The async response
      */
     public CompletableFuture<ListCdpProfilesResponse> listCdpProfiles(@Nonnull ListCdpProfilesRequest request) {
+        return listCdpProfiles(request, null);
+    }
+
+    /**
+     * List all profiles
+     * 
+     * <p>Returns a list of CdpProfiles. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListCdpProfilesResponse>} - The async response
+     */
+    public CompletableFuture<ListCdpProfilesResponse> listCdpProfiles(@Nonnull ListCdpProfilesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListCdpProfilesRequest, ListCdpProfilesResponse> operation
-              = new ListCdpProfiles.Async(sdkConfiguration, _headers);
+              = new ListCdpProfiles.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -216,8 +278,26 @@ public class AsyncProfile {
      * @return {@code CompletableFuture<ListSocialProfilesResponse>} - The async response
      */
     public CompletableFuture<ListSocialProfilesResponse> listSocialProfiles(@Nonnull ListSocialProfilesRequest request) {
+        return listSocialProfiles(request, null);
+    }
+
+    /**
+     * List all profiles
+     * 
+     * <p>Returns a list of SocialProfiles. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListSocialProfilesResponse>} - The async response
+     */
+    public CompletableFuture<ListSocialProfilesResponse> listSocialProfiles(@Nonnull ListSocialProfilesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListSocialProfilesRequest, ListSocialProfilesResponse> operation
-              = new ListSocialProfiles.Async(sdkConfiguration, _headers);
+              = new ListSocialProfiles.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -245,8 +325,22 @@ public class AsyncProfile {
      * @return {@code CompletableFuture<PatchCdpProfileResponse>} - The async response
      */
     public CompletableFuture<PatchCdpProfileResponse> patchCdpProfile(@Nonnull PatchCdpProfileRequest request) {
+        return patchCdpProfile(request, null);
+    }
+
+    /**
+     * Update a profile
+     * 
+     * <p>Updates the CdpProfile identified by `id`. Provide the unified CdpProfile fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchCdpProfileResponse>} - The async response
+     */
+    public CompletableFuture<PatchCdpProfileResponse> patchCdpProfile(@Nonnull PatchCdpProfileRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchCdpProfileRequest, PatchCdpProfileResponse> operation
-              = new PatchCdpProfile.Async(sdkConfiguration, _headers);
+              = new PatchCdpProfile.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -272,8 +366,21 @@ public class AsyncProfile {
      * @return {@code CompletableFuture<RemoveCdpProfileResponse>} - The async response
      */
     public CompletableFuture<RemoveCdpProfileResponse> removeCdpProfile(@Nonnull RemoveCdpProfileRequest request) {
+        return removeCdpProfile(request, null);
+    }
+
+    /**
+     * Remove a profile
+     * 
+     * <p>Deletes the CdpProfile identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveCdpProfileResponse>} - The async response
+     */
+    public CompletableFuture<RemoveCdpProfileResponse> removeCdpProfile(@Nonnull RemoveCdpProfileRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveCdpProfileRequest, RemoveCdpProfileResponse> operation
-              = new RemoveCdpProfile.Async(sdkConfiguration, _headers);
+              = new RemoveCdpProfile.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -301,8 +408,22 @@ public class AsyncProfile {
      * @return {@code CompletableFuture<UpdateCdpProfileResponse>} - The async response
      */
     public CompletableFuture<UpdateCdpProfileResponse> updateCdpProfile(@Nonnull UpdateCdpProfileRequest request) {
+        return updateCdpProfile(request, null);
+    }
+
+    /**
+     * Update a profile
+     * 
+     * <p>Updates the CdpProfile identified by `id`. Provide the unified CdpProfile fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateCdpProfileResponse>} - The async response
+     */
+    public CompletableFuture<UpdateCdpProfileResponse> updateCdpProfile(@Nonnull UpdateCdpProfileRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateCdpProfileRequest, UpdateCdpProfileResponse> operation
-              = new UpdateCdpProfile.Async(sdkConfiguration, _headers);
+              = new UpdateCdpProfile.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

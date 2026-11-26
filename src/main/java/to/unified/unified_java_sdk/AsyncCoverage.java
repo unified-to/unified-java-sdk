@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.GetHealthcareCoverageRequest;
 import to.unified.unified_java_sdk.models.operations.ListHealthcareCoveragesRequest;
@@ -16,6 +17,7 @@ import to.unified.unified_java_sdk.models.operations.async.ListHealthcareCoverag
 import to.unified.unified_java_sdk.operations.GetHealthcareCoverage;
 import to.unified.unified_java_sdk.operations.ListHealthcareCoverages;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncCoverage {
@@ -60,8 +62,22 @@ public class AsyncCoverage {
      * @return {@code CompletableFuture<GetHealthcareCoverageResponse>} - The async response
      */
     public CompletableFuture<GetHealthcareCoverageResponse> getHealthcareCoverage(@Nonnull GetHealthcareCoverageRequest request) {
+        return getHealthcareCoverage(request, null);
+    }
+
+    /**
+     * Retrieve a coverage
+     * 
+     * <p>Retrieves a single HealthcareCoverage by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetHealthcareCoverageResponse>} - The async response
+     */
+    public CompletableFuture<GetHealthcareCoverageResponse> getHealthcareCoverage(@Nonnull GetHealthcareCoverageRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetHealthcareCoverageRequest, GetHealthcareCoverageResponse> operation
-              = new GetHealthcareCoverage.Async(sdkConfiguration, _headers);
+              = new GetHealthcareCoverage.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -97,8 +113,26 @@ public class AsyncCoverage {
      * @return {@code CompletableFuture<ListHealthcareCoveragesResponse>} - The async response
      */
     public CompletableFuture<ListHealthcareCoveragesResponse> listHealthcareCoverages(@Nonnull ListHealthcareCoveragesRequest request) {
+        return listHealthcareCoverages(request, null);
+    }
+
+    /**
+     * List all coverages
+     * 
+     * <p>Returns a list of HealthcareCoverages. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListHealthcareCoveragesResponse>} - The async response
+     */
+    public CompletableFuture<ListHealthcareCoveragesResponse> listHealthcareCoverages(@Nonnull ListHealthcareCoveragesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListHealthcareCoveragesRequest, ListHealthcareCoveragesResponse> operation
-              = new ListHealthcareCoverages.Async(sdkConfiguration, _headers);
+              = new ListHealthcareCoverages.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

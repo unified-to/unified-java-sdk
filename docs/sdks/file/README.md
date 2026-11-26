@@ -4,12 +4,89 @@
 
 ### Available Operations
 
+* [createPrintingFile](#createprintingfile) - Create a file
 * [createStorageFile](#createstoragefile) - Create a file
+* [getPrintingFile](#getprintingfile) - Retrieve a file
 * [getStorageFile](#getstoragefile) - Retrieve a file
+* [listPrintingFiles](#listprintingfiles) - List all files
 * [listStorageFiles](#liststoragefiles) - List all files
 * [patchStorageFile](#patchstoragefile) - Update a file
 * [removeStorageFile](#removestoragefile) - Remove a file
 * [updateStorageFile](#updatestoragefile) - Update a file
+
+## createPrintingFile
+
+Creates a PrintingFile. Provide the unified PrintingFile fields in the request body; they are mapped to the provider's API. Returns the created PrintingFile.
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="createPrintingFile" method="post" path="/printing/{connection_id}/file" example="printing_file" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreatePrintingFileRequest;
+import to.unified.unified_java_sdk.models.operations.CreatePrintingFileResponse;
+import to.unified.unified_java_sdk.models.shared.*;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        CreatePrintingFileRequest req = CreatePrintingFileRequest.builder()
+                .printingFile(PrintingFile.builder()
+                    .createdAt(OffsetDateTime.parse("2020-10-22T04:25:39.825Z"))
+                    .dpi(300d)
+                    .height(5400d)
+                    .id("eb474cea-2538-4912-939d-be744537e9b1")
+                    .metadata(List.of())
+                    .mimeType("image/jpeg")
+                    .name("blond-ecliptic.jpg")
+                    .previewUrl("https://picsum.photos/seed/aATvhmNA/400/400")
+                    .size(1956654d)
+                    .status(PrintingFileStatus.READY)
+                    .updatedAt(OffsetDateTime.parse("2020-10-22T04:25:39.825Z"))
+                    .url("https://picsum.photos/seed/XBj97B/2783/172")
+                    .width(4500d)
+                    .build())
+                .connectionId("<id>")
+                .build();
+
+        CreatePrintingFileResponse res = sdk.file().createPrintingFile()
+                .request(req)
+                .call();
+
+        if (res.printingFile().isPresent()) {
+            System.out.println(res.printingFile().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [CreatePrintingFileRequest](../../models/operations/CreatePrintingFileRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+
+### Response
+
+**[CreatePrintingFileResponse](../../models/operations/CreatePrintingFileResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## createStorageFile
 
@@ -42,20 +119,20 @@ public class Application {
         CreateStorageFileRequest req = CreateStorageFileRequest.builder()
                 .storageFile(StorageFile.builder()
                     .createdAt(OffsetDateTime.parse("2021-09-12T16:48:23.774Z"))
-                    .description("Deprimo crastinus cupiditate debilito cimentarius virgo acidus.")
-                    .downloadUrl("https://clueless-laughter.biz")
-                    .hash("d9d88dda7bc0acaa8472fdef2307f94a1fc355ce")
-                    .id("06cba0d3-4b62-4ca7-82f0-5143c307a50d")
+                    .description("Debilito cimentarius virgo acidus thymbra.")
+                    .downloadUrl("https://messy-clamp.net/")
+                    .hash("9d88dda7bc0acaa8472fdef2307f94a1fc355cef")
+                    .id("19063a1e-fa2b-4df7-9d53-36a23474dc5c")
                     .metadata(List.of())
                     .mimeType("application/pdf")
-                    .name("softly.pdf")
+                    .name("joshingly.pdf")
                     .size(1134456d)
                     .tags(List.of(
-                        "suasoria"))
+                        "derelinquo"))
                     .type(StorageFileType.FOLDER)
-                    .updatedAt(OffsetDateTime.parse("2023-02-13T18:23:57.011Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-02-15T09:26:18.335Z"))
                     .version("1")
-                    .webUrl("https://faraway-inspection.org")
+                    .webUrl("https://likable-widow.org/")
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -80,6 +157,64 @@ public class Application {
 ### Response
 
 **[CreateStorageFileResponse](../../models/operations/CreateStorageFileResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## getPrintingFile
+
+Retrieves a single PrintingFile by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="getPrintingFile" method="get" path="/printing/{connection_id}/file/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetPrintingFileRequest;
+import to.unified.unified_java_sdk.models.operations.GetPrintingFileResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        GetPrintingFileRequest req = GetPrintingFileRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetPrintingFileResponse res = sdk.file().getPrintingFile()
+                .request(req)
+                .call();
+
+        if (res.printingFile().isPresent()) {
+            System.out.println(res.printingFile().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `request`                                                                   | [GetPrintingFileRequest](../../models/operations/GetPrintingFileRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
+
+### Response
+
+**[GetPrintingFileResponse](../../models/operations/GetPrintingFileResponse.md)**
 
 ### Errors
 
@@ -138,6 +273,63 @@ public class Application {
 ### Response
 
 **[GetStorageFileResponse](../../models/operations/GetStorageFileResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## listPrintingFiles
+
+Returns a list of PrintingFiles. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listPrintingFiles" method="get" path="/printing/{connection_id}/file" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListPrintingFilesRequest;
+import to.unified.unified_java_sdk.models.operations.ListPrintingFilesResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListPrintingFilesRequest req = ListPrintingFilesRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListPrintingFilesResponse res = sdk.file().listPrintingFiles()
+                .request(req)
+                .call();
+
+        if (res.printingFiles().isPresent()) {
+            System.out.println(res.printingFiles().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [ListPrintingFilesRequest](../../models/operations/ListPrintingFilesRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+
+### Response
+
+**[ListPrintingFilesResponse](../../models/operations/ListPrintingFilesResponse.md)**
 
 ### Errors
 
@@ -233,20 +425,20 @@ public class Application {
         PatchStorageFileRequest req = PatchStorageFileRequest.builder()
                 .storageFile(StorageFile.builder()
                     .createdAt(OffsetDateTime.parse("2021-09-12T16:48:23.774Z"))
-                    .description("Deprimo crastinus cupiditate debilito cimentarius virgo acidus.")
-                    .downloadUrl("https://clueless-laughter.biz")
-                    .hash("d9d88dda7bc0acaa8472fdef2307f94a1fc355ce")
-                    .id("2b037acb-ba18-45dc-8975-c37901aeb7b3")
+                    .description("Debilito cimentarius virgo acidus thymbra.")
+                    .downloadUrl("https://messy-clamp.net/")
+                    .hash("9d88dda7bc0acaa8472fdef2307f94a1fc355cef")
+                    .id("9e28b552-8b9a-419e-aee3-b6971f583ca9")
                     .metadata(List.of())
                     .mimeType("application/pdf")
-                    .name("softly.pdf")
+                    .name("joshingly.pdf")
                     .size(1134456d)
                     .tags(List.of(
-                        "suasoria"))
+                        "derelinquo"))
                     .type(StorageFileType.FOLDER)
-                    .updatedAt(OffsetDateTime.parse("2023-02-13T18:23:57.018Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-02-15T09:26:18.340Z"))
                     .version("1")
-                    .webUrl("https://faraway-inspection.org")
+                    .webUrl("https://likable-widow.org/")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -366,20 +558,20 @@ public class Application {
         UpdateStorageFileRequest req = UpdateStorageFileRequest.builder()
                 .storageFile(StorageFile.builder()
                     .createdAt(OffsetDateTime.parse("2021-09-12T16:48:23.774Z"))
-                    .description("Deprimo crastinus cupiditate debilito cimentarius virgo acidus.")
-                    .downloadUrl("https://clueless-laughter.biz")
-                    .hash("d9d88dda7bc0acaa8472fdef2307f94a1fc355ce")
-                    .id("2b037acb-ba18-45dc-8975-c37901aeb7b3")
+                    .description("Debilito cimentarius virgo acidus thymbra.")
+                    .downloadUrl("https://messy-clamp.net/")
+                    .hash("9d88dda7bc0acaa8472fdef2307f94a1fc355cef")
+                    .id("9e28b552-8b9a-419e-aee3-b6971f583ca9")
                     .metadata(List.of())
                     .mimeType("application/pdf")
-                    .name("softly.pdf")
+                    .name("joshingly.pdf")
                     .size(1134456d)
                     .tags(List.of(
-                        "suasoria"))
+                        "derelinquo"))
                     .type(StorageFileType.FOLDER)
-                    .updatedAt(OffsetDateTime.parse("2023-02-13T18:23:57.018Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-02-15T09:26:18.340Z"))
                     .version("1")
-                    .webUrl("https://faraway-inspection.org")
+                    .webUrl("https://likable-widow.org/")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

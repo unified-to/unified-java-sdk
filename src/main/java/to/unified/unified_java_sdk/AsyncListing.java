@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreatePropertyListingRequest;
 import to.unified.unified_java_sdk.models.operations.GetPropertyListingRequest;
@@ -32,6 +33,7 @@ import to.unified.unified_java_sdk.operations.PatchPropertyListing;
 import to.unified.unified_java_sdk.operations.RemovePropertyListing;
 import to.unified.unified_java_sdk.operations.UpdatePropertyListing;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncListing {
@@ -76,8 +78,22 @@ public class AsyncListing {
      * @return {@code CompletableFuture<CreatePropertyListingResponse>} - The async response
      */
     public CompletableFuture<CreatePropertyListingResponse> createPropertyListing(@Nonnull CreatePropertyListingRequest request) {
+        return createPropertyListing(request, null);
+    }
+
+    /**
+     * Create a listing
+     * 
+     * <p>Creates a PropertyListing. Provide the unified PropertyListing fields in the request body; they are
+     * mapped to the provider's API. Returns the created PropertyListing.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreatePropertyListingResponse>} - The async response
+     */
+    public CompletableFuture<CreatePropertyListingResponse> createPropertyListing(@Nonnull CreatePropertyListingRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreatePropertyListingRequest, CreatePropertyListingResponse> operation
-              = new CreatePropertyListing.Async(sdkConfiguration, _headers);
+              = new CreatePropertyListing.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -105,8 +121,22 @@ public class AsyncListing {
      * @return {@code CompletableFuture<GetPropertyListingResponse>} - The async response
      */
     public CompletableFuture<GetPropertyListingResponse> getPropertyListing(@Nonnull GetPropertyListingRequest request) {
+        return getPropertyListing(request, null);
+    }
+
+    /**
+     * Retrieve a listing
+     * 
+     * <p>Retrieves a single PropertyListing by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetPropertyListingResponse>} - The async response
+     */
+    public CompletableFuture<GetPropertyListingResponse> getPropertyListing(@Nonnull GetPropertyListingRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetPropertyListingRequest, GetPropertyListingResponse> operation
-              = new GetPropertyListing.Async(sdkConfiguration, _headers);
+              = new GetPropertyListing.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -142,8 +172,26 @@ public class AsyncListing {
      * @return {@code CompletableFuture<ListPropertyListingsResponse>} - The async response
      */
     public CompletableFuture<ListPropertyListingsResponse> listPropertyListings(@Nonnull ListPropertyListingsRequest request) {
+        return listPropertyListings(request, null);
+    }
+
+    /**
+     * List all listings
+     * 
+     * <p>Returns a list of PropertyListings. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListPropertyListingsResponse>} - The async response
+     */
+    public CompletableFuture<ListPropertyListingsResponse> listPropertyListings(@Nonnull ListPropertyListingsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListPropertyListingsRequest, ListPropertyListingsResponse> operation
-              = new ListPropertyListings.Async(sdkConfiguration, _headers);
+              = new ListPropertyListings.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -171,8 +219,22 @@ public class AsyncListing {
      * @return {@code CompletableFuture<PatchPropertyListingResponse>} - The async response
      */
     public CompletableFuture<PatchPropertyListingResponse> patchPropertyListing(@Nonnull PatchPropertyListingRequest request) {
+        return patchPropertyListing(request, null);
+    }
+
+    /**
+     * Update a listing
+     * 
+     * <p>Updates the PropertyListing identified by `id`. Provide the unified PropertyListing fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchPropertyListingResponse>} - The async response
+     */
+    public CompletableFuture<PatchPropertyListingResponse> patchPropertyListing(@Nonnull PatchPropertyListingRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchPropertyListingRequest, PatchPropertyListingResponse> operation
-              = new PatchPropertyListing.Async(sdkConfiguration, _headers);
+              = new PatchPropertyListing.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -198,8 +260,21 @@ public class AsyncListing {
      * @return {@code CompletableFuture<RemovePropertyListingResponse>} - The async response
      */
     public CompletableFuture<RemovePropertyListingResponse> removePropertyListing(@Nonnull RemovePropertyListingRequest request) {
+        return removePropertyListing(request, null);
+    }
+
+    /**
+     * Remove a listing
+     * 
+     * <p>Deletes the PropertyListing identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemovePropertyListingResponse>} - The async response
+     */
+    public CompletableFuture<RemovePropertyListingResponse> removePropertyListing(@Nonnull RemovePropertyListingRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemovePropertyListingRequest, RemovePropertyListingResponse> operation
-              = new RemovePropertyListing.Async(sdkConfiguration, _headers);
+              = new RemovePropertyListing.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -227,8 +302,22 @@ public class AsyncListing {
      * @return {@code CompletableFuture<UpdatePropertyListingResponse>} - The async response
      */
     public CompletableFuture<UpdatePropertyListingResponse> updatePropertyListing(@Nonnull UpdatePropertyListingRequest request) {
+        return updatePropertyListing(request, null);
+    }
+
+    /**
+     * Update a listing
+     * 
+     * <p>Updates the PropertyListing identified by `id`. Provide the unified PropertyListing fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdatePropertyListingResponse>} - The async response
+     */
+    public CompletableFuture<UpdatePropertyListingResponse> updatePropertyListing(@Nonnull UpdatePropertyListingRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdatePropertyListingRequest, UpdatePropertyListingResponse> operation
-              = new UpdatePropertyListing.Async(sdkConfiguration, _headers);
+              = new UpdatePropertyListing.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

@@ -35,7 +35,7 @@ public class PropertyAdsCampaignTargetingOptimization {
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mode")
-    private Mode mode;
+    private PropertyAdsCampaignTargetingOptimizationMode mode;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -46,7 +46,7 @@ public class PropertyAdsCampaignTargetingOptimization {
     public PropertyAdsCampaignTargetingOptimization(
             @JsonProperty("advantage_audience") @Nullable Boolean advantageAudience,
             @JsonProperty("advantage_placements") @Nullable Boolean advantagePlacements,
-            @JsonProperty("mode") @Nullable Mode mode,
+            @JsonProperty("mode") @Nullable PropertyAdsCampaignTargetingOptimizationMode mode,
             @JsonProperty("targeting_optimization_expansion_all") @Nullable Boolean targetingOptimizationExpansionAll) {
         this.advantageAudience = advantageAudience;
         this.advantagePlacements = advantagePlacements;
@@ -70,7 +70,7 @@ public class PropertyAdsCampaignTargetingOptimization {
     /**
      * Google: bid_only falsetrue
      */
-    public Optional<Mode> mode() {
+    public Optional<PropertyAdsCampaignTargetingOptimizationMode> mode() {
         return Optional.ofNullable(this.mode);
     }
 
@@ -98,7 +98,7 @@ public class PropertyAdsCampaignTargetingOptimization {
     /**
      * Google: bid_only falsetrue
      */
-    public PropertyAdsCampaignTargetingOptimization withMode(@Nullable Mode mode) {
+    public PropertyAdsCampaignTargetingOptimization withMode(@Nullable PropertyAdsCampaignTargetingOptimizationMode mode) {
         this.mode = mode;
         return this;
     }
@@ -149,7 +149,7 @@ public class PropertyAdsCampaignTargetingOptimization {
 
         private Boolean advantagePlacements;
 
-        private Mode mode;
+        private PropertyAdsCampaignTargetingOptimizationMode mode;
 
         private Boolean targetingOptimizationExpansionAll;
 
@@ -170,7 +170,7 @@ public class PropertyAdsCampaignTargetingOptimization {
         /**
          * Google: bid_only falsetrue
          */
-        public Builder mode(@Nullable Mode mode) {
+        public Builder mode(@Nullable PropertyAdsCampaignTargetingOptimizationMode mode) {
             this.mode = mode;
             return this;
         }

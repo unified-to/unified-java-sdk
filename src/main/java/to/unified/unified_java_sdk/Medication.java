@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.GetHealthcareMedicationRequest;
 import to.unified.unified_java_sdk.models.operations.GetHealthcareMedicationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetHealthcareMedicationResponse;
@@ -15,6 +16,7 @@ import to.unified.unified_java_sdk.models.operations.ListHealthcareMedicationsRe
 import to.unified.unified_java_sdk.operations.GetHealthcareMedication;
 import to.unified.unified_java_sdk.operations.ListHealthcareMedications;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Medication {
@@ -59,8 +61,23 @@ public class Medication {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetHealthcareMedicationResponse getHealthcareMedication(@Nonnull GetHealthcareMedicationRequest request) {
+        return getHealthcareMedication(request, null);
+    }
+
+    /**
+     * Retrieve a medication
+     * 
+     * <p>Retrieves a single HealthcareMedication by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetHealthcareMedicationResponse getHealthcareMedication(@Nonnull GetHealthcareMedicationRequest request, @Nullable Options options) {
         RequestOperation<GetHealthcareMedicationRequest, GetHealthcareMedicationResponse> operation
-              = new GetHealthcareMedication.Sync(sdkConfiguration, _headers);
+              = new GetHealthcareMedication.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -95,8 +112,27 @@ public class Medication {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListHealthcareMedicationsResponse listHealthcareMedications(@Nonnull ListHealthcareMedicationsRequest request) {
+        return listHealthcareMedications(request, null);
+    }
+
+    /**
+     * List all medications
+     * 
+     * <p>Returns a list of HealthcareMedications. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListHealthcareMedicationsResponse listHealthcareMedications(@Nonnull ListHealthcareMedicationsRequest request, @Nullable Options options) {
         RequestOperation<ListHealthcareMedicationsRequest, ListHealthcareMedicationsResponse> operation
-              = new ListHealthcareMedications.Sync(sdkConfiguration, _headers);
+              = new ListHealthcareMedications.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

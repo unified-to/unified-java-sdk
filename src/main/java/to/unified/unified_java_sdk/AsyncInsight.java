@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.GetSocialInsightRequest;
 import to.unified.unified_java_sdk.models.operations.ListSocialInsightsRequest;
@@ -16,6 +17,7 @@ import to.unified.unified_java_sdk.models.operations.async.ListSocialInsightsRes
 import to.unified.unified_java_sdk.operations.GetSocialInsight;
 import to.unified.unified_java_sdk.operations.ListSocialInsights;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncInsight {
@@ -60,8 +62,22 @@ public class AsyncInsight {
      * @return {@code CompletableFuture<GetSocialInsightResponse>} - The async response
      */
     public CompletableFuture<GetSocialInsightResponse> getSocialInsight(@Nonnull GetSocialInsightRequest request) {
+        return getSocialInsight(request, null);
+    }
+
+    /**
+     * Retrieve an insight
+     * 
+     * <p>Retrieves a single SocialInsight by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetSocialInsightResponse>} - The async response
+     */
+    public CompletableFuture<GetSocialInsightResponse> getSocialInsight(@Nonnull GetSocialInsightRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetSocialInsightRequest, GetSocialInsightResponse> operation
-              = new GetSocialInsight.Async(sdkConfiguration, _headers);
+              = new GetSocialInsight.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -97,8 +113,26 @@ public class AsyncInsight {
      * @return {@code CompletableFuture<ListSocialInsightsResponse>} - The async response
      */
     public CompletableFuture<ListSocialInsightsResponse> listSocialInsights(@Nonnull ListSocialInsightsRequest request) {
+        return listSocialInsights(request, null);
+    }
+
+    /**
+     * List all insights
+     * 
+     * <p>Returns a list of SocialInsights. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListSocialInsightsResponse>} - The async response
+     */
+    public CompletableFuture<ListSocialInsightsResponse> listSocialInsights(@Nonnull ListSocialInsightsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListSocialInsightsRequest, ListSocialInsightsResponse> operation
-              = new ListSocialInsights.Async(sdkConfiguration, _headers);
+              = new ListSocialInsights.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

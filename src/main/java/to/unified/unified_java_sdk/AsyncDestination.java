@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateCdpDestinationRequest;
 import to.unified.unified_java_sdk.models.operations.GetCdpDestinationRequest;
@@ -32,6 +33,7 @@ import to.unified.unified_java_sdk.operations.PatchCdpDestination;
 import to.unified.unified_java_sdk.operations.RemoveCdpDestination;
 import to.unified.unified_java_sdk.operations.UpdateCdpDestination;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncDestination {
@@ -76,8 +78,22 @@ public class AsyncDestination {
      * @return {@code CompletableFuture<CreateCdpDestinationResponse>} - The async response
      */
     public CompletableFuture<CreateCdpDestinationResponse> createCdpDestination(@Nonnull CreateCdpDestinationRequest request) {
+        return createCdpDestination(request, null);
+    }
+
+    /**
+     * Create a destination
+     * 
+     * <p>Creates a CdpDestination. Provide the unified CdpDestination fields in the request body; they are
+     * mapped to the provider's API. Returns the created CdpDestination.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateCdpDestinationResponse>} - The async response
+     */
+    public CompletableFuture<CreateCdpDestinationResponse> createCdpDestination(@Nonnull CreateCdpDestinationRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateCdpDestinationRequest, CreateCdpDestinationResponse> operation
-              = new CreateCdpDestination.Async(sdkConfiguration, _headers);
+              = new CreateCdpDestination.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -105,8 +121,22 @@ public class AsyncDestination {
      * @return {@code CompletableFuture<GetCdpDestinationResponse>} - The async response
      */
     public CompletableFuture<GetCdpDestinationResponse> getCdpDestination(@Nonnull GetCdpDestinationRequest request) {
+        return getCdpDestination(request, null);
+    }
+
+    /**
+     * Retrieve a destination
+     * 
+     * <p>Retrieves a single CdpDestination by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetCdpDestinationResponse>} - The async response
+     */
+    public CompletableFuture<GetCdpDestinationResponse> getCdpDestination(@Nonnull GetCdpDestinationRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetCdpDestinationRequest, GetCdpDestinationResponse> operation
-              = new GetCdpDestination.Async(sdkConfiguration, _headers);
+              = new GetCdpDestination.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -142,8 +172,26 @@ public class AsyncDestination {
      * @return {@code CompletableFuture<ListCdpDestinationsResponse>} - The async response
      */
     public CompletableFuture<ListCdpDestinationsResponse> listCdpDestinations(@Nonnull ListCdpDestinationsRequest request) {
+        return listCdpDestinations(request, null);
+    }
+
+    /**
+     * List all destinations
+     * 
+     * <p>Returns a list of CdpDestinations. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListCdpDestinationsResponse>} - The async response
+     */
+    public CompletableFuture<ListCdpDestinationsResponse> listCdpDestinations(@Nonnull ListCdpDestinationsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListCdpDestinationsRequest, ListCdpDestinationsResponse> operation
-              = new ListCdpDestinations.Async(sdkConfiguration, _headers);
+              = new ListCdpDestinations.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -171,8 +219,22 @@ public class AsyncDestination {
      * @return {@code CompletableFuture<PatchCdpDestinationResponse>} - The async response
      */
     public CompletableFuture<PatchCdpDestinationResponse> patchCdpDestination(@Nonnull PatchCdpDestinationRequest request) {
+        return patchCdpDestination(request, null);
+    }
+
+    /**
+     * Update a destination
+     * 
+     * <p>Updates the CdpDestination identified by `id`. Provide the unified CdpDestination fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchCdpDestinationResponse>} - The async response
+     */
+    public CompletableFuture<PatchCdpDestinationResponse> patchCdpDestination(@Nonnull PatchCdpDestinationRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchCdpDestinationRequest, PatchCdpDestinationResponse> operation
-              = new PatchCdpDestination.Async(sdkConfiguration, _headers);
+              = new PatchCdpDestination.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -198,8 +260,21 @@ public class AsyncDestination {
      * @return {@code CompletableFuture<RemoveCdpDestinationResponse>} - The async response
      */
     public CompletableFuture<RemoveCdpDestinationResponse> removeCdpDestination(@Nonnull RemoveCdpDestinationRequest request) {
+        return removeCdpDestination(request, null);
+    }
+
+    /**
+     * Remove a destination
+     * 
+     * <p>Deletes the CdpDestination identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveCdpDestinationResponse>} - The async response
+     */
+    public CompletableFuture<RemoveCdpDestinationResponse> removeCdpDestination(@Nonnull RemoveCdpDestinationRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveCdpDestinationRequest, RemoveCdpDestinationResponse> operation
-              = new RemoveCdpDestination.Async(sdkConfiguration, _headers);
+              = new RemoveCdpDestination.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -227,8 +302,22 @@ public class AsyncDestination {
      * @return {@code CompletableFuture<UpdateCdpDestinationResponse>} - The async response
      */
     public CompletableFuture<UpdateCdpDestinationResponse> updateCdpDestination(@Nonnull UpdateCdpDestinationRequest request) {
+        return updateCdpDestination(request, null);
+    }
+
+    /**
+     * Update a destination
+     * 
+     * <p>Updates the CdpDestination identified by `id`. Provide the unified CdpDestination fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateCdpDestinationResponse>} - The async response
+     */
+    public CompletableFuture<UpdateCdpDestinationResponse> updateCdpDestination(@Nonnull UpdateCdpDestinationRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateCdpDestinationRequest, UpdateCdpDestinationResponse> operation
-              = new UpdateCdpDestination.Async(sdkConfiguration, _headers);
+              = new UpdateCdpDestination.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

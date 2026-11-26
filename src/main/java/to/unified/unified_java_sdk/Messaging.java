@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateMessagingChannelRequest;
 import to.unified.unified_java_sdk.models.operations.CreateMessagingChannelRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateMessagingChannelResponse;
@@ -63,6 +64,7 @@ import to.unified.unified_java_sdk.operations.UpdateMessagingChannel;
 import to.unified.unified_java_sdk.operations.UpdateMessagingEvent;
 import to.unified.unified_java_sdk.operations.UpdateMessagingMessage;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Messaging {
@@ -107,8 +109,23 @@ public class Messaging {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateMessagingChannelResponse createMessagingChannel(@Nonnull CreateMessagingChannelRequest request) {
+        return createMessagingChannel(request, null);
+    }
+
+    /**
+     * Create a channel
+     * 
+     * <p>Creates a MessagingChannel. Provide the unified MessagingChannel fields in the request body; they
+     * are mapped to the provider's API. Returns the created MessagingChannel.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateMessagingChannelResponse createMessagingChannel(@Nonnull CreateMessagingChannelRequest request, @Nullable Options options) {
         RequestOperation<CreateMessagingChannelRequest, CreateMessagingChannelResponse> operation
-              = new CreateMessagingChannel.Sync(sdkConfiguration, _headers);
+              = new CreateMessagingChannel.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -135,8 +152,23 @@ public class Messaging {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateMessagingMessageResponse createMessagingMessage(@Nonnull CreateMessagingMessageRequest request) {
+        return createMessagingMessage(request, null);
+    }
+
+    /**
+     * Create a message
+     * 
+     * <p>Creates a MessagingMessage. Provide the unified MessagingMessage fields in the request body; they
+     * are mapped to the provider's API. Returns the created MessagingMessage.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateMessagingMessageResponse createMessagingMessage(@Nonnull CreateMessagingMessageRequest request, @Nullable Options options) {
         RequestOperation<CreateMessagingMessageRequest, CreateMessagingMessageResponse> operation
-              = new CreateMessagingMessage.Sync(sdkConfiguration, _headers);
+              = new CreateMessagingMessage.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -163,8 +195,23 @@ public class Messaging {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetMessagingChannelResponse getMessagingChannel(@Nonnull GetMessagingChannelRequest request) {
+        return getMessagingChannel(request, null);
+    }
+
+    /**
+     * Retrieve a channel
+     * 
+     * <p>Retrieves a single MessagingChannel by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetMessagingChannelResponse getMessagingChannel(@Nonnull GetMessagingChannelRequest request, @Nullable Options options) {
         RequestOperation<GetMessagingChannelRequest, GetMessagingChannelResponse> operation
-              = new GetMessagingChannel.Sync(sdkConfiguration, _headers);
+              = new GetMessagingChannel.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -191,8 +238,23 @@ public class Messaging {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetMessagingMessageResponse getMessagingMessage(@Nonnull GetMessagingMessageRequest request) {
+        return getMessagingMessage(request, null);
+    }
+
+    /**
+     * Retrieve a message
+     * 
+     * <p>Retrieves a single MessagingMessage by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetMessagingMessageResponse getMessagingMessage(@Nonnull GetMessagingMessageRequest request, @Nullable Options options) {
         RequestOperation<GetMessagingMessageRequest, GetMessagingMessageResponse> operation
-              = new GetMessagingMessage.Sync(sdkConfiguration, _headers);
+              = new GetMessagingMessage.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -227,8 +289,27 @@ public class Messaging {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListMessagingChannelsResponse listMessagingChannels(@Nonnull ListMessagingChannelsRequest request) {
+        return listMessagingChannels(request, null);
+    }
+
+    /**
+     * List all channels
+     * 
+     * <p>Returns a list of MessagingChannels. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListMessagingChannelsResponse listMessagingChannels(@Nonnull ListMessagingChannelsRequest request, @Nullable Options options) {
         RequestOperation<ListMessagingChannelsRequest, ListMessagingChannelsResponse> operation
-              = new ListMessagingChannels.Sync(sdkConfiguration, _headers);
+              = new ListMessagingChannels.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -263,8 +344,27 @@ public class Messaging {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListMessagingMessagesResponse listMessagingMessages(@Nonnull ListMessagingMessagesRequest request) {
+        return listMessagingMessages(request, null);
+    }
+
+    /**
+     * List all messages
+     * 
+     * <p>Returns a list of MessagingMessages. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListMessagingMessagesResponse listMessagingMessages(@Nonnull ListMessagingMessagesRequest request, @Nullable Options options) {
         RequestOperation<ListMessagingMessagesRequest, ListMessagingMessagesResponse> operation
-              = new ListMessagingMessages.Sync(sdkConfiguration, _headers);
+              = new ListMessagingMessages.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -291,8 +391,23 @@ public class Messaging {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchMessagingChannelResponse patchMessagingChannel(@Nonnull PatchMessagingChannelRequest request) {
+        return patchMessagingChannel(request, null);
+    }
+
+    /**
+     * Update a channel
+     * 
+     * <p>Updates the MessagingChannel identified by `id`. Provide the unified MessagingChannel fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchMessagingChannelResponse patchMessagingChannel(@Nonnull PatchMessagingChannelRequest request, @Nullable Options options) {
         RequestOperation<PatchMessagingChannelRequest, PatchMessagingChannelResponse> operation
-              = new PatchMessagingChannel.Sync(sdkConfiguration, _headers);
+              = new PatchMessagingChannel.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -319,8 +434,23 @@ public class Messaging {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchMessagingEventResponse patchMessagingEvent(@Nonnull PatchMessagingEventRequest request) {
+        return patchMessagingEvent(request, null);
+    }
+
+    /**
+     * Update an event
+     * 
+     * <p>Updates the MessagingEvent identified by `id`. Provide the unified MessagingEvent fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchMessagingEventResponse patchMessagingEvent(@Nonnull PatchMessagingEventRequest request, @Nullable Options options) {
         RequestOperation<PatchMessagingEventRequest, PatchMessagingEventResponse> operation
-              = new PatchMessagingEvent.Sync(sdkConfiguration, _headers);
+              = new PatchMessagingEvent.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -347,8 +477,23 @@ public class Messaging {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchMessagingMessageResponse patchMessagingMessage(@Nonnull PatchMessagingMessageRequest request) {
+        return patchMessagingMessage(request, null);
+    }
+
+    /**
+     * Update a message
+     * 
+     * <p>Updates the MessagingMessage identified by `id`. Provide the unified MessagingMessage fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchMessagingMessageResponse patchMessagingMessage(@Nonnull PatchMessagingMessageRequest request, @Nullable Options options) {
         RequestOperation<PatchMessagingMessageRequest, PatchMessagingMessageResponse> operation
-              = new PatchMessagingMessage.Sync(sdkConfiguration, _headers);
+              = new PatchMessagingMessage.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -373,8 +518,22 @@ public class Messaging {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveMessagingChannelResponse removeMessagingChannel(@Nonnull RemoveMessagingChannelRequest request) {
+        return removeMessagingChannel(request, null);
+    }
+
+    /**
+     * Remove a channel
+     * 
+     * <p>Deletes the MessagingChannel identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveMessagingChannelResponse removeMessagingChannel(@Nonnull RemoveMessagingChannelRequest request, @Nullable Options options) {
         RequestOperation<RemoveMessagingChannelRequest, RemoveMessagingChannelResponse> operation
-              = new RemoveMessagingChannel.Sync(sdkConfiguration, _headers);
+              = new RemoveMessagingChannel.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -399,8 +558,22 @@ public class Messaging {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveMessagingMessageResponse removeMessagingMessage(@Nonnull RemoveMessagingMessageRequest request) {
+        return removeMessagingMessage(request, null);
+    }
+
+    /**
+     * Remove a message
+     * 
+     * <p>Deletes the MessagingMessage identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveMessagingMessageResponse removeMessagingMessage(@Nonnull RemoveMessagingMessageRequest request, @Nullable Options options) {
         RequestOperation<RemoveMessagingMessageRequest, RemoveMessagingMessageResponse> operation
-              = new RemoveMessagingMessage.Sync(sdkConfiguration, _headers);
+              = new RemoveMessagingMessage.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -427,8 +600,23 @@ public class Messaging {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateMessagingChannelResponse updateMessagingChannel(@Nonnull UpdateMessagingChannelRequest request) {
+        return updateMessagingChannel(request, null);
+    }
+
+    /**
+     * Update a channel
+     * 
+     * <p>Updates the MessagingChannel identified by `id`. Provide the unified MessagingChannel fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateMessagingChannelResponse updateMessagingChannel(@Nonnull UpdateMessagingChannelRequest request, @Nullable Options options) {
         RequestOperation<UpdateMessagingChannelRequest, UpdateMessagingChannelResponse> operation
-              = new UpdateMessagingChannel.Sync(sdkConfiguration, _headers);
+              = new UpdateMessagingChannel.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -455,8 +643,23 @@ public class Messaging {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateMessagingEventResponse updateMessagingEvent(@Nonnull UpdateMessagingEventRequest request) {
+        return updateMessagingEvent(request, null);
+    }
+
+    /**
+     * Update an event
+     * 
+     * <p>Updates the MessagingEvent identified by `id`. Provide the unified MessagingEvent fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateMessagingEventResponse updateMessagingEvent(@Nonnull UpdateMessagingEventRequest request, @Nullable Options options) {
         RequestOperation<UpdateMessagingEventRequest, UpdateMessagingEventResponse> operation
-              = new UpdateMessagingEvent.Sync(sdkConfiguration, _headers);
+              = new UpdateMessagingEvent.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -483,8 +686,23 @@ public class Messaging {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateMessagingMessageResponse updateMessagingMessage(@Nonnull UpdateMessagingMessageRequest request) {
+        return updateMessagingMessage(request, null);
+    }
+
+    /**
+     * Update a message
+     * 
+     * <p>Updates the MessagingMessage identified by `id`. Provide the unified MessagingMessage fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateMessagingMessageResponse updateMessagingMessage(@Nonnull UpdateMessagingMessageRequest request, @Nullable Options options) {
         RequestOperation<UpdateMessagingMessageRequest, UpdateMessagingMessageResponse> operation
-              = new UpdateMessagingMessage.Sync(sdkConfiguration, _headers);
+              = new UpdateMessagingMessage.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

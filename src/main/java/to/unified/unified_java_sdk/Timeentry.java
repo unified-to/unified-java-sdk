@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateLegalTimeentryRequest;
 import to.unified.unified_java_sdk.models.operations.CreateLegalTimeentryRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateLegalTimeentryResponse;
@@ -31,6 +32,7 @@ import to.unified.unified_java_sdk.operations.PatchLegalTimeentry;
 import to.unified.unified_java_sdk.operations.RemoveLegalTimeentry;
 import to.unified.unified_java_sdk.operations.UpdateLegalTimeentry;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Timeentry {
@@ -75,8 +77,23 @@ public class Timeentry {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateLegalTimeentryResponse createLegalTimeentry(@Nonnull CreateLegalTimeentryRequest request) {
+        return createLegalTimeentry(request, null);
+    }
+
+    /**
+     * Create a timeentry
+     * 
+     * <p>Creates a LegalTimeentry. Provide the unified LegalTimeentry fields in the request body; they are
+     * mapped to the provider's API. Returns the created LegalTimeentry.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateLegalTimeentryResponse createLegalTimeentry(@Nonnull CreateLegalTimeentryRequest request, @Nullable Options options) {
         RequestOperation<CreateLegalTimeentryRequest, CreateLegalTimeentryResponse> operation
-              = new CreateLegalTimeentry.Sync(sdkConfiguration, _headers);
+              = new CreateLegalTimeentry.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -103,8 +120,23 @@ public class Timeentry {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetLegalTimeentryResponse getLegalTimeentry(@Nonnull GetLegalTimeentryRequest request) {
+        return getLegalTimeentry(request, null);
+    }
+
+    /**
+     * Retrieve a timeentry
+     * 
+     * <p>Retrieves a single LegalTimeentry by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetLegalTimeentryResponse getLegalTimeentry(@Nonnull GetLegalTimeentryRequest request, @Nullable Options options) {
         RequestOperation<GetLegalTimeentryRequest, GetLegalTimeentryResponse> operation
-              = new GetLegalTimeentry.Sync(sdkConfiguration, _headers);
+              = new GetLegalTimeentry.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -139,8 +171,27 @@ public class Timeentry {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListLegalTimeentriesResponse listLegalTimeentries(@Nonnull ListLegalTimeentriesRequest request) {
+        return listLegalTimeentries(request, null);
+    }
+
+    /**
+     * List all timeentries
+     * 
+     * <p>Returns a list of LegalTimeentries. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListLegalTimeentriesResponse listLegalTimeentries(@Nonnull ListLegalTimeentriesRequest request, @Nullable Options options) {
         RequestOperation<ListLegalTimeentriesRequest, ListLegalTimeentriesResponse> operation
-              = new ListLegalTimeentries.Sync(sdkConfiguration, _headers);
+              = new ListLegalTimeentries.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +218,23 @@ public class Timeentry {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchLegalTimeentryResponse patchLegalTimeentry(@Nonnull PatchLegalTimeentryRequest request) {
+        return patchLegalTimeentry(request, null);
+    }
+
+    /**
+     * Update a timeentry
+     * 
+     * <p>Updates the LegalTimeentry identified by `id`. Provide the unified LegalTimeentry fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchLegalTimeentryResponse patchLegalTimeentry(@Nonnull PatchLegalTimeentryRequest request, @Nullable Options options) {
         RequestOperation<PatchLegalTimeentryRequest, PatchLegalTimeentryResponse> operation
-              = new PatchLegalTimeentry.Sync(sdkConfiguration, _headers);
+              = new PatchLegalTimeentry.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -193,8 +259,22 @@ public class Timeentry {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveLegalTimeentryResponse removeLegalTimeentry(@Nonnull RemoveLegalTimeentryRequest request) {
+        return removeLegalTimeentry(request, null);
+    }
+
+    /**
+     * Remove a timeentry
+     * 
+     * <p>Deletes the LegalTimeentry identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveLegalTimeentryResponse removeLegalTimeentry(@Nonnull RemoveLegalTimeentryRequest request, @Nullable Options options) {
         RequestOperation<RemoveLegalTimeentryRequest, RemoveLegalTimeentryResponse> operation
-              = new RemoveLegalTimeentry.Sync(sdkConfiguration, _headers);
+              = new RemoveLegalTimeentry.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -221,8 +301,23 @@ public class Timeentry {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateLegalTimeentryResponse updateLegalTimeentry(@Nonnull UpdateLegalTimeentryRequest request) {
+        return updateLegalTimeentry(request, null);
+    }
+
+    /**
+     * Update a timeentry
+     * 
+     * <p>Updates the LegalTimeentry identified by `id`. Provide the unified LegalTimeentry fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateLegalTimeentryResponse updateLegalTimeentry(@Nonnull UpdateLegalTimeentryRequest request, @Nullable Options options) {
         RequestOperation<UpdateLegalTimeentryRequest, UpdateLegalTimeentryResponse> operation
-              = new UpdateLegalTimeentry.Sync(sdkConfiguration, _headers);
+              = new UpdateLegalTimeentry.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

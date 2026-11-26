@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateHealthcareAppointmentRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHealthcareAppointmentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateHealthcareAppointmentResponse;
@@ -179,6 +180,7 @@ import to.unified.unified_java_sdk.operations.RemoveHealthcareAppointment;
 import to.unified.unified_java_sdk.operations.UpdateHealthcareAppointment;
 import to.unified.unified_java_sdk.operations.UpdateHealthcarePatient;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Healthcare {
@@ -223,8 +225,23 @@ public class Healthcare {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateHealthcareAppointmentResponse createHealthcareAppointment(@Nonnull CreateHealthcareAppointmentRequest request) {
+        return createHealthcareAppointment(request, null);
+    }
+
+    /**
+     * Create an appointment
+     * 
+     * <p>Creates a HealthcareAppointment. Provide the unified HealthcareAppointment fields in the request
+     * body; they are mapped to the provider's API. Returns the created HealthcareAppointment.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateHealthcareAppointmentResponse createHealthcareAppointment(@Nonnull CreateHealthcareAppointmentRequest request, @Nullable Options options) {
         RequestOperation<CreateHealthcareAppointmentRequest, CreateHealthcareAppointmentResponse> operation
-              = new CreateHealthcareAppointment.Sync(sdkConfiguration, _headers);
+              = new CreateHealthcareAppointment.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -251,8 +268,23 @@ public class Healthcare {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateHealthcareDocumentResponse createHealthcareDocument(@Nonnull CreateHealthcareDocumentRequest request) {
+        return createHealthcareDocument(request, null);
+    }
+
+    /**
+     * Create a document
+     * 
+     * <p>Creates a HealthcareDocument. Provide the unified HealthcareDocument fields in the request body;
+     * they are mapped to the provider's API. Returns the created HealthcareDocument.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateHealthcareDocumentResponse createHealthcareDocument(@Nonnull CreateHealthcareDocumentRequest request, @Nullable Options options) {
         RequestOperation<CreateHealthcareDocumentRequest, CreateHealthcareDocumentResponse> operation
-              = new CreateHealthcareDocument.Sync(sdkConfiguration, _headers);
+              = new CreateHealthcareDocument.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -279,8 +311,23 @@ public class Healthcare {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateHealthcareObservationResponse createHealthcareObservation(@Nonnull CreateHealthcareObservationRequest request) {
+        return createHealthcareObservation(request, null);
+    }
+
+    /**
+     * Create an observation
+     * 
+     * <p>Creates a HealthcareObservation. Provide the unified HealthcareObservation fields in the request
+     * body; they are mapped to the provider's API. Returns the created HealthcareObservation.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateHealthcareObservationResponse createHealthcareObservation(@Nonnull CreateHealthcareObservationRequest request, @Nullable Options options) {
         RequestOperation<CreateHealthcareObservationRequest, CreateHealthcareObservationResponse> operation
-              = new CreateHealthcareObservation.Sync(sdkConfiguration, _headers);
+              = new CreateHealthcareObservation.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -307,8 +354,23 @@ public class Healthcare {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateHealthcarePatientResponse createHealthcarePatient(@Nonnull CreateHealthcarePatientRequest request) {
+        return createHealthcarePatient(request, null);
+    }
+
+    /**
+     * Create a patient
+     * 
+     * <p>Creates a HealthcarePatient. Provide the unified HealthcarePatient fields in the request body; they
+     * are mapped to the provider's API. Returns the created HealthcarePatient.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateHealthcarePatientResponse createHealthcarePatient(@Nonnull CreateHealthcarePatientRequest request, @Nullable Options options) {
         RequestOperation<CreateHealthcarePatientRequest, CreateHealthcarePatientResponse> operation
-              = new CreateHealthcarePatient.Sync(sdkConfiguration, _headers);
+              = new CreateHealthcarePatient.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -335,8 +397,23 @@ public class Healthcare {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetHealthcareAllergyResponse getHealthcareAllergy(@Nonnull GetHealthcareAllergyRequest request) {
+        return getHealthcareAllergy(request, null);
+    }
+
+    /**
+     * Retrieve an allergy
+     * 
+     * <p>Retrieves a single HealthcareAllergy by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetHealthcareAllergyResponse getHealthcareAllergy(@Nonnull GetHealthcareAllergyRequest request, @Nullable Options options) {
         RequestOperation<GetHealthcareAllergyRequest, GetHealthcareAllergyResponse> operation
-              = new GetHealthcareAllergy.Sync(sdkConfiguration, _headers);
+              = new GetHealthcareAllergy.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -363,8 +440,23 @@ public class Healthcare {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetHealthcareAppointmentResponse getHealthcareAppointment(@Nonnull GetHealthcareAppointmentRequest request) {
+        return getHealthcareAppointment(request, null);
+    }
+
+    /**
+     * Retrieve an appointment
+     * 
+     * <p>Retrieves a single HealthcareAppointment by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetHealthcareAppointmentResponse getHealthcareAppointment(@Nonnull GetHealthcareAppointmentRequest request, @Nullable Options options) {
         RequestOperation<GetHealthcareAppointmentRequest, GetHealthcareAppointmentResponse> operation
-              = new GetHealthcareAppointment.Sync(sdkConfiguration, _headers);
+              = new GetHealthcareAppointment.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -391,8 +483,23 @@ public class Healthcare {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetHealthcareCareplanResponse getHealthcareCareplan(@Nonnull GetHealthcareCareplanRequest request) {
+        return getHealthcareCareplan(request, null);
+    }
+
+    /**
+     * Retrieve a careplan
+     * 
+     * <p>Retrieves a single HealthcareCareplan by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetHealthcareCareplanResponse getHealthcareCareplan(@Nonnull GetHealthcareCareplanRequest request, @Nullable Options options) {
         RequestOperation<GetHealthcareCareplanRequest, GetHealthcareCareplanResponse> operation
-              = new GetHealthcareCareplan.Sync(sdkConfiguration, _headers);
+              = new GetHealthcareCareplan.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -419,8 +526,23 @@ public class Healthcare {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetHealthcareConditionResponse getHealthcareCondition(@Nonnull GetHealthcareConditionRequest request) {
+        return getHealthcareCondition(request, null);
+    }
+
+    /**
+     * Retrieve a condition
+     * 
+     * <p>Retrieves a single HealthcareCondition by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetHealthcareConditionResponse getHealthcareCondition(@Nonnull GetHealthcareConditionRequest request, @Nullable Options options) {
         RequestOperation<GetHealthcareConditionRequest, GetHealthcareConditionResponse> operation
-              = new GetHealthcareCondition.Sync(sdkConfiguration, _headers);
+              = new GetHealthcareCondition.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -447,8 +569,23 @@ public class Healthcare {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetHealthcareCoverageResponse getHealthcareCoverage(@Nonnull GetHealthcareCoverageRequest request) {
+        return getHealthcareCoverage(request, null);
+    }
+
+    /**
+     * Retrieve a coverage
+     * 
+     * <p>Retrieves a single HealthcareCoverage by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetHealthcareCoverageResponse getHealthcareCoverage(@Nonnull GetHealthcareCoverageRequest request, @Nullable Options options) {
         RequestOperation<GetHealthcareCoverageRequest, GetHealthcareCoverageResponse> operation
-              = new GetHealthcareCoverage.Sync(sdkConfiguration, _headers);
+              = new GetHealthcareCoverage.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -475,8 +612,23 @@ public class Healthcare {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetHealthcareDocumentResponse getHealthcareDocument(@Nonnull GetHealthcareDocumentRequest request) {
+        return getHealthcareDocument(request, null);
+    }
+
+    /**
+     * Retrieve a document
+     * 
+     * <p>Retrieves a single HealthcareDocument by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetHealthcareDocumentResponse getHealthcareDocument(@Nonnull GetHealthcareDocumentRequest request, @Nullable Options options) {
         RequestOperation<GetHealthcareDocumentRequest, GetHealthcareDocumentResponse> operation
-              = new GetHealthcareDocument.Sync(sdkConfiguration, _headers);
+              = new GetHealthcareDocument.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -503,8 +655,23 @@ public class Healthcare {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetHealthcareEncounterResponse getHealthcareEncounter(@Nonnull GetHealthcareEncounterRequest request) {
+        return getHealthcareEncounter(request, null);
+    }
+
+    /**
+     * Retrieve an encounter
+     * 
+     * <p>Retrieves a single HealthcareEncounter by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetHealthcareEncounterResponse getHealthcareEncounter(@Nonnull GetHealthcareEncounterRequest request, @Nullable Options options) {
         RequestOperation<GetHealthcareEncounterRequest, GetHealthcareEncounterResponse> operation
-              = new GetHealthcareEncounter.Sync(sdkConfiguration, _headers);
+              = new GetHealthcareEncounter.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -531,8 +698,23 @@ public class Healthcare {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetHealthcareGoalResponse getHealthcareGoal(@Nonnull GetHealthcareGoalRequest request) {
+        return getHealthcareGoal(request, null);
+    }
+
+    /**
+     * Retrieve a goal
+     * 
+     * <p>Retrieves a single HealthcareGoal by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetHealthcareGoalResponse getHealthcareGoal(@Nonnull GetHealthcareGoalRequest request, @Nullable Options options) {
         RequestOperation<GetHealthcareGoalRequest, GetHealthcareGoalResponse> operation
-              = new GetHealthcareGoal.Sync(sdkConfiguration, _headers);
+              = new GetHealthcareGoal.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -559,8 +741,23 @@ public class Healthcare {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetHealthcareImmunizationResponse getHealthcareImmunization(@Nonnull GetHealthcareImmunizationRequest request) {
+        return getHealthcareImmunization(request, null);
+    }
+
+    /**
+     * Retrieve an immunization
+     * 
+     * <p>Retrieves a single HealthcareImmunization by its `id`. Obtain `id` values from the corresponding
+     * list endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetHealthcareImmunizationResponse getHealthcareImmunization(@Nonnull GetHealthcareImmunizationRequest request, @Nullable Options options) {
         RequestOperation<GetHealthcareImmunizationRequest, GetHealthcareImmunizationResponse> operation
-              = new GetHealthcareImmunization.Sync(sdkConfiguration, _headers);
+              = new GetHealthcareImmunization.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -587,8 +784,23 @@ public class Healthcare {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetHealthcareLocationResponse getHealthcareLocation(@Nonnull GetHealthcareLocationRequest request) {
+        return getHealthcareLocation(request, null);
+    }
+
+    /**
+     * Retrieve a location
+     * 
+     * <p>Retrieves a single HealthcareLocation by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetHealthcareLocationResponse getHealthcareLocation(@Nonnull GetHealthcareLocationRequest request, @Nullable Options options) {
         RequestOperation<GetHealthcareLocationRequest, GetHealthcareLocationResponse> operation
-              = new GetHealthcareLocation.Sync(sdkConfiguration, _headers);
+              = new GetHealthcareLocation.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -615,8 +827,23 @@ public class Healthcare {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetHealthcareMedicationResponse getHealthcareMedication(@Nonnull GetHealthcareMedicationRequest request) {
+        return getHealthcareMedication(request, null);
+    }
+
+    /**
+     * Retrieve a medication
+     * 
+     * <p>Retrieves a single HealthcareMedication by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetHealthcareMedicationResponse getHealthcareMedication(@Nonnull GetHealthcareMedicationRequest request, @Nullable Options options) {
         RequestOperation<GetHealthcareMedicationRequest, GetHealthcareMedicationResponse> operation
-              = new GetHealthcareMedication.Sync(sdkConfiguration, _headers);
+              = new GetHealthcareMedication.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -643,8 +870,23 @@ public class Healthcare {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetHealthcareObservationResponse getHealthcareObservation(@Nonnull GetHealthcareObservationRequest request) {
+        return getHealthcareObservation(request, null);
+    }
+
+    /**
+     * Retrieve an observation
+     * 
+     * <p>Retrieves a single HealthcareObservation by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetHealthcareObservationResponse getHealthcareObservation(@Nonnull GetHealthcareObservationRequest request, @Nullable Options options) {
         RequestOperation<GetHealthcareObservationRequest, GetHealthcareObservationResponse> operation
-              = new GetHealthcareObservation.Sync(sdkConfiguration, _headers);
+              = new GetHealthcareObservation.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -671,8 +913,23 @@ public class Healthcare {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetHealthcarePatientResponse getHealthcarePatient(@Nonnull GetHealthcarePatientRequest request) {
+        return getHealthcarePatient(request, null);
+    }
+
+    /**
+     * Retrieve a patient
+     * 
+     * <p>Retrieves a single HealthcarePatient by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetHealthcarePatientResponse getHealthcarePatient(@Nonnull GetHealthcarePatientRequest request, @Nullable Options options) {
         RequestOperation<GetHealthcarePatientRequest, GetHealthcarePatientResponse> operation
-              = new GetHealthcarePatient.Sync(sdkConfiguration, _headers);
+              = new GetHealthcarePatient.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -699,8 +956,23 @@ public class Healthcare {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetHealthcarePractitionerResponse getHealthcarePractitioner(@Nonnull GetHealthcarePractitionerRequest request) {
+        return getHealthcarePractitioner(request, null);
+    }
+
+    /**
+     * Retrieve a practitioner
+     * 
+     * <p>Retrieves a single HealthcarePractitioner by its `id`. Obtain `id` values from the corresponding
+     * list endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetHealthcarePractitionerResponse getHealthcarePractitioner(@Nonnull GetHealthcarePractitionerRequest request, @Nullable Options options) {
         RequestOperation<GetHealthcarePractitionerRequest, GetHealthcarePractitionerResponse> operation
-              = new GetHealthcarePractitioner.Sync(sdkConfiguration, _headers);
+              = new GetHealthcarePractitioner.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -727,8 +999,23 @@ public class Healthcare {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetHealthcareProcedureResponse getHealthcareProcedure(@Nonnull GetHealthcareProcedureRequest request) {
+        return getHealthcareProcedure(request, null);
+    }
+
+    /**
+     * Retrieve a procedure
+     * 
+     * <p>Retrieves a single HealthcareProcedure by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetHealthcareProcedureResponse getHealthcareProcedure(@Nonnull GetHealthcareProcedureRequest request, @Nullable Options options) {
         RequestOperation<GetHealthcareProcedureRequest, GetHealthcareProcedureResponse> operation
-              = new GetHealthcareProcedure.Sync(sdkConfiguration, _headers);
+              = new GetHealthcareProcedure.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -755,8 +1042,23 @@ public class Healthcare {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetHealthcareReportResponse getHealthcareReport(@Nonnull GetHealthcareReportRequest request) {
+        return getHealthcareReport(request, null);
+    }
+
+    /**
+     * Retrieve a report
+     * 
+     * <p>Retrieves a single HealthcareReport by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetHealthcareReportResponse getHealthcareReport(@Nonnull GetHealthcareReportRequest request, @Nullable Options options) {
         RequestOperation<GetHealthcareReportRequest, GetHealthcareReportResponse> operation
-              = new GetHealthcareReport.Sync(sdkConfiguration, _headers);
+              = new GetHealthcareReport.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -783,8 +1085,23 @@ public class Healthcare {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetHealthcareSlotResponse getHealthcareSlot(@Nonnull GetHealthcareSlotRequest request) {
+        return getHealthcareSlot(request, null);
+    }
+
+    /**
+     * Retrieve a slot
+     * 
+     * <p>Retrieves a single HealthcareSlot by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetHealthcareSlotResponse getHealthcareSlot(@Nonnull GetHealthcareSlotRequest request, @Nullable Options options) {
         RequestOperation<GetHealthcareSlotRequest, GetHealthcareSlotResponse> operation
-              = new GetHealthcareSlot.Sync(sdkConfiguration, _headers);
+              = new GetHealthcareSlot.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -819,8 +1136,27 @@ public class Healthcare {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListHealthcareAllergiesResponse listHealthcareAllergies(@Nonnull ListHealthcareAllergiesRequest request) {
+        return listHealthcareAllergies(request, null);
+    }
+
+    /**
+     * List all allergies
+     * 
+     * <p>Returns a list of HealthcareAllergies. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListHealthcareAllergiesResponse listHealthcareAllergies(@Nonnull ListHealthcareAllergiesRequest request, @Nullable Options options) {
         RequestOperation<ListHealthcareAllergiesRequest, ListHealthcareAllergiesResponse> operation
-              = new ListHealthcareAllergies.Sync(sdkConfiguration, _headers);
+              = new ListHealthcareAllergies.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -855,8 +1191,27 @@ public class Healthcare {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListHealthcareAppointmentsResponse listHealthcareAppointments(@Nonnull ListHealthcareAppointmentsRequest request) {
+        return listHealthcareAppointments(request, null);
+    }
+
+    /**
+     * List all appointments
+     * 
+     * <p>Returns a list of HealthcareAppointments. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListHealthcareAppointmentsResponse listHealthcareAppointments(@Nonnull ListHealthcareAppointmentsRequest request, @Nullable Options options) {
         RequestOperation<ListHealthcareAppointmentsRequest, ListHealthcareAppointmentsResponse> operation
-              = new ListHealthcareAppointments.Sync(sdkConfiguration, _headers);
+              = new ListHealthcareAppointments.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -891,8 +1246,27 @@ public class Healthcare {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListHealthcareCareplansResponse listHealthcareCareplans(@Nonnull ListHealthcareCareplansRequest request) {
+        return listHealthcareCareplans(request, null);
+    }
+
+    /**
+     * List all careplans
+     * 
+     * <p>Returns a list of HealthcareCareplans. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListHealthcareCareplansResponse listHealthcareCareplans(@Nonnull ListHealthcareCareplansRequest request, @Nullable Options options) {
         RequestOperation<ListHealthcareCareplansRequest, ListHealthcareCareplansResponse> operation
-              = new ListHealthcareCareplans.Sync(sdkConfiguration, _headers);
+              = new ListHealthcareCareplans.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -927,8 +1301,27 @@ public class Healthcare {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListHealthcareConditionsResponse listHealthcareConditions(@Nonnull ListHealthcareConditionsRequest request) {
+        return listHealthcareConditions(request, null);
+    }
+
+    /**
+     * List all conditions
+     * 
+     * <p>Returns a list of HealthcareConditions. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListHealthcareConditionsResponse listHealthcareConditions(@Nonnull ListHealthcareConditionsRequest request, @Nullable Options options) {
         RequestOperation<ListHealthcareConditionsRequest, ListHealthcareConditionsResponse> operation
-              = new ListHealthcareConditions.Sync(sdkConfiguration, _headers);
+              = new ListHealthcareConditions.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -963,8 +1356,27 @@ public class Healthcare {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListHealthcareCoveragesResponse listHealthcareCoverages(@Nonnull ListHealthcareCoveragesRequest request) {
+        return listHealthcareCoverages(request, null);
+    }
+
+    /**
+     * List all coverages
+     * 
+     * <p>Returns a list of HealthcareCoverages. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListHealthcareCoveragesResponse listHealthcareCoverages(@Nonnull ListHealthcareCoveragesRequest request, @Nullable Options options) {
         RequestOperation<ListHealthcareCoveragesRequest, ListHealthcareCoveragesResponse> operation
-              = new ListHealthcareCoverages.Sync(sdkConfiguration, _headers);
+              = new ListHealthcareCoverages.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -999,8 +1411,27 @@ public class Healthcare {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListHealthcareDocumentsResponse listHealthcareDocuments(@Nonnull ListHealthcareDocumentsRequest request) {
+        return listHealthcareDocuments(request, null);
+    }
+
+    /**
+     * List all documents
+     * 
+     * <p>Returns a list of HealthcareDocuments. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListHealthcareDocumentsResponse listHealthcareDocuments(@Nonnull ListHealthcareDocumentsRequest request, @Nullable Options options) {
         RequestOperation<ListHealthcareDocumentsRequest, ListHealthcareDocumentsResponse> operation
-              = new ListHealthcareDocuments.Sync(sdkConfiguration, _headers);
+              = new ListHealthcareDocuments.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1035,8 +1466,27 @@ public class Healthcare {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListHealthcareEncountersResponse listHealthcareEncounters(@Nonnull ListHealthcareEncountersRequest request) {
+        return listHealthcareEncounters(request, null);
+    }
+
+    /**
+     * List all encounters
+     * 
+     * <p>Returns a list of HealthcareEncounters. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListHealthcareEncountersResponse listHealthcareEncounters(@Nonnull ListHealthcareEncountersRequest request, @Nullable Options options) {
         RequestOperation<ListHealthcareEncountersRequest, ListHealthcareEncountersResponse> operation
-              = new ListHealthcareEncounters.Sync(sdkConfiguration, _headers);
+              = new ListHealthcareEncounters.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1071,8 +1521,27 @@ public class Healthcare {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListHealthcareGoalsResponse listHealthcareGoals(@Nonnull ListHealthcareGoalsRequest request) {
+        return listHealthcareGoals(request, null);
+    }
+
+    /**
+     * List all goals
+     * 
+     * <p>Returns a list of HealthcareGoals. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListHealthcareGoalsResponse listHealthcareGoals(@Nonnull ListHealthcareGoalsRequest request, @Nullable Options options) {
         RequestOperation<ListHealthcareGoalsRequest, ListHealthcareGoalsResponse> operation
-              = new ListHealthcareGoals.Sync(sdkConfiguration, _headers);
+              = new ListHealthcareGoals.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1107,8 +1576,27 @@ public class Healthcare {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListHealthcareImmunizationsResponse listHealthcareImmunizations(@Nonnull ListHealthcareImmunizationsRequest request) {
+        return listHealthcareImmunizations(request, null);
+    }
+
+    /**
+     * List all immunizations
+     * 
+     * <p>Returns a list of HealthcareImmunizations. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListHealthcareImmunizationsResponse listHealthcareImmunizations(@Nonnull ListHealthcareImmunizationsRequest request, @Nullable Options options) {
         RequestOperation<ListHealthcareImmunizationsRequest, ListHealthcareImmunizationsResponse> operation
-              = new ListHealthcareImmunizations.Sync(sdkConfiguration, _headers);
+              = new ListHealthcareImmunizations.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1143,8 +1631,27 @@ public class Healthcare {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListHealthcareLocationsResponse listHealthcareLocations(@Nonnull ListHealthcareLocationsRequest request) {
+        return listHealthcareLocations(request, null);
+    }
+
+    /**
+     * List all locations
+     * 
+     * <p>Returns a list of HealthcareLocations. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListHealthcareLocationsResponse listHealthcareLocations(@Nonnull ListHealthcareLocationsRequest request, @Nullable Options options) {
         RequestOperation<ListHealthcareLocationsRequest, ListHealthcareLocationsResponse> operation
-              = new ListHealthcareLocations.Sync(sdkConfiguration, _headers);
+              = new ListHealthcareLocations.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1179,8 +1686,27 @@ public class Healthcare {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListHealthcareMedicationsResponse listHealthcareMedications(@Nonnull ListHealthcareMedicationsRequest request) {
+        return listHealthcareMedications(request, null);
+    }
+
+    /**
+     * List all medications
+     * 
+     * <p>Returns a list of HealthcareMedications. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListHealthcareMedicationsResponse listHealthcareMedications(@Nonnull ListHealthcareMedicationsRequest request, @Nullable Options options) {
         RequestOperation<ListHealthcareMedicationsRequest, ListHealthcareMedicationsResponse> operation
-              = new ListHealthcareMedications.Sync(sdkConfiguration, _headers);
+              = new ListHealthcareMedications.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1215,8 +1741,27 @@ public class Healthcare {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListHealthcareObservationsResponse listHealthcareObservations(@Nonnull ListHealthcareObservationsRequest request) {
+        return listHealthcareObservations(request, null);
+    }
+
+    /**
+     * List all observations
+     * 
+     * <p>Returns a list of HealthcareObservations. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListHealthcareObservationsResponse listHealthcareObservations(@Nonnull ListHealthcareObservationsRequest request, @Nullable Options options) {
         RequestOperation<ListHealthcareObservationsRequest, ListHealthcareObservationsResponse> operation
-              = new ListHealthcareObservations.Sync(sdkConfiguration, _headers);
+              = new ListHealthcareObservations.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1251,8 +1796,27 @@ public class Healthcare {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListHealthcarePatientsResponse listHealthcarePatients(@Nonnull ListHealthcarePatientsRequest request) {
+        return listHealthcarePatients(request, null);
+    }
+
+    /**
+     * List all patients
+     * 
+     * <p>Returns a list of HealthcarePatients. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListHealthcarePatientsResponse listHealthcarePatients(@Nonnull ListHealthcarePatientsRequest request, @Nullable Options options) {
         RequestOperation<ListHealthcarePatientsRequest, ListHealthcarePatientsResponse> operation
-              = new ListHealthcarePatients.Sync(sdkConfiguration, _headers);
+              = new ListHealthcarePatients.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1287,8 +1851,27 @@ public class Healthcare {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListHealthcarePractitionersResponse listHealthcarePractitioners(@Nonnull ListHealthcarePractitionersRequest request) {
+        return listHealthcarePractitioners(request, null);
+    }
+
+    /**
+     * List all practitioners
+     * 
+     * <p>Returns a list of HealthcarePractitioners. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListHealthcarePractitionersResponse listHealthcarePractitioners(@Nonnull ListHealthcarePractitionersRequest request, @Nullable Options options) {
         RequestOperation<ListHealthcarePractitionersRequest, ListHealthcarePractitionersResponse> operation
-              = new ListHealthcarePractitioners.Sync(sdkConfiguration, _headers);
+              = new ListHealthcarePractitioners.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1323,8 +1906,27 @@ public class Healthcare {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListHealthcareProceduresResponse listHealthcareProcedures(@Nonnull ListHealthcareProceduresRequest request) {
+        return listHealthcareProcedures(request, null);
+    }
+
+    /**
+     * List all procedures
+     * 
+     * <p>Returns a list of HealthcareProcedures. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListHealthcareProceduresResponse listHealthcareProcedures(@Nonnull ListHealthcareProceduresRequest request, @Nullable Options options) {
         RequestOperation<ListHealthcareProceduresRequest, ListHealthcareProceduresResponse> operation
-              = new ListHealthcareProcedures.Sync(sdkConfiguration, _headers);
+              = new ListHealthcareProcedures.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1359,8 +1961,27 @@ public class Healthcare {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListHealthcareReportsResponse listHealthcareReports(@Nonnull ListHealthcareReportsRequest request) {
+        return listHealthcareReports(request, null);
+    }
+
+    /**
+     * List all reports
+     * 
+     * <p>Returns a list of HealthcareReports. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListHealthcareReportsResponse listHealthcareReports(@Nonnull ListHealthcareReportsRequest request, @Nullable Options options) {
         RequestOperation<ListHealthcareReportsRequest, ListHealthcareReportsResponse> operation
-              = new ListHealthcareReports.Sync(sdkConfiguration, _headers);
+              = new ListHealthcareReports.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1395,8 +2016,27 @@ public class Healthcare {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListHealthcareSlotsResponse listHealthcareSlots(@Nonnull ListHealthcareSlotsRequest request) {
+        return listHealthcareSlots(request, null);
+    }
+
+    /**
+     * List all slots
+     * 
+     * <p>Returns a list of HealthcareSlots. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListHealthcareSlotsResponse listHealthcareSlots(@Nonnull ListHealthcareSlotsRequest request, @Nullable Options options) {
         RequestOperation<ListHealthcareSlotsRequest, ListHealthcareSlotsResponse> operation
-              = new ListHealthcareSlots.Sync(sdkConfiguration, _headers);
+              = new ListHealthcareSlots.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1423,8 +2063,23 @@ public class Healthcare {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchHealthcareAppointmentResponse patchHealthcareAppointment(@Nonnull PatchHealthcareAppointmentRequest request) {
+        return patchHealthcareAppointment(request, null);
+    }
+
+    /**
+     * Update an appointment
+     * 
+     * <p>Updates the HealthcareAppointment identified by `id`. Provide the unified HealthcareAppointment
+     * fields to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchHealthcareAppointmentResponse patchHealthcareAppointment(@Nonnull PatchHealthcareAppointmentRequest request, @Nullable Options options) {
         RequestOperation<PatchHealthcareAppointmentRequest, PatchHealthcareAppointmentResponse> operation
-              = new PatchHealthcareAppointment.Sync(sdkConfiguration, _headers);
+              = new PatchHealthcareAppointment.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1451,8 +2106,23 @@ public class Healthcare {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchHealthcarePatientResponse patchHealthcarePatient(@Nonnull PatchHealthcarePatientRequest request) {
+        return patchHealthcarePatient(request, null);
+    }
+
+    /**
+     * Update a patient
+     * 
+     * <p>Updates the HealthcarePatient identified by `id`. Provide the unified HealthcarePatient fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchHealthcarePatientResponse patchHealthcarePatient(@Nonnull PatchHealthcarePatientRequest request, @Nullable Options options) {
         RequestOperation<PatchHealthcarePatientRequest, PatchHealthcarePatientResponse> operation
-              = new PatchHealthcarePatient.Sync(sdkConfiguration, _headers);
+              = new PatchHealthcarePatient.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1477,8 +2147,22 @@ public class Healthcare {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveHealthcareAppointmentResponse removeHealthcareAppointment(@Nonnull RemoveHealthcareAppointmentRequest request) {
+        return removeHealthcareAppointment(request, null);
+    }
+
+    /**
+     * Remove an appointment
+     * 
+     * <p>Deletes the HealthcareAppointment identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveHealthcareAppointmentResponse removeHealthcareAppointment(@Nonnull RemoveHealthcareAppointmentRequest request, @Nullable Options options) {
         RequestOperation<RemoveHealthcareAppointmentRequest, RemoveHealthcareAppointmentResponse> operation
-              = new RemoveHealthcareAppointment.Sync(sdkConfiguration, _headers);
+              = new RemoveHealthcareAppointment.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1505,8 +2189,23 @@ public class Healthcare {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateHealthcareAppointmentResponse updateHealthcareAppointment(@Nonnull UpdateHealthcareAppointmentRequest request) {
+        return updateHealthcareAppointment(request, null);
+    }
+
+    /**
+     * Update an appointment
+     * 
+     * <p>Updates the HealthcareAppointment identified by `id`. Provide the unified HealthcareAppointment
+     * fields to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateHealthcareAppointmentResponse updateHealthcareAppointment(@Nonnull UpdateHealthcareAppointmentRequest request, @Nullable Options options) {
         RequestOperation<UpdateHealthcareAppointmentRequest, UpdateHealthcareAppointmentResponse> operation
-              = new UpdateHealthcareAppointment.Sync(sdkConfiguration, _headers);
+              = new UpdateHealthcareAppointment.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1533,8 +2232,23 @@ public class Healthcare {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateHealthcarePatientResponse updateHealthcarePatient(@Nonnull UpdateHealthcarePatientRequest request) {
+        return updateHealthcarePatient(request, null);
+    }
+
+    /**
+     * Update a patient
+     * 
+     * <p>Updates the HealthcarePatient identified by `id`. Provide the unified HealthcarePatient fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateHealthcarePatientResponse updateHealthcarePatient(@Nonnull UpdateHealthcarePatientRequest request, @Nullable Options options) {
         RequestOperation<UpdateHealthcarePatientRequest, UpdateHealthcarePatientResponse> operation
-              = new UpdateHealthcarePatient.Sync(sdkConfiguration, _headers);
+              = new UpdateHealthcarePatient.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

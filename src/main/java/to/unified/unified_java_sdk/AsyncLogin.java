@@ -6,12 +6,14 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.GetUnifiedIntegrationLoginRequest;
 import to.unified.unified_java_sdk.models.operations.async.GetUnifiedIntegrationLoginRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetUnifiedIntegrationLoginResponse;
 import to.unified.unified_java_sdk.operations.GetUnifiedIntegrationLogin;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncLogin {
@@ -58,8 +60,23 @@ public class AsyncLogin {
      * @return {@code CompletableFuture<GetUnifiedIntegrationLoginResponse>} - The async response
      */
     public CompletableFuture<GetUnifiedIntegrationLoginResponse> getUnifiedIntegrationLogin(@Nonnull GetUnifiedIntegrationLoginRequest request) {
+        return getUnifiedIntegrationLogin(request, null);
+    }
+
+    /**
+     * Sign in a user
+     * 
+     * <p>Returns an authentication URL for the specified integration. Once a successful OAuth2 code-flow
+     * authentication occurs, the name and email are returned inside a jwt parameter, which is a JSON web
+     * token that is base-64 encoded.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetUnifiedIntegrationLoginResponse>} - The async response
+     */
+    public CompletableFuture<GetUnifiedIntegrationLoginResponse> getUnifiedIntegrationLogin(@Nonnull GetUnifiedIntegrationLoginRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetUnifiedIntegrationLoginRequest, GetUnifiedIntegrationLoginResponse> operation
-              = new GetUnifiedIntegrationLogin.Async(sdkConfiguration, _headers);
+              = new GetUnifiedIntegrationLogin.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

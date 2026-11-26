@@ -6,18 +6,28 @@ package to.unified.unified_java_sdk.models.operations;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.GetUnifiedIntegrationAuth;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetUnifiedIntegrationAuthRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private GetUnifiedIntegrationAuthRequest request;
+    private final Options.Builder optionsBuilder;
 
     public GetUnifiedIntegrationAuthRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public GetUnifiedIntegrationAuthRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public GetUnifiedIntegrationAuthRequestBuilder request(@Nonnull GetUnifiedIntegrationAuthRequest request) {
@@ -42,8 +52,9 @@ public class GetUnifiedIntegrationAuthRequestBuilder {
     * @return The response from the server.
     */
     public GetUnifiedIntegrationAuthResponse call() {
+        Options options = optionsBuilder.build();
         RequestOperation<GetUnifiedIntegrationAuthRequest, GetUnifiedIntegrationAuthResponse> operation
-              = new GetUnifiedIntegrationAuth.Sync(sdkConfiguration, _headers);
+              = new GetUnifiedIntegrationAuth.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

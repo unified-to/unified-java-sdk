@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.GetAccountingAgedreceivableRequest;
 import to.unified.unified_java_sdk.models.operations.GetAccountingAgedreceivableRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetAccountingAgedreceivableResponse;
@@ -15,6 +16,7 @@ import to.unified.unified_java_sdk.models.operations.ListAccountingAgedreceivabl
 import to.unified.unified_java_sdk.operations.GetAccountingAgedreceivable;
 import to.unified.unified_java_sdk.operations.ListAccountingAgedreceivables;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Agedreceivable {
@@ -59,8 +61,23 @@ public class Agedreceivable {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAccountingAgedreceivableResponse getAccountingAgedreceivable(@Nonnull GetAccountingAgedreceivableRequest request) {
+        return getAccountingAgedreceivable(request, null);
+    }
+
+    /**
+     * Retrieve an agedreceivable
+     * 
+     * <p>Retrieves a single AccountingAgedreceivable by its `id`. Obtain `id` values from the corresponding
+     * list endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAccountingAgedreceivableResponse getAccountingAgedreceivable(@Nonnull GetAccountingAgedreceivableRequest request, @Nullable Options options) {
         RequestOperation<GetAccountingAgedreceivableRequest, GetAccountingAgedreceivableResponse> operation
-              = new GetAccountingAgedreceivable.Sync(sdkConfiguration, _headers);
+              = new GetAccountingAgedreceivable.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -95,8 +112,27 @@ public class Agedreceivable {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAccountingAgedreceivablesResponse listAccountingAgedreceivables(@Nonnull ListAccountingAgedreceivablesRequest request) {
+        return listAccountingAgedreceivables(request, null);
+    }
+
+    /**
+     * List all agedreceivables
+     * 
+     * <p>Returns a list of AccountingAgedreceivables. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAccountingAgedreceivablesResponse listAccountingAgedreceivables(@Nonnull ListAccountingAgedreceivablesRequest request, @Nullable Options options) {
         RequestOperation<ListAccountingAgedreceivablesRequest, ListAccountingAgedreceivablesResponse> operation
-              = new ListAccountingAgedreceivables.Sync(sdkConfiguration, _headers);
+              = new ListAccountingAgedreceivables.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

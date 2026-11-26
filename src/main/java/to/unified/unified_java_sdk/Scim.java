@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateScimGroupsRequest;
 import to.unified.unified_java_sdk.models.operations.CreateScimGroupsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateScimGroupsResponse;
@@ -55,6 +56,7 @@ import to.unified.unified_java_sdk.operations.RemoveScimUsers;
 import to.unified.unified_java_sdk.operations.UpdateScimGroups;
 import to.unified.unified_java_sdk.operations.UpdateScimUsers;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Scim {
@@ -93,8 +95,20 @@ public class Scim {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateScimGroupsResponse createScimGroups(@Nonnull CreateScimGroupsRequest request) {
+        return createScimGroups(request, null);
+    }
+
+    /**
+     * Create group
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateScimGroupsResponse createScimGroups(@Nonnull CreateScimGroupsRequest request, @Nullable Options options) {
         RequestOperation<CreateScimGroupsRequest, CreateScimGroupsResponse> operation
-              = new CreateScimGroups.Sync(sdkConfiguration, _headers);
+              = new CreateScimGroups.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -115,8 +129,20 @@ public class Scim {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateScimUsersResponse createScimUsers(@Nonnull CreateScimUsersRequest request) {
+        return createScimUsers(request, null);
+    }
+
+    /**
+     * Create user
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateScimUsersResponse createScimUsers(@Nonnull CreateScimUsersRequest request, @Nullable Options options) {
         RequestOperation<CreateScimUsersRequest, CreateScimUsersResponse> operation
-              = new CreateScimUsers.Sync(sdkConfiguration, _headers);
+              = new CreateScimUsers.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -137,8 +163,20 @@ public class Scim {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetScimGroupsResponse getScimGroups(@Nonnull GetScimGroupsRequest request) {
+        return getScimGroups(request, null);
+    }
+
+    /**
+     * Get group
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetScimGroupsResponse getScimGroups(@Nonnull GetScimGroupsRequest request, @Nullable Options options) {
         RequestOperation<GetScimGroupsRequest, GetScimGroupsResponse> operation
-              = new GetScimGroups.Sync(sdkConfiguration, _headers);
+              = new GetScimGroups.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -159,8 +197,20 @@ public class Scim {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetScimUsersResponse getScimUsers(@Nonnull GetScimUsersRequest request) {
+        return getScimUsers(request, null);
+    }
+
+    /**
+     * Get user
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetScimUsersResponse getScimUsers(@Nonnull GetScimUsersRequest request, @Nullable Options options) {
         RequestOperation<GetScimUsersRequest, GetScimUsersResponse> operation
-              = new GetScimUsers.Sync(sdkConfiguration, _headers);
+              = new GetScimUsers.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -181,8 +231,20 @@ public class Scim {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListScimGroupsResponse listScimGroups(@Nonnull ListScimGroupsRequest request) {
+        return listScimGroups(request, null);
+    }
+
+    /**
+     * List groups
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListScimGroupsResponse listScimGroups(@Nonnull ListScimGroupsRequest request, @Nullable Options options) {
         RequestOperation<ListScimGroupsRequest, ListScimGroupsResponse> operation
-              = new ListScimGroups.Sync(sdkConfiguration, _headers);
+              = new ListScimGroups.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -203,8 +265,20 @@ public class Scim {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListScimUsersResponse listScimUsers(@Nonnull ListScimUsersRequest request) {
+        return listScimUsers(request, null);
+    }
+
+    /**
+     * List users
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListScimUsersResponse listScimUsers(@Nonnull ListScimUsersRequest request, @Nullable Options options) {
         RequestOperation<ListScimUsersRequest, ListScimUsersResponse> operation
-              = new ListScimUsers.Sync(sdkConfiguration, _headers);
+              = new ListScimUsers.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -225,8 +299,20 @@ public class Scim {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchScimGroupsResponse patchScimGroups(@Nonnull PatchScimGroupsRequest request) {
+        return patchScimGroups(request, null);
+    }
+
+    /**
+     * Update group
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchScimGroupsResponse patchScimGroups(@Nonnull PatchScimGroupsRequest request, @Nullable Options options) {
         RequestOperation<PatchScimGroupsRequest, PatchScimGroupsResponse> operation
-              = new PatchScimGroups.Sync(sdkConfiguration, _headers);
+              = new PatchScimGroups.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -247,8 +333,20 @@ public class Scim {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchScimUsersResponse patchScimUsers(@Nonnull PatchScimUsersRequest request) {
+        return patchScimUsers(request, null);
+    }
+
+    /**
+     * Update user
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchScimUsersResponse patchScimUsers(@Nonnull PatchScimUsersRequest request, @Nullable Options options) {
         RequestOperation<PatchScimUsersRequest, PatchScimUsersResponse> operation
-              = new PatchScimUsers.Sync(sdkConfiguration, _headers);
+              = new PatchScimUsers.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -269,8 +367,20 @@ public class Scim {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveScimGroupsResponse removeScimGroups(@Nonnull RemoveScimGroupsRequest request) {
+        return removeScimGroups(request, null);
+    }
+
+    /**
+     * Delete group
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveScimGroupsResponse removeScimGroups(@Nonnull RemoveScimGroupsRequest request, @Nullable Options options) {
         RequestOperation<RemoveScimGroupsRequest, RemoveScimGroupsResponse> operation
-              = new RemoveScimGroups.Sync(sdkConfiguration, _headers);
+              = new RemoveScimGroups.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -291,8 +401,20 @@ public class Scim {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveScimUsersResponse removeScimUsers(@Nonnull RemoveScimUsersRequest request) {
+        return removeScimUsers(request, null);
+    }
+
+    /**
+     * Delete user
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveScimUsersResponse removeScimUsers(@Nonnull RemoveScimUsersRequest request, @Nullable Options options) {
         RequestOperation<RemoveScimUsersRequest, RemoveScimUsersResponse> operation
-              = new RemoveScimUsers.Sync(sdkConfiguration, _headers);
+              = new RemoveScimUsers.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -313,8 +435,20 @@ public class Scim {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateScimGroupsResponse updateScimGroups(@Nonnull UpdateScimGroupsRequest request) {
+        return updateScimGroups(request, null);
+    }
+
+    /**
+     * Update group
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateScimGroupsResponse updateScimGroups(@Nonnull UpdateScimGroupsRequest request, @Nullable Options options) {
         RequestOperation<UpdateScimGroupsRequest, UpdateScimGroupsResponse> operation
-              = new UpdateScimGroups.Sync(sdkConfiguration, _headers);
+              = new UpdateScimGroups.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -335,8 +469,20 @@ public class Scim {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateScimUsersResponse updateScimUsers(@Nonnull UpdateScimUsersRequest request) {
+        return updateScimUsers(request, null);
+    }
+
+    /**
+     * Update user
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateScimUsersResponse updateScimUsers(@Nonnull UpdateScimUsersRequest request, @Nullable Options options) {
         RequestOperation<UpdateScimUsersRequest, UpdateScimUsersResponse> operation
-              = new UpdateScimUsers.Sync(sdkConfiguration, _headers);
+              = new UpdateScimUsers.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

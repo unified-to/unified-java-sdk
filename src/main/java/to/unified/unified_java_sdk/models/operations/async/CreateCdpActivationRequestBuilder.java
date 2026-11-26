@@ -6,20 +6,30 @@ package to.unified.unified_java_sdk.models.operations.async;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.CreateCdpActivationRequest;
 import to.unified.unified_java_sdk.operations.CreateCdpActivation;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class CreateCdpActivationRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private CreateCdpActivationRequest request;
+    private final Options.Builder optionsBuilder;
 
     public CreateCdpActivationRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public CreateCdpActivationRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public CreateCdpActivationRequestBuilder request(@Nonnull CreateCdpActivationRequest request) {
@@ -44,8 +54,9 @@ public class CreateCdpActivationRequestBuilder {
     * @return The response from the server.
     */
     public CompletableFuture<CreateCdpActivationResponse> call() {
+        Options options = optionsBuilder.build();
         AsyncRequestOperation<CreateCdpActivationRequest, CreateCdpActivationResponse> operation
-              = new CreateCdpActivation.Async(sdkConfiguration, _headers);
+              = new CreateCdpActivation.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

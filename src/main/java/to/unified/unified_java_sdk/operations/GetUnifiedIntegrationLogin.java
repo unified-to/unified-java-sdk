@@ -8,6 +8,7 @@ import static to.unified.unified_java_sdk.utils.Exceptions.unchecked;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.io.InputStream;
 import java.lang.Exception;
 import java.lang.String;
@@ -15,6 +16,8 @@ import java.lang.Throwable;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.nio.charset.StandardCharsets;
+import java.time.Duration;
+import java.util.List;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
@@ -31,6 +34,7 @@ import to.unified.unified_java_sdk.utils.Headers;
 import to.unified.unified_java_sdk.utils.Hook.AfterErrorContextImpl;
 import to.unified.unified_java_sdk.utils.Hook.AfterSuccessContextImpl;
 import to.unified.unified_java_sdk.utils.Hook.BeforeRequestContextImpl;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
@@ -40,14 +44,20 @@ public class GetUnifiedIntegrationLogin {
         final SDKConfiguration sdkConfiguration;
         final String baseUrl;
         final SecuritySource securitySource;
+        final Optional<Duration> timeout;
         final HTTPClient client;
         final Headers _headers;
 
-        public Base(@Nonnull SDKConfiguration sdkConfiguration, Headers _headers) {
+        public Base(
+                @Nonnull SDKConfiguration sdkConfiguration, @Nullable Options options,
+                Headers _headers) {
             this.sdkConfiguration = sdkConfiguration;
             this._headers =_headers;
             this.baseUrl = this.sdkConfiguration.serverUrl();
             this.securitySource = this.sdkConfiguration.securitySource();
+            Optional.ofNullable(options)
+                    .ifPresent(o -> o.validate(List.of(Options.Option.TIMEOUT)));
+            this.timeout = Optional.ofNullable(options).flatMap(Options::timeout).or(sdkConfiguration::timeout);
             this.client = this.sdkConfiguration.client();
         }
 
@@ -87,7 +97,8 @@ public class GetUnifiedIntegrationLogin {
                     this.baseUrl,
                     "/unified/integration/login/{workspace_id}/{integration_type}",
                     request, null);
-            HTTPRequest req = new HTTPRequest(url, "GET");
+            HTTPRequest req = new HTTPRequest(url, "GET")
+                    .timeout(this.timeout);
             req.addHeader("Accept", "text/plain")
                     .addHeader("user-agent", SDKConfiguration.USER_AGENT);
             _headers.forEach((k, list) -> list.forEach(v -> req.addHeader(k, v)));
@@ -105,7 +116,16 @@ public class GetUnifiedIntegrationLogin {
     public static class Sync extends Base
             implements RequestOperation<GetUnifiedIntegrationLoginRequest, GetUnifiedIntegrationLoginResponse> {
         public Sync(@Nonnull SDKConfiguration sdkConfiguration, Headers _headers) {
-            super(sdkConfiguration, _headers);
+            this(sdkConfiguration, null,
+                    _headers);
+        }
+
+        public Sync(
+                @Nonnull SDKConfiguration sdkConfiguration, @Nullable Options options,
+                Headers _headers) {
+            super(
+                  sdkConfiguration, options,
+                  _headers);
         }
 
         private HttpRequest onBuildRequest(GetUnifiedIntegrationLoginRequest request) throws Exception {
@@ -180,9 +200,17 @@ public class GetUnifiedIntegrationLogin {
     }
     public static class Async extends Base
             implements AsyncRequestOperation<GetUnifiedIntegrationLoginRequest, to.unified.unified_java_sdk.models.operations.async.GetUnifiedIntegrationLoginResponse> {
-
         public Async(@Nonnull SDKConfiguration sdkConfiguration, Headers _headers) {
-            super(sdkConfiguration, _headers);
+            this(sdkConfiguration, null,
+                    _headers);
+        }
+
+        public Async(
+                @Nonnull SDKConfiguration sdkConfiguration, @Nullable Options options,
+                Headers _headers) {
+            super(
+                  sdkConfiguration, options,
+                  _headers);
         }
 
         private CompletableFuture<HttpRequest> onBuildRequest(GetUnifiedIntegrationLoginRequest request) throws Exception {

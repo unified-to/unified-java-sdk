@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreatePaymentSubscriptionRequest;
 import to.unified.unified_java_sdk.models.operations.CreatePaymentSubscriptionRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreatePaymentSubscriptionResponse;
@@ -31,6 +32,7 @@ import to.unified.unified_java_sdk.operations.PatchPaymentSubscription;
 import to.unified.unified_java_sdk.operations.RemovePaymentSubscription;
 import to.unified.unified_java_sdk.operations.UpdatePaymentSubscription;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Subscription {
@@ -75,8 +77,23 @@ public class Subscription {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreatePaymentSubscriptionResponse createPaymentSubscription(@Nonnull CreatePaymentSubscriptionRequest request) {
+        return createPaymentSubscription(request, null);
+    }
+
+    /**
+     * Create a subscription
+     * 
+     * <p>Creates a PaymentSubscription. Provide the unified PaymentSubscription fields in the request body;
+     * they are mapped to the provider's API. Returns the created PaymentSubscription.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreatePaymentSubscriptionResponse createPaymentSubscription(@Nonnull CreatePaymentSubscriptionRequest request, @Nullable Options options) {
         RequestOperation<CreatePaymentSubscriptionRequest, CreatePaymentSubscriptionResponse> operation
-              = new CreatePaymentSubscription.Sync(sdkConfiguration, _headers);
+              = new CreatePaymentSubscription.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -103,8 +120,23 @@ public class Subscription {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetPaymentSubscriptionResponse getPaymentSubscription(@Nonnull GetPaymentSubscriptionRequest request) {
+        return getPaymentSubscription(request, null);
+    }
+
+    /**
+     * Retrieve a subscription
+     * 
+     * <p>Retrieves a single PaymentSubscription by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetPaymentSubscriptionResponse getPaymentSubscription(@Nonnull GetPaymentSubscriptionRequest request, @Nullable Options options) {
         RequestOperation<GetPaymentSubscriptionRequest, GetPaymentSubscriptionResponse> operation
-              = new GetPaymentSubscription.Sync(sdkConfiguration, _headers);
+              = new GetPaymentSubscription.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -139,8 +171,27 @@ public class Subscription {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListPaymentSubscriptionsResponse listPaymentSubscriptions(@Nonnull ListPaymentSubscriptionsRequest request) {
+        return listPaymentSubscriptions(request, null);
+    }
+
+    /**
+     * List all subscriptions
+     * 
+     * <p>Returns a list of PaymentSubscriptions. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListPaymentSubscriptionsResponse listPaymentSubscriptions(@Nonnull ListPaymentSubscriptionsRequest request, @Nullable Options options) {
         RequestOperation<ListPaymentSubscriptionsRequest, ListPaymentSubscriptionsResponse> operation
-              = new ListPaymentSubscriptions.Sync(sdkConfiguration, _headers);
+              = new ListPaymentSubscriptions.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +218,23 @@ public class Subscription {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchPaymentSubscriptionResponse patchPaymentSubscription(@Nonnull PatchPaymentSubscriptionRequest request) {
+        return patchPaymentSubscription(request, null);
+    }
+
+    /**
+     * Update a subscription
+     * 
+     * <p>Updates the PaymentSubscription identified by `id`. Provide the unified PaymentSubscription fields
+     * to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchPaymentSubscriptionResponse patchPaymentSubscription(@Nonnull PatchPaymentSubscriptionRequest request, @Nullable Options options) {
         RequestOperation<PatchPaymentSubscriptionRequest, PatchPaymentSubscriptionResponse> operation
-              = new PatchPaymentSubscription.Sync(sdkConfiguration, _headers);
+              = new PatchPaymentSubscription.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -193,8 +259,22 @@ public class Subscription {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemovePaymentSubscriptionResponse removePaymentSubscription(@Nonnull RemovePaymentSubscriptionRequest request) {
+        return removePaymentSubscription(request, null);
+    }
+
+    /**
+     * Remove a subscription
+     * 
+     * <p>Deletes the PaymentSubscription identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemovePaymentSubscriptionResponse removePaymentSubscription(@Nonnull RemovePaymentSubscriptionRequest request, @Nullable Options options) {
         RequestOperation<RemovePaymentSubscriptionRequest, RemovePaymentSubscriptionResponse> operation
-              = new RemovePaymentSubscription.Sync(sdkConfiguration, _headers);
+              = new RemovePaymentSubscription.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -221,8 +301,23 @@ public class Subscription {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdatePaymentSubscriptionResponse updatePaymentSubscription(@Nonnull UpdatePaymentSubscriptionRequest request) {
+        return updatePaymentSubscription(request, null);
+    }
+
+    /**
+     * Update a subscription
+     * 
+     * <p>Updates the PaymentSubscription identified by `id`. Provide the unified PaymentSubscription fields
+     * to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdatePaymentSubscriptionResponse updatePaymentSubscription(@Nonnull UpdatePaymentSubscriptionRequest request, @Nullable Options options) {
         RequestOperation<UpdatePaymentSubscriptionRequest, UpdatePaymentSubscriptionResponse> operation
-              = new UpdatePaymentSubscription.Sync(sdkConfiguration, _headers);
+              = new UpdatePaymentSubscription.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

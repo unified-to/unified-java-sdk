@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateComputeDomainRequest;
 import to.unified.unified_java_sdk.models.operations.CreateComputeDomainRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateComputeDomainResponse;
@@ -31,6 +32,7 @@ import to.unified.unified_java_sdk.operations.PatchComputeDomain;
 import to.unified.unified_java_sdk.operations.RemoveComputeDomain;
 import to.unified.unified_java_sdk.operations.UpdateComputeDomain;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Domain {
@@ -75,8 +77,23 @@ public class Domain {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateComputeDomainResponse createComputeDomain(@Nonnull CreateComputeDomainRequest request) {
+        return createComputeDomain(request, null);
+    }
+
+    /**
+     * Create a domain
+     * 
+     * <p>Creates a ComputeDomain. Provide the unified ComputeDomain fields in the request body; they are
+     * mapped to the provider's API. Returns the created ComputeDomain.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateComputeDomainResponse createComputeDomain(@Nonnull CreateComputeDomainRequest request, @Nullable Options options) {
         RequestOperation<CreateComputeDomainRequest, CreateComputeDomainResponse> operation
-              = new CreateComputeDomain.Sync(sdkConfiguration, _headers);
+              = new CreateComputeDomain.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -103,8 +120,23 @@ public class Domain {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetComputeDomainResponse getComputeDomain(@Nonnull GetComputeDomainRequest request) {
+        return getComputeDomain(request, null);
+    }
+
+    /**
+     * Retrieve a domain
+     * 
+     * <p>Retrieves a single ComputeDomain by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetComputeDomainResponse getComputeDomain(@Nonnull GetComputeDomainRequest request, @Nullable Options options) {
         RequestOperation<GetComputeDomainRequest, GetComputeDomainResponse> operation
-              = new GetComputeDomain.Sync(sdkConfiguration, _headers);
+              = new GetComputeDomain.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -139,8 +171,27 @@ public class Domain {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListComputeDomainsResponse listComputeDomains(@Nonnull ListComputeDomainsRequest request) {
+        return listComputeDomains(request, null);
+    }
+
+    /**
+     * List all domains
+     * 
+     * <p>Returns a list of ComputeDomains. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListComputeDomainsResponse listComputeDomains(@Nonnull ListComputeDomainsRequest request, @Nullable Options options) {
         RequestOperation<ListComputeDomainsRequest, ListComputeDomainsResponse> operation
-              = new ListComputeDomains.Sync(sdkConfiguration, _headers);
+              = new ListComputeDomains.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +218,23 @@ public class Domain {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchComputeDomainResponse patchComputeDomain(@Nonnull PatchComputeDomainRequest request) {
+        return patchComputeDomain(request, null);
+    }
+
+    /**
+     * Update a domain
+     * 
+     * <p>Updates the ComputeDomain identified by `id`. Provide the unified ComputeDomain fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchComputeDomainResponse patchComputeDomain(@Nonnull PatchComputeDomainRequest request, @Nullable Options options) {
         RequestOperation<PatchComputeDomainRequest, PatchComputeDomainResponse> operation
-              = new PatchComputeDomain.Sync(sdkConfiguration, _headers);
+              = new PatchComputeDomain.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -193,8 +259,22 @@ public class Domain {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveComputeDomainResponse removeComputeDomain(@Nonnull RemoveComputeDomainRequest request) {
+        return removeComputeDomain(request, null);
+    }
+
+    /**
+     * Remove a domain
+     * 
+     * <p>Deletes the ComputeDomain identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveComputeDomainResponse removeComputeDomain(@Nonnull RemoveComputeDomainRequest request, @Nullable Options options) {
         RequestOperation<RemoveComputeDomainRequest, RemoveComputeDomainResponse> operation
-              = new RemoveComputeDomain.Sync(sdkConfiguration, _headers);
+              = new RemoveComputeDomain.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -221,8 +301,23 @@ public class Domain {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateComputeDomainResponse updateComputeDomain(@Nonnull UpdateComputeDomainRequest request) {
+        return updateComputeDomain(request, null);
+    }
+
+    /**
+     * Update a domain
+     * 
+     * <p>Updates the ComputeDomain identified by `id`. Provide the unified ComputeDomain fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateComputeDomainResponse updateComputeDomain(@Nonnull UpdateComputeDomainRequest request, @Nullable Options options) {
         RequestOperation<UpdateComputeDomainRequest, UpdateComputeDomainResponse> operation
-              = new UpdateComputeDomain.Sync(sdkConfiguration, _headers);
+              = new UpdateComputeDomain.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

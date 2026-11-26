@@ -6,20 +6,30 @@ package to.unified.unified_java_sdk.models.operations.async;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.GetPropertyReviewRequest;
 import to.unified.unified_java_sdk.operations.GetPropertyReview;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetPropertyReviewRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private GetPropertyReviewRequest request;
+    private final Options.Builder optionsBuilder;
 
     public GetPropertyReviewRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public GetPropertyReviewRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public GetPropertyReviewRequestBuilder request(@Nonnull GetPropertyReviewRequest request) {
@@ -44,8 +54,9 @@ public class GetPropertyReviewRequestBuilder {
     * @return The response from the server.
     */
     public CompletableFuture<GetPropertyReviewResponse> call() {
+        Options options = optionsBuilder.build();
         AsyncRequestOperation<GetPropertyReviewRequest, GetPropertyReviewResponse> operation
-              = new GetPropertyReview.Async(sdkConfiguration, _headers);
+              = new GetPropertyReview.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

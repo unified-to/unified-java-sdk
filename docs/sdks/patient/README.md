@@ -5,7 +5,9 @@
 ### Available Operations
 
 * [createHealthcarePatient](#createhealthcarepatient) - Create a patient
+* [getFhirPatient](#getfhirpatient) - Read a Patient
 * [getHealthcarePatient](#gethealthcarepatient) - Retrieve a patient
+* [listFhirPatients](#listfhirpatients) - Search Patient resources
 * [listHealthcarePatients](#listhealthcarepatients) - List all patients
 * [patchHealthcarePatient](#patchhealthcarepatient) - Update a patient
 * [updateHealthcarePatient](#updatehealthcarepatient) - Update a patient
@@ -41,51 +43,51 @@ public class Application {
         CreateHealthcarePatientRequest req = CreateHealthcarePatientRequest.builder()
                 .healthcarePatient(HealthcarePatient.builder()
                     .address(PropertyHealthcarePatientAddress.builder()
-                        .address1("162 Kirlin Mall")
-                        .city("Dickinsonborough")
+                        .address1("3645 Leonardo Place")
+                        .city("Estelleland")
                         .country("US")
-                        .postalCode("54031")
-                        .region("Nebraska")
+                        .postalCode("99263-6004")
+                        .region("New Jersey")
                         .build())
-                    .birthdate("2025-03-14")
+                    .birthdate("1941-12-25")
                     .contacts(List.of(
                         HealthcarePatientContact.builder()
                             .emails(List.of())
-                            .name("Antonia Lebsack")
+                            .name("Ambrose Welch")
                             .relationship("Spouse")
                             .telephones(List.of(
                                 HealthcareTelephone.builder()
-                                    .telephone("(695) 328-7029 x4412")
+                                    .telephone("323.524.3947 x89014")
                                     .type(HealthcareTelephoneType.MOBILE)
                                     .build()))
                             .build()))
                     .createdAt(OffsetDateTime.parse("2021-06-05T21:08:04.917Z"))
                     .emails(List.of(
                         HealthcareEmail.builder()
-                            .email("alejandrin.parker@icloud.com")
+                            .email("monroe.bauch@icloud.com")
                             .type(HealthcareEmailType.HOME)
                             .build()))
-                    .firstName("Alejandrin")
+                    .firstName("Monroe")
                     .gender(HealthcarePatientGender.FEMALE)
-                    .id("b93e5267-2b81-47fb-802e-76158e44dc24")
+                    .id("8f66ecaa-d758-4f8d-a537-bdea3dddf9b4")
                     .identifiers(List.of(
                         HealthcareIdentifier.builder()
-                            .value("57992636")
+                            .value("51559512")
                             .type(HealthcareIdentifierType.MRN)
                             .build()))
                     .isActive(true)
                     .isDeceased(false)
                     .language("zh")
-                    .lastName("Parker")
+                    .lastName("Bauch")
                     .metadata(List.of())
-                    .name("Alejandrin Parker")
+                    .name("Monroe Bauch")
                     .practitionerIds(List.of())
                     .telephones(List.of(
                         HealthcareTelephone.builder()
-                            .telephone("1-219-555-9023 x08295")
+                            .telephone("1-555-902-3082 x9590")
                             .type(HealthcareTelephoneType.MOBILE)
                             .build()))
-                    .updatedAt(OffsetDateTime.parse("2026-07-21T00:36:02.313Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-07-26T14:21:09.328Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -110,6 +112,64 @@ public class Application {
 ### Response
 
 **[CreateHealthcarePatientResponse](../../models/operations/CreateHealthcarePatientResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## getFhirPatient
+
+Responses use the application/fhir+json media type; errors are OperationOutcome resources. Read-only (FHIR R4 4.0.1).
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="getFhirPatient" method="get" path="/fhir/{connection_id}/Patient/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetFhirPatientRequest;
+import to.unified.unified_java_sdk.models.operations.GetFhirPatientResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        GetFhirPatientRequest req = GetFhirPatientRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetFhirPatientResponse res = sdk.patient().getFhirPatient()
+                .request(req)
+                .call();
+
+        if (res.fhirPatient().isPresent()) {
+            System.out.println(res.fhirPatient().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `request`                                                                 | [GetFhirPatientRequest](../../models/operations/GetFhirPatientRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
+
+### Response
+
+**[GetFhirPatientResponse](../../models/operations/GetFhirPatientResponse.md)**
 
 ### Errors
 
@@ -168,6 +228,63 @@ public class Application {
 ### Response
 
 **[GetHealthcarePatientResponse](../../models/operations/GetHealthcarePatientResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## listFhirPatients
+
+Returns a searchset Bundle; follow its next link for more pages. Responses use the application/fhir+json media type; errors are OperationOutcome resources. Read-only (FHIR R4 4.0.1).
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listFhirPatients" method="get" path="/fhir/{connection_id}/Patient" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListFhirPatientsRequest;
+import to.unified.unified_java_sdk.models.operations.ListFhirPatientsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListFhirPatientsRequest req = ListFhirPatientsRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListFhirPatientsResponse res = sdk.patient().listFhirPatients()
+                .request(req)
+                .call();
+
+        if (res.fhirBundle().isPresent()) {
+            System.out.println(res.fhirBundle().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [ListFhirPatientsRequest](../../models/operations/ListFhirPatientsRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+
+### Response
+
+**[ListFhirPatientsResponse](../../models/operations/ListFhirPatientsResponse.md)**
 
 ### Errors
 
@@ -263,51 +380,51 @@ public class Application {
         PatchHealthcarePatientRequest req = PatchHealthcarePatientRequest.builder()
                 .healthcarePatient(HealthcarePatient.builder()
                     .address(PropertyHealthcarePatientAddress.builder()
-                        .address1("162 Kirlin Mall")
-                        .city("Dickinsonborough")
+                        .address1("3645 Leonardo Place")
+                        .city("Estelleland")
                         .country("US")
-                        .postalCode("54031")
-                        .region("Nebraska")
+                        .postalCode("99263-6004")
+                        .region("New Jersey")
                         .build())
-                    .birthdate("2025-03-14")
+                    .birthdate("1941-12-25")
                     .contacts(List.of(
                         HealthcarePatientContact.builder()
                             .emails(List.of())
-                            .name("Antonia Lebsack")
+                            .name("Ambrose Welch")
                             .relationship("Spouse")
                             .telephones(List.of(
                                 HealthcareTelephone.builder()
-                                    .telephone("(695) 328-7029 x4412")
+                                    .telephone("323.524.3947 x89014")
                                     .type(HealthcareTelephoneType.MOBILE)
                                     .build()))
                             .build()))
                     .createdAt(OffsetDateTime.parse("2021-06-05T21:08:04.917Z"))
                     .emails(List.of(
                         HealthcareEmail.builder()
-                            .email("alejandrin.parker@icloud.com")
+                            .email("monroe.bauch@icloud.com")
                             .type(HealthcareEmailType.HOME)
                             .build()))
-                    .firstName("Alejandrin")
+                    .firstName("Monroe")
                     .gender(HealthcarePatientGender.FEMALE)
-                    .id("34dd7614-eb9a-45f3-9e49-8e1374207dc8")
+                    .id("aae69851-4ec6-4102-916c-1290769e7606")
                     .identifiers(List.of(
                         HealthcareIdentifier.builder()
-                            .value("57992636")
+                            .value("51559512")
                             .type(HealthcareIdentifierType.MRN)
                             .build()))
                     .isActive(true)
                     .isDeceased(false)
                     .language("zh")
-                    .lastName("Parker")
+                    .lastName("Bauch")
                     .metadata(List.of())
-                    .name("Alejandrin Parker")
+                    .name("Monroe Bauch")
                     .practitionerIds(List.of())
                     .telephones(List.of(
                         HealthcareTelephone.builder()
-                            .telephone("1-219-555-9023 x08295")
+                            .telephone("1-555-902-3082 x9590")
                             .type(HealthcareTelephoneType.MOBILE)
                             .build()))
-                    .updatedAt(OffsetDateTime.parse("2026-07-21T00:36:02.358Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-07-26T14:21:09.364Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -371,51 +488,51 @@ public class Application {
         UpdateHealthcarePatientRequest req = UpdateHealthcarePatientRequest.builder()
                 .healthcarePatient(HealthcarePatient.builder()
                     .address(PropertyHealthcarePatientAddress.builder()
-                        .address1("162 Kirlin Mall")
-                        .city("Dickinsonborough")
+                        .address1("3645 Leonardo Place")
+                        .city("Estelleland")
                         .country("US")
-                        .postalCode("54031")
-                        .region("Nebraska")
+                        .postalCode("99263-6004")
+                        .region("New Jersey")
                         .build())
-                    .birthdate("2025-03-14")
+                    .birthdate("1941-12-25")
                     .contacts(List.of(
                         HealthcarePatientContact.builder()
                             .emails(List.of())
-                            .name("Antonia Lebsack")
+                            .name("Ambrose Welch")
                             .relationship("Spouse")
                             .telephones(List.of(
                                 HealthcareTelephone.builder()
-                                    .telephone("(695) 328-7029 x4412")
+                                    .telephone("323.524.3947 x89014")
                                     .type(HealthcareTelephoneType.MOBILE)
                                     .build()))
                             .build()))
                     .createdAt(OffsetDateTime.parse("2021-06-05T21:08:04.917Z"))
                     .emails(List.of(
                         HealthcareEmail.builder()
-                            .email("alejandrin.parker@icloud.com")
+                            .email("monroe.bauch@icloud.com")
                             .type(HealthcareEmailType.HOME)
                             .build()))
-                    .firstName("Alejandrin")
+                    .firstName("Monroe")
                     .gender(HealthcarePatientGender.FEMALE)
-                    .id("34dd7614-eb9a-45f3-9e49-8e1374207dc8")
+                    .id("aae69851-4ec6-4102-916c-1290769e7606")
                     .identifiers(List.of(
                         HealthcareIdentifier.builder()
-                            .value("57992636")
+                            .value("51559512")
                             .type(HealthcareIdentifierType.MRN)
                             .build()))
                     .isActive(true)
                     .isDeceased(false)
                     .language("zh")
-                    .lastName("Parker")
+                    .lastName("Bauch")
                     .metadata(List.of())
-                    .name("Alejandrin Parker")
+                    .name("Monroe Bauch")
                     .practitionerIds(List.of())
                     .telephones(List.of(
                         HealthcareTelephone.builder()
-                            .telephone("1-219-555-9023 x08295")
+                            .telephone("1-555-902-3082 x9590")
                             .type(HealthcareTelephoneType.MOBILE)
                             .build()))
-                    .updatedAt(OffsetDateTime.parse("2026-07-21T00:36:02.358Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-07-26T14:21:09.364Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

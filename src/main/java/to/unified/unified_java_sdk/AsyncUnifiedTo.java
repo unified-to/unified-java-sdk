@@ -225,9 +225,47 @@ public class AsyncUnifiedTo {
 
     private final AsyncRecord record;
 
+    private final AsyncDms dms;
+
+    private final AsyncAppointment appointment;
+
+    private final AsyncOpcode opcode;
+
+    private final AsyncPart part;
+
+    private final AsyncPartsale partsale;
+
+    private final AsyncRepairorder repairorder;
+
+    private final AsyncVehicle vehicle;
+
+    private final AsyncVehiclesale vehiclesale;
+
     private final AsyncEnrich enrich;
 
     private final AsyncPerson person;
+
+    private final AsyncFhir fhir;
+
+    private final AsyncAllergyintolerance allergyintolerance;
+
+    private final AsyncCondition condition;
+
+    private final AsyncDiagnosticreport diagnosticreport;
+
+    private final AsyncEncounter encounter;
+
+    private final AsyncImmunization immunization;
+
+    private final AsyncMedicationrequest medicationrequest;
+
+    private final AsyncObservation observation;
+
+    private final AsyncPatient patient;
+
+    private final AsyncPractitioner practitioner;
+
+    private final AsyncMetadata metadata;
 
     private final AsyncForms forms;
 
@@ -255,27 +293,13 @@ public class AsyncUnifiedTo {
 
     private final AsyncAllergy allergy;
 
-    private final AsyncAppointment appointment;
-
     private final AsyncCareplan careplan;
-
-    private final AsyncCondition condition;
 
     private final AsyncCoverage coverage;
 
-    private final AsyncEncounter encounter;
-
     private final AsyncGoal goal;
 
-    private final AsyncImmunization immunization;
-
     private final AsyncMedication medication;
-
-    private final AsyncObservation observation;
-
-    private final AsyncPatient patient;
-
-    private final AsyncPractitioner practitioner;
 
     private final AsyncProcedure procedure;
 
@@ -347,8 +371,6 @@ public class AsyncUnifiedTo {
 
     private final AsyncMessage message;
 
-    private final AsyncMetadata metadata;
-
     private final AsyncPassthrough passthrough;
 
     private final AsyncPayment payment;
@@ -371,7 +393,11 @@ public class AsyncUnifiedTo {
 
     private final AsyncChange change;
 
-    private final AsyncPart part;
+    private final AsyncPrinting printing;
+
+    private final AsyncFile file;
+
+    private final AsyncProduct product;
 
     private final AsyncConversation conversation;
 
@@ -428,8 +454,6 @@ public class AsyncUnifiedTo {
     private final AsyncPost post;
 
     private final AsyncStorage storage;
-
-    private final AsyncFile file;
 
     private final AsyncTicketing ticketing;
 
@@ -899,12 +923,88 @@ public class AsyncUnifiedTo {
         return record;
     }
 
+    public AsyncDms dms() {
+        return dms;
+    }
+
+    public AsyncAppointment appointment() {
+        return appointment;
+    }
+
+    public AsyncOpcode opcode() {
+        return opcode;
+    }
+
+    public AsyncPart part() {
+        return part;
+    }
+
+    public AsyncPartsale partsale() {
+        return partsale;
+    }
+
+    public AsyncRepairorder repairorder() {
+        return repairorder;
+    }
+
+    public AsyncVehicle vehicle() {
+        return vehicle;
+    }
+
+    public AsyncVehiclesale vehiclesale() {
+        return vehiclesale;
+    }
+
     public AsyncEnrich enrich() {
         return enrich;
     }
 
     public AsyncPerson person() {
         return person;
+    }
+
+    public AsyncFhir fhir() {
+        return fhir;
+    }
+
+    public AsyncAllergyintolerance allergyintolerance() {
+        return allergyintolerance;
+    }
+
+    public AsyncCondition condition() {
+        return condition;
+    }
+
+    public AsyncDiagnosticreport diagnosticreport() {
+        return diagnosticreport;
+    }
+
+    public AsyncEncounter encounter() {
+        return encounter;
+    }
+
+    public AsyncImmunization immunization() {
+        return immunization;
+    }
+
+    public AsyncMedicationrequest medicationrequest() {
+        return medicationrequest;
+    }
+
+    public AsyncObservation observation() {
+        return observation;
+    }
+
+    public AsyncPatient patient() {
+        return patient;
+    }
+
+    public AsyncPractitioner practitioner() {
+        return practitioner;
+    }
+
+    public AsyncMetadata metadata() {
+        return metadata;
     }
 
     public AsyncForms forms() {
@@ -959,48 +1059,20 @@ public class AsyncUnifiedTo {
         return allergy;
     }
 
-    public AsyncAppointment appointment() {
-        return appointment;
-    }
-
     public AsyncCareplan careplan() {
         return careplan;
-    }
-
-    public AsyncCondition condition() {
-        return condition;
     }
 
     public AsyncCoverage coverage() {
         return coverage;
     }
 
-    public AsyncEncounter encounter() {
-        return encounter;
-    }
-
     public AsyncGoal goal() {
         return goal;
     }
 
-    public AsyncImmunization immunization() {
-        return immunization;
-    }
-
     public AsyncMedication medication() {
         return medication;
-    }
-
-    public AsyncObservation observation() {
-        return observation;
-    }
-
-    public AsyncPatient patient() {
-        return patient;
-    }
-
-    public AsyncPractitioner practitioner() {
-        return practitioner;
     }
 
     public AsyncProcedure procedure() {
@@ -1143,10 +1215,6 @@ public class AsyncUnifiedTo {
         return message;
     }
 
-    public AsyncMetadata metadata() {
-        return metadata;
-    }
-
     public AsyncPassthrough passthrough() {
         return passthrough;
     }
@@ -1191,8 +1259,16 @@ public class AsyncUnifiedTo {
         return change;
     }
 
-    public AsyncPart part() {
-        return part;
+    public AsyncPrinting printing() {
+        return printing;
+    }
+
+    public AsyncFile file() {
+        return file;
+    }
+
+    public AsyncProduct product() {
+        return product;
     }
 
     public AsyncConversation conversation() {
@@ -1305,10 +1381,6 @@ public class AsyncUnifiedTo {
 
     public AsyncStorage storage() {
         return storage;
-    }
-
-    public AsyncFile file() {
-        return file;
     }
 
     public AsyncTicketing ticketing() {
@@ -1511,8 +1583,27 @@ public class AsyncUnifiedTo {
         this.database = new AsyncDatabase(syncSDK.database(), sdkConfiguration);
         this.query = new AsyncQuery(syncSDK.query(), sdkConfiguration);
         this.record = new AsyncRecord(syncSDK.record(), sdkConfiguration);
+        this.dms = new AsyncDms(syncSDK.dms(), sdkConfiguration);
+        this.appointment = new AsyncAppointment(syncSDK.appointment(), sdkConfiguration);
+        this.opcode = new AsyncOpcode(syncSDK.opcode(), sdkConfiguration);
+        this.part = new AsyncPart(syncSDK.part(), sdkConfiguration);
+        this.partsale = new AsyncPartsale(syncSDK.partsale(), sdkConfiguration);
+        this.repairorder = new AsyncRepairorder(syncSDK.repairorder(), sdkConfiguration);
+        this.vehicle = new AsyncVehicle(syncSDK.vehicle(), sdkConfiguration);
+        this.vehiclesale = new AsyncVehiclesale(syncSDK.vehiclesale(), sdkConfiguration);
         this.enrich = new AsyncEnrich(syncSDK.enrich(), sdkConfiguration);
         this.person = new AsyncPerson(syncSDK.person(), sdkConfiguration);
+        this.fhir = new AsyncFhir(syncSDK.fhir(), sdkConfiguration);
+        this.allergyintolerance = new AsyncAllergyintolerance(syncSDK.allergyintolerance(), sdkConfiguration);
+        this.condition = new AsyncCondition(syncSDK.condition(), sdkConfiguration);
+        this.diagnosticreport = new AsyncDiagnosticreport(syncSDK.diagnosticreport(), sdkConfiguration);
+        this.encounter = new AsyncEncounter(syncSDK.encounter(), sdkConfiguration);
+        this.immunization = new AsyncImmunization(syncSDK.immunization(), sdkConfiguration);
+        this.medicationrequest = new AsyncMedicationrequest(syncSDK.medicationrequest(), sdkConfiguration);
+        this.observation = new AsyncObservation(syncSDK.observation(), sdkConfiguration);
+        this.patient = new AsyncPatient(syncSDK.patient(), sdkConfiguration);
+        this.practitioner = new AsyncPractitioner(syncSDK.practitioner(), sdkConfiguration);
+        this.metadata = new AsyncMetadata(syncSDK.metadata(), sdkConfiguration);
         this.forms = new AsyncForms(syncSDK.forms(), sdkConfiguration);
         this.form = new AsyncForm(syncSDK.form(), sdkConfiguration);
         this.submission = new AsyncSubmission(syncSDK.submission(), sdkConfiguration);
@@ -1526,17 +1617,10 @@ public class AsyncUnifiedTo {
         this.task = new AsyncTask(syncSDK.task(), sdkConfiguration);
         this.healthcare = new AsyncHealthcare(syncSDK.healthcare(), sdkConfiguration);
         this.allergy = new AsyncAllergy(syncSDK.allergy(), sdkConfiguration);
-        this.appointment = new AsyncAppointment(syncSDK.appointment(), sdkConfiguration);
         this.careplan = new AsyncCareplan(syncSDK.careplan(), sdkConfiguration);
-        this.condition = new AsyncCondition(syncSDK.condition(), sdkConfiguration);
         this.coverage = new AsyncCoverage(syncSDK.coverage(), sdkConfiguration);
-        this.encounter = new AsyncEncounter(syncSDK.encounter(), sdkConfiguration);
         this.goal = new AsyncGoal(syncSDK.goal(), sdkConfiguration);
-        this.immunization = new AsyncImmunization(syncSDK.immunization(), sdkConfiguration);
         this.medication = new AsyncMedication(syncSDK.medication(), sdkConfiguration);
-        this.observation = new AsyncObservation(syncSDK.observation(), sdkConfiguration);
-        this.patient = new AsyncPatient(syncSDK.patient(), sdkConfiguration);
-        this.practitioner = new AsyncPractitioner(syncSDK.practitioner(), sdkConfiguration);
         this.procedure = new AsyncProcedure(syncSDK.procedure(), sdkConfiguration);
         this.slot = new AsyncSlot(syncSDK.slot(), sdkConfiguration);
         this.hris = new AsyncHris(syncSDK.hris(), sdkConfiguration);
@@ -1572,7 +1656,6 @@ public class AsyncUnifiedTo {
         this.messaging = new AsyncMessaging(syncSDK.messaging(), sdkConfiguration);
         this.channel = new AsyncChannel(syncSDK.channel(), sdkConfiguration);
         this.message = new AsyncMessage(syncSDK.message(), sdkConfiguration);
-        this.metadata = new AsyncMetadata(syncSDK.metadata(), sdkConfiguration);
         this.passthrough = new AsyncPassthrough(syncSDK.passthrough(), sdkConfiguration);
         this.payment = new AsyncPayment(syncSDK.payment(), sdkConfiguration);
         this.payout = new AsyncPayout(syncSDK.payout(), sdkConfiguration);
@@ -1584,7 +1667,9 @@ public class AsyncUnifiedTo {
         this.plm = new AsyncPlm(syncSDK.plm(), sdkConfiguration);
         this.bomline = new AsyncBomline(syncSDK.bomline(), sdkConfiguration);
         this.change = new AsyncChange(syncSDK.change(), sdkConfiguration);
-        this.part = new AsyncPart(syncSDK.part(), sdkConfiguration);
+        this.printing = new AsyncPrinting(syncSDK.printing(), sdkConfiguration);
+        this.file = new AsyncFile(syncSDK.file(), sdkConfiguration);
+        this.product = new AsyncProduct(syncSDK.product(), sdkConfiguration);
         this.conversation = new AsyncConversation(syncSDK.conversation(), sdkConfiguration);
         this.guest = new AsyncGuest(syncSDK.guest(), sdkConfiguration);
         this.listing = new AsyncListing(syncSDK.listing(), sdkConfiguration);
@@ -1613,7 +1698,6 @@ public class AsyncUnifiedTo {
         this.insight = new AsyncInsight(syncSDK.insight(), sdkConfiguration);
         this.post = new AsyncPost(syncSDK.post(), sdkConfiguration);
         this.storage = new AsyncStorage(syncSDK.storage(), sdkConfiguration);
-        this.file = new AsyncFile(syncSDK.file(), sdkConfiguration);
         this.ticketing = new AsyncTicketing(syncSDK.ticketing(), sdkConfiguration);
         this.customer = new AsyncCustomer(syncSDK.customer(), sdkConfiguration);
         this.note = new AsyncNote(syncSDK.note(), sdkConfiguration);

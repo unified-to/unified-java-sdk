@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreatePlmBomlineRequest;
 import to.unified.unified_java_sdk.models.operations.CreatePlmBomlineRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreatePlmBomlineResponse;
@@ -103,6 +104,7 @@ import to.unified.unified_java_sdk.operations.UpdatePlmChange;
 import to.unified.unified_java_sdk.operations.UpdatePlmDocument;
 import to.unified.unified_java_sdk.operations.UpdatePlmPart;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Plm {
@@ -147,8 +149,23 @@ public class Plm {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreatePlmBomlineResponse createPlmBomline(@Nonnull CreatePlmBomlineRequest request) {
+        return createPlmBomline(request, null);
+    }
+
+    /**
+     * Create a bomline
+     * 
+     * <p>Creates a PlmBomline. Provide the unified PlmBomline fields in the request body; they are mapped to
+     * the provider's API. Returns the created PlmBomline.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreatePlmBomlineResponse createPlmBomline(@Nonnull CreatePlmBomlineRequest request, @Nullable Options options) {
         RequestOperation<CreatePlmBomlineRequest, CreatePlmBomlineResponse> operation
-              = new CreatePlmBomline.Sync(sdkConfiguration, _headers);
+              = new CreatePlmBomline.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -175,8 +192,23 @@ public class Plm {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreatePlmChangeResponse createPlmChange(@Nonnull CreatePlmChangeRequest request) {
+        return createPlmChange(request, null);
+    }
+
+    /**
+     * Create a change
+     * 
+     * <p>Creates a PlmChange. Provide the unified PlmChange fields in the request body; they are mapped to
+     * the provider's API. Returns the created PlmChange.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreatePlmChangeResponse createPlmChange(@Nonnull CreatePlmChangeRequest request, @Nullable Options options) {
         RequestOperation<CreatePlmChangeRequest, CreatePlmChangeResponse> operation
-              = new CreatePlmChange.Sync(sdkConfiguration, _headers);
+              = new CreatePlmChange.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -203,8 +235,23 @@ public class Plm {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreatePlmDocumentResponse createPlmDocument(@Nonnull CreatePlmDocumentRequest request) {
+        return createPlmDocument(request, null);
+    }
+
+    /**
+     * Create a document
+     * 
+     * <p>Creates a PlmDocument. Provide the unified PlmDocument fields in the request body; they are mapped
+     * to the provider's API. Returns the created PlmDocument.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreatePlmDocumentResponse createPlmDocument(@Nonnull CreatePlmDocumentRequest request, @Nullable Options options) {
         RequestOperation<CreatePlmDocumentRequest, CreatePlmDocumentResponse> operation
-              = new CreatePlmDocument.Sync(sdkConfiguration, _headers);
+              = new CreatePlmDocument.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -231,8 +278,23 @@ public class Plm {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreatePlmPartResponse createPlmPart(@Nonnull CreatePlmPartRequest request) {
+        return createPlmPart(request, null);
+    }
+
+    /**
+     * Create a part
+     * 
+     * <p>Creates a PlmPart. Provide the unified PlmPart fields in the request body; they are mapped to the
+     * provider's API. Returns the created PlmPart.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreatePlmPartResponse createPlmPart(@Nonnull CreatePlmPartRequest request, @Nullable Options options) {
         RequestOperation<CreatePlmPartRequest, CreatePlmPartResponse> operation
-              = new CreatePlmPart.Sync(sdkConfiguration, _headers);
+              = new CreatePlmPart.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -259,8 +321,23 @@ public class Plm {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetPlmBomlineResponse getPlmBomline(@Nonnull GetPlmBomlineRequest request) {
+        return getPlmBomline(request, null);
+    }
+
+    /**
+     * Retrieve a bomline
+     * 
+     * <p>Retrieves a single PlmBomline by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetPlmBomlineResponse getPlmBomline(@Nonnull GetPlmBomlineRequest request, @Nullable Options options) {
         RequestOperation<GetPlmBomlineRequest, GetPlmBomlineResponse> operation
-              = new GetPlmBomline.Sync(sdkConfiguration, _headers);
+              = new GetPlmBomline.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -287,8 +364,23 @@ public class Plm {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetPlmCategoryResponse getPlmCategory(@Nonnull GetPlmCategoryRequest request) {
+        return getPlmCategory(request, null);
+    }
+
+    /**
+     * Retrieve a category
+     * 
+     * <p>Retrieves a single PlmCategory by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetPlmCategoryResponse getPlmCategory(@Nonnull GetPlmCategoryRequest request, @Nullable Options options) {
         RequestOperation<GetPlmCategoryRequest, GetPlmCategoryResponse> operation
-              = new GetPlmCategory.Sync(sdkConfiguration, _headers);
+              = new GetPlmCategory.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -315,8 +407,23 @@ public class Plm {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetPlmChangeResponse getPlmChange(@Nonnull GetPlmChangeRequest request) {
+        return getPlmChange(request, null);
+    }
+
+    /**
+     * Retrieve a change
+     * 
+     * <p>Retrieves a single PlmChange by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetPlmChangeResponse getPlmChange(@Nonnull GetPlmChangeRequest request, @Nullable Options options) {
         RequestOperation<GetPlmChangeRequest, GetPlmChangeResponse> operation
-              = new GetPlmChange.Sync(sdkConfiguration, _headers);
+              = new GetPlmChange.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -343,8 +450,23 @@ public class Plm {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetPlmDocumentResponse getPlmDocument(@Nonnull GetPlmDocumentRequest request) {
+        return getPlmDocument(request, null);
+    }
+
+    /**
+     * Retrieve a document
+     * 
+     * <p>Retrieves a single PlmDocument by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetPlmDocumentResponse getPlmDocument(@Nonnull GetPlmDocumentRequest request, @Nullable Options options) {
         RequestOperation<GetPlmDocumentRequest, GetPlmDocumentResponse> operation
-              = new GetPlmDocument.Sync(sdkConfiguration, _headers);
+              = new GetPlmDocument.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -371,8 +493,23 @@ public class Plm {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetPlmPartResponse getPlmPart(@Nonnull GetPlmPartRequest request) {
+        return getPlmPart(request, null);
+    }
+
+    /**
+     * Retrieve a part
+     * 
+     * <p>Retrieves a single PlmPart by its `id`. Obtain `id` values from the corresponding list endpoint. Use
+     * `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetPlmPartResponse getPlmPart(@Nonnull GetPlmPartRequest request, @Nullable Options options) {
         RequestOperation<GetPlmPartRequest, GetPlmPartResponse> operation
-              = new GetPlmPart.Sync(sdkConfiguration, _headers);
+              = new GetPlmPart.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -407,8 +544,27 @@ public class Plm {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListPlmBomlinesResponse listPlmBomlines(@Nonnull ListPlmBomlinesRequest request) {
+        return listPlmBomlines(request, null);
+    }
+
+    /**
+     * List all bomlines
+     * 
+     * <p>Returns a list of PlmBomlines. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListPlmBomlinesResponse listPlmBomlines(@Nonnull ListPlmBomlinesRequest request, @Nullable Options options) {
         RequestOperation<ListPlmBomlinesRequest, ListPlmBomlinesResponse> operation
-              = new ListPlmBomlines.Sync(sdkConfiguration, _headers);
+              = new ListPlmBomlines.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -443,8 +599,27 @@ public class Plm {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListPlmCategoriesResponse listPlmCategories(@Nonnull ListPlmCategoriesRequest request) {
+        return listPlmCategories(request, null);
+    }
+
+    /**
+     * List all categories
+     * 
+     * <p>Returns a list of PlmCategories. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListPlmCategoriesResponse listPlmCategories(@Nonnull ListPlmCategoriesRequest request, @Nullable Options options) {
         RequestOperation<ListPlmCategoriesRequest, ListPlmCategoriesResponse> operation
-              = new ListPlmCategories.Sync(sdkConfiguration, _headers);
+              = new ListPlmCategories.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -479,8 +654,27 @@ public class Plm {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListPlmChangesResponse listPlmChanges(@Nonnull ListPlmChangesRequest request) {
+        return listPlmChanges(request, null);
+    }
+
+    /**
+     * List all changes
+     * 
+     * <p>Returns a list of PlmChanges. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListPlmChangesResponse listPlmChanges(@Nonnull ListPlmChangesRequest request, @Nullable Options options) {
         RequestOperation<ListPlmChangesRequest, ListPlmChangesResponse> operation
-              = new ListPlmChanges.Sync(sdkConfiguration, _headers);
+              = new ListPlmChanges.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -515,8 +709,27 @@ public class Plm {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListPlmDocumentsResponse listPlmDocuments(@Nonnull ListPlmDocumentsRequest request) {
+        return listPlmDocuments(request, null);
+    }
+
+    /**
+     * List all documents
+     * 
+     * <p>Returns a list of PlmDocuments. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListPlmDocumentsResponse listPlmDocuments(@Nonnull ListPlmDocumentsRequest request, @Nullable Options options) {
         RequestOperation<ListPlmDocumentsRequest, ListPlmDocumentsResponse> operation
-              = new ListPlmDocuments.Sync(sdkConfiguration, _headers);
+              = new ListPlmDocuments.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -551,8 +764,27 @@ public class Plm {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListPlmPartsResponse listPlmParts(@Nonnull ListPlmPartsRequest request) {
+        return listPlmParts(request, null);
+    }
+
+    /**
+     * List all parts
+     * 
+     * <p>Returns a list of PlmParts. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListPlmPartsResponse listPlmParts(@Nonnull ListPlmPartsRequest request, @Nullable Options options) {
         RequestOperation<ListPlmPartsRequest, ListPlmPartsResponse> operation
-              = new ListPlmParts.Sync(sdkConfiguration, _headers);
+              = new ListPlmParts.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -579,8 +811,23 @@ public class Plm {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchPlmBomlineResponse patchPlmBomline(@Nonnull PatchPlmBomlineRequest request) {
+        return patchPlmBomline(request, null);
+    }
+
+    /**
+     * Update a bomline
+     * 
+     * <p>Updates the PlmBomline identified by `id`. Provide the unified PlmBomline fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchPlmBomlineResponse patchPlmBomline(@Nonnull PatchPlmBomlineRequest request, @Nullable Options options) {
         RequestOperation<PatchPlmBomlineRequest, PatchPlmBomlineResponse> operation
-              = new PatchPlmBomline.Sync(sdkConfiguration, _headers);
+              = new PatchPlmBomline.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -607,8 +854,23 @@ public class Plm {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchPlmChangeResponse patchPlmChange(@Nonnull PatchPlmChangeRequest request) {
+        return patchPlmChange(request, null);
+    }
+
+    /**
+     * Update a change
+     * 
+     * <p>Updates the PlmChange identified by `id`. Provide the unified PlmChange fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchPlmChangeResponse patchPlmChange(@Nonnull PatchPlmChangeRequest request, @Nullable Options options) {
         RequestOperation<PatchPlmChangeRequest, PatchPlmChangeResponse> operation
-              = new PatchPlmChange.Sync(sdkConfiguration, _headers);
+              = new PatchPlmChange.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -635,8 +897,23 @@ public class Plm {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchPlmDocumentResponse patchPlmDocument(@Nonnull PatchPlmDocumentRequest request) {
+        return patchPlmDocument(request, null);
+    }
+
+    /**
+     * Update a document
+     * 
+     * <p>Updates the PlmDocument identified by `id`. Provide the unified PlmDocument fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchPlmDocumentResponse patchPlmDocument(@Nonnull PatchPlmDocumentRequest request, @Nullable Options options) {
         RequestOperation<PatchPlmDocumentRequest, PatchPlmDocumentResponse> operation
-              = new PatchPlmDocument.Sync(sdkConfiguration, _headers);
+              = new PatchPlmDocument.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -663,8 +940,23 @@ public class Plm {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchPlmPartResponse patchPlmPart(@Nonnull PatchPlmPartRequest request) {
+        return patchPlmPart(request, null);
+    }
+
+    /**
+     * Update a part
+     * 
+     * <p>Updates the PlmPart identified by `id`. Provide the unified PlmPart fields to change in the request
+     * body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchPlmPartResponse patchPlmPart(@Nonnull PatchPlmPartRequest request, @Nullable Options options) {
         RequestOperation<PatchPlmPartRequest, PatchPlmPartResponse> operation
-              = new PatchPlmPart.Sync(sdkConfiguration, _headers);
+              = new PatchPlmPart.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -689,8 +981,22 @@ public class Plm {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemovePlmBomlineResponse removePlmBomline(@Nonnull RemovePlmBomlineRequest request) {
+        return removePlmBomline(request, null);
+    }
+
+    /**
+     * Remove a bomline
+     * 
+     * <p>Deletes the PlmBomline identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemovePlmBomlineResponse removePlmBomline(@Nonnull RemovePlmBomlineRequest request, @Nullable Options options) {
         RequestOperation<RemovePlmBomlineRequest, RemovePlmBomlineResponse> operation
-              = new RemovePlmBomline.Sync(sdkConfiguration, _headers);
+              = new RemovePlmBomline.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -715,8 +1021,22 @@ public class Plm {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemovePlmPartResponse removePlmPart(@Nonnull RemovePlmPartRequest request) {
+        return removePlmPart(request, null);
+    }
+
+    /**
+     * Remove a part
+     * 
+     * <p>Deletes the PlmPart identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemovePlmPartResponse removePlmPart(@Nonnull RemovePlmPartRequest request, @Nullable Options options) {
         RequestOperation<RemovePlmPartRequest, RemovePlmPartResponse> operation
-              = new RemovePlmPart.Sync(sdkConfiguration, _headers);
+              = new RemovePlmPart.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -743,8 +1063,23 @@ public class Plm {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdatePlmBomlineResponse updatePlmBomline(@Nonnull UpdatePlmBomlineRequest request) {
+        return updatePlmBomline(request, null);
+    }
+
+    /**
+     * Update a bomline
+     * 
+     * <p>Updates the PlmBomline identified by `id`. Provide the unified PlmBomline fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdatePlmBomlineResponse updatePlmBomline(@Nonnull UpdatePlmBomlineRequest request, @Nullable Options options) {
         RequestOperation<UpdatePlmBomlineRequest, UpdatePlmBomlineResponse> operation
-              = new UpdatePlmBomline.Sync(sdkConfiguration, _headers);
+              = new UpdatePlmBomline.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -771,8 +1106,23 @@ public class Plm {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdatePlmChangeResponse updatePlmChange(@Nonnull UpdatePlmChangeRequest request) {
+        return updatePlmChange(request, null);
+    }
+
+    /**
+     * Update a change
+     * 
+     * <p>Updates the PlmChange identified by `id`. Provide the unified PlmChange fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdatePlmChangeResponse updatePlmChange(@Nonnull UpdatePlmChangeRequest request, @Nullable Options options) {
         RequestOperation<UpdatePlmChangeRequest, UpdatePlmChangeResponse> operation
-              = new UpdatePlmChange.Sync(sdkConfiguration, _headers);
+              = new UpdatePlmChange.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -799,8 +1149,23 @@ public class Plm {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdatePlmDocumentResponse updatePlmDocument(@Nonnull UpdatePlmDocumentRequest request) {
+        return updatePlmDocument(request, null);
+    }
+
+    /**
+     * Update a document
+     * 
+     * <p>Updates the PlmDocument identified by `id`. Provide the unified PlmDocument fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdatePlmDocumentResponse updatePlmDocument(@Nonnull UpdatePlmDocumentRequest request, @Nullable Options options) {
         RequestOperation<UpdatePlmDocumentRequest, UpdatePlmDocumentResponse> operation
-              = new UpdatePlmDocument.Sync(sdkConfiguration, _headers);
+              = new UpdatePlmDocument.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -827,8 +1192,23 @@ public class Plm {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdatePlmPartResponse updatePlmPart(@Nonnull UpdatePlmPartRequest request) {
+        return updatePlmPart(request, null);
+    }
+
+    /**
+     * Update a part
+     * 
+     * <p>Updates the PlmPart identified by `id`. Provide the unified PlmPart fields to change in the request
+     * body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdatePlmPartResponse updatePlmPart(@Nonnull UpdatePlmPartRequest request, @Nullable Options options) {
         RequestOperation<UpdatePlmPartRequest, UpdatePlmPartResponse> operation
-              = new UpdatePlmPart.Sync(sdkConfiguration, _headers);
+              = new UpdatePlmPart.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

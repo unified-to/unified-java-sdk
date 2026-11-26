@@ -6,20 +6,30 @@ package to.unified.unified_java_sdk.models.operations.async;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.ListComputeTemplatesRequest;
 import to.unified.unified_java_sdk.operations.ListComputeTemplates;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListComputeTemplatesRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private ListComputeTemplatesRequest request;
+    private final Options.Builder optionsBuilder;
 
     public ListComputeTemplatesRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public ListComputeTemplatesRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public ListComputeTemplatesRequestBuilder request(@Nonnull ListComputeTemplatesRequest request) {
@@ -44,8 +54,9 @@ public class ListComputeTemplatesRequestBuilder {
     * @return The response from the server.
     */
     public CompletableFuture<ListComputeTemplatesResponse> call() {
+        Options options = optionsBuilder.build();
         AsyncRequestOperation<ListComputeTemplatesRequest, ListComputeTemplatesResponse> operation
-              = new ListComputeTemplates.Async(sdkConfiguration, _headers);
+              = new ListComputeTemplates.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

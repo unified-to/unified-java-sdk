@@ -7,6 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 import static to.unified.unified_java_sdk.operations.Operations.RequestlessOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.String;
 import java.util.List;
 import to.unified.unified_java_sdk.models.operations.CreateUnifiedConnectionReauthRequest;
@@ -175,6 +176,7 @@ import to.unified.unified_java_sdk.operations.UpdateUnifiedWebhookResume;
 import to.unified.unified_java_sdk.operations.UpdateUnifiedWebhookTrigger;
 import to.unified.unified_java_sdk.operations.UpdateUnifiedWorkspaceintegration;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Unified {
@@ -221,8 +223,24 @@ public class Unified {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateUnifiedConnectionResponse createUnifiedConnection(@Nonnull Connection request) {
+        return createUnifiedConnection(request, null);
+    }
+
+    /**
+     * Create connection
+     * 
+     * <p>Used only to import existing customer credentials. To connect a new account, use the "Authorize or
+     * re-authorize a connection" auth URL instead. To change credentials on an existing connection, use
+     * "Update connection".
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateUnifiedConnectionResponse createUnifiedConnection(@Nonnull Connection request, @Nullable Options options) {
         RequestOperation<Connection, CreateUnifiedConnectionResponse> operation
-              = new CreateUnifiedConnection.Sync(sdkConfiguration, _headers);
+              = new CreateUnifiedConnection.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -251,8 +269,24 @@ public class Unified {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateUnifiedConnectionReauthResponse createUnifiedConnectionReauth(@Nonnull CreateUnifiedConnectionReauthRequest request) {
+        return createUnifiedConnectionReauth(request, null);
+    }
+
+    /**
+     * Create a re-authorization token for a connection
+     * 
+     * <p>Returns a short-lived, single-use token that lets your end-user re-authorize this existing
+     * connection in place via the "Authorize or re-authorize a connection" URL with connection_id and
+     * reauth_token.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateUnifiedConnectionReauthResponse createUnifiedConnectionReauth(@Nonnull CreateUnifiedConnectionReauthRequest request, @Nullable Options options) {
         RequestOperation<CreateUnifiedConnectionReauthRequest, CreateUnifiedConnectionReauthResponse> operation
-              = new CreateUnifiedConnectionReauth.Sync(sdkConfiguration, _headers);
+              = new CreateUnifiedConnectionReauth.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -273,8 +307,20 @@ public class Unified {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateUnifiedEnvironmentResponse createUnifiedEnvironment(@Nonnull List<String> request) {
+        return createUnifiedEnvironment(request, null);
+    }
+
+    /**
+     * Create new environments
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateUnifiedEnvironmentResponse createUnifiedEnvironment(@Nonnull List<String> request, @Nullable Options options) {
         RequestOperation<List<String>, CreateUnifiedEnvironmentResponse> operation
-              = new CreateUnifiedEnvironment.Sync(sdkConfiguration, _headers);
+              = new CreateUnifiedEnvironment.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -295,8 +341,20 @@ public class Unified {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateUnifiedSecretsmanagerResponse createUnifiedSecretsmanager(@Nonnull SecretsManager request) {
+        return createUnifiedSecretsmanager(request, null);
+    }
+
+    /**
+     * Create secrets manager
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateUnifiedSecretsmanagerResponse createUnifiedSecretsmanager(@Nonnull SecretsManager request, @Nullable Options options) {
         RequestOperation<SecretsManager, CreateUnifiedSecretsmanagerResponse> operation
-              = new CreateUnifiedSecretsmanager.Sync(sdkConfiguration, _headers);
+              = new CreateUnifiedSecretsmanager.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -325,8 +383,24 @@ public class Unified {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateUnifiedWebhookResponse createUnifiedWebhook(@Nonnull CreateUnifiedWebhookRequest request) {
+        return createUnifiedWebhook(request, null);
+    }
+
+    /**
+     * Create webhook subscription
+     * 
+     * <p>The data payload received by your server is described at https://docs.unified.to/unified/overview.
+     * The `interval` field can be set as low as 1 minute for paid accounts, and 60 minutes for free
+     * accounts.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateUnifiedWebhookResponse createUnifiedWebhook(@Nonnull CreateUnifiedWebhookRequest request, @Nullable Options options) {
         RequestOperation<CreateUnifiedWebhookRequest, CreateUnifiedWebhookResponse> operation
-              = new CreateUnifiedWebhook.Sync(sdkConfiguration, _headers);
+              = new CreateUnifiedWebhook.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -347,8 +421,20 @@ public class Unified {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateUnifiedWorkspaceintegrationResponse createUnifiedWorkspaceintegration(@Nonnull WorkspaceIntegration request) {
+        return createUnifiedWorkspaceintegration(request, null);
+    }
+
+    /**
+     * Create workspace integration
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateUnifiedWorkspaceintegrationResponse createUnifiedWorkspaceintegration(@Nonnull WorkspaceIntegration request, @Nullable Options options) {
         RequestOperation<WorkspaceIntegration, CreateUnifiedWorkspaceintegrationResponse> operation
-              = new CreateUnifiedWorkspaceintegration.Sync(sdkConfiguration, _headers);
+              = new CreateUnifiedWorkspaceintegration.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -369,8 +455,20 @@ public class Unified {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetUnifiedApicallResponse getUnifiedApicall(@Nonnull GetUnifiedApicallRequest request) {
+        return getUnifiedApicall(request, null);
+    }
+
+    /**
+     * Retrieve specific API Call by its ID
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetUnifiedApicallResponse getUnifiedApicall(@Nonnull GetUnifiedApicallRequest request, @Nullable Options options) {
         RequestOperation<GetUnifiedApicallRequest, GetUnifiedApicallResponse> operation
-              = new GetUnifiedApicall.Sync(sdkConfiguration, _headers);
+              = new GetUnifiedApicall.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -391,8 +489,20 @@ public class Unified {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetUnifiedConnectionResponse getUnifiedConnection(@Nonnull GetUnifiedConnectionRequest request) {
+        return getUnifiedConnection(request, null);
+    }
+
+    /**
+     * Retrieve connection
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetUnifiedConnectionResponse getUnifiedConnection(@Nonnull GetUnifiedConnectionRequest request, @Nullable Options options) {
         RequestOperation<GetUnifiedConnectionRequest, GetUnifiedConnectionResponse> operation
-              = new GetUnifiedConnection.Sync(sdkConfiguration, _headers);
+              = new GetUnifiedConnection.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -421,8 +531,24 @@ public class Unified {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetUnifiedIntegrationAuthResponse getUnifiedIntegrationAuth(@Nonnull GetUnifiedIntegrationAuthRequest request) {
+        return getUnifiedIntegrationAuth(request, null);
+    }
+
+    /**
+     * Authorize or re-authorize a connection
+     * 
+     * <p>Returns an authorization URL for the specified integration. After successful authorization, a new
+     * connection is created unless connection_id and reauth_token are provided, in which case the existing
+     * connection is updated in place.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetUnifiedIntegrationAuthResponse getUnifiedIntegrationAuth(@Nonnull GetUnifiedIntegrationAuthRequest request, @Nullable Options options) {
         RequestOperation<GetUnifiedIntegrationAuthRequest, GetUnifiedIntegrationAuthResponse> operation
-              = new GetUnifiedIntegrationAuth.Sync(sdkConfiguration, _headers);
+              = new GetUnifiedIntegrationAuth.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -443,8 +569,20 @@ public class Unified {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetUnifiedIssueResponse getUnifiedIssue(@Nonnull GetUnifiedIssueRequest request) {
+        return getUnifiedIssue(request, null);
+    }
+
+    /**
+     * Retrieve support issue
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetUnifiedIssueResponse getUnifiedIssue(@Nonnull GetUnifiedIssueRequest request, @Nullable Options options) {
         RequestOperation<GetUnifiedIssueRequest, GetUnifiedIssueResponse> operation
-              = new GetUnifiedIssue.Sync(sdkConfiguration, _headers);
+              = new GetUnifiedIssue.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -465,8 +603,20 @@ public class Unified {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetUnifiedSecretsmanagerResponse getUnifiedSecretsmanager(@Nonnull GetUnifiedSecretsmanagerRequest request) {
+        return getUnifiedSecretsmanager(request, null);
+    }
+
+    /**
+     * Retrieve secrets manager
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetUnifiedSecretsmanagerResponse getUnifiedSecretsmanager(@Nonnull GetUnifiedSecretsmanagerRequest request, @Nullable Options options) {
         RequestOperation<GetUnifiedSecretsmanagerRequest, GetUnifiedSecretsmanagerResponse> operation
-              = new GetUnifiedSecretsmanager.Sync(sdkConfiguration, _headers);
+              = new GetUnifiedSecretsmanager.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -487,8 +637,20 @@ public class Unified {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetUnifiedWebhookResponse getUnifiedWebhook(@Nonnull GetUnifiedWebhookRequest request) {
+        return getUnifiedWebhook(request, null);
+    }
+
+    /**
+     * Retrieve webhook by its ID
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetUnifiedWebhookResponse getUnifiedWebhook(@Nonnull GetUnifiedWebhookRequest request, @Nullable Options options) {
         RequestOperation<GetUnifiedWebhookRequest, GetUnifiedWebhookResponse> operation
-              = new GetUnifiedWebhook.Sync(sdkConfiguration, _headers);
+              = new GetUnifiedWebhook.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -509,8 +671,20 @@ public class Unified {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetUnifiedWorkspaceintegrationResponse getUnifiedWorkspaceintegration(@Nonnull GetUnifiedWorkspaceintegrationRequest request) {
+        return getUnifiedWorkspaceintegration(request, null);
+    }
+
+    /**
+     * Retrieve workspace integration
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetUnifiedWorkspaceintegrationResponse getUnifiedWorkspaceintegration(@Nonnull GetUnifiedWorkspaceintegrationRequest request, @Nullable Options options) {
         RequestOperation<GetUnifiedWorkspaceintegrationRequest, GetUnifiedWorkspaceintegrationResponse> operation
-              = new GetUnifiedWorkspaceintegration.Sync(sdkConfiguration, _headers);
+              = new GetUnifiedWorkspaceintegration.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -531,8 +705,20 @@ public class Unified {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListUnifiedApicallsResponse listUnifiedApicalls(@Nonnull ListUnifiedApicallsRequest request) {
+        return listUnifiedApicalls(request, null);
+    }
+
+    /**
+     * Returns API Calls
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListUnifiedApicallsResponse listUnifiedApicalls(@Nonnull ListUnifiedApicallsRequest request, @Nullable Options options) {
         RequestOperation<ListUnifiedApicallsRequest, ListUnifiedApicallsResponse> operation
-              = new ListUnifiedApicalls.Sync(sdkConfiguration, _headers);
+              = new ListUnifiedApicalls.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -553,8 +739,20 @@ public class Unified {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListUnifiedConnectionsResponse listUnifiedConnections(@Nonnull ListUnifiedConnectionsRequest request) {
+        return listUnifiedConnections(request, null);
+    }
+
+    /**
+     * List all connections
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListUnifiedConnectionsResponse listUnifiedConnections(@Nonnull ListUnifiedConnectionsRequest request, @Nullable Options options) {
         RequestOperation<ListUnifiedConnectionsRequest, ListUnifiedConnectionsResponse> operation
-              = new ListUnifiedConnections.Sync(sdkConfiguration, _headers);
+              = new ListUnifiedConnections.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -574,8 +772,19 @@ public class Unified {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListUnifiedEnvironmentsResponse listUnifiedEnvironmentsDirect() {
+        return listUnifiedEnvironments(null);
+    }
+
+    /**
+     * Returns all environments
+     * 
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListUnifiedEnvironmentsResponse listUnifiedEnvironments(@Nullable Options options) {
         RequestlessOperation<ListUnifiedEnvironmentsResponse> operation
-            = new ListUnifiedEnvironments.Sync(sdkConfiguration, _headers);
+            = new ListUnifiedEnvironments.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest());
     }
 
@@ -600,8 +809,22 @@ public class Unified {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListUnifiedIntegrationWorkspacesResponse listUnifiedIntegrationWorkspaces(@Nonnull ListUnifiedIntegrationWorkspacesRequest request) {
+        return listUnifiedIntegrationWorkspaces(request, null);
+    }
+
+    /**
+     * Returns all activated integrations in a workspace
+     * 
+     * <p>No authentication required as this is to be used by front-end interface
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListUnifiedIntegrationWorkspacesResponse listUnifiedIntegrationWorkspaces(@Nonnull ListUnifiedIntegrationWorkspacesRequest request, @Nullable Options options) {
         RequestOperation<ListUnifiedIntegrationWorkspacesRequest, ListUnifiedIntegrationWorkspacesResponse> operation
-              = new ListUnifiedIntegrationWorkspaces.Sync(sdkConfiguration, _headers);
+              = new ListUnifiedIntegrationWorkspaces.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -622,8 +845,20 @@ public class Unified {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListUnifiedIntegrationsResponse listUnifiedIntegrations(@Nonnull ListUnifiedIntegrationsRequest request) {
+        return listUnifiedIntegrations(request, null);
+    }
+
+    /**
+     * Returns all integrations
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListUnifiedIntegrationsResponse listUnifiedIntegrations(@Nonnull ListUnifiedIntegrationsRequest request, @Nullable Options options) {
         RequestOperation<ListUnifiedIntegrationsRequest, ListUnifiedIntegrationsResponse> operation
-              = new ListUnifiedIntegrations.Sync(sdkConfiguration, _headers);
+              = new ListUnifiedIntegrations.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -644,8 +879,20 @@ public class Unified {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListUnifiedIssuesResponse listUnifiedIssues(@Nonnull ListUnifiedIssuesRequest request) {
+        return listUnifiedIssues(request, null);
+    }
+
+    /**
+     * List support issues
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListUnifiedIssuesResponse listUnifiedIssues(@Nonnull ListUnifiedIssuesRequest request, @Nullable Options options) {
         RequestOperation<ListUnifiedIssuesRequest, ListUnifiedIssuesResponse> operation
-              = new ListUnifiedIssues.Sync(sdkConfiguration, _headers);
+              = new ListUnifiedIssues.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -666,8 +913,20 @@ public class Unified {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListUnifiedNotificationsResponse listUnifiedNotifications(@Nonnull ListUnifiedNotificationsRequest request) {
+        return listUnifiedNotifications(request, null);
+    }
+
+    /**
+     * List event notifications
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListUnifiedNotificationsResponse listUnifiedNotifications(@Nonnull ListUnifiedNotificationsRequest request, @Nullable Options options) {
         RequestOperation<ListUnifiedNotificationsRequest, ListUnifiedNotificationsResponse> operation
-              = new ListUnifiedNotifications.Sync(sdkConfiguration, _headers);
+              = new ListUnifiedNotifications.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -687,8 +946,19 @@ public class Unified {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListUnifiedSecretsmanagerInstructionsResponse listUnifiedSecretsmanagerInstructionsDirect() {
+        return listUnifiedSecretsmanagerInstructions(null);
+    }
+
+    /**
+     * List secrets manager setup instructions
+     * 
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListUnifiedSecretsmanagerInstructionsResponse listUnifiedSecretsmanagerInstructions(@Nullable Options options) {
         RequestlessOperation<ListUnifiedSecretsmanagerInstructionsResponse> operation
-            = new ListUnifiedSecretsmanagerInstructions.Sync(sdkConfiguration, _headers);
+            = new ListUnifiedSecretsmanagerInstructions.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest());
     }
 
@@ -709,8 +979,20 @@ public class Unified {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListUnifiedSecretsmanagerSecretsResponse listUnifiedSecretsmanagerSecrets(@Nonnull ListUnifiedSecretsmanagerSecretsRequest request) {
+        return listUnifiedSecretsmanagerSecrets(request, null);
+    }
+
+    /**
+     * List secrets in a secrets manager
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListUnifiedSecretsmanagerSecretsResponse listUnifiedSecretsmanagerSecrets(@Nonnull ListUnifiedSecretsmanagerSecretsRequest request, @Nullable Options options) {
         RequestOperation<ListUnifiedSecretsmanagerSecretsRequest, ListUnifiedSecretsmanagerSecretsResponse> operation
-              = new ListUnifiedSecretsmanagerSecrets.Sync(sdkConfiguration, _headers);
+              = new ListUnifiedSecretsmanagerSecrets.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -731,8 +1013,20 @@ public class Unified {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListUnifiedSecretsmanagersResponse listUnifiedSecretsmanagers(@Nonnull ListUnifiedSecretsmanagersRequest request) {
+        return listUnifiedSecretsmanagers(request, null);
+    }
+
+    /**
+     * List secrets managers
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListUnifiedSecretsmanagersResponse listUnifiedSecretsmanagers(@Nonnull ListUnifiedSecretsmanagersRequest request, @Nullable Options options) {
         RequestOperation<ListUnifiedSecretsmanagersRequest, ListUnifiedSecretsmanagersResponse> operation
-              = new ListUnifiedSecretsmanagers.Sync(sdkConfiguration, _headers);
+              = new ListUnifiedSecretsmanagers.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -753,8 +1047,20 @@ public class Unified {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListUnifiedWebhooksResponse listUnifiedWebhooks(@Nonnull ListUnifiedWebhooksRequest request) {
+        return listUnifiedWebhooks(request, null);
+    }
+
+    /**
+     * Returns all registered webhooks
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListUnifiedWebhooksResponse listUnifiedWebhooks(@Nonnull ListUnifiedWebhooksRequest request, @Nullable Options options) {
         RequestOperation<ListUnifiedWebhooksRequest, ListUnifiedWebhooksResponse> operation
-              = new ListUnifiedWebhooks.Sync(sdkConfiguration, _headers);
+              = new ListUnifiedWebhooks.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -775,8 +1081,20 @@ public class Unified {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListUnifiedWorkspaceintegrationsResponse listUnifiedWorkspaceintegrations(@Nonnull ListUnifiedWorkspaceintegrationsRequest request) {
+        return listUnifiedWorkspaceintegrations(request, null);
+    }
+
+    /**
+     * List workspace integrations
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListUnifiedWorkspaceintegrationsResponse listUnifiedWorkspaceintegrations(@Nonnull ListUnifiedWorkspaceintegrationsRequest request, @Nullable Options options) {
         RequestOperation<ListUnifiedWorkspaceintegrationsRequest, ListUnifiedWorkspaceintegrationsResponse> operation
-              = new ListUnifiedWorkspaceintegrations.Sync(sdkConfiguration, _headers);
+              = new ListUnifiedWorkspaceintegrations.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -797,8 +1115,20 @@ public class Unified {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchUnifiedConnectionResponse patchUnifiedConnection(@Nonnull PatchUnifiedConnectionRequest request) {
+        return patchUnifiedConnection(request, null);
+    }
+
+    /**
+     * Update connection
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchUnifiedConnectionResponse patchUnifiedConnection(@Nonnull PatchUnifiedConnectionRequest request, @Nullable Options options) {
         RequestOperation<PatchUnifiedConnectionRequest, PatchUnifiedConnectionResponse> operation
-              = new PatchUnifiedConnection.Sync(sdkConfiguration, _headers);
+              = new PatchUnifiedConnection.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -819,8 +1149,20 @@ public class Unified {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchUnifiedSecretsmanagerResponse patchUnifiedSecretsmanager(@Nonnull PatchUnifiedSecretsmanagerRequest request) {
+        return patchUnifiedSecretsmanager(request, null);
+    }
+
+    /**
+     * Update secrets manager
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchUnifiedSecretsmanagerResponse patchUnifiedSecretsmanager(@Nonnull PatchUnifiedSecretsmanagerRequest request, @Nullable Options options) {
         RequestOperation<PatchUnifiedSecretsmanagerRequest, PatchUnifiedSecretsmanagerResponse> operation
-              = new PatchUnifiedSecretsmanager.Sync(sdkConfiguration, _headers);
+              = new PatchUnifiedSecretsmanager.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -841,8 +1183,20 @@ public class Unified {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchUnifiedWebhookResponse patchUnifiedWebhook(@Nonnull PatchUnifiedWebhookRequest request) {
+        return patchUnifiedWebhook(request, null);
+    }
+
+    /**
+     * Update webhook subscription
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchUnifiedWebhookResponse patchUnifiedWebhook(@Nonnull PatchUnifiedWebhookRequest request, @Nullable Options options) {
         RequestOperation<PatchUnifiedWebhookRequest, PatchUnifiedWebhookResponse> operation
-              = new PatchUnifiedWebhook.Sync(sdkConfiguration, _headers);
+              = new PatchUnifiedWebhook.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -891,8 +1245,34 @@ public class Unified {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchUnifiedWebhookResumeResponse patchUnifiedWebhookResume(@Nonnull PatchUnifiedWebhookResumeRequest request) {
+        return patchUnifiedWebhookResume(request, null);
+    }
+
+    /**
+     * Resume an unhealthy webhook subscription
+     * 
+     * <p>Sets is_healthy back to true and restarts the webhook. Fix the cause first (hook_url, connection
+     * auth); the connection must be healthy. Virtual: continues from where it stopped.
+     * 
+     * <p>A webhook that went unhealthy mid-initial-sync before resume was available restarts its initial
+     * sync, so deleting and recreating it is safer. Native: re-subscribes if the provider subscription is
+     * missing or expired. Events received while the webhook was unhealthy are not re-sent.
+     * 
+     * <p>Webhook sync (beta): continues from the stored sync token. Page cursors are not stored yet, so a
+     * resume can re-send some records. Virtual and initial-sync webhooks that have been unhealthy for more
+     * than 7 days cannot be resumed, because resuming would re-send every change since then; delete and
+     * recreate them instead.
+     * 
+     * <p>MCP Events subscriptions cannot be resumed; they are managed by their MCP client.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchUnifiedWebhookResumeResponse patchUnifiedWebhookResume(@Nonnull PatchUnifiedWebhookResumeRequest request, @Nullable Options options) {
         RequestOperation<PatchUnifiedWebhookResumeRequest, PatchUnifiedWebhookResumeResponse> operation
-              = new PatchUnifiedWebhookResume.Sync(sdkConfiguration, _headers);
+              = new PatchUnifiedWebhookResume.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -913,8 +1293,20 @@ public class Unified {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchUnifiedWebhookTriggerResponse patchUnifiedWebhookTrigger(@Nonnull PatchUnifiedWebhookTriggerRequest request) {
+        return patchUnifiedWebhookTrigger(request, null);
+    }
+
+    /**
+     * Trigger webhook
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchUnifiedWebhookTriggerResponse patchUnifiedWebhookTrigger(@Nonnull PatchUnifiedWebhookTriggerRequest request, @Nullable Options options) {
         RequestOperation<PatchUnifiedWebhookTriggerRequest, PatchUnifiedWebhookTriggerResponse> operation
-              = new PatchUnifiedWebhookTrigger.Sync(sdkConfiguration, _headers);
+              = new PatchUnifiedWebhookTrigger.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -935,8 +1327,20 @@ public class Unified {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchUnifiedWorkspaceintegrationResponse patchUnifiedWorkspaceintegration(@Nonnull PatchUnifiedWorkspaceintegrationRequest request) {
+        return patchUnifiedWorkspaceintegration(request, null);
+    }
+
+    /**
+     * Update workspace integration
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchUnifiedWorkspaceintegrationResponse patchUnifiedWorkspaceintegration(@Nonnull PatchUnifiedWorkspaceintegrationRequest request, @Nullable Options options) {
         RequestOperation<PatchUnifiedWorkspaceintegrationRequest, PatchUnifiedWorkspaceintegrationResponse> operation
-              = new PatchUnifiedWorkspaceintegration.Sync(sdkConfiguration, _headers);
+              = new PatchUnifiedWorkspaceintegration.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -957,8 +1361,20 @@ public class Unified {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveUnifiedConnectionResponse removeUnifiedConnection(@Nonnull RemoveUnifiedConnectionRequest request) {
+        return removeUnifiedConnection(request, null);
+    }
+
+    /**
+     * Remove connection
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveUnifiedConnectionResponse removeUnifiedConnection(@Nonnull RemoveUnifiedConnectionRequest request, @Nullable Options options) {
         RequestOperation<RemoveUnifiedConnectionRequest, RemoveUnifiedConnectionResponse> operation
-              = new RemoveUnifiedConnection.Sync(sdkConfiguration, _headers);
+              = new RemoveUnifiedConnection.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -979,8 +1395,20 @@ public class Unified {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveUnifiedEnvironmentResponse removeUnifiedEnvironment(@Nonnull RemoveUnifiedEnvironmentRequest request) {
+        return removeUnifiedEnvironment(request, null);
+    }
+
+    /**
+     * Remove an environment
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveUnifiedEnvironmentResponse removeUnifiedEnvironment(@Nonnull RemoveUnifiedEnvironmentRequest request, @Nullable Options options) {
         RequestOperation<RemoveUnifiedEnvironmentRequest, RemoveUnifiedEnvironmentResponse> operation
-              = new RemoveUnifiedEnvironment.Sync(sdkConfiguration, _headers);
+              = new RemoveUnifiedEnvironment.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1001,8 +1429,20 @@ public class Unified {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveUnifiedSecretsmanagerResponse removeUnifiedSecretsmanager(@Nonnull RemoveUnifiedSecretsmanagerRequest request) {
+        return removeUnifiedSecretsmanager(request, null);
+    }
+
+    /**
+     * Remove secrets manager
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveUnifiedSecretsmanagerResponse removeUnifiedSecretsmanager(@Nonnull RemoveUnifiedSecretsmanagerRequest request, @Nullable Options options) {
         RequestOperation<RemoveUnifiedSecretsmanagerRequest, RemoveUnifiedSecretsmanagerResponse> operation
-              = new RemoveUnifiedSecretsmanager.Sync(sdkConfiguration, _headers);
+              = new RemoveUnifiedSecretsmanager.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1023,8 +1463,20 @@ public class Unified {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveUnifiedWebhookResponse removeUnifiedWebhook(@Nonnull RemoveUnifiedWebhookRequest request) {
+        return removeUnifiedWebhook(request, null);
+    }
+
+    /**
+     * Remove webhook subscription
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveUnifiedWebhookResponse removeUnifiedWebhook(@Nonnull RemoveUnifiedWebhookRequest request, @Nullable Options options) {
         RequestOperation<RemoveUnifiedWebhookRequest, RemoveUnifiedWebhookResponse> operation
-              = new RemoveUnifiedWebhook.Sync(sdkConfiguration, _headers);
+              = new RemoveUnifiedWebhook.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1045,8 +1497,20 @@ public class Unified {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveUnifiedWorkspaceintegrationResponse removeUnifiedWorkspaceintegration(@Nonnull RemoveUnifiedWorkspaceintegrationRequest request) {
+        return removeUnifiedWorkspaceintegration(request, null);
+    }
+
+    /**
+     * Remove workspace integration
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveUnifiedWorkspaceintegrationResponse removeUnifiedWorkspaceintegration(@Nonnull RemoveUnifiedWorkspaceintegrationRequest request, @Nullable Options options) {
         RequestOperation<RemoveUnifiedWorkspaceintegrationRequest, RemoveUnifiedWorkspaceintegrationResponse> operation
-              = new RemoveUnifiedWorkspaceintegration.Sync(sdkConfiguration, _headers);
+              = new RemoveUnifiedWorkspaceintegration.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1067,8 +1531,20 @@ public class Unified {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateUnifiedConnectionResponse updateUnifiedConnection(@Nonnull UpdateUnifiedConnectionRequest request) {
+        return updateUnifiedConnection(request, null);
+    }
+
+    /**
+     * Update connection
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateUnifiedConnectionResponse updateUnifiedConnection(@Nonnull UpdateUnifiedConnectionRequest request, @Nullable Options options) {
         RequestOperation<UpdateUnifiedConnectionRequest, UpdateUnifiedConnectionResponse> operation
-              = new UpdateUnifiedConnection.Sync(sdkConfiguration, _headers);
+              = new UpdateUnifiedConnection.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1089,8 +1565,20 @@ public class Unified {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateUnifiedSecretsmanagerResponse updateUnifiedSecretsmanager(@Nonnull UpdateUnifiedSecretsmanagerRequest request) {
+        return updateUnifiedSecretsmanager(request, null);
+    }
+
+    /**
+     * Update secrets manager
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateUnifiedSecretsmanagerResponse updateUnifiedSecretsmanager(@Nonnull UpdateUnifiedSecretsmanagerRequest request, @Nullable Options options) {
         RequestOperation<UpdateUnifiedSecretsmanagerRequest, UpdateUnifiedSecretsmanagerResponse> operation
-              = new UpdateUnifiedSecretsmanager.Sync(sdkConfiguration, _headers);
+              = new UpdateUnifiedSecretsmanager.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1111,8 +1599,20 @@ public class Unified {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateUnifiedWebhookResponse updateUnifiedWebhook(@Nonnull UpdateUnifiedWebhookRequest request) {
+        return updateUnifiedWebhook(request, null);
+    }
+
+    /**
+     * Update webhook subscription
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateUnifiedWebhookResponse updateUnifiedWebhook(@Nonnull UpdateUnifiedWebhookRequest request, @Nullable Options options) {
         RequestOperation<UpdateUnifiedWebhookRequest, UpdateUnifiedWebhookResponse> operation
-              = new UpdateUnifiedWebhook.Sync(sdkConfiguration, _headers);
+              = new UpdateUnifiedWebhook.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1161,8 +1661,34 @@ public class Unified {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateUnifiedWebhookResumeResponse updateUnifiedWebhookResume(@Nonnull UpdateUnifiedWebhookResumeRequest request) {
+        return updateUnifiedWebhookResume(request, null);
+    }
+
+    /**
+     * Resume an unhealthy webhook subscription
+     * 
+     * <p>Sets is_healthy back to true and restarts the webhook. Fix the cause first (hook_url, connection
+     * auth); the connection must be healthy. Virtual: continues from where it stopped.
+     * 
+     * <p>A webhook that went unhealthy mid-initial-sync before resume was available restarts its initial
+     * sync, so deleting and recreating it is safer. Native: re-subscribes if the provider subscription is
+     * missing or expired. Events received while the webhook was unhealthy are not re-sent.
+     * 
+     * <p>Webhook sync (beta): continues from the stored sync token. Page cursors are not stored yet, so a
+     * resume can re-send some records. Virtual and initial-sync webhooks that have been unhealthy for more
+     * than 7 days cannot be resumed, because resuming would re-send every change since then; delete and
+     * recreate them instead.
+     * 
+     * <p>MCP Events subscriptions cannot be resumed; they are managed by their MCP client.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateUnifiedWebhookResumeResponse updateUnifiedWebhookResume(@Nonnull UpdateUnifiedWebhookResumeRequest request, @Nullable Options options) {
         RequestOperation<UpdateUnifiedWebhookResumeRequest, UpdateUnifiedWebhookResumeResponse> operation
-              = new UpdateUnifiedWebhookResume.Sync(sdkConfiguration, _headers);
+              = new UpdateUnifiedWebhookResume.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1183,8 +1709,20 @@ public class Unified {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateUnifiedWebhookTriggerResponse updateUnifiedWebhookTrigger(@Nonnull UpdateUnifiedWebhookTriggerRequest request) {
+        return updateUnifiedWebhookTrigger(request, null);
+    }
+
+    /**
+     * Trigger webhook
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateUnifiedWebhookTriggerResponse updateUnifiedWebhookTrigger(@Nonnull UpdateUnifiedWebhookTriggerRequest request, @Nullable Options options) {
         RequestOperation<UpdateUnifiedWebhookTriggerRequest, UpdateUnifiedWebhookTriggerResponse> operation
-              = new UpdateUnifiedWebhookTrigger.Sync(sdkConfiguration, _headers);
+              = new UpdateUnifiedWebhookTrigger.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1205,8 +1743,20 @@ public class Unified {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateUnifiedWorkspaceintegrationResponse updateUnifiedWorkspaceintegration(@Nonnull UpdateUnifiedWorkspaceintegrationRequest request) {
+        return updateUnifiedWorkspaceintegration(request, null);
+    }
+
+    /**
+     * Update workspace integration
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateUnifiedWorkspaceintegrationResponse updateUnifiedWorkspaceintegration(@Nonnull UpdateUnifiedWorkspaceintegrationRequest request, @Nullable Options options) {
         RequestOperation<UpdateUnifiedWorkspaceintegrationRequest, UpdateUnifiedWorkspaceintegrationResponse> operation
-              = new UpdateUnifiedWorkspaceintegration.Sync(sdkConfiguration, _headers);
+              = new UpdateUnifiedWorkspaceintegration.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

@@ -6,20 +6,30 @@ package to.unified.unified_java_sdk.models.operations.async;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.PatchDatastoreRecordRequest;
 import to.unified.unified_java_sdk.operations.PatchDatastoreRecord;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class PatchDatastoreRecordRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private PatchDatastoreRecordRequest request;
+    private final Options.Builder optionsBuilder;
 
     public PatchDatastoreRecordRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public PatchDatastoreRecordRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public PatchDatastoreRecordRequestBuilder request(@Nonnull PatchDatastoreRecordRequest request) {
@@ -44,8 +54,9 @@ public class PatchDatastoreRecordRequestBuilder {
     * @return The response from the server.
     */
     public CompletableFuture<PatchDatastoreRecordResponse> call() {
+        Options options = optionsBuilder.build();
         AsyncRequestOperation<PatchDatastoreRecordRequest, PatchDatastoreRecordResponse> operation
-              = new PatchDatastoreRecord.Async(sdkConfiguration, _headers);
+              = new PatchDatastoreRecord.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

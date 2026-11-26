@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateAssessmentPackageRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAssessmentPackageRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateAssessmentPackageResponse;
@@ -39,6 +40,7 @@ import to.unified.unified_java_sdk.operations.PatchAssessmentPackage;
 import to.unified.unified_java_sdk.operations.RemoveAssessmentPackage;
 import to.unified.unified_java_sdk.operations.UpdateAssessmentPackage;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Package {
@@ -77,8 +79,20 @@ public class Package {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateAssessmentPackageResponse createAssessmentPackage(@Nonnull CreateAssessmentPackageRequest request) {
+        return createAssessmentPackage(request, null);
+    }
+
+    /**
+     * Create an assessment package
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateAssessmentPackageResponse createAssessmentPackage(@Nonnull CreateAssessmentPackageRequest request, @Nullable Options options) {
         RequestOperation<CreateAssessmentPackageRequest, CreateAssessmentPackageResponse> operation
-              = new CreateAssessmentPackage.Sync(sdkConfiguration, _headers);
+              = new CreateAssessmentPackage.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -99,8 +113,20 @@ public class Package {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAssessmentPackageResponse getAssessmentPackage(@Nonnull GetAssessmentPackageRequest request) {
+        return getAssessmentPackage(request, null);
+    }
+
+    /**
+     * Get an assessment package
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAssessmentPackageResponse getAssessmentPackage(@Nonnull GetAssessmentPackageRequest request, @Nullable Options options) {
         RequestOperation<GetAssessmentPackageRequest, GetAssessmentPackageResponse> operation
-              = new GetAssessmentPackage.Sync(sdkConfiguration, _headers);
+              = new GetAssessmentPackage.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -127,8 +153,23 @@ public class Package {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetVerificationPackageResponse getVerificationPackage(@Nonnull GetVerificationPackageRequest request) {
+        return getVerificationPackage(request, null);
+    }
+
+    /**
+     * Retrieve a package
+     * 
+     * <p>Retrieves a single VerificationPackage by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetVerificationPackageResponse getVerificationPackage(@Nonnull GetVerificationPackageRequest request, @Nullable Options options) {
         RequestOperation<GetVerificationPackageRequest, GetVerificationPackageResponse> operation
-              = new GetVerificationPackage.Sync(sdkConfiguration, _headers);
+              = new GetVerificationPackage.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -149,8 +190,20 @@ public class Package {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAssessmentPackagesResponse listAssessmentPackages(@Nonnull ListAssessmentPackagesRequest request) {
+        return listAssessmentPackages(request, null);
+    }
+
+    /**
+     * List assessment packages
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAssessmentPackagesResponse listAssessmentPackages(@Nonnull ListAssessmentPackagesRequest request, @Nullable Options options) {
         RequestOperation<ListAssessmentPackagesRequest, ListAssessmentPackagesResponse> operation
-              = new ListAssessmentPackages.Sync(sdkConfiguration, _headers);
+              = new ListAssessmentPackages.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -185,8 +238,27 @@ public class Package {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListVerificationPackagesResponse listVerificationPackages(@Nonnull ListVerificationPackagesRequest request) {
+        return listVerificationPackages(request, null);
+    }
+
+    /**
+     * List all packages
+     * 
+     * <p>Returns a list of VerificationPackages. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListVerificationPackagesResponse listVerificationPackages(@Nonnull ListVerificationPackagesRequest request, @Nullable Options options) {
         RequestOperation<ListVerificationPackagesRequest, ListVerificationPackagesResponse> operation
-              = new ListVerificationPackages.Sync(sdkConfiguration, _headers);
+              = new ListVerificationPackages.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -207,8 +279,20 @@ public class Package {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchAssessmentPackageResponse patchAssessmentPackage(@Nonnull PatchAssessmentPackageRequest request) {
+        return patchAssessmentPackage(request, null);
+    }
+
+    /**
+     * Update an assessment package
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchAssessmentPackageResponse patchAssessmentPackage(@Nonnull PatchAssessmentPackageRequest request, @Nullable Options options) {
         RequestOperation<PatchAssessmentPackageRequest, PatchAssessmentPackageResponse> operation
-              = new PatchAssessmentPackage.Sync(sdkConfiguration, _headers);
+              = new PatchAssessmentPackage.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -229,8 +313,20 @@ public class Package {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveAssessmentPackageResponse removeAssessmentPackage(@Nonnull RemoveAssessmentPackageRequest request) {
+        return removeAssessmentPackage(request, null);
+    }
+
+    /**
+     * Delete an assessment package
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveAssessmentPackageResponse removeAssessmentPackage(@Nonnull RemoveAssessmentPackageRequest request, @Nullable Options options) {
         RequestOperation<RemoveAssessmentPackageRequest, RemoveAssessmentPackageResponse> operation
-              = new RemoveAssessmentPackage.Sync(sdkConfiguration, _headers);
+              = new RemoveAssessmentPackage.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -251,8 +347,20 @@ public class Package {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateAssessmentPackageResponse updateAssessmentPackage(@Nonnull UpdateAssessmentPackageRequest request) {
+        return updateAssessmentPackage(request, null);
+    }
+
+    /**
+     * Update an assessment package
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateAssessmentPackageResponse updateAssessmentPackage(@Nonnull UpdateAssessmentPackageRequest request, @Nullable Options options) {
         RequestOperation<UpdateAssessmentPackageRequest, UpdateAssessmentPackageResponse> operation
-              = new UpdateAssessmentPackage.Sync(sdkConfiguration, _headers);
+              = new UpdateAssessmentPackage.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

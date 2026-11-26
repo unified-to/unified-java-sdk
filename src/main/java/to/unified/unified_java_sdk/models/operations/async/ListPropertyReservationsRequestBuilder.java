@@ -6,20 +6,30 @@ package to.unified.unified_java_sdk.models.operations.async;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.ListPropertyReservationsRequest;
 import to.unified.unified_java_sdk.operations.ListPropertyReservations;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListPropertyReservationsRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private ListPropertyReservationsRequest request;
+    private final Options.Builder optionsBuilder;
 
     public ListPropertyReservationsRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public ListPropertyReservationsRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public ListPropertyReservationsRequestBuilder request(@Nonnull ListPropertyReservationsRequest request) {
@@ -44,8 +54,9 @@ public class ListPropertyReservationsRequestBuilder {
     * @return The response from the server.
     */
     public CompletableFuture<ListPropertyReservationsResponse> call() {
+        Options options = optionsBuilder.build();
         AsyncRequestOperation<ListPropertyReservationsRequest, ListPropertyReservationsResponse> operation
-              = new ListPropertyReservations.Async(sdkConfiguration, _headers);
+              = new ListPropertyReservations.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

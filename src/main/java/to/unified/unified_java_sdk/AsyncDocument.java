@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateAtsDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHealthcareDocumentRequest;
@@ -112,6 +113,7 @@ import to.unified.unified_java_sdk.operations.UpdateHrisDocument;
 import to.unified.unified_java_sdk.operations.UpdatePlmDocument;
 import to.unified.unified_java_sdk.operations.UpdateSigningDocument;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncDocument {
@@ -156,8 +158,22 @@ public class AsyncDocument {
      * @return {@code CompletableFuture<CreateAtsDocumentResponse>} - The async response
      */
     public CompletableFuture<CreateAtsDocumentResponse> createAtsDocument(@Nonnull CreateAtsDocumentRequest request) {
+        return createAtsDocument(request, null);
+    }
+
+    /**
+     * Create a document
+     * 
+     * <p>Creates a AtsDocument. Provide the unified AtsDocument fields in the request body; they are mapped
+     * to the provider's API. Returns the created AtsDocument.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateAtsDocumentResponse>} - The async response
+     */
+    public CompletableFuture<CreateAtsDocumentResponse> createAtsDocument(@Nonnull CreateAtsDocumentRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateAtsDocumentRequest, CreateAtsDocumentResponse> operation
-              = new CreateAtsDocument.Async(sdkConfiguration, _headers);
+              = new CreateAtsDocument.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -185,8 +201,22 @@ public class AsyncDocument {
      * @return {@code CompletableFuture<CreateHealthcareDocumentResponse>} - The async response
      */
     public CompletableFuture<CreateHealthcareDocumentResponse> createHealthcareDocument(@Nonnull CreateHealthcareDocumentRequest request) {
+        return createHealthcareDocument(request, null);
+    }
+
+    /**
+     * Create a document
+     * 
+     * <p>Creates a HealthcareDocument. Provide the unified HealthcareDocument fields in the request body;
+     * they are mapped to the provider's API. Returns the created HealthcareDocument.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateHealthcareDocumentResponse>} - The async response
+     */
+    public CompletableFuture<CreateHealthcareDocumentResponse> createHealthcareDocument(@Nonnull CreateHealthcareDocumentRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateHealthcareDocumentRequest, CreateHealthcareDocumentResponse> operation
-              = new CreateHealthcareDocument.Async(sdkConfiguration, _headers);
+              = new CreateHealthcareDocument.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -214,8 +244,22 @@ public class AsyncDocument {
      * @return {@code CompletableFuture<CreateHrisDocumentResponse>} - The async response
      */
     public CompletableFuture<CreateHrisDocumentResponse> createHrisDocument(@Nonnull CreateHrisDocumentRequest request) {
+        return createHrisDocument(request, null);
+    }
+
+    /**
+     * Create a document
+     * 
+     * <p>Creates a HrisDocument. Provide the unified HrisDocument fields in the request body; they are mapped
+     * to the provider's API. Returns the created HrisDocument.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateHrisDocumentResponse>} - The async response
+     */
+    public CompletableFuture<CreateHrisDocumentResponse> createHrisDocument(@Nonnull CreateHrisDocumentRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateHrisDocumentRequest, CreateHrisDocumentResponse> operation
-              = new CreateHrisDocument.Async(sdkConfiguration, _headers);
+              = new CreateHrisDocument.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -243,8 +287,22 @@ public class AsyncDocument {
      * @return {@code CompletableFuture<CreatePlmDocumentResponse>} - The async response
      */
     public CompletableFuture<CreatePlmDocumentResponse> createPlmDocument(@Nonnull CreatePlmDocumentRequest request) {
+        return createPlmDocument(request, null);
+    }
+
+    /**
+     * Create a document
+     * 
+     * <p>Creates a PlmDocument. Provide the unified PlmDocument fields in the request body; they are mapped
+     * to the provider's API. Returns the created PlmDocument.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreatePlmDocumentResponse>} - The async response
+     */
+    public CompletableFuture<CreatePlmDocumentResponse> createPlmDocument(@Nonnull CreatePlmDocumentRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreatePlmDocumentRequest, CreatePlmDocumentResponse> operation
-              = new CreatePlmDocument.Async(sdkConfiguration, _headers);
+              = new CreatePlmDocument.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -272,8 +330,22 @@ public class AsyncDocument {
      * @return {@code CompletableFuture<CreateSigningDocumentResponse>} - The async response
      */
     public CompletableFuture<CreateSigningDocumentResponse> createSigningDocument(@Nonnull CreateSigningDocumentRequest request) {
+        return createSigningDocument(request, null);
+    }
+
+    /**
+     * Create a document
+     * 
+     * <p>Creates a SigningDocument. Provide the unified SigningDocument fields in the request body; they are
+     * mapped to the provider's API. Returns the created SigningDocument.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateSigningDocumentResponse>} - The async response
+     */
+    public CompletableFuture<CreateSigningDocumentResponse> createSigningDocument(@Nonnull CreateSigningDocumentRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateSigningDocumentRequest, CreateSigningDocumentResponse> operation
-              = new CreateSigningDocument.Async(sdkConfiguration, _headers);
+              = new CreateSigningDocument.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -301,8 +373,22 @@ public class AsyncDocument {
      * @return {@code CompletableFuture<GetAtsDocumentResponse>} - The async response
      */
     public CompletableFuture<GetAtsDocumentResponse> getAtsDocument(@Nonnull GetAtsDocumentRequest request) {
+        return getAtsDocument(request, null);
+    }
+
+    /**
+     * Retrieve a document
+     * 
+     * <p>Retrieves a single AtsDocument by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetAtsDocumentResponse>} - The async response
+     */
+    public CompletableFuture<GetAtsDocumentResponse> getAtsDocument(@Nonnull GetAtsDocumentRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetAtsDocumentRequest, GetAtsDocumentResponse> operation
-              = new GetAtsDocument.Async(sdkConfiguration, _headers);
+              = new GetAtsDocument.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -330,8 +416,22 @@ public class AsyncDocument {
      * @return {@code CompletableFuture<GetHealthcareDocumentResponse>} - The async response
      */
     public CompletableFuture<GetHealthcareDocumentResponse> getHealthcareDocument(@Nonnull GetHealthcareDocumentRequest request) {
+        return getHealthcareDocument(request, null);
+    }
+
+    /**
+     * Retrieve a document
+     * 
+     * <p>Retrieves a single HealthcareDocument by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetHealthcareDocumentResponse>} - The async response
+     */
+    public CompletableFuture<GetHealthcareDocumentResponse> getHealthcareDocument(@Nonnull GetHealthcareDocumentRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetHealthcareDocumentRequest, GetHealthcareDocumentResponse> operation
-              = new GetHealthcareDocument.Async(sdkConfiguration, _headers);
+              = new GetHealthcareDocument.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -359,8 +459,22 @@ public class AsyncDocument {
      * @return {@code CompletableFuture<GetHrisDocumentResponse>} - The async response
      */
     public CompletableFuture<GetHrisDocumentResponse> getHrisDocument(@Nonnull GetHrisDocumentRequest request) {
+        return getHrisDocument(request, null);
+    }
+
+    /**
+     * Retrieve a document
+     * 
+     * <p>Retrieves a single HrisDocument by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetHrisDocumentResponse>} - The async response
+     */
+    public CompletableFuture<GetHrisDocumentResponse> getHrisDocument(@Nonnull GetHrisDocumentRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetHrisDocumentRequest, GetHrisDocumentResponse> operation
-              = new GetHrisDocument.Async(sdkConfiguration, _headers);
+              = new GetHrisDocument.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -388,8 +502,22 @@ public class AsyncDocument {
      * @return {@code CompletableFuture<GetPlmDocumentResponse>} - The async response
      */
     public CompletableFuture<GetPlmDocumentResponse> getPlmDocument(@Nonnull GetPlmDocumentRequest request) {
+        return getPlmDocument(request, null);
+    }
+
+    /**
+     * Retrieve a document
+     * 
+     * <p>Retrieves a single PlmDocument by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetPlmDocumentResponse>} - The async response
+     */
+    public CompletableFuture<GetPlmDocumentResponse> getPlmDocument(@Nonnull GetPlmDocumentRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetPlmDocumentRequest, GetPlmDocumentResponse> operation
-              = new GetPlmDocument.Async(sdkConfiguration, _headers);
+              = new GetPlmDocument.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -417,8 +545,22 @@ public class AsyncDocument {
      * @return {@code CompletableFuture<GetSigningDocumentResponse>} - The async response
      */
     public CompletableFuture<GetSigningDocumentResponse> getSigningDocument(@Nonnull GetSigningDocumentRequest request) {
+        return getSigningDocument(request, null);
+    }
+
+    /**
+     * Retrieve a document
+     * 
+     * <p>Retrieves a single SigningDocument by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetSigningDocumentResponse>} - The async response
+     */
+    public CompletableFuture<GetSigningDocumentResponse> getSigningDocument(@Nonnull GetSigningDocumentRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetSigningDocumentRequest, GetSigningDocumentResponse> operation
-              = new GetSigningDocument.Async(sdkConfiguration, _headers);
+              = new GetSigningDocument.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -454,8 +596,26 @@ public class AsyncDocument {
      * @return {@code CompletableFuture<ListAtsDocumentsResponse>} - The async response
      */
     public CompletableFuture<ListAtsDocumentsResponse> listAtsDocuments(@Nonnull ListAtsDocumentsRequest request) {
+        return listAtsDocuments(request, null);
+    }
+
+    /**
+     * List all documents
+     * 
+     * <p>Returns a list of AtsDocuments. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListAtsDocumentsResponse>} - The async response
+     */
+    public CompletableFuture<ListAtsDocumentsResponse> listAtsDocuments(@Nonnull ListAtsDocumentsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListAtsDocumentsRequest, ListAtsDocumentsResponse> operation
-              = new ListAtsDocuments.Async(sdkConfiguration, _headers);
+              = new ListAtsDocuments.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -491,8 +651,26 @@ public class AsyncDocument {
      * @return {@code CompletableFuture<ListHealthcareDocumentsResponse>} - The async response
      */
     public CompletableFuture<ListHealthcareDocumentsResponse> listHealthcareDocuments(@Nonnull ListHealthcareDocumentsRequest request) {
+        return listHealthcareDocuments(request, null);
+    }
+
+    /**
+     * List all documents
+     * 
+     * <p>Returns a list of HealthcareDocuments. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListHealthcareDocumentsResponse>} - The async response
+     */
+    public CompletableFuture<ListHealthcareDocumentsResponse> listHealthcareDocuments(@Nonnull ListHealthcareDocumentsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListHealthcareDocumentsRequest, ListHealthcareDocumentsResponse> operation
-              = new ListHealthcareDocuments.Async(sdkConfiguration, _headers);
+              = new ListHealthcareDocuments.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -528,8 +706,26 @@ public class AsyncDocument {
      * @return {@code CompletableFuture<ListHrisDocumentsResponse>} - The async response
      */
     public CompletableFuture<ListHrisDocumentsResponse> listHrisDocuments(@Nonnull ListHrisDocumentsRequest request) {
+        return listHrisDocuments(request, null);
+    }
+
+    /**
+     * List all documents
+     * 
+     * <p>Returns a list of HrisDocuments. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListHrisDocumentsResponse>} - The async response
+     */
+    public CompletableFuture<ListHrisDocumentsResponse> listHrisDocuments(@Nonnull ListHrisDocumentsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListHrisDocumentsRequest, ListHrisDocumentsResponse> operation
-              = new ListHrisDocuments.Async(sdkConfiguration, _headers);
+              = new ListHrisDocuments.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -565,8 +761,26 @@ public class AsyncDocument {
      * @return {@code CompletableFuture<ListPlmDocumentsResponse>} - The async response
      */
     public CompletableFuture<ListPlmDocumentsResponse> listPlmDocuments(@Nonnull ListPlmDocumentsRequest request) {
+        return listPlmDocuments(request, null);
+    }
+
+    /**
+     * List all documents
+     * 
+     * <p>Returns a list of PlmDocuments. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListPlmDocumentsResponse>} - The async response
+     */
+    public CompletableFuture<ListPlmDocumentsResponse> listPlmDocuments(@Nonnull ListPlmDocumentsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListPlmDocumentsRequest, ListPlmDocumentsResponse> operation
-              = new ListPlmDocuments.Async(sdkConfiguration, _headers);
+              = new ListPlmDocuments.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -602,8 +816,26 @@ public class AsyncDocument {
      * @return {@code CompletableFuture<ListSigningDocumentsResponse>} - The async response
      */
     public CompletableFuture<ListSigningDocumentsResponse> listSigningDocuments(@Nonnull ListSigningDocumentsRequest request) {
+        return listSigningDocuments(request, null);
+    }
+
+    /**
+     * List all documents
+     * 
+     * <p>Returns a list of SigningDocuments. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListSigningDocumentsResponse>} - The async response
+     */
+    public CompletableFuture<ListSigningDocumentsResponse> listSigningDocuments(@Nonnull ListSigningDocumentsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListSigningDocumentsRequest, ListSigningDocumentsResponse> operation
-              = new ListSigningDocuments.Async(sdkConfiguration, _headers);
+              = new ListSigningDocuments.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -631,8 +863,22 @@ public class AsyncDocument {
      * @return {@code CompletableFuture<PatchAtsDocumentResponse>} - The async response
      */
     public CompletableFuture<PatchAtsDocumentResponse> patchAtsDocument(@Nonnull PatchAtsDocumentRequest request) {
+        return patchAtsDocument(request, null);
+    }
+
+    /**
+     * Update a document
+     * 
+     * <p>Updates the AtsDocument identified by `id`. Provide the unified AtsDocument fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchAtsDocumentResponse>} - The async response
+     */
+    public CompletableFuture<PatchAtsDocumentResponse> patchAtsDocument(@Nonnull PatchAtsDocumentRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchAtsDocumentRequest, PatchAtsDocumentResponse> operation
-              = new PatchAtsDocument.Async(sdkConfiguration, _headers);
+              = new PatchAtsDocument.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -660,8 +906,22 @@ public class AsyncDocument {
      * @return {@code CompletableFuture<PatchHrisDocumentResponse>} - The async response
      */
     public CompletableFuture<PatchHrisDocumentResponse> patchHrisDocument(@Nonnull PatchHrisDocumentRequest request) {
+        return patchHrisDocument(request, null);
+    }
+
+    /**
+     * Update a document
+     * 
+     * <p>Updates the HrisDocument identified by `id`. Provide the unified HrisDocument fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchHrisDocumentResponse>} - The async response
+     */
+    public CompletableFuture<PatchHrisDocumentResponse> patchHrisDocument(@Nonnull PatchHrisDocumentRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchHrisDocumentRequest, PatchHrisDocumentResponse> operation
-              = new PatchHrisDocument.Async(sdkConfiguration, _headers);
+              = new PatchHrisDocument.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -689,8 +949,22 @@ public class AsyncDocument {
      * @return {@code CompletableFuture<PatchPlmDocumentResponse>} - The async response
      */
     public CompletableFuture<PatchPlmDocumentResponse> patchPlmDocument(@Nonnull PatchPlmDocumentRequest request) {
+        return patchPlmDocument(request, null);
+    }
+
+    /**
+     * Update a document
+     * 
+     * <p>Updates the PlmDocument identified by `id`. Provide the unified PlmDocument fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchPlmDocumentResponse>} - The async response
+     */
+    public CompletableFuture<PatchPlmDocumentResponse> patchPlmDocument(@Nonnull PatchPlmDocumentRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchPlmDocumentRequest, PatchPlmDocumentResponse> operation
-              = new PatchPlmDocument.Async(sdkConfiguration, _headers);
+              = new PatchPlmDocument.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -718,8 +992,22 @@ public class AsyncDocument {
      * @return {@code CompletableFuture<PatchSigningDocumentResponse>} - The async response
      */
     public CompletableFuture<PatchSigningDocumentResponse> patchSigningDocument(@Nonnull PatchSigningDocumentRequest request) {
+        return patchSigningDocument(request, null);
+    }
+
+    /**
+     * Update a document
+     * 
+     * <p>Updates the SigningDocument identified by `id`. Provide the unified SigningDocument fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchSigningDocumentResponse>} - The async response
+     */
+    public CompletableFuture<PatchSigningDocumentResponse> patchSigningDocument(@Nonnull PatchSigningDocumentRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchSigningDocumentRequest, PatchSigningDocumentResponse> operation
-              = new PatchSigningDocument.Async(sdkConfiguration, _headers);
+              = new PatchSigningDocument.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -745,8 +1033,21 @@ public class AsyncDocument {
      * @return {@code CompletableFuture<RemoveAtsDocumentResponse>} - The async response
      */
     public CompletableFuture<RemoveAtsDocumentResponse> removeAtsDocument(@Nonnull RemoveAtsDocumentRequest request) {
+        return removeAtsDocument(request, null);
+    }
+
+    /**
+     * Remove a document
+     * 
+     * <p>Deletes the AtsDocument identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveAtsDocumentResponse>} - The async response
+     */
+    public CompletableFuture<RemoveAtsDocumentResponse> removeAtsDocument(@Nonnull RemoveAtsDocumentRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveAtsDocumentRequest, RemoveAtsDocumentResponse> operation
-              = new RemoveAtsDocument.Async(sdkConfiguration, _headers);
+              = new RemoveAtsDocument.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -772,8 +1073,21 @@ public class AsyncDocument {
      * @return {@code CompletableFuture<RemoveHrisDocumentResponse>} - The async response
      */
     public CompletableFuture<RemoveHrisDocumentResponse> removeHrisDocument(@Nonnull RemoveHrisDocumentRequest request) {
+        return removeHrisDocument(request, null);
+    }
+
+    /**
+     * Remove a document
+     * 
+     * <p>Deletes the HrisDocument identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveHrisDocumentResponse>} - The async response
+     */
+    public CompletableFuture<RemoveHrisDocumentResponse> removeHrisDocument(@Nonnull RemoveHrisDocumentRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveHrisDocumentRequest, RemoveHrisDocumentResponse> operation
-              = new RemoveHrisDocument.Async(sdkConfiguration, _headers);
+              = new RemoveHrisDocument.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -799,8 +1113,21 @@ public class AsyncDocument {
      * @return {@code CompletableFuture<RemoveSigningDocumentResponse>} - The async response
      */
     public CompletableFuture<RemoveSigningDocumentResponse> removeSigningDocument(@Nonnull RemoveSigningDocumentRequest request) {
+        return removeSigningDocument(request, null);
+    }
+
+    /**
+     * Remove a document
+     * 
+     * <p>Deletes the SigningDocument identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveSigningDocumentResponse>} - The async response
+     */
+    public CompletableFuture<RemoveSigningDocumentResponse> removeSigningDocument(@Nonnull RemoveSigningDocumentRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveSigningDocumentRequest, RemoveSigningDocumentResponse> operation
-              = new RemoveSigningDocument.Async(sdkConfiguration, _headers);
+              = new RemoveSigningDocument.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -828,8 +1155,22 @@ public class AsyncDocument {
      * @return {@code CompletableFuture<UpdateAtsDocumentResponse>} - The async response
      */
     public CompletableFuture<UpdateAtsDocumentResponse> updateAtsDocument(@Nonnull UpdateAtsDocumentRequest request) {
+        return updateAtsDocument(request, null);
+    }
+
+    /**
+     * Update a document
+     * 
+     * <p>Updates the AtsDocument identified by `id`. Provide the unified AtsDocument fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateAtsDocumentResponse>} - The async response
+     */
+    public CompletableFuture<UpdateAtsDocumentResponse> updateAtsDocument(@Nonnull UpdateAtsDocumentRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateAtsDocumentRequest, UpdateAtsDocumentResponse> operation
-              = new UpdateAtsDocument.Async(sdkConfiguration, _headers);
+              = new UpdateAtsDocument.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -857,8 +1198,22 @@ public class AsyncDocument {
      * @return {@code CompletableFuture<UpdateHrisDocumentResponse>} - The async response
      */
     public CompletableFuture<UpdateHrisDocumentResponse> updateHrisDocument(@Nonnull UpdateHrisDocumentRequest request) {
+        return updateHrisDocument(request, null);
+    }
+
+    /**
+     * Update a document
+     * 
+     * <p>Updates the HrisDocument identified by `id`. Provide the unified HrisDocument fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateHrisDocumentResponse>} - The async response
+     */
+    public CompletableFuture<UpdateHrisDocumentResponse> updateHrisDocument(@Nonnull UpdateHrisDocumentRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateHrisDocumentRequest, UpdateHrisDocumentResponse> operation
-              = new UpdateHrisDocument.Async(sdkConfiguration, _headers);
+              = new UpdateHrisDocument.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -886,8 +1241,22 @@ public class AsyncDocument {
      * @return {@code CompletableFuture<UpdatePlmDocumentResponse>} - The async response
      */
     public CompletableFuture<UpdatePlmDocumentResponse> updatePlmDocument(@Nonnull UpdatePlmDocumentRequest request) {
+        return updatePlmDocument(request, null);
+    }
+
+    /**
+     * Update a document
+     * 
+     * <p>Updates the PlmDocument identified by `id`. Provide the unified PlmDocument fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdatePlmDocumentResponse>} - The async response
+     */
+    public CompletableFuture<UpdatePlmDocumentResponse> updatePlmDocument(@Nonnull UpdatePlmDocumentRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdatePlmDocumentRequest, UpdatePlmDocumentResponse> operation
-              = new UpdatePlmDocument.Async(sdkConfiguration, _headers);
+              = new UpdatePlmDocument.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -915,8 +1284,22 @@ public class AsyncDocument {
      * @return {@code CompletableFuture<UpdateSigningDocumentResponse>} - The async response
      */
     public CompletableFuture<UpdateSigningDocumentResponse> updateSigningDocument(@Nonnull UpdateSigningDocumentRequest request) {
+        return updateSigningDocument(request, null);
+    }
+
+    /**
+     * Update a document
+     * 
+     * <p>Updates the SigningDocument identified by `id`. Provide the unified SigningDocument fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateSigningDocumentResponse>} - The async response
+     */
+    public CompletableFuture<UpdateSigningDocumentResponse> updateSigningDocument(@Nonnull UpdateSigningDocumentRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateSigningDocumentRequest, UpdateSigningDocumentResponse> operation
-              = new UpdateSigningDocument.Async(sdkConfiguration, _headers);
+              = new UpdateSigningDocument.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

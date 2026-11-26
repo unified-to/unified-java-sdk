@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateUcCallRequest;
 import to.unified.unified_java_sdk.models.operations.GetUcCallRequest;
@@ -28,6 +29,7 @@ import to.unified.unified_java_sdk.operations.ListUcCalls;
 import to.unified.unified_java_sdk.operations.PatchUcCall;
 import to.unified.unified_java_sdk.operations.UpdateUcCall;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncCall {
@@ -72,8 +74,22 @@ public class AsyncCall {
      * @return {@code CompletableFuture<CreateUcCallResponse>} - The async response
      */
     public CompletableFuture<CreateUcCallResponse> createUcCall(@Nonnull CreateUcCallRequest request) {
+        return createUcCall(request, null);
+    }
+
+    /**
+     * Create a call
+     * 
+     * <p>Creates a UcCall. Provide the unified UcCall fields in the request body; they are mapped to the
+     * provider's API. Returns the created UcCall.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateUcCallResponse>} - The async response
+     */
+    public CompletableFuture<CreateUcCallResponse> createUcCall(@Nonnull CreateUcCallRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateUcCallRequest, CreateUcCallResponse> operation
-              = new CreateUcCall.Async(sdkConfiguration, _headers);
+              = new CreateUcCall.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -101,8 +117,22 @@ public class AsyncCall {
      * @return {@code CompletableFuture<GetUcCallResponse>} - The async response
      */
     public CompletableFuture<GetUcCallResponse> getUcCall(@Nonnull GetUcCallRequest request) {
+        return getUcCall(request, null);
+    }
+
+    /**
+     * Retrieve a call
+     * 
+     * <p>Retrieves a single UcCall by its `id`. Obtain `id` values from the corresponding list endpoint. Use
+     * `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetUcCallResponse>} - The async response
+     */
+    public CompletableFuture<GetUcCallResponse> getUcCall(@Nonnull GetUcCallRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetUcCallRequest, GetUcCallResponse> operation
-              = new GetUcCall.Async(sdkConfiguration, _headers);
+              = new GetUcCall.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -138,8 +168,26 @@ public class AsyncCall {
      * @return {@code CompletableFuture<ListUcCallsResponse>} - The async response
      */
     public CompletableFuture<ListUcCallsResponse> listUcCalls(@Nonnull ListUcCallsRequest request) {
+        return listUcCalls(request, null);
+    }
+
+    /**
+     * List all calls
+     * 
+     * <p>Returns a list of UcCalls. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListUcCallsResponse>} - The async response
+     */
+    public CompletableFuture<ListUcCallsResponse> listUcCalls(@Nonnull ListUcCallsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListUcCallsRequest, ListUcCallsResponse> operation
-              = new ListUcCalls.Async(sdkConfiguration, _headers);
+              = new ListUcCalls.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -167,8 +215,22 @@ public class AsyncCall {
      * @return {@code CompletableFuture<PatchUcCallResponse>} - The async response
      */
     public CompletableFuture<PatchUcCallResponse> patchUcCall(@Nonnull PatchUcCallRequest request) {
+        return patchUcCall(request, null);
+    }
+
+    /**
+     * Update a call
+     * 
+     * <p>Updates the UcCall identified by `id`. Provide the unified UcCall fields to change in the request
+     * body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchUcCallResponse>} - The async response
+     */
+    public CompletableFuture<PatchUcCallResponse> patchUcCall(@Nonnull PatchUcCallRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchUcCallRequest, PatchUcCallResponse> operation
-              = new PatchUcCall.Async(sdkConfiguration, _headers);
+              = new PatchUcCall.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -196,8 +258,22 @@ public class AsyncCall {
      * @return {@code CompletableFuture<UpdateUcCallResponse>} - The async response
      */
     public CompletableFuture<UpdateUcCallResponse> updateUcCall(@Nonnull UpdateUcCallRequest request) {
+        return updateUcCall(request, null);
+    }
+
+    /**
+     * Update a call
+     * 
+     * <p>Updates the UcCall identified by `id`. Provide the unified UcCall fields to change in the request
+     * body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateUcCallResponse>} - The async response
+     */
+    public CompletableFuture<UpdateUcCallResponse> updateUcCall(@Nonnull UpdateUcCallRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateUcCallRequest, UpdateUcCallResponse> operation
-              = new UpdateUcCall.Async(sdkConfiguration, _headers);
+              = new UpdateUcCall.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

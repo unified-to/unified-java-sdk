@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateLmsContentRequest;
 import to.unified.unified_java_sdk.models.operations.CreateLmsContentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateLmsContentResponse;
@@ -31,6 +32,7 @@ import to.unified.unified_java_sdk.operations.PatchLmsContent;
 import to.unified.unified_java_sdk.operations.RemoveLmsContent;
 import to.unified.unified_java_sdk.operations.UpdateLmsContent;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Content {
@@ -75,8 +77,23 @@ public class Content {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateLmsContentResponse createLmsContent(@Nonnull CreateLmsContentRequest request) {
+        return createLmsContent(request, null);
+    }
+
+    /**
+     * Create a content
+     * 
+     * <p>Creates a LmsContent. Provide the unified LmsContent fields in the request body; they are mapped to
+     * the provider's API. Returns the created LmsContent.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateLmsContentResponse createLmsContent(@Nonnull CreateLmsContentRequest request, @Nullable Options options) {
         RequestOperation<CreateLmsContentRequest, CreateLmsContentResponse> operation
-              = new CreateLmsContent.Sync(sdkConfiguration, _headers);
+              = new CreateLmsContent.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -103,8 +120,23 @@ public class Content {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetLmsContentResponse getLmsContent(@Nonnull GetLmsContentRequest request) {
+        return getLmsContent(request, null);
+    }
+
+    /**
+     * Retrieve a content
+     * 
+     * <p>Retrieves a single LmsContent by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetLmsContentResponse getLmsContent(@Nonnull GetLmsContentRequest request, @Nullable Options options) {
         RequestOperation<GetLmsContentRequest, GetLmsContentResponse> operation
-              = new GetLmsContent.Sync(sdkConfiguration, _headers);
+              = new GetLmsContent.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -139,8 +171,27 @@ public class Content {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListLmsContentsResponse listLmsContents(@Nonnull ListLmsContentsRequest request) {
+        return listLmsContents(request, null);
+    }
+
+    /**
+     * List all contents
+     * 
+     * <p>Returns a list of LmsContents. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListLmsContentsResponse listLmsContents(@Nonnull ListLmsContentsRequest request, @Nullable Options options) {
         RequestOperation<ListLmsContentsRequest, ListLmsContentsResponse> operation
-              = new ListLmsContents.Sync(sdkConfiguration, _headers);
+              = new ListLmsContents.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +218,23 @@ public class Content {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchLmsContentResponse patchLmsContent(@Nonnull PatchLmsContentRequest request) {
+        return patchLmsContent(request, null);
+    }
+
+    /**
+     * Update a content
+     * 
+     * <p>Updates the LmsContent identified by `id`. Provide the unified LmsContent fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchLmsContentResponse patchLmsContent(@Nonnull PatchLmsContentRequest request, @Nullable Options options) {
         RequestOperation<PatchLmsContentRequest, PatchLmsContentResponse> operation
-              = new PatchLmsContent.Sync(sdkConfiguration, _headers);
+              = new PatchLmsContent.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -193,8 +259,22 @@ public class Content {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveLmsContentResponse removeLmsContent(@Nonnull RemoveLmsContentRequest request) {
+        return removeLmsContent(request, null);
+    }
+
+    /**
+     * Remove a content
+     * 
+     * <p>Deletes the LmsContent identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveLmsContentResponse removeLmsContent(@Nonnull RemoveLmsContentRequest request, @Nullable Options options) {
         RequestOperation<RemoveLmsContentRequest, RemoveLmsContentResponse> operation
-              = new RemoveLmsContent.Sync(sdkConfiguration, _headers);
+              = new RemoveLmsContent.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -221,8 +301,23 @@ public class Content {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateLmsContentResponse updateLmsContent(@Nonnull UpdateLmsContentRequest request) {
+        return updateLmsContent(request, null);
+    }
+
+    /**
+     * Update a content
+     * 
+     * <p>Updates the LmsContent identified by `id`. Provide the unified LmsContent fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateLmsContentResponse updateLmsContent(@Nonnull UpdateLmsContentRequest request, @Nullable Options options) {
         RequestOperation<UpdateLmsContentRequest, UpdateLmsContentResponse> operation
-              = new UpdateLmsContent.Sync(sdkConfiguration, _headers);
+              = new UpdateLmsContent.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

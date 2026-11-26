@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingAccountRequest;
 import to.unified.unified_java_sdk.models.operations.GetAccountingAccountRequest;
@@ -32,6 +33,7 @@ import to.unified.unified_java_sdk.operations.PatchAccountingAccount;
 import to.unified.unified_java_sdk.operations.RemoveAccountingAccount;
 import to.unified.unified_java_sdk.operations.UpdateAccountingAccount;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncAccount {
@@ -76,8 +78,22 @@ public class AsyncAccount {
      * @return {@code CompletableFuture<CreateAccountingAccountResponse>} - The async response
      */
     public CompletableFuture<CreateAccountingAccountResponse> createAccountingAccount(@Nonnull CreateAccountingAccountRequest request) {
+        return createAccountingAccount(request, null);
+    }
+
+    /**
+     * Create an account
+     * 
+     * <p>Creates a AccountingAccount. Provide the unified AccountingAccount fields in the request body; they
+     * are mapped to the provider's API. Returns the created AccountingAccount.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateAccountingAccountResponse>} - The async response
+     */
+    public CompletableFuture<CreateAccountingAccountResponse> createAccountingAccount(@Nonnull CreateAccountingAccountRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateAccountingAccountRequest, CreateAccountingAccountResponse> operation
-              = new CreateAccountingAccount.Async(sdkConfiguration, _headers);
+              = new CreateAccountingAccount.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -105,8 +121,22 @@ public class AsyncAccount {
      * @return {@code CompletableFuture<GetAccountingAccountResponse>} - The async response
      */
     public CompletableFuture<GetAccountingAccountResponse> getAccountingAccount(@Nonnull GetAccountingAccountRequest request) {
+        return getAccountingAccount(request, null);
+    }
+
+    /**
+     * Retrieve an account
+     * 
+     * <p>Retrieves a single AccountingAccount by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetAccountingAccountResponse>} - The async response
+     */
+    public CompletableFuture<GetAccountingAccountResponse> getAccountingAccount(@Nonnull GetAccountingAccountRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetAccountingAccountRequest, GetAccountingAccountResponse> operation
-              = new GetAccountingAccount.Async(sdkConfiguration, _headers);
+              = new GetAccountingAccount.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -142,8 +172,26 @@ public class AsyncAccount {
      * @return {@code CompletableFuture<ListAccountingAccountsResponse>} - The async response
      */
     public CompletableFuture<ListAccountingAccountsResponse> listAccountingAccounts(@Nonnull ListAccountingAccountsRequest request) {
+        return listAccountingAccounts(request, null);
+    }
+
+    /**
+     * List all accounts
+     * 
+     * <p>Returns a list of AccountingAccounts. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListAccountingAccountsResponse>} - The async response
+     */
+    public CompletableFuture<ListAccountingAccountsResponse> listAccountingAccounts(@Nonnull ListAccountingAccountsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListAccountingAccountsRequest, ListAccountingAccountsResponse> operation
-              = new ListAccountingAccounts.Async(sdkConfiguration, _headers);
+              = new ListAccountingAccounts.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -171,8 +219,22 @@ public class AsyncAccount {
      * @return {@code CompletableFuture<PatchAccountingAccountResponse>} - The async response
      */
     public CompletableFuture<PatchAccountingAccountResponse> patchAccountingAccount(@Nonnull PatchAccountingAccountRequest request) {
+        return patchAccountingAccount(request, null);
+    }
+
+    /**
+     * Update an account
+     * 
+     * <p>Updates the AccountingAccount identified by `id`. Provide the unified AccountingAccount fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchAccountingAccountResponse>} - The async response
+     */
+    public CompletableFuture<PatchAccountingAccountResponse> patchAccountingAccount(@Nonnull PatchAccountingAccountRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchAccountingAccountRequest, PatchAccountingAccountResponse> operation
-              = new PatchAccountingAccount.Async(sdkConfiguration, _headers);
+              = new PatchAccountingAccount.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -198,8 +260,21 @@ public class AsyncAccount {
      * @return {@code CompletableFuture<RemoveAccountingAccountResponse>} - The async response
      */
     public CompletableFuture<RemoveAccountingAccountResponse> removeAccountingAccount(@Nonnull RemoveAccountingAccountRequest request) {
+        return removeAccountingAccount(request, null);
+    }
+
+    /**
+     * Remove an account
+     * 
+     * <p>Deletes the AccountingAccount identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveAccountingAccountResponse>} - The async response
+     */
+    public CompletableFuture<RemoveAccountingAccountResponse> removeAccountingAccount(@Nonnull RemoveAccountingAccountRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveAccountingAccountRequest, RemoveAccountingAccountResponse> operation
-              = new RemoveAccountingAccount.Async(sdkConfiguration, _headers);
+              = new RemoveAccountingAccount.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -227,8 +302,22 @@ public class AsyncAccount {
      * @return {@code CompletableFuture<UpdateAccountingAccountResponse>} - The async response
      */
     public CompletableFuture<UpdateAccountingAccountResponse> updateAccountingAccount(@Nonnull UpdateAccountingAccountRequest request) {
+        return updateAccountingAccount(request, null);
+    }
+
+    /**
+     * Update an account
+     * 
+     * <p>Updates the AccountingAccount identified by `id`. Provide the unified AccountingAccount fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateAccountingAccountResponse>} - The async response
+     */
+    public CompletableFuture<UpdateAccountingAccountResponse> updateAccountingAccount(@Nonnull UpdateAccountingAccountRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateAccountingAccountRequest, UpdateAccountingAccountResponse> operation
-              = new UpdateAccountingAccount.Async(sdkConfiguration, _headers);
+              = new UpdateAccountingAccount.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

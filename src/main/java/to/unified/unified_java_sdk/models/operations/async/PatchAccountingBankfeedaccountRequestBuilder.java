@@ -6,20 +6,30 @@ package to.unified.unified_java_sdk.models.operations.async;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingBankfeedaccountRequest;
 import to.unified.unified_java_sdk.operations.PatchAccountingBankfeedaccount;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class PatchAccountingBankfeedaccountRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private PatchAccountingBankfeedaccountRequest request;
+    private final Options.Builder optionsBuilder;
 
     public PatchAccountingBankfeedaccountRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public PatchAccountingBankfeedaccountRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public PatchAccountingBankfeedaccountRequestBuilder request(@Nonnull PatchAccountingBankfeedaccountRequest request) {
@@ -44,8 +54,9 @@ public class PatchAccountingBankfeedaccountRequestBuilder {
     * @return The response from the server.
     */
     public CompletableFuture<PatchAccountingBankfeedaccountResponse> call() {
+        Options options = optionsBuilder.build();
         AsyncRequestOperation<PatchAccountingBankfeedaccountRequest, PatchAccountingBankfeedaccountResponse> operation
-              = new PatchAccountingBankfeedaccount.Async(sdkConfiguration, _headers);
+              = new PatchAccountingBankfeedaccount.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

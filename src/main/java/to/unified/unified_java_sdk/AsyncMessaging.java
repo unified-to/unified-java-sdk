@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateMessagingChannelRequest;
 import to.unified.unified_java_sdk.models.operations.CreateMessagingMessageRequest;
@@ -64,6 +65,7 @@ import to.unified.unified_java_sdk.operations.UpdateMessagingChannel;
 import to.unified.unified_java_sdk.operations.UpdateMessagingEvent;
 import to.unified.unified_java_sdk.operations.UpdateMessagingMessage;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncMessaging {
@@ -108,8 +110,22 @@ public class AsyncMessaging {
      * @return {@code CompletableFuture<CreateMessagingChannelResponse>} - The async response
      */
     public CompletableFuture<CreateMessagingChannelResponse> createMessagingChannel(@Nonnull CreateMessagingChannelRequest request) {
+        return createMessagingChannel(request, null);
+    }
+
+    /**
+     * Create a channel
+     * 
+     * <p>Creates a MessagingChannel. Provide the unified MessagingChannel fields in the request body; they
+     * are mapped to the provider's API. Returns the created MessagingChannel.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateMessagingChannelResponse>} - The async response
+     */
+    public CompletableFuture<CreateMessagingChannelResponse> createMessagingChannel(@Nonnull CreateMessagingChannelRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateMessagingChannelRequest, CreateMessagingChannelResponse> operation
-              = new CreateMessagingChannel.Async(sdkConfiguration, _headers);
+              = new CreateMessagingChannel.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -137,8 +153,22 @@ public class AsyncMessaging {
      * @return {@code CompletableFuture<CreateMessagingMessageResponse>} - The async response
      */
     public CompletableFuture<CreateMessagingMessageResponse> createMessagingMessage(@Nonnull CreateMessagingMessageRequest request) {
+        return createMessagingMessage(request, null);
+    }
+
+    /**
+     * Create a message
+     * 
+     * <p>Creates a MessagingMessage. Provide the unified MessagingMessage fields in the request body; they
+     * are mapped to the provider's API. Returns the created MessagingMessage.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateMessagingMessageResponse>} - The async response
+     */
+    public CompletableFuture<CreateMessagingMessageResponse> createMessagingMessage(@Nonnull CreateMessagingMessageRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateMessagingMessageRequest, CreateMessagingMessageResponse> operation
-              = new CreateMessagingMessage.Async(sdkConfiguration, _headers);
+              = new CreateMessagingMessage.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -166,8 +196,22 @@ public class AsyncMessaging {
      * @return {@code CompletableFuture<GetMessagingChannelResponse>} - The async response
      */
     public CompletableFuture<GetMessagingChannelResponse> getMessagingChannel(@Nonnull GetMessagingChannelRequest request) {
+        return getMessagingChannel(request, null);
+    }
+
+    /**
+     * Retrieve a channel
+     * 
+     * <p>Retrieves a single MessagingChannel by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetMessagingChannelResponse>} - The async response
+     */
+    public CompletableFuture<GetMessagingChannelResponse> getMessagingChannel(@Nonnull GetMessagingChannelRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetMessagingChannelRequest, GetMessagingChannelResponse> operation
-              = new GetMessagingChannel.Async(sdkConfiguration, _headers);
+              = new GetMessagingChannel.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -195,8 +239,22 @@ public class AsyncMessaging {
      * @return {@code CompletableFuture<GetMessagingMessageResponse>} - The async response
      */
     public CompletableFuture<GetMessagingMessageResponse> getMessagingMessage(@Nonnull GetMessagingMessageRequest request) {
+        return getMessagingMessage(request, null);
+    }
+
+    /**
+     * Retrieve a message
+     * 
+     * <p>Retrieves a single MessagingMessage by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetMessagingMessageResponse>} - The async response
+     */
+    public CompletableFuture<GetMessagingMessageResponse> getMessagingMessage(@Nonnull GetMessagingMessageRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetMessagingMessageRequest, GetMessagingMessageResponse> operation
-              = new GetMessagingMessage.Async(sdkConfiguration, _headers);
+              = new GetMessagingMessage.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -232,8 +290,26 @@ public class AsyncMessaging {
      * @return {@code CompletableFuture<ListMessagingChannelsResponse>} - The async response
      */
     public CompletableFuture<ListMessagingChannelsResponse> listMessagingChannels(@Nonnull ListMessagingChannelsRequest request) {
+        return listMessagingChannels(request, null);
+    }
+
+    /**
+     * List all channels
+     * 
+     * <p>Returns a list of MessagingChannels. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListMessagingChannelsResponse>} - The async response
+     */
+    public CompletableFuture<ListMessagingChannelsResponse> listMessagingChannels(@Nonnull ListMessagingChannelsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListMessagingChannelsRequest, ListMessagingChannelsResponse> operation
-              = new ListMessagingChannels.Async(sdkConfiguration, _headers);
+              = new ListMessagingChannels.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -269,8 +345,26 @@ public class AsyncMessaging {
      * @return {@code CompletableFuture<ListMessagingMessagesResponse>} - The async response
      */
     public CompletableFuture<ListMessagingMessagesResponse> listMessagingMessages(@Nonnull ListMessagingMessagesRequest request) {
+        return listMessagingMessages(request, null);
+    }
+
+    /**
+     * List all messages
+     * 
+     * <p>Returns a list of MessagingMessages. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListMessagingMessagesResponse>} - The async response
+     */
+    public CompletableFuture<ListMessagingMessagesResponse> listMessagingMessages(@Nonnull ListMessagingMessagesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListMessagingMessagesRequest, ListMessagingMessagesResponse> operation
-              = new ListMessagingMessages.Async(sdkConfiguration, _headers);
+              = new ListMessagingMessages.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -298,8 +392,22 @@ public class AsyncMessaging {
      * @return {@code CompletableFuture<PatchMessagingChannelResponse>} - The async response
      */
     public CompletableFuture<PatchMessagingChannelResponse> patchMessagingChannel(@Nonnull PatchMessagingChannelRequest request) {
+        return patchMessagingChannel(request, null);
+    }
+
+    /**
+     * Update a channel
+     * 
+     * <p>Updates the MessagingChannel identified by `id`. Provide the unified MessagingChannel fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchMessagingChannelResponse>} - The async response
+     */
+    public CompletableFuture<PatchMessagingChannelResponse> patchMessagingChannel(@Nonnull PatchMessagingChannelRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchMessagingChannelRequest, PatchMessagingChannelResponse> operation
-              = new PatchMessagingChannel.Async(sdkConfiguration, _headers);
+              = new PatchMessagingChannel.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -327,8 +435,22 @@ public class AsyncMessaging {
      * @return {@code CompletableFuture<PatchMessagingEventResponse>} - The async response
      */
     public CompletableFuture<PatchMessagingEventResponse> patchMessagingEvent(@Nonnull PatchMessagingEventRequest request) {
+        return patchMessagingEvent(request, null);
+    }
+
+    /**
+     * Update an event
+     * 
+     * <p>Updates the MessagingEvent identified by `id`. Provide the unified MessagingEvent fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchMessagingEventResponse>} - The async response
+     */
+    public CompletableFuture<PatchMessagingEventResponse> patchMessagingEvent(@Nonnull PatchMessagingEventRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchMessagingEventRequest, PatchMessagingEventResponse> operation
-              = new PatchMessagingEvent.Async(sdkConfiguration, _headers);
+              = new PatchMessagingEvent.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -356,8 +478,22 @@ public class AsyncMessaging {
      * @return {@code CompletableFuture<PatchMessagingMessageResponse>} - The async response
      */
     public CompletableFuture<PatchMessagingMessageResponse> patchMessagingMessage(@Nonnull PatchMessagingMessageRequest request) {
+        return patchMessagingMessage(request, null);
+    }
+
+    /**
+     * Update a message
+     * 
+     * <p>Updates the MessagingMessage identified by `id`. Provide the unified MessagingMessage fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchMessagingMessageResponse>} - The async response
+     */
+    public CompletableFuture<PatchMessagingMessageResponse> patchMessagingMessage(@Nonnull PatchMessagingMessageRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchMessagingMessageRequest, PatchMessagingMessageResponse> operation
-              = new PatchMessagingMessage.Async(sdkConfiguration, _headers);
+              = new PatchMessagingMessage.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -383,8 +519,21 @@ public class AsyncMessaging {
      * @return {@code CompletableFuture<RemoveMessagingChannelResponse>} - The async response
      */
     public CompletableFuture<RemoveMessagingChannelResponse> removeMessagingChannel(@Nonnull RemoveMessagingChannelRequest request) {
+        return removeMessagingChannel(request, null);
+    }
+
+    /**
+     * Remove a channel
+     * 
+     * <p>Deletes the MessagingChannel identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveMessagingChannelResponse>} - The async response
+     */
+    public CompletableFuture<RemoveMessagingChannelResponse> removeMessagingChannel(@Nonnull RemoveMessagingChannelRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveMessagingChannelRequest, RemoveMessagingChannelResponse> operation
-              = new RemoveMessagingChannel.Async(sdkConfiguration, _headers);
+              = new RemoveMessagingChannel.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -410,8 +559,21 @@ public class AsyncMessaging {
      * @return {@code CompletableFuture<RemoveMessagingMessageResponse>} - The async response
      */
     public CompletableFuture<RemoveMessagingMessageResponse> removeMessagingMessage(@Nonnull RemoveMessagingMessageRequest request) {
+        return removeMessagingMessage(request, null);
+    }
+
+    /**
+     * Remove a message
+     * 
+     * <p>Deletes the MessagingMessage identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveMessagingMessageResponse>} - The async response
+     */
+    public CompletableFuture<RemoveMessagingMessageResponse> removeMessagingMessage(@Nonnull RemoveMessagingMessageRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveMessagingMessageRequest, RemoveMessagingMessageResponse> operation
-              = new RemoveMessagingMessage.Async(sdkConfiguration, _headers);
+              = new RemoveMessagingMessage.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -439,8 +601,22 @@ public class AsyncMessaging {
      * @return {@code CompletableFuture<UpdateMessagingChannelResponse>} - The async response
      */
     public CompletableFuture<UpdateMessagingChannelResponse> updateMessagingChannel(@Nonnull UpdateMessagingChannelRequest request) {
+        return updateMessagingChannel(request, null);
+    }
+
+    /**
+     * Update a channel
+     * 
+     * <p>Updates the MessagingChannel identified by `id`. Provide the unified MessagingChannel fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateMessagingChannelResponse>} - The async response
+     */
+    public CompletableFuture<UpdateMessagingChannelResponse> updateMessagingChannel(@Nonnull UpdateMessagingChannelRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateMessagingChannelRequest, UpdateMessagingChannelResponse> operation
-              = new UpdateMessagingChannel.Async(sdkConfiguration, _headers);
+              = new UpdateMessagingChannel.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -468,8 +644,22 @@ public class AsyncMessaging {
      * @return {@code CompletableFuture<UpdateMessagingEventResponse>} - The async response
      */
     public CompletableFuture<UpdateMessagingEventResponse> updateMessagingEvent(@Nonnull UpdateMessagingEventRequest request) {
+        return updateMessagingEvent(request, null);
+    }
+
+    /**
+     * Update an event
+     * 
+     * <p>Updates the MessagingEvent identified by `id`. Provide the unified MessagingEvent fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateMessagingEventResponse>} - The async response
+     */
+    public CompletableFuture<UpdateMessagingEventResponse> updateMessagingEvent(@Nonnull UpdateMessagingEventRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateMessagingEventRequest, UpdateMessagingEventResponse> operation
-              = new UpdateMessagingEvent.Async(sdkConfiguration, _headers);
+              = new UpdateMessagingEvent.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -497,8 +687,22 @@ public class AsyncMessaging {
      * @return {@code CompletableFuture<UpdateMessagingMessageResponse>} - The async response
      */
     public CompletableFuture<UpdateMessagingMessageResponse> updateMessagingMessage(@Nonnull UpdateMessagingMessageRequest request) {
+        return updateMessagingMessage(request, null);
+    }
+
+    /**
+     * Update a message
+     * 
+     * <p>Updates the MessagingMessage identified by `id`. Provide the unified MessagingMessage fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateMessagingMessageResponse>} - The async response
+     */
+    public CompletableFuture<UpdateMessagingMessageResponse> updateMessagingMessage(@Nonnull UpdateMessagingMessageRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateMessagingMessageRequest, UpdateMessagingMessageResponse> operation
-              = new UpdateMessagingMessage.Async(sdkConfiguration, _headers);
+              = new UpdateMessagingMessage.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

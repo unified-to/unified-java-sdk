@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreatePlmBomlineRequest;
 import to.unified.unified_java_sdk.models.operations.CreatePlmBomlineRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreatePlmBomlineResponse;
@@ -31,6 +32,7 @@ import to.unified.unified_java_sdk.operations.PatchPlmBomline;
 import to.unified.unified_java_sdk.operations.RemovePlmBomline;
 import to.unified.unified_java_sdk.operations.UpdatePlmBomline;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Bomline {
@@ -75,8 +77,23 @@ public class Bomline {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreatePlmBomlineResponse createPlmBomline(@Nonnull CreatePlmBomlineRequest request) {
+        return createPlmBomline(request, null);
+    }
+
+    /**
+     * Create a bomline
+     * 
+     * <p>Creates a PlmBomline. Provide the unified PlmBomline fields in the request body; they are mapped to
+     * the provider's API. Returns the created PlmBomline.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreatePlmBomlineResponse createPlmBomline(@Nonnull CreatePlmBomlineRequest request, @Nullable Options options) {
         RequestOperation<CreatePlmBomlineRequest, CreatePlmBomlineResponse> operation
-              = new CreatePlmBomline.Sync(sdkConfiguration, _headers);
+              = new CreatePlmBomline.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -103,8 +120,23 @@ public class Bomline {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetPlmBomlineResponse getPlmBomline(@Nonnull GetPlmBomlineRequest request) {
+        return getPlmBomline(request, null);
+    }
+
+    /**
+     * Retrieve a bomline
+     * 
+     * <p>Retrieves a single PlmBomline by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetPlmBomlineResponse getPlmBomline(@Nonnull GetPlmBomlineRequest request, @Nullable Options options) {
         RequestOperation<GetPlmBomlineRequest, GetPlmBomlineResponse> operation
-              = new GetPlmBomline.Sync(sdkConfiguration, _headers);
+              = new GetPlmBomline.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -139,8 +171,27 @@ public class Bomline {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListPlmBomlinesResponse listPlmBomlines(@Nonnull ListPlmBomlinesRequest request) {
+        return listPlmBomlines(request, null);
+    }
+
+    /**
+     * List all bomlines
+     * 
+     * <p>Returns a list of PlmBomlines. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListPlmBomlinesResponse listPlmBomlines(@Nonnull ListPlmBomlinesRequest request, @Nullable Options options) {
         RequestOperation<ListPlmBomlinesRequest, ListPlmBomlinesResponse> operation
-              = new ListPlmBomlines.Sync(sdkConfiguration, _headers);
+              = new ListPlmBomlines.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +218,23 @@ public class Bomline {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchPlmBomlineResponse patchPlmBomline(@Nonnull PatchPlmBomlineRequest request) {
+        return patchPlmBomline(request, null);
+    }
+
+    /**
+     * Update a bomline
+     * 
+     * <p>Updates the PlmBomline identified by `id`. Provide the unified PlmBomline fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchPlmBomlineResponse patchPlmBomline(@Nonnull PatchPlmBomlineRequest request, @Nullable Options options) {
         RequestOperation<PatchPlmBomlineRequest, PatchPlmBomlineResponse> operation
-              = new PatchPlmBomline.Sync(sdkConfiguration, _headers);
+              = new PatchPlmBomline.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -193,8 +259,22 @@ public class Bomline {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemovePlmBomlineResponse removePlmBomline(@Nonnull RemovePlmBomlineRequest request) {
+        return removePlmBomline(request, null);
+    }
+
+    /**
+     * Remove a bomline
+     * 
+     * <p>Deletes the PlmBomline identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemovePlmBomlineResponse removePlmBomline(@Nonnull RemovePlmBomlineRequest request, @Nullable Options options) {
         RequestOperation<RemovePlmBomlineRequest, RemovePlmBomlineResponse> operation
-              = new RemovePlmBomline.Sync(sdkConfiguration, _headers);
+              = new RemovePlmBomline.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -221,8 +301,23 @@ public class Bomline {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdatePlmBomlineResponse updatePlmBomline(@Nonnull UpdatePlmBomlineRequest request) {
+        return updatePlmBomline(request, null);
+    }
+
+    /**
+     * Update a bomline
+     * 
+     * <p>Updates the PlmBomline identified by `id`. Provide the unified PlmBomline fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdatePlmBomlineResponse updatePlmBomline(@Nonnull UpdatePlmBomlineRequest request, @Nullable Options options) {
         RequestOperation<UpdatePlmBomlineRequest, UpdatePlmBomlineResponse> operation
-              = new UpdatePlmBomline.Sync(sdkConfiguration, _headers);
+              = new UpdatePlmBomline.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceLocationRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisLocationRequest;
@@ -80,6 +81,7 @@ import to.unified.unified_java_sdk.operations.RemoveHrisLocation;
 import to.unified.unified_java_sdk.operations.UpdateCommerceLocation;
 import to.unified.unified_java_sdk.operations.UpdateHrisLocation;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncLocation {
@@ -124,8 +126,22 @@ public class AsyncLocation {
      * @return {@code CompletableFuture<CreateCommerceLocationResponse>} - The async response
      */
     public CompletableFuture<CreateCommerceLocationResponse> createCommerceLocation(@Nonnull CreateCommerceLocationRequest request) {
+        return createCommerceLocation(request, null);
+    }
+
+    /**
+     * Create a location
+     * 
+     * <p>Creates a CommerceLocation. Provide the unified CommerceLocation fields in the request body; they
+     * are mapped to the provider's API. Returns the created CommerceLocation.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateCommerceLocationResponse>} - The async response
+     */
+    public CompletableFuture<CreateCommerceLocationResponse> createCommerceLocation(@Nonnull CreateCommerceLocationRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateCommerceLocationRequest, CreateCommerceLocationResponse> operation
-              = new CreateCommerceLocation.Async(sdkConfiguration, _headers);
+              = new CreateCommerceLocation.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -153,8 +169,22 @@ public class AsyncLocation {
      * @return {@code CompletableFuture<CreateHrisLocationResponse>} - The async response
      */
     public CompletableFuture<CreateHrisLocationResponse> createHrisLocation(@Nonnull CreateHrisLocationRequest request) {
+        return createHrisLocation(request, null);
+    }
+
+    /**
+     * Create a location
+     * 
+     * <p>Creates a HrisLocation. Provide the unified HrisLocation fields in the request body; they are mapped
+     * to the provider's API. Returns the created HrisLocation.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateHrisLocationResponse>} - The async response
+     */
+    public CompletableFuture<CreateHrisLocationResponse> createHrisLocation(@Nonnull CreateHrisLocationRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateHrisLocationRequest, CreateHrisLocationResponse> operation
-              = new CreateHrisLocation.Async(sdkConfiguration, _headers);
+              = new CreateHrisLocation.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -182,8 +212,22 @@ public class AsyncLocation {
      * @return {@code CompletableFuture<GetCalendarLocationResponse>} - The async response
      */
     public CompletableFuture<GetCalendarLocationResponse> getCalendarLocation(@Nonnull GetCalendarLocationRequest request) {
+        return getCalendarLocation(request, null);
+    }
+
+    /**
+     * Retrieve a location
+     * 
+     * <p>Retrieves a single CalendarLocation by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetCalendarLocationResponse>} - The async response
+     */
+    public CompletableFuture<GetCalendarLocationResponse> getCalendarLocation(@Nonnull GetCalendarLocationRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetCalendarLocationRequest, GetCalendarLocationResponse> operation
-              = new GetCalendarLocation.Async(sdkConfiguration, _headers);
+              = new GetCalendarLocation.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -211,8 +255,22 @@ public class AsyncLocation {
      * @return {@code CompletableFuture<GetClubsLocationResponse>} - The async response
      */
     public CompletableFuture<GetClubsLocationResponse> getClubsLocation(@Nonnull GetClubsLocationRequest request) {
+        return getClubsLocation(request, null);
+    }
+
+    /**
+     * Retrieve a location
+     * 
+     * <p>Retrieves a single ClubsLocation by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetClubsLocationResponse>} - The async response
+     */
+    public CompletableFuture<GetClubsLocationResponse> getClubsLocation(@Nonnull GetClubsLocationRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetClubsLocationRequest, GetClubsLocationResponse> operation
-              = new GetClubsLocation.Async(sdkConfiguration, _headers);
+              = new GetClubsLocation.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -240,8 +298,22 @@ public class AsyncLocation {
      * @return {@code CompletableFuture<GetCommerceLocationResponse>} - The async response
      */
     public CompletableFuture<GetCommerceLocationResponse> getCommerceLocation(@Nonnull GetCommerceLocationRequest request) {
+        return getCommerceLocation(request, null);
+    }
+
+    /**
+     * Retrieve a location
+     * 
+     * <p>Retrieves a single CommerceLocation by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetCommerceLocationResponse>} - The async response
+     */
+    public CompletableFuture<GetCommerceLocationResponse> getCommerceLocation(@Nonnull GetCommerceLocationRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetCommerceLocationRequest, GetCommerceLocationResponse> operation
-              = new GetCommerceLocation.Async(sdkConfiguration, _headers);
+              = new GetCommerceLocation.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -269,8 +341,22 @@ public class AsyncLocation {
      * @return {@code CompletableFuture<GetHealthcareLocationResponse>} - The async response
      */
     public CompletableFuture<GetHealthcareLocationResponse> getHealthcareLocation(@Nonnull GetHealthcareLocationRequest request) {
+        return getHealthcareLocation(request, null);
+    }
+
+    /**
+     * Retrieve a location
+     * 
+     * <p>Retrieves a single HealthcareLocation by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetHealthcareLocationResponse>} - The async response
+     */
+    public CompletableFuture<GetHealthcareLocationResponse> getHealthcareLocation(@Nonnull GetHealthcareLocationRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetHealthcareLocationRequest, GetHealthcareLocationResponse> operation
-              = new GetHealthcareLocation.Async(sdkConfiguration, _headers);
+              = new GetHealthcareLocation.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -298,8 +384,22 @@ public class AsyncLocation {
      * @return {@code CompletableFuture<GetHrisLocationResponse>} - The async response
      */
     public CompletableFuture<GetHrisLocationResponse> getHrisLocation(@Nonnull GetHrisLocationRequest request) {
+        return getHrisLocation(request, null);
+    }
+
+    /**
+     * Retrieve a location
+     * 
+     * <p>Retrieves a single HrisLocation by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetHrisLocationResponse>} - The async response
+     */
+    public CompletableFuture<GetHrisLocationResponse> getHrisLocation(@Nonnull GetHrisLocationRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetHrisLocationRequest, GetHrisLocationResponse> operation
-              = new GetHrisLocation.Async(sdkConfiguration, _headers);
+              = new GetHrisLocation.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -335,8 +435,26 @@ public class AsyncLocation {
      * @return {@code CompletableFuture<ListCalendarLocationsResponse>} - The async response
      */
     public CompletableFuture<ListCalendarLocationsResponse> listCalendarLocations(@Nonnull ListCalendarLocationsRequest request) {
+        return listCalendarLocations(request, null);
+    }
+
+    /**
+     * List all locations
+     * 
+     * <p>Returns a list of CalendarLocations. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListCalendarLocationsResponse>} - The async response
+     */
+    public CompletableFuture<ListCalendarLocationsResponse> listCalendarLocations(@Nonnull ListCalendarLocationsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListCalendarLocationsRequest, ListCalendarLocationsResponse> operation
-              = new ListCalendarLocations.Async(sdkConfiguration, _headers);
+              = new ListCalendarLocations.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -372,8 +490,26 @@ public class AsyncLocation {
      * @return {@code CompletableFuture<ListClubsLocationsResponse>} - The async response
      */
     public CompletableFuture<ListClubsLocationsResponse> listClubsLocations(@Nonnull ListClubsLocationsRequest request) {
+        return listClubsLocations(request, null);
+    }
+
+    /**
+     * List all locations
+     * 
+     * <p>Returns a list of ClubsLocations. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListClubsLocationsResponse>} - The async response
+     */
+    public CompletableFuture<ListClubsLocationsResponse> listClubsLocations(@Nonnull ListClubsLocationsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListClubsLocationsRequest, ListClubsLocationsResponse> operation
-              = new ListClubsLocations.Async(sdkConfiguration, _headers);
+              = new ListClubsLocations.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -409,8 +545,26 @@ public class AsyncLocation {
      * @return {@code CompletableFuture<ListCommerceLocationsResponse>} - The async response
      */
     public CompletableFuture<ListCommerceLocationsResponse> listCommerceLocations(@Nonnull ListCommerceLocationsRequest request) {
+        return listCommerceLocations(request, null);
+    }
+
+    /**
+     * List all locations
+     * 
+     * <p>Returns a list of CommerceLocations. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListCommerceLocationsResponse>} - The async response
+     */
+    public CompletableFuture<ListCommerceLocationsResponse> listCommerceLocations(@Nonnull ListCommerceLocationsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListCommerceLocationsRequest, ListCommerceLocationsResponse> operation
-              = new ListCommerceLocations.Async(sdkConfiguration, _headers);
+              = new ListCommerceLocations.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -446,8 +600,26 @@ public class AsyncLocation {
      * @return {@code CompletableFuture<ListHealthcareLocationsResponse>} - The async response
      */
     public CompletableFuture<ListHealthcareLocationsResponse> listHealthcareLocations(@Nonnull ListHealthcareLocationsRequest request) {
+        return listHealthcareLocations(request, null);
+    }
+
+    /**
+     * List all locations
+     * 
+     * <p>Returns a list of HealthcareLocations. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListHealthcareLocationsResponse>} - The async response
+     */
+    public CompletableFuture<ListHealthcareLocationsResponse> listHealthcareLocations(@Nonnull ListHealthcareLocationsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListHealthcareLocationsRequest, ListHealthcareLocationsResponse> operation
-              = new ListHealthcareLocations.Async(sdkConfiguration, _headers);
+              = new ListHealthcareLocations.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -483,8 +655,26 @@ public class AsyncLocation {
      * @return {@code CompletableFuture<ListHrisLocationsResponse>} - The async response
      */
     public CompletableFuture<ListHrisLocationsResponse> listHrisLocations(@Nonnull ListHrisLocationsRequest request) {
+        return listHrisLocations(request, null);
+    }
+
+    /**
+     * List all locations
+     * 
+     * <p>Returns a list of HrisLocations. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListHrisLocationsResponse>} - The async response
+     */
+    public CompletableFuture<ListHrisLocationsResponse> listHrisLocations(@Nonnull ListHrisLocationsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListHrisLocationsRequest, ListHrisLocationsResponse> operation
-              = new ListHrisLocations.Async(sdkConfiguration, _headers);
+              = new ListHrisLocations.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -512,8 +702,22 @@ public class AsyncLocation {
      * @return {@code CompletableFuture<PatchCommerceLocationResponse>} - The async response
      */
     public CompletableFuture<PatchCommerceLocationResponse> patchCommerceLocation(@Nonnull PatchCommerceLocationRequest request) {
+        return patchCommerceLocation(request, null);
+    }
+
+    /**
+     * Update a location
+     * 
+     * <p>Updates the CommerceLocation identified by `id`. Provide the unified CommerceLocation fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchCommerceLocationResponse>} - The async response
+     */
+    public CompletableFuture<PatchCommerceLocationResponse> patchCommerceLocation(@Nonnull PatchCommerceLocationRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchCommerceLocationRequest, PatchCommerceLocationResponse> operation
-              = new PatchCommerceLocation.Async(sdkConfiguration, _headers);
+              = new PatchCommerceLocation.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -541,8 +745,22 @@ public class AsyncLocation {
      * @return {@code CompletableFuture<PatchHrisLocationResponse>} - The async response
      */
     public CompletableFuture<PatchHrisLocationResponse> patchHrisLocation(@Nonnull PatchHrisLocationRequest request) {
+        return patchHrisLocation(request, null);
+    }
+
+    /**
+     * Update a location
+     * 
+     * <p>Updates the HrisLocation identified by `id`. Provide the unified HrisLocation fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchHrisLocationResponse>} - The async response
+     */
+    public CompletableFuture<PatchHrisLocationResponse> patchHrisLocation(@Nonnull PatchHrisLocationRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchHrisLocationRequest, PatchHrisLocationResponse> operation
-              = new PatchHrisLocation.Async(sdkConfiguration, _headers);
+              = new PatchHrisLocation.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -568,8 +786,21 @@ public class AsyncLocation {
      * @return {@code CompletableFuture<RemoveCommerceLocationResponse>} - The async response
      */
     public CompletableFuture<RemoveCommerceLocationResponse> removeCommerceLocation(@Nonnull RemoveCommerceLocationRequest request) {
+        return removeCommerceLocation(request, null);
+    }
+
+    /**
+     * Remove a location
+     * 
+     * <p>Deletes the CommerceLocation identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveCommerceLocationResponse>} - The async response
+     */
+    public CompletableFuture<RemoveCommerceLocationResponse> removeCommerceLocation(@Nonnull RemoveCommerceLocationRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveCommerceLocationRequest, RemoveCommerceLocationResponse> operation
-              = new RemoveCommerceLocation.Async(sdkConfiguration, _headers);
+              = new RemoveCommerceLocation.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -595,8 +826,21 @@ public class AsyncLocation {
      * @return {@code CompletableFuture<RemoveHrisLocationResponse>} - The async response
      */
     public CompletableFuture<RemoveHrisLocationResponse> removeHrisLocation(@Nonnull RemoveHrisLocationRequest request) {
+        return removeHrisLocation(request, null);
+    }
+
+    /**
+     * Remove a location
+     * 
+     * <p>Deletes the HrisLocation identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveHrisLocationResponse>} - The async response
+     */
+    public CompletableFuture<RemoveHrisLocationResponse> removeHrisLocation(@Nonnull RemoveHrisLocationRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveHrisLocationRequest, RemoveHrisLocationResponse> operation
-              = new RemoveHrisLocation.Async(sdkConfiguration, _headers);
+              = new RemoveHrisLocation.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -624,8 +868,22 @@ public class AsyncLocation {
      * @return {@code CompletableFuture<UpdateCommerceLocationResponse>} - The async response
      */
     public CompletableFuture<UpdateCommerceLocationResponse> updateCommerceLocation(@Nonnull UpdateCommerceLocationRequest request) {
+        return updateCommerceLocation(request, null);
+    }
+
+    /**
+     * Update a location
+     * 
+     * <p>Updates the CommerceLocation identified by `id`. Provide the unified CommerceLocation fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateCommerceLocationResponse>} - The async response
+     */
+    public CompletableFuture<UpdateCommerceLocationResponse> updateCommerceLocation(@Nonnull UpdateCommerceLocationRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateCommerceLocationRequest, UpdateCommerceLocationResponse> operation
-              = new UpdateCommerceLocation.Async(sdkConfiguration, _headers);
+              = new UpdateCommerceLocation.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -653,8 +911,22 @@ public class AsyncLocation {
      * @return {@code CompletableFuture<UpdateHrisLocationResponse>} - The async response
      */
     public CompletableFuture<UpdateHrisLocationResponse> updateHrisLocation(@Nonnull UpdateHrisLocationRequest request) {
+        return updateHrisLocation(request, null);
+    }
+
+    /**
+     * Update a location
+     * 
+     * <p>Updates the HrisLocation identified by `id`. Provide the unified HrisLocation fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateHrisLocationResponse>} - The async response
+     */
+    public CompletableFuture<UpdateHrisLocationResponse> updateHrisLocation(@Nonnull UpdateHrisLocationRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateHrisLocationRequest, UpdateHrisLocationResponse> operation
-              = new UpdateHrisLocation.Async(sdkConfiguration, _headers);
+              = new UpdateHrisLocation.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

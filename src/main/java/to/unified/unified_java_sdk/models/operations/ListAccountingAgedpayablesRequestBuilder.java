@@ -6,18 +6,28 @@ package to.unified.unified_java_sdk.models.operations;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.ListAccountingAgedpayables;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListAccountingAgedpayablesRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private ListAccountingAgedpayablesRequest request;
+    private final Options.Builder optionsBuilder;
 
     public ListAccountingAgedpayablesRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public ListAccountingAgedpayablesRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public ListAccountingAgedpayablesRequestBuilder request(@Nonnull ListAccountingAgedpayablesRequest request) {
@@ -42,8 +52,9 @@ public class ListAccountingAgedpayablesRequestBuilder {
     * @return The response from the server.
     */
     public ListAccountingAgedpayablesResponse call() {
+        Options options = optionsBuilder.build();
         RequestOperation<ListAccountingAgedpayablesRequest, ListAccountingAgedpayablesResponse> operation
-              = new ListAccountingAgedpayables.Sync(sdkConfiguration, _headers);
+              = new ListAccountingAgedpayables.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

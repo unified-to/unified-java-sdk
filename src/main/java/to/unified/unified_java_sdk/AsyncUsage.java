@@ -6,12 +6,14 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.ListComputeUsagesRequest;
 import to.unified.unified_java_sdk.models.operations.async.ListComputeUsagesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListComputeUsagesResponse;
 import to.unified.unified_java_sdk.operations.ListComputeUsages;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncUsage {
@@ -64,8 +66,26 @@ public class AsyncUsage {
      * @return {@code CompletableFuture<ListComputeUsagesResponse>} - The async response
      */
     public CompletableFuture<ListComputeUsagesResponse> listComputeUsages(@Nonnull ListComputeUsagesRequest request) {
+        return listComputeUsages(request, null);
+    }
+
+    /**
+     * List all usages
+     * 
+     * <p>Returns a list of ComputeUsages. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListComputeUsagesResponse>} - The async response
+     */
+    public CompletableFuture<ListComputeUsagesResponse> listComputeUsages(@Nonnull ListComputeUsagesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListComputeUsagesRequest, ListComputeUsagesResponse> operation
-              = new ListComputeUsages.Async(sdkConfiguration, _headers);
+              = new ListComputeUsages.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

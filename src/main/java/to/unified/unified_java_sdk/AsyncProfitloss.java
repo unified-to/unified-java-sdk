@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.GetAccountingProfitlossRequest;
 import to.unified.unified_java_sdk.models.operations.ListAccountingProfitlossesRequest;
@@ -16,6 +17,7 @@ import to.unified.unified_java_sdk.models.operations.async.ListAccountingProfitl
 import to.unified.unified_java_sdk.operations.GetAccountingProfitloss;
 import to.unified.unified_java_sdk.operations.ListAccountingProfitlosses;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncProfitloss {
@@ -60,8 +62,22 @@ public class AsyncProfitloss {
      * @return {@code CompletableFuture<GetAccountingProfitlossResponse>} - The async response
      */
     public CompletableFuture<GetAccountingProfitlossResponse> getAccountingProfitloss(@Nonnull GetAccountingProfitlossRequest request) {
+        return getAccountingProfitloss(request, null);
+    }
+
+    /**
+     * Retrieve a profitloss
+     * 
+     * <p>Retrieves a single AccountingProfitloss by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetAccountingProfitlossResponse>} - The async response
+     */
+    public CompletableFuture<GetAccountingProfitlossResponse> getAccountingProfitloss(@Nonnull GetAccountingProfitlossRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetAccountingProfitlossRequest, GetAccountingProfitlossResponse> operation
-              = new GetAccountingProfitloss.Async(sdkConfiguration, _headers);
+              = new GetAccountingProfitloss.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -97,8 +113,26 @@ public class AsyncProfitloss {
      * @return {@code CompletableFuture<ListAccountingProfitlossesResponse>} - The async response
      */
     public CompletableFuture<ListAccountingProfitlossesResponse> listAccountingProfitlosses(@Nonnull ListAccountingProfitlossesRequest request) {
+        return listAccountingProfitlosses(request, null);
+    }
+
+    /**
+     * List all profitlosses
+     * 
+     * <p>Returns a list of AccountingProfitlosses. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListAccountingProfitlossesResponse>} - The async response
+     */
+    public CompletableFuture<ListAccountingProfitlossesResponse> listAccountingProfitlosses(@Nonnull ListAccountingProfitlossesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListAccountingProfitlossesRequest, ListAccountingProfitlossesResponse> operation
-              = new ListAccountingProfitlosses.Async(sdkConfiguration, _headers);
+              = new ListAccountingProfitlosses.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateHrisBankaccountRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisBankaccountRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateHrisBankaccountResponse;
@@ -31,6 +32,7 @@ import to.unified.unified_java_sdk.operations.PatchHrisBankaccount;
 import to.unified.unified_java_sdk.operations.RemoveHrisBankaccount;
 import to.unified.unified_java_sdk.operations.UpdateHrisBankaccount;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Bankaccount {
@@ -75,8 +77,23 @@ public class Bankaccount {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateHrisBankaccountResponse createHrisBankaccount(@Nonnull CreateHrisBankaccountRequest request) {
+        return createHrisBankaccount(request, null);
+    }
+
+    /**
+     * Create a bankaccount
+     * 
+     * <p>Creates a HrisBankaccount. Provide the unified HrisBankaccount fields in the request body; they are
+     * mapped to the provider's API. Returns the created HrisBankaccount.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateHrisBankaccountResponse createHrisBankaccount(@Nonnull CreateHrisBankaccountRequest request, @Nullable Options options) {
         RequestOperation<CreateHrisBankaccountRequest, CreateHrisBankaccountResponse> operation
-              = new CreateHrisBankaccount.Sync(sdkConfiguration, _headers);
+              = new CreateHrisBankaccount.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -103,8 +120,23 @@ public class Bankaccount {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetHrisBankaccountResponse getHrisBankaccount(@Nonnull GetHrisBankaccountRequest request) {
+        return getHrisBankaccount(request, null);
+    }
+
+    /**
+     * Retrieve a bankaccount
+     * 
+     * <p>Retrieves a single HrisBankaccount by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetHrisBankaccountResponse getHrisBankaccount(@Nonnull GetHrisBankaccountRequest request, @Nullable Options options) {
         RequestOperation<GetHrisBankaccountRequest, GetHrisBankaccountResponse> operation
-              = new GetHrisBankaccount.Sync(sdkConfiguration, _headers);
+              = new GetHrisBankaccount.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -139,8 +171,27 @@ public class Bankaccount {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListHrisBankaccountsResponse listHrisBankaccounts(@Nonnull ListHrisBankaccountsRequest request) {
+        return listHrisBankaccounts(request, null);
+    }
+
+    /**
+     * List all bankaccounts
+     * 
+     * <p>Returns a list of HrisBankaccounts. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListHrisBankaccountsResponse listHrisBankaccounts(@Nonnull ListHrisBankaccountsRequest request, @Nullable Options options) {
         RequestOperation<ListHrisBankaccountsRequest, ListHrisBankaccountsResponse> operation
-              = new ListHrisBankaccounts.Sync(sdkConfiguration, _headers);
+              = new ListHrisBankaccounts.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +218,23 @@ public class Bankaccount {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchHrisBankaccountResponse patchHrisBankaccount(@Nonnull PatchHrisBankaccountRequest request) {
+        return patchHrisBankaccount(request, null);
+    }
+
+    /**
+     * Update a bankaccount
+     * 
+     * <p>Updates the HrisBankaccount identified by `id`. Provide the unified HrisBankaccount fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchHrisBankaccountResponse patchHrisBankaccount(@Nonnull PatchHrisBankaccountRequest request, @Nullable Options options) {
         RequestOperation<PatchHrisBankaccountRequest, PatchHrisBankaccountResponse> operation
-              = new PatchHrisBankaccount.Sync(sdkConfiguration, _headers);
+              = new PatchHrisBankaccount.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -193,8 +259,22 @@ public class Bankaccount {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveHrisBankaccountResponse removeHrisBankaccount(@Nonnull RemoveHrisBankaccountRequest request) {
+        return removeHrisBankaccount(request, null);
+    }
+
+    /**
+     * Remove a bankaccount
+     * 
+     * <p>Deletes the HrisBankaccount identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveHrisBankaccountResponse removeHrisBankaccount(@Nonnull RemoveHrisBankaccountRequest request, @Nullable Options options) {
         RequestOperation<RemoveHrisBankaccountRequest, RemoveHrisBankaccountResponse> operation
-              = new RemoveHrisBankaccount.Sync(sdkConfiguration, _headers);
+              = new RemoveHrisBankaccount.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -221,8 +301,23 @@ public class Bankaccount {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateHrisBankaccountResponse updateHrisBankaccount(@Nonnull UpdateHrisBankaccountRequest request) {
+        return updateHrisBankaccount(request, null);
+    }
+
+    /**
+     * Update a bankaccount
+     * 
+     * <p>Updates the HrisBankaccount identified by `id`. Provide the unified HrisBankaccount fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateHrisBankaccountResponse updateHrisBankaccount(@Nonnull UpdateHrisBankaccountRequest request, @Nullable Options options) {
         RequestOperation<UpdateHrisBankaccountRequest, UpdateHrisBankaccountResponse> operation
-              = new UpdateHrisBankaccount.Sync(sdkConfiguration, _headers);
+              = new UpdateHrisBankaccount.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

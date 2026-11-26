@@ -21,14 +21,13 @@ import java.util.Optional;
 /**
  * Criticality
  * 
- * <p>Potential severity of future reactions
+ * <p>low | high | unable-to-assess
  */
 public class Criticality {
 
-    public static final Criticality LOW = new Criticality("LOW");
-    public static final Criticality HIGH = new Criticality("HIGH");
-    public static final Criticality UNABLE_TO_ASSESS = new Criticality("UNABLE_TO_ASSESS");
-    public static final Criticality OTHER = new Criticality("OTHER");
+    public static final Criticality LOW = new Criticality("low");
+    public static final Criticality HIGH = new Criticality("high");
+    public static final Criticality UNABLE_TO_ASSESS = new Criticality("unable-to-assess");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -102,29 +101,26 @@ public class Criticality {
 
     private static final Map<String, Criticality> createValuesMap() {
         Map<String, Criticality> map = new LinkedHashMap<>();
-        map.put("LOW", LOW);
-        map.put("HIGH", HIGH);
-        map.put("UNABLE_TO_ASSESS", UNABLE_TO_ASSESS);
-        map.put("OTHER", OTHER);
+        map.put("low", LOW);
+        map.put("high", HIGH);
+        map.put("unable-to-assess", UNABLE_TO_ASSESS);
         return map;
     }
 
     private static final Map<String, CriticalityEnum> createEnumsMap() {
         Map<String, CriticalityEnum> map = new HashMap<>();
-        map.put("LOW", CriticalityEnum.LOW);
-        map.put("HIGH", CriticalityEnum.HIGH);
-        map.put("UNABLE_TO_ASSESS", CriticalityEnum.UNABLE_TO_ASSESS);
-        map.put("OTHER", CriticalityEnum.OTHER);
+        map.put("low", CriticalityEnum.LOW);
+        map.put("high", CriticalityEnum.HIGH);
+        map.put("unable-to-assess", CriticalityEnum.UNABLE_TO_ASSESS);
         return map;
     }
     
     
     public enum CriticalityEnum {
 
-        LOW("LOW"),
-        HIGH("HIGH"),
-        UNABLE_TO_ASSESS("UNABLE_TO_ASSESS"),
-        OTHER("OTHER"),;
+        LOW("low"),
+        HIGH("high"),
+        UNABLE_TO_ASSESS("unable-to-assess"),;
 
         private final String value;
 

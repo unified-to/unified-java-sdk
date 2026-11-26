@@ -6,18 +6,28 @@ package to.unified.unified_java_sdk.models.operations;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.GetAccountingBankfeedaccount;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetAccountingBankfeedaccountRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private GetAccountingBankfeedaccountRequest request;
+    private final Options.Builder optionsBuilder;
 
     public GetAccountingBankfeedaccountRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public GetAccountingBankfeedaccountRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public GetAccountingBankfeedaccountRequestBuilder request(@Nonnull GetAccountingBankfeedaccountRequest request) {
@@ -42,8 +52,9 @@ public class GetAccountingBankfeedaccountRequestBuilder {
     * @return The response from the server.
     */
     public GetAccountingBankfeedaccountResponse call() {
+        Options options = optionsBuilder.build();
         RequestOperation<GetAccountingBankfeedaccountRequest, GetAccountingBankfeedaccountResponse> operation
-              = new GetAccountingBankfeedaccount.Sync(sdkConfiguration, _headers);
+              = new GetAccountingBankfeedaccount.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingBankfeedtransactionRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingBankfeedtransactionRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingBankfeedtransactionResponse;
@@ -31,6 +32,7 @@ import to.unified.unified_java_sdk.operations.PatchAccountingBankfeedtransaction
 import to.unified.unified_java_sdk.operations.RemoveAccountingBankfeedtransaction;
 import to.unified.unified_java_sdk.operations.UpdateAccountingBankfeedtransaction;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Bankfeedtransaction {
@@ -77,8 +79,24 @@ public class Bankfeedtransaction {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateAccountingBankfeedtransactionResponse createAccountingBankfeedtransaction(@Nonnull CreateAccountingBankfeedtransactionRequest request) {
+        return createAccountingBankfeedtransaction(request, null);
+    }
+
+    /**
+     * Create a bankfeedtransaction
+     * 
+     * <p>Creates a AccountingBankfeedtransaction. Provide the unified AccountingBankfeedtransaction fields in
+     * the request body; they are mapped to the provider's API. Returns the created
+     * AccountingBankfeedtransaction.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateAccountingBankfeedtransactionResponse createAccountingBankfeedtransaction(@Nonnull CreateAccountingBankfeedtransactionRequest request, @Nullable Options options) {
         RequestOperation<CreateAccountingBankfeedtransactionRequest, CreateAccountingBankfeedtransactionResponse> operation
-              = new CreateAccountingBankfeedtransaction.Sync(sdkConfiguration, _headers);
+              = new CreateAccountingBankfeedtransaction.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -105,8 +123,23 @@ public class Bankfeedtransaction {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAccountingBankfeedtransactionResponse getAccountingBankfeedtransaction(@Nonnull GetAccountingBankfeedtransactionRequest request) {
+        return getAccountingBankfeedtransaction(request, null);
+    }
+
+    /**
+     * Retrieve a bankfeedtransaction
+     * 
+     * <p>Retrieves a single AccountingBankfeedtransaction by its `id`. Obtain `id` values from the
+     * corresponding list endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAccountingBankfeedtransactionResponse getAccountingBankfeedtransaction(@Nonnull GetAccountingBankfeedtransactionRequest request, @Nullable Options options) {
         RequestOperation<GetAccountingBankfeedtransactionRequest, GetAccountingBankfeedtransactionResponse> operation
-              = new GetAccountingBankfeedtransaction.Sync(sdkConfiguration, _headers);
+              = new GetAccountingBankfeedtransaction.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -143,8 +176,28 @@ public class Bankfeedtransaction {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAccountingBankfeedtransactionsResponse listAccountingBankfeedtransactions(@Nonnull ListAccountingBankfeedtransactionsRequest request) {
+        return listAccountingBankfeedtransactions(request, null);
+    }
+
+    /**
+     * List all bankfeedtransactions
+     * 
+     * <p>Returns a list of AccountingBankfeedtransactions. Narrow the results with the query parameters
+     * before paging, then page through them with `limit` and `offset` (the default and maximum page size
+     * depend on the integration). Use `fields` to return only the fields you need and reduce the response
+     * size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAccountingBankfeedtransactionsResponse listAccountingBankfeedtransactions(@Nonnull ListAccountingBankfeedtransactionsRequest request, @Nullable Options options) {
         RequestOperation<ListAccountingBankfeedtransactionsRequest, ListAccountingBankfeedtransactionsResponse> operation
-              = new ListAccountingBankfeedtransactions.Sync(sdkConfiguration, _headers);
+              = new ListAccountingBankfeedtransactions.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -171,8 +224,23 @@ public class Bankfeedtransaction {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchAccountingBankfeedtransactionResponse patchAccountingBankfeedtransaction(@Nonnull PatchAccountingBankfeedtransactionRequest request) {
+        return patchAccountingBankfeedtransaction(request, null);
+    }
+
+    /**
+     * Update a bankfeedtransaction
+     * 
+     * <p>Updates the AccountingBankfeedtransaction identified by `id`. Provide the unified
+     * AccountingBankfeedtransaction fields to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchAccountingBankfeedtransactionResponse patchAccountingBankfeedtransaction(@Nonnull PatchAccountingBankfeedtransactionRequest request, @Nullable Options options) {
         RequestOperation<PatchAccountingBankfeedtransactionRequest, PatchAccountingBankfeedtransactionResponse> operation
-              = new PatchAccountingBankfeedtransaction.Sync(sdkConfiguration, _headers);
+              = new PatchAccountingBankfeedtransaction.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -197,8 +265,22 @@ public class Bankfeedtransaction {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveAccountingBankfeedtransactionResponse removeAccountingBankfeedtransaction(@Nonnull RemoveAccountingBankfeedtransactionRequest request) {
+        return removeAccountingBankfeedtransaction(request, null);
+    }
+
+    /**
+     * Remove a bankfeedtransaction
+     * 
+     * <p>Deletes the AccountingBankfeedtransaction identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveAccountingBankfeedtransactionResponse removeAccountingBankfeedtransaction(@Nonnull RemoveAccountingBankfeedtransactionRequest request, @Nullable Options options) {
         RequestOperation<RemoveAccountingBankfeedtransactionRequest, RemoveAccountingBankfeedtransactionResponse> operation
-              = new RemoveAccountingBankfeedtransaction.Sync(sdkConfiguration, _headers);
+              = new RemoveAccountingBankfeedtransaction.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -225,8 +307,23 @@ public class Bankfeedtransaction {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateAccountingBankfeedtransactionResponse updateAccountingBankfeedtransaction(@Nonnull UpdateAccountingBankfeedtransactionRequest request) {
+        return updateAccountingBankfeedtransaction(request, null);
+    }
+
+    /**
+     * Update a bankfeedtransaction
+     * 
+     * <p>Updates the AccountingBankfeedtransaction identified by `id`. Provide the unified
+     * AccountingBankfeedtransaction fields to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateAccountingBankfeedtransactionResponse updateAccountingBankfeedtransaction(@Nonnull UpdateAccountingBankfeedtransactionRequest request, @Nullable Options options) {
         RequestOperation<UpdateAccountingBankfeedtransactionRequest, UpdateAccountingBankfeedtransactionResponse> operation
-              = new UpdateAccountingBankfeedtransaction.Sync(sdkConfiguration, _headers);
+              = new UpdateAccountingBankfeedtransaction.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

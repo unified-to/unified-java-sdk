@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateSocialPostRequest;
 import to.unified.unified_java_sdk.models.operations.CreateSocialPostRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateSocialPostResponse;
@@ -31,6 +32,7 @@ import to.unified.unified_java_sdk.operations.PatchSocialPost;
 import to.unified.unified_java_sdk.operations.RemoveSocialPost;
 import to.unified.unified_java_sdk.operations.UpdateSocialPost;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Post {
@@ -75,8 +77,23 @@ public class Post {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateSocialPostResponse createSocialPost(@Nonnull CreateSocialPostRequest request) {
+        return createSocialPost(request, null);
+    }
+
+    /**
+     * Create a post
+     * 
+     * <p>Creates a SocialPost. Provide the unified SocialPost fields in the request body; they are mapped to
+     * the provider's API. Returns the created SocialPost.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateSocialPostResponse createSocialPost(@Nonnull CreateSocialPostRequest request, @Nullable Options options) {
         RequestOperation<CreateSocialPostRequest, CreateSocialPostResponse> operation
-              = new CreateSocialPost.Sync(sdkConfiguration, _headers);
+              = new CreateSocialPost.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -103,8 +120,23 @@ public class Post {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetSocialPostResponse getSocialPost(@Nonnull GetSocialPostRequest request) {
+        return getSocialPost(request, null);
+    }
+
+    /**
+     * Retrieve a post
+     * 
+     * <p>Retrieves a single SocialPost by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetSocialPostResponse getSocialPost(@Nonnull GetSocialPostRequest request, @Nullable Options options) {
         RequestOperation<GetSocialPostRequest, GetSocialPostResponse> operation
-              = new GetSocialPost.Sync(sdkConfiguration, _headers);
+              = new GetSocialPost.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -139,8 +171,27 @@ public class Post {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListSocialPostsResponse listSocialPosts(@Nonnull ListSocialPostsRequest request) {
+        return listSocialPosts(request, null);
+    }
+
+    /**
+     * List all posts
+     * 
+     * <p>Returns a list of SocialPosts. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListSocialPostsResponse listSocialPosts(@Nonnull ListSocialPostsRequest request, @Nullable Options options) {
         RequestOperation<ListSocialPostsRequest, ListSocialPostsResponse> operation
-              = new ListSocialPosts.Sync(sdkConfiguration, _headers);
+              = new ListSocialPosts.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +218,23 @@ public class Post {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchSocialPostResponse patchSocialPost(@Nonnull PatchSocialPostRequest request) {
+        return patchSocialPost(request, null);
+    }
+
+    /**
+     * Update a post
+     * 
+     * <p>Updates the SocialPost identified by `id`. Provide the unified SocialPost fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchSocialPostResponse patchSocialPost(@Nonnull PatchSocialPostRequest request, @Nullable Options options) {
         RequestOperation<PatchSocialPostRequest, PatchSocialPostResponse> operation
-              = new PatchSocialPost.Sync(sdkConfiguration, _headers);
+              = new PatchSocialPost.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -193,8 +259,22 @@ public class Post {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveSocialPostResponse removeSocialPost(@Nonnull RemoveSocialPostRequest request) {
+        return removeSocialPost(request, null);
+    }
+
+    /**
+     * Remove a post
+     * 
+     * <p>Deletes the SocialPost identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveSocialPostResponse removeSocialPost(@Nonnull RemoveSocialPostRequest request, @Nullable Options options) {
         RequestOperation<RemoveSocialPostRequest, RemoveSocialPostResponse> operation
-              = new RemoveSocialPost.Sync(sdkConfiguration, _headers);
+              = new RemoveSocialPost.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -221,8 +301,23 @@ public class Post {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateSocialPostResponse updateSocialPost(@Nonnull UpdateSocialPostRequest request) {
+        return updateSocialPost(request, null);
+    }
+
+    /**
+     * Update a post
+     * 
+     * <p>Updates the SocialPost identified by `id`. Provide the unified SocialPost fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateSocialPostResponse updateSocialPost(@Nonnull UpdateSocialPostRequest request, @Nullable Options options) {
         RequestOperation<UpdateSocialPostRequest, UpdateSocialPostResponse> operation
-              = new UpdateSocialPost.Sync(sdkConfiguration, _headers);
+              = new UpdateSocialPost.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

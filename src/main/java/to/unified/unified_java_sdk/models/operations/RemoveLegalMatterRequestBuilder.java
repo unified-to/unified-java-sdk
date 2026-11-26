@@ -6,18 +6,28 @@ package to.unified.unified_java_sdk.models.operations;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.RemoveLegalMatter;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveLegalMatterRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private RemoveLegalMatterRequest request;
+    private final Options.Builder optionsBuilder;
 
     public RemoveLegalMatterRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public RemoveLegalMatterRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public RemoveLegalMatterRequestBuilder request(@Nonnull RemoveLegalMatterRequest request) {
@@ -42,8 +52,9 @@ public class RemoveLegalMatterRequestBuilder {
     * @return The response from the server.
     */
     public RemoveLegalMatterResponse call() {
+        Options options = optionsBuilder.build();
         RequestOperation<RemoveLegalMatterRequest, RemoveLegalMatterResponse> operation
-              = new RemoveLegalMatter.Sync(sdkConfiguration, _headers);
+              = new RemoveLegalMatter.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateAdsInsertionorderRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAdsInsertionorderRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateAdsInsertionorderResponse;
@@ -31,6 +32,7 @@ import to.unified.unified_java_sdk.operations.PatchAdsInsertionorder;
 import to.unified.unified_java_sdk.operations.RemoveAdsInsertionorder;
 import to.unified.unified_java_sdk.operations.UpdateAdsInsertionorder;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Insertionorder {
@@ -75,8 +77,23 @@ public class Insertionorder {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateAdsInsertionorderResponse createAdsInsertionorder(@Nonnull CreateAdsInsertionorderRequest request) {
+        return createAdsInsertionorder(request, null);
+    }
+
+    /**
+     * Create an insertionorder
+     * 
+     * <p>Creates a AdsInsertionorder. Provide the unified AdsInsertionorder fields in the request body; they
+     * are mapped to the provider's API. Returns the created AdsInsertionorder.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateAdsInsertionorderResponse createAdsInsertionorder(@Nonnull CreateAdsInsertionorderRequest request, @Nullable Options options) {
         RequestOperation<CreateAdsInsertionorderRequest, CreateAdsInsertionorderResponse> operation
-              = new CreateAdsInsertionorder.Sync(sdkConfiguration, _headers);
+              = new CreateAdsInsertionorder.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -103,8 +120,23 @@ public class Insertionorder {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAdsInsertionorderResponse getAdsInsertionorder(@Nonnull GetAdsInsertionorderRequest request) {
+        return getAdsInsertionorder(request, null);
+    }
+
+    /**
+     * Retrieve an insertionorder
+     * 
+     * <p>Retrieves a single AdsInsertionorder by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAdsInsertionorderResponse getAdsInsertionorder(@Nonnull GetAdsInsertionorderRequest request, @Nullable Options options) {
         RequestOperation<GetAdsInsertionorderRequest, GetAdsInsertionorderResponse> operation
-              = new GetAdsInsertionorder.Sync(sdkConfiguration, _headers);
+              = new GetAdsInsertionorder.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -139,8 +171,27 @@ public class Insertionorder {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAdsInsertionordersResponse listAdsInsertionorders(@Nonnull ListAdsInsertionordersRequest request) {
+        return listAdsInsertionorders(request, null);
+    }
+
+    /**
+     * List all insertionorders
+     * 
+     * <p>Returns a list of AdsInsertionorders. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAdsInsertionordersResponse listAdsInsertionorders(@Nonnull ListAdsInsertionordersRequest request, @Nullable Options options) {
         RequestOperation<ListAdsInsertionordersRequest, ListAdsInsertionordersResponse> operation
-              = new ListAdsInsertionorders.Sync(sdkConfiguration, _headers);
+              = new ListAdsInsertionorders.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +218,23 @@ public class Insertionorder {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchAdsInsertionorderResponse patchAdsInsertionorder(@Nonnull PatchAdsInsertionorderRequest request) {
+        return patchAdsInsertionorder(request, null);
+    }
+
+    /**
+     * Update an insertionorder
+     * 
+     * <p>Updates the AdsInsertionorder identified by `id`. Provide the unified AdsInsertionorder fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchAdsInsertionorderResponse patchAdsInsertionorder(@Nonnull PatchAdsInsertionorderRequest request, @Nullable Options options) {
         RequestOperation<PatchAdsInsertionorderRequest, PatchAdsInsertionorderResponse> operation
-              = new PatchAdsInsertionorder.Sync(sdkConfiguration, _headers);
+              = new PatchAdsInsertionorder.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -193,8 +259,22 @@ public class Insertionorder {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveAdsInsertionorderResponse removeAdsInsertionorder(@Nonnull RemoveAdsInsertionorderRequest request) {
+        return removeAdsInsertionorder(request, null);
+    }
+
+    /**
+     * Remove an insertionorder
+     * 
+     * <p>Deletes the AdsInsertionorder identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveAdsInsertionorderResponse removeAdsInsertionorder(@Nonnull RemoveAdsInsertionorderRequest request, @Nullable Options options) {
         RequestOperation<RemoveAdsInsertionorderRequest, RemoveAdsInsertionorderResponse> operation
-              = new RemoveAdsInsertionorder.Sync(sdkConfiguration, _headers);
+              = new RemoveAdsInsertionorder.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -221,8 +301,23 @@ public class Insertionorder {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateAdsInsertionorderResponse updateAdsInsertionorder(@Nonnull UpdateAdsInsertionorderRequest request) {
+        return updateAdsInsertionorder(request, null);
+    }
+
+    /**
+     * Update an insertionorder
+     * 
+     * <p>Updates the AdsInsertionorder identified by `id`. Provide the unified AdsInsertionorder fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateAdsInsertionorderResponse updateAdsInsertionorder(@Nonnull UpdateAdsInsertionorderRequest request, @Nullable Options options) {
         RequestOperation<UpdateAdsInsertionorderRequest, UpdateAdsInsertionorderResponse> operation
-              = new UpdateAdsInsertionorder.Sync(sdkConfiguration, _headers);
+              = new UpdateAdsInsertionorder.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

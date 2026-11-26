@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateDatastoreTableRequest;
 import to.unified.unified_java_sdk.models.operations.GetCommerceTableRequest;
@@ -40,6 +41,7 @@ import to.unified.unified_java_sdk.operations.PatchDatastoreTable;
 import to.unified.unified_java_sdk.operations.RemoveDatastoreTable;
 import to.unified.unified_java_sdk.operations.UpdateDatastoreTable;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncTable {
@@ -84,8 +86,22 @@ public class AsyncTable {
      * @return {@code CompletableFuture<CreateDatastoreTableResponse>} - The async response
      */
     public CompletableFuture<CreateDatastoreTableResponse> createDatastoreTable(@Nonnull CreateDatastoreTableRequest request) {
+        return createDatastoreTable(request, null);
+    }
+
+    /**
+     * Create a table
+     * 
+     * <p>Creates a DatastoreTable. Provide the unified DatastoreTable fields in the request body; they are
+     * mapped to the provider's API. Returns the created DatastoreTable.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateDatastoreTableResponse>} - The async response
+     */
+    public CompletableFuture<CreateDatastoreTableResponse> createDatastoreTable(@Nonnull CreateDatastoreTableRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateDatastoreTableRequest, CreateDatastoreTableResponse> operation
-              = new CreateDatastoreTable.Async(sdkConfiguration, _headers);
+              = new CreateDatastoreTable.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -113,8 +129,22 @@ public class AsyncTable {
      * @return {@code CompletableFuture<GetCommerceTableResponse>} - The async response
      */
     public CompletableFuture<GetCommerceTableResponse> getCommerceTable(@Nonnull GetCommerceTableRequest request) {
+        return getCommerceTable(request, null);
+    }
+
+    /**
+     * Retrieve a table
+     * 
+     * <p>Retrieves a single CommerceTable by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetCommerceTableResponse>} - The async response
+     */
+    public CompletableFuture<GetCommerceTableResponse> getCommerceTable(@Nonnull GetCommerceTableRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetCommerceTableRequest, GetCommerceTableResponse> operation
-              = new GetCommerceTable.Async(sdkConfiguration, _headers);
+              = new GetCommerceTable.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -142,8 +172,22 @@ public class AsyncTable {
      * @return {@code CompletableFuture<GetDatastoreTableResponse>} - The async response
      */
     public CompletableFuture<GetDatastoreTableResponse> getDatastoreTable(@Nonnull GetDatastoreTableRequest request) {
+        return getDatastoreTable(request, null);
+    }
+
+    /**
+     * Retrieve a table
+     * 
+     * <p>Retrieves a single DatastoreTable by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetDatastoreTableResponse>} - The async response
+     */
+    public CompletableFuture<GetDatastoreTableResponse> getDatastoreTable(@Nonnull GetDatastoreTableRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetDatastoreTableRequest, GetDatastoreTableResponse> operation
-              = new GetDatastoreTable.Async(sdkConfiguration, _headers);
+              = new GetDatastoreTable.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -179,8 +223,26 @@ public class AsyncTable {
      * @return {@code CompletableFuture<ListCommerceTablesResponse>} - The async response
      */
     public CompletableFuture<ListCommerceTablesResponse> listCommerceTables(@Nonnull ListCommerceTablesRequest request) {
+        return listCommerceTables(request, null);
+    }
+
+    /**
+     * List all tables
+     * 
+     * <p>Returns a list of CommerceTables. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListCommerceTablesResponse>} - The async response
+     */
+    public CompletableFuture<ListCommerceTablesResponse> listCommerceTables(@Nonnull ListCommerceTablesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListCommerceTablesRequest, ListCommerceTablesResponse> operation
-              = new ListCommerceTables.Async(sdkConfiguration, _headers);
+              = new ListCommerceTables.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -216,8 +278,26 @@ public class AsyncTable {
      * @return {@code CompletableFuture<ListDatastoreTablesResponse>} - The async response
      */
     public CompletableFuture<ListDatastoreTablesResponse> listDatastoreTables(@Nonnull ListDatastoreTablesRequest request) {
+        return listDatastoreTables(request, null);
+    }
+
+    /**
+     * List all tables
+     * 
+     * <p>Returns a list of DatastoreTables. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListDatastoreTablesResponse>} - The async response
+     */
+    public CompletableFuture<ListDatastoreTablesResponse> listDatastoreTables(@Nonnull ListDatastoreTablesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListDatastoreTablesRequest, ListDatastoreTablesResponse> operation
-              = new ListDatastoreTables.Async(sdkConfiguration, _headers);
+              = new ListDatastoreTables.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -245,8 +325,22 @@ public class AsyncTable {
      * @return {@code CompletableFuture<PatchDatastoreTableResponse>} - The async response
      */
     public CompletableFuture<PatchDatastoreTableResponse> patchDatastoreTable(@Nonnull PatchDatastoreTableRequest request) {
+        return patchDatastoreTable(request, null);
+    }
+
+    /**
+     * Update a table
+     * 
+     * <p>Updates the DatastoreTable identified by `id`. Provide the unified DatastoreTable fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchDatastoreTableResponse>} - The async response
+     */
+    public CompletableFuture<PatchDatastoreTableResponse> patchDatastoreTable(@Nonnull PatchDatastoreTableRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchDatastoreTableRequest, PatchDatastoreTableResponse> operation
-              = new PatchDatastoreTable.Async(sdkConfiguration, _headers);
+              = new PatchDatastoreTable.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -272,8 +366,21 @@ public class AsyncTable {
      * @return {@code CompletableFuture<RemoveDatastoreTableResponse>} - The async response
      */
     public CompletableFuture<RemoveDatastoreTableResponse> removeDatastoreTable(@Nonnull RemoveDatastoreTableRequest request) {
+        return removeDatastoreTable(request, null);
+    }
+
+    /**
+     * Remove a table
+     * 
+     * <p>Deletes the DatastoreTable identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveDatastoreTableResponse>} - The async response
+     */
+    public CompletableFuture<RemoveDatastoreTableResponse> removeDatastoreTable(@Nonnull RemoveDatastoreTableRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveDatastoreTableRequest, RemoveDatastoreTableResponse> operation
-              = new RemoveDatastoreTable.Async(sdkConfiguration, _headers);
+              = new RemoveDatastoreTable.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -301,8 +408,22 @@ public class AsyncTable {
      * @return {@code CompletableFuture<UpdateDatastoreTableResponse>} - The async response
      */
     public CompletableFuture<UpdateDatastoreTableResponse> updateDatastoreTable(@Nonnull UpdateDatastoreTableRequest request) {
+        return updateDatastoreTable(request, null);
+    }
+
+    /**
+     * Update a table
+     * 
+     * <p>Updates the DatastoreTable identified by `id`. Provide the unified DatastoreTable fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateDatastoreTableResponse>} - The async response
+     */
+    public CompletableFuture<UpdateDatastoreTableResponse> updateDatastoreTable(@Nonnull UpdateDatastoreTableRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateDatastoreTableRequest, UpdateDatastoreTableResponse> operation
-              = new UpdateDatastoreTable.Async(sdkConfiguration, _headers);
+              = new UpdateDatastoreTable.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

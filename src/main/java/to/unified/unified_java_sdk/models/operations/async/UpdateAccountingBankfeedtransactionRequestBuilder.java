@@ -6,20 +6,30 @@ package to.unified.unified_java_sdk.models.operations.async;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingBankfeedtransactionRequest;
 import to.unified.unified_java_sdk.operations.UpdateAccountingBankfeedtransaction;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class UpdateAccountingBankfeedtransactionRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private UpdateAccountingBankfeedtransactionRequest request;
+    private final Options.Builder optionsBuilder;
 
     public UpdateAccountingBankfeedtransactionRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public UpdateAccountingBankfeedtransactionRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public UpdateAccountingBankfeedtransactionRequestBuilder request(@Nonnull UpdateAccountingBankfeedtransactionRequest request) {
@@ -44,8 +54,9 @@ public class UpdateAccountingBankfeedtransactionRequestBuilder {
     * @return The response from the server.
     */
     public CompletableFuture<UpdateAccountingBankfeedtransactionResponse> call() {
+        Options options = optionsBuilder.build();
         AsyncRequestOperation<UpdateAccountingBankfeedtransactionRequest, UpdateAccountingBankfeedtransactionResponse> operation
-              = new UpdateAccountingBankfeedtransaction.Async(sdkConfiguration, _headers);
+              = new UpdateAccountingBankfeedtransaction.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

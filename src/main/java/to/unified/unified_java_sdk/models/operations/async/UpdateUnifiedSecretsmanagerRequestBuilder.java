@@ -6,20 +6,30 @@ package to.unified.unified_java_sdk.models.operations.async;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.UpdateUnifiedSecretsmanagerRequest;
 import to.unified.unified_java_sdk.operations.UpdateUnifiedSecretsmanager;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class UpdateUnifiedSecretsmanagerRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private UpdateUnifiedSecretsmanagerRequest request;
+    private final Options.Builder optionsBuilder;
 
     public UpdateUnifiedSecretsmanagerRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public UpdateUnifiedSecretsmanagerRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public UpdateUnifiedSecretsmanagerRequestBuilder request(@Nonnull UpdateUnifiedSecretsmanagerRequest request) {
@@ -44,8 +54,9 @@ public class UpdateUnifiedSecretsmanagerRequestBuilder {
     * @return The response from the server.
     */
     public CompletableFuture<UpdateUnifiedSecretsmanagerResponse> call() {
+        Options options = optionsBuilder.build();
         AsyncRequestOperation<UpdateUnifiedSecretsmanagerRequest, UpdateUnifiedSecretsmanagerResponse> operation
-              = new UpdateUnifiedSecretsmanager.Async(sdkConfiguration, _headers);
+              = new UpdateUnifiedSecretsmanager.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

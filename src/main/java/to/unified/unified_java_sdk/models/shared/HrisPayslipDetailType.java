@@ -69,6 +69,7 @@ public class HrisPayslipDetailType {
     public static final HrisPayslipDetailType POSTTAX_DEDUCTION_COLLEGE_SAVINGS = new HrisPayslipDetailType("POSTTAX_DEDUCTION_COLLEGE_SAVINGS");
     public static final HrisPayslipDetailType POSTTAX_DEDUCTION_UNION_DUES = new HrisPayslipDetailType("POSTTAX_DEDUCTION_UNION_DUES");
     public static final HrisPayslipDetailType POSTTAX_DEDUCTION_EWA_REPAYMENT = new HrisPayslipDetailType("POSTTAX_DEDUCTION_EWA_REPAYMENT");
+    public static final HrisPayslipDetailType EARNING_TAXABLE_BENEFIT = new HrisPayslipDetailType("EARNING_TAXABLE_BENEFIT");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -191,6 +192,7 @@ public class HrisPayslipDetailType {
         map.put("POSTTAX_DEDUCTION_COLLEGE_SAVINGS", POSTTAX_DEDUCTION_COLLEGE_SAVINGS);
         map.put("POSTTAX_DEDUCTION_UNION_DUES", POSTTAX_DEDUCTION_UNION_DUES);
         map.put("POSTTAX_DEDUCTION_EWA_REPAYMENT", POSTTAX_DEDUCTION_EWA_REPAYMENT);
+        map.put("EARNING_TAXABLE_BENEFIT", EARNING_TAXABLE_BENEFIT);
         return map;
     }
 
@@ -245,6 +247,7 @@ public class HrisPayslipDetailType {
         map.put("POSTTAX_DEDUCTION_COLLEGE_SAVINGS", HrisPayslipDetailTypeEnum.POSTTAX_DEDUCTION_COLLEGE_SAVINGS);
         map.put("POSTTAX_DEDUCTION_UNION_DUES", HrisPayslipDetailTypeEnum.POSTTAX_DEDUCTION_UNION_DUES);
         map.put("POSTTAX_DEDUCTION_EWA_REPAYMENT", HrisPayslipDetailTypeEnum.POSTTAX_DEDUCTION_EWA_REPAYMENT);
+        map.put("EARNING_TAXABLE_BENEFIT", HrisPayslipDetailTypeEnum.EARNING_TAXABLE_BENEFIT);
         return map;
     }
     
@@ -299,7 +302,8 @@ public class HrisPayslipDetailType {
         EMPLOYER_CONTRIBUTION_FSA("EMPLOYER_CONTRIBUTION_FSA"),
         POSTTAX_DEDUCTION_COLLEGE_SAVINGS("POSTTAX_DEDUCTION_COLLEGE_SAVINGS"),
         POSTTAX_DEDUCTION_UNION_DUES("POSTTAX_DEDUCTION_UNION_DUES"),
-        POSTTAX_DEDUCTION_EWA_REPAYMENT("POSTTAX_DEDUCTION_EWA_REPAYMENT"),;
+        POSTTAX_DEDUCTION_EWA_REPAYMENT("POSTTAX_DEDUCTION_EWA_REPAYMENT"),
+        EARNING_TAXABLE_BENEFIT("EARNING_TAXABLE_BENEFIT"),;
 
         private final String value;
 

@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateAdsAssetRequest;
 import to.unified.unified_java_sdk.models.operations.GetAdsAssetRequest;
@@ -20,6 +21,7 @@ import to.unified.unified_java_sdk.operations.CreateAdsAsset;
 import to.unified.unified_java_sdk.operations.GetAdsAsset;
 import to.unified.unified_java_sdk.operations.ListAdsAssets;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncAsset {
@@ -64,8 +66,22 @@ public class AsyncAsset {
      * @return {@code CompletableFuture<CreateAdsAssetResponse>} - The async response
      */
     public CompletableFuture<CreateAdsAssetResponse> createAdsAsset(@Nonnull CreateAdsAssetRequest request) {
+        return createAdsAsset(request, null);
+    }
+
+    /**
+     * Create an asset
+     * 
+     * <p>Creates a AdsAsset. Provide the unified AdsAsset fields in the request body; they are mapped to the
+     * provider's API. Returns the created AdsAsset.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateAdsAssetResponse>} - The async response
+     */
+    public CompletableFuture<CreateAdsAssetResponse> createAdsAsset(@Nonnull CreateAdsAssetRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateAdsAssetRequest, CreateAdsAssetResponse> operation
-              = new CreateAdsAsset.Async(sdkConfiguration, _headers);
+              = new CreateAdsAsset.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -93,8 +109,22 @@ public class AsyncAsset {
      * @return {@code CompletableFuture<GetAdsAssetResponse>} - The async response
      */
     public CompletableFuture<GetAdsAssetResponse> getAdsAsset(@Nonnull GetAdsAssetRequest request) {
+        return getAdsAsset(request, null);
+    }
+
+    /**
+     * Retrieve an asset
+     * 
+     * <p>Retrieves a single AdsAsset by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetAdsAssetResponse>} - The async response
+     */
+    public CompletableFuture<GetAdsAssetResponse> getAdsAsset(@Nonnull GetAdsAssetRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetAdsAssetRequest, GetAdsAssetResponse> operation
-              = new GetAdsAsset.Async(sdkConfiguration, _headers);
+              = new GetAdsAsset.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -130,8 +160,26 @@ public class AsyncAsset {
      * @return {@code CompletableFuture<ListAdsAssetsResponse>} - The async response
      */
     public CompletableFuture<ListAdsAssetsResponse> listAdsAssets(@Nonnull ListAdsAssetsRequest request) {
+        return listAdsAssets(request, null);
+    }
+
+    /**
+     * List all assets
+     * 
+     * <p>Returns a list of AdsAssets. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListAdsAssetsResponse>} - The async response
+     */
+    public CompletableFuture<ListAdsAssetsResponse> listAdsAssets(@Nonnull ListAdsAssetsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListAdsAssetsRequest, ListAdsAssetsResponse> operation
-              = new ListAdsAssets.Async(sdkConfiguration, _headers);
+              = new ListAdsAssets.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

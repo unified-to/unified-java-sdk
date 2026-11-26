@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateDatastoreDatabaseRequest;
 import to.unified.unified_java_sdk.models.operations.GetDatastoreDatabaseRequest;
@@ -32,6 +33,7 @@ import to.unified.unified_java_sdk.operations.PatchDatastoreDatabase;
 import to.unified.unified_java_sdk.operations.RemoveDatastoreDatabase;
 import to.unified.unified_java_sdk.operations.UpdateDatastoreDatabase;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncDatabase {
@@ -76,8 +78,22 @@ public class AsyncDatabase {
      * @return {@code CompletableFuture<CreateDatastoreDatabaseResponse>} - The async response
      */
     public CompletableFuture<CreateDatastoreDatabaseResponse> createDatastoreDatabase(@Nonnull CreateDatastoreDatabaseRequest request) {
+        return createDatastoreDatabase(request, null);
+    }
+
+    /**
+     * Create a database
+     * 
+     * <p>Creates a DatastoreDatabase. Provide the unified DatastoreDatabase fields in the request body; they
+     * are mapped to the provider's API. Returns the created DatastoreDatabase.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateDatastoreDatabaseResponse>} - The async response
+     */
+    public CompletableFuture<CreateDatastoreDatabaseResponse> createDatastoreDatabase(@Nonnull CreateDatastoreDatabaseRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateDatastoreDatabaseRequest, CreateDatastoreDatabaseResponse> operation
-              = new CreateDatastoreDatabase.Async(sdkConfiguration, _headers);
+              = new CreateDatastoreDatabase.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -105,8 +121,22 @@ public class AsyncDatabase {
      * @return {@code CompletableFuture<GetDatastoreDatabaseResponse>} - The async response
      */
     public CompletableFuture<GetDatastoreDatabaseResponse> getDatastoreDatabase(@Nonnull GetDatastoreDatabaseRequest request) {
+        return getDatastoreDatabase(request, null);
+    }
+
+    /**
+     * Retrieve a database
+     * 
+     * <p>Retrieves a single DatastoreDatabase by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetDatastoreDatabaseResponse>} - The async response
+     */
+    public CompletableFuture<GetDatastoreDatabaseResponse> getDatastoreDatabase(@Nonnull GetDatastoreDatabaseRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetDatastoreDatabaseRequest, GetDatastoreDatabaseResponse> operation
-              = new GetDatastoreDatabase.Async(sdkConfiguration, _headers);
+              = new GetDatastoreDatabase.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -142,8 +172,26 @@ public class AsyncDatabase {
      * @return {@code CompletableFuture<ListDatastoreDatabasesResponse>} - The async response
      */
     public CompletableFuture<ListDatastoreDatabasesResponse> listDatastoreDatabases(@Nonnull ListDatastoreDatabasesRequest request) {
+        return listDatastoreDatabases(request, null);
+    }
+
+    /**
+     * List all databases
+     * 
+     * <p>Returns a list of DatastoreDatabases. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListDatastoreDatabasesResponse>} - The async response
+     */
+    public CompletableFuture<ListDatastoreDatabasesResponse> listDatastoreDatabases(@Nonnull ListDatastoreDatabasesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListDatastoreDatabasesRequest, ListDatastoreDatabasesResponse> operation
-              = new ListDatastoreDatabases.Async(sdkConfiguration, _headers);
+              = new ListDatastoreDatabases.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -171,8 +219,22 @@ public class AsyncDatabase {
      * @return {@code CompletableFuture<PatchDatastoreDatabaseResponse>} - The async response
      */
     public CompletableFuture<PatchDatastoreDatabaseResponse> patchDatastoreDatabase(@Nonnull PatchDatastoreDatabaseRequest request) {
+        return patchDatastoreDatabase(request, null);
+    }
+
+    /**
+     * Update a database
+     * 
+     * <p>Updates the DatastoreDatabase identified by `id`. Provide the unified DatastoreDatabase fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchDatastoreDatabaseResponse>} - The async response
+     */
+    public CompletableFuture<PatchDatastoreDatabaseResponse> patchDatastoreDatabase(@Nonnull PatchDatastoreDatabaseRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchDatastoreDatabaseRequest, PatchDatastoreDatabaseResponse> operation
-              = new PatchDatastoreDatabase.Async(sdkConfiguration, _headers);
+              = new PatchDatastoreDatabase.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -198,8 +260,21 @@ public class AsyncDatabase {
      * @return {@code CompletableFuture<RemoveDatastoreDatabaseResponse>} - The async response
      */
     public CompletableFuture<RemoveDatastoreDatabaseResponse> removeDatastoreDatabase(@Nonnull RemoveDatastoreDatabaseRequest request) {
+        return removeDatastoreDatabase(request, null);
+    }
+
+    /**
+     * Remove a database
+     * 
+     * <p>Deletes the DatastoreDatabase identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveDatastoreDatabaseResponse>} - The async response
+     */
+    public CompletableFuture<RemoveDatastoreDatabaseResponse> removeDatastoreDatabase(@Nonnull RemoveDatastoreDatabaseRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveDatastoreDatabaseRequest, RemoveDatastoreDatabaseResponse> operation
-              = new RemoveDatastoreDatabase.Async(sdkConfiguration, _headers);
+              = new RemoveDatastoreDatabase.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -227,8 +302,22 @@ public class AsyncDatabase {
      * @return {@code CompletableFuture<UpdateDatastoreDatabaseResponse>} - The async response
      */
     public CompletableFuture<UpdateDatastoreDatabaseResponse> updateDatastoreDatabase(@Nonnull UpdateDatastoreDatabaseRequest request) {
+        return updateDatastoreDatabase(request, null);
+    }
+
+    /**
+     * Update a database
+     * 
+     * <p>Updates the DatastoreDatabase identified by `id`. Provide the unified DatastoreDatabase fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateDatastoreDatabaseResponse>} - The async response
+     */
+    public CompletableFuture<UpdateDatastoreDatabaseResponse> updateDatastoreDatabase(@Nonnull UpdateDatastoreDatabaseRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateDatastoreDatabaseRequest, UpdateDatastoreDatabaseResponse> operation
-              = new UpdateDatastoreDatabase.Async(sdkConfiguration, _headers);
+              = new UpdateDatastoreDatabase.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

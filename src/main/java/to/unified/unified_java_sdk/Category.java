@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingCategoryRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingCategoryRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingCategoryResponse;
@@ -63,6 +64,7 @@ import to.unified.unified_java_sdk.operations.RemoveTicketingCategory;
 import to.unified.unified_java_sdk.operations.UpdateAccountingCategory;
 import to.unified.unified_java_sdk.operations.UpdateTicketingCategory;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Category {
@@ -107,8 +109,23 @@ public class Category {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateAccountingCategoryResponse createAccountingCategory(@Nonnull CreateAccountingCategoryRequest request) {
+        return createAccountingCategory(request, null);
+    }
+
+    /**
+     * Create a category
+     * 
+     * <p>Creates a AccountingCategory. Provide the unified AccountingCategory fields in the request body;
+     * they are mapped to the provider's API. Returns the created AccountingCategory.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateAccountingCategoryResponse createAccountingCategory(@Nonnull CreateAccountingCategoryRequest request, @Nullable Options options) {
         RequestOperation<CreateAccountingCategoryRequest, CreateAccountingCategoryResponse> operation
-              = new CreateAccountingCategory.Sync(sdkConfiguration, _headers);
+              = new CreateAccountingCategory.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -135,8 +152,23 @@ public class Category {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateTicketingCategoryResponse createTicketingCategory(@Nonnull CreateTicketingCategoryRequest request) {
+        return createTicketingCategory(request, null);
+    }
+
+    /**
+     * Create a category
+     * 
+     * <p>Creates a TicketingCategory. Provide the unified TicketingCategory fields in the request body; they
+     * are mapped to the provider's API. Returns the created TicketingCategory.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateTicketingCategoryResponse createTicketingCategory(@Nonnull CreateTicketingCategoryRequest request, @Nullable Options options) {
         RequestOperation<CreateTicketingCategoryRequest, CreateTicketingCategoryResponse> operation
-              = new CreateTicketingCategory.Sync(sdkConfiguration, _headers);
+              = new CreateTicketingCategory.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -163,8 +195,23 @@ public class Category {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAccountingCategoryResponse getAccountingCategory(@Nonnull GetAccountingCategoryRequest request) {
+        return getAccountingCategory(request, null);
+    }
+
+    /**
+     * Retrieve a category
+     * 
+     * <p>Retrieves a single AccountingCategory by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAccountingCategoryResponse getAccountingCategory(@Nonnull GetAccountingCategoryRequest request, @Nullable Options options) {
         RequestOperation<GetAccountingCategoryRequest, GetAccountingCategoryResponse> operation
-              = new GetAccountingCategory.Sync(sdkConfiguration, _headers);
+              = new GetAccountingCategory.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -191,8 +238,23 @@ public class Category {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetPlmCategoryResponse getPlmCategory(@Nonnull GetPlmCategoryRequest request) {
+        return getPlmCategory(request, null);
+    }
+
+    /**
+     * Retrieve a category
+     * 
+     * <p>Retrieves a single PlmCategory by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetPlmCategoryResponse getPlmCategory(@Nonnull GetPlmCategoryRequest request, @Nullable Options options) {
         RequestOperation<GetPlmCategoryRequest, GetPlmCategoryResponse> operation
-              = new GetPlmCategory.Sync(sdkConfiguration, _headers);
+              = new GetPlmCategory.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -219,8 +281,23 @@ public class Category {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetTicketingCategoryResponse getTicketingCategory(@Nonnull GetTicketingCategoryRequest request) {
+        return getTicketingCategory(request, null);
+    }
+
+    /**
+     * Retrieve a category
+     * 
+     * <p>Retrieves a single TicketingCategory by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetTicketingCategoryResponse getTicketingCategory(@Nonnull GetTicketingCategoryRequest request, @Nullable Options options) {
         RequestOperation<GetTicketingCategoryRequest, GetTicketingCategoryResponse> operation
-              = new GetTicketingCategory.Sync(sdkConfiguration, _headers);
+              = new GetTicketingCategory.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -255,8 +332,27 @@ public class Category {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAccountingCategoriesResponse listAccountingCategories(@Nonnull ListAccountingCategoriesRequest request) {
+        return listAccountingCategories(request, null);
+    }
+
+    /**
+     * List all categories
+     * 
+     * <p>Returns a list of AccountingCategories. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAccountingCategoriesResponse listAccountingCategories(@Nonnull ListAccountingCategoriesRequest request, @Nullable Options options) {
         RequestOperation<ListAccountingCategoriesRequest, ListAccountingCategoriesResponse> operation
-              = new ListAccountingCategories.Sync(sdkConfiguration, _headers);
+              = new ListAccountingCategories.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -291,8 +387,27 @@ public class Category {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListPlmCategoriesResponse listPlmCategories(@Nonnull ListPlmCategoriesRequest request) {
+        return listPlmCategories(request, null);
+    }
+
+    /**
+     * List all categories
+     * 
+     * <p>Returns a list of PlmCategories. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListPlmCategoriesResponse listPlmCategories(@Nonnull ListPlmCategoriesRequest request, @Nullable Options options) {
         RequestOperation<ListPlmCategoriesRequest, ListPlmCategoriesResponse> operation
-              = new ListPlmCategories.Sync(sdkConfiguration, _headers);
+              = new ListPlmCategories.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -327,8 +442,27 @@ public class Category {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListTicketingCategoriesResponse listTicketingCategories(@Nonnull ListTicketingCategoriesRequest request) {
+        return listTicketingCategories(request, null);
+    }
+
+    /**
+     * List all categories
+     * 
+     * <p>Returns a list of TicketingCategories. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListTicketingCategoriesResponse listTicketingCategories(@Nonnull ListTicketingCategoriesRequest request, @Nullable Options options) {
         RequestOperation<ListTicketingCategoriesRequest, ListTicketingCategoriesResponse> operation
-              = new ListTicketingCategories.Sync(sdkConfiguration, _headers);
+              = new ListTicketingCategories.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -355,8 +489,23 @@ public class Category {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchAccountingCategoryResponse patchAccountingCategory(@Nonnull PatchAccountingCategoryRequest request) {
+        return patchAccountingCategory(request, null);
+    }
+
+    /**
+     * Update a category
+     * 
+     * <p>Updates the AccountingCategory identified by `id`. Provide the unified AccountingCategory fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchAccountingCategoryResponse patchAccountingCategory(@Nonnull PatchAccountingCategoryRequest request, @Nullable Options options) {
         RequestOperation<PatchAccountingCategoryRequest, PatchAccountingCategoryResponse> operation
-              = new PatchAccountingCategory.Sync(sdkConfiguration, _headers);
+              = new PatchAccountingCategory.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -383,8 +532,23 @@ public class Category {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchTicketingCategoryResponse patchTicketingCategory(@Nonnull PatchTicketingCategoryRequest request) {
+        return patchTicketingCategory(request, null);
+    }
+
+    /**
+     * Update a category
+     * 
+     * <p>Updates the TicketingCategory identified by `id`. Provide the unified TicketingCategory fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchTicketingCategoryResponse patchTicketingCategory(@Nonnull PatchTicketingCategoryRequest request, @Nullable Options options) {
         RequestOperation<PatchTicketingCategoryRequest, PatchTicketingCategoryResponse> operation
-              = new PatchTicketingCategory.Sync(sdkConfiguration, _headers);
+              = new PatchTicketingCategory.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -409,8 +573,22 @@ public class Category {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveAccountingCategoryResponse removeAccountingCategory(@Nonnull RemoveAccountingCategoryRequest request) {
+        return removeAccountingCategory(request, null);
+    }
+
+    /**
+     * Remove a category
+     * 
+     * <p>Deletes the AccountingCategory identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveAccountingCategoryResponse removeAccountingCategory(@Nonnull RemoveAccountingCategoryRequest request, @Nullable Options options) {
         RequestOperation<RemoveAccountingCategoryRequest, RemoveAccountingCategoryResponse> operation
-              = new RemoveAccountingCategory.Sync(sdkConfiguration, _headers);
+              = new RemoveAccountingCategory.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -435,8 +613,22 @@ public class Category {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveTicketingCategoryResponse removeTicketingCategory(@Nonnull RemoveTicketingCategoryRequest request) {
+        return removeTicketingCategory(request, null);
+    }
+
+    /**
+     * Remove a category
+     * 
+     * <p>Deletes the TicketingCategory identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveTicketingCategoryResponse removeTicketingCategory(@Nonnull RemoveTicketingCategoryRequest request, @Nullable Options options) {
         RequestOperation<RemoveTicketingCategoryRequest, RemoveTicketingCategoryResponse> operation
-              = new RemoveTicketingCategory.Sync(sdkConfiguration, _headers);
+              = new RemoveTicketingCategory.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -463,8 +655,23 @@ public class Category {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateAccountingCategoryResponse updateAccountingCategory(@Nonnull UpdateAccountingCategoryRequest request) {
+        return updateAccountingCategory(request, null);
+    }
+
+    /**
+     * Update a category
+     * 
+     * <p>Updates the AccountingCategory identified by `id`. Provide the unified AccountingCategory fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateAccountingCategoryResponse updateAccountingCategory(@Nonnull UpdateAccountingCategoryRequest request, @Nullable Options options) {
         RequestOperation<UpdateAccountingCategoryRequest, UpdateAccountingCategoryResponse> operation
-              = new UpdateAccountingCategory.Sync(sdkConfiguration, _headers);
+              = new UpdateAccountingCategory.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -491,8 +698,23 @@ public class Category {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateTicketingCategoryResponse updateTicketingCategory(@Nonnull UpdateTicketingCategoryRequest request) {
+        return updateTicketingCategory(request, null);
+    }
+
+    /**
+     * Update a category
+     * 
+     * <p>Updates the TicketingCategory identified by `id`. Provide the unified TicketingCategory fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateTicketingCategoryResponse updateTicketingCategory(@Nonnull UpdateTicketingCategoryRequest request, @Nullable Options options) {
         RequestOperation<UpdateTicketingCategoryRequest, UpdateTicketingCategoryResponse> operation
-              = new UpdateTicketingCategory.Sync(sdkConfiguration, _headers);
+              = new UpdateTicketingCategory.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

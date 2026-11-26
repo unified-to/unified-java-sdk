@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingInvoiceRequest;
 import to.unified.unified_java_sdk.models.operations.GetAccountingInvoiceRequest;
@@ -32,6 +33,7 @@ import to.unified.unified_java_sdk.operations.PatchAccountingInvoice;
 import to.unified.unified_java_sdk.operations.RemoveAccountingInvoice;
 import to.unified.unified_java_sdk.operations.UpdateAccountingInvoice;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncInvoice {
@@ -76,8 +78,22 @@ public class AsyncInvoice {
      * @return {@code CompletableFuture<CreateAccountingInvoiceResponse>} - The async response
      */
     public CompletableFuture<CreateAccountingInvoiceResponse> createAccountingInvoice(@Nonnull CreateAccountingInvoiceRequest request) {
+        return createAccountingInvoice(request, null);
+    }
+
+    /**
+     * Create an invoice
+     * 
+     * <p>Creates a AccountingInvoice. Provide the unified AccountingInvoice fields in the request body; they
+     * are mapped to the provider's API. Returns the created AccountingInvoice.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateAccountingInvoiceResponse>} - The async response
+     */
+    public CompletableFuture<CreateAccountingInvoiceResponse> createAccountingInvoice(@Nonnull CreateAccountingInvoiceRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateAccountingInvoiceRequest, CreateAccountingInvoiceResponse> operation
-              = new CreateAccountingInvoice.Async(sdkConfiguration, _headers);
+              = new CreateAccountingInvoice.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -105,8 +121,22 @@ public class AsyncInvoice {
      * @return {@code CompletableFuture<GetAccountingInvoiceResponse>} - The async response
      */
     public CompletableFuture<GetAccountingInvoiceResponse> getAccountingInvoice(@Nonnull GetAccountingInvoiceRequest request) {
+        return getAccountingInvoice(request, null);
+    }
+
+    /**
+     * Retrieve an invoice
+     * 
+     * <p>Retrieves a single AccountingInvoice by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetAccountingInvoiceResponse>} - The async response
+     */
+    public CompletableFuture<GetAccountingInvoiceResponse> getAccountingInvoice(@Nonnull GetAccountingInvoiceRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetAccountingInvoiceRequest, GetAccountingInvoiceResponse> operation
-              = new GetAccountingInvoice.Async(sdkConfiguration, _headers);
+              = new GetAccountingInvoice.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -142,8 +172,26 @@ public class AsyncInvoice {
      * @return {@code CompletableFuture<ListAccountingInvoicesResponse>} - The async response
      */
     public CompletableFuture<ListAccountingInvoicesResponse> listAccountingInvoices(@Nonnull ListAccountingInvoicesRequest request) {
+        return listAccountingInvoices(request, null);
+    }
+
+    /**
+     * List all invoices
+     * 
+     * <p>Returns a list of AccountingInvoices. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListAccountingInvoicesResponse>} - The async response
+     */
+    public CompletableFuture<ListAccountingInvoicesResponse> listAccountingInvoices(@Nonnull ListAccountingInvoicesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListAccountingInvoicesRequest, ListAccountingInvoicesResponse> operation
-              = new ListAccountingInvoices.Async(sdkConfiguration, _headers);
+              = new ListAccountingInvoices.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -171,8 +219,22 @@ public class AsyncInvoice {
      * @return {@code CompletableFuture<PatchAccountingInvoiceResponse>} - The async response
      */
     public CompletableFuture<PatchAccountingInvoiceResponse> patchAccountingInvoice(@Nonnull PatchAccountingInvoiceRequest request) {
+        return patchAccountingInvoice(request, null);
+    }
+
+    /**
+     * Update an invoice
+     * 
+     * <p>Updates the AccountingInvoice identified by `id`. Provide the unified AccountingInvoice fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchAccountingInvoiceResponse>} - The async response
+     */
+    public CompletableFuture<PatchAccountingInvoiceResponse> patchAccountingInvoice(@Nonnull PatchAccountingInvoiceRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchAccountingInvoiceRequest, PatchAccountingInvoiceResponse> operation
-              = new PatchAccountingInvoice.Async(sdkConfiguration, _headers);
+              = new PatchAccountingInvoice.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -198,8 +260,21 @@ public class AsyncInvoice {
      * @return {@code CompletableFuture<RemoveAccountingInvoiceResponse>} - The async response
      */
     public CompletableFuture<RemoveAccountingInvoiceResponse> removeAccountingInvoice(@Nonnull RemoveAccountingInvoiceRequest request) {
+        return removeAccountingInvoice(request, null);
+    }
+
+    /**
+     * Remove an invoice
+     * 
+     * <p>Deletes the AccountingInvoice identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveAccountingInvoiceResponse>} - The async response
+     */
+    public CompletableFuture<RemoveAccountingInvoiceResponse> removeAccountingInvoice(@Nonnull RemoveAccountingInvoiceRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveAccountingInvoiceRequest, RemoveAccountingInvoiceResponse> operation
-              = new RemoveAccountingInvoice.Async(sdkConfiguration, _headers);
+              = new RemoveAccountingInvoice.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -227,8 +302,22 @@ public class AsyncInvoice {
      * @return {@code CompletableFuture<UpdateAccountingInvoiceResponse>} - The async response
      */
     public CompletableFuture<UpdateAccountingInvoiceResponse> updateAccountingInvoice(@Nonnull UpdateAccountingInvoiceRequest request) {
+        return updateAccountingInvoice(request, null);
+    }
+
+    /**
+     * Update an invoice
+     * 
+     * <p>Updates the AccountingInvoice identified by `id`. Provide the unified AccountingInvoice fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateAccountingInvoiceResponse>} - The async response
+     */
+    public CompletableFuture<UpdateAccountingInvoiceResponse> updateAccountingInvoice(@Nonnull UpdateAccountingInvoiceRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateAccountingInvoiceRequest, UpdateAccountingInvoiceResponse> operation
-              = new UpdateAccountingInvoice.Async(sdkConfiguration, _headers);
+              = new UpdateAccountingInvoice.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

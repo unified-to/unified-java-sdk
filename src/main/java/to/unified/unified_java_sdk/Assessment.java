@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateAssessmentOrderRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAssessmentOrderRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateAssessmentOrderResponse;
@@ -47,6 +48,7 @@ import to.unified.unified_java_sdk.operations.RemoveAssessmentPackage;
 import to.unified.unified_java_sdk.operations.UpdateAssessmentOrder;
 import to.unified.unified_java_sdk.operations.UpdateAssessmentPackage;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Assessment {
@@ -91,8 +93,23 @@ public class Assessment {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateAssessmentOrderResponse createAssessmentOrder(@Nonnull CreateAssessmentOrderRequest request) {
+        return createAssessmentOrder(request, null);
+    }
+
+    /**
+     * Create an order
+     * 
+     * <p>Creates a AssessmentOrder. Provide the unified AssessmentOrder fields in the request body; they are
+     * mapped to the provider's API. Returns the created AssessmentOrder.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateAssessmentOrderResponse createAssessmentOrder(@Nonnull CreateAssessmentOrderRequest request, @Nullable Options options) {
         RequestOperation<CreateAssessmentOrderRequest, CreateAssessmentOrderResponse> operation
-              = new CreateAssessmentOrder.Sync(sdkConfiguration, _headers);
+              = new CreateAssessmentOrder.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -113,8 +130,20 @@ public class Assessment {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateAssessmentPackageResponse createAssessmentPackage(@Nonnull CreateAssessmentPackageRequest request) {
+        return createAssessmentPackage(request, null);
+    }
+
+    /**
+     * Create an assessment package
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateAssessmentPackageResponse createAssessmentPackage(@Nonnull CreateAssessmentPackageRequest request, @Nullable Options options) {
         RequestOperation<CreateAssessmentPackageRequest, CreateAssessmentPackageResponse> operation
-              = new CreateAssessmentPackage.Sync(sdkConfiguration, _headers);
+              = new CreateAssessmentPackage.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -141,8 +170,23 @@ public class Assessment {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAssessmentOrderResponse getAssessmentOrder(@Nonnull GetAssessmentOrderRequest request) {
+        return getAssessmentOrder(request, null);
+    }
+
+    /**
+     * Retrieve an order
+     * 
+     * <p>Retrieves a single AssessmentOrder by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAssessmentOrderResponse getAssessmentOrder(@Nonnull GetAssessmentOrderRequest request, @Nullable Options options) {
         RequestOperation<GetAssessmentOrderRequest, GetAssessmentOrderResponse> operation
-              = new GetAssessmentOrder.Sync(sdkConfiguration, _headers);
+              = new GetAssessmentOrder.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -163,8 +207,20 @@ public class Assessment {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAssessmentPackageResponse getAssessmentPackage(@Nonnull GetAssessmentPackageRequest request) {
+        return getAssessmentPackage(request, null);
+    }
+
+    /**
+     * Get an assessment package
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAssessmentPackageResponse getAssessmentPackage(@Nonnull GetAssessmentPackageRequest request, @Nullable Options options) {
         RequestOperation<GetAssessmentPackageRequest, GetAssessmentPackageResponse> operation
-              = new GetAssessmentPackage.Sync(sdkConfiguration, _headers);
+              = new GetAssessmentPackage.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -185,8 +241,20 @@ public class Assessment {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAssessmentPackagesResponse listAssessmentPackages(@Nonnull ListAssessmentPackagesRequest request) {
+        return listAssessmentPackages(request, null);
+    }
+
+    /**
+     * List assessment packages
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAssessmentPackagesResponse listAssessmentPackages(@Nonnull ListAssessmentPackagesRequest request, @Nullable Options options) {
         RequestOperation<ListAssessmentPackagesRequest, ListAssessmentPackagesResponse> operation
-              = new ListAssessmentPackages.Sync(sdkConfiguration, _headers);
+              = new ListAssessmentPackages.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -213,8 +281,23 @@ public class Assessment {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchAssessmentOrderResponse patchAssessmentOrder(@Nonnull PatchAssessmentOrderRequest request) {
+        return patchAssessmentOrder(request, null);
+    }
+
+    /**
+     * Update an order
+     * 
+     * <p>Updates the AssessmentOrder identified by `id`. Provide the unified AssessmentOrder fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchAssessmentOrderResponse patchAssessmentOrder(@Nonnull PatchAssessmentOrderRequest request, @Nullable Options options) {
         RequestOperation<PatchAssessmentOrderRequest, PatchAssessmentOrderResponse> operation
-              = new PatchAssessmentOrder.Sync(sdkConfiguration, _headers);
+              = new PatchAssessmentOrder.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -235,8 +318,20 @@ public class Assessment {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchAssessmentPackageResponse patchAssessmentPackage(@Nonnull PatchAssessmentPackageRequest request) {
+        return patchAssessmentPackage(request, null);
+    }
+
+    /**
+     * Update an assessment package
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchAssessmentPackageResponse patchAssessmentPackage(@Nonnull PatchAssessmentPackageRequest request, @Nullable Options options) {
         RequestOperation<PatchAssessmentPackageRequest, PatchAssessmentPackageResponse> operation
-              = new PatchAssessmentPackage.Sync(sdkConfiguration, _headers);
+              = new PatchAssessmentPackage.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -257,8 +352,20 @@ public class Assessment {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveAssessmentPackageResponse removeAssessmentPackage(@Nonnull RemoveAssessmentPackageRequest request) {
+        return removeAssessmentPackage(request, null);
+    }
+
+    /**
+     * Delete an assessment package
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveAssessmentPackageResponse removeAssessmentPackage(@Nonnull RemoveAssessmentPackageRequest request, @Nullable Options options) {
         RequestOperation<RemoveAssessmentPackageRequest, RemoveAssessmentPackageResponse> operation
-              = new RemoveAssessmentPackage.Sync(sdkConfiguration, _headers);
+              = new RemoveAssessmentPackage.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -285,8 +392,23 @@ public class Assessment {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateAssessmentOrderResponse updateAssessmentOrder(@Nonnull UpdateAssessmentOrderRequest request) {
+        return updateAssessmentOrder(request, null);
+    }
+
+    /**
+     * Update an order
+     * 
+     * <p>Updates the AssessmentOrder identified by `id`. Provide the unified AssessmentOrder fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateAssessmentOrderResponse updateAssessmentOrder(@Nonnull UpdateAssessmentOrderRequest request, @Nullable Options options) {
         RequestOperation<UpdateAssessmentOrderRequest, UpdateAssessmentOrderResponse> operation
-              = new UpdateAssessmentOrder.Sync(sdkConfiguration, _headers);
+              = new UpdateAssessmentOrder.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -307,8 +429,20 @@ public class Assessment {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateAssessmentPackageResponse updateAssessmentPackage(@Nonnull UpdateAssessmentPackageRequest request) {
+        return updateAssessmentPackage(request, null);
+    }
+
+    /**
+     * Update an assessment package
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateAssessmentPackageResponse updateAssessmentPackage(@Nonnull UpdateAssessmentPackageRequest request, @Nullable Options options) {
         RequestOperation<UpdateAssessmentPackageRequest, UpdateAssessmentPackageResponse> operation
-              = new UpdateAssessmentPackage.Sync(sdkConfiguration, _headers);
+              = new UpdateAssessmentPackage.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

@@ -6,11 +6,13 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.ListEnrichPeopleRequest;
 import to.unified.unified_java_sdk.models.operations.ListEnrichPeopleRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListEnrichPeopleResponse;
 import to.unified.unified_java_sdk.operations.ListEnrichPeople;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Person {
@@ -49,8 +51,20 @@ public class Person {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListEnrichPeopleResponse listEnrichPeople(@Nonnull ListEnrichPeopleRequest request) {
+        return listEnrichPeople(request, null);
+    }
+
+    /**
+     * Retrieve enrichment information for a person
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListEnrichPeopleResponse listEnrichPeople(@Nonnull ListEnrichPeopleRequest request, @Nullable Options options) {
         RequestOperation<ListEnrichPeopleRequest, ListEnrichPeopleResponse> operation
-              = new ListEnrichPeople.Sync(sdkConfiguration, _headers);
+              = new ListEnrichPeople.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

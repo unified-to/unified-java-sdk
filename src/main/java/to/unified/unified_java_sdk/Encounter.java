@@ -6,15 +6,25 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import to.unified.unified_java_sdk.models.operations.GetFhirEncounterRequest;
+import to.unified.unified_java_sdk.models.operations.GetFhirEncounterRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetFhirEncounterResponse;
 import to.unified.unified_java_sdk.models.operations.GetHealthcareEncounterRequest;
 import to.unified.unified_java_sdk.models.operations.GetHealthcareEncounterRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetHealthcareEncounterResponse;
+import to.unified.unified_java_sdk.models.operations.ListFhirEncountersRequest;
+import to.unified.unified_java_sdk.models.operations.ListFhirEncountersRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListFhirEncountersResponse;
 import to.unified.unified_java_sdk.models.operations.ListHealthcareEncountersRequest;
 import to.unified.unified_java_sdk.models.operations.ListHealthcareEncountersRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListHealthcareEncountersResponse;
+import to.unified.unified_java_sdk.operations.GetFhirEncounter;
 import to.unified.unified_java_sdk.operations.GetHealthcareEncounter;
+import to.unified.unified_java_sdk.operations.ListFhirEncounters;
 import to.unified.unified_java_sdk.operations.ListHealthcareEncounters;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Encounter {
@@ -34,6 +44,49 @@ public class Encounter {
      */
     public AsyncEncounter async() {
         return asyncSDK;
+    }
+
+    /**
+     * Read a Encounter
+     * 
+     * <p>Responses use the application/fhir+json media type; errors are OperationOutcome resources. Read-only
+     * (FHIR R4 4.0.1).
+     * 
+     * @return The call builder
+     */
+    public GetFhirEncounterRequestBuilder getFhirEncounter() {
+        return new GetFhirEncounterRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Read a Encounter
+     * 
+     * <p>Responses use the application/fhir+json media type; errors are OperationOutcome resources. Read-only
+     * (FHIR R4 4.0.1).
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetFhirEncounterResponse getFhirEncounter(@Nonnull GetFhirEncounterRequest request) {
+        return getFhirEncounter(request, null);
+    }
+
+    /**
+     * Read a Encounter
+     * 
+     * <p>Responses use the application/fhir+json media type; errors are OperationOutcome resources. Read-only
+     * (FHIR R4 4.0.1).
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetFhirEncounterResponse getFhirEncounter(@Nonnull GetFhirEncounterRequest request, @Nullable Options options) {
+        RequestOperation<GetFhirEncounterRequest, GetFhirEncounterResponse> operation
+              = new GetFhirEncounter.Sync(sdkConfiguration, options, _headers);
+        return operation.handleResponse(operation.doRequest(request));
     }
 
     /**
@@ -59,8 +112,66 @@ public class Encounter {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetHealthcareEncounterResponse getHealthcareEncounter(@Nonnull GetHealthcareEncounterRequest request) {
+        return getHealthcareEncounter(request, null);
+    }
+
+    /**
+     * Retrieve an encounter
+     * 
+     * <p>Retrieves a single HealthcareEncounter by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetHealthcareEncounterResponse getHealthcareEncounter(@Nonnull GetHealthcareEncounterRequest request, @Nullable Options options) {
         RequestOperation<GetHealthcareEncounterRequest, GetHealthcareEncounterResponse> operation
-              = new GetHealthcareEncounter.Sync(sdkConfiguration, _headers);
+              = new GetHealthcareEncounter.Sync(sdkConfiguration, options, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Search Encounter resources
+     * 
+     * <p>Returns a searchset Bundle; follow its next link for more pages. Responses use the
+     * application/fhir+json media type; errors are OperationOutcome resources. Read-only (FHIR R4 4.0.1).
+     * 
+     * @return The call builder
+     */
+    public ListFhirEncountersRequestBuilder listFhirEncounters() {
+        return new ListFhirEncountersRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Search Encounter resources
+     * 
+     * <p>Returns a searchset Bundle; follow its next link for more pages. Responses use the
+     * application/fhir+json media type; errors are OperationOutcome resources. Read-only (FHIR R4 4.0.1).
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListFhirEncountersResponse listFhirEncounters(@Nonnull ListFhirEncountersRequest request) {
+        return listFhirEncounters(request, null);
+    }
+
+    /**
+     * Search Encounter resources
+     * 
+     * <p>Returns a searchset Bundle; follow its next link for more pages. Responses use the
+     * application/fhir+json media type; errors are OperationOutcome resources. Read-only (FHIR R4 4.0.1).
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListFhirEncountersResponse listFhirEncounters(@Nonnull ListFhirEncountersRequest request, @Nullable Options options) {
+        RequestOperation<ListFhirEncountersRequest, ListFhirEncountersResponse> operation
+              = new ListFhirEncounters.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -95,8 +206,27 @@ public class Encounter {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListHealthcareEncountersResponse listHealthcareEncounters(@Nonnull ListHealthcareEncountersRequest request) {
+        return listHealthcareEncounters(request, null);
+    }
+
+    /**
+     * List all encounters
+     * 
+     * <p>Returns a list of HealthcareEncounters. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListHealthcareEncountersResponse listHealthcareEncounters(@Nonnull ListHealthcareEncountersRequest request, @Nullable Options options) {
         RequestOperation<ListHealthcareEncountersRequest, ListHealthcareEncountersResponse> operation
-              = new ListHealthcareEncounters.Sync(sdkConfiguration, _headers);
+              = new ListHealthcareEncounters.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

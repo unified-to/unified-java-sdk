@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateUcFaxRequest;
 import to.unified.unified_java_sdk.models.operations.CreateUcFaxRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateUcFaxResponse;
@@ -23,6 +24,7 @@ import to.unified.unified_java_sdk.operations.GetUcFax;
 import to.unified.unified_java_sdk.operations.ListUcFaxes;
 import to.unified.unified_java_sdk.operations.RemoveUcFax;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Fax {
@@ -67,8 +69,23 @@ public class Fax {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateUcFaxResponse createUcFax(@Nonnull CreateUcFaxRequest request) {
+        return createUcFax(request, null);
+    }
+
+    /**
+     * Create a fax
+     * 
+     * <p>Creates a UcFax. Provide the unified UcFax fields in the request body; they are mapped to the
+     * provider's API. Returns the created UcFax.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateUcFaxResponse createUcFax(@Nonnull CreateUcFaxRequest request, @Nullable Options options) {
         RequestOperation<CreateUcFaxRequest, CreateUcFaxResponse> operation
-              = new CreateUcFax.Sync(sdkConfiguration, _headers);
+              = new CreateUcFax.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -95,8 +112,23 @@ public class Fax {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetUcFaxResponse getUcFax(@Nonnull GetUcFaxRequest request) {
+        return getUcFax(request, null);
+    }
+
+    /**
+     * Retrieve a fax
+     * 
+     * <p>Retrieves a single UcFax by its `id`. Obtain `id` values from the corresponding list endpoint. Use
+     * `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetUcFaxResponse getUcFax(@Nonnull GetUcFaxRequest request, @Nullable Options options) {
         RequestOperation<GetUcFaxRequest, GetUcFaxResponse> operation
-              = new GetUcFax.Sync(sdkConfiguration, _headers);
+              = new GetUcFax.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -131,8 +163,27 @@ public class Fax {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListUcFaxesResponse listUcFaxes(@Nonnull ListUcFaxesRequest request) {
+        return listUcFaxes(request, null);
+    }
+
+    /**
+     * List all faxes
+     * 
+     * <p>Returns a list of UcFaxes. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListUcFaxesResponse listUcFaxes(@Nonnull ListUcFaxesRequest request, @Nullable Options options) {
         RequestOperation<ListUcFaxesRequest, ListUcFaxesResponse> operation
-              = new ListUcFaxes.Sync(sdkConfiguration, _headers);
+              = new ListUcFaxes.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -157,8 +208,22 @@ public class Fax {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveUcFaxResponse removeUcFax(@Nonnull RemoveUcFaxRequest request) {
+        return removeUcFax(request, null);
+    }
+
+    /**
+     * Remove a fax
+     * 
+     * <p>Deletes the UcFax identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveUcFaxResponse removeUcFax(@Nonnull RemoveUcFaxRequest request, @Nullable Options options) {
         RequestOperation<RemoveUcFaxRequest, RemoveUcFaxResponse> operation
-              = new RemoveUcFax.Sync(sdkConfiguration, _headers);
+              = new RemoveUcFax.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

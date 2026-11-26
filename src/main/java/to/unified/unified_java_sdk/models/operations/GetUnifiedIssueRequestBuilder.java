@@ -6,18 +6,28 @@ package to.unified.unified_java_sdk.models.operations;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.GetUnifiedIssue;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetUnifiedIssueRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private GetUnifiedIssueRequest request;
+    private final Options.Builder optionsBuilder;
 
     public GetUnifiedIssueRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public GetUnifiedIssueRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public GetUnifiedIssueRequestBuilder request(@Nonnull GetUnifiedIssueRequest request) {
@@ -42,8 +52,9 @@ public class GetUnifiedIssueRequestBuilder {
     * @return The response from the server.
     */
     public GetUnifiedIssueResponse call() {
+        Options options = optionsBuilder.build();
         RequestOperation<GetUnifiedIssueRequest, GetUnifiedIssueResponse> operation
-              = new GetUnifiedIssue.Sync(sdkConfiguration, _headers);
+              = new GetUnifiedIssue.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

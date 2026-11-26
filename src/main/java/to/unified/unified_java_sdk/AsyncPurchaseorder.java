@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingPurchaseorderRequest;
 import to.unified.unified_java_sdk.models.operations.GetAccountingPurchaseorderRequest;
@@ -32,6 +33,7 @@ import to.unified.unified_java_sdk.operations.PatchAccountingPurchaseorder;
 import to.unified.unified_java_sdk.operations.RemoveAccountingPurchaseorder;
 import to.unified.unified_java_sdk.operations.UpdateAccountingPurchaseorder;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncPurchaseorder {
@@ -76,8 +78,22 @@ public class AsyncPurchaseorder {
      * @return {@code CompletableFuture<CreateAccountingPurchaseorderResponse>} - The async response
      */
     public CompletableFuture<CreateAccountingPurchaseorderResponse> createAccountingPurchaseorder(@Nonnull CreateAccountingPurchaseorderRequest request) {
+        return createAccountingPurchaseorder(request, null);
+    }
+
+    /**
+     * Create a purchaseorder
+     * 
+     * <p>Creates a AccountingPurchaseorder. Provide the unified AccountingPurchaseorder fields in the request
+     * body; they are mapped to the provider's API. Returns the created AccountingPurchaseorder.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateAccountingPurchaseorderResponse>} - The async response
+     */
+    public CompletableFuture<CreateAccountingPurchaseorderResponse> createAccountingPurchaseorder(@Nonnull CreateAccountingPurchaseorderRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateAccountingPurchaseorderRequest, CreateAccountingPurchaseorderResponse> operation
-              = new CreateAccountingPurchaseorder.Async(sdkConfiguration, _headers);
+              = new CreateAccountingPurchaseorder.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -105,8 +121,22 @@ public class AsyncPurchaseorder {
      * @return {@code CompletableFuture<GetAccountingPurchaseorderResponse>} - The async response
      */
     public CompletableFuture<GetAccountingPurchaseorderResponse> getAccountingPurchaseorder(@Nonnull GetAccountingPurchaseorderRequest request) {
+        return getAccountingPurchaseorder(request, null);
+    }
+
+    /**
+     * Retrieve a purchaseorder
+     * 
+     * <p>Retrieves a single AccountingPurchaseorder by its `id`. Obtain `id` values from the corresponding
+     * list endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetAccountingPurchaseorderResponse>} - The async response
+     */
+    public CompletableFuture<GetAccountingPurchaseorderResponse> getAccountingPurchaseorder(@Nonnull GetAccountingPurchaseorderRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetAccountingPurchaseorderRequest, GetAccountingPurchaseorderResponse> operation
-              = new GetAccountingPurchaseorder.Async(sdkConfiguration, _headers);
+              = new GetAccountingPurchaseorder.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -142,8 +172,26 @@ public class AsyncPurchaseorder {
      * @return {@code CompletableFuture<ListAccountingPurchaseordersResponse>} - The async response
      */
     public CompletableFuture<ListAccountingPurchaseordersResponse> listAccountingPurchaseorders(@Nonnull ListAccountingPurchaseordersRequest request) {
+        return listAccountingPurchaseorders(request, null);
+    }
+
+    /**
+     * List all purchaseorders
+     * 
+     * <p>Returns a list of AccountingPurchaseorders. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListAccountingPurchaseordersResponse>} - The async response
+     */
+    public CompletableFuture<ListAccountingPurchaseordersResponse> listAccountingPurchaseorders(@Nonnull ListAccountingPurchaseordersRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListAccountingPurchaseordersRequest, ListAccountingPurchaseordersResponse> operation
-              = new ListAccountingPurchaseorders.Async(sdkConfiguration, _headers);
+              = new ListAccountingPurchaseorders.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -171,8 +219,22 @@ public class AsyncPurchaseorder {
      * @return {@code CompletableFuture<PatchAccountingPurchaseorderResponse>} - The async response
      */
     public CompletableFuture<PatchAccountingPurchaseorderResponse> patchAccountingPurchaseorder(@Nonnull PatchAccountingPurchaseorderRequest request) {
+        return patchAccountingPurchaseorder(request, null);
+    }
+
+    /**
+     * Update a purchaseorder
+     * 
+     * <p>Updates the AccountingPurchaseorder identified by `id`. Provide the unified AccountingPurchaseorder
+     * fields to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchAccountingPurchaseorderResponse>} - The async response
+     */
+    public CompletableFuture<PatchAccountingPurchaseorderResponse> patchAccountingPurchaseorder(@Nonnull PatchAccountingPurchaseorderRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchAccountingPurchaseorderRequest, PatchAccountingPurchaseorderResponse> operation
-              = new PatchAccountingPurchaseorder.Async(sdkConfiguration, _headers);
+              = new PatchAccountingPurchaseorder.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -198,8 +260,21 @@ public class AsyncPurchaseorder {
      * @return {@code CompletableFuture<RemoveAccountingPurchaseorderResponse>} - The async response
      */
     public CompletableFuture<RemoveAccountingPurchaseorderResponse> removeAccountingPurchaseorder(@Nonnull RemoveAccountingPurchaseorderRequest request) {
+        return removeAccountingPurchaseorder(request, null);
+    }
+
+    /**
+     * Remove a purchaseorder
+     * 
+     * <p>Deletes the AccountingPurchaseorder identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveAccountingPurchaseorderResponse>} - The async response
+     */
+    public CompletableFuture<RemoveAccountingPurchaseorderResponse> removeAccountingPurchaseorder(@Nonnull RemoveAccountingPurchaseorderRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveAccountingPurchaseorderRequest, RemoveAccountingPurchaseorderResponse> operation
-              = new RemoveAccountingPurchaseorder.Async(sdkConfiguration, _headers);
+              = new RemoveAccountingPurchaseorder.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -227,8 +302,22 @@ public class AsyncPurchaseorder {
      * @return {@code CompletableFuture<UpdateAccountingPurchaseorderResponse>} - The async response
      */
     public CompletableFuture<UpdateAccountingPurchaseorderResponse> updateAccountingPurchaseorder(@Nonnull UpdateAccountingPurchaseorderRequest request) {
+        return updateAccountingPurchaseorder(request, null);
+    }
+
+    /**
+     * Update a purchaseorder
+     * 
+     * <p>Updates the AccountingPurchaseorder identified by `id`. Provide the unified AccountingPurchaseorder
+     * fields to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateAccountingPurchaseorderResponse>} - The async response
+     */
+    public CompletableFuture<UpdateAccountingPurchaseorderResponse> updateAccountingPurchaseorder(@Nonnull UpdateAccountingPurchaseorderRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateAccountingPurchaseorderRequest, UpdateAccountingPurchaseorderResponse> operation
-              = new UpdateAccountingPurchaseorder.Async(sdkConfiguration, _headers);
+              = new UpdateAccountingPurchaseorder.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

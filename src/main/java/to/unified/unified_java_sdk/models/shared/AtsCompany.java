@@ -31,6 +31,13 @@ public class AtsCompany {
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
 
+    /**
+     * The client's default placement fee agreement
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("fees")
+    private List<AtsFee> fees;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
@@ -84,6 +91,7 @@ public class AtsCompany {
     public AtsCompany(
             @JsonProperty("address") @Nullable PropertyAtsCompanyAddress address,
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
+            @JsonProperty("fees") @Nullable List<AtsFee> fees,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("metadata") @Nullable List<AtsMetadata> metadata,
             @JsonProperty("name") @Nullable String name,
@@ -95,6 +103,7 @@ public class AtsCompany {
             @JsonProperty("website_url") @Nullable String websiteUrl) {
         this.address = address;
         this.createdAt = createdAt;
+        this.fees = fees;
         this.id = id;
         this.metadata = metadata;
         this.name = name;
@@ -110,7 +119,7 @@ public class AtsCompany {
         this(null, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null, null, null);
     }
 
     public Optional<PropertyAtsCompanyAddress> address() {
@@ -122,6 +131,13 @@ public class AtsCompany {
      */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
+    }
+
+    /**
+     * The client's default placement fee agreement
+     */
+    public Optional<List<AtsFee>> fees() {
+        return Optional.ofNullable(this.fees);
     }
 
     public Optional<String> id() {
@@ -182,6 +198,15 @@ public class AtsCompany {
      */
     public AtsCompany withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
+        return this;
+    }
+
+
+    /**
+     * The client's default placement fee agreement
+     */
+    public AtsCompany withFees(@Nullable List<AtsFee> fees) {
+        this.fees = fees;
         return this;
     }
 
@@ -258,6 +283,7 @@ public class AtsCompany {
         return 
             Utils.enhancedDeepEquals(this.address, other.address) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
+            Utils.enhancedDeepEquals(this.fees, other.fees) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
@@ -272,10 +298,10 @@ public class AtsCompany {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            address, createdAt, id,
-            metadata, name, parentId,
-            phone, raw, recruiterIds,
-            updatedAt, websiteUrl);
+            address, createdAt, fees,
+            id, metadata, name,
+            parentId, phone, raw,
+            recruiterIds, updatedAt, websiteUrl);
     }
     
     @Override
@@ -283,6 +309,7 @@ public class AtsCompany {
         return Utils.toString(AtsCompany.class,
                 "address", address,
                 "createdAt", createdAt,
+                "fees", fees,
                 "id", id,
                 "metadata", metadata,
                 "name", name,
@@ -300,6 +327,8 @@ public class AtsCompany {
         private PropertyAtsCompanyAddress address;
 
         private OffsetDateTime createdAt;
+
+        private List<AtsFee> fees;
 
         private String id;
 
@@ -333,6 +362,14 @@ public class AtsCompany {
          */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
+            return this;
+        }
+
+        /**
+         * The client's default placement fee agreement
+         */
+        public Builder fees(@Nullable List<AtsFee> fees) {
+            this.fees = fees;
             return this;
         }
 
@@ -389,10 +426,10 @@ public class AtsCompany {
 
         public AtsCompany build() {
             return new AtsCompany(
-                address, createdAt, id,
-                metadata, name, parentId,
-                phone, raw, recruiterIds,
-                updatedAt, websiteUrl);
+                address, createdAt, fees,
+                id, metadata, name,
+                parentId, phone, raw,
+                recruiterIds, updatedAt, websiteUrl);
         }
 
     }

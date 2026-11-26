@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateKmsCommentRequest;
 import to.unified.unified_java_sdk.models.operations.CreateKmsCommentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateKmsCommentResponse;
@@ -103,6 +104,7 @@ import to.unified.unified_java_sdk.operations.UpdateSocialComment;
 import to.unified.unified_java_sdk.operations.UpdateTaskComment;
 import to.unified.unified_java_sdk.operations.UpdateUcComment;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Comment {
@@ -147,8 +149,23 @@ public class Comment {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateKmsCommentResponse createKmsComment(@Nonnull CreateKmsCommentRequest request) {
+        return createKmsComment(request, null);
+    }
+
+    /**
+     * Create a comment
+     * 
+     * <p>Creates a KmsComment. Provide the unified KmsComment fields in the request body; they are mapped to
+     * the provider's API. Returns the created KmsComment.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateKmsCommentResponse createKmsComment(@Nonnull CreateKmsCommentRequest request, @Nullable Options options) {
         RequestOperation<CreateKmsCommentRequest, CreateKmsCommentResponse> operation
-              = new CreateKmsComment.Sync(sdkConfiguration, _headers);
+              = new CreateKmsComment.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -175,8 +192,23 @@ public class Comment {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateSocialCommentResponse createSocialComment(@Nonnull CreateSocialCommentRequest request) {
+        return createSocialComment(request, null);
+    }
+
+    /**
+     * Create a comment
+     * 
+     * <p>Creates a SocialComment. Provide the unified SocialComment fields in the request body; they are
+     * mapped to the provider's API. Returns the created SocialComment.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateSocialCommentResponse createSocialComment(@Nonnull CreateSocialCommentRequest request, @Nullable Options options) {
         RequestOperation<CreateSocialCommentRequest, CreateSocialCommentResponse> operation
-              = new CreateSocialComment.Sync(sdkConfiguration, _headers);
+              = new CreateSocialComment.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -203,8 +235,23 @@ public class Comment {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateTaskCommentResponse createTaskComment(@Nonnull CreateTaskCommentRequest request) {
+        return createTaskComment(request, null);
+    }
+
+    /**
+     * Create a comment
+     * 
+     * <p>Creates a TaskComment. Provide the unified TaskComment fields in the request body; they are mapped
+     * to the provider's API. Returns the created TaskComment.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateTaskCommentResponse createTaskComment(@Nonnull CreateTaskCommentRequest request, @Nullable Options options) {
         RequestOperation<CreateTaskCommentRequest, CreateTaskCommentResponse> operation
-              = new CreateTaskComment.Sync(sdkConfiguration, _headers);
+              = new CreateTaskComment.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -231,8 +278,23 @@ public class Comment {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateUcCommentResponse createUcComment(@Nonnull CreateUcCommentRequest request) {
+        return createUcComment(request, null);
+    }
+
+    /**
+     * Create a comment
+     * 
+     * <p>Creates a UcComment. Provide the unified UcComment fields in the request body; they are mapped to
+     * the provider's API. Returns the created UcComment.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateUcCommentResponse createUcComment(@Nonnull CreateUcCommentRequest request, @Nullable Options options) {
         RequestOperation<CreateUcCommentRequest, CreateUcCommentResponse> operation
-              = new CreateUcComment.Sync(sdkConfiguration, _headers);
+              = new CreateUcComment.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -259,8 +321,23 @@ public class Comment {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetKmsCommentResponse getKmsComment(@Nonnull GetKmsCommentRequest request) {
+        return getKmsComment(request, null);
+    }
+
+    /**
+     * Retrieve a comment
+     * 
+     * <p>Retrieves a single KmsComment by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetKmsCommentResponse getKmsComment(@Nonnull GetKmsCommentRequest request, @Nullable Options options) {
         RequestOperation<GetKmsCommentRequest, GetKmsCommentResponse> operation
-              = new GetKmsComment.Sync(sdkConfiguration, _headers);
+              = new GetKmsComment.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -287,8 +364,23 @@ public class Comment {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetSocialCommentResponse getSocialComment(@Nonnull GetSocialCommentRequest request) {
+        return getSocialComment(request, null);
+    }
+
+    /**
+     * Retrieve a comment
+     * 
+     * <p>Retrieves a single SocialComment by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetSocialCommentResponse getSocialComment(@Nonnull GetSocialCommentRequest request, @Nullable Options options) {
         RequestOperation<GetSocialCommentRequest, GetSocialCommentResponse> operation
-              = new GetSocialComment.Sync(sdkConfiguration, _headers);
+              = new GetSocialComment.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -315,8 +407,23 @@ public class Comment {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetTaskCommentResponse getTaskComment(@Nonnull GetTaskCommentRequest request) {
+        return getTaskComment(request, null);
+    }
+
+    /**
+     * Retrieve a comment
+     * 
+     * <p>Retrieves a single TaskComment by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetTaskCommentResponse getTaskComment(@Nonnull GetTaskCommentRequest request, @Nullable Options options) {
         RequestOperation<GetTaskCommentRequest, GetTaskCommentResponse> operation
-              = new GetTaskComment.Sync(sdkConfiguration, _headers);
+              = new GetTaskComment.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -343,8 +450,23 @@ public class Comment {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetUcCommentResponse getUcComment(@Nonnull GetUcCommentRequest request) {
+        return getUcComment(request, null);
+    }
+
+    /**
+     * Retrieve a comment
+     * 
+     * <p>Retrieves a single UcComment by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetUcCommentResponse getUcComment(@Nonnull GetUcCommentRequest request, @Nullable Options options) {
         RequestOperation<GetUcCommentRequest, GetUcCommentResponse> operation
-              = new GetUcComment.Sync(sdkConfiguration, _headers);
+              = new GetUcComment.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -379,8 +501,27 @@ public class Comment {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListKmsCommentsResponse listKmsComments(@Nonnull ListKmsCommentsRequest request) {
+        return listKmsComments(request, null);
+    }
+
+    /**
+     * List all comments
+     * 
+     * <p>Returns a list of KmsComments. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListKmsCommentsResponse listKmsComments(@Nonnull ListKmsCommentsRequest request, @Nullable Options options) {
         RequestOperation<ListKmsCommentsRequest, ListKmsCommentsResponse> operation
-              = new ListKmsComments.Sync(sdkConfiguration, _headers);
+              = new ListKmsComments.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -415,8 +556,27 @@ public class Comment {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListSocialCommentsResponse listSocialComments(@Nonnull ListSocialCommentsRequest request) {
+        return listSocialComments(request, null);
+    }
+
+    /**
+     * List all comments
+     * 
+     * <p>Returns a list of SocialComments. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListSocialCommentsResponse listSocialComments(@Nonnull ListSocialCommentsRequest request, @Nullable Options options) {
         RequestOperation<ListSocialCommentsRequest, ListSocialCommentsResponse> operation
-              = new ListSocialComments.Sync(sdkConfiguration, _headers);
+              = new ListSocialComments.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -451,8 +611,27 @@ public class Comment {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListTaskCommentsResponse listTaskComments(@Nonnull ListTaskCommentsRequest request) {
+        return listTaskComments(request, null);
+    }
+
+    /**
+     * List all comments
+     * 
+     * <p>Returns a list of TaskComments. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListTaskCommentsResponse listTaskComments(@Nonnull ListTaskCommentsRequest request, @Nullable Options options) {
         RequestOperation<ListTaskCommentsRequest, ListTaskCommentsResponse> operation
-              = new ListTaskComments.Sync(sdkConfiguration, _headers);
+              = new ListTaskComments.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -487,8 +666,27 @@ public class Comment {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListUcCommentsResponse listUcComments(@Nonnull ListUcCommentsRequest request) {
+        return listUcComments(request, null);
+    }
+
+    /**
+     * List all comments
+     * 
+     * <p>Returns a list of UcComments. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListUcCommentsResponse listUcComments(@Nonnull ListUcCommentsRequest request, @Nullable Options options) {
         RequestOperation<ListUcCommentsRequest, ListUcCommentsResponse> operation
-              = new ListUcComments.Sync(sdkConfiguration, _headers);
+              = new ListUcComments.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -515,8 +713,23 @@ public class Comment {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchKmsCommentResponse patchKmsComment(@Nonnull PatchKmsCommentRequest request) {
+        return patchKmsComment(request, null);
+    }
+
+    /**
+     * Update a comment
+     * 
+     * <p>Updates the KmsComment identified by `id`. Provide the unified KmsComment fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchKmsCommentResponse patchKmsComment(@Nonnull PatchKmsCommentRequest request, @Nullable Options options) {
         RequestOperation<PatchKmsCommentRequest, PatchKmsCommentResponse> operation
-              = new PatchKmsComment.Sync(sdkConfiguration, _headers);
+              = new PatchKmsComment.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -543,8 +756,23 @@ public class Comment {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchSocialCommentResponse patchSocialComment(@Nonnull PatchSocialCommentRequest request) {
+        return patchSocialComment(request, null);
+    }
+
+    /**
+     * Update a comment
+     * 
+     * <p>Updates the SocialComment identified by `id`. Provide the unified SocialComment fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchSocialCommentResponse patchSocialComment(@Nonnull PatchSocialCommentRequest request, @Nullable Options options) {
         RequestOperation<PatchSocialCommentRequest, PatchSocialCommentResponse> operation
-              = new PatchSocialComment.Sync(sdkConfiguration, _headers);
+              = new PatchSocialComment.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -571,8 +799,23 @@ public class Comment {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchTaskCommentResponse patchTaskComment(@Nonnull PatchTaskCommentRequest request) {
+        return patchTaskComment(request, null);
+    }
+
+    /**
+     * Update a comment
+     * 
+     * <p>Updates the TaskComment identified by `id`. Provide the unified TaskComment fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchTaskCommentResponse patchTaskComment(@Nonnull PatchTaskCommentRequest request, @Nullable Options options) {
         RequestOperation<PatchTaskCommentRequest, PatchTaskCommentResponse> operation
-              = new PatchTaskComment.Sync(sdkConfiguration, _headers);
+              = new PatchTaskComment.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -599,8 +842,23 @@ public class Comment {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchUcCommentResponse patchUcComment(@Nonnull PatchUcCommentRequest request) {
+        return patchUcComment(request, null);
+    }
+
+    /**
+     * Update a comment
+     * 
+     * <p>Updates the UcComment identified by `id`. Provide the unified UcComment fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchUcCommentResponse patchUcComment(@Nonnull PatchUcCommentRequest request, @Nullable Options options) {
         RequestOperation<PatchUcCommentRequest, PatchUcCommentResponse> operation
-              = new PatchUcComment.Sync(sdkConfiguration, _headers);
+              = new PatchUcComment.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -625,8 +883,22 @@ public class Comment {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveKmsCommentResponse removeKmsComment(@Nonnull RemoveKmsCommentRequest request) {
+        return removeKmsComment(request, null);
+    }
+
+    /**
+     * Remove a comment
+     * 
+     * <p>Deletes the KmsComment identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveKmsCommentResponse removeKmsComment(@Nonnull RemoveKmsCommentRequest request, @Nullable Options options) {
         RequestOperation<RemoveKmsCommentRequest, RemoveKmsCommentResponse> operation
-              = new RemoveKmsComment.Sync(sdkConfiguration, _headers);
+              = new RemoveKmsComment.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -651,8 +923,22 @@ public class Comment {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveSocialCommentResponse removeSocialComment(@Nonnull RemoveSocialCommentRequest request) {
+        return removeSocialComment(request, null);
+    }
+
+    /**
+     * Remove a comment
+     * 
+     * <p>Deletes the SocialComment identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveSocialCommentResponse removeSocialComment(@Nonnull RemoveSocialCommentRequest request, @Nullable Options options) {
         RequestOperation<RemoveSocialCommentRequest, RemoveSocialCommentResponse> operation
-              = new RemoveSocialComment.Sync(sdkConfiguration, _headers);
+              = new RemoveSocialComment.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -677,8 +963,22 @@ public class Comment {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveTaskCommentResponse removeTaskComment(@Nonnull RemoveTaskCommentRequest request) {
+        return removeTaskComment(request, null);
+    }
+
+    /**
+     * Remove a comment
+     * 
+     * <p>Deletes the TaskComment identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveTaskCommentResponse removeTaskComment(@Nonnull RemoveTaskCommentRequest request, @Nullable Options options) {
         RequestOperation<RemoveTaskCommentRequest, RemoveTaskCommentResponse> operation
-              = new RemoveTaskComment.Sync(sdkConfiguration, _headers);
+              = new RemoveTaskComment.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -703,8 +1003,22 @@ public class Comment {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveUcCommentResponse removeUcComment(@Nonnull RemoveUcCommentRequest request) {
+        return removeUcComment(request, null);
+    }
+
+    /**
+     * Remove a comment
+     * 
+     * <p>Deletes the UcComment identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveUcCommentResponse removeUcComment(@Nonnull RemoveUcCommentRequest request, @Nullable Options options) {
         RequestOperation<RemoveUcCommentRequest, RemoveUcCommentResponse> operation
-              = new RemoveUcComment.Sync(sdkConfiguration, _headers);
+              = new RemoveUcComment.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -731,8 +1045,23 @@ public class Comment {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateKmsCommentResponse updateKmsComment(@Nonnull UpdateKmsCommentRequest request) {
+        return updateKmsComment(request, null);
+    }
+
+    /**
+     * Update a comment
+     * 
+     * <p>Updates the KmsComment identified by `id`. Provide the unified KmsComment fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateKmsCommentResponse updateKmsComment(@Nonnull UpdateKmsCommentRequest request, @Nullable Options options) {
         RequestOperation<UpdateKmsCommentRequest, UpdateKmsCommentResponse> operation
-              = new UpdateKmsComment.Sync(sdkConfiguration, _headers);
+              = new UpdateKmsComment.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -759,8 +1088,23 @@ public class Comment {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateSocialCommentResponse updateSocialComment(@Nonnull UpdateSocialCommentRequest request) {
+        return updateSocialComment(request, null);
+    }
+
+    /**
+     * Update a comment
+     * 
+     * <p>Updates the SocialComment identified by `id`. Provide the unified SocialComment fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateSocialCommentResponse updateSocialComment(@Nonnull UpdateSocialCommentRequest request, @Nullable Options options) {
         RequestOperation<UpdateSocialCommentRequest, UpdateSocialCommentResponse> operation
-              = new UpdateSocialComment.Sync(sdkConfiguration, _headers);
+              = new UpdateSocialComment.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -787,8 +1131,23 @@ public class Comment {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateTaskCommentResponse updateTaskComment(@Nonnull UpdateTaskCommentRequest request) {
+        return updateTaskComment(request, null);
+    }
+
+    /**
+     * Update a comment
+     * 
+     * <p>Updates the TaskComment identified by `id`. Provide the unified TaskComment fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateTaskCommentResponse updateTaskComment(@Nonnull UpdateTaskCommentRequest request, @Nullable Options options) {
         RequestOperation<UpdateTaskCommentRequest, UpdateTaskCommentResponse> operation
-              = new UpdateTaskComment.Sync(sdkConfiguration, _headers);
+              = new UpdateTaskComment.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -815,8 +1174,23 @@ public class Comment {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateUcCommentResponse updateUcComment(@Nonnull UpdateUcCommentRequest request) {
+        return updateUcComment(request, null);
+    }
+
+    /**
+     * Update a comment
+     * 
+     * <p>Updates the UcComment identified by `id`. Provide the unified UcComment fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateUcCommentResponse updateUcComment(@Nonnull UpdateUcCommentRequest request, @Nullable Options options) {
         RequestOperation<UpdateUcCommentRequest, UpdateUcCommentResponse> operation
-              = new UpdateUcComment.Sync(sdkConfiguration, _headers);
+              = new UpdateUcComment.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

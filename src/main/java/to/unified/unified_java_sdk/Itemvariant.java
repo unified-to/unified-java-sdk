@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceItemvariantRequest;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceItemvariantRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceItemvariantResponse;
@@ -31,6 +32,7 @@ import to.unified.unified_java_sdk.operations.PatchCommerceItemvariant;
 import to.unified.unified_java_sdk.operations.RemoveCommerceItemvariant;
 import to.unified.unified_java_sdk.operations.UpdateCommerceItemvariant;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Itemvariant {
@@ -75,8 +77,23 @@ public class Itemvariant {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateCommerceItemvariantResponse createCommerceItemvariant(@Nonnull CreateCommerceItemvariantRequest request) {
+        return createCommerceItemvariant(request, null);
+    }
+
+    /**
+     * Create an itemvariant
+     * 
+     * <p>Creates a CommerceItemvariant. Provide the unified CommerceItemvariant fields in the request body;
+     * they are mapped to the provider's API. Returns the created CommerceItemvariant.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateCommerceItemvariantResponse createCommerceItemvariant(@Nonnull CreateCommerceItemvariantRequest request, @Nullable Options options) {
         RequestOperation<CreateCommerceItemvariantRequest, CreateCommerceItemvariantResponse> operation
-              = new CreateCommerceItemvariant.Sync(sdkConfiguration, _headers);
+              = new CreateCommerceItemvariant.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -103,8 +120,23 @@ public class Itemvariant {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetCommerceItemvariantResponse getCommerceItemvariant(@Nonnull GetCommerceItemvariantRequest request) {
+        return getCommerceItemvariant(request, null);
+    }
+
+    /**
+     * Retrieve an itemvariant
+     * 
+     * <p>Retrieves a single CommerceItemvariant by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetCommerceItemvariantResponse getCommerceItemvariant(@Nonnull GetCommerceItemvariantRequest request, @Nullable Options options) {
         RequestOperation<GetCommerceItemvariantRequest, GetCommerceItemvariantResponse> operation
-              = new GetCommerceItemvariant.Sync(sdkConfiguration, _headers);
+              = new GetCommerceItemvariant.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -139,8 +171,27 @@ public class Itemvariant {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListCommerceItemvariantsResponse listCommerceItemvariants(@Nonnull ListCommerceItemvariantsRequest request) {
+        return listCommerceItemvariants(request, null);
+    }
+
+    /**
+     * List all itemvariants
+     * 
+     * <p>Returns a list of CommerceItemvariants. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListCommerceItemvariantsResponse listCommerceItemvariants(@Nonnull ListCommerceItemvariantsRequest request, @Nullable Options options) {
         RequestOperation<ListCommerceItemvariantsRequest, ListCommerceItemvariantsResponse> operation
-              = new ListCommerceItemvariants.Sync(sdkConfiguration, _headers);
+              = new ListCommerceItemvariants.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +218,23 @@ public class Itemvariant {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchCommerceItemvariantResponse patchCommerceItemvariant(@Nonnull PatchCommerceItemvariantRequest request) {
+        return patchCommerceItemvariant(request, null);
+    }
+
+    /**
+     * Update an itemvariant
+     * 
+     * <p>Updates the CommerceItemvariant identified by `id`. Provide the unified CommerceItemvariant fields
+     * to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchCommerceItemvariantResponse patchCommerceItemvariant(@Nonnull PatchCommerceItemvariantRequest request, @Nullable Options options) {
         RequestOperation<PatchCommerceItemvariantRequest, PatchCommerceItemvariantResponse> operation
-              = new PatchCommerceItemvariant.Sync(sdkConfiguration, _headers);
+              = new PatchCommerceItemvariant.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -193,8 +259,22 @@ public class Itemvariant {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveCommerceItemvariantResponse removeCommerceItemvariant(@Nonnull RemoveCommerceItemvariantRequest request) {
+        return removeCommerceItemvariant(request, null);
+    }
+
+    /**
+     * Remove an itemvariant
+     * 
+     * <p>Deletes the CommerceItemvariant identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveCommerceItemvariantResponse removeCommerceItemvariant(@Nonnull RemoveCommerceItemvariantRequest request, @Nullable Options options) {
         RequestOperation<RemoveCommerceItemvariantRequest, RemoveCommerceItemvariantResponse> operation
-              = new RemoveCommerceItemvariant.Sync(sdkConfiguration, _headers);
+              = new RemoveCommerceItemvariant.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -221,8 +301,23 @@ public class Itemvariant {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateCommerceItemvariantResponse updateCommerceItemvariant(@Nonnull UpdateCommerceItemvariantRequest request) {
+        return updateCommerceItemvariant(request, null);
+    }
+
+    /**
+     * Update an itemvariant
+     * 
+     * <p>Updates the CommerceItemvariant identified by `id`. Provide the unified CommerceItemvariant fields
+     * to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateCommerceItemvariantResponse updateCommerceItemvariant(@Nonnull UpdateCommerceItemvariantRequest request, @Nullable Options options) {
         RequestOperation<UpdateCommerceItemvariantRequest, UpdateCommerceItemvariantResponse> operation
-              = new UpdateCommerceItemvariant.Sync(sdkConfiguration, _headers);
+              = new UpdateCommerceItemvariant.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

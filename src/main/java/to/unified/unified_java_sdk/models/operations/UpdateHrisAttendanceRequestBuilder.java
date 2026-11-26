@@ -6,18 +6,28 @@ package to.unified.unified_java_sdk.models.operations;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.UpdateHrisAttendance;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class UpdateHrisAttendanceRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private UpdateHrisAttendanceRequest request;
+    private final Options.Builder optionsBuilder;
 
     public UpdateHrisAttendanceRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public UpdateHrisAttendanceRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public UpdateHrisAttendanceRequestBuilder request(@Nonnull UpdateHrisAttendanceRequest request) {
@@ -42,8 +52,9 @@ public class UpdateHrisAttendanceRequestBuilder {
     * @return The response from the server.
     */
     public UpdateHrisAttendanceResponse call() {
+        Options options = optionsBuilder.build();
         RequestOperation<UpdateHrisAttendanceRequest, UpdateHrisAttendanceResponse> operation
-              = new UpdateHrisAttendance.Sync(sdkConfiguration, _headers);
+              = new UpdateHrisAttendance.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

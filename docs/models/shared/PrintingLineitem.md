@@ -1,0 +1,18 @@
+# PrintingLineitem
+
+A line item on a print order or quote
+
+
+## Fields
+
+| Field                                                                      | Type                                                                       | Required                                                                   | Description                                                                |
+| -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| `files`                                                                    | List\<[PrintingLineitemFile](../../models/shared/PrintingLineitemFile.md)> | :heavy_minus_sign:                                                         | Print files, one per placement                                             |
+| `id`                                                                       | *Optional\<String>*                                                        | :heavy_minus_sign:                                                         | Line item identifier                                                       |
+| `name`                                                                     | *Optional\<String>*                                                        | :heavy_minus_sign:                                                         | Display name                                                               |
+| `productId`                                                                | *Optional\<String>*                                                        | :heavy_minus_sign:                                                         | The PrintingProduct ID of the blank product                                |
+| `quantity`                                                                 | *Optional\<Double>*                                                        | :heavy_minus_sign:                                                         | N/A                                                                        |
+| `retailPriceAmount`                                                        | *Optional\<Double>*                                                        | :heavy_minus_sign:                                                         | Retail price per unit paid by the end customer                             |
+| `sku`                                                                      | *Optional\<String>*                                                        | :heavy_minus_sign:                                                         | Product identifier (SKU) from the ordering system                          |
+| `unitPriceAmount`                                                          | *Optional\<Double>*                                                        | :heavy_minus_sign:                                                         | Production price per unit charged by the print vendor                      |
+| `variantIdentifier`                                                        | *Optional\<String>*                                                        | :heavy_minus_sign:                                                         | Identifier of the product variant                                          |

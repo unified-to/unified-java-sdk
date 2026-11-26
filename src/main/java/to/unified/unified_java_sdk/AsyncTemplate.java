@@ -6,11 +6,14 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateComputeTemplateRequest;
 import to.unified.unified_java_sdk.models.operations.GetComputeTemplateRequest;
+import to.unified.unified_java_sdk.models.operations.GetPrintingTemplateRequest;
 import to.unified.unified_java_sdk.models.operations.GetSigningTemplateRequest;
 import to.unified.unified_java_sdk.models.operations.ListComputeTemplatesRequest;
+import to.unified.unified_java_sdk.models.operations.ListPrintingTemplatesRequest;
 import to.unified.unified_java_sdk.models.operations.ListSigningTemplatesRequest;
 import to.unified.unified_java_sdk.models.operations.PatchComputeTemplateRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveComputeTemplateRequest;
@@ -19,10 +22,14 @@ import to.unified.unified_java_sdk.models.operations.async.CreateComputeTemplate
 import to.unified.unified_java_sdk.models.operations.async.CreateComputeTemplateResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetComputeTemplateRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetComputeTemplateResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetPrintingTemplateRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetPrintingTemplateResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetSigningTemplateRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetSigningTemplateResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListComputeTemplatesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListComputeTemplatesResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListPrintingTemplatesRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListPrintingTemplatesResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListSigningTemplatesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListSigningTemplatesResponse;
 import to.unified.unified_java_sdk.models.operations.async.PatchComputeTemplateRequestBuilder;
@@ -33,13 +40,16 @@ import to.unified.unified_java_sdk.models.operations.async.UpdateComputeTemplate
 import to.unified.unified_java_sdk.models.operations.async.UpdateComputeTemplateResponse;
 import to.unified.unified_java_sdk.operations.CreateComputeTemplate;
 import to.unified.unified_java_sdk.operations.GetComputeTemplate;
+import to.unified.unified_java_sdk.operations.GetPrintingTemplate;
 import to.unified.unified_java_sdk.operations.GetSigningTemplate;
 import to.unified.unified_java_sdk.operations.ListComputeTemplates;
+import to.unified.unified_java_sdk.operations.ListPrintingTemplates;
 import to.unified.unified_java_sdk.operations.ListSigningTemplates;
 import to.unified.unified_java_sdk.operations.PatchComputeTemplate;
 import to.unified.unified_java_sdk.operations.RemoveComputeTemplate;
 import to.unified.unified_java_sdk.operations.UpdateComputeTemplate;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncTemplate {
@@ -84,8 +94,22 @@ public class AsyncTemplate {
      * @return {@code CompletableFuture<CreateComputeTemplateResponse>} - The async response
      */
     public CompletableFuture<CreateComputeTemplateResponse> createComputeTemplate(@Nonnull CreateComputeTemplateRequest request) {
+        return createComputeTemplate(request, null);
+    }
+
+    /**
+     * Create a template
+     * 
+     * <p>Creates a ComputeTemplate. Provide the unified ComputeTemplate fields in the request body; they are
+     * mapped to the provider's API. Returns the created ComputeTemplate.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateComputeTemplateResponse>} - The async response
+     */
+    public CompletableFuture<CreateComputeTemplateResponse> createComputeTemplate(@Nonnull CreateComputeTemplateRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateComputeTemplateRequest, CreateComputeTemplateResponse> operation
-              = new CreateComputeTemplate.Async(sdkConfiguration, _headers);
+              = new CreateComputeTemplate.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -113,8 +137,65 @@ public class AsyncTemplate {
      * @return {@code CompletableFuture<GetComputeTemplateResponse>} - The async response
      */
     public CompletableFuture<GetComputeTemplateResponse> getComputeTemplate(@Nonnull GetComputeTemplateRequest request) {
+        return getComputeTemplate(request, null);
+    }
+
+    /**
+     * Retrieve a template
+     * 
+     * <p>Retrieves a single ComputeTemplate by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetComputeTemplateResponse>} - The async response
+     */
+    public CompletableFuture<GetComputeTemplateResponse> getComputeTemplate(@Nonnull GetComputeTemplateRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetComputeTemplateRequest, GetComputeTemplateResponse> operation
-              = new GetComputeTemplate.Async(sdkConfiguration, _headers);
+              = new GetComputeTemplate.Async(sdkConfiguration, options, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Retrieve a template
+     * 
+     * <p>Retrieves a single PrintingTemplate by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @return The async call builder
+     */
+    public GetPrintingTemplateRequestBuilder getPrintingTemplate() {
+        return new GetPrintingTemplateRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a template
+     * 
+     * <p>Retrieves a single PrintingTemplate by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<GetPrintingTemplateResponse>} - The async response
+     */
+    public CompletableFuture<GetPrintingTemplateResponse> getPrintingTemplate(@Nonnull GetPrintingTemplateRequest request) {
+        return getPrintingTemplate(request, null);
+    }
+
+    /**
+     * Retrieve a template
+     * 
+     * <p>Retrieves a single PrintingTemplate by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetPrintingTemplateResponse>} - The async response
+     */
+    public CompletableFuture<GetPrintingTemplateResponse> getPrintingTemplate(@Nonnull GetPrintingTemplateRequest request, @Nullable Options options) {
+        AsyncRequestOperation<GetPrintingTemplateRequest, GetPrintingTemplateResponse> operation
+              = new GetPrintingTemplate.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -142,8 +223,22 @@ public class AsyncTemplate {
      * @return {@code CompletableFuture<GetSigningTemplateResponse>} - The async response
      */
     public CompletableFuture<GetSigningTemplateResponse> getSigningTemplate(@Nonnull GetSigningTemplateRequest request) {
+        return getSigningTemplate(request, null);
+    }
+
+    /**
+     * Retrieve a template
+     * 
+     * <p>Retrieves a single SigningTemplate by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetSigningTemplateResponse>} - The async response
+     */
+    public CompletableFuture<GetSigningTemplateResponse> getSigningTemplate(@Nonnull GetSigningTemplateRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetSigningTemplateRequest, GetSigningTemplateResponse> operation
-              = new GetSigningTemplate.Async(sdkConfiguration, _headers);
+              = new GetSigningTemplate.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -179,8 +274,81 @@ public class AsyncTemplate {
      * @return {@code CompletableFuture<ListComputeTemplatesResponse>} - The async response
      */
     public CompletableFuture<ListComputeTemplatesResponse> listComputeTemplates(@Nonnull ListComputeTemplatesRequest request) {
+        return listComputeTemplates(request, null);
+    }
+
+    /**
+     * List all templates
+     * 
+     * <p>Returns a list of ComputeTemplates. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListComputeTemplatesResponse>} - The async response
+     */
+    public CompletableFuture<ListComputeTemplatesResponse> listComputeTemplates(@Nonnull ListComputeTemplatesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListComputeTemplatesRequest, ListComputeTemplatesResponse> operation
-              = new ListComputeTemplates.Async(sdkConfiguration, _headers);
+              = new ListComputeTemplates.Async(sdkConfiguration, options, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * List all templates
+     * 
+     * <p>Returns a list of PrintingTemplates. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @return The async call builder
+     */
+    public ListPrintingTemplatesRequestBuilder listPrintingTemplates() {
+        return new ListPrintingTemplatesRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all templates
+     * 
+     * <p>Returns a list of PrintingTemplates. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<ListPrintingTemplatesResponse>} - The async response
+     */
+    public CompletableFuture<ListPrintingTemplatesResponse> listPrintingTemplates(@Nonnull ListPrintingTemplatesRequest request) {
+        return listPrintingTemplates(request, null);
+    }
+
+    /**
+     * List all templates
+     * 
+     * <p>Returns a list of PrintingTemplates. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListPrintingTemplatesResponse>} - The async response
+     */
+    public CompletableFuture<ListPrintingTemplatesResponse> listPrintingTemplates(@Nonnull ListPrintingTemplatesRequest request, @Nullable Options options) {
+        AsyncRequestOperation<ListPrintingTemplatesRequest, ListPrintingTemplatesResponse> operation
+              = new ListPrintingTemplates.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -216,8 +384,26 @@ public class AsyncTemplate {
      * @return {@code CompletableFuture<ListSigningTemplatesResponse>} - The async response
      */
     public CompletableFuture<ListSigningTemplatesResponse> listSigningTemplates(@Nonnull ListSigningTemplatesRequest request) {
+        return listSigningTemplates(request, null);
+    }
+
+    /**
+     * List all templates
+     * 
+     * <p>Returns a list of SigningTemplates. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListSigningTemplatesResponse>} - The async response
+     */
+    public CompletableFuture<ListSigningTemplatesResponse> listSigningTemplates(@Nonnull ListSigningTemplatesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListSigningTemplatesRequest, ListSigningTemplatesResponse> operation
-              = new ListSigningTemplates.Async(sdkConfiguration, _headers);
+              = new ListSigningTemplates.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -245,8 +431,22 @@ public class AsyncTemplate {
      * @return {@code CompletableFuture<PatchComputeTemplateResponse>} - The async response
      */
     public CompletableFuture<PatchComputeTemplateResponse> patchComputeTemplate(@Nonnull PatchComputeTemplateRequest request) {
+        return patchComputeTemplate(request, null);
+    }
+
+    /**
+     * Update a template
+     * 
+     * <p>Updates the ComputeTemplate identified by `id`. Provide the unified ComputeTemplate fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchComputeTemplateResponse>} - The async response
+     */
+    public CompletableFuture<PatchComputeTemplateResponse> patchComputeTemplate(@Nonnull PatchComputeTemplateRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchComputeTemplateRequest, PatchComputeTemplateResponse> operation
-              = new PatchComputeTemplate.Async(sdkConfiguration, _headers);
+              = new PatchComputeTemplate.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -272,8 +472,21 @@ public class AsyncTemplate {
      * @return {@code CompletableFuture<RemoveComputeTemplateResponse>} - The async response
      */
     public CompletableFuture<RemoveComputeTemplateResponse> removeComputeTemplate(@Nonnull RemoveComputeTemplateRequest request) {
+        return removeComputeTemplate(request, null);
+    }
+
+    /**
+     * Remove a template
+     * 
+     * <p>Deletes the ComputeTemplate identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveComputeTemplateResponse>} - The async response
+     */
+    public CompletableFuture<RemoveComputeTemplateResponse> removeComputeTemplate(@Nonnull RemoveComputeTemplateRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveComputeTemplateRequest, RemoveComputeTemplateResponse> operation
-              = new RemoveComputeTemplate.Async(sdkConfiguration, _headers);
+              = new RemoveComputeTemplate.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -301,8 +514,22 @@ public class AsyncTemplate {
      * @return {@code CompletableFuture<UpdateComputeTemplateResponse>} - The async response
      */
     public CompletableFuture<UpdateComputeTemplateResponse> updateComputeTemplate(@Nonnull UpdateComputeTemplateRequest request) {
+        return updateComputeTemplate(request, null);
+    }
+
+    /**
+     * Update a template
+     * 
+     * <p>Updates the ComputeTemplate identified by `id`. Provide the unified ComputeTemplate fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateComputeTemplateResponse>} - The async response
+     */
+    public CompletableFuture<UpdateComputeTemplateResponse> updateComputeTemplate(@Nonnull UpdateComputeTemplateRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateComputeTemplateRequest, UpdateComputeTemplateResponse> operation
-              = new UpdateComputeTemplate.Async(sdkConfiguration, _headers);
+              = new UpdateComputeTemplate.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

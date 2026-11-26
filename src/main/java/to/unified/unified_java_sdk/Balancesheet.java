@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.GetAccountingBalancesheetRequest;
 import to.unified.unified_java_sdk.models.operations.GetAccountingBalancesheetRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetAccountingBalancesheetResponse;
@@ -15,6 +16,7 @@ import to.unified.unified_java_sdk.models.operations.ListAccountingBalancesheets
 import to.unified.unified_java_sdk.operations.GetAccountingBalancesheet;
 import to.unified.unified_java_sdk.operations.ListAccountingBalancesheets;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Balancesheet {
@@ -59,8 +61,23 @@ public class Balancesheet {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAccountingBalancesheetResponse getAccountingBalancesheet(@Nonnull GetAccountingBalancesheetRequest request) {
+        return getAccountingBalancesheet(request, null);
+    }
+
+    /**
+     * Retrieve a balancesheet
+     * 
+     * <p>Retrieves a single AccountingBalancesheet by its `id`. Obtain `id` values from the corresponding
+     * list endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAccountingBalancesheetResponse getAccountingBalancesheet(@Nonnull GetAccountingBalancesheetRequest request, @Nullable Options options) {
         RequestOperation<GetAccountingBalancesheetRequest, GetAccountingBalancesheetResponse> operation
-              = new GetAccountingBalancesheet.Sync(sdkConfiguration, _headers);
+              = new GetAccountingBalancesheet.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -95,8 +112,27 @@ public class Balancesheet {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAccountingBalancesheetsResponse listAccountingBalancesheets(@Nonnull ListAccountingBalancesheetsRequest request) {
+        return listAccountingBalancesheets(request, null);
+    }
+
+    /**
+     * List all balancesheets
+     * 
+     * <p>Returns a list of AccountingBalancesheets. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAccountingBalancesheetsResponse listAccountingBalancesheets(@Nonnull ListAccountingBalancesheetsRequest request, @Nullable Options options) {
         RequestOperation<ListAccountingBalancesheetsRequest, ListAccountingBalancesheetsResponse> operation
-              = new ListAccountingBalancesheets.Sync(sdkConfiguration, _headers);
+              = new ListAccountingBalancesheets.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

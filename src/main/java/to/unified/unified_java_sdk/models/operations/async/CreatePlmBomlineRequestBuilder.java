@@ -6,20 +6,30 @@ package to.unified.unified_java_sdk.models.operations.async;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.CreatePlmBomlineRequest;
 import to.unified.unified_java_sdk.operations.CreatePlmBomline;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class CreatePlmBomlineRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private CreatePlmBomlineRequest request;
+    private final Options.Builder optionsBuilder;
 
     public CreatePlmBomlineRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public CreatePlmBomlineRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public CreatePlmBomlineRequestBuilder request(@Nonnull CreatePlmBomlineRequest request) {
@@ -44,8 +54,9 @@ public class CreatePlmBomlineRequestBuilder {
     * @return The response from the server.
     */
     public CompletableFuture<CreatePlmBomlineResponse> call() {
+        Options options = optionsBuilder.build();
         AsyncRequestOperation<CreatePlmBomlineRequest, CreatePlmBomlineResponse> operation
-              = new CreatePlmBomline.Async(sdkConfiguration, _headers);
+              = new CreatePlmBomline.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

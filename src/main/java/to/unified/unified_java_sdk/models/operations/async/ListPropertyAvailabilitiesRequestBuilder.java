@@ -6,20 +6,30 @@ package to.unified.unified_java_sdk.models.operations.async;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.ListPropertyAvailabilitiesRequest;
 import to.unified.unified_java_sdk.operations.ListPropertyAvailabilities;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListPropertyAvailabilitiesRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private ListPropertyAvailabilitiesRequest request;
+    private final Options.Builder optionsBuilder;
 
     public ListPropertyAvailabilitiesRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public ListPropertyAvailabilitiesRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public ListPropertyAvailabilitiesRequestBuilder request(@Nonnull ListPropertyAvailabilitiesRequest request) {
@@ -44,8 +54,9 @@ public class ListPropertyAvailabilitiesRequestBuilder {
     * @return The response from the server.
     */
     public CompletableFuture<ListPropertyAvailabilitiesResponse> call() {
+        Options options = optionsBuilder.build();
         AsyncRequestOperation<ListPropertyAvailabilitiesRequest, ListPropertyAvailabilitiesResponse> operation
-              = new ListPropertyAvailabilities.Async(sdkConfiguration, _headers);
+              = new ListPropertyAvailabilities.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

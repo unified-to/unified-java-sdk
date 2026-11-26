@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateLegalExpenseRequest;
 import to.unified.unified_java_sdk.models.operations.CreateLegalExpenseRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateLegalExpenseResponse;
@@ -103,6 +104,7 @@ import to.unified.unified_java_sdk.operations.UpdateLegalMatter;
 import to.unified.unified_java_sdk.operations.UpdateLegalPracticearea;
 import to.unified.unified_java_sdk.operations.UpdateLegalTimeentry;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Legal {
@@ -147,8 +149,23 @@ public class Legal {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateLegalExpenseResponse createLegalExpense(@Nonnull CreateLegalExpenseRequest request) {
+        return createLegalExpense(request, null);
+    }
+
+    /**
+     * Create an expense
+     * 
+     * <p>Creates a LegalExpense. Provide the unified LegalExpense fields in the request body; they are mapped
+     * to the provider's API. Returns the created LegalExpense.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateLegalExpenseResponse createLegalExpense(@Nonnull CreateLegalExpenseRequest request, @Nullable Options options) {
         RequestOperation<CreateLegalExpenseRequest, CreateLegalExpenseResponse> operation
-              = new CreateLegalExpense.Sync(sdkConfiguration, _headers);
+              = new CreateLegalExpense.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -175,8 +192,23 @@ public class Legal {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateLegalMatterResponse createLegalMatter(@Nonnull CreateLegalMatterRequest request) {
+        return createLegalMatter(request, null);
+    }
+
+    /**
+     * Create a matter
+     * 
+     * <p>Creates a LegalMatter. Provide the unified LegalMatter fields in the request body; they are mapped
+     * to the provider's API. Returns the created LegalMatter.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateLegalMatterResponse createLegalMatter(@Nonnull CreateLegalMatterRequest request, @Nullable Options options) {
         RequestOperation<CreateLegalMatterRequest, CreateLegalMatterResponse> operation
-              = new CreateLegalMatter.Sync(sdkConfiguration, _headers);
+              = new CreateLegalMatter.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -203,8 +235,23 @@ public class Legal {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateLegalPracticeareaResponse createLegalPracticearea(@Nonnull CreateLegalPracticeareaRequest request) {
+        return createLegalPracticearea(request, null);
+    }
+
+    /**
+     * Create a practicearea
+     * 
+     * <p>Creates a LegalPracticearea. Provide the unified LegalPracticearea fields in the request body; they
+     * are mapped to the provider's API. Returns the created LegalPracticearea.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateLegalPracticeareaResponse createLegalPracticearea(@Nonnull CreateLegalPracticeareaRequest request, @Nullable Options options) {
         RequestOperation<CreateLegalPracticeareaRequest, CreateLegalPracticeareaResponse> operation
-              = new CreateLegalPracticearea.Sync(sdkConfiguration, _headers);
+              = new CreateLegalPracticearea.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -231,8 +278,23 @@ public class Legal {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateLegalTimeentryResponse createLegalTimeentry(@Nonnull CreateLegalTimeentryRequest request) {
+        return createLegalTimeentry(request, null);
+    }
+
+    /**
+     * Create a timeentry
+     * 
+     * <p>Creates a LegalTimeentry. Provide the unified LegalTimeentry fields in the request body; they are
+     * mapped to the provider's API. Returns the created LegalTimeentry.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateLegalTimeentryResponse createLegalTimeentry(@Nonnull CreateLegalTimeentryRequest request, @Nullable Options options) {
         RequestOperation<CreateLegalTimeentryRequest, CreateLegalTimeentryResponse> operation
-              = new CreateLegalTimeentry.Sync(sdkConfiguration, _headers);
+              = new CreateLegalTimeentry.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -259,8 +321,23 @@ public class Legal {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetLegalExpenseResponse getLegalExpense(@Nonnull GetLegalExpenseRequest request) {
+        return getLegalExpense(request, null);
+    }
+
+    /**
+     * Retrieve an expense
+     * 
+     * <p>Retrieves a single LegalExpense by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetLegalExpenseResponse getLegalExpense(@Nonnull GetLegalExpenseRequest request, @Nullable Options options) {
         RequestOperation<GetLegalExpenseRequest, GetLegalExpenseResponse> operation
-              = new GetLegalExpense.Sync(sdkConfiguration, _headers);
+              = new GetLegalExpense.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -287,8 +364,23 @@ public class Legal {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetLegalMatterResponse getLegalMatter(@Nonnull GetLegalMatterRequest request) {
+        return getLegalMatter(request, null);
+    }
+
+    /**
+     * Retrieve a matter
+     * 
+     * <p>Retrieves a single LegalMatter by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetLegalMatterResponse getLegalMatter(@Nonnull GetLegalMatterRequest request, @Nullable Options options) {
         RequestOperation<GetLegalMatterRequest, GetLegalMatterResponse> operation
-              = new GetLegalMatter.Sync(sdkConfiguration, _headers);
+              = new GetLegalMatter.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -315,8 +407,23 @@ public class Legal {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetLegalPracticeareaResponse getLegalPracticearea(@Nonnull GetLegalPracticeareaRequest request) {
+        return getLegalPracticearea(request, null);
+    }
+
+    /**
+     * Retrieve a practicearea
+     * 
+     * <p>Retrieves a single LegalPracticearea by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetLegalPracticeareaResponse getLegalPracticearea(@Nonnull GetLegalPracticeareaRequest request, @Nullable Options options) {
         RequestOperation<GetLegalPracticeareaRequest, GetLegalPracticeareaResponse> operation
-              = new GetLegalPracticearea.Sync(sdkConfiguration, _headers);
+              = new GetLegalPracticearea.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -343,8 +450,23 @@ public class Legal {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetLegalTimeentryResponse getLegalTimeentry(@Nonnull GetLegalTimeentryRequest request) {
+        return getLegalTimeentry(request, null);
+    }
+
+    /**
+     * Retrieve a timeentry
+     * 
+     * <p>Retrieves a single LegalTimeentry by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetLegalTimeentryResponse getLegalTimeentry(@Nonnull GetLegalTimeentryRequest request, @Nullable Options options) {
         RequestOperation<GetLegalTimeentryRequest, GetLegalTimeentryResponse> operation
-              = new GetLegalTimeentry.Sync(sdkConfiguration, _headers);
+              = new GetLegalTimeentry.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -379,8 +501,27 @@ public class Legal {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListLegalExpensesResponse listLegalExpenses(@Nonnull ListLegalExpensesRequest request) {
+        return listLegalExpenses(request, null);
+    }
+
+    /**
+     * List all expenses
+     * 
+     * <p>Returns a list of LegalExpenses. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListLegalExpensesResponse listLegalExpenses(@Nonnull ListLegalExpensesRequest request, @Nullable Options options) {
         RequestOperation<ListLegalExpensesRequest, ListLegalExpensesResponse> operation
-              = new ListLegalExpenses.Sync(sdkConfiguration, _headers);
+              = new ListLegalExpenses.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -415,8 +556,27 @@ public class Legal {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListLegalMattersResponse listLegalMatters(@Nonnull ListLegalMattersRequest request) {
+        return listLegalMatters(request, null);
+    }
+
+    /**
+     * List all matters
+     * 
+     * <p>Returns a list of LegalMatters. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListLegalMattersResponse listLegalMatters(@Nonnull ListLegalMattersRequest request, @Nullable Options options) {
         RequestOperation<ListLegalMattersRequest, ListLegalMattersResponse> operation
-              = new ListLegalMatters.Sync(sdkConfiguration, _headers);
+              = new ListLegalMatters.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -451,8 +611,27 @@ public class Legal {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListLegalPracticeareasResponse listLegalPracticeareas(@Nonnull ListLegalPracticeareasRequest request) {
+        return listLegalPracticeareas(request, null);
+    }
+
+    /**
+     * List all practiceareas
+     * 
+     * <p>Returns a list of LegalPracticeareas. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListLegalPracticeareasResponse listLegalPracticeareas(@Nonnull ListLegalPracticeareasRequest request, @Nullable Options options) {
         RequestOperation<ListLegalPracticeareasRequest, ListLegalPracticeareasResponse> operation
-              = new ListLegalPracticeareas.Sync(sdkConfiguration, _headers);
+              = new ListLegalPracticeareas.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -487,8 +666,27 @@ public class Legal {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListLegalTimeentriesResponse listLegalTimeentries(@Nonnull ListLegalTimeentriesRequest request) {
+        return listLegalTimeentries(request, null);
+    }
+
+    /**
+     * List all timeentries
+     * 
+     * <p>Returns a list of LegalTimeentries. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListLegalTimeentriesResponse listLegalTimeentries(@Nonnull ListLegalTimeentriesRequest request, @Nullable Options options) {
         RequestOperation<ListLegalTimeentriesRequest, ListLegalTimeentriesResponse> operation
-              = new ListLegalTimeentries.Sync(sdkConfiguration, _headers);
+              = new ListLegalTimeentries.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -515,8 +713,23 @@ public class Legal {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchLegalExpenseResponse patchLegalExpense(@Nonnull PatchLegalExpenseRequest request) {
+        return patchLegalExpense(request, null);
+    }
+
+    /**
+     * Update an expense
+     * 
+     * <p>Updates the LegalExpense identified by `id`. Provide the unified LegalExpense fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchLegalExpenseResponse patchLegalExpense(@Nonnull PatchLegalExpenseRequest request, @Nullable Options options) {
         RequestOperation<PatchLegalExpenseRequest, PatchLegalExpenseResponse> operation
-              = new PatchLegalExpense.Sync(sdkConfiguration, _headers);
+              = new PatchLegalExpense.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -543,8 +756,23 @@ public class Legal {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchLegalMatterResponse patchLegalMatter(@Nonnull PatchLegalMatterRequest request) {
+        return patchLegalMatter(request, null);
+    }
+
+    /**
+     * Update a matter
+     * 
+     * <p>Updates the LegalMatter identified by `id`. Provide the unified LegalMatter fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchLegalMatterResponse patchLegalMatter(@Nonnull PatchLegalMatterRequest request, @Nullable Options options) {
         RequestOperation<PatchLegalMatterRequest, PatchLegalMatterResponse> operation
-              = new PatchLegalMatter.Sync(sdkConfiguration, _headers);
+              = new PatchLegalMatter.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -571,8 +799,23 @@ public class Legal {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchLegalPracticeareaResponse patchLegalPracticearea(@Nonnull PatchLegalPracticeareaRequest request) {
+        return patchLegalPracticearea(request, null);
+    }
+
+    /**
+     * Update a practicearea
+     * 
+     * <p>Updates the LegalPracticearea identified by `id`. Provide the unified LegalPracticearea fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchLegalPracticeareaResponse patchLegalPracticearea(@Nonnull PatchLegalPracticeareaRequest request, @Nullable Options options) {
         RequestOperation<PatchLegalPracticeareaRequest, PatchLegalPracticeareaResponse> operation
-              = new PatchLegalPracticearea.Sync(sdkConfiguration, _headers);
+              = new PatchLegalPracticearea.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -599,8 +842,23 @@ public class Legal {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchLegalTimeentryResponse patchLegalTimeentry(@Nonnull PatchLegalTimeentryRequest request) {
+        return patchLegalTimeentry(request, null);
+    }
+
+    /**
+     * Update a timeentry
+     * 
+     * <p>Updates the LegalTimeentry identified by `id`. Provide the unified LegalTimeentry fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchLegalTimeentryResponse patchLegalTimeentry(@Nonnull PatchLegalTimeentryRequest request, @Nullable Options options) {
         RequestOperation<PatchLegalTimeentryRequest, PatchLegalTimeentryResponse> operation
-              = new PatchLegalTimeentry.Sync(sdkConfiguration, _headers);
+              = new PatchLegalTimeentry.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -625,8 +883,22 @@ public class Legal {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveLegalExpenseResponse removeLegalExpense(@Nonnull RemoveLegalExpenseRequest request) {
+        return removeLegalExpense(request, null);
+    }
+
+    /**
+     * Remove an expense
+     * 
+     * <p>Deletes the LegalExpense identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveLegalExpenseResponse removeLegalExpense(@Nonnull RemoveLegalExpenseRequest request, @Nullable Options options) {
         RequestOperation<RemoveLegalExpenseRequest, RemoveLegalExpenseResponse> operation
-              = new RemoveLegalExpense.Sync(sdkConfiguration, _headers);
+              = new RemoveLegalExpense.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -651,8 +923,22 @@ public class Legal {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveLegalMatterResponse removeLegalMatter(@Nonnull RemoveLegalMatterRequest request) {
+        return removeLegalMatter(request, null);
+    }
+
+    /**
+     * Remove a matter
+     * 
+     * <p>Deletes the LegalMatter identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveLegalMatterResponse removeLegalMatter(@Nonnull RemoveLegalMatterRequest request, @Nullable Options options) {
         RequestOperation<RemoveLegalMatterRequest, RemoveLegalMatterResponse> operation
-              = new RemoveLegalMatter.Sync(sdkConfiguration, _headers);
+              = new RemoveLegalMatter.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -677,8 +963,22 @@ public class Legal {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveLegalPracticeareaResponse removeLegalPracticearea(@Nonnull RemoveLegalPracticeareaRequest request) {
+        return removeLegalPracticearea(request, null);
+    }
+
+    /**
+     * Remove a practicearea
+     * 
+     * <p>Deletes the LegalPracticearea identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveLegalPracticeareaResponse removeLegalPracticearea(@Nonnull RemoveLegalPracticeareaRequest request, @Nullable Options options) {
         RequestOperation<RemoveLegalPracticeareaRequest, RemoveLegalPracticeareaResponse> operation
-              = new RemoveLegalPracticearea.Sync(sdkConfiguration, _headers);
+              = new RemoveLegalPracticearea.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -703,8 +1003,22 @@ public class Legal {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveLegalTimeentryResponse removeLegalTimeentry(@Nonnull RemoveLegalTimeentryRequest request) {
+        return removeLegalTimeentry(request, null);
+    }
+
+    /**
+     * Remove a timeentry
+     * 
+     * <p>Deletes the LegalTimeentry identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveLegalTimeentryResponse removeLegalTimeentry(@Nonnull RemoveLegalTimeentryRequest request, @Nullable Options options) {
         RequestOperation<RemoveLegalTimeentryRequest, RemoveLegalTimeentryResponse> operation
-              = new RemoveLegalTimeentry.Sync(sdkConfiguration, _headers);
+              = new RemoveLegalTimeentry.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -731,8 +1045,23 @@ public class Legal {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateLegalExpenseResponse updateLegalExpense(@Nonnull UpdateLegalExpenseRequest request) {
+        return updateLegalExpense(request, null);
+    }
+
+    /**
+     * Update an expense
+     * 
+     * <p>Updates the LegalExpense identified by `id`. Provide the unified LegalExpense fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateLegalExpenseResponse updateLegalExpense(@Nonnull UpdateLegalExpenseRequest request, @Nullable Options options) {
         RequestOperation<UpdateLegalExpenseRequest, UpdateLegalExpenseResponse> operation
-              = new UpdateLegalExpense.Sync(sdkConfiguration, _headers);
+              = new UpdateLegalExpense.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -759,8 +1088,23 @@ public class Legal {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateLegalMatterResponse updateLegalMatter(@Nonnull UpdateLegalMatterRequest request) {
+        return updateLegalMatter(request, null);
+    }
+
+    /**
+     * Update a matter
+     * 
+     * <p>Updates the LegalMatter identified by `id`. Provide the unified LegalMatter fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateLegalMatterResponse updateLegalMatter(@Nonnull UpdateLegalMatterRequest request, @Nullable Options options) {
         RequestOperation<UpdateLegalMatterRequest, UpdateLegalMatterResponse> operation
-              = new UpdateLegalMatter.Sync(sdkConfiguration, _headers);
+              = new UpdateLegalMatter.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -787,8 +1131,23 @@ public class Legal {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateLegalPracticeareaResponse updateLegalPracticearea(@Nonnull UpdateLegalPracticeareaRequest request) {
+        return updateLegalPracticearea(request, null);
+    }
+
+    /**
+     * Update a practicearea
+     * 
+     * <p>Updates the LegalPracticearea identified by `id`. Provide the unified LegalPracticearea fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateLegalPracticeareaResponse updateLegalPracticearea(@Nonnull UpdateLegalPracticeareaRequest request, @Nullable Options options) {
         RequestOperation<UpdateLegalPracticeareaRequest, UpdateLegalPracticeareaResponse> operation
-              = new UpdateLegalPracticearea.Sync(sdkConfiguration, _headers);
+              = new UpdateLegalPracticearea.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -815,8 +1174,23 @@ public class Legal {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateLegalTimeentryResponse updateLegalTimeentry(@Nonnull UpdateLegalTimeentryRequest request) {
+        return updateLegalTimeentry(request, null);
+    }
+
+    /**
+     * Update a timeentry
+     * 
+     * <p>Updates the LegalTimeentry identified by `id`. Provide the unified LegalTimeentry fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateLegalTimeentryResponse updateLegalTimeentry(@Nonnull UpdateLegalTimeentryRequest request, @Nullable Options options) {
         RequestOperation<UpdateLegalTimeentryRequest, UpdateLegalTimeentryResponse> operation
-              = new UpdateLegalTimeentry.Sync(sdkConfiguration, _headers);
+              = new UpdateLegalTimeentry.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

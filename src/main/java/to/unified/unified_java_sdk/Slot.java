@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.GetHealthcareSlotRequest;
 import to.unified.unified_java_sdk.models.operations.GetHealthcareSlotRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetHealthcareSlotResponse;
@@ -15,6 +16,7 @@ import to.unified.unified_java_sdk.models.operations.ListHealthcareSlotsResponse
 import to.unified.unified_java_sdk.operations.GetHealthcareSlot;
 import to.unified.unified_java_sdk.operations.ListHealthcareSlots;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Slot {
@@ -59,8 +61,23 @@ public class Slot {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetHealthcareSlotResponse getHealthcareSlot(@Nonnull GetHealthcareSlotRequest request) {
+        return getHealthcareSlot(request, null);
+    }
+
+    /**
+     * Retrieve a slot
+     * 
+     * <p>Retrieves a single HealthcareSlot by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetHealthcareSlotResponse getHealthcareSlot(@Nonnull GetHealthcareSlotRequest request, @Nullable Options options) {
         RequestOperation<GetHealthcareSlotRequest, GetHealthcareSlotResponse> operation
-              = new GetHealthcareSlot.Sync(sdkConfiguration, _headers);
+              = new GetHealthcareSlot.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -95,8 +112,27 @@ public class Slot {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListHealthcareSlotsResponse listHealthcareSlots(@Nonnull ListHealthcareSlotsRequest request) {
+        return listHealthcareSlots(request, null);
+    }
+
+    /**
+     * List all slots
+     * 
+     * <p>Returns a list of HealthcareSlots. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListHealthcareSlotsResponse listHealthcareSlots(@Nonnull ListHealthcareSlotsRequest request, @Nullable Options options) {
         RequestOperation<ListHealthcareSlotsRequest, ListHealthcareSlotsResponse> operation
-              = new ListHealthcareSlots.Sync(sdkConfiguration, _headers);
+              = new ListHealthcareSlots.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

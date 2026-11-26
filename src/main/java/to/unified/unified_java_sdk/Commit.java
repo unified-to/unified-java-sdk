@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateRepoCommitRequest;
 import to.unified.unified_java_sdk.models.operations.CreateRepoCommitRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateRepoCommitResponse;
@@ -31,6 +32,7 @@ import to.unified.unified_java_sdk.operations.PatchRepoCommit;
 import to.unified.unified_java_sdk.operations.RemoveRepoCommit;
 import to.unified.unified_java_sdk.operations.UpdateRepoCommit;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Commit {
@@ -75,8 +77,23 @@ public class Commit {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateRepoCommitResponse createRepoCommit(@Nonnull CreateRepoCommitRequest request) {
+        return createRepoCommit(request, null);
+    }
+
+    /**
+     * Create a commit
+     * 
+     * <p>Creates a RepoCommit. Provide the unified RepoCommit fields in the request body; they are mapped to
+     * the provider's API. Returns the created RepoCommit.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateRepoCommitResponse createRepoCommit(@Nonnull CreateRepoCommitRequest request, @Nullable Options options) {
         RequestOperation<CreateRepoCommitRequest, CreateRepoCommitResponse> operation
-              = new CreateRepoCommit.Sync(sdkConfiguration, _headers);
+              = new CreateRepoCommit.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -103,8 +120,23 @@ public class Commit {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetRepoCommitResponse getRepoCommit(@Nonnull GetRepoCommitRequest request) {
+        return getRepoCommit(request, null);
+    }
+
+    /**
+     * Retrieve a commit
+     * 
+     * <p>Retrieves a single RepoCommit by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetRepoCommitResponse getRepoCommit(@Nonnull GetRepoCommitRequest request, @Nullable Options options) {
         RequestOperation<GetRepoCommitRequest, GetRepoCommitResponse> operation
-              = new GetRepoCommit.Sync(sdkConfiguration, _headers);
+              = new GetRepoCommit.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -139,8 +171,27 @@ public class Commit {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListRepoCommitsResponse listRepoCommits(@Nonnull ListRepoCommitsRequest request) {
+        return listRepoCommits(request, null);
+    }
+
+    /**
+     * List all commits
+     * 
+     * <p>Returns a list of RepoCommits. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListRepoCommitsResponse listRepoCommits(@Nonnull ListRepoCommitsRequest request, @Nullable Options options) {
         RequestOperation<ListRepoCommitsRequest, ListRepoCommitsResponse> operation
-              = new ListRepoCommits.Sync(sdkConfiguration, _headers);
+              = new ListRepoCommits.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +218,23 @@ public class Commit {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchRepoCommitResponse patchRepoCommit(@Nonnull PatchRepoCommitRequest request) {
+        return patchRepoCommit(request, null);
+    }
+
+    /**
+     * Update a commit
+     * 
+     * <p>Updates the RepoCommit identified by `id`. Provide the unified RepoCommit fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchRepoCommitResponse patchRepoCommit(@Nonnull PatchRepoCommitRequest request, @Nullable Options options) {
         RequestOperation<PatchRepoCommitRequest, PatchRepoCommitResponse> operation
-              = new PatchRepoCommit.Sync(sdkConfiguration, _headers);
+              = new PatchRepoCommit.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -193,8 +259,22 @@ public class Commit {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveRepoCommitResponse removeRepoCommit(@Nonnull RemoveRepoCommitRequest request) {
+        return removeRepoCommit(request, null);
+    }
+
+    /**
+     * Remove a commit
+     * 
+     * <p>Deletes the RepoCommit identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveRepoCommitResponse removeRepoCommit(@Nonnull RemoveRepoCommitRequest request, @Nullable Options options) {
         RequestOperation<RemoveRepoCommitRequest, RemoveRepoCommitResponse> operation
-              = new RemoveRepoCommit.Sync(sdkConfiguration, _headers);
+              = new RemoveRepoCommit.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -221,8 +301,23 @@ public class Commit {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateRepoCommitResponse updateRepoCommit(@Nonnull UpdateRepoCommitRequest request) {
+        return updateRepoCommit(request, null);
+    }
+
+    /**
+     * Update a commit
+     * 
+     * <p>Updates the RepoCommit identified by `id`. Provide the unified RepoCommit fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateRepoCommitResponse updateRepoCommit(@Nonnull UpdateRepoCommitRequest request, @Nullable Options options) {
         RequestOperation<UpdateRepoCommitRequest, UpdateRepoCommitResponse> operation
-              = new UpdateRepoCommit.Sync(sdkConfiguration, _headers);
+              = new UpdateRepoCommit.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

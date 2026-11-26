@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateKmsSpaceRequest;
 import to.unified.unified_java_sdk.models.operations.GetKmsSpaceRequest;
@@ -32,6 +33,7 @@ import to.unified.unified_java_sdk.operations.PatchKmsSpace;
 import to.unified.unified_java_sdk.operations.RemoveKmsSpace;
 import to.unified.unified_java_sdk.operations.UpdateKmsSpace;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncSpace {
@@ -76,8 +78,22 @@ public class AsyncSpace {
      * @return {@code CompletableFuture<CreateKmsSpaceResponse>} - The async response
      */
     public CompletableFuture<CreateKmsSpaceResponse> createKmsSpace(@Nonnull CreateKmsSpaceRequest request) {
+        return createKmsSpace(request, null);
+    }
+
+    /**
+     * Create a space
+     * 
+     * <p>Creates a KmsSpace. Provide the unified KmsSpace fields in the request body; they are mapped to the
+     * provider's API. Returns the created KmsSpace.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateKmsSpaceResponse>} - The async response
+     */
+    public CompletableFuture<CreateKmsSpaceResponse> createKmsSpace(@Nonnull CreateKmsSpaceRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateKmsSpaceRequest, CreateKmsSpaceResponse> operation
-              = new CreateKmsSpace.Async(sdkConfiguration, _headers);
+              = new CreateKmsSpace.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -105,8 +121,22 @@ public class AsyncSpace {
      * @return {@code CompletableFuture<GetKmsSpaceResponse>} - The async response
      */
     public CompletableFuture<GetKmsSpaceResponse> getKmsSpace(@Nonnull GetKmsSpaceRequest request) {
+        return getKmsSpace(request, null);
+    }
+
+    /**
+     * Retrieve a space
+     * 
+     * <p>Retrieves a single KmsSpace by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetKmsSpaceResponse>} - The async response
+     */
+    public CompletableFuture<GetKmsSpaceResponse> getKmsSpace(@Nonnull GetKmsSpaceRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetKmsSpaceRequest, GetKmsSpaceResponse> operation
-              = new GetKmsSpace.Async(sdkConfiguration, _headers);
+              = new GetKmsSpace.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -142,8 +172,26 @@ public class AsyncSpace {
      * @return {@code CompletableFuture<ListKmsSpacesResponse>} - The async response
      */
     public CompletableFuture<ListKmsSpacesResponse> listKmsSpaces(@Nonnull ListKmsSpacesRequest request) {
+        return listKmsSpaces(request, null);
+    }
+
+    /**
+     * List all spaces
+     * 
+     * <p>Returns a list of KmsSpaces. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListKmsSpacesResponse>} - The async response
+     */
+    public CompletableFuture<ListKmsSpacesResponse> listKmsSpaces(@Nonnull ListKmsSpacesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListKmsSpacesRequest, ListKmsSpacesResponse> operation
-              = new ListKmsSpaces.Async(sdkConfiguration, _headers);
+              = new ListKmsSpaces.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -171,8 +219,22 @@ public class AsyncSpace {
      * @return {@code CompletableFuture<PatchKmsSpaceResponse>} - The async response
      */
     public CompletableFuture<PatchKmsSpaceResponse> patchKmsSpace(@Nonnull PatchKmsSpaceRequest request) {
+        return patchKmsSpace(request, null);
+    }
+
+    /**
+     * Update a space
+     * 
+     * <p>Updates the KmsSpace identified by `id`. Provide the unified KmsSpace fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchKmsSpaceResponse>} - The async response
+     */
+    public CompletableFuture<PatchKmsSpaceResponse> patchKmsSpace(@Nonnull PatchKmsSpaceRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchKmsSpaceRequest, PatchKmsSpaceResponse> operation
-              = new PatchKmsSpace.Async(sdkConfiguration, _headers);
+              = new PatchKmsSpace.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -198,8 +260,21 @@ public class AsyncSpace {
      * @return {@code CompletableFuture<RemoveKmsSpaceResponse>} - The async response
      */
     public CompletableFuture<RemoveKmsSpaceResponse> removeKmsSpace(@Nonnull RemoveKmsSpaceRequest request) {
+        return removeKmsSpace(request, null);
+    }
+
+    /**
+     * Remove a space
+     * 
+     * <p>Deletes the KmsSpace identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveKmsSpaceResponse>} - The async response
+     */
+    public CompletableFuture<RemoveKmsSpaceResponse> removeKmsSpace(@Nonnull RemoveKmsSpaceRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveKmsSpaceRequest, RemoveKmsSpaceResponse> operation
-              = new RemoveKmsSpace.Async(sdkConfiguration, _headers);
+              = new RemoveKmsSpace.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -227,8 +302,22 @@ public class AsyncSpace {
      * @return {@code CompletableFuture<UpdateKmsSpaceResponse>} - The async response
      */
     public CompletableFuture<UpdateKmsSpaceResponse> updateKmsSpace(@Nonnull UpdateKmsSpaceRequest request) {
+        return updateKmsSpace(request, null);
+    }
+
+    /**
+     * Update a space
+     * 
+     * <p>Updates the KmsSpace identified by `id`. Provide the unified KmsSpace fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateKmsSpaceResponse>} - The async response
+     */
+    public CompletableFuture<UpdateKmsSpaceResponse> updateKmsSpace(@Nonnull UpdateKmsSpaceRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateKmsSpaceRequest, UpdateKmsSpaceResponse> operation
-              = new UpdateKmsSpace.Async(sdkConfiguration, _headers);
+              = new UpdateKmsSpace.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

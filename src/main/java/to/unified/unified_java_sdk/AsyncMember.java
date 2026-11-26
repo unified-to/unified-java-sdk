@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateMartechMemberRequest;
 import to.unified.unified_java_sdk.models.operations.GetClubsMemberRequest;
@@ -40,6 +41,7 @@ import to.unified.unified_java_sdk.operations.PatchMartechMember;
 import to.unified.unified_java_sdk.operations.RemoveMartechMember;
 import to.unified.unified_java_sdk.operations.UpdateMartechMember;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncMember {
@@ -84,8 +86,22 @@ public class AsyncMember {
      * @return {@code CompletableFuture<CreateMartechMemberResponse>} - The async response
      */
     public CompletableFuture<CreateMartechMemberResponse> createMartechMember(@Nonnull CreateMartechMemberRequest request) {
+        return createMartechMember(request, null);
+    }
+
+    /**
+     * Create a member
+     * 
+     * <p>Creates a MarketingMember. Provide the unified MarketingMember fields in the request body; they are
+     * mapped to the provider's API. Returns the created MarketingMember.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateMartechMemberResponse>} - The async response
+     */
+    public CompletableFuture<CreateMartechMemberResponse> createMartechMember(@Nonnull CreateMartechMemberRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateMartechMemberRequest, CreateMartechMemberResponse> operation
-              = new CreateMartechMember.Async(sdkConfiguration, _headers);
+              = new CreateMartechMember.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -113,8 +129,22 @@ public class AsyncMember {
      * @return {@code CompletableFuture<GetClubsMemberResponse>} - The async response
      */
     public CompletableFuture<GetClubsMemberResponse> getClubsMember(@Nonnull GetClubsMemberRequest request) {
+        return getClubsMember(request, null);
+    }
+
+    /**
+     * Retrieve a member
+     * 
+     * <p>Retrieves a single ClubsMember by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetClubsMemberResponse>} - The async response
+     */
+    public CompletableFuture<GetClubsMemberResponse> getClubsMember(@Nonnull GetClubsMemberRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetClubsMemberRequest, GetClubsMemberResponse> operation
-              = new GetClubsMember.Async(sdkConfiguration, _headers);
+              = new GetClubsMember.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -142,8 +172,22 @@ public class AsyncMember {
      * @return {@code CompletableFuture<GetMartechMemberResponse>} - The async response
      */
     public CompletableFuture<GetMartechMemberResponse> getMartechMember(@Nonnull GetMartechMemberRequest request) {
+        return getMartechMember(request, null);
+    }
+
+    /**
+     * Retrieve a member
+     * 
+     * <p>Retrieves a single MarketingMember by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetMartechMemberResponse>} - The async response
+     */
+    public CompletableFuture<GetMartechMemberResponse> getMartechMember(@Nonnull GetMartechMemberRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetMartechMemberRequest, GetMartechMemberResponse> operation
-              = new GetMartechMember.Async(sdkConfiguration, _headers);
+              = new GetMartechMember.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -179,8 +223,26 @@ public class AsyncMember {
      * @return {@code CompletableFuture<ListClubsMembersResponse>} - The async response
      */
     public CompletableFuture<ListClubsMembersResponse> listClubsMembers(@Nonnull ListClubsMembersRequest request) {
+        return listClubsMembers(request, null);
+    }
+
+    /**
+     * List all members
+     * 
+     * <p>Returns a list of ClubsMembers. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListClubsMembersResponse>} - The async response
+     */
+    public CompletableFuture<ListClubsMembersResponse> listClubsMembers(@Nonnull ListClubsMembersRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListClubsMembersRequest, ListClubsMembersResponse> operation
-              = new ListClubsMembers.Async(sdkConfiguration, _headers);
+              = new ListClubsMembers.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -216,8 +278,26 @@ public class AsyncMember {
      * @return {@code CompletableFuture<ListMartechMembersResponse>} - The async response
      */
     public CompletableFuture<ListMartechMembersResponse> listMartechMembers(@Nonnull ListMartechMembersRequest request) {
+        return listMartechMembers(request, null);
+    }
+
+    /**
+     * List all members
+     * 
+     * <p>Returns a list of MarketingMembers. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListMartechMembersResponse>} - The async response
+     */
+    public CompletableFuture<ListMartechMembersResponse> listMartechMembers(@Nonnull ListMartechMembersRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListMartechMembersRequest, ListMartechMembersResponse> operation
-              = new ListMartechMembers.Async(sdkConfiguration, _headers);
+              = new ListMartechMembers.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -245,8 +325,22 @@ public class AsyncMember {
      * @return {@code CompletableFuture<PatchMartechMemberResponse>} - The async response
      */
     public CompletableFuture<PatchMartechMemberResponse> patchMartechMember(@Nonnull PatchMartechMemberRequest request) {
+        return patchMartechMember(request, null);
+    }
+
+    /**
+     * Update a member
+     * 
+     * <p>Updates the MarketingMember identified by `id`. Provide the unified MarketingMember fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchMartechMemberResponse>} - The async response
+     */
+    public CompletableFuture<PatchMartechMemberResponse> patchMartechMember(@Nonnull PatchMartechMemberRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchMartechMemberRequest, PatchMartechMemberResponse> operation
-              = new PatchMartechMember.Async(sdkConfiguration, _headers);
+              = new PatchMartechMember.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -272,8 +366,21 @@ public class AsyncMember {
      * @return {@code CompletableFuture<RemoveMartechMemberResponse>} - The async response
      */
     public CompletableFuture<RemoveMartechMemberResponse> removeMartechMember(@Nonnull RemoveMartechMemberRequest request) {
+        return removeMartechMember(request, null);
+    }
+
+    /**
+     * Remove a member
+     * 
+     * <p>Deletes the MarketingMember identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveMartechMemberResponse>} - The async response
+     */
+    public CompletableFuture<RemoveMartechMemberResponse> removeMartechMember(@Nonnull RemoveMartechMemberRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveMartechMemberRequest, RemoveMartechMemberResponse> operation
-              = new RemoveMartechMember.Async(sdkConfiguration, _headers);
+              = new RemoveMartechMember.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -301,8 +408,22 @@ public class AsyncMember {
      * @return {@code CompletableFuture<UpdateMartechMemberResponse>} - The async response
      */
     public CompletableFuture<UpdateMartechMemberResponse> updateMartechMember(@Nonnull UpdateMartechMemberRequest request) {
+        return updateMartechMember(request, null);
+    }
+
+    /**
+     * Update a member
+     * 
+     * <p>Updates the MarketingMember identified by `id`. Provide the unified MarketingMember fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateMartechMemberResponse>} - The async response
+     */
+    public CompletableFuture<UpdateMartechMemberResponse> updateMartechMember(@Nonnull UpdateMartechMemberRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateMartechMemberRequest, UpdateMartechMemberResponse> operation
-              = new UpdateMartechMember.Async(sdkConfiguration, _headers);
+              = new UpdateMartechMember.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

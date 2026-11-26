@@ -6,18 +6,28 @@ package to.unified.unified_java_sdk.models.operations;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.GetAccountingCashflow;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetAccountingCashflowRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private GetAccountingCashflowRequest request;
+    private final Options.Builder optionsBuilder;
 
     public GetAccountingCashflowRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public GetAccountingCashflowRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public GetAccountingCashflowRequestBuilder request(@Nonnull GetAccountingCashflowRequest request) {
@@ -42,8 +52,9 @@ public class GetAccountingCashflowRequestBuilder {
     * @return The response from the server.
     */
     public GetAccountingCashflowResponse call() {
+        Options options = optionsBuilder.build();
         RequestOperation<GetAccountingCashflowRequest, GetAccountingCashflowResponse> operation
-              = new GetAccountingCashflow.Sync(sdkConfiguration, _headers);
+              = new GetAccountingCashflow.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

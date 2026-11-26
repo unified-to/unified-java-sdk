@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateHrisDeviceRequest;
 import to.unified.unified_java_sdk.models.operations.GetHrisDeviceRequest;
@@ -32,6 +33,7 @@ import to.unified.unified_java_sdk.operations.PatchHrisDevice;
 import to.unified.unified_java_sdk.operations.RemoveHrisDevice;
 import to.unified.unified_java_sdk.operations.UpdateHrisDevice;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncDevice {
@@ -76,8 +78,22 @@ public class AsyncDevice {
      * @return {@code CompletableFuture<CreateHrisDeviceResponse>} - The async response
      */
     public CompletableFuture<CreateHrisDeviceResponse> createHrisDevice(@Nonnull CreateHrisDeviceRequest request) {
+        return createHrisDevice(request, null);
+    }
+
+    /**
+     * Create a device
+     * 
+     * <p>Creates a HrisDevice. Provide the unified HrisDevice fields in the request body; they are mapped to
+     * the provider's API. Returns the created HrisDevice.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateHrisDeviceResponse>} - The async response
+     */
+    public CompletableFuture<CreateHrisDeviceResponse> createHrisDevice(@Nonnull CreateHrisDeviceRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateHrisDeviceRequest, CreateHrisDeviceResponse> operation
-              = new CreateHrisDevice.Async(sdkConfiguration, _headers);
+              = new CreateHrisDevice.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -105,8 +121,22 @@ public class AsyncDevice {
      * @return {@code CompletableFuture<GetHrisDeviceResponse>} - The async response
      */
     public CompletableFuture<GetHrisDeviceResponse> getHrisDevice(@Nonnull GetHrisDeviceRequest request) {
+        return getHrisDevice(request, null);
+    }
+
+    /**
+     * Retrieve a device
+     * 
+     * <p>Retrieves a single HrisDevice by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetHrisDeviceResponse>} - The async response
+     */
+    public CompletableFuture<GetHrisDeviceResponse> getHrisDevice(@Nonnull GetHrisDeviceRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetHrisDeviceRequest, GetHrisDeviceResponse> operation
-              = new GetHrisDevice.Async(sdkConfiguration, _headers);
+              = new GetHrisDevice.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -142,8 +172,26 @@ public class AsyncDevice {
      * @return {@code CompletableFuture<ListHrisDevicesResponse>} - The async response
      */
     public CompletableFuture<ListHrisDevicesResponse> listHrisDevices(@Nonnull ListHrisDevicesRequest request) {
+        return listHrisDevices(request, null);
+    }
+
+    /**
+     * List all devices
+     * 
+     * <p>Returns a list of HrisDevices. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListHrisDevicesResponse>} - The async response
+     */
+    public CompletableFuture<ListHrisDevicesResponse> listHrisDevices(@Nonnull ListHrisDevicesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListHrisDevicesRequest, ListHrisDevicesResponse> operation
-              = new ListHrisDevices.Async(sdkConfiguration, _headers);
+              = new ListHrisDevices.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -171,8 +219,22 @@ public class AsyncDevice {
      * @return {@code CompletableFuture<PatchHrisDeviceResponse>} - The async response
      */
     public CompletableFuture<PatchHrisDeviceResponse> patchHrisDevice(@Nonnull PatchHrisDeviceRequest request) {
+        return patchHrisDevice(request, null);
+    }
+
+    /**
+     * Update a device
+     * 
+     * <p>Updates the HrisDevice identified by `id`. Provide the unified HrisDevice fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchHrisDeviceResponse>} - The async response
+     */
+    public CompletableFuture<PatchHrisDeviceResponse> patchHrisDevice(@Nonnull PatchHrisDeviceRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchHrisDeviceRequest, PatchHrisDeviceResponse> operation
-              = new PatchHrisDevice.Async(sdkConfiguration, _headers);
+              = new PatchHrisDevice.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -198,8 +260,21 @@ public class AsyncDevice {
      * @return {@code CompletableFuture<RemoveHrisDeviceResponse>} - The async response
      */
     public CompletableFuture<RemoveHrisDeviceResponse> removeHrisDevice(@Nonnull RemoveHrisDeviceRequest request) {
+        return removeHrisDevice(request, null);
+    }
+
+    /**
+     * Remove a device
+     * 
+     * <p>Deletes the HrisDevice identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveHrisDeviceResponse>} - The async response
+     */
+    public CompletableFuture<RemoveHrisDeviceResponse> removeHrisDevice(@Nonnull RemoveHrisDeviceRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveHrisDeviceRequest, RemoveHrisDeviceResponse> operation
-              = new RemoveHrisDevice.Async(sdkConfiguration, _headers);
+              = new RemoveHrisDevice.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -227,8 +302,22 @@ public class AsyncDevice {
      * @return {@code CompletableFuture<UpdateHrisDeviceResponse>} - The async response
      */
     public CompletableFuture<UpdateHrisDeviceResponse> updateHrisDevice(@Nonnull UpdateHrisDeviceRequest request) {
+        return updateHrisDevice(request, null);
+    }
+
+    /**
+     * Update a device
+     * 
+     * <p>Updates the HrisDevice identified by `id`. Provide the unified HrisDevice fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateHrisDeviceResponse>} - The async response
+     */
+    public CompletableFuture<UpdateHrisDeviceResponse> updateHrisDevice(@Nonnull UpdateHrisDeviceRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateHrisDeviceRequest, UpdateHrisDeviceResponse> operation
-              = new UpdateHrisDevice.Async(sdkConfiguration, _headers);
+              = new UpdateHrisDevice.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

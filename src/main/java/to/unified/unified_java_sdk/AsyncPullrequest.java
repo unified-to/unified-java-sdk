@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateRepoPullrequestRequest;
 import to.unified.unified_java_sdk.models.operations.GetRepoPullrequestRequest;
@@ -32,6 +33,7 @@ import to.unified.unified_java_sdk.operations.PatchRepoPullrequest;
 import to.unified.unified_java_sdk.operations.RemoveRepoPullrequest;
 import to.unified.unified_java_sdk.operations.UpdateRepoPullrequest;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncPullrequest {
@@ -76,8 +78,22 @@ public class AsyncPullrequest {
      * @return {@code CompletableFuture<CreateRepoPullrequestResponse>} - The async response
      */
     public CompletableFuture<CreateRepoPullrequestResponse> createRepoPullrequest(@Nonnull CreateRepoPullrequestRequest request) {
+        return createRepoPullrequest(request, null);
+    }
+
+    /**
+     * Create a pullrequest
+     * 
+     * <p>Creates a RepoPullrequest. Provide the unified RepoPullrequest fields in the request body; they are
+     * mapped to the provider's API. Returns the created RepoPullrequest.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateRepoPullrequestResponse>} - The async response
+     */
+    public CompletableFuture<CreateRepoPullrequestResponse> createRepoPullrequest(@Nonnull CreateRepoPullrequestRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateRepoPullrequestRequest, CreateRepoPullrequestResponse> operation
-              = new CreateRepoPullrequest.Async(sdkConfiguration, _headers);
+              = new CreateRepoPullrequest.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -105,8 +121,22 @@ public class AsyncPullrequest {
      * @return {@code CompletableFuture<GetRepoPullrequestResponse>} - The async response
      */
     public CompletableFuture<GetRepoPullrequestResponse> getRepoPullrequest(@Nonnull GetRepoPullrequestRequest request) {
+        return getRepoPullrequest(request, null);
+    }
+
+    /**
+     * Retrieve a pullrequest
+     * 
+     * <p>Retrieves a single RepoPullrequest by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetRepoPullrequestResponse>} - The async response
+     */
+    public CompletableFuture<GetRepoPullrequestResponse> getRepoPullrequest(@Nonnull GetRepoPullrequestRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetRepoPullrequestRequest, GetRepoPullrequestResponse> operation
-              = new GetRepoPullrequest.Async(sdkConfiguration, _headers);
+              = new GetRepoPullrequest.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -142,8 +172,26 @@ public class AsyncPullrequest {
      * @return {@code CompletableFuture<ListRepoPullrequestsResponse>} - The async response
      */
     public CompletableFuture<ListRepoPullrequestsResponse> listRepoPullrequests(@Nonnull ListRepoPullrequestsRequest request) {
+        return listRepoPullrequests(request, null);
+    }
+
+    /**
+     * List all pullrequests
+     * 
+     * <p>Returns a list of RepoPullrequests. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListRepoPullrequestsResponse>} - The async response
+     */
+    public CompletableFuture<ListRepoPullrequestsResponse> listRepoPullrequests(@Nonnull ListRepoPullrequestsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListRepoPullrequestsRequest, ListRepoPullrequestsResponse> operation
-              = new ListRepoPullrequests.Async(sdkConfiguration, _headers);
+              = new ListRepoPullrequests.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -171,8 +219,22 @@ public class AsyncPullrequest {
      * @return {@code CompletableFuture<PatchRepoPullrequestResponse>} - The async response
      */
     public CompletableFuture<PatchRepoPullrequestResponse> patchRepoPullrequest(@Nonnull PatchRepoPullrequestRequest request) {
+        return patchRepoPullrequest(request, null);
+    }
+
+    /**
+     * Update a pullrequest
+     * 
+     * <p>Updates the RepoPullrequest identified by `id`. Provide the unified RepoPullrequest fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchRepoPullrequestResponse>} - The async response
+     */
+    public CompletableFuture<PatchRepoPullrequestResponse> patchRepoPullrequest(@Nonnull PatchRepoPullrequestRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchRepoPullrequestRequest, PatchRepoPullrequestResponse> operation
-              = new PatchRepoPullrequest.Async(sdkConfiguration, _headers);
+              = new PatchRepoPullrequest.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -198,8 +260,21 @@ public class AsyncPullrequest {
      * @return {@code CompletableFuture<RemoveRepoPullrequestResponse>} - The async response
      */
     public CompletableFuture<RemoveRepoPullrequestResponse> removeRepoPullrequest(@Nonnull RemoveRepoPullrequestRequest request) {
+        return removeRepoPullrequest(request, null);
+    }
+
+    /**
+     * Remove a pullrequest
+     * 
+     * <p>Deletes the RepoPullrequest identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveRepoPullrequestResponse>} - The async response
+     */
+    public CompletableFuture<RemoveRepoPullrequestResponse> removeRepoPullrequest(@Nonnull RemoveRepoPullrequestRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveRepoPullrequestRequest, RemoveRepoPullrequestResponse> operation
-              = new RemoveRepoPullrequest.Async(sdkConfiguration, _headers);
+              = new RemoveRepoPullrequest.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -227,8 +302,22 @@ public class AsyncPullrequest {
      * @return {@code CompletableFuture<UpdateRepoPullrequestResponse>} - The async response
      */
     public CompletableFuture<UpdateRepoPullrequestResponse> updateRepoPullrequest(@Nonnull UpdateRepoPullrequestRequest request) {
+        return updateRepoPullrequest(request, null);
+    }
+
+    /**
+     * Update a pullrequest
+     * 
+     * <p>Updates the RepoPullrequest identified by `id`. Provide the unified RepoPullrequest fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateRepoPullrequestResponse>} - The async response
+     */
+    public CompletableFuture<UpdateRepoPullrequestResponse> updateRepoPullrequest(@Nonnull UpdateRepoPullrequestRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateRepoPullrequestRequest, UpdateRepoPullrequestResponse> operation
-              = new UpdateRepoPullrequest.Async(sdkConfiguration, _headers);
+              = new UpdateRepoPullrequest.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

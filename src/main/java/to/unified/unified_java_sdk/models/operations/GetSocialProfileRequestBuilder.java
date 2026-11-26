@@ -6,18 +6,28 @@ package to.unified.unified_java_sdk.models.operations;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.GetSocialProfile;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetSocialProfileRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private GetSocialProfileRequest request;
+    private final Options.Builder optionsBuilder;
 
     public GetSocialProfileRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public GetSocialProfileRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public GetSocialProfileRequestBuilder request(@Nonnull GetSocialProfileRequest request) {
@@ -42,8 +52,9 @@ public class GetSocialProfileRequestBuilder {
     * @return The response from the server.
     */
     public GetSocialProfileResponse call() {
+        Options options = optionsBuilder.build();
         RequestOperation<GetSocialProfileRequest, GetSocialProfileResponse> operation
-              = new GetSocialProfile.Sync(sdkConfiguration, _headers);
+              = new GetSocialProfile.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

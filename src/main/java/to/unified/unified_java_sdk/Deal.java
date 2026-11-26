@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateCrmDealRequest;
 import to.unified.unified_java_sdk.models.operations.CreateCrmDealRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateCrmDealResponse;
@@ -31,6 +32,7 @@ import to.unified.unified_java_sdk.operations.PatchCrmDeal;
 import to.unified.unified_java_sdk.operations.RemoveCrmDeal;
 import to.unified.unified_java_sdk.operations.UpdateCrmDeal;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Deal {
@@ -75,8 +77,23 @@ public class Deal {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateCrmDealResponse createCrmDeal(@Nonnull CreateCrmDealRequest request) {
+        return createCrmDeal(request, null);
+    }
+
+    /**
+     * Create a deal
+     * 
+     * <p>Creates a CrmDeal. Provide the unified CrmDeal fields in the request body; they are mapped to the
+     * provider's API. Returns the created CrmDeal.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateCrmDealResponse createCrmDeal(@Nonnull CreateCrmDealRequest request, @Nullable Options options) {
         RequestOperation<CreateCrmDealRequest, CreateCrmDealResponse> operation
-              = new CreateCrmDeal.Sync(sdkConfiguration, _headers);
+              = new CreateCrmDeal.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -103,8 +120,23 @@ public class Deal {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetCrmDealResponse getCrmDeal(@Nonnull GetCrmDealRequest request) {
+        return getCrmDeal(request, null);
+    }
+
+    /**
+     * Retrieve a deal
+     * 
+     * <p>Retrieves a single CrmDeal by its `id`. Obtain `id` values from the corresponding list endpoint. Use
+     * `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetCrmDealResponse getCrmDeal(@Nonnull GetCrmDealRequest request, @Nullable Options options) {
         RequestOperation<GetCrmDealRequest, GetCrmDealResponse> operation
-              = new GetCrmDeal.Sync(sdkConfiguration, _headers);
+              = new GetCrmDeal.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -139,8 +171,27 @@ public class Deal {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListCrmDealsResponse listCrmDeals(@Nonnull ListCrmDealsRequest request) {
+        return listCrmDeals(request, null);
+    }
+
+    /**
+     * List all deals
+     * 
+     * <p>Returns a list of CrmDeals. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListCrmDealsResponse listCrmDeals(@Nonnull ListCrmDealsRequest request, @Nullable Options options) {
         RequestOperation<ListCrmDealsRequest, ListCrmDealsResponse> operation
-              = new ListCrmDeals.Sync(sdkConfiguration, _headers);
+              = new ListCrmDeals.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +218,23 @@ public class Deal {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchCrmDealResponse patchCrmDeal(@Nonnull PatchCrmDealRequest request) {
+        return patchCrmDeal(request, null);
+    }
+
+    /**
+     * Update a deal
+     * 
+     * <p>Updates the CrmDeal identified by `id`. Provide the unified CrmDeal fields to change in the request
+     * body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchCrmDealResponse patchCrmDeal(@Nonnull PatchCrmDealRequest request, @Nullable Options options) {
         RequestOperation<PatchCrmDealRequest, PatchCrmDealResponse> operation
-              = new PatchCrmDeal.Sync(sdkConfiguration, _headers);
+              = new PatchCrmDeal.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -193,8 +259,22 @@ public class Deal {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveCrmDealResponse removeCrmDeal(@Nonnull RemoveCrmDealRequest request) {
+        return removeCrmDeal(request, null);
+    }
+
+    /**
+     * Remove a deal
+     * 
+     * <p>Deletes the CrmDeal identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveCrmDealResponse removeCrmDeal(@Nonnull RemoveCrmDealRequest request, @Nullable Options options) {
         RequestOperation<RemoveCrmDealRequest, RemoveCrmDealResponse> operation
-              = new RemoveCrmDeal.Sync(sdkConfiguration, _headers);
+              = new RemoveCrmDeal.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -221,8 +301,23 @@ public class Deal {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateCrmDealResponse updateCrmDeal(@Nonnull UpdateCrmDealRequest request) {
+        return updateCrmDeal(request, null);
+    }
+
+    /**
+     * Update a deal
+     * 
+     * <p>Updates the CrmDeal identified by `id`. Provide the unified CrmDeal fields to change in the request
+     * body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateCrmDealResponse updateCrmDeal(@Nonnull UpdateCrmDealRequest request, @Nullable Options options) {
         RequestOperation<UpdateCrmDealRequest, UpdateCrmDealResponse> operation
-              = new UpdateCrmDeal.Sync(sdkConfiguration, _headers);
+              = new UpdateCrmDeal.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

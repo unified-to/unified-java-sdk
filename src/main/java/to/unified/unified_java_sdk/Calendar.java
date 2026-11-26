@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateCalendarBotRequest;
 import to.unified.unified_java_sdk.models.operations.CreateCalendarBotRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateCalendarBotResponse;
@@ -155,6 +156,7 @@ import to.unified.unified_java_sdk.operations.UpdateCalendarEvent;
 import to.unified.unified_java_sdk.operations.UpdateCalendarLink;
 import to.unified.unified_java_sdk.operations.UpdateCalendarWebinar;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Calendar {
@@ -199,8 +201,23 @@ public class Calendar {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateCalendarBotResponse createCalendarBot(@Nonnull CreateCalendarBotRequest request) {
+        return createCalendarBot(request, null);
+    }
+
+    /**
+     * Create a bot
+     * 
+     * <p>Creates a CalendarBot. Provide the unified CalendarBot fields in the request body; they are mapped
+     * to the provider's API. Returns the created CalendarBot.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateCalendarBotResponse createCalendarBot(@Nonnull CreateCalendarBotRequest request, @Nullable Options options) {
         RequestOperation<CreateCalendarBotRequest, CreateCalendarBotResponse> operation
-              = new CreateCalendarBot.Sync(sdkConfiguration, _headers);
+              = new CreateCalendarBot.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -227,8 +244,23 @@ public class Calendar {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateCalendarCalendarResponse createCalendarCalendar(@Nonnull CreateCalendarCalendarRequest request) {
+        return createCalendarCalendar(request, null);
+    }
+
+    /**
+     * Create a calendar
+     * 
+     * <p>Creates a CalendarCalendar. Provide the unified CalendarCalendar fields in the request body; they
+     * are mapped to the provider's API. Returns the created CalendarCalendar.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateCalendarCalendarResponse createCalendarCalendar(@Nonnull CreateCalendarCalendarRequest request, @Nullable Options options) {
         RequestOperation<CreateCalendarCalendarRequest, CreateCalendarCalendarResponse> operation
-              = new CreateCalendarCalendar.Sync(sdkConfiguration, _headers);
+              = new CreateCalendarCalendar.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -255,8 +287,23 @@ public class Calendar {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateCalendarEventResponse createCalendarEvent(@Nonnull CreateCalendarEventRequest request) {
+        return createCalendarEvent(request, null);
+    }
+
+    /**
+     * Create an event
+     * 
+     * <p>Creates a CalendarEvent. Provide the unified CalendarEvent fields in the request body; they are
+     * mapped to the provider's API. Returns the created CalendarEvent.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateCalendarEventResponse createCalendarEvent(@Nonnull CreateCalendarEventRequest request, @Nullable Options options) {
         RequestOperation<CreateCalendarEventRequest, CreateCalendarEventResponse> operation
-              = new CreateCalendarEvent.Sync(sdkConfiguration, _headers);
+              = new CreateCalendarEvent.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -283,8 +330,23 @@ public class Calendar {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateCalendarLinkResponse createCalendarLink(@Nonnull CreateCalendarLinkRequest request) {
+        return createCalendarLink(request, null);
+    }
+
+    /**
+     * Create a link
+     * 
+     * <p>Creates a CalendarLink. Provide the unified CalendarLink fields in the request body; they are mapped
+     * to the provider's API. Returns the created CalendarLink.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateCalendarLinkResponse createCalendarLink(@Nonnull CreateCalendarLinkRequest request, @Nullable Options options) {
         RequestOperation<CreateCalendarLinkRequest, CreateCalendarLinkResponse> operation
-              = new CreateCalendarLink.Sync(sdkConfiguration, _headers);
+              = new CreateCalendarLink.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -311,8 +373,23 @@ public class Calendar {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateCalendarWebinarResponse createCalendarWebinar(@Nonnull CreateCalendarWebinarRequest request) {
+        return createCalendarWebinar(request, null);
+    }
+
+    /**
+     * Create a webinar
+     * 
+     * <p>Creates a CalendarWebinar. Provide the unified CalendarWebinar fields in the request body; they are
+     * mapped to the provider's API. Returns the created CalendarWebinar.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateCalendarWebinarResponse createCalendarWebinar(@Nonnull CreateCalendarWebinarRequest request, @Nullable Options options) {
         RequestOperation<CreateCalendarWebinarRequest, CreateCalendarWebinarResponse> operation
-              = new CreateCalendarWebinar.Sync(sdkConfiguration, _headers);
+              = new CreateCalendarWebinar.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -339,8 +416,23 @@ public class Calendar {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetCalendarBotResponse getCalendarBot(@Nonnull GetCalendarBotRequest request) {
+        return getCalendarBot(request, null);
+    }
+
+    /**
+     * Retrieve a bot
+     * 
+     * <p>Retrieves a single CalendarBot by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetCalendarBotResponse getCalendarBot(@Nonnull GetCalendarBotRequest request, @Nullable Options options) {
         RequestOperation<GetCalendarBotRequest, GetCalendarBotResponse> operation
-              = new GetCalendarBot.Sync(sdkConfiguration, _headers);
+              = new GetCalendarBot.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -367,8 +459,23 @@ public class Calendar {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetCalendarCalendarResponse getCalendarCalendar(@Nonnull GetCalendarCalendarRequest request) {
+        return getCalendarCalendar(request, null);
+    }
+
+    /**
+     * Retrieve a calendar
+     * 
+     * <p>Retrieves a single CalendarCalendar by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetCalendarCalendarResponse getCalendarCalendar(@Nonnull GetCalendarCalendarRequest request, @Nullable Options options) {
         RequestOperation<GetCalendarCalendarRequest, GetCalendarCalendarResponse> operation
-              = new GetCalendarCalendar.Sync(sdkConfiguration, _headers);
+              = new GetCalendarCalendar.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -395,8 +502,23 @@ public class Calendar {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetCalendarEventResponse getCalendarEvent(@Nonnull GetCalendarEventRequest request) {
+        return getCalendarEvent(request, null);
+    }
+
+    /**
+     * Retrieve an event
+     * 
+     * <p>Retrieves a single CalendarEvent by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetCalendarEventResponse getCalendarEvent(@Nonnull GetCalendarEventRequest request, @Nullable Options options) {
         RequestOperation<GetCalendarEventRequest, GetCalendarEventResponse> operation
-              = new GetCalendarEvent.Sync(sdkConfiguration, _headers);
+              = new GetCalendarEvent.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -423,8 +545,23 @@ public class Calendar {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetCalendarLinkResponse getCalendarLink(@Nonnull GetCalendarLinkRequest request) {
+        return getCalendarLink(request, null);
+    }
+
+    /**
+     * Retrieve a link
+     * 
+     * <p>Retrieves a single CalendarLink by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetCalendarLinkResponse getCalendarLink(@Nonnull GetCalendarLinkRequest request, @Nullable Options options) {
         RequestOperation<GetCalendarLinkRequest, GetCalendarLinkResponse> operation
-              = new GetCalendarLink.Sync(sdkConfiguration, _headers);
+              = new GetCalendarLink.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -451,8 +588,23 @@ public class Calendar {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetCalendarLocationResponse getCalendarLocation(@Nonnull GetCalendarLocationRequest request) {
+        return getCalendarLocation(request, null);
+    }
+
+    /**
+     * Retrieve a location
+     * 
+     * <p>Retrieves a single CalendarLocation by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetCalendarLocationResponse getCalendarLocation(@Nonnull GetCalendarLocationRequest request, @Nullable Options options) {
         RequestOperation<GetCalendarLocationRequest, GetCalendarLocationResponse> operation
-              = new GetCalendarLocation.Sync(sdkConfiguration, _headers);
+              = new GetCalendarLocation.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -479,8 +631,23 @@ public class Calendar {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetCalendarRecordingResponse getCalendarRecording(@Nonnull GetCalendarRecordingRequest request) {
+        return getCalendarRecording(request, null);
+    }
+
+    /**
+     * Retrieve a recording
+     * 
+     * <p>Retrieves a single CalendarRecording by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetCalendarRecordingResponse getCalendarRecording(@Nonnull GetCalendarRecordingRequest request, @Nullable Options options) {
         RequestOperation<GetCalendarRecordingRequest, GetCalendarRecordingResponse> operation
-              = new GetCalendarRecording.Sync(sdkConfiguration, _headers);
+              = new GetCalendarRecording.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -507,8 +674,23 @@ public class Calendar {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetCalendarRoomResponse getCalendarRoom(@Nonnull GetCalendarRoomRequest request) {
+        return getCalendarRoom(request, null);
+    }
+
+    /**
+     * Retrieve a room
+     * 
+     * <p>Retrieves a single CalendarRoom by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetCalendarRoomResponse getCalendarRoom(@Nonnull GetCalendarRoomRequest request, @Nullable Options options) {
         RequestOperation<GetCalendarRoomRequest, GetCalendarRoomResponse> operation
-              = new GetCalendarRoom.Sync(sdkConfiguration, _headers);
+              = new GetCalendarRoom.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -535,8 +717,23 @@ public class Calendar {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetCalendarWebinarResponse getCalendarWebinar(@Nonnull GetCalendarWebinarRequest request) {
+        return getCalendarWebinar(request, null);
+    }
+
+    /**
+     * Retrieve a webinar
+     * 
+     * <p>Retrieves a single CalendarWebinar by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetCalendarWebinarResponse getCalendarWebinar(@Nonnull GetCalendarWebinarRequest request, @Nullable Options options) {
         RequestOperation<GetCalendarWebinarRequest, GetCalendarWebinarResponse> operation
-              = new GetCalendarWebinar.Sync(sdkConfiguration, _headers);
+              = new GetCalendarWebinar.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -571,8 +768,27 @@ public class Calendar {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListCalendarBotsResponse listCalendarBots(@Nonnull ListCalendarBotsRequest request) {
+        return listCalendarBots(request, null);
+    }
+
+    /**
+     * List all bots
+     * 
+     * <p>Returns a list of CalendarBots. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListCalendarBotsResponse listCalendarBots(@Nonnull ListCalendarBotsRequest request, @Nullable Options options) {
         RequestOperation<ListCalendarBotsRequest, ListCalendarBotsResponse> operation
-              = new ListCalendarBots.Sync(sdkConfiguration, _headers);
+              = new ListCalendarBots.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -607,8 +823,27 @@ public class Calendar {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListCalendarBusiesResponse listCalendarBusies(@Nonnull ListCalendarBusiesRequest request) {
+        return listCalendarBusies(request, null);
+    }
+
+    /**
+     * List all busies
+     * 
+     * <p>Returns a list of CalendarBusies. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListCalendarBusiesResponse listCalendarBusies(@Nonnull ListCalendarBusiesRequest request, @Nullable Options options) {
         RequestOperation<ListCalendarBusiesRequest, ListCalendarBusiesResponse> operation
-              = new ListCalendarBusies.Sync(sdkConfiguration, _headers);
+              = new ListCalendarBusies.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -643,8 +878,27 @@ public class Calendar {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListCalendarCalendarsResponse listCalendarCalendars(@Nonnull ListCalendarCalendarsRequest request) {
+        return listCalendarCalendars(request, null);
+    }
+
+    /**
+     * List all calendars
+     * 
+     * <p>Returns a list of CalendarCalendars. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListCalendarCalendarsResponse listCalendarCalendars(@Nonnull ListCalendarCalendarsRequest request, @Nullable Options options) {
         RequestOperation<ListCalendarCalendarsRequest, ListCalendarCalendarsResponse> operation
-              = new ListCalendarCalendars.Sync(sdkConfiguration, _headers);
+              = new ListCalendarCalendars.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -679,8 +933,27 @@ public class Calendar {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListCalendarEventsResponse listCalendarEvents(@Nonnull ListCalendarEventsRequest request) {
+        return listCalendarEvents(request, null);
+    }
+
+    /**
+     * List all events
+     * 
+     * <p>Returns a list of CalendarEvents. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListCalendarEventsResponse listCalendarEvents(@Nonnull ListCalendarEventsRequest request, @Nullable Options options) {
         RequestOperation<ListCalendarEventsRequest, ListCalendarEventsResponse> operation
-              = new ListCalendarEvents.Sync(sdkConfiguration, _headers);
+              = new ListCalendarEvents.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -715,8 +988,27 @@ public class Calendar {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListCalendarLinksResponse listCalendarLinks(@Nonnull ListCalendarLinksRequest request) {
+        return listCalendarLinks(request, null);
+    }
+
+    /**
+     * List all links
+     * 
+     * <p>Returns a list of CalendarLinks. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListCalendarLinksResponse listCalendarLinks(@Nonnull ListCalendarLinksRequest request, @Nullable Options options) {
         RequestOperation<ListCalendarLinksRequest, ListCalendarLinksResponse> operation
-              = new ListCalendarLinks.Sync(sdkConfiguration, _headers);
+              = new ListCalendarLinks.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -751,8 +1043,27 @@ public class Calendar {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListCalendarLocationsResponse listCalendarLocations(@Nonnull ListCalendarLocationsRequest request) {
+        return listCalendarLocations(request, null);
+    }
+
+    /**
+     * List all locations
+     * 
+     * <p>Returns a list of CalendarLocations. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListCalendarLocationsResponse listCalendarLocations(@Nonnull ListCalendarLocationsRequest request, @Nullable Options options) {
         RequestOperation<ListCalendarLocationsRequest, ListCalendarLocationsResponse> operation
-              = new ListCalendarLocations.Sync(sdkConfiguration, _headers);
+              = new ListCalendarLocations.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -787,8 +1098,27 @@ public class Calendar {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListCalendarRecordingsResponse listCalendarRecordings(@Nonnull ListCalendarRecordingsRequest request) {
+        return listCalendarRecordings(request, null);
+    }
+
+    /**
+     * List all recordings
+     * 
+     * <p>Returns a list of CalendarRecordings. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListCalendarRecordingsResponse listCalendarRecordings(@Nonnull ListCalendarRecordingsRequest request, @Nullable Options options) {
         RequestOperation<ListCalendarRecordingsRequest, ListCalendarRecordingsResponse> operation
-              = new ListCalendarRecordings.Sync(sdkConfiguration, _headers);
+              = new ListCalendarRecordings.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -823,8 +1153,27 @@ public class Calendar {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListCalendarRoomsResponse listCalendarRooms(@Nonnull ListCalendarRoomsRequest request) {
+        return listCalendarRooms(request, null);
+    }
+
+    /**
+     * List all rooms
+     * 
+     * <p>Returns a list of CalendarRooms. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListCalendarRoomsResponse listCalendarRooms(@Nonnull ListCalendarRoomsRequest request, @Nullable Options options) {
         RequestOperation<ListCalendarRoomsRequest, ListCalendarRoomsResponse> operation
-              = new ListCalendarRooms.Sync(sdkConfiguration, _headers);
+              = new ListCalendarRooms.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -859,8 +1208,27 @@ public class Calendar {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListCalendarWebinarsResponse listCalendarWebinars(@Nonnull ListCalendarWebinarsRequest request) {
+        return listCalendarWebinars(request, null);
+    }
+
+    /**
+     * List all webinars
+     * 
+     * <p>Returns a list of CalendarWebinars. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListCalendarWebinarsResponse listCalendarWebinars(@Nonnull ListCalendarWebinarsRequest request, @Nullable Options options) {
         RequestOperation<ListCalendarWebinarsRequest, ListCalendarWebinarsResponse> operation
-              = new ListCalendarWebinars.Sync(sdkConfiguration, _headers);
+              = new ListCalendarWebinars.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -887,8 +1255,23 @@ public class Calendar {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchCalendarBotResponse patchCalendarBot(@Nonnull PatchCalendarBotRequest request) {
+        return patchCalendarBot(request, null);
+    }
+
+    /**
+     * Update a bot
+     * 
+     * <p>Updates the CalendarBot identified by `id`. Provide the unified CalendarBot fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchCalendarBotResponse patchCalendarBot(@Nonnull PatchCalendarBotRequest request, @Nullable Options options) {
         RequestOperation<PatchCalendarBotRequest, PatchCalendarBotResponse> operation
-              = new PatchCalendarBot.Sync(sdkConfiguration, _headers);
+              = new PatchCalendarBot.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -915,8 +1298,23 @@ public class Calendar {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchCalendarCalendarResponse patchCalendarCalendar(@Nonnull PatchCalendarCalendarRequest request) {
+        return patchCalendarCalendar(request, null);
+    }
+
+    /**
+     * Update a calendar
+     * 
+     * <p>Updates the CalendarCalendar identified by `id`. Provide the unified CalendarCalendar fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchCalendarCalendarResponse patchCalendarCalendar(@Nonnull PatchCalendarCalendarRequest request, @Nullable Options options) {
         RequestOperation<PatchCalendarCalendarRequest, PatchCalendarCalendarResponse> operation
-              = new PatchCalendarCalendar.Sync(sdkConfiguration, _headers);
+              = new PatchCalendarCalendar.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -943,8 +1341,23 @@ public class Calendar {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchCalendarEventResponse patchCalendarEvent(@Nonnull PatchCalendarEventRequest request) {
+        return patchCalendarEvent(request, null);
+    }
+
+    /**
+     * Update an event
+     * 
+     * <p>Updates the CalendarEvent identified by `id`. Provide the unified CalendarEvent fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchCalendarEventResponse patchCalendarEvent(@Nonnull PatchCalendarEventRequest request, @Nullable Options options) {
         RequestOperation<PatchCalendarEventRequest, PatchCalendarEventResponse> operation
-              = new PatchCalendarEvent.Sync(sdkConfiguration, _headers);
+              = new PatchCalendarEvent.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -971,8 +1384,23 @@ public class Calendar {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchCalendarLinkResponse patchCalendarLink(@Nonnull PatchCalendarLinkRequest request) {
+        return patchCalendarLink(request, null);
+    }
+
+    /**
+     * Update a link
+     * 
+     * <p>Updates the CalendarLink identified by `id`. Provide the unified CalendarLink fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchCalendarLinkResponse patchCalendarLink(@Nonnull PatchCalendarLinkRequest request, @Nullable Options options) {
         RequestOperation<PatchCalendarLinkRequest, PatchCalendarLinkResponse> operation
-              = new PatchCalendarLink.Sync(sdkConfiguration, _headers);
+              = new PatchCalendarLink.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -999,8 +1427,23 @@ public class Calendar {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchCalendarWebinarResponse patchCalendarWebinar(@Nonnull PatchCalendarWebinarRequest request) {
+        return patchCalendarWebinar(request, null);
+    }
+
+    /**
+     * Update a webinar
+     * 
+     * <p>Updates the CalendarWebinar identified by `id`. Provide the unified CalendarWebinar fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchCalendarWebinarResponse patchCalendarWebinar(@Nonnull PatchCalendarWebinarRequest request, @Nullable Options options) {
         RequestOperation<PatchCalendarWebinarRequest, PatchCalendarWebinarResponse> operation
-              = new PatchCalendarWebinar.Sync(sdkConfiguration, _headers);
+              = new PatchCalendarWebinar.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1025,8 +1468,22 @@ public class Calendar {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveCalendarBotResponse removeCalendarBot(@Nonnull RemoveCalendarBotRequest request) {
+        return removeCalendarBot(request, null);
+    }
+
+    /**
+     * Remove a bot
+     * 
+     * <p>Deletes the CalendarBot identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveCalendarBotResponse removeCalendarBot(@Nonnull RemoveCalendarBotRequest request, @Nullable Options options) {
         RequestOperation<RemoveCalendarBotRequest, RemoveCalendarBotResponse> operation
-              = new RemoveCalendarBot.Sync(sdkConfiguration, _headers);
+              = new RemoveCalendarBot.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1051,8 +1508,22 @@ public class Calendar {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveCalendarCalendarResponse removeCalendarCalendar(@Nonnull RemoveCalendarCalendarRequest request) {
+        return removeCalendarCalendar(request, null);
+    }
+
+    /**
+     * Remove a calendar
+     * 
+     * <p>Deletes the CalendarCalendar identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveCalendarCalendarResponse removeCalendarCalendar(@Nonnull RemoveCalendarCalendarRequest request, @Nullable Options options) {
         RequestOperation<RemoveCalendarCalendarRequest, RemoveCalendarCalendarResponse> operation
-              = new RemoveCalendarCalendar.Sync(sdkConfiguration, _headers);
+              = new RemoveCalendarCalendar.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1077,8 +1548,22 @@ public class Calendar {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveCalendarEventResponse removeCalendarEvent(@Nonnull RemoveCalendarEventRequest request) {
+        return removeCalendarEvent(request, null);
+    }
+
+    /**
+     * Remove an event
+     * 
+     * <p>Deletes the CalendarEvent identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveCalendarEventResponse removeCalendarEvent(@Nonnull RemoveCalendarEventRequest request, @Nullable Options options) {
         RequestOperation<RemoveCalendarEventRequest, RemoveCalendarEventResponse> operation
-              = new RemoveCalendarEvent.Sync(sdkConfiguration, _headers);
+              = new RemoveCalendarEvent.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1103,8 +1588,22 @@ public class Calendar {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveCalendarLinkResponse removeCalendarLink(@Nonnull RemoveCalendarLinkRequest request) {
+        return removeCalendarLink(request, null);
+    }
+
+    /**
+     * Remove a link
+     * 
+     * <p>Deletes the CalendarLink identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveCalendarLinkResponse removeCalendarLink(@Nonnull RemoveCalendarLinkRequest request, @Nullable Options options) {
         RequestOperation<RemoveCalendarLinkRequest, RemoveCalendarLinkResponse> operation
-              = new RemoveCalendarLink.Sync(sdkConfiguration, _headers);
+              = new RemoveCalendarLink.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1129,8 +1628,22 @@ public class Calendar {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveCalendarWebinarResponse removeCalendarWebinar(@Nonnull RemoveCalendarWebinarRequest request) {
+        return removeCalendarWebinar(request, null);
+    }
+
+    /**
+     * Remove a webinar
+     * 
+     * <p>Deletes the CalendarWebinar identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveCalendarWebinarResponse removeCalendarWebinar(@Nonnull RemoveCalendarWebinarRequest request, @Nullable Options options) {
         RequestOperation<RemoveCalendarWebinarRequest, RemoveCalendarWebinarResponse> operation
-              = new RemoveCalendarWebinar.Sync(sdkConfiguration, _headers);
+              = new RemoveCalendarWebinar.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1157,8 +1670,23 @@ public class Calendar {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateCalendarBotResponse updateCalendarBot(@Nonnull UpdateCalendarBotRequest request) {
+        return updateCalendarBot(request, null);
+    }
+
+    /**
+     * Update a bot
+     * 
+     * <p>Updates the CalendarBot identified by `id`. Provide the unified CalendarBot fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateCalendarBotResponse updateCalendarBot(@Nonnull UpdateCalendarBotRequest request, @Nullable Options options) {
         RequestOperation<UpdateCalendarBotRequest, UpdateCalendarBotResponse> operation
-              = new UpdateCalendarBot.Sync(sdkConfiguration, _headers);
+              = new UpdateCalendarBot.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1185,8 +1713,23 @@ public class Calendar {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateCalendarCalendarResponse updateCalendarCalendar(@Nonnull UpdateCalendarCalendarRequest request) {
+        return updateCalendarCalendar(request, null);
+    }
+
+    /**
+     * Update a calendar
+     * 
+     * <p>Updates the CalendarCalendar identified by `id`. Provide the unified CalendarCalendar fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateCalendarCalendarResponse updateCalendarCalendar(@Nonnull UpdateCalendarCalendarRequest request, @Nullable Options options) {
         RequestOperation<UpdateCalendarCalendarRequest, UpdateCalendarCalendarResponse> operation
-              = new UpdateCalendarCalendar.Sync(sdkConfiguration, _headers);
+              = new UpdateCalendarCalendar.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1213,8 +1756,23 @@ public class Calendar {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateCalendarEventResponse updateCalendarEvent(@Nonnull UpdateCalendarEventRequest request) {
+        return updateCalendarEvent(request, null);
+    }
+
+    /**
+     * Update an event
+     * 
+     * <p>Updates the CalendarEvent identified by `id`. Provide the unified CalendarEvent fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateCalendarEventResponse updateCalendarEvent(@Nonnull UpdateCalendarEventRequest request, @Nullable Options options) {
         RequestOperation<UpdateCalendarEventRequest, UpdateCalendarEventResponse> operation
-              = new UpdateCalendarEvent.Sync(sdkConfiguration, _headers);
+              = new UpdateCalendarEvent.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1241,8 +1799,23 @@ public class Calendar {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateCalendarLinkResponse updateCalendarLink(@Nonnull UpdateCalendarLinkRequest request) {
+        return updateCalendarLink(request, null);
+    }
+
+    /**
+     * Update a link
+     * 
+     * <p>Updates the CalendarLink identified by `id`. Provide the unified CalendarLink fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateCalendarLinkResponse updateCalendarLink(@Nonnull UpdateCalendarLinkRequest request, @Nullable Options options) {
         RequestOperation<UpdateCalendarLinkRequest, UpdateCalendarLinkResponse> operation
-              = new UpdateCalendarLink.Sync(sdkConfiguration, _headers);
+              = new UpdateCalendarLink.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1269,8 +1842,23 @@ public class Calendar {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateCalendarWebinarResponse updateCalendarWebinar(@Nonnull UpdateCalendarWebinarRequest request) {
+        return updateCalendarWebinar(request, null);
+    }
+
+    /**
+     * Update a webinar
+     * 
+     * <p>Updates the CalendarWebinar identified by `id`. Provide the unified CalendarWebinar fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateCalendarWebinarResponse updateCalendarWebinar(@Nonnull UpdateCalendarWebinarRequest request, @Nullable Options options) {
         RequestOperation<UpdateCalendarWebinarRequest, UpdateCalendarWebinarResponse> operation
-              = new UpdateCalendarWebinar.Sync(sdkConfiguration, _headers);
+              = new UpdateCalendarWebinar.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

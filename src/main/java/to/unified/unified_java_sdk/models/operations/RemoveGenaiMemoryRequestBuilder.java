@@ -6,18 +6,28 @@ package to.unified.unified_java_sdk.models.operations;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.RemoveGenaiMemory;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveGenaiMemoryRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private RemoveGenaiMemoryRequest request;
+    private final Options.Builder optionsBuilder;
 
     public RemoveGenaiMemoryRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public RemoveGenaiMemoryRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public RemoveGenaiMemoryRequestBuilder request(@Nonnull RemoveGenaiMemoryRequest request) {
@@ -42,8 +52,9 @@ public class RemoveGenaiMemoryRequestBuilder {
     * @return The response from the server.
     */
     public RemoveGenaiMemoryResponse call() {
+        Options options = optionsBuilder.build();
         RequestOperation<RemoveGenaiMemoryRequest, RemoveGenaiMemoryResponse> operation
-              = new RemoveGenaiMemory.Sync(sdkConfiguration, _headers);
+              = new RemoveGenaiMemory.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

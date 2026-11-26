@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateCalendarWebinarRequest;
 import to.unified.unified_java_sdk.models.operations.CreateCalendarWebinarRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateCalendarWebinarResponse;
@@ -31,6 +32,7 @@ import to.unified.unified_java_sdk.operations.PatchCalendarWebinar;
 import to.unified.unified_java_sdk.operations.RemoveCalendarWebinar;
 import to.unified.unified_java_sdk.operations.UpdateCalendarWebinar;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Webinar {
@@ -75,8 +77,23 @@ public class Webinar {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateCalendarWebinarResponse createCalendarWebinar(@Nonnull CreateCalendarWebinarRequest request) {
+        return createCalendarWebinar(request, null);
+    }
+
+    /**
+     * Create a webinar
+     * 
+     * <p>Creates a CalendarWebinar. Provide the unified CalendarWebinar fields in the request body; they are
+     * mapped to the provider's API. Returns the created CalendarWebinar.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateCalendarWebinarResponse createCalendarWebinar(@Nonnull CreateCalendarWebinarRequest request, @Nullable Options options) {
         RequestOperation<CreateCalendarWebinarRequest, CreateCalendarWebinarResponse> operation
-              = new CreateCalendarWebinar.Sync(sdkConfiguration, _headers);
+              = new CreateCalendarWebinar.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -103,8 +120,23 @@ public class Webinar {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetCalendarWebinarResponse getCalendarWebinar(@Nonnull GetCalendarWebinarRequest request) {
+        return getCalendarWebinar(request, null);
+    }
+
+    /**
+     * Retrieve a webinar
+     * 
+     * <p>Retrieves a single CalendarWebinar by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetCalendarWebinarResponse getCalendarWebinar(@Nonnull GetCalendarWebinarRequest request, @Nullable Options options) {
         RequestOperation<GetCalendarWebinarRequest, GetCalendarWebinarResponse> operation
-              = new GetCalendarWebinar.Sync(sdkConfiguration, _headers);
+              = new GetCalendarWebinar.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -139,8 +171,27 @@ public class Webinar {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListCalendarWebinarsResponse listCalendarWebinars(@Nonnull ListCalendarWebinarsRequest request) {
+        return listCalendarWebinars(request, null);
+    }
+
+    /**
+     * List all webinars
+     * 
+     * <p>Returns a list of CalendarWebinars. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListCalendarWebinarsResponse listCalendarWebinars(@Nonnull ListCalendarWebinarsRequest request, @Nullable Options options) {
         RequestOperation<ListCalendarWebinarsRequest, ListCalendarWebinarsResponse> operation
-              = new ListCalendarWebinars.Sync(sdkConfiguration, _headers);
+              = new ListCalendarWebinars.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +218,23 @@ public class Webinar {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchCalendarWebinarResponse patchCalendarWebinar(@Nonnull PatchCalendarWebinarRequest request) {
+        return patchCalendarWebinar(request, null);
+    }
+
+    /**
+     * Update a webinar
+     * 
+     * <p>Updates the CalendarWebinar identified by `id`. Provide the unified CalendarWebinar fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchCalendarWebinarResponse patchCalendarWebinar(@Nonnull PatchCalendarWebinarRequest request, @Nullable Options options) {
         RequestOperation<PatchCalendarWebinarRequest, PatchCalendarWebinarResponse> operation
-              = new PatchCalendarWebinar.Sync(sdkConfiguration, _headers);
+              = new PatchCalendarWebinar.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -193,8 +259,22 @@ public class Webinar {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveCalendarWebinarResponse removeCalendarWebinar(@Nonnull RemoveCalendarWebinarRequest request) {
+        return removeCalendarWebinar(request, null);
+    }
+
+    /**
+     * Remove a webinar
+     * 
+     * <p>Deletes the CalendarWebinar identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveCalendarWebinarResponse removeCalendarWebinar(@Nonnull RemoveCalendarWebinarRequest request, @Nullable Options options) {
         RequestOperation<RemoveCalendarWebinarRequest, RemoveCalendarWebinarResponse> operation
-              = new RemoveCalendarWebinar.Sync(sdkConfiguration, _headers);
+              = new RemoveCalendarWebinar.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -221,8 +301,23 @@ public class Webinar {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateCalendarWebinarResponse updateCalendarWebinar(@Nonnull UpdateCalendarWebinarRequest request) {
+        return updateCalendarWebinar(request, null);
+    }
+
+    /**
+     * Update a webinar
+     * 
+     * <p>Updates the CalendarWebinar identified by `id`. Provide the unified CalendarWebinar fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateCalendarWebinarResponse updateCalendarWebinar(@Nonnull UpdateCalendarWebinarRequest request, @Nullable Options options) {
         RequestOperation<UpdateCalendarWebinarRequest, UpdateCalendarWebinarResponse> operation
-              = new UpdateCalendarWebinar.Sync(sdkConfiguration, _headers);
+              = new UpdateCalendarWebinar.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

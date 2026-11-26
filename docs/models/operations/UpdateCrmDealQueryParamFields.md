@@ -33,4 +33,5 @@ UpdateCrmDealQueryParamFields value = UpdateCrmDealQueryParamFields.ID;
 | `COMPANY_IDS` | company_ids   |
 | `DESCRIPTION` | description   |
 | `METADATA`    | metadata      |
+| `VEHICLE_IDS` | vehicle_ids   |
 | `RAW`         | raw           |

@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Deprecated;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingAccountRequest;
@@ -561,6 +562,7 @@ import to.unified.unified_java_sdk.operations.UpdateAccountingTaxrate;
 import to.unified.unified_java_sdk.operations.UpdateAccountingTransaction;
 import to.unified.unified_java_sdk.operations.UpdateAccountingVendorcredit;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncAccounting {
@@ -605,8 +607,22 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<CreateAccountingAccountResponse>} - The async response
      */
     public CompletableFuture<CreateAccountingAccountResponse> createAccountingAccount(@Nonnull CreateAccountingAccountRequest request) {
+        return createAccountingAccount(request, null);
+    }
+
+    /**
+     * Create an account
+     * 
+     * <p>Creates a AccountingAccount. Provide the unified AccountingAccount fields in the request body; they
+     * are mapped to the provider's API. Returns the created AccountingAccount.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateAccountingAccountResponse>} - The async response
+     */
+    public CompletableFuture<CreateAccountingAccountResponse> createAccountingAccount(@Nonnull CreateAccountingAccountRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateAccountingAccountRequest, CreateAccountingAccountResponse> operation
-              = new CreateAccountingAccount.Async(sdkConfiguration, _headers);
+              = new CreateAccountingAccount.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -634,8 +650,22 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<CreateAccountingBankfeedaccountResponse>} - The async response
      */
     public CompletableFuture<CreateAccountingBankfeedaccountResponse> createAccountingBankfeedaccount(@Nonnull CreateAccountingBankfeedaccountRequest request) {
+        return createAccountingBankfeedaccount(request, null);
+    }
+
+    /**
+     * Create a bankfeedaccount
+     * 
+     * <p>Creates a AccountingBankfeedaccount. Provide the unified AccountingBankfeedaccount fields in the
+     * request body; they are mapped to the provider's API. Returns the created AccountingBankfeedaccount.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateAccountingBankfeedaccountResponse>} - The async response
+     */
+    public CompletableFuture<CreateAccountingBankfeedaccountResponse> createAccountingBankfeedaccount(@Nonnull CreateAccountingBankfeedaccountRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateAccountingBankfeedaccountRequest, CreateAccountingBankfeedaccountResponse> operation
-              = new CreateAccountingBankfeedaccount.Async(sdkConfiguration, _headers);
+              = new CreateAccountingBankfeedaccount.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -665,8 +695,23 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<CreateAccountingBankfeedtransactionResponse>} - The async response
      */
     public CompletableFuture<CreateAccountingBankfeedtransactionResponse> createAccountingBankfeedtransaction(@Nonnull CreateAccountingBankfeedtransactionRequest request) {
+        return createAccountingBankfeedtransaction(request, null);
+    }
+
+    /**
+     * Create a bankfeedtransaction
+     * 
+     * <p>Creates a AccountingBankfeedtransaction. Provide the unified AccountingBankfeedtransaction fields in
+     * the request body; they are mapped to the provider's API. Returns the created
+     * AccountingBankfeedtransaction.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateAccountingBankfeedtransactionResponse>} - The async response
+     */
+    public CompletableFuture<CreateAccountingBankfeedtransactionResponse> createAccountingBankfeedtransaction(@Nonnull CreateAccountingBankfeedtransactionRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateAccountingBankfeedtransactionRequest, CreateAccountingBankfeedtransactionResponse> operation
-              = new CreateAccountingBankfeedtransaction.Async(sdkConfiguration, _headers);
+              = new CreateAccountingBankfeedtransaction.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -694,8 +739,22 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<CreateAccountingBillResponse>} - The async response
      */
     public CompletableFuture<CreateAccountingBillResponse> createAccountingBill(@Nonnull CreateAccountingBillRequest request) {
+        return createAccountingBill(request, null);
+    }
+
+    /**
+     * Create a bill
+     * 
+     * <p>Creates a AccountingBill. Provide the unified AccountingBill fields in the request body; they are
+     * mapped to the provider's API. Returns the created AccountingBill.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateAccountingBillResponse>} - The async response
+     */
+    public CompletableFuture<CreateAccountingBillResponse> createAccountingBill(@Nonnull CreateAccountingBillRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateAccountingBillRequest, CreateAccountingBillResponse> operation
-              = new CreateAccountingBill.Async(sdkConfiguration, _headers);
+              = new CreateAccountingBill.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -723,8 +782,22 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<CreateAccountingCategoryResponse>} - The async response
      */
     public CompletableFuture<CreateAccountingCategoryResponse> createAccountingCategory(@Nonnull CreateAccountingCategoryRequest request) {
+        return createAccountingCategory(request, null);
+    }
+
+    /**
+     * Create a category
+     * 
+     * <p>Creates a AccountingCategory. Provide the unified AccountingCategory fields in the request body;
+     * they are mapped to the provider's API. Returns the created AccountingCategory.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateAccountingCategoryResponse>} - The async response
+     */
+    public CompletableFuture<CreateAccountingCategoryResponse> createAccountingCategory(@Nonnull CreateAccountingCategoryRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateAccountingCategoryRequest, CreateAccountingCategoryResponse> operation
-              = new CreateAccountingCategory.Async(sdkConfiguration, _headers);
+              = new CreateAccountingCategory.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -752,8 +825,22 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<CreateAccountingContactResponse>} - The async response
      */
     public CompletableFuture<CreateAccountingContactResponse> createAccountingContact(@Nonnull CreateAccountingContactRequest request) {
+        return createAccountingContact(request, null);
+    }
+
+    /**
+     * Create a contact
+     * 
+     * <p>Creates a AccountingContact. Provide the unified AccountingContact fields in the request body; they
+     * are mapped to the provider's API. Returns the created AccountingContact.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateAccountingContactResponse>} - The async response
+     */
+    public CompletableFuture<CreateAccountingContactResponse> createAccountingContact(@Nonnull CreateAccountingContactRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateAccountingContactRequest, CreateAccountingContactResponse> operation
-              = new CreateAccountingContact.Async(sdkConfiguration, _headers);
+              = new CreateAccountingContact.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -781,8 +868,22 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<CreateAccountingCreditmemoResponse>} - The async response
      */
     public CompletableFuture<CreateAccountingCreditmemoResponse> createAccountingCreditmemo(@Nonnull CreateAccountingCreditmemoRequest request) {
+        return createAccountingCreditmemo(request, null);
+    }
+
+    /**
+     * Create a creditmemo
+     * 
+     * <p>Creates a AccountingCreditmemo. Provide the unified AccountingCreditmemo fields in the request body;
+     * they are mapped to the provider's API. Returns the created AccountingCreditmemo.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateAccountingCreditmemoResponse>} - The async response
+     */
+    public CompletableFuture<CreateAccountingCreditmemoResponse> createAccountingCreditmemo(@Nonnull CreateAccountingCreditmemoRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateAccountingCreditmemoRequest, CreateAccountingCreditmemoResponse> operation
-              = new CreateAccountingCreditmemo.Async(sdkConfiguration, _headers);
+              = new CreateAccountingCreditmemo.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -810,8 +911,22 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<CreateAccountingExpenseResponse>} - The async response
      */
     public CompletableFuture<CreateAccountingExpenseResponse> createAccountingExpense(@Nonnull CreateAccountingExpenseRequest request) {
+        return createAccountingExpense(request, null);
+    }
+
+    /**
+     * Create an expense
+     * 
+     * <p>Creates a AccountingExpense. Provide the unified AccountingExpense fields in the request body; they
+     * are mapped to the provider's API. Returns the created AccountingExpense.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateAccountingExpenseResponse>} - The async response
+     */
+    public CompletableFuture<CreateAccountingExpenseResponse> createAccountingExpense(@Nonnull CreateAccountingExpenseRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateAccountingExpenseRequest, CreateAccountingExpenseResponse> operation
-              = new CreateAccountingExpense.Async(sdkConfiguration, _headers);
+              = new CreateAccountingExpense.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -839,8 +954,22 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<CreateAccountingExpensereportResponse>} - The async response
      */
     public CompletableFuture<CreateAccountingExpensereportResponse> createAccountingExpensereport(@Nonnull CreateAccountingExpensereportRequest request) {
+        return createAccountingExpensereport(request, null);
+    }
+
+    /**
+     * Create an expensereport
+     * 
+     * <p>Creates a AccountingExpensereport. Provide the unified AccountingExpensereport fields in the request
+     * body; they are mapped to the provider's API. Returns the created AccountingExpensereport.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateAccountingExpensereportResponse>} - The async response
+     */
+    public CompletableFuture<CreateAccountingExpensereportResponse> createAccountingExpensereport(@Nonnull CreateAccountingExpensereportRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateAccountingExpensereportRequest, CreateAccountingExpensereportResponse> operation
-              = new CreateAccountingExpensereport.Async(sdkConfiguration, _headers);
+              = new CreateAccountingExpensereport.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -868,8 +997,22 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<CreateAccountingInvoiceResponse>} - The async response
      */
     public CompletableFuture<CreateAccountingInvoiceResponse> createAccountingInvoice(@Nonnull CreateAccountingInvoiceRequest request) {
+        return createAccountingInvoice(request, null);
+    }
+
+    /**
+     * Create an invoice
+     * 
+     * <p>Creates a AccountingInvoice. Provide the unified AccountingInvoice fields in the request body; they
+     * are mapped to the provider's API. Returns the created AccountingInvoice.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateAccountingInvoiceResponse>} - The async response
+     */
+    public CompletableFuture<CreateAccountingInvoiceResponse> createAccountingInvoice(@Nonnull CreateAccountingInvoiceRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateAccountingInvoiceRequest, CreateAccountingInvoiceResponse> operation
-              = new CreateAccountingInvoice.Async(sdkConfiguration, _headers);
+              = new CreateAccountingInvoice.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -897,8 +1040,22 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<CreateAccountingJournalResponse>} - The async response
      */
     public CompletableFuture<CreateAccountingJournalResponse> createAccountingJournal(@Nonnull CreateAccountingJournalRequest request) {
+        return createAccountingJournal(request, null);
+    }
+
+    /**
+     * Create a journal
+     * 
+     * <p>Creates a AccountingJournal. Provide the unified AccountingJournal fields in the request body; they
+     * are mapped to the provider's API. Returns the created AccountingJournal.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateAccountingJournalResponse>} - The async response
+     */
+    public CompletableFuture<CreateAccountingJournalResponse> createAccountingJournal(@Nonnull CreateAccountingJournalRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateAccountingJournalRequest, CreateAccountingJournalResponse> operation
-              = new CreateAccountingJournal.Async(sdkConfiguration, _headers);
+              = new CreateAccountingJournal.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -930,8 +1087,24 @@ public class AsyncAccounting {
      */
     @Deprecated
     public CompletableFuture<CreateAccountingOrderResponse> createAccountingOrder(@Nonnull CreateAccountingOrderRequest request) {
+        return createAccountingOrder(request, null);
+    }
+
+    /**
+     * Create an order
+     * 
+     * <p>Creates a AccountingOrder. Provide the unified AccountingOrder fields in the request body; they are
+     * mapped to the provider's API. Returns the created AccountingOrder.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateAccountingOrderResponse>} - The async response
+     * @deprecated method: This will be removed in a future release, please migrate away from it as soon as possible.
+     */
+    @Deprecated
+    public CompletableFuture<CreateAccountingOrderResponse> createAccountingOrder(@Nonnull CreateAccountingOrderRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateAccountingOrderRequest, CreateAccountingOrderResponse> operation
-              = new CreateAccountingOrder.Async(sdkConfiguration, _headers);
+              = new CreateAccountingOrder.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -959,8 +1132,22 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<CreateAccountingPaymenttermResponse>} - The async response
      */
     public CompletableFuture<CreateAccountingPaymenttermResponse> createAccountingPaymentterm(@Nonnull CreateAccountingPaymenttermRequest request) {
+        return createAccountingPaymentterm(request, null);
+    }
+
+    /**
+     * Create a paymentterm
+     * 
+     * <p>Creates a AccountingPaymentterm. Provide the unified AccountingPaymentterm fields in the request
+     * body; they are mapped to the provider's API. Returns the created AccountingPaymentterm.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateAccountingPaymenttermResponse>} - The async response
+     */
+    public CompletableFuture<CreateAccountingPaymenttermResponse> createAccountingPaymentterm(@Nonnull CreateAccountingPaymenttermRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateAccountingPaymenttermRequest, CreateAccountingPaymenttermResponse> operation
-              = new CreateAccountingPaymentterm.Async(sdkConfiguration, _headers);
+              = new CreateAccountingPaymentterm.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -988,8 +1175,22 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<CreateAccountingProjectResponse>} - The async response
      */
     public CompletableFuture<CreateAccountingProjectResponse> createAccountingProject(@Nonnull CreateAccountingProjectRequest request) {
+        return createAccountingProject(request, null);
+    }
+
+    /**
+     * Create a project
+     * 
+     * <p>Creates a AccountingProject. Provide the unified AccountingProject fields in the request body; they
+     * are mapped to the provider's API. Returns the created AccountingProject.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateAccountingProjectResponse>} - The async response
+     */
+    public CompletableFuture<CreateAccountingProjectResponse> createAccountingProject(@Nonnull CreateAccountingProjectRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateAccountingProjectRequest, CreateAccountingProjectResponse> operation
-              = new CreateAccountingProject.Async(sdkConfiguration, _headers);
+              = new CreateAccountingProject.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1017,8 +1218,22 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<CreateAccountingPurchaseorderResponse>} - The async response
      */
     public CompletableFuture<CreateAccountingPurchaseorderResponse> createAccountingPurchaseorder(@Nonnull CreateAccountingPurchaseorderRequest request) {
+        return createAccountingPurchaseorder(request, null);
+    }
+
+    /**
+     * Create a purchaseorder
+     * 
+     * <p>Creates a AccountingPurchaseorder. Provide the unified AccountingPurchaseorder fields in the request
+     * body; they are mapped to the provider's API. Returns the created AccountingPurchaseorder.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateAccountingPurchaseorderResponse>} - The async response
+     */
+    public CompletableFuture<CreateAccountingPurchaseorderResponse> createAccountingPurchaseorder(@Nonnull CreateAccountingPurchaseorderRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateAccountingPurchaseorderRequest, CreateAccountingPurchaseorderResponse> operation
-              = new CreateAccountingPurchaseorder.Async(sdkConfiguration, _headers);
+              = new CreateAccountingPurchaseorder.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1046,8 +1261,22 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<CreateAccountingQuoteResponse>} - The async response
      */
     public CompletableFuture<CreateAccountingQuoteResponse> createAccountingQuote(@Nonnull CreateAccountingQuoteRequest request) {
+        return createAccountingQuote(request, null);
+    }
+
+    /**
+     * Create a quote
+     * 
+     * <p>Creates a AccountingQuote. Provide the unified AccountingQuote fields in the request body; they are
+     * mapped to the provider's API. Returns the created AccountingQuote.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateAccountingQuoteResponse>} - The async response
+     */
+    public CompletableFuture<CreateAccountingQuoteResponse> createAccountingQuote(@Nonnull CreateAccountingQuoteRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateAccountingQuoteRequest, CreateAccountingQuoteResponse> operation
-              = new CreateAccountingQuote.Async(sdkConfiguration, _headers);
+              = new CreateAccountingQuote.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1075,8 +1304,22 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<CreateAccountingSalesorderResponse>} - The async response
      */
     public CompletableFuture<CreateAccountingSalesorderResponse> createAccountingSalesorder(@Nonnull CreateAccountingSalesorderRequest request) {
+        return createAccountingSalesorder(request, null);
+    }
+
+    /**
+     * Create a salesorder
+     * 
+     * <p>Creates a AccountingSalesorder. Provide the unified AccountingSalesorder fields in the request body;
+     * they are mapped to the provider's API. Returns the created AccountingSalesorder.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateAccountingSalesorderResponse>} - The async response
+     */
+    public CompletableFuture<CreateAccountingSalesorderResponse> createAccountingSalesorder(@Nonnull CreateAccountingSalesorderRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateAccountingSalesorderRequest, CreateAccountingSalesorderResponse> operation
-              = new CreateAccountingSalesorder.Async(sdkConfiguration, _headers);
+              = new CreateAccountingSalesorder.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1104,8 +1347,22 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<CreateAccountingTaxrateResponse>} - The async response
      */
     public CompletableFuture<CreateAccountingTaxrateResponse> createAccountingTaxrate(@Nonnull CreateAccountingTaxrateRequest request) {
+        return createAccountingTaxrate(request, null);
+    }
+
+    /**
+     * Create a taxrate
+     * 
+     * <p>Creates a AccountingTaxrate. Provide the unified AccountingTaxrate fields in the request body; they
+     * are mapped to the provider's API. Returns the created AccountingTaxrate.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateAccountingTaxrateResponse>} - The async response
+     */
+    public CompletableFuture<CreateAccountingTaxrateResponse> createAccountingTaxrate(@Nonnull CreateAccountingTaxrateRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateAccountingTaxrateRequest, CreateAccountingTaxrateResponse> operation
-              = new CreateAccountingTaxrate.Async(sdkConfiguration, _headers);
+              = new CreateAccountingTaxrate.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1133,8 +1390,22 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<CreateAccountingTransactionResponse>} - The async response
      */
     public CompletableFuture<CreateAccountingTransactionResponse> createAccountingTransaction(@Nonnull CreateAccountingTransactionRequest request) {
+        return createAccountingTransaction(request, null);
+    }
+
+    /**
+     * Create a transaction
+     * 
+     * <p>Creates a AccountingTransaction. Provide the unified AccountingTransaction fields in the request
+     * body; they are mapped to the provider's API. Returns the created AccountingTransaction.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateAccountingTransactionResponse>} - The async response
+     */
+    public CompletableFuture<CreateAccountingTransactionResponse> createAccountingTransaction(@Nonnull CreateAccountingTransactionRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateAccountingTransactionRequest, CreateAccountingTransactionResponse> operation
-              = new CreateAccountingTransaction.Async(sdkConfiguration, _headers);
+              = new CreateAccountingTransaction.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1162,8 +1433,22 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<CreateAccountingVendorcreditResponse>} - The async response
      */
     public CompletableFuture<CreateAccountingVendorcreditResponse> createAccountingVendorcredit(@Nonnull CreateAccountingVendorcreditRequest request) {
+        return createAccountingVendorcredit(request, null);
+    }
+
+    /**
+     * Create a vendorcredit
+     * 
+     * <p>Creates a AccountingVendorcredit. Provide the unified AccountingVendorcredit fields in the request
+     * body; they are mapped to the provider's API. Returns the created AccountingVendorcredit.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateAccountingVendorcreditResponse>} - The async response
+     */
+    public CompletableFuture<CreateAccountingVendorcreditResponse> createAccountingVendorcredit(@Nonnull CreateAccountingVendorcreditRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateAccountingVendorcreditRequest, CreateAccountingVendorcreditResponse> operation
-              = new CreateAccountingVendorcredit.Async(sdkConfiguration, _headers);
+              = new CreateAccountingVendorcredit.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1191,8 +1476,22 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<GetAccountingAccountResponse>} - The async response
      */
     public CompletableFuture<GetAccountingAccountResponse> getAccountingAccount(@Nonnull GetAccountingAccountRequest request) {
+        return getAccountingAccount(request, null);
+    }
+
+    /**
+     * Retrieve an account
+     * 
+     * <p>Retrieves a single AccountingAccount by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetAccountingAccountResponse>} - The async response
+     */
+    public CompletableFuture<GetAccountingAccountResponse> getAccountingAccount(@Nonnull GetAccountingAccountRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetAccountingAccountRequest, GetAccountingAccountResponse> operation
-              = new GetAccountingAccount.Async(sdkConfiguration, _headers);
+              = new GetAccountingAccount.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1220,8 +1519,22 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<GetAccountingAgedpayableResponse>} - The async response
      */
     public CompletableFuture<GetAccountingAgedpayableResponse> getAccountingAgedpayable(@Nonnull GetAccountingAgedpayableRequest request) {
+        return getAccountingAgedpayable(request, null);
+    }
+
+    /**
+     * Retrieve an agedpayable
+     * 
+     * <p>Retrieves a single AccountingAgedpayable by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetAccountingAgedpayableResponse>} - The async response
+     */
+    public CompletableFuture<GetAccountingAgedpayableResponse> getAccountingAgedpayable(@Nonnull GetAccountingAgedpayableRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetAccountingAgedpayableRequest, GetAccountingAgedpayableResponse> operation
-              = new GetAccountingAgedpayable.Async(sdkConfiguration, _headers);
+              = new GetAccountingAgedpayable.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1249,8 +1562,22 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<GetAccountingAgedreceivableResponse>} - The async response
      */
     public CompletableFuture<GetAccountingAgedreceivableResponse> getAccountingAgedreceivable(@Nonnull GetAccountingAgedreceivableRequest request) {
+        return getAccountingAgedreceivable(request, null);
+    }
+
+    /**
+     * Retrieve an agedreceivable
+     * 
+     * <p>Retrieves a single AccountingAgedreceivable by its `id`. Obtain `id` values from the corresponding
+     * list endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetAccountingAgedreceivableResponse>} - The async response
+     */
+    public CompletableFuture<GetAccountingAgedreceivableResponse> getAccountingAgedreceivable(@Nonnull GetAccountingAgedreceivableRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetAccountingAgedreceivableRequest, GetAccountingAgedreceivableResponse> operation
-              = new GetAccountingAgedreceivable.Async(sdkConfiguration, _headers);
+              = new GetAccountingAgedreceivable.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1278,8 +1605,22 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<GetAccountingBalancesheetResponse>} - The async response
      */
     public CompletableFuture<GetAccountingBalancesheetResponse> getAccountingBalancesheet(@Nonnull GetAccountingBalancesheetRequest request) {
+        return getAccountingBalancesheet(request, null);
+    }
+
+    /**
+     * Retrieve a balancesheet
+     * 
+     * <p>Retrieves a single AccountingBalancesheet by its `id`. Obtain `id` values from the corresponding
+     * list endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetAccountingBalancesheetResponse>} - The async response
+     */
+    public CompletableFuture<GetAccountingBalancesheetResponse> getAccountingBalancesheet(@Nonnull GetAccountingBalancesheetRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetAccountingBalancesheetRequest, GetAccountingBalancesheetResponse> operation
-              = new GetAccountingBalancesheet.Async(sdkConfiguration, _headers);
+              = new GetAccountingBalancesheet.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1307,8 +1648,22 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<GetAccountingBankfeedaccountResponse>} - The async response
      */
     public CompletableFuture<GetAccountingBankfeedaccountResponse> getAccountingBankfeedaccount(@Nonnull GetAccountingBankfeedaccountRequest request) {
+        return getAccountingBankfeedaccount(request, null);
+    }
+
+    /**
+     * Retrieve a bankfeedaccount
+     * 
+     * <p>Retrieves a single AccountingBankfeedaccount by its `id`. Obtain `id` values from the corresponding
+     * list endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetAccountingBankfeedaccountResponse>} - The async response
+     */
+    public CompletableFuture<GetAccountingBankfeedaccountResponse> getAccountingBankfeedaccount(@Nonnull GetAccountingBankfeedaccountRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetAccountingBankfeedaccountRequest, GetAccountingBankfeedaccountResponse> operation
-              = new GetAccountingBankfeedaccount.Async(sdkConfiguration, _headers);
+              = new GetAccountingBankfeedaccount.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1336,8 +1691,22 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<GetAccountingBankfeedtransactionResponse>} - The async response
      */
     public CompletableFuture<GetAccountingBankfeedtransactionResponse> getAccountingBankfeedtransaction(@Nonnull GetAccountingBankfeedtransactionRequest request) {
+        return getAccountingBankfeedtransaction(request, null);
+    }
+
+    /**
+     * Retrieve a bankfeedtransaction
+     * 
+     * <p>Retrieves a single AccountingBankfeedtransaction by its `id`. Obtain `id` values from the
+     * corresponding list endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetAccountingBankfeedtransactionResponse>} - The async response
+     */
+    public CompletableFuture<GetAccountingBankfeedtransactionResponse> getAccountingBankfeedtransaction(@Nonnull GetAccountingBankfeedtransactionRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetAccountingBankfeedtransactionRequest, GetAccountingBankfeedtransactionResponse> operation
-              = new GetAccountingBankfeedtransaction.Async(sdkConfiguration, _headers);
+              = new GetAccountingBankfeedtransaction.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1365,8 +1734,22 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<GetAccountingBillResponse>} - The async response
      */
     public CompletableFuture<GetAccountingBillResponse> getAccountingBill(@Nonnull GetAccountingBillRequest request) {
+        return getAccountingBill(request, null);
+    }
+
+    /**
+     * Retrieve a bill
+     * 
+     * <p>Retrieves a single AccountingBill by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetAccountingBillResponse>} - The async response
+     */
+    public CompletableFuture<GetAccountingBillResponse> getAccountingBill(@Nonnull GetAccountingBillRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetAccountingBillRequest, GetAccountingBillResponse> operation
-              = new GetAccountingBill.Async(sdkConfiguration, _headers);
+              = new GetAccountingBill.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1394,8 +1777,22 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<GetAccountingCashflowResponse>} - The async response
      */
     public CompletableFuture<GetAccountingCashflowResponse> getAccountingCashflow(@Nonnull GetAccountingCashflowRequest request) {
+        return getAccountingCashflow(request, null);
+    }
+
+    /**
+     * Retrieve a cashflow
+     * 
+     * <p>Retrieves a single AccountingCashflow by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetAccountingCashflowResponse>} - The async response
+     */
+    public CompletableFuture<GetAccountingCashflowResponse> getAccountingCashflow(@Nonnull GetAccountingCashflowRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetAccountingCashflowRequest, GetAccountingCashflowResponse> operation
-              = new GetAccountingCashflow.Async(sdkConfiguration, _headers);
+              = new GetAccountingCashflow.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1423,8 +1820,22 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<GetAccountingCategoryResponse>} - The async response
      */
     public CompletableFuture<GetAccountingCategoryResponse> getAccountingCategory(@Nonnull GetAccountingCategoryRequest request) {
+        return getAccountingCategory(request, null);
+    }
+
+    /**
+     * Retrieve a category
+     * 
+     * <p>Retrieves a single AccountingCategory by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetAccountingCategoryResponse>} - The async response
+     */
+    public CompletableFuture<GetAccountingCategoryResponse> getAccountingCategory(@Nonnull GetAccountingCategoryRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetAccountingCategoryRequest, GetAccountingCategoryResponse> operation
-              = new GetAccountingCategory.Async(sdkConfiguration, _headers);
+              = new GetAccountingCategory.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1452,8 +1863,22 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<GetAccountingContactResponse>} - The async response
      */
     public CompletableFuture<GetAccountingContactResponse> getAccountingContact(@Nonnull GetAccountingContactRequest request) {
+        return getAccountingContact(request, null);
+    }
+
+    /**
+     * Retrieve a contact
+     * 
+     * <p>Retrieves a single AccountingContact by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetAccountingContactResponse>} - The async response
+     */
+    public CompletableFuture<GetAccountingContactResponse> getAccountingContact(@Nonnull GetAccountingContactRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetAccountingContactRequest, GetAccountingContactResponse> operation
-              = new GetAccountingContact.Async(sdkConfiguration, _headers);
+              = new GetAccountingContact.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1481,8 +1906,22 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<GetAccountingCreditmemoResponse>} - The async response
      */
     public CompletableFuture<GetAccountingCreditmemoResponse> getAccountingCreditmemo(@Nonnull GetAccountingCreditmemoRequest request) {
+        return getAccountingCreditmemo(request, null);
+    }
+
+    /**
+     * Retrieve a creditmemo
+     * 
+     * <p>Retrieves a single AccountingCreditmemo by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetAccountingCreditmemoResponse>} - The async response
+     */
+    public CompletableFuture<GetAccountingCreditmemoResponse> getAccountingCreditmemo(@Nonnull GetAccountingCreditmemoRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetAccountingCreditmemoRequest, GetAccountingCreditmemoResponse> operation
-              = new GetAccountingCreditmemo.Async(sdkConfiguration, _headers);
+              = new GetAccountingCreditmemo.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1510,8 +1949,22 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<GetAccountingExpenseResponse>} - The async response
      */
     public CompletableFuture<GetAccountingExpenseResponse> getAccountingExpense(@Nonnull GetAccountingExpenseRequest request) {
+        return getAccountingExpense(request, null);
+    }
+
+    /**
+     * Retrieve an expense
+     * 
+     * <p>Retrieves a single AccountingExpense by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetAccountingExpenseResponse>} - The async response
+     */
+    public CompletableFuture<GetAccountingExpenseResponse> getAccountingExpense(@Nonnull GetAccountingExpenseRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetAccountingExpenseRequest, GetAccountingExpenseResponse> operation
-              = new GetAccountingExpense.Async(sdkConfiguration, _headers);
+              = new GetAccountingExpense.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1539,8 +1992,22 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<GetAccountingExpensereportResponse>} - The async response
      */
     public CompletableFuture<GetAccountingExpensereportResponse> getAccountingExpensereport(@Nonnull GetAccountingExpensereportRequest request) {
+        return getAccountingExpensereport(request, null);
+    }
+
+    /**
+     * Retrieve an expensereport
+     * 
+     * <p>Retrieves a single AccountingExpensereport by its `id`. Obtain `id` values from the corresponding
+     * list endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetAccountingExpensereportResponse>} - The async response
+     */
+    public CompletableFuture<GetAccountingExpensereportResponse> getAccountingExpensereport(@Nonnull GetAccountingExpensereportRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetAccountingExpensereportRequest, GetAccountingExpensereportResponse> operation
-              = new GetAccountingExpensereport.Async(sdkConfiguration, _headers);
+              = new GetAccountingExpensereport.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1568,8 +2035,22 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<GetAccountingInvoiceResponse>} - The async response
      */
     public CompletableFuture<GetAccountingInvoiceResponse> getAccountingInvoice(@Nonnull GetAccountingInvoiceRequest request) {
+        return getAccountingInvoice(request, null);
+    }
+
+    /**
+     * Retrieve an invoice
+     * 
+     * <p>Retrieves a single AccountingInvoice by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetAccountingInvoiceResponse>} - The async response
+     */
+    public CompletableFuture<GetAccountingInvoiceResponse> getAccountingInvoice(@Nonnull GetAccountingInvoiceRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetAccountingInvoiceRequest, GetAccountingInvoiceResponse> operation
-              = new GetAccountingInvoice.Async(sdkConfiguration, _headers);
+              = new GetAccountingInvoice.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1597,8 +2078,22 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<GetAccountingJournalResponse>} - The async response
      */
     public CompletableFuture<GetAccountingJournalResponse> getAccountingJournal(@Nonnull GetAccountingJournalRequest request) {
+        return getAccountingJournal(request, null);
+    }
+
+    /**
+     * Retrieve a journal
+     * 
+     * <p>Retrieves a single AccountingJournal by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetAccountingJournalResponse>} - The async response
+     */
+    public CompletableFuture<GetAccountingJournalResponse> getAccountingJournal(@Nonnull GetAccountingJournalRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetAccountingJournalRequest, GetAccountingJournalResponse> operation
-              = new GetAccountingJournal.Async(sdkConfiguration, _headers);
+              = new GetAccountingJournal.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1630,8 +2125,24 @@ public class AsyncAccounting {
      */
     @Deprecated
     public CompletableFuture<GetAccountingOrderResponse> getAccountingOrder(@Nonnull GetAccountingOrderRequest request) {
+        return getAccountingOrder(request, null);
+    }
+
+    /**
+     * Retrieve an order
+     * 
+     * <p>Retrieves a single AccountingOrder by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetAccountingOrderResponse>} - The async response
+     * @deprecated method: This will be removed in a future release, please migrate away from it as soon as possible.
+     */
+    @Deprecated
+    public CompletableFuture<GetAccountingOrderResponse> getAccountingOrder(@Nonnull GetAccountingOrderRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetAccountingOrderRequest, GetAccountingOrderResponse> operation
-              = new GetAccountingOrder.Async(sdkConfiguration, _headers);
+              = new GetAccountingOrder.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1659,8 +2170,22 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<GetAccountingOrganizationResponse>} - The async response
      */
     public CompletableFuture<GetAccountingOrganizationResponse> getAccountingOrganization(@Nonnull GetAccountingOrganizationRequest request) {
+        return getAccountingOrganization(request, null);
+    }
+
+    /**
+     * Retrieve an organization
+     * 
+     * <p>Retrieves a single AccountingOrganization by its `id`. Obtain `id` values from the corresponding
+     * list endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetAccountingOrganizationResponse>} - The async response
+     */
+    public CompletableFuture<GetAccountingOrganizationResponse> getAccountingOrganization(@Nonnull GetAccountingOrganizationRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetAccountingOrganizationRequest, GetAccountingOrganizationResponse> operation
-              = new GetAccountingOrganization.Async(sdkConfiguration, _headers);
+              = new GetAccountingOrganization.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1688,8 +2213,22 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<GetAccountingPaymenttermResponse>} - The async response
      */
     public CompletableFuture<GetAccountingPaymenttermResponse> getAccountingPaymentterm(@Nonnull GetAccountingPaymenttermRequest request) {
+        return getAccountingPaymentterm(request, null);
+    }
+
+    /**
+     * Retrieve a paymentterm
+     * 
+     * <p>Retrieves a single AccountingPaymentterm by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetAccountingPaymenttermResponse>} - The async response
+     */
+    public CompletableFuture<GetAccountingPaymenttermResponse> getAccountingPaymentterm(@Nonnull GetAccountingPaymenttermRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetAccountingPaymenttermRequest, GetAccountingPaymenttermResponse> operation
-              = new GetAccountingPaymentterm.Async(sdkConfiguration, _headers);
+              = new GetAccountingPaymentterm.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1717,8 +2256,22 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<GetAccountingProfitlossResponse>} - The async response
      */
     public CompletableFuture<GetAccountingProfitlossResponse> getAccountingProfitloss(@Nonnull GetAccountingProfitlossRequest request) {
+        return getAccountingProfitloss(request, null);
+    }
+
+    /**
+     * Retrieve a profitloss
+     * 
+     * <p>Retrieves a single AccountingProfitloss by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetAccountingProfitlossResponse>} - The async response
+     */
+    public CompletableFuture<GetAccountingProfitlossResponse> getAccountingProfitloss(@Nonnull GetAccountingProfitlossRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetAccountingProfitlossRequest, GetAccountingProfitlossResponse> operation
-              = new GetAccountingProfitloss.Async(sdkConfiguration, _headers);
+              = new GetAccountingProfitloss.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1746,8 +2299,22 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<GetAccountingProjectResponse>} - The async response
      */
     public CompletableFuture<GetAccountingProjectResponse> getAccountingProject(@Nonnull GetAccountingProjectRequest request) {
+        return getAccountingProject(request, null);
+    }
+
+    /**
+     * Retrieve a project
+     * 
+     * <p>Retrieves a single AccountingProject by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetAccountingProjectResponse>} - The async response
+     */
+    public CompletableFuture<GetAccountingProjectResponse> getAccountingProject(@Nonnull GetAccountingProjectRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetAccountingProjectRequest, GetAccountingProjectResponse> operation
-              = new GetAccountingProject.Async(sdkConfiguration, _headers);
+              = new GetAccountingProject.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1775,8 +2342,22 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<GetAccountingPurchaseorderResponse>} - The async response
      */
     public CompletableFuture<GetAccountingPurchaseorderResponse> getAccountingPurchaseorder(@Nonnull GetAccountingPurchaseorderRequest request) {
+        return getAccountingPurchaseorder(request, null);
+    }
+
+    /**
+     * Retrieve a purchaseorder
+     * 
+     * <p>Retrieves a single AccountingPurchaseorder by its `id`. Obtain `id` values from the corresponding
+     * list endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetAccountingPurchaseorderResponse>} - The async response
+     */
+    public CompletableFuture<GetAccountingPurchaseorderResponse> getAccountingPurchaseorder(@Nonnull GetAccountingPurchaseorderRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetAccountingPurchaseorderRequest, GetAccountingPurchaseorderResponse> operation
-              = new GetAccountingPurchaseorder.Async(sdkConfiguration, _headers);
+              = new GetAccountingPurchaseorder.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1804,8 +2385,22 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<GetAccountingPurchasereceiptResponse>} - The async response
      */
     public CompletableFuture<GetAccountingPurchasereceiptResponse> getAccountingPurchasereceipt(@Nonnull GetAccountingPurchasereceiptRequest request) {
+        return getAccountingPurchasereceipt(request, null);
+    }
+
+    /**
+     * Retrieve a purchasereceipt
+     * 
+     * <p>Retrieves a single AccountingPurchasereceipt by its `id`. Obtain `id` values from the corresponding
+     * list endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetAccountingPurchasereceiptResponse>} - The async response
+     */
+    public CompletableFuture<GetAccountingPurchasereceiptResponse> getAccountingPurchasereceipt(@Nonnull GetAccountingPurchasereceiptRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetAccountingPurchasereceiptRequest, GetAccountingPurchasereceiptResponse> operation
-              = new GetAccountingPurchasereceipt.Async(sdkConfiguration, _headers);
+              = new GetAccountingPurchasereceipt.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1833,8 +2428,22 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<GetAccountingQuoteResponse>} - The async response
      */
     public CompletableFuture<GetAccountingQuoteResponse> getAccountingQuote(@Nonnull GetAccountingQuoteRequest request) {
+        return getAccountingQuote(request, null);
+    }
+
+    /**
+     * Retrieve a quote
+     * 
+     * <p>Retrieves a single AccountingQuote by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetAccountingQuoteResponse>} - The async response
+     */
+    public CompletableFuture<GetAccountingQuoteResponse> getAccountingQuote(@Nonnull GetAccountingQuoteRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetAccountingQuoteRequest, GetAccountingQuoteResponse> operation
-              = new GetAccountingQuote.Async(sdkConfiguration, _headers);
+              = new GetAccountingQuote.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1862,8 +2471,22 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<GetAccountingSalesorderResponse>} - The async response
      */
     public CompletableFuture<GetAccountingSalesorderResponse> getAccountingSalesorder(@Nonnull GetAccountingSalesorderRequest request) {
+        return getAccountingSalesorder(request, null);
+    }
+
+    /**
+     * Retrieve a salesorder
+     * 
+     * <p>Retrieves a single AccountingSalesorder by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetAccountingSalesorderResponse>} - The async response
+     */
+    public CompletableFuture<GetAccountingSalesorderResponse> getAccountingSalesorder(@Nonnull GetAccountingSalesorderRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetAccountingSalesorderRequest, GetAccountingSalesorderResponse> operation
-              = new GetAccountingSalesorder.Async(sdkConfiguration, _headers);
+              = new GetAccountingSalesorder.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1891,8 +2514,22 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<GetAccountingSalesreceiptResponse>} - The async response
      */
     public CompletableFuture<GetAccountingSalesreceiptResponse> getAccountingSalesreceipt(@Nonnull GetAccountingSalesreceiptRequest request) {
+        return getAccountingSalesreceipt(request, null);
+    }
+
+    /**
+     * Retrieve a salesreceipt
+     * 
+     * <p>Retrieves a single AccountingSalesreceipt by its `id`. Obtain `id` values from the corresponding
+     * list endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetAccountingSalesreceiptResponse>} - The async response
+     */
+    public CompletableFuture<GetAccountingSalesreceiptResponse> getAccountingSalesreceipt(@Nonnull GetAccountingSalesreceiptRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetAccountingSalesreceiptRequest, GetAccountingSalesreceiptResponse> operation
-              = new GetAccountingSalesreceipt.Async(sdkConfiguration, _headers);
+              = new GetAccountingSalesreceipt.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1920,8 +2557,22 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<GetAccountingTaxrateResponse>} - The async response
      */
     public CompletableFuture<GetAccountingTaxrateResponse> getAccountingTaxrate(@Nonnull GetAccountingTaxrateRequest request) {
+        return getAccountingTaxrate(request, null);
+    }
+
+    /**
+     * Retrieve a taxrate
+     * 
+     * <p>Retrieves a single AccountingTaxrate by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetAccountingTaxrateResponse>} - The async response
+     */
+    public CompletableFuture<GetAccountingTaxrateResponse> getAccountingTaxrate(@Nonnull GetAccountingTaxrateRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetAccountingTaxrateRequest, GetAccountingTaxrateResponse> operation
-              = new GetAccountingTaxrate.Async(sdkConfiguration, _headers);
+              = new GetAccountingTaxrate.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1949,8 +2600,22 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<GetAccountingTransactionResponse>} - The async response
      */
     public CompletableFuture<GetAccountingTransactionResponse> getAccountingTransaction(@Nonnull GetAccountingTransactionRequest request) {
+        return getAccountingTransaction(request, null);
+    }
+
+    /**
+     * Retrieve a transaction
+     * 
+     * <p>Retrieves a single AccountingTransaction by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetAccountingTransactionResponse>} - The async response
+     */
+    public CompletableFuture<GetAccountingTransactionResponse> getAccountingTransaction(@Nonnull GetAccountingTransactionRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetAccountingTransactionRequest, GetAccountingTransactionResponse> operation
-              = new GetAccountingTransaction.Async(sdkConfiguration, _headers);
+              = new GetAccountingTransaction.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1978,8 +2643,22 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<GetAccountingTrialbalanceResponse>} - The async response
      */
     public CompletableFuture<GetAccountingTrialbalanceResponse> getAccountingTrialbalance(@Nonnull GetAccountingTrialbalanceRequest request) {
+        return getAccountingTrialbalance(request, null);
+    }
+
+    /**
+     * Retrieve a trialbalance
+     * 
+     * <p>Retrieves a single AccountingTrialbalance by its `id`. Obtain `id` values from the corresponding
+     * list endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetAccountingTrialbalanceResponse>} - The async response
+     */
+    public CompletableFuture<GetAccountingTrialbalanceResponse> getAccountingTrialbalance(@Nonnull GetAccountingTrialbalanceRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetAccountingTrialbalanceRequest, GetAccountingTrialbalanceResponse> operation
-              = new GetAccountingTrialbalance.Async(sdkConfiguration, _headers);
+              = new GetAccountingTrialbalance.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -2007,8 +2686,22 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<GetAccountingVendorcreditResponse>} - The async response
      */
     public CompletableFuture<GetAccountingVendorcreditResponse> getAccountingVendorcredit(@Nonnull GetAccountingVendorcreditRequest request) {
+        return getAccountingVendorcredit(request, null);
+    }
+
+    /**
+     * Retrieve a vendorcredit
+     * 
+     * <p>Retrieves a single AccountingVendorcredit by its `id`. Obtain `id` values from the corresponding
+     * list endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetAccountingVendorcreditResponse>} - The async response
+     */
+    public CompletableFuture<GetAccountingVendorcreditResponse> getAccountingVendorcredit(@Nonnull GetAccountingVendorcreditRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetAccountingVendorcreditRequest, GetAccountingVendorcreditResponse> operation
-              = new GetAccountingVendorcredit.Async(sdkConfiguration, _headers);
+              = new GetAccountingVendorcredit.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -2044,8 +2737,26 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<ListAccountingAccountsResponse>} - The async response
      */
     public CompletableFuture<ListAccountingAccountsResponse> listAccountingAccounts(@Nonnull ListAccountingAccountsRequest request) {
+        return listAccountingAccounts(request, null);
+    }
+
+    /**
+     * List all accounts
+     * 
+     * <p>Returns a list of AccountingAccounts. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListAccountingAccountsResponse>} - The async response
+     */
+    public CompletableFuture<ListAccountingAccountsResponse> listAccountingAccounts(@Nonnull ListAccountingAccountsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListAccountingAccountsRequest, ListAccountingAccountsResponse> operation
-              = new ListAccountingAccounts.Async(sdkConfiguration, _headers);
+              = new ListAccountingAccounts.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -2081,8 +2792,26 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<ListAccountingAgedpayablesResponse>} - The async response
      */
     public CompletableFuture<ListAccountingAgedpayablesResponse> listAccountingAgedpayables(@Nonnull ListAccountingAgedpayablesRequest request) {
+        return listAccountingAgedpayables(request, null);
+    }
+
+    /**
+     * List all agedpayables
+     * 
+     * <p>Returns a list of AccountingAgedpayables. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListAccountingAgedpayablesResponse>} - The async response
+     */
+    public CompletableFuture<ListAccountingAgedpayablesResponse> listAccountingAgedpayables(@Nonnull ListAccountingAgedpayablesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListAccountingAgedpayablesRequest, ListAccountingAgedpayablesResponse> operation
-              = new ListAccountingAgedpayables.Async(sdkConfiguration, _headers);
+              = new ListAccountingAgedpayables.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -2118,8 +2847,26 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<ListAccountingAgedreceivablesResponse>} - The async response
      */
     public CompletableFuture<ListAccountingAgedreceivablesResponse> listAccountingAgedreceivables(@Nonnull ListAccountingAgedreceivablesRequest request) {
+        return listAccountingAgedreceivables(request, null);
+    }
+
+    /**
+     * List all agedreceivables
+     * 
+     * <p>Returns a list of AccountingAgedreceivables. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListAccountingAgedreceivablesResponse>} - The async response
+     */
+    public CompletableFuture<ListAccountingAgedreceivablesResponse> listAccountingAgedreceivables(@Nonnull ListAccountingAgedreceivablesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListAccountingAgedreceivablesRequest, ListAccountingAgedreceivablesResponse> operation
-              = new ListAccountingAgedreceivables.Async(sdkConfiguration, _headers);
+              = new ListAccountingAgedreceivables.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -2155,8 +2902,26 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<ListAccountingBalancesheetsResponse>} - The async response
      */
     public CompletableFuture<ListAccountingBalancesheetsResponse> listAccountingBalancesheets(@Nonnull ListAccountingBalancesheetsRequest request) {
+        return listAccountingBalancesheets(request, null);
+    }
+
+    /**
+     * List all balancesheets
+     * 
+     * <p>Returns a list of AccountingBalancesheets. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListAccountingBalancesheetsResponse>} - The async response
+     */
+    public CompletableFuture<ListAccountingBalancesheetsResponse> listAccountingBalancesheets(@Nonnull ListAccountingBalancesheetsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListAccountingBalancesheetsRequest, ListAccountingBalancesheetsResponse> operation
-              = new ListAccountingBalancesheets.Async(sdkConfiguration, _headers);
+              = new ListAccountingBalancesheets.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -2192,8 +2957,26 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<ListAccountingBankfeedaccountsResponse>} - The async response
      */
     public CompletableFuture<ListAccountingBankfeedaccountsResponse> listAccountingBankfeedaccounts(@Nonnull ListAccountingBankfeedaccountsRequest request) {
+        return listAccountingBankfeedaccounts(request, null);
+    }
+
+    /**
+     * List all bankfeedaccounts
+     * 
+     * <p>Returns a list of AccountingBankfeedaccounts. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListAccountingBankfeedaccountsResponse>} - The async response
+     */
+    public CompletableFuture<ListAccountingBankfeedaccountsResponse> listAccountingBankfeedaccounts(@Nonnull ListAccountingBankfeedaccountsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListAccountingBankfeedaccountsRequest, ListAccountingBankfeedaccountsResponse> operation
-              = new ListAccountingBankfeedaccounts.Async(sdkConfiguration, _headers);
+              = new ListAccountingBankfeedaccounts.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -2231,8 +3014,27 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<ListAccountingBankfeedtransactionsResponse>} - The async response
      */
     public CompletableFuture<ListAccountingBankfeedtransactionsResponse> listAccountingBankfeedtransactions(@Nonnull ListAccountingBankfeedtransactionsRequest request) {
+        return listAccountingBankfeedtransactions(request, null);
+    }
+
+    /**
+     * List all bankfeedtransactions
+     * 
+     * <p>Returns a list of AccountingBankfeedtransactions. Narrow the results with the query parameters
+     * before paging, then page through them with `limit` and `offset` (the default and maximum page size
+     * depend on the integration). Use `fields` to return only the fields you need and reduce the response
+     * size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListAccountingBankfeedtransactionsResponse>} - The async response
+     */
+    public CompletableFuture<ListAccountingBankfeedtransactionsResponse> listAccountingBankfeedtransactions(@Nonnull ListAccountingBankfeedtransactionsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListAccountingBankfeedtransactionsRequest, ListAccountingBankfeedtransactionsResponse> operation
-              = new ListAccountingBankfeedtransactions.Async(sdkConfiguration, _headers);
+              = new ListAccountingBankfeedtransactions.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -2268,8 +3070,26 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<ListAccountingBillsResponse>} - The async response
      */
     public CompletableFuture<ListAccountingBillsResponse> listAccountingBills(@Nonnull ListAccountingBillsRequest request) {
+        return listAccountingBills(request, null);
+    }
+
+    /**
+     * List all bills
+     * 
+     * <p>Returns a list of AccountingBills. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListAccountingBillsResponse>} - The async response
+     */
+    public CompletableFuture<ListAccountingBillsResponse> listAccountingBills(@Nonnull ListAccountingBillsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListAccountingBillsRequest, ListAccountingBillsResponse> operation
-              = new ListAccountingBills.Async(sdkConfiguration, _headers);
+              = new ListAccountingBills.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -2305,8 +3125,26 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<ListAccountingCashflowsResponse>} - The async response
      */
     public CompletableFuture<ListAccountingCashflowsResponse> listAccountingCashflows(@Nonnull ListAccountingCashflowsRequest request) {
+        return listAccountingCashflows(request, null);
+    }
+
+    /**
+     * List all cashflows
+     * 
+     * <p>Returns a list of AccountingCashflows. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListAccountingCashflowsResponse>} - The async response
+     */
+    public CompletableFuture<ListAccountingCashflowsResponse> listAccountingCashflows(@Nonnull ListAccountingCashflowsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListAccountingCashflowsRequest, ListAccountingCashflowsResponse> operation
-              = new ListAccountingCashflows.Async(sdkConfiguration, _headers);
+              = new ListAccountingCashflows.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -2342,8 +3180,26 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<ListAccountingCategoriesResponse>} - The async response
      */
     public CompletableFuture<ListAccountingCategoriesResponse> listAccountingCategories(@Nonnull ListAccountingCategoriesRequest request) {
+        return listAccountingCategories(request, null);
+    }
+
+    /**
+     * List all categories
+     * 
+     * <p>Returns a list of AccountingCategories. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListAccountingCategoriesResponse>} - The async response
+     */
+    public CompletableFuture<ListAccountingCategoriesResponse> listAccountingCategories(@Nonnull ListAccountingCategoriesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListAccountingCategoriesRequest, ListAccountingCategoriesResponse> operation
-              = new ListAccountingCategories.Async(sdkConfiguration, _headers);
+              = new ListAccountingCategories.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -2379,8 +3235,26 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<ListAccountingContactsResponse>} - The async response
      */
     public CompletableFuture<ListAccountingContactsResponse> listAccountingContacts(@Nonnull ListAccountingContactsRequest request) {
+        return listAccountingContacts(request, null);
+    }
+
+    /**
+     * List all contacts
+     * 
+     * <p>Returns a list of AccountingContacts. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListAccountingContactsResponse>} - The async response
+     */
+    public CompletableFuture<ListAccountingContactsResponse> listAccountingContacts(@Nonnull ListAccountingContactsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListAccountingContactsRequest, ListAccountingContactsResponse> operation
-              = new ListAccountingContacts.Async(sdkConfiguration, _headers);
+              = new ListAccountingContacts.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -2416,8 +3290,26 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<ListAccountingCreditmemoesResponse>} - The async response
      */
     public CompletableFuture<ListAccountingCreditmemoesResponse> listAccountingCreditmemoes(@Nonnull ListAccountingCreditmemoesRequest request) {
+        return listAccountingCreditmemoes(request, null);
+    }
+
+    /**
+     * List all creditmemoes
+     * 
+     * <p>Returns a list of AccountingCreditmemoes. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListAccountingCreditmemoesResponse>} - The async response
+     */
+    public CompletableFuture<ListAccountingCreditmemoesResponse> listAccountingCreditmemoes(@Nonnull ListAccountingCreditmemoesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListAccountingCreditmemoesRequest, ListAccountingCreditmemoesResponse> operation
-              = new ListAccountingCreditmemoes.Async(sdkConfiguration, _headers);
+              = new ListAccountingCreditmemoes.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -2453,8 +3345,26 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<ListAccountingExpensereportsResponse>} - The async response
      */
     public CompletableFuture<ListAccountingExpensereportsResponse> listAccountingExpensereports(@Nonnull ListAccountingExpensereportsRequest request) {
+        return listAccountingExpensereports(request, null);
+    }
+
+    /**
+     * List all expensereports
+     * 
+     * <p>Returns a list of AccountingExpensereports. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListAccountingExpensereportsResponse>} - The async response
+     */
+    public CompletableFuture<ListAccountingExpensereportsResponse> listAccountingExpensereports(@Nonnull ListAccountingExpensereportsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListAccountingExpensereportsRequest, ListAccountingExpensereportsResponse> operation
-              = new ListAccountingExpensereports.Async(sdkConfiguration, _headers);
+              = new ListAccountingExpensereports.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -2490,8 +3400,26 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<ListAccountingExpensesResponse>} - The async response
      */
     public CompletableFuture<ListAccountingExpensesResponse> listAccountingExpenses(@Nonnull ListAccountingExpensesRequest request) {
+        return listAccountingExpenses(request, null);
+    }
+
+    /**
+     * List all expenses
+     * 
+     * <p>Returns a list of AccountingExpenses. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListAccountingExpensesResponse>} - The async response
+     */
+    public CompletableFuture<ListAccountingExpensesResponse> listAccountingExpenses(@Nonnull ListAccountingExpensesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListAccountingExpensesRequest, ListAccountingExpensesResponse> operation
-              = new ListAccountingExpenses.Async(sdkConfiguration, _headers);
+              = new ListAccountingExpenses.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -2527,8 +3455,26 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<ListAccountingInvoicesResponse>} - The async response
      */
     public CompletableFuture<ListAccountingInvoicesResponse> listAccountingInvoices(@Nonnull ListAccountingInvoicesRequest request) {
+        return listAccountingInvoices(request, null);
+    }
+
+    /**
+     * List all invoices
+     * 
+     * <p>Returns a list of AccountingInvoices. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListAccountingInvoicesResponse>} - The async response
+     */
+    public CompletableFuture<ListAccountingInvoicesResponse> listAccountingInvoices(@Nonnull ListAccountingInvoicesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListAccountingInvoicesRequest, ListAccountingInvoicesResponse> operation
-              = new ListAccountingInvoices.Async(sdkConfiguration, _headers);
+              = new ListAccountingInvoices.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -2564,8 +3510,26 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<ListAccountingJournalsResponse>} - The async response
      */
     public CompletableFuture<ListAccountingJournalsResponse> listAccountingJournals(@Nonnull ListAccountingJournalsRequest request) {
+        return listAccountingJournals(request, null);
+    }
+
+    /**
+     * List all journals
+     * 
+     * <p>Returns a list of AccountingJournals. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListAccountingJournalsResponse>} - The async response
+     */
+    public CompletableFuture<ListAccountingJournalsResponse> listAccountingJournals(@Nonnull ListAccountingJournalsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListAccountingJournalsRequest, ListAccountingJournalsResponse> operation
-              = new ListAccountingJournals.Async(sdkConfiguration, _headers);
+              = new ListAccountingJournals.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -2605,8 +3569,28 @@ public class AsyncAccounting {
      */
     @Deprecated
     public CompletableFuture<ListAccountingOrdersResponse> listAccountingOrders(@Nonnull ListAccountingOrdersRequest request) {
+        return listAccountingOrders(request, null);
+    }
+
+    /**
+     * List all orders
+     * 
+     * <p>Returns a list of AccountingOrders. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListAccountingOrdersResponse>} - The async response
+     * @deprecated method: This will be removed in a future release, please migrate away from it as soon as possible.
+     */
+    @Deprecated
+    public CompletableFuture<ListAccountingOrdersResponse> listAccountingOrders(@Nonnull ListAccountingOrdersRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListAccountingOrdersRequest, ListAccountingOrdersResponse> operation
-              = new ListAccountingOrders.Async(sdkConfiguration, _headers);
+              = new ListAccountingOrders.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -2642,8 +3626,26 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<ListAccountingOrganizationsResponse>} - The async response
      */
     public CompletableFuture<ListAccountingOrganizationsResponse> listAccountingOrganizations(@Nonnull ListAccountingOrganizationsRequest request) {
+        return listAccountingOrganizations(request, null);
+    }
+
+    /**
+     * List all organizations
+     * 
+     * <p>Returns a list of AccountingOrganizations. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListAccountingOrganizationsResponse>} - The async response
+     */
+    public CompletableFuture<ListAccountingOrganizationsResponse> listAccountingOrganizations(@Nonnull ListAccountingOrganizationsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListAccountingOrganizationsRequest, ListAccountingOrganizationsResponse> operation
-              = new ListAccountingOrganizations.Async(sdkConfiguration, _headers);
+              = new ListAccountingOrganizations.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -2679,8 +3681,26 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<ListAccountingPaymenttermsResponse>} - The async response
      */
     public CompletableFuture<ListAccountingPaymenttermsResponse> listAccountingPaymentterms(@Nonnull ListAccountingPaymenttermsRequest request) {
+        return listAccountingPaymentterms(request, null);
+    }
+
+    /**
+     * List all paymentterms
+     * 
+     * <p>Returns a list of AccountingPaymentterms. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListAccountingPaymenttermsResponse>} - The async response
+     */
+    public CompletableFuture<ListAccountingPaymenttermsResponse> listAccountingPaymentterms(@Nonnull ListAccountingPaymenttermsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListAccountingPaymenttermsRequest, ListAccountingPaymenttermsResponse> operation
-              = new ListAccountingPaymentterms.Async(sdkConfiguration, _headers);
+              = new ListAccountingPaymentterms.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -2716,8 +3736,26 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<ListAccountingProfitlossesResponse>} - The async response
      */
     public CompletableFuture<ListAccountingProfitlossesResponse> listAccountingProfitlosses(@Nonnull ListAccountingProfitlossesRequest request) {
+        return listAccountingProfitlosses(request, null);
+    }
+
+    /**
+     * List all profitlosses
+     * 
+     * <p>Returns a list of AccountingProfitlosses. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListAccountingProfitlossesResponse>} - The async response
+     */
+    public CompletableFuture<ListAccountingProfitlossesResponse> listAccountingProfitlosses(@Nonnull ListAccountingProfitlossesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListAccountingProfitlossesRequest, ListAccountingProfitlossesResponse> operation
-              = new ListAccountingProfitlosses.Async(sdkConfiguration, _headers);
+              = new ListAccountingProfitlosses.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -2753,8 +3791,26 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<ListAccountingProjectsResponse>} - The async response
      */
     public CompletableFuture<ListAccountingProjectsResponse> listAccountingProjects(@Nonnull ListAccountingProjectsRequest request) {
+        return listAccountingProjects(request, null);
+    }
+
+    /**
+     * List all projects
+     * 
+     * <p>Returns a list of AccountingProjects. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListAccountingProjectsResponse>} - The async response
+     */
+    public CompletableFuture<ListAccountingProjectsResponse> listAccountingProjects(@Nonnull ListAccountingProjectsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListAccountingProjectsRequest, ListAccountingProjectsResponse> operation
-              = new ListAccountingProjects.Async(sdkConfiguration, _headers);
+              = new ListAccountingProjects.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -2790,8 +3846,26 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<ListAccountingPurchaseordersResponse>} - The async response
      */
     public CompletableFuture<ListAccountingPurchaseordersResponse> listAccountingPurchaseorders(@Nonnull ListAccountingPurchaseordersRequest request) {
+        return listAccountingPurchaseorders(request, null);
+    }
+
+    /**
+     * List all purchaseorders
+     * 
+     * <p>Returns a list of AccountingPurchaseorders. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListAccountingPurchaseordersResponse>} - The async response
+     */
+    public CompletableFuture<ListAccountingPurchaseordersResponse> listAccountingPurchaseorders(@Nonnull ListAccountingPurchaseordersRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListAccountingPurchaseordersRequest, ListAccountingPurchaseordersResponse> operation
-              = new ListAccountingPurchaseorders.Async(sdkConfiguration, _headers);
+              = new ListAccountingPurchaseorders.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -2827,8 +3901,26 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<ListAccountingPurchasereceiptsResponse>} - The async response
      */
     public CompletableFuture<ListAccountingPurchasereceiptsResponse> listAccountingPurchasereceipts(@Nonnull ListAccountingPurchasereceiptsRequest request) {
+        return listAccountingPurchasereceipts(request, null);
+    }
+
+    /**
+     * List all purchasereceipts
+     * 
+     * <p>Returns a list of AccountingPurchasereceipts. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListAccountingPurchasereceiptsResponse>} - The async response
+     */
+    public CompletableFuture<ListAccountingPurchasereceiptsResponse> listAccountingPurchasereceipts(@Nonnull ListAccountingPurchasereceiptsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListAccountingPurchasereceiptsRequest, ListAccountingPurchasereceiptsResponse> operation
-              = new ListAccountingPurchasereceipts.Async(sdkConfiguration, _headers);
+              = new ListAccountingPurchasereceipts.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -2864,8 +3956,26 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<ListAccountingQuotesResponse>} - The async response
      */
     public CompletableFuture<ListAccountingQuotesResponse> listAccountingQuotes(@Nonnull ListAccountingQuotesRequest request) {
+        return listAccountingQuotes(request, null);
+    }
+
+    /**
+     * List all quotes
+     * 
+     * <p>Returns a list of AccountingQuotes. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListAccountingQuotesResponse>} - The async response
+     */
+    public CompletableFuture<ListAccountingQuotesResponse> listAccountingQuotes(@Nonnull ListAccountingQuotesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListAccountingQuotesRequest, ListAccountingQuotesResponse> operation
-              = new ListAccountingQuotes.Async(sdkConfiguration, _headers);
+              = new ListAccountingQuotes.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -2901,8 +4011,26 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<ListAccountingSalesordersResponse>} - The async response
      */
     public CompletableFuture<ListAccountingSalesordersResponse> listAccountingSalesorders(@Nonnull ListAccountingSalesordersRequest request) {
+        return listAccountingSalesorders(request, null);
+    }
+
+    /**
+     * List all salesorders
+     * 
+     * <p>Returns a list of AccountingSalesorders. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListAccountingSalesordersResponse>} - The async response
+     */
+    public CompletableFuture<ListAccountingSalesordersResponse> listAccountingSalesorders(@Nonnull ListAccountingSalesordersRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListAccountingSalesordersRequest, ListAccountingSalesordersResponse> operation
-              = new ListAccountingSalesorders.Async(sdkConfiguration, _headers);
+              = new ListAccountingSalesorders.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -2938,8 +4066,26 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<ListAccountingSalesreceiptsResponse>} - The async response
      */
     public CompletableFuture<ListAccountingSalesreceiptsResponse> listAccountingSalesreceipts(@Nonnull ListAccountingSalesreceiptsRequest request) {
+        return listAccountingSalesreceipts(request, null);
+    }
+
+    /**
+     * List all salesreceipts
+     * 
+     * <p>Returns a list of AccountingSalesreceipts. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListAccountingSalesreceiptsResponse>} - The async response
+     */
+    public CompletableFuture<ListAccountingSalesreceiptsResponse> listAccountingSalesreceipts(@Nonnull ListAccountingSalesreceiptsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListAccountingSalesreceiptsRequest, ListAccountingSalesreceiptsResponse> operation
-              = new ListAccountingSalesreceipts.Async(sdkConfiguration, _headers);
+              = new ListAccountingSalesreceipts.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -2975,8 +4121,26 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<ListAccountingTaxratesResponse>} - The async response
      */
     public CompletableFuture<ListAccountingTaxratesResponse> listAccountingTaxrates(@Nonnull ListAccountingTaxratesRequest request) {
+        return listAccountingTaxrates(request, null);
+    }
+
+    /**
+     * List all taxrates
+     * 
+     * <p>Returns a list of AccountingTaxrates. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListAccountingTaxratesResponse>} - The async response
+     */
+    public CompletableFuture<ListAccountingTaxratesResponse> listAccountingTaxrates(@Nonnull ListAccountingTaxratesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListAccountingTaxratesRequest, ListAccountingTaxratesResponse> operation
-              = new ListAccountingTaxrates.Async(sdkConfiguration, _headers);
+              = new ListAccountingTaxrates.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -3012,8 +4176,26 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<ListAccountingTransactionsResponse>} - The async response
      */
     public CompletableFuture<ListAccountingTransactionsResponse> listAccountingTransactions(@Nonnull ListAccountingTransactionsRequest request) {
+        return listAccountingTransactions(request, null);
+    }
+
+    /**
+     * List all transactions
+     * 
+     * <p>Returns a list of AccountingTransactions. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListAccountingTransactionsResponse>} - The async response
+     */
+    public CompletableFuture<ListAccountingTransactionsResponse> listAccountingTransactions(@Nonnull ListAccountingTransactionsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListAccountingTransactionsRequest, ListAccountingTransactionsResponse> operation
-              = new ListAccountingTransactions.Async(sdkConfiguration, _headers);
+              = new ListAccountingTransactions.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -3049,8 +4231,26 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<ListAccountingTrialbalancesResponse>} - The async response
      */
     public CompletableFuture<ListAccountingTrialbalancesResponse> listAccountingTrialbalances(@Nonnull ListAccountingTrialbalancesRequest request) {
+        return listAccountingTrialbalances(request, null);
+    }
+
+    /**
+     * List all trialbalances
+     * 
+     * <p>Returns a list of AccountingTrialbalances. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListAccountingTrialbalancesResponse>} - The async response
+     */
+    public CompletableFuture<ListAccountingTrialbalancesResponse> listAccountingTrialbalances(@Nonnull ListAccountingTrialbalancesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListAccountingTrialbalancesRequest, ListAccountingTrialbalancesResponse> operation
-              = new ListAccountingTrialbalances.Async(sdkConfiguration, _headers);
+              = new ListAccountingTrialbalances.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -3086,8 +4286,26 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<ListAccountingVendorcreditsResponse>} - The async response
      */
     public CompletableFuture<ListAccountingVendorcreditsResponse> listAccountingVendorcredits(@Nonnull ListAccountingVendorcreditsRequest request) {
+        return listAccountingVendorcredits(request, null);
+    }
+
+    /**
+     * List all vendorcredits
+     * 
+     * <p>Returns a list of AccountingVendorcredits. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListAccountingVendorcreditsResponse>} - The async response
+     */
+    public CompletableFuture<ListAccountingVendorcreditsResponse> listAccountingVendorcredits(@Nonnull ListAccountingVendorcreditsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListAccountingVendorcreditsRequest, ListAccountingVendorcreditsResponse> operation
-              = new ListAccountingVendorcredits.Async(sdkConfiguration, _headers);
+              = new ListAccountingVendorcredits.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -3115,8 +4333,22 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<PatchAccountingAccountResponse>} - The async response
      */
     public CompletableFuture<PatchAccountingAccountResponse> patchAccountingAccount(@Nonnull PatchAccountingAccountRequest request) {
+        return patchAccountingAccount(request, null);
+    }
+
+    /**
+     * Update an account
+     * 
+     * <p>Updates the AccountingAccount identified by `id`. Provide the unified AccountingAccount fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchAccountingAccountResponse>} - The async response
+     */
+    public CompletableFuture<PatchAccountingAccountResponse> patchAccountingAccount(@Nonnull PatchAccountingAccountRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchAccountingAccountRequest, PatchAccountingAccountResponse> operation
-              = new PatchAccountingAccount.Async(sdkConfiguration, _headers);
+              = new PatchAccountingAccount.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -3144,8 +4376,22 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<PatchAccountingBankfeedaccountResponse>} - The async response
      */
     public CompletableFuture<PatchAccountingBankfeedaccountResponse> patchAccountingBankfeedaccount(@Nonnull PatchAccountingBankfeedaccountRequest request) {
+        return patchAccountingBankfeedaccount(request, null);
+    }
+
+    /**
+     * Update a bankfeedaccount
+     * 
+     * <p>Updates the AccountingBankfeedaccount identified by `id`. Provide the unified
+     * AccountingBankfeedaccount fields to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchAccountingBankfeedaccountResponse>} - The async response
+     */
+    public CompletableFuture<PatchAccountingBankfeedaccountResponse> patchAccountingBankfeedaccount(@Nonnull PatchAccountingBankfeedaccountRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchAccountingBankfeedaccountRequest, PatchAccountingBankfeedaccountResponse> operation
-              = new PatchAccountingBankfeedaccount.Async(sdkConfiguration, _headers);
+              = new PatchAccountingBankfeedaccount.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -3173,8 +4419,22 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<PatchAccountingBankfeedtransactionResponse>} - The async response
      */
     public CompletableFuture<PatchAccountingBankfeedtransactionResponse> patchAccountingBankfeedtransaction(@Nonnull PatchAccountingBankfeedtransactionRequest request) {
+        return patchAccountingBankfeedtransaction(request, null);
+    }
+
+    /**
+     * Update a bankfeedtransaction
+     * 
+     * <p>Updates the AccountingBankfeedtransaction identified by `id`. Provide the unified
+     * AccountingBankfeedtransaction fields to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchAccountingBankfeedtransactionResponse>} - The async response
+     */
+    public CompletableFuture<PatchAccountingBankfeedtransactionResponse> patchAccountingBankfeedtransaction(@Nonnull PatchAccountingBankfeedtransactionRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchAccountingBankfeedtransactionRequest, PatchAccountingBankfeedtransactionResponse> operation
-              = new PatchAccountingBankfeedtransaction.Async(sdkConfiguration, _headers);
+              = new PatchAccountingBankfeedtransaction.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -3202,8 +4462,22 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<PatchAccountingBillResponse>} - The async response
      */
     public CompletableFuture<PatchAccountingBillResponse> patchAccountingBill(@Nonnull PatchAccountingBillRequest request) {
+        return patchAccountingBill(request, null);
+    }
+
+    /**
+     * Update a bill
+     * 
+     * <p>Updates the AccountingBill identified by `id`. Provide the unified AccountingBill fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchAccountingBillResponse>} - The async response
+     */
+    public CompletableFuture<PatchAccountingBillResponse> patchAccountingBill(@Nonnull PatchAccountingBillRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchAccountingBillRequest, PatchAccountingBillResponse> operation
-              = new PatchAccountingBill.Async(sdkConfiguration, _headers);
+              = new PatchAccountingBill.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -3231,8 +4505,22 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<PatchAccountingCategoryResponse>} - The async response
      */
     public CompletableFuture<PatchAccountingCategoryResponse> patchAccountingCategory(@Nonnull PatchAccountingCategoryRequest request) {
+        return patchAccountingCategory(request, null);
+    }
+
+    /**
+     * Update a category
+     * 
+     * <p>Updates the AccountingCategory identified by `id`. Provide the unified AccountingCategory fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchAccountingCategoryResponse>} - The async response
+     */
+    public CompletableFuture<PatchAccountingCategoryResponse> patchAccountingCategory(@Nonnull PatchAccountingCategoryRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchAccountingCategoryRequest, PatchAccountingCategoryResponse> operation
-              = new PatchAccountingCategory.Async(sdkConfiguration, _headers);
+              = new PatchAccountingCategory.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -3260,8 +4548,22 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<PatchAccountingContactResponse>} - The async response
      */
     public CompletableFuture<PatchAccountingContactResponse> patchAccountingContact(@Nonnull PatchAccountingContactRequest request) {
+        return patchAccountingContact(request, null);
+    }
+
+    /**
+     * Update a contact
+     * 
+     * <p>Updates the AccountingContact identified by `id`. Provide the unified AccountingContact fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchAccountingContactResponse>} - The async response
+     */
+    public CompletableFuture<PatchAccountingContactResponse> patchAccountingContact(@Nonnull PatchAccountingContactRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchAccountingContactRequest, PatchAccountingContactResponse> operation
-              = new PatchAccountingContact.Async(sdkConfiguration, _headers);
+              = new PatchAccountingContact.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -3289,8 +4591,22 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<PatchAccountingCreditmemoResponse>} - The async response
      */
     public CompletableFuture<PatchAccountingCreditmemoResponse> patchAccountingCreditmemo(@Nonnull PatchAccountingCreditmemoRequest request) {
+        return patchAccountingCreditmemo(request, null);
+    }
+
+    /**
+     * Update a creditmemo
+     * 
+     * <p>Updates the AccountingCreditmemo identified by `id`. Provide the unified AccountingCreditmemo fields
+     * to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchAccountingCreditmemoResponse>} - The async response
+     */
+    public CompletableFuture<PatchAccountingCreditmemoResponse> patchAccountingCreditmemo(@Nonnull PatchAccountingCreditmemoRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchAccountingCreditmemoRequest, PatchAccountingCreditmemoResponse> operation
-              = new PatchAccountingCreditmemo.Async(sdkConfiguration, _headers);
+              = new PatchAccountingCreditmemo.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -3318,8 +4634,22 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<PatchAccountingExpenseResponse>} - The async response
      */
     public CompletableFuture<PatchAccountingExpenseResponse> patchAccountingExpense(@Nonnull PatchAccountingExpenseRequest request) {
+        return patchAccountingExpense(request, null);
+    }
+
+    /**
+     * Update an expense
+     * 
+     * <p>Updates the AccountingExpense identified by `id`. Provide the unified AccountingExpense fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchAccountingExpenseResponse>} - The async response
+     */
+    public CompletableFuture<PatchAccountingExpenseResponse> patchAccountingExpense(@Nonnull PatchAccountingExpenseRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchAccountingExpenseRequest, PatchAccountingExpenseResponse> operation
-              = new PatchAccountingExpense.Async(sdkConfiguration, _headers);
+              = new PatchAccountingExpense.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -3347,8 +4677,22 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<PatchAccountingExpensereportResponse>} - The async response
      */
     public CompletableFuture<PatchAccountingExpensereportResponse> patchAccountingExpensereport(@Nonnull PatchAccountingExpensereportRequest request) {
+        return patchAccountingExpensereport(request, null);
+    }
+
+    /**
+     * Update an expensereport
+     * 
+     * <p>Updates the AccountingExpensereport identified by `id`. Provide the unified AccountingExpensereport
+     * fields to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchAccountingExpensereportResponse>} - The async response
+     */
+    public CompletableFuture<PatchAccountingExpensereportResponse> patchAccountingExpensereport(@Nonnull PatchAccountingExpensereportRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchAccountingExpensereportRequest, PatchAccountingExpensereportResponse> operation
-              = new PatchAccountingExpensereport.Async(sdkConfiguration, _headers);
+              = new PatchAccountingExpensereport.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -3376,8 +4720,22 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<PatchAccountingInvoiceResponse>} - The async response
      */
     public CompletableFuture<PatchAccountingInvoiceResponse> patchAccountingInvoice(@Nonnull PatchAccountingInvoiceRequest request) {
+        return patchAccountingInvoice(request, null);
+    }
+
+    /**
+     * Update an invoice
+     * 
+     * <p>Updates the AccountingInvoice identified by `id`. Provide the unified AccountingInvoice fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchAccountingInvoiceResponse>} - The async response
+     */
+    public CompletableFuture<PatchAccountingInvoiceResponse> patchAccountingInvoice(@Nonnull PatchAccountingInvoiceRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchAccountingInvoiceRequest, PatchAccountingInvoiceResponse> operation
-              = new PatchAccountingInvoice.Async(sdkConfiguration, _headers);
+              = new PatchAccountingInvoice.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -3405,8 +4763,22 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<PatchAccountingJournalResponse>} - The async response
      */
     public CompletableFuture<PatchAccountingJournalResponse> patchAccountingJournal(@Nonnull PatchAccountingJournalRequest request) {
+        return patchAccountingJournal(request, null);
+    }
+
+    /**
+     * Update a journal
+     * 
+     * <p>Updates the AccountingJournal identified by `id`. Provide the unified AccountingJournal fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchAccountingJournalResponse>} - The async response
+     */
+    public CompletableFuture<PatchAccountingJournalResponse> patchAccountingJournal(@Nonnull PatchAccountingJournalRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchAccountingJournalRequest, PatchAccountingJournalResponse> operation
-              = new PatchAccountingJournal.Async(sdkConfiguration, _headers);
+              = new PatchAccountingJournal.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -3438,8 +4810,24 @@ public class AsyncAccounting {
      */
     @Deprecated
     public CompletableFuture<PatchAccountingOrderResponse> patchAccountingOrder(@Nonnull PatchAccountingOrderRequest request) {
+        return patchAccountingOrder(request, null);
+    }
+
+    /**
+     * Update an order
+     * 
+     * <p>Updates the AccountingOrder identified by `id`. Provide the unified AccountingOrder fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchAccountingOrderResponse>} - The async response
+     * @deprecated method: This will be removed in a future release, please migrate away from it as soon as possible.
+     */
+    @Deprecated
+    public CompletableFuture<PatchAccountingOrderResponse> patchAccountingOrder(@Nonnull PatchAccountingOrderRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchAccountingOrderRequest, PatchAccountingOrderResponse> operation
-              = new PatchAccountingOrder.Async(sdkConfiguration, _headers);
+              = new PatchAccountingOrder.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -3467,8 +4855,22 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<PatchAccountingPaymenttermResponse>} - The async response
      */
     public CompletableFuture<PatchAccountingPaymenttermResponse> patchAccountingPaymentterm(@Nonnull PatchAccountingPaymenttermRequest request) {
+        return patchAccountingPaymentterm(request, null);
+    }
+
+    /**
+     * Update a paymentterm
+     * 
+     * <p>Updates the AccountingPaymentterm identified by `id`. Provide the unified AccountingPaymentterm
+     * fields to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchAccountingPaymenttermResponse>} - The async response
+     */
+    public CompletableFuture<PatchAccountingPaymenttermResponse> patchAccountingPaymentterm(@Nonnull PatchAccountingPaymenttermRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchAccountingPaymenttermRequest, PatchAccountingPaymenttermResponse> operation
-              = new PatchAccountingPaymentterm.Async(sdkConfiguration, _headers);
+              = new PatchAccountingPaymentterm.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -3496,8 +4898,22 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<PatchAccountingProjectResponse>} - The async response
      */
     public CompletableFuture<PatchAccountingProjectResponse> patchAccountingProject(@Nonnull PatchAccountingProjectRequest request) {
+        return patchAccountingProject(request, null);
+    }
+
+    /**
+     * Update a project
+     * 
+     * <p>Updates the AccountingProject identified by `id`. Provide the unified AccountingProject fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchAccountingProjectResponse>} - The async response
+     */
+    public CompletableFuture<PatchAccountingProjectResponse> patchAccountingProject(@Nonnull PatchAccountingProjectRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchAccountingProjectRequest, PatchAccountingProjectResponse> operation
-              = new PatchAccountingProject.Async(sdkConfiguration, _headers);
+              = new PatchAccountingProject.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -3525,8 +4941,22 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<PatchAccountingPurchaseorderResponse>} - The async response
      */
     public CompletableFuture<PatchAccountingPurchaseorderResponse> patchAccountingPurchaseorder(@Nonnull PatchAccountingPurchaseorderRequest request) {
+        return patchAccountingPurchaseorder(request, null);
+    }
+
+    /**
+     * Update a purchaseorder
+     * 
+     * <p>Updates the AccountingPurchaseorder identified by `id`. Provide the unified AccountingPurchaseorder
+     * fields to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchAccountingPurchaseorderResponse>} - The async response
+     */
+    public CompletableFuture<PatchAccountingPurchaseorderResponse> patchAccountingPurchaseorder(@Nonnull PatchAccountingPurchaseorderRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchAccountingPurchaseorderRequest, PatchAccountingPurchaseorderResponse> operation
-              = new PatchAccountingPurchaseorder.Async(sdkConfiguration, _headers);
+              = new PatchAccountingPurchaseorder.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -3554,8 +4984,22 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<PatchAccountingQuoteResponse>} - The async response
      */
     public CompletableFuture<PatchAccountingQuoteResponse> patchAccountingQuote(@Nonnull PatchAccountingQuoteRequest request) {
+        return patchAccountingQuote(request, null);
+    }
+
+    /**
+     * Update a quote
+     * 
+     * <p>Updates the AccountingQuote identified by `id`. Provide the unified AccountingQuote fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchAccountingQuoteResponse>} - The async response
+     */
+    public CompletableFuture<PatchAccountingQuoteResponse> patchAccountingQuote(@Nonnull PatchAccountingQuoteRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchAccountingQuoteRequest, PatchAccountingQuoteResponse> operation
-              = new PatchAccountingQuote.Async(sdkConfiguration, _headers);
+              = new PatchAccountingQuote.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -3583,8 +5027,22 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<PatchAccountingSalesorderResponse>} - The async response
      */
     public CompletableFuture<PatchAccountingSalesorderResponse> patchAccountingSalesorder(@Nonnull PatchAccountingSalesorderRequest request) {
+        return patchAccountingSalesorder(request, null);
+    }
+
+    /**
+     * Update a salesorder
+     * 
+     * <p>Updates the AccountingSalesorder identified by `id`. Provide the unified AccountingSalesorder fields
+     * to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchAccountingSalesorderResponse>} - The async response
+     */
+    public CompletableFuture<PatchAccountingSalesorderResponse> patchAccountingSalesorder(@Nonnull PatchAccountingSalesorderRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchAccountingSalesorderRequest, PatchAccountingSalesorderResponse> operation
-              = new PatchAccountingSalesorder.Async(sdkConfiguration, _headers);
+              = new PatchAccountingSalesorder.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -3612,8 +5070,22 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<PatchAccountingTaxrateResponse>} - The async response
      */
     public CompletableFuture<PatchAccountingTaxrateResponse> patchAccountingTaxrate(@Nonnull PatchAccountingTaxrateRequest request) {
+        return patchAccountingTaxrate(request, null);
+    }
+
+    /**
+     * Update a taxrate
+     * 
+     * <p>Updates the AccountingTaxrate identified by `id`. Provide the unified AccountingTaxrate fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchAccountingTaxrateResponse>} - The async response
+     */
+    public CompletableFuture<PatchAccountingTaxrateResponse> patchAccountingTaxrate(@Nonnull PatchAccountingTaxrateRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchAccountingTaxrateRequest, PatchAccountingTaxrateResponse> operation
-              = new PatchAccountingTaxrate.Async(sdkConfiguration, _headers);
+              = new PatchAccountingTaxrate.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -3641,8 +5113,22 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<PatchAccountingTransactionResponse>} - The async response
      */
     public CompletableFuture<PatchAccountingTransactionResponse> patchAccountingTransaction(@Nonnull PatchAccountingTransactionRequest request) {
+        return patchAccountingTransaction(request, null);
+    }
+
+    /**
+     * Update a transaction
+     * 
+     * <p>Updates the AccountingTransaction identified by `id`. Provide the unified AccountingTransaction
+     * fields to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchAccountingTransactionResponse>} - The async response
+     */
+    public CompletableFuture<PatchAccountingTransactionResponse> patchAccountingTransaction(@Nonnull PatchAccountingTransactionRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchAccountingTransactionRequest, PatchAccountingTransactionResponse> operation
-              = new PatchAccountingTransaction.Async(sdkConfiguration, _headers);
+              = new PatchAccountingTransaction.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -3670,8 +5156,22 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<PatchAccountingVendorcreditResponse>} - The async response
      */
     public CompletableFuture<PatchAccountingVendorcreditResponse> patchAccountingVendorcredit(@Nonnull PatchAccountingVendorcreditRequest request) {
+        return patchAccountingVendorcredit(request, null);
+    }
+
+    /**
+     * Update a vendorcredit
+     * 
+     * <p>Updates the AccountingVendorcredit identified by `id`. Provide the unified AccountingVendorcredit
+     * fields to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchAccountingVendorcreditResponse>} - The async response
+     */
+    public CompletableFuture<PatchAccountingVendorcreditResponse> patchAccountingVendorcredit(@Nonnull PatchAccountingVendorcreditRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchAccountingVendorcreditRequest, PatchAccountingVendorcreditResponse> operation
-              = new PatchAccountingVendorcredit.Async(sdkConfiguration, _headers);
+              = new PatchAccountingVendorcredit.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -3697,8 +5197,21 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<RemoveAccountingAccountResponse>} - The async response
      */
     public CompletableFuture<RemoveAccountingAccountResponse> removeAccountingAccount(@Nonnull RemoveAccountingAccountRequest request) {
+        return removeAccountingAccount(request, null);
+    }
+
+    /**
+     * Remove an account
+     * 
+     * <p>Deletes the AccountingAccount identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveAccountingAccountResponse>} - The async response
+     */
+    public CompletableFuture<RemoveAccountingAccountResponse> removeAccountingAccount(@Nonnull RemoveAccountingAccountRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveAccountingAccountRequest, RemoveAccountingAccountResponse> operation
-              = new RemoveAccountingAccount.Async(sdkConfiguration, _headers);
+              = new RemoveAccountingAccount.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -3724,8 +5237,21 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<RemoveAccountingBankfeedaccountResponse>} - The async response
      */
     public CompletableFuture<RemoveAccountingBankfeedaccountResponse> removeAccountingBankfeedaccount(@Nonnull RemoveAccountingBankfeedaccountRequest request) {
+        return removeAccountingBankfeedaccount(request, null);
+    }
+
+    /**
+     * Remove a bankfeedaccount
+     * 
+     * <p>Deletes the AccountingBankfeedaccount identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveAccountingBankfeedaccountResponse>} - The async response
+     */
+    public CompletableFuture<RemoveAccountingBankfeedaccountResponse> removeAccountingBankfeedaccount(@Nonnull RemoveAccountingBankfeedaccountRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveAccountingBankfeedaccountRequest, RemoveAccountingBankfeedaccountResponse> operation
-              = new RemoveAccountingBankfeedaccount.Async(sdkConfiguration, _headers);
+              = new RemoveAccountingBankfeedaccount.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -3751,8 +5277,21 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<RemoveAccountingBankfeedtransactionResponse>} - The async response
      */
     public CompletableFuture<RemoveAccountingBankfeedtransactionResponse> removeAccountingBankfeedtransaction(@Nonnull RemoveAccountingBankfeedtransactionRequest request) {
+        return removeAccountingBankfeedtransaction(request, null);
+    }
+
+    /**
+     * Remove a bankfeedtransaction
+     * 
+     * <p>Deletes the AccountingBankfeedtransaction identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveAccountingBankfeedtransactionResponse>} - The async response
+     */
+    public CompletableFuture<RemoveAccountingBankfeedtransactionResponse> removeAccountingBankfeedtransaction(@Nonnull RemoveAccountingBankfeedtransactionRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveAccountingBankfeedtransactionRequest, RemoveAccountingBankfeedtransactionResponse> operation
-              = new RemoveAccountingBankfeedtransaction.Async(sdkConfiguration, _headers);
+              = new RemoveAccountingBankfeedtransaction.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -3778,8 +5317,21 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<RemoveAccountingBillResponse>} - The async response
      */
     public CompletableFuture<RemoveAccountingBillResponse> removeAccountingBill(@Nonnull RemoveAccountingBillRequest request) {
+        return removeAccountingBill(request, null);
+    }
+
+    /**
+     * Remove a bill
+     * 
+     * <p>Deletes the AccountingBill identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveAccountingBillResponse>} - The async response
+     */
+    public CompletableFuture<RemoveAccountingBillResponse> removeAccountingBill(@Nonnull RemoveAccountingBillRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveAccountingBillRequest, RemoveAccountingBillResponse> operation
-              = new RemoveAccountingBill.Async(sdkConfiguration, _headers);
+              = new RemoveAccountingBill.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -3805,8 +5357,21 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<RemoveAccountingCategoryResponse>} - The async response
      */
     public CompletableFuture<RemoveAccountingCategoryResponse> removeAccountingCategory(@Nonnull RemoveAccountingCategoryRequest request) {
+        return removeAccountingCategory(request, null);
+    }
+
+    /**
+     * Remove a category
+     * 
+     * <p>Deletes the AccountingCategory identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveAccountingCategoryResponse>} - The async response
+     */
+    public CompletableFuture<RemoveAccountingCategoryResponse> removeAccountingCategory(@Nonnull RemoveAccountingCategoryRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveAccountingCategoryRequest, RemoveAccountingCategoryResponse> operation
-              = new RemoveAccountingCategory.Async(sdkConfiguration, _headers);
+              = new RemoveAccountingCategory.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -3832,8 +5397,21 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<RemoveAccountingContactResponse>} - The async response
      */
     public CompletableFuture<RemoveAccountingContactResponse> removeAccountingContact(@Nonnull RemoveAccountingContactRequest request) {
+        return removeAccountingContact(request, null);
+    }
+
+    /**
+     * Remove a contact
+     * 
+     * <p>Deletes the AccountingContact identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveAccountingContactResponse>} - The async response
+     */
+    public CompletableFuture<RemoveAccountingContactResponse> removeAccountingContact(@Nonnull RemoveAccountingContactRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveAccountingContactRequest, RemoveAccountingContactResponse> operation
-              = new RemoveAccountingContact.Async(sdkConfiguration, _headers);
+              = new RemoveAccountingContact.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -3859,8 +5437,21 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<RemoveAccountingCreditmemoResponse>} - The async response
      */
     public CompletableFuture<RemoveAccountingCreditmemoResponse> removeAccountingCreditmemo(@Nonnull RemoveAccountingCreditmemoRequest request) {
+        return removeAccountingCreditmemo(request, null);
+    }
+
+    /**
+     * Remove a creditmemo
+     * 
+     * <p>Deletes the AccountingCreditmemo identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveAccountingCreditmemoResponse>} - The async response
+     */
+    public CompletableFuture<RemoveAccountingCreditmemoResponse> removeAccountingCreditmemo(@Nonnull RemoveAccountingCreditmemoRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveAccountingCreditmemoRequest, RemoveAccountingCreditmemoResponse> operation
-              = new RemoveAccountingCreditmemo.Async(sdkConfiguration, _headers);
+              = new RemoveAccountingCreditmemo.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -3886,8 +5477,21 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<RemoveAccountingExpenseResponse>} - The async response
      */
     public CompletableFuture<RemoveAccountingExpenseResponse> removeAccountingExpense(@Nonnull RemoveAccountingExpenseRequest request) {
+        return removeAccountingExpense(request, null);
+    }
+
+    /**
+     * Remove an expense
+     * 
+     * <p>Deletes the AccountingExpense identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveAccountingExpenseResponse>} - The async response
+     */
+    public CompletableFuture<RemoveAccountingExpenseResponse> removeAccountingExpense(@Nonnull RemoveAccountingExpenseRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveAccountingExpenseRequest, RemoveAccountingExpenseResponse> operation
-              = new RemoveAccountingExpense.Async(sdkConfiguration, _headers);
+              = new RemoveAccountingExpense.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -3913,8 +5517,21 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<RemoveAccountingExpensereportResponse>} - The async response
      */
     public CompletableFuture<RemoveAccountingExpensereportResponse> removeAccountingExpensereport(@Nonnull RemoveAccountingExpensereportRequest request) {
+        return removeAccountingExpensereport(request, null);
+    }
+
+    /**
+     * Remove an expensereport
+     * 
+     * <p>Deletes the AccountingExpensereport identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveAccountingExpensereportResponse>} - The async response
+     */
+    public CompletableFuture<RemoveAccountingExpensereportResponse> removeAccountingExpensereport(@Nonnull RemoveAccountingExpensereportRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveAccountingExpensereportRequest, RemoveAccountingExpensereportResponse> operation
-              = new RemoveAccountingExpensereport.Async(sdkConfiguration, _headers);
+              = new RemoveAccountingExpensereport.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -3940,8 +5557,21 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<RemoveAccountingInvoiceResponse>} - The async response
      */
     public CompletableFuture<RemoveAccountingInvoiceResponse> removeAccountingInvoice(@Nonnull RemoveAccountingInvoiceRequest request) {
+        return removeAccountingInvoice(request, null);
+    }
+
+    /**
+     * Remove an invoice
+     * 
+     * <p>Deletes the AccountingInvoice identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveAccountingInvoiceResponse>} - The async response
+     */
+    public CompletableFuture<RemoveAccountingInvoiceResponse> removeAccountingInvoice(@Nonnull RemoveAccountingInvoiceRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveAccountingInvoiceRequest, RemoveAccountingInvoiceResponse> operation
-              = new RemoveAccountingInvoice.Async(sdkConfiguration, _headers);
+              = new RemoveAccountingInvoice.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -3967,8 +5597,21 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<RemoveAccountingJournalResponse>} - The async response
      */
     public CompletableFuture<RemoveAccountingJournalResponse> removeAccountingJournal(@Nonnull RemoveAccountingJournalRequest request) {
+        return removeAccountingJournal(request, null);
+    }
+
+    /**
+     * Remove a journal
+     * 
+     * <p>Deletes the AccountingJournal identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveAccountingJournalResponse>} - The async response
+     */
+    public CompletableFuture<RemoveAccountingJournalResponse> removeAccountingJournal(@Nonnull RemoveAccountingJournalRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveAccountingJournalRequest, RemoveAccountingJournalResponse> operation
-              = new RemoveAccountingJournal.Async(sdkConfiguration, _headers);
+              = new RemoveAccountingJournal.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -3998,8 +5641,23 @@ public class AsyncAccounting {
      */
     @Deprecated
     public CompletableFuture<RemoveAccountingOrderResponse> removeAccountingOrder(@Nonnull RemoveAccountingOrderRequest request) {
+        return removeAccountingOrder(request, null);
+    }
+
+    /**
+     * Remove an order
+     * 
+     * <p>Deletes the AccountingOrder identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveAccountingOrderResponse>} - The async response
+     * @deprecated method: This will be removed in a future release, please migrate away from it as soon as possible.
+     */
+    @Deprecated
+    public CompletableFuture<RemoveAccountingOrderResponse> removeAccountingOrder(@Nonnull RemoveAccountingOrderRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveAccountingOrderRequest, RemoveAccountingOrderResponse> operation
-              = new RemoveAccountingOrder.Async(sdkConfiguration, _headers);
+              = new RemoveAccountingOrder.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -4025,8 +5683,21 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<RemoveAccountingPaymenttermResponse>} - The async response
      */
     public CompletableFuture<RemoveAccountingPaymenttermResponse> removeAccountingPaymentterm(@Nonnull RemoveAccountingPaymenttermRequest request) {
+        return removeAccountingPaymentterm(request, null);
+    }
+
+    /**
+     * Remove a paymentterm
+     * 
+     * <p>Deletes the AccountingPaymentterm identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveAccountingPaymenttermResponse>} - The async response
+     */
+    public CompletableFuture<RemoveAccountingPaymenttermResponse> removeAccountingPaymentterm(@Nonnull RemoveAccountingPaymenttermRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveAccountingPaymenttermRequest, RemoveAccountingPaymenttermResponse> operation
-              = new RemoveAccountingPaymentterm.Async(sdkConfiguration, _headers);
+              = new RemoveAccountingPaymentterm.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -4052,8 +5723,21 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<RemoveAccountingProjectResponse>} - The async response
      */
     public CompletableFuture<RemoveAccountingProjectResponse> removeAccountingProject(@Nonnull RemoveAccountingProjectRequest request) {
+        return removeAccountingProject(request, null);
+    }
+
+    /**
+     * Remove a project
+     * 
+     * <p>Deletes the AccountingProject identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveAccountingProjectResponse>} - The async response
+     */
+    public CompletableFuture<RemoveAccountingProjectResponse> removeAccountingProject(@Nonnull RemoveAccountingProjectRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveAccountingProjectRequest, RemoveAccountingProjectResponse> operation
-              = new RemoveAccountingProject.Async(sdkConfiguration, _headers);
+              = new RemoveAccountingProject.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -4079,8 +5763,21 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<RemoveAccountingPurchaseorderResponse>} - The async response
      */
     public CompletableFuture<RemoveAccountingPurchaseorderResponse> removeAccountingPurchaseorder(@Nonnull RemoveAccountingPurchaseorderRequest request) {
+        return removeAccountingPurchaseorder(request, null);
+    }
+
+    /**
+     * Remove a purchaseorder
+     * 
+     * <p>Deletes the AccountingPurchaseorder identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveAccountingPurchaseorderResponse>} - The async response
+     */
+    public CompletableFuture<RemoveAccountingPurchaseorderResponse> removeAccountingPurchaseorder(@Nonnull RemoveAccountingPurchaseorderRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveAccountingPurchaseorderRequest, RemoveAccountingPurchaseorderResponse> operation
-              = new RemoveAccountingPurchaseorder.Async(sdkConfiguration, _headers);
+              = new RemoveAccountingPurchaseorder.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -4106,8 +5803,21 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<RemoveAccountingQuoteResponse>} - The async response
      */
     public CompletableFuture<RemoveAccountingQuoteResponse> removeAccountingQuote(@Nonnull RemoveAccountingQuoteRequest request) {
+        return removeAccountingQuote(request, null);
+    }
+
+    /**
+     * Remove a quote
+     * 
+     * <p>Deletes the AccountingQuote identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveAccountingQuoteResponse>} - The async response
+     */
+    public CompletableFuture<RemoveAccountingQuoteResponse> removeAccountingQuote(@Nonnull RemoveAccountingQuoteRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveAccountingQuoteRequest, RemoveAccountingQuoteResponse> operation
-              = new RemoveAccountingQuote.Async(sdkConfiguration, _headers);
+              = new RemoveAccountingQuote.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -4133,8 +5843,21 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<RemoveAccountingSalesorderResponse>} - The async response
      */
     public CompletableFuture<RemoveAccountingSalesorderResponse> removeAccountingSalesorder(@Nonnull RemoveAccountingSalesorderRequest request) {
+        return removeAccountingSalesorder(request, null);
+    }
+
+    /**
+     * Remove a salesorder
+     * 
+     * <p>Deletes the AccountingSalesorder identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveAccountingSalesorderResponse>} - The async response
+     */
+    public CompletableFuture<RemoveAccountingSalesorderResponse> removeAccountingSalesorder(@Nonnull RemoveAccountingSalesorderRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveAccountingSalesorderRequest, RemoveAccountingSalesorderResponse> operation
-              = new RemoveAccountingSalesorder.Async(sdkConfiguration, _headers);
+              = new RemoveAccountingSalesorder.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -4160,8 +5883,21 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<RemoveAccountingTaxrateResponse>} - The async response
      */
     public CompletableFuture<RemoveAccountingTaxrateResponse> removeAccountingTaxrate(@Nonnull RemoveAccountingTaxrateRequest request) {
+        return removeAccountingTaxrate(request, null);
+    }
+
+    /**
+     * Remove a taxrate
+     * 
+     * <p>Deletes the AccountingTaxrate identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveAccountingTaxrateResponse>} - The async response
+     */
+    public CompletableFuture<RemoveAccountingTaxrateResponse> removeAccountingTaxrate(@Nonnull RemoveAccountingTaxrateRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveAccountingTaxrateRequest, RemoveAccountingTaxrateResponse> operation
-              = new RemoveAccountingTaxrate.Async(sdkConfiguration, _headers);
+              = new RemoveAccountingTaxrate.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -4187,8 +5923,21 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<RemoveAccountingTransactionResponse>} - The async response
      */
     public CompletableFuture<RemoveAccountingTransactionResponse> removeAccountingTransaction(@Nonnull RemoveAccountingTransactionRequest request) {
+        return removeAccountingTransaction(request, null);
+    }
+
+    /**
+     * Remove a transaction
+     * 
+     * <p>Deletes the AccountingTransaction identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveAccountingTransactionResponse>} - The async response
+     */
+    public CompletableFuture<RemoveAccountingTransactionResponse> removeAccountingTransaction(@Nonnull RemoveAccountingTransactionRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveAccountingTransactionRequest, RemoveAccountingTransactionResponse> operation
-              = new RemoveAccountingTransaction.Async(sdkConfiguration, _headers);
+              = new RemoveAccountingTransaction.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -4214,8 +5963,21 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<RemoveAccountingVendorcreditResponse>} - The async response
      */
     public CompletableFuture<RemoveAccountingVendorcreditResponse> removeAccountingVendorcredit(@Nonnull RemoveAccountingVendorcreditRequest request) {
+        return removeAccountingVendorcredit(request, null);
+    }
+
+    /**
+     * Remove a vendorcredit
+     * 
+     * <p>Deletes the AccountingVendorcredit identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveAccountingVendorcreditResponse>} - The async response
+     */
+    public CompletableFuture<RemoveAccountingVendorcreditResponse> removeAccountingVendorcredit(@Nonnull RemoveAccountingVendorcreditRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveAccountingVendorcreditRequest, RemoveAccountingVendorcreditResponse> operation
-              = new RemoveAccountingVendorcredit.Async(sdkConfiguration, _headers);
+              = new RemoveAccountingVendorcredit.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -4243,8 +6005,22 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<UpdateAccountingAccountResponse>} - The async response
      */
     public CompletableFuture<UpdateAccountingAccountResponse> updateAccountingAccount(@Nonnull UpdateAccountingAccountRequest request) {
+        return updateAccountingAccount(request, null);
+    }
+
+    /**
+     * Update an account
+     * 
+     * <p>Updates the AccountingAccount identified by `id`. Provide the unified AccountingAccount fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateAccountingAccountResponse>} - The async response
+     */
+    public CompletableFuture<UpdateAccountingAccountResponse> updateAccountingAccount(@Nonnull UpdateAccountingAccountRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateAccountingAccountRequest, UpdateAccountingAccountResponse> operation
-              = new UpdateAccountingAccount.Async(sdkConfiguration, _headers);
+              = new UpdateAccountingAccount.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -4272,8 +6048,22 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<UpdateAccountingBankfeedaccountResponse>} - The async response
      */
     public CompletableFuture<UpdateAccountingBankfeedaccountResponse> updateAccountingBankfeedaccount(@Nonnull UpdateAccountingBankfeedaccountRequest request) {
+        return updateAccountingBankfeedaccount(request, null);
+    }
+
+    /**
+     * Update a bankfeedaccount
+     * 
+     * <p>Updates the AccountingBankfeedaccount identified by `id`. Provide the unified
+     * AccountingBankfeedaccount fields to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateAccountingBankfeedaccountResponse>} - The async response
+     */
+    public CompletableFuture<UpdateAccountingBankfeedaccountResponse> updateAccountingBankfeedaccount(@Nonnull UpdateAccountingBankfeedaccountRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateAccountingBankfeedaccountRequest, UpdateAccountingBankfeedaccountResponse> operation
-              = new UpdateAccountingBankfeedaccount.Async(sdkConfiguration, _headers);
+              = new UpdateAccountingBankfeedaccount.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -4301,8 +6091,22 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<UpdateAccountingBankfeedtransactionResponse>} - The async response
      */
     public CompletableFuture<UpdateAccountingBankfeedtransactionResponse> updateAccountingBankfeedtransaction(@Nonnull UpdateAccountingBankfeedtransactionRequest request) {
+        return updateAccountingBankfeedtransaction(request, null);
+    }
+
+    /**
+     * Update a bankfeedtransaction
+     * 
+     * <p>Updates the AccountingBankfeedtransaction identified by `id`. Provide the unified
+     * AccountingBankfeedtransaction fields to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateAccountingBankfeedtransactionResponse>} - The async response
+     */
+    public CompletableFuture<UpdateAccountingBankfeedtransactionResponse> updateAccountingBankfeedtransaction(@Nonnull UpdateAccountingBankfeedtransactionRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateAccountingBankfeedtransactionRequest, UpdateAccountingBankfeedtransactionResponse> operation
-              = new UpdateAccountingBankfeedtransaction.Async(sdkConfiguration, _headers);
+              = new UpdateAccountingBankfeedtransaction.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -4330,8 +6134,22 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<UpdateAccountingBillResponse>} - The async response
      */
     public CompletableFuture<UpdateAccountingBillResponse> updateAccountingBill(@Nonnull UpdateAccountingBillRequest request) {
+        return updateAccountingBill(request, null);
+    }
+
+    /**
+     * Update a bill
+     * 
+     * <p>Updates the AccountingBill identified by `id`. Provide the unified AccountingBill fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateAccountingBillResponse>} - The async response
+     */
+    public CompletableFuture<UpdateAccountingBillResponse> updateAccountingBill(@Nonnull UpdateAccountingBillRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateAccountingBillRequest, UpdateAccountingBillResponse> operation
-              = new UpdateAccountingBill.Async(sdkConfiguration, _headers);
+              = new UpdateAccountingBill.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -4359,8 +6177,22 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<UpdateAccountingCategoryResponse>} - The async response
      */
     public CompletableFuture<UpdateAccountingCategoryResponse> updateAccountingCategory(@Nonnull UpdateAccountingCategoryRequest request) {
+        return updateAccountingCategory(request, null);
+    }
+
+    /**
+     * Update a category
+     * 
+     * <p>Updates the AccountingCategory identified by `id`. Provide the unified AccountingCategory fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateAccountingCategoryResponse>} - The async response
+     */
+    public CompletableFuture<UpdateAccountingCategoryResponse> updateAccountingCategory(@Nonnull UpdateAccountingCategoryRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateAccountingCategoryRequest, UpdateAccountingCategoryResponse> operation
-              = new UpdateAccountingCategory.Async(sdkConfiguration, _headers);
+              = new UpdateAccountingCategory.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -4388,8 +6220,22 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<UpdateAccountingContactResponse>} - The async response
      */
     public CompletableFuture<UpdateAccountingContactResponse> updateAccountingContact(@Nonnull UpdateAccountingContactRequest request) {
+        return updateAccountingContact(request, null);
+    }
+
+    /**
+     * Update a contact
+     * 
+     * <p>Updates the AccountingContact identified by `id`. Provide the unified AccountingContact fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateAccountingContactResponse>} - The async response
+     */
+    public CompletableFuture<UpdateAccountingContactResponse> updateAccountingContact(@Nonnull UpdateAccountingContactRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateAccountingContactRequest, UpdateAccountingContactResponse> operation
-              = new UpdateAccountingContact.Async(sdkConfiguration, _headers);
+              = new UpdateAccountingContact.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -4417,8 +6263,22 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<UpdateAccountingCreditmemoResponse>} - The async response
      */
     public CompletableFuture<UpdateAccountingCreditmemoResponse> updateAccountingCreditmemo(@Nonnull UpdateAccountingCreditmemoRequest request) {
+        return updateAccountingCreditmemo(request, null);
+    }
+
+    /**
+     * Update a creditmemo
+     * 
+     * <p>Updates the AccountingCreditmemo identified by `id`. Provide the unified AccountingCreditmemo fields
+     * to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateAccountingCreditmemoResponse>} - The async response
+     */
+    public CompletableFuture<UpdateAccountingCreditmemoResponse> updateAccountingCreditmemo(@Nonnull UpdateAccountingCreditmemoRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateAccountingCreditmemoRequest, UpdateAccountingCreditmemoResponse> operation
-              = new UpdateAccountingCreditmemo.Async(sdkConfiguration, _headers);
+              = new UpdateAccountingCreditmemo.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -4446,8 +6306,22 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<UpdateAccountingExpenseResponse>} - The async response
      */
     public CompletableFuture<UpdateAccountingExpenseResponse> updateAccountingExpense(@Nonnull UpdateAccountingExpenseRequest request) {
+        return updateAccountingExpense(request, null);
+    }
+
+    /**
+     * Update an expense
+     * 
+     * <p>Updates the AccountingExpense identified by `id`. Provide the unified AccountingExpense fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateAccountingExpenseResponse>} - The async response
+     */
+    public CompletableFuture<UpdateAccountingExpenseResponse> updateAccountingExpense(@Nonnull UpdateAccountingExpenseRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateAccountingExpenseRequest, UpdateAccountingExpenseResponse> operation
-              = new UpdateAccountingExpense.Async(sdkConfiguration, _headers);
+              = new UpdateAccountingExpense.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -4475,8 +6349,22 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<UpdateAccountingExpensereportResponse>} - The async response
      */
     public CompletableFuture<UpdateAccountingExpensereportResponse> updateAccountingExpensereport(@Nonnull UpdateAccountingExpensereportRequest request) {
+        return updateAccountingExpensereport(request, null);
+    }
+
+    /**
+     * Update an expensereport
+     * 
+     * <p>Updates the AccountingExpensereport identified by `id`. Provide the unified AccountingExpensereport
+     * fields to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateAccountingExpensereportResponse>} - The async response
+     */
+    public CompletableFuture<UpdateAccountingExpensereportResponse> updateAccountingExpensereport(@Nonnull UpdateAccountingExpensereportRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateAccountingExpensereportRequest, UpdateAccountingExpensereportResponse> operation
-              = new UpdateAccountingExpensereport.Async(sdkConfiguration, _headers);
+              = new UpdateAccountingExpensereport.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -4504,8 +6392,22 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<UpdateAccountingInvoiceResponse>} - The async response
      */
     public CompletableFuture<UpdateAccountingInvoiceResponse> updateAccountingInvoice(@Nonnull UpdateAccountingInvoiceRequest request) {
+        return updateAccountingInvoice(request, null);
+    }
+
+    /**
+     * Update an invoice
+     * 
+     * <p>Updates the AccountingInvoice identified by `id`. Provide the unified AccountingInvoice fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateAccountingInvoiceResponse>} - The async response
+     */
+    public CompletableFuture<UpdateAccountingInvoiceResponse> updateAccountingInvoice(@Nonnull UpdateAccountingInvoiceRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateAccountingInvoiceRequest, UpdateAccountingInvoiceResponse> operation
-              = new UpdateAccountingInvoice.Async(sdkConfiguration, _headers);
+              = new UpdateAccountingInvoice.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -4533,8 +6435,22 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<UpdateAccountingJournalResponse>} - The async response
      */
     public CompletableFuture<UpdateAccountingJournalResponse> updateAccountingJournal(@Nonnull UpdateAccountingJournalRequest request) {
+        return updateAccountingJournal(request, null);
+    }
+
+    /**
+     * Update a journal
+     * 
+     * <p>Updates the AccountingJournal identified by `id`. Provide the unified AccountingJournal fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateAccountingJournalResponse>} - The async response
+     */
+    public CompletableFuture<UpdateAccountingJournalResponse> updateAccountingJournal(@Nonnull UpdateAccountingJournalRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateAccountingJournalRequest, UpdateAccountingJournalResponse> operation
-              = new UpdateAccountingJournal.Async(sdkConfiguration, _headers);
+              = new UpdateAccountingJournal.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -4566,8 +6482,24 @@ public class AsyncAccounting {
      */
     @Deprecated
     public CompletableFuture<UpdateAccountingOrderResponse> updateAccountingOrder(@Nonnull UpdateAccountingOrderRequest request) {
+        return updateAccountingOrder(request, null);
+    }
+
+    /**
+     * Update an order
+     * 
+     * <p>Updates the AccountingOrder identified by `id`. Provide the unified AccountingOrder fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateAccountingOrderResponse>} - The async response
+     * @deprecated method: This will be removed in a future release, please migrate away from it as soon as possible.
+     */
+    @Deprecated
+    public CompletableFuture<UpdateAccountingOrderResponse> updateAccountingOrder(@Nonnull UpdateAccountingOrderRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateAccountingOrderRequest, UpdateAccountingOrderResponse> operation
-              = new UpdateAccountingOrder.Async(sdkConfiguration, _headers);
+              = new UpdateAccountingOrder.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -4595,8 +6527,22 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<UpdateAccountingPaymenttermResponse>} - The async response
      */
     public CompletableFuture<UpdateAccountingPaymenttermResponse> updateAccountingPaymentterm(@Nonnull UpdateAccountingPaymenttermRequest request) {
+        return updateAccountingPaymentterm(request, null);
+    }
+
+    /**
+     * Update a paymentterm
+     * 
+     * <p>Updates the AccountingPaymentterm identified by `id`. Provide the unified AccountingPaymentterm
+     * fields to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateAccountingPaymenttermResponse>} - The async response
+     */
+    public CompletableFuture<UpdateAccountingPaymenttermResponse> updateAccountingPaymentterm(@Nonnull UpdateAccountingPaymenttermRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateAccountingPaymenttermRequest, UpdateAccountingPaymenttermResponse> operation
-              = new UpdateAccountingPaymentterm.Async(sdkConfiguration, _headers);
+              = new UpdateAccountingPaymentterm.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -4624,8 +6570,22 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<UpdateAccountingProjectResponse>} - The async response
      */
     public CompletableFuture<UpdateAccountingProjectResponse> updateAccountingProject(@Nonnull UpdateAccountingProjectRequest request) {
+        return updateAccountingProject(request, null);
+    }
+
+    /**
+     * Update a project
+     * 
+     * <p>Updates the AccountingProject identified by `id`. Provide the unified AccountingProject fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateAccountingProjectResponse>} - The async response
+     */
+    public CompletableFuture<UpdateAccountingProjectResponse> updateAccountingProject(@Nonnull UpdateAccountingProjectRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateAccountingProjectRequest, UpdateAccountingProjectResponse> operation
-              = new UpdateAccountingProject.Async(sdkConfiguration, _headers);
+              = new UpdateAccountingProject.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -4653,8 +6613,22 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<UpdateAccountingPurchaseorderResponse>} - The async response
      */
     public CompletableFuture<UpdateAccountingPurchaseorderResponse> updateAccountingPurchaseorder(@Nonnull UpdateAccountingPurchaseorderRequest request) {
+        return updateAccountingPurchaseorder(request, null);
+    }
+
+    /**
+     * Update a purchaseorder
+     * 
+     * <p>Updates the AccountingPurchaseorder identified by `id`. Provide the unified AccountingPurchaseorder
+     * fields to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateAccountingPurchaseorderResponse>} - The async response
+     */
+    public CompletableFuture<UpdateAccountingPurchaseorderResponse> updateAccountingPurchaseorder(@Nonnull UpdateAccountingPurchaseorderRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateAccountingPurchaseorderRequest, UpdateAccountingPurchaseorderResponse> operation
-              = new UpdateAccountingPurchaseorder.Async(sdkConfiguration, _headers);
+              = new UpdateAccountingPurchaseorder.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -4682,8 +6656,22 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<UpdateAccountingQuoteResponse>} - The async response
      */
     public CompletableFuture<UpdateAccountingQuoteResponse> updateAccountingQuote(@Nonnull UpdateAccountingQuoteRequest request) {
+        return updateAccountingQuote(request, null);
+    }
+
+    /**
+     * Update a quote
+     * 
+     * <p>Updates the AccountingQuote identified by `id`. Provide the unified AccountingQuote fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateAccountingQuoteResponse>} - The async response
+     */
+    public CompletableFuture<UpdateAccountingQuoteResponse> updateAccountingQuote(@Nonnull UpdateAccountingQuoteRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateAccountingQuoteRequest, UpdateAccountingQuoteResponse> operation
-              = new UpdateAccountingQuote.Async(sdkConfiguration, _headers);
+              = new UpdateAccountingQuote.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -4711,8 +6699,22 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<UpdateAccountingSalesorderResponse>} - The async response
      */
     public CompletableFuture<UpdateAccountingSalesorderResponse> updateAccountingSalesorder(@Nonnull UpdateAccountingSalesorderRequest request) {
+        return updateAccountingSalesorder(request, null);
+    }
+
+    /**
+     * Update a salesorder
+     * 
+     * <p>Updates the AccountingSalesorder identified by `id`. Provide the unified AccountingSalesorder fields
+     * to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateAccountingSalesorderResponse>} - The async response
+     */
+    public CompletableFuture<UpdateAccountingSalesorderResponse> updateAccountingSalesorder(@Nonnull UpdateAccountingSalesorderRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateAccountingSalesorderRequest, UpdateAccountingSalesorderResponse> operation
-              = new UpdateAccountingSalesorder.Async(sdkConfiguration, _headers);
+              = new UpdateAccountingSalesorder.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -4740,8 +6742,22 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<UpdateAccountingTaxrateResponse>} - The async response
      */
     public CompletableFuture<UpdateAccountingTaxrateResponse> updateAccountingTaxrate(@Nonnull UpdateAccountingTaxrateRequest request) {
+        return updateAccountingTaxrate(request, null);
+    }
+
+    /**
+     * Update a taxrate
+     * 
+     * <p>Updates the AccountingTaxrate identified by `id`. Provide the unified AccountingTaxrate fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateAccountingTaxrateResponse>} - The async response
+     */
+    public CompletableFuture<UpdateAccountingTaxrateResponse> updateAccountingTaxrate(@Nonnull UpdateAccountingTaxrateRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateAccountingTaxrateRequest, UpdateAccountingTaxrateResponse> operation
-              = new UpdateAccountingTaxrate.Async(sdkConfiguration, _headers);
+              = new UpdateAccountingTaxrate.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -4769,8 +6785,22 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<UpdateAccountingTransactionResponse>} - The async response
      */
     public CompletableFuture<UpdateAccountingTransactionResponse> updateAccountingTransaction(@Nonnull UpdateAccountingTransactionRequest request) {
+        return updateAccountingTransaction(request, null);
+    }
+
+    /**
+     * Update a transaction
+     * 
+     * <p>Updates the AccountingTransaction identified by `id`. Provide the unified AccountingTransaction
+     * fields to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateAccountingTransactionResponse>} - The async response
+     */
+    public CompletableFuture<UpdateAccountingTransactionResponse> updateAccountingTransaction(@Nonnull UpdateAccountingTransactionRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateAccountingTransactionRequest, UpdateAccountingTransactionResponse> operation
-              = new UpdateAccountingTransaction.Async(sdkConfiguration, _headers);
+              = new UpdateAccountingTransaction.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -4798,8 +6828,22 @@ public class AsyncAccounting {
      * @return {@code CompletableFuture<UpdateAccountingVendorcreditResponse>} - The async response
      */
     public CompletableFuture<UpdateAccountingVendorcreditResponse> updateAccountingVendorcredit(@Nonnull UpdateAccountingVendorcreditRequest request) {
+        return updateAccountingVendorcredit(request, null);
+    }
+
+    /**
+     * Update a vendorcredit
+     * 
+     * <p>Updates the AccountingVendorcredit identified by `id`. Provide the unified AccountingVendorcredit
+     * fields to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateAccountingVendorcreditResponse>} - The async response
+     */
+    public CompletableFuture<UpdateAccountingVendorcreditResponse> updateAccountingVendorcredit(@Nonnull UpdateAccountingVendorcreditRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateAccountingVendorcreditRequest, UpdateAccountingVendorcreditResponse> operation
-              = new UpdateAccountingVendorcredit.Async(sdkConfiguration, _headers);
+              = new UpdateAccountingVendorcredit.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

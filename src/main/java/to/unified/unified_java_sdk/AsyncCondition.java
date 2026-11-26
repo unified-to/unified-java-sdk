@@ -6,16 +6,26 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
+import to.unified.unified_java_sdk.models.operations.GetFhirConditionRequest;
 import to.unified.unified_java_sdk.models.operations.GetHealthcareConditionRequest;
+import to.unified.unified_java_sdk.models.operations.ListFhirConditionsRequest;
 import to.unified.unified_java_sdk.models.operations.ListHealthcareConditionsRequest;
+import to.unified.unified_java_sdk.models.operations.async.GetFhirConditionRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetFhirConditionResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetHealthcareConditionRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetHealthcareConditionResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListFhirConditionsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListFhirConditionsResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListHealthcareConditionsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListHealthcareConditionsResponse;
+import to.unified.unified_java_sdk.operations.GetFhirCondition;
 import to.unified.unified_java_sdk.operations.GetHealthcareCondition;
+import to.unified.unified_java_sdk.operations.ListFhirConditions;
 import to.unified.unified_java_sdk.operations.ListHealthcareConditions;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncCondition {
@@ -35,6 +45,49 @@ public class AsyncCondition {
      */
     public Condition sync() {
         return syncSDK;
+    }
+
+
+    /**
+     * Read a Condition
+     * 
+     * <p>Responses use the application/fhir+json media type; errors are OperationOutcome resources. Read-only
+     * (FHIR R4 4.0.1).
+     * 
+     * @return The async call builder
+     */
+    public GetFhirConditionRequestBuilder getFhirCondition() {
+        return new GetFhirConditionRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Read a Condition
+     * 
+     * <p>Responses use the application/fhir+json media type; errors are OperationOutcome resources. Read-only
+     * (FHIR R4 4.0.1).
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<GetFhirConditionResponse>} - The async response
+     */
+    public CompletableFuture<GetFhirConditionResponse> getFhirCondition(@Nonnull GetFhirConditionRequest request) {
+        return getFhirCondition(request, null);
+    }
+
+    /**
+     * Read a Condition
+     * 
+     * <p>Responses use the application/fhir+json media type; errors are OperationOutcome resources. Read-only
+     * (FHIR R4 4.0.1).
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetFhirConditionResponse>} - The async response
+     */
+    public CompletableFuture<GetFhirConditionResponse> getFhirCondition(@Nonnull GetFhirConditionRequest request, @Nullable Options options) {
+        AsyncRequestOperation<GetFhirConditionRequest, GetFhirConditionResponse> operation
+              = new GetFhirCondition.Async(sdkConfiguration, options, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
     }
 
 
@@ -60,8 +113,65 @@ public class AsyncCondition {
      * @return {@code CompletableFuture<GetHealthcareConditionResponse>} - The async response
      */
     public CompletableFuture<GetHealthcareConditionResponse> getHealthcareCondition(@Nonnull GetHealthcareConditionRequest request) {
+        return getHealthcareCondition(request, null);
+    }
+
+    /**
+     * Retrieve a condition
+     * 
+     * <p>Retrieves a single HealthcareCondition by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetHealthcareConditionResponse>} - The async response
+     */
+    public CompletableFuture<GetHealthcareConditionResponse> getHealthcareCondition(@Nonnull GetHealthcareConditionRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetHealthcareConditionRequest, GetHealthcareConditionResponse> operation
-              = new GetHealthcareCondition.Async(sdkConfiguration, _headers);
+              = new GetHealthcareCondition.Async(sdkConfiguration, options, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Search Condition resources
+     * 
+     * <p>Returns a searchset Bundle; follow its next link for more pages. Responses use the
+     * application/fhir+json media type; errors are OperationOutcome resources. Read-only (FHIR R4 4.0.1).
+     * 
+     * @return The async call builder
+     */
+    public ListFhirConditionsRequestBuilder listFhirConditions() {
+        return new ListFhirConditionsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Search Condition resources
+     * 
+     * <p>Returns a searchset Bundle; follow its next link for more pages. Responses use the
+     * application/fhir+json media type; errors are OperationOutcome resources. Read-only (FHIR R4 4.0.1).
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<ListFhirConditionsResponse>} - The async response
+     */
+    public CompletableFuture<ListFhirConditionsResponse> listFhirConditions(@Nonnull ListFhirConditionsRequest request) {
+        return listFhirConditions(request, null);
+    }
+
+    /**
+     * Search Condition resources
+     * 
+     * <p>Returns a searchset Bundle; follow its next link for more pages. Responses use the
+     * application/fhir+json media type; errors are OperationOutcome resources. Read-only (FHIR R4 4.0.1).
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListFhirConditionsResponse>} - The async response
+     */
+    public CompletableFuture<ListFhirConditionsResponse> listFhirConditions(@Nonnull ListFhirConditionsRequest request, @Nullable Options options) {
+        AsyncRequestOperation<ListFhirConditionsRequest, ListFhirConditionsResponse> operation
+              = new ListFhirConditions.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -97,8 +207,26 @@ public class AsyncCondition {
      * @return {@code CompletableFuture<ListHealthcareConditionsResponse>} - The async response
      */
     public CompletableFuture<ListHealthcareConditionsResponse> listHealthcareConditions(@Nonnull ListHealthcareConditionsRequest request) {
+        return listHealthcareConditions(request, null);
+    }
+
+    /**
+     * List all conditions
+     * 
+     * <p>Returns a list of HealthcareConditions. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListHealthcareConditionsResponse>} - The async response
+     */
+    public CompletableFuture<ListHealthcareConditionsResponse> listHealthcareConditions(@Nonnull ListHealthcareConditionsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListHealthcareConditionsRequest, ListHealthcareConditionsResponse> operation
-              = new ListHealthcareConditions.Async(sdkConfiguration, _headers);
+              = new ListHealthcareConditions.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

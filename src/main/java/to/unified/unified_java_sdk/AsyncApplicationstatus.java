@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.GetAtsApplicationstatusRequest;
 import to.unified.unified_java_sdk.models.operations.ListAtsApplicationstatusesRequest;
@@ -16,6 +17,7 @@ import to.unified.unified_java_sdk.models.operations.async.ListAtsApplicationsta
 import to.unified.unified_java_sdk.operations.GetAtsApplicationstatus;
 import to.unified.unified_java_sdk.operations.ListAtsApplicationstatuses;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncApplicationstatus {
@@ -60,8 +62,22 @@ public class AsyncApplicationstatus {
      * @return {@code CompletableFuture<GetAtsApplicationstatusResponse>} - The async response
      */
     public CompletableFuture<GetAtsApplicationstatusResponse> getAtsApplicationstatus(@Nonnull GetAtsApplicationstatusRequest request) {
+        return getAtsApplicationstatus(request, null);
+    }
+
+    /**
+     * Retrieve an applicationstatus
+     * 
+     * <p>Retrieves a single AtsStatus by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetAtsApplicationstatusResponse>} - The async response
+     */
+    public CompletableFuture<GetAtsApplicationstatusResponse> getAtsApplicationstatus(@Nonnull GetAtsApplicationstatusRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetAtsApplicationstatusRequest, GetAtsApplicationstatusResponse> operation
-              = new GetAtsApplicationstatus.Async(sdkConfiguration, _headers);
+              = new GetAtsApplicationstatus.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -97,8 +113,26 @@ public class AsyncApplicationstatus {
      * @return {@code CompletableFuture<ListAtsApplicationstatusesResponse>} - The async response
      */
     public CompletableFuture<ListAtsApplicationstatusesResponse> listAtsApplicationstatuses(@Nonnull ListAtsApplicationstatusesRequest request) {
+        return listAtsApplicationstatuses(request, null);
+    }
+
+    /**
+     * List all applicationstatuses
+     * 
+     * <p>Returns a list of AtsStatuses. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListAtsApplicationstatusesResponse>} - The async response
+     */
+    public CompletableFuture<ListAtsApplicationstatusesResponse> listAtsApplicationstatuses(@Nonnull ListAtsApplicationstatusesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListAtsApplicationstatusesRequest, ListAtsApplicationstatusesResponse> operation
-              = new ListAtsApplicationstatuses.Async(sdkConfiguration, _headers);
+              = new ListAtsApplicationstatuses.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

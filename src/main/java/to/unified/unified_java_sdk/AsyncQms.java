@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateQmsActionRequest;
 import to.unified.unified_java_sdk.models.operations.CreateQmsAuditRequest;
@@ -88,6 +89,7 @@ import to.unified.unified_java_sdk.operations.UpdateQmsAudit;
 import to.unified.unified_java_sdk.operations.UpdateQmsInspection;
 import to.unified.unified_java_sdk.operations.UpdateQmsIssue;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncQms {
@@ -132,8 +134,22 @@ public class AsyncQms {
      * @return {@code CompletableFuture<CreateQmsActionResponse>} - The async response
      */
     public CompletableFuture<CreateQmsActionResponse> createQmsAction(@Nonnull CreateQmsActionRequest request) {
+        return createQmsAction(request, null);
+    }
+
+    /**
+     * Create an action
+     * 
+     * <p>Creates a QmsAction. Provide the unified QmsAction fields in the request body; they are mapped to
+     * the provider's API. Returns the created QmsAction.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateQmsActionResponse>} - The async response
+     */
+    public CompletableFuture<CreateQmsActionResponse> createQmsAction(@Nonnull CreateQmsActionRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateQmsActionRequest, CreateQmsActionResponse> operation
-              = new CreateQmsAction.Async(sdkConfiguration, _headers);
+              = new CreateQmsAction.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -161,8 +177,22 @@ public class AsyncQms {
      * @return {@code CompletableFuture<CreateQmsAuditResponse>} - The async response
      */
     public CompletableFuture<CreateQmsAuditResponse> createQmsAudit(@Nonnull CreateQmsAuditRequest request) {
+        return createQmsAudit(request, null);
+    }
+
+    /**
+     * Create an audit
+     * 
+     * <p>Creates a QmsAudit. Provide the unified QmsAudit fields in the request body; they are mapped to the
+     * provider's API. Returns the created QmsAudit.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateQmsAuditResponse>} - The async response
+     */
+    public CompletableFuture<CreateQmsAuditResponse> createQmsAudit(@Nonnull CreateQmsAuditRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateQmsAuditRequest, CreateQmsAuditResponse> operation
-              = new CreateQmsAudit.Async(sdkConfiguration, _headers);
+              = new CreateQmsAudit.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -190,8 +220,22 @@ public class AsyncQms {
      * @return {@code CompletableFuture<CreateQmsInspectionResponse>} - The async response
      */
     public CompletableFuture<CreateQmsInspectionResponse> createQmsInspection(@Nonnull CreateQmsInspectionRequest request) {
+        return createQmsInspection(request, null);
+    }
+
+    /**
+     * Create an inspection
+     * 
+     * <p>Creates a QmsInspection. Provide the unified QmsInspection fields in the request body; they are
+     * mapped to the provider's API. Returns the created QmsInspection.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateQmsInspectionResponse>} - The async response
+     */
+    public CompletableFuture<CreateQmsInspectionResponse> createQmsInspection(@Nonnull CreateQmsInspectionRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateQmsInspectionRequest, CreateQmsInspectionResponse> operation
-              = new CreateQmsInspection.Async(sdkConfiguration, _headers);
+              = new CreateQmsInspection.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -219,8 +263,22 @@ public class AsyncQms {
      * @return {@code CompletableFuture<CreateQmsIssueResponse>} - The async response
      */
     public CompletableFuture<CreateQmsIssueResponse> createQmsIssue(@Nonnull CreateQmsIssueRequest request) {
+        return createQmsIssue(request, null);
+    }
+
+    /**
+     * Create an issue
+     * 
+     * <p>Creates a QmsIssue. Provide the unified QmsIssue fields in the request body; they are mapped to the
+     * provider's API. Returns the created QmsIssue.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateQmsIssueResponse>} - The async response
+     */
+    public CompletableFuture<CreateQmsIssueResponse> createQmsIssue(@Nonnull CreateQmsIssueRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateQmsIssueRequest, CreateQmsIssueResponse> operation
-              = new CreateQmsIssue.Async(sdkConfiguration, _headers);
+              = new CreateQmsIssue.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -248,8 +306,22 @@ public class AsyncQms {
      * @return {@code CompletableFuture<GetQmsActionResponse>} - The async response
      */
     public CompletableFuture<GetQmsActionResponse> getQmsAction(@Nonnull GetQmsActionRequest request) {
+        return getQmsAction(request, null);
+    }
+
+    /**
+     * Retrieve an action
+     * 
+     * <p>Retrieves a single QmsAction by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetQmsActionResponse>} - The async response
+     */
+    public CompletableFuture<GetQmsActionResponse> getQmsAction(@Nonnull GetQmsActionRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetQmsActionRequest, GetQmsActionResponse> operation
-              = new GetQmsAction.Async(sdkConfiguration, _headers);
+              = new GetQmsAction.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -277,8 +349,22 @@ public class AsyncQms {
      * @return {@code CompletableFuture<GetQmsAuditResponse>} - The async response
      */
     public CompletableFuture<GetQmsAuditResponse> getQmsAudit(@Nonnull GetQmsAuditRequest request) {
+        return getQmsAudit(request, null);
+    }
+
+    /**
+     * Retrieve an audit
+     * 
+     * <p>Retrieves a single QmsAudit by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetQmsAuditResponse>} - The async response
+     */
+    public CompletableFuture<GetQmsAuditResponse> getQmsAudit(@Nonnull GetQmsAuditRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetQmsAuditRequest, GetQmsAuditResponse> operation
-              = new GetQmsAudit.Async(sdkConfiguration, _headers);
+              = new GetQmsAudit.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -306,8 +392,22 @@ public class AsyncQms {
      * @return {@code CompletableFuture<GetQmsInspectionResponse>} - The async response
      */
     public CompletableFuture<GetQmsInspectionResponse> getQmsInspection(@Nonnull GetQmsInspectionRequest request) {
+        return getQmsInspection(request, null);
+    }
+
+    /**
+     * Retrieve an inspection
+     * 
+     * <p>Retrieves a single QmsInspection by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetQmsInspectionResponse>} - The async response
+     */
+    public CompletableFuture<GetQmsInspectionResponse> getQmsInspection(@Nonnull GetQmsInspectionRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetQmsInspectionRequest, GetQmsInspectionResponse> operation
-              = new GetQmsInspection.Async(sdkConfiguration, _headers);
+              = new GetQmsInspection.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -335,8 +435,22 @@ public class AsyncQms {
      * @return {@code CompletableFuture<GetQmsIssueResponse>} - The async response
      */
     public CompletableFuture<GetQmsIssueResponse> getQmsIssue(@Nonnull GetQmsIssueRequest request) {
+        return getQmsIssue(request, null);
+    }
+
+    /**
+     * Retrieve an issue
+     * 
+     * <p>Retrieves a single QmsIssue by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetQmsIssueResponse>} - The async response
+     */
+    public CompletableFuture<GetQmsIssueResponse> getQmsIssue(@Nonnull GetQmsIssueRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetQmsIssueRequest, GetQmsIssueResponse> operation
-              = new GetQmsIssue.Async(sdkConfiguration, _headers);
+              = new GetQmsIssue.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -372,8 +486,26 @@ public class AsyncQms {
      * @return {@code CompletableFuture<ListQmsActionsResponse>} - The async response
      */
     public CompletableFuture<ListQmsActionsResponse> listQmsActions(@Nonnull ListQmsActionsRequest request) {
+        return listQmsActions(request, null);
+    }
+
+    /**
+     * List all actions
+     * 
+     * <p>Returns a list of QmsActions. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListQmsActionsResponse>} - The async response
+     */
+    public CompletableFuture<ListQmsActionsResponse> listQmsActions(@Nonnull ListQmsActionsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListQmsActionsRequest, ListQmsActionsResponse> operation
-              = new ListQmsActions.Async(sdkConfiguration, _headers);
+              = new ListQmsActions.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -409,8 +541,26 @@ public class AsyncQms {
      * @return {@code CompletableFuture<ListQmsAuditsResponse>} - The async response
      */
     public CompletableFuture<ListQmsAuditsResponse> listQmsAudits(@Nonnull ListQmsAuditsRequest request) {
+        return listQmsAudits(request, null);
+    }
+
+    /**
+     * List all audits
+     * 
+     * <p>Returns a list of QmsAudits. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListQmsAuditsResponse>} - The async response
+     */
+    public CompletableFuture<ListQmsAuditsResponse> listQmsAudits(@Nonnull ListQmsAuditsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListQmsAuditsRequest, ListQmsAuditsResponse> operation
-              = new ListQmsAudits.Async(sdkConfiguration, _headers);
+              = new ListQmsAudits.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -446,8 +596,26 @@ public class AsyncQms {
      * @return {@code CompletableFuture<ListQmsInspectionsResponse>} - The async response
      */
     public CompletableFuture<ListQmsInspectionsResponse> listQmsInspections(@Nonnull ListQmsInspectionsRequest request) {
+        return listQmsInspections(request, null);
+    }
+
+    /**
+     * List all inspections
+     * 
+     * <p>Returns a list of QmsInspections. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListQmsInspectionsResponse>} - The async response
+     */
+    public CompletableFuture<ListQmsInspectionsResponse> listQmsInspections(@Nonnull ListQmsInspectionsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListQmsInspectionsRequest, ListQmsInspectionsResponse> operation
-              = new ListQmsInspections.Async(sdkConfiguration, _headers);
+              = new ListQmsInspections.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -483,8 +651,26 @@ public class AsyncQms {
      * @return {@code CompletableFuture<ListQmsIssuesResponse>} - The async response
      */
     public CompletableFuture<ListQmsIssuesResponse> listQmsIssues(@Nonnull ListQmsIssuesRequest request) {
+        return listQmsIssues(request, null);
+    }
+
+    /**
+     * List all issues
+     * 
+     * <p>Returns a list of QmsIssues. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListQmsIssuesResponse>} - The async response
+     */
+    public CompletableFuture<ListQmsIssuesResponse> listQmsIssues(@Nonnull ListQmsIssuesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListQmsIssuesRequest, ListQmsIssuesResponse> operation
-              = new ListQmsIssues.Async(sdkConfiguration, _headers);
+              = new ListQmsIssues.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -512,8 +698,22 @@ public class AsyncQms {
      * @return {@code CompletableFuture<PatchQmsActionResponse>} - The async response
      */
     public CompletableFuture<PatchQmsActionResponse> patchQmsAction(@Nonnull PatchQmsActionRequest request) {
+        return patchQmsAction(request, null);
+    }
+
+    /**
+     * Update an action
+     * 
+     * <p>Updates the QmsAction identified by `id`. Provide the unified QmsAction fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchQmsActionResponse>} - The async response
+     */
+    public CompletableFuture<PatchQmsActionResponse> patchQmsAction(@Nonnull PatchQmsActionRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchQmsActionRequest, PatchQmsActionResponse> operation
-              = new PatchQmsAction.Async(sdkConfiguration, _headers);
+              = new PatchQmsAction.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -541,8 +741,22 @@ public class AsyncQms {
      * @return {@code CompletableFuture<PatchQmsAuditResponse>} - The async response
      */
     public CompletableFuture<PatchQmsAuditResponse> patchQmsAudit(@Nonnull PatchQmsAuditRequest request) {
+        return patchQmsAudit(request, null);
+    }
+
+    /**
+     * Update an audit
+     * 
+     * <p>Updates the QmsAudit identified by `id`. Provide the unified QmsAudit fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchQmsAuditResponse>} - The async response
+     */
+    public CompletableFuture<PatchQmsAuditResponse> patchQmsAudit(@Nonnull PatchQmsAuditRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchQmsAuditRequest, PatchQmsAuditResponse> operation
-              = new PatchQmsAudit.Async(sdkConfiguration, _headers);
+              = new PatchQmsAudit.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -570,8 +784,22 @@ public class AsyncQms {
      * @return {@code CompletableFuture<PatchQmsInspectionResponse>} - The async response
      */
     public CompletableFuture<PatchQmsInspectionResponse> patchQmsInspection(@Nonnull PatchQmsInspectionRequest request) {
+        return patchQmsInspection(request, null);
+    }
+
+    /**
+     * Update an inspection
+     * 
+     * <p>Updates the QmsInspection identified by `id`. Provide the unified QmsInspection fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchQmsInspectionResponse>} - The async response
+     */
+    public CompletableFuture<PatchQmsInspectionResponse> patchQmsInspection(@Nonnull PatchQmsInspectionRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchQmsInspectionRequest, PatchQmsInspectionResponse> operation
-              = new PatchQmsInspection.Async(sdkConfiguration, _headers);
+              = new PatchQmsInspection.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -599,8 +827,22 @@ public class AsyncQms {
      * @return {@code CompletableFuture<PatchQmsIssueResponse>} - The async response
      */
     public CompletableFuture<PatchQmsIssueResponse> patchQmsIssue(@Nonnull PatchQmsIssueRequest request) {
+        return patchQmsIssue(request, null);
+    }
+
+    /**
+     * Update an issue
+     * 
+     * <p>Updates the QmsIssue identified by `id`. Provide the unified QmsIssue fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchQmsIssueResponse>} - The async response
+     */
+    public CompletableFuture<PatchQmsIssueResponse> patchQmsIssue(@Nonnull PatchQmsIssueRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchQmsIssueRequest, PatchQmsIssueResponse> operation
-              = new PatchQmsIssue.Async(sdkConfiguration, _headers);
+              = new PatchQmsIssue.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -628,8 +870,22 @@ public class AsyncQms {
      * @return {@code CompletableFuture<UpdateQmsActionResponse>} - The async response
      */
     public CompletableFuture<UpdateQmsActionResponse> updateQmsAction(@Nonnull UpdateQmsActionRequest request) {
+        return updateQmsAction(request, null);
+    }
+
+    /**
+     * Update an action
+     * 
+     * <p>Updates the QmsAction identified by `id`. Provide the unified QmsAction fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateQmsActionResponse>} - The async response
+     */
+    public CompletableFuture<UpdateQmsActionResponse> updateQmsAction(@Nonnull UpdateQmsActionRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateQmsActionRequest, UpdateQmsActionResponse> operation
-              = new UpdateQmsAction.Async(sdkConfiguration, _headers);
+              = new UpdateQmsAction.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -657,8 +913,22 @@ public class AsyncQms {
      * @return {@code CompletableFuture<UpdateQmsAuditResponse>} - The async response
      */
     public CompletableFuture<UpdateQmsAuditResponse> updateQmsAudit(@Nonnull UpdateQmsAuditRequest request) {
+        return updateQmsAudit(request, null);
+    }
+
+    /**
+     * Update an audit
+     * 
+     * <p>Updates the QmsAudit identified by `id`. Provide the unified QmsAudit fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateQmsAuditResponse>} - The async response
+     */
+    public CompletableFuture<UpdateQmsAuditResponse> updateQmsAudit(@Nonnull UpdateQmsAuditRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateQmsAuditRequest, UpdateQmsAuditResponse> operation
-              = new UpdateQmsAudit.Async(sdkConfiguration, _headers);
+              = new UpdateQmsAudit.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -686,8 +956,22 @@ public class AsyncQms {
      * @return {@code CompletableFuture<UpdateQmsInspectionResponse>} - The async response
      */
     public CompletableFuture<UpdateQmsInspectionResponse> updateQmsInspection(@Nonnull UpdateQmsInspectionRequest request) {
+        return updateQmsInspection(request, null);
+    }
+
+    /**
+     * Update an inspection
+     * 
+     * <p>Updates the QmsInspection identified by `id`. Provide the unified QmsInspection fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateQmsInspectionResponse>} - The async response
+     */
+    public CompletableFuture<UpdateQmsInspectionResponse> updateQmsInspection(@Nonnull UpdateQmsInspectionRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateQmsInspectionRequest, UpdateQmsInspectionResponse> operation
-              = new UpdateQmsInspection.Async(sdkConfiguration, _headers);
+              = new UpdateQmsInspection.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -715,8 +999,22 @@ public class AsyncQms {
      * @return {@code CompletableFuture<UpdateQmsIssueResponse>} - The async response
      */
     public CompletableFuture<UpdateQmsIssueResponse> updateQmsIssue(@Nonnull UpdateQmsIssueRequest request) {
+        return updateQmsIssue(request, null);
+    }
+
+    /**
+     * Update an issue
+     * 
+     * <p>Updates the QmsIssue identified by `id`. Provide the unified QmsIssue fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateQmsIssueResponse>} - The async response
+     */
+    public CompletableFuture<UpdateQmsIssueResponse> updateQmsIssue(@Nonnull UpdateQmsIssueRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateQmsIssueRequest, UpdateQmsIssueResponse> operation
-              = new UpdateQmsIssue.Async(sdkConfiguration, _headers);
+              = new UpdateQmsIssue.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

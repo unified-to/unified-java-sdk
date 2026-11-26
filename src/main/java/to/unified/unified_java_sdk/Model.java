@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.GetGenaiModelRequest;
 import to.unified.unified_java_sdk.models.operations.GetGenaiModelRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetGenaiModelResponse;
@@ -15,6 +16,7 @@ import to.unified.unified_java_sdk.models.operations.ListGenaiModelsResponse;
 import to.unified.unified_java_sdk.operations.GetGenaiModel;
 import to.unified.unified_java_sdk.operations.ListGenaiModels;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Model {
@@ -59,8 +61,23 @@ public class Model {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetGenaiModelResponse getGenaiModel(@Nonnull GetGenaiModelRequest request) {
+        return getGenaiModel(request, null);
+    }
+
+    /**
+     * Retrieve a model
+     * 
+     * <p>Retrieves a single GenaiModel by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetGenaiModelResponse getGenaiModel(@Nonnull GetGenaiModelRequest request, @Nullable Options options) {
         RequestOperation<GetGenaiModelRequest, GetGenaiModelResponse> operation
-              = new GetGenaiModel.Sync(sdkConfiguration, _headers);
+              = new GetGenaiModel.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -95,8 +112,27 @@ public class Model {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListGenaiModelsResponse listGenaiModels(@Nonnull ListGenaiModelsRequest request) {
+        return listGenaiModels(request, null);
+    }
+
+    /**
+     * List all models
+     * 
+     * <p>Returns a list of GenaiModels. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListGenaiModelsResponse listGenaiModels(@Nonnull ListGenaiModelsRequest request, @Nullable Options options) {
         RequestOperation<ListGenaiModelsRequest, ListGenaiModelsResponse> operation
-              = new ListGenaiModels.Sync(sdkConfiguration, _headers);
+              = new ListGenaiModels.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

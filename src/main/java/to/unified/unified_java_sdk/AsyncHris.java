@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateHrisAttendanceRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisBankaccountRequest;
@@ -416,6 +417,7 @@ import to.unified.unified_java_sdk.operations.UpdateHrisTaxwithholding;
 import to.unified.unified_java_sdk.operations.UpdateHrisTimeoff;
 import to.unified.unified_java_sdk.operations.UpdateHrisTimeshift;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncHris {
@@ -460,8 +462,22 @@ public class AsyncHris {
      * @return {@code CompletableFuture<CreateHrisAttendanceResponse>} - The async response
      */
     public CompletableFuture<CreateHrisAttendanceResponse> createHrisAttendance(@Nonnull CreateHrisAttendanceRequest request) {
+        return createHrisAttendance(request, null);
+    }
+
+    /**
+     * Create an attendance
+     * 
+     * <p>Creates a HrisAttendance. Provide the unified HrisAttendance fields in the request body; they are
+     * mapped to the provider's API. Returns the created HrisAttendance.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateHrisAttendanceResponse>} - The async response
+     */
+    public CompletableFuture<CreateHrisAttendanceResponse> createHrisAttendance(@Nonnull CreateHrisAttendanceRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateHrisAttendanceRequest, CreateHrisAttendanceResponse> operation
-              = new CreateHrisAttendance.Async(sdkConfiguration, _headers);
+              = new CreateHrisAttendance.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -489,8 +505,22 @@ public class AsyncHris {
      * @return {@code CompletableFuture<CreateHrisBankaccountResponse>} - The async response
      */
     public CompletableFuture<CreateHrisBankaccountResponse> createHrisBankaccount(@Nonnull CreateHrisBankaccountRequest request) {
+        return createHrisBankaccount(request, null);
+    }
+
+    /**
+     * Create a bankaccount
+     * 
+     * <p>Creates a HrisBankaccount. Provide the unified HrisBankaccount fields in the request body; they are
+     * mapped to the provider's API. Returns the created HrisBankaccount.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateHrisBankaccountResponse>} - The async response
+     */
+    public CompletableFuture<CreateHrisBankaccountResponse> createHrisBankaccount(@Nonnull CreateHrisBankaccountRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateHrisBankaccountRequest, CreateHrisBankaccountResponse> operation
-              = new CreateHrisBankaccount.Async(sdkConfiguration, _headers);
+              = new CreateHrisBankaccount.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -518,8 +548,22 @@ public class AsyncHris {
      * @return {@code CompletableFuture<CreateHrisBenefitResponse>} - The async response
      */
     public CompletableFuture<CreateHrisBenefitResponse> createHrisBenefit(@Nonnull CreateHrisBenefitRequest request) {
+        return createHrisBenefit(request, null);
+    }
+
+    /**
+     * Create a benefit
+     * 
+     * <p>Creates a HrisBenefit. Provide the unified HrisBenefit fields in the request body; they are mapped
+     * to the provider's API. Returns the created HrisBenefit.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateHrisBenefitResponse>} - The async response
+     */
+    public CompletableFuture<CreateHrisBenefitResponse> createHrisBenefit(@Nonnull CreateHrisBenefitRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateHrisBenefitRequest, CreateHrisBenefitResponse> operation
-              = new CreateHrisBenefit.Async(sdkConfiguration, _headers);
+              = new CreateHrisBenefit.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -547,8 +591,22 @@ public class AsyncHris {
      * @return {@code CompletableFuture<CreateHrisCompanyResponse>} - The async response
      */
     public CompletableFuture<CreateHrisCompanyResponse> createHrisCompany(@Nonnull CreateHrisCompanyRequest request) {
+        return createHrisCompany(request, null);
+    }
+
+    /**
+     * Create a company
+     * 
+     * <p>Creates a HrisCompany. Provide the unified HrisCompany fields in the request body; they are mapped
+     * to the provider's API. Returns the created HrisCompany.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateHrisCompanyResponse>} - The async response
+     */
+    public CompletableFuture<CreateHrisCompanyResponse> createHrisCompany(@Nonnull CreateHrisCompanyRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateHrisCompanyRequest, CreateHrisCompanyResponse> operation
-              = new CreateHrisCompany.Async(sdkConfiguration, _headers);
+              = new CreateHrisCompany.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -576,8 +634,22 @@ public class AsyncHris {
      * @return {@code CompletableFuture<CreateHrisDeductionResponse>} - The async response
      */
     public CompletableFuture<CreateHrisDeductionResponse> createHrisDeduction(@Nonnull CreateHrisDeductionRequest request) {
+        return createHrisDeduction(request, null);
+    }
+
+    /**
+     * Create a deduction
+     * 
+     * <p>Creates a HrisDeduction. Provide the unified HrisDeduction fields in the request body; they are
+     * mapped to the provider's API. Returns the created HrisDeduction.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateHrisDeductionResponse>} - The async response
+     */
+    public CompletableFuture<CreateHrisDeductionResponse> createHrisDeduction(@Nonnull CreateHrisDeductionRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateHrisDeductionRequest, CreateHrisDeductionResponse> operation
-              = new CreateHrisDeduction.Async(sdkConfiguration, _headers);
+              = new CreateHrisDeduction.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -605,8 +677,22 @@ public class AsyncHris {
      * @return {@code CompletableFuture<CreateHrisDeviceResponse>} - The async response
      */
     public CompletableFuture<CreateHrisDeviceResponse> createHrisDevice(@Nonnull CreateHrisDeviceRequest request) {
+        return createHrisDevice(request, null);
+    }
+
+    /**
+     * Create a device
+     * 
+     * <p>Creates a HrisDevice. Provide the unified HrisDevice fields in the request body; they are mapped to
+     * the provider's API. Returns the created HrisDevice.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateHrisDeviceResponse>} - The async response
+     */
+    public CompletableFuture<CreateHrisDeviceResponse> createHrisDevice(@Nonnull CreateHrisDeviceRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateHrisDeviceRequest, CreateHrisDeviceResponse> operation
-              = new CreateHrisDevice.Async(sdkConfiguration, _headers);
+              = new CreateHrisDevice.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -634,8 +720,22 @@ public class AsyncHris {
      * @return {@code CompletableFuture<CreateHrisDocumentResponse>} - The async response
      */
     public CompletableFuture<CreateHrisDocumentResponse> createHrisDocument(@Nonnull CreateHrisDocumentRequest request) {
+        return createHrisDocument(request, null);
+    }
+
+    /**
+     * Create a document
+     * 
+     * <p>Creates a HrisDocument. Provide the unified HrisDocument fields in the request body; they are mapped
+     * to the provider's API. Returns the created HrisDocument.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateHrisDocumentResponse>} - The async response
+     */
+    public CompletableFuture<CreateHrisDocumentResponse> createHrisDocument(@Nonnull CreateHrisDocumentRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateHrisDocumentRequest, CreateHrisDocumentResponse> operation
-              = new CreateHrisDocument.Async(sdkConfiguration, _headers);
+              = new CreateHrisDocument.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -663,8 +763,22 @@ public class AsyncHris {
      * @return {@code CompletableFuture<CreateHrisEarningResponse>} - The async response
      */
     public CompletableFuture<CreateHrisEarningResponse> createHrisEarning(@Nonnull CreateHrisEarningRequest request) {
+        return createHrisEarning(request, null);
+    }
+
+    /**
+     * Create an earning
+     * 
+     * <p>Creates a HrisEarning. Provide the unified HrisEarning fields in the request body; they are mapped
+     * to the provider's API. Returns the created HrisEarning.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateHrisEarningResponse>} - The async response
+     */
+    public CompletableFuture<CreateHrisEarningResponse> createHrisEarning(@Nonnull CreateHrisEarningRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateHrisEarningRequest, CreateHrisEarningResponse> operation
-              = new CreateHrisEarning.Async(sdkConfiguration, _headers);
+              = new CreateHrisEarning.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -692,8 +806,22 @@ public class AsyncHris {
      * @return {@code CompletableFuture<CreateHrisEmployeeResponse>} - The async response
      */
     public CompletableFuture<CreateHrisEmployeeResponse> createHrisEmployee(@Nonnull CreateHrisEmployeeRequest request) {
+        return createHrisEmployee(request, null);
+    }
+
+    /**
+     * Create an employee
+     * 
+     * <p>Creates a HrisEmployee. Provide the unified HrisEmployee fields in the request body; they are mapped
+     * to the provider's API. Returns the created HrisEmployee.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateHrisEmployeeResponse>} - The async response
+     */
+    public CompletableFuture<CreateHrisEmployeeResponse> createHrisEmployee(@Nonnull CreateHrisEmployeeRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateHrisEmployeeRequest, CreateHrisEmployeeResponse> operation
-              = new CreateHrisEmployee.Async(sdkConfiguration, _headers);
+              = new CreateHrisEmployee.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -721,8 +849,22 @@ public class AsyncHris {
      * @return {@code CompletableFuture<CreateHrisGroupResponse>} - The async response
      */
     public CompletableFuture<CreateHrisGroupResponse> createHrisGroup(@Nonnull CreateHrisGroupRequest request) {
+        return createHrisGroup(request, null);
+    }
+
+    /**
+     * Create a group
+     * 
+     * <p>Creates a HrisGroup. Provide the unified HrisGroup fields in the request body; they are mapped to
+     * the provider's API. Returns the created HrisGroup.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateHrisGroupResponse>} - The async response
+     */
+    public CompletableFuture<CreateHrisGroupResponse> createHrisGroup(@Nonnull CreateHrisGroupRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateHrisGroupRequest, CreateHrisGroupResponse> operation
-              = new CreateHrisGroup.Async(sdkConfiguration, _headers);
+              = new CreateHrisGroup.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -750,8 +892,22 @@ public class AsyncHris {
      * @return {@code CompletableFuture<CreateHrisJobResponse>} - The async response
      */
     public CompletableFuture<CreateHrisJobResponse> createHrisJob(@Nonnull CreateHrisJobRequest request) {
+        return createHrisJob(request, null);
+    }
+
+    /**
+     * Create a job
+     * 
+     * <p>Creates a HrisJob. Provide the unified HrisJob fields in the request body; they are mapped to the
+     * provider's API. Returns the created HrisJob.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateHrisJobResponse>} - The async response
+     */
+    public CompletableFuture<CreateHrisJobResponse> createHrisJob(@Nonnull CreateHrisJobRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateHrisJobRequest, CreateHrisJobResponse> operation
-              = new CreateHrisJob.Async(sdkConfiguration, _headers);
+              = new CreateHrisJob.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -779,8 +935,22 @@ public class AsyncHris {
      * @return {@code CompletableFuture<CreateHrisLocationResponse>} - The async response
      */
     public CompletableFuture<CreateHrisLocationResponse> createHrisLocation(@Nonnull CreateHrisLocationRequest request) {
+        return createHrisLocation(request, null);
+    }
+
+    /**
+     * Create a location
+     * 
+     * <p>Creates a HrisLocation. Provide the unified HrisLocation fields in the request body; they are mapped
+     * to the provider's API. Returns the created HrisLocation.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateHrisLocationResponse>} - The async response
+     */
+    public CompletableFuture<CreateHrisLocationResponse> createHrisLocation(@Nonnull CreateHrisLocationRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateHrisLocationRequest, CreateHrisLocationResponse> operation
-              = new CreateHrisLocation.Async(sdkConfiguration, _headers);
+              = new CreateHrisLocation.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -808,8 +978,22 @@ public class AsyncHris {
      * @return {@code CompletableFuture<CreateHrisTaxonomyResponse>} - The async response
      */
     public CompletableFuture<CreateHrisTaxonomyResponse> createHrisTaxonomy(@Nonnull CreateHrisTaxonomyRequest request) {
+        return createHrisTaxonomy(request, null);
+    }
+
+    /**
+     * Create a taxonomy
+     * 
+     * <p>Creates a HrisTaxonomy. Provide the unified HrisTaxonomy fields in the request body; they are mapped
+     * to the provider's API. Returns the created HrisTaxonomy.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateHrisTaxonomyResponse>} - The async response
+     */
+    public CompletableFuture<CreateHrisTaxonomyResponse> createHrisTaxonomy(@Nonnull CreateHrisTaxonomyRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateHrisTaxonomyRequest, CreateHrisTaxonomyResponse> operation
-              = new CreateHrisTaxonomy.Async(sdkConfiguration, _headers);
+              = new CreateHrisTaxonomy.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -837,8 +1021,22 @@ public class AsyncHris {
      * @return {@code CompletableFuture<CreateHrisTaxwithholdingResponse>} - The async response
      */
     public CompletableFuture<CreateHrisTaxwithholdingResponse> createHrisTaxwithholding(@Nonnull CreateHrisTaxwithholdingRequest request) {
+        return createHrisTaxwithholding(request, null);
+    }
+
+    /**
+     * Create a taxwithholding
+     * 
+     * <p>Creates a HrisTaxwithholding. Provide the unified HrisTaxwithholding fields in the request body;
+     * they are mapped to the provider's API. Returns the created HrisTaxwithholding.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateHrisTaxwithholdingResponse>} - The async response
+     */
+    public CompletableFuture<CreateHrisTaxwithholdingResponse> createHrisTaxwithholding(@Nonnull CreateHrisTaxwithholdingRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateHrisTaxwithholdingRequest, CreateHrisTaxwithholdingResponse> operation
-              = new CreateHrisTaxwithholding.Async(sdkConfiguration, _headers);
+              = new CreateHrisTaxwithholding.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -866,8 +1064,22 @@ public class AsyncHris {
      * @return {@code CompletableFuture<CreateHrisTimeoffResponse>} - The async response
      */
     public CompletableFuture<CreateHrisTimeoffResponse> createHrisTimeoff(@Nonnull CreateHrisTimeoffRequest request) {
+        return createHrisTimeoff(request, null);
+    }
+
+    /**
+     * Create a timeoff
+     * 
+     * <p>Creates a HrisTimeoff. Provide the unified HrisTimeoff fields in the request body; they are mapped
+     * to the provider's API. Returns the created HrisTimeoff.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateHrisTimeoffResponse>} - The async response
+     */
+    public CompletableFuture<CreateHrisTimeoffResponse> createHrisTimeoff(@Nonnull CreateHrisTimeoffRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateHrisTimeoffRequest, CreateHrisTimeoffResponse> operation
-              = new CreateHrisTimeoff.Async(sdkConfiguration, _headers);
+              = new CreateHrisTimeoff.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -895,8 +1107,22 @@ public class AsyncHris {
      * @return {@code CompletableFuture<CreateHrisTimeshiftResponse>} - The async response
      */
     public CompletableFuture<CreateHrisTimeshiftResponse> createHrisTimeshift(@Nonnull CreateHrisTimeshiftRequest request) {
+        return createHrisTimeshift(request, null);
+    }
+
+    /**
+     * Create a timeshift
+     * 
+     * <p>Creates a HrisTimeshift. Provide the unified HrisTimeshift fields in the request body; they are
+     * mapped to the provider's API. Returns the created HrisTimeshift.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateHrisTimeshiftResponse>} - The async response
+     */
+    public CompletableFuture<CreateHrisTimeshiftResponse> createHrisTimeshift(@Nonnull CreateHrisTimeshiftRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateHrisTimeshiftRequest, CreateHrisTimeshiftResponse> operation
-              = new CreateHrisTimeshift.Async(sdkConfiguration, _headers);
+              = new CreateHrisTimeshift.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -924,8 +1150,22 @@ public class AsyncHris {
      * @return {@code CompletableFuture<GetHrisAttendanceResponse>} - The async response
      */
     public CompletableFuture<GetHrisAttendanceResponse> getHrisAttendance(@Nonnull GetHrisAttendanceRequest request) {
+        return getHrisAttendance(request, null);
+    }
+
+    /**
+     * Retrieve an attendance
+     * 
+     * <p>Retrieves a single HrisAttendance by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetHrisAttendanceResponse>} - The async response
+     */
+    public CompletableFuture<GetHrisAttendanceResponse> getHrisAttendance(@Nonnull GetHrisAttendanceRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetHrisAttendanceRequest, GetHrisAttendanceResponse> operation
-              = new GetHrisAttendance.Async(sdkConfiguration, _headers);
+              = new GetHrisAttendance.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -953,8 +1193,22 @@ public class AsyncHris {
      * @return {@code CompletableFuture<GetHrisBankaccountResponse>} - The async response
      */
     public CompletableFuture<GetHrisBankaccountResponse> getHrisBankaccount(@Nonnull GetHrisBankaccountRequest request) {
+        return getHrisBankaccount(request, null);
+    }
+
+    /**
+     * Retrieve a bankaccount
+     * 
+     * <p>Retrieves a single HrisBankaccount by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetHrisBankaccountResponse>} - The async response
+     */
+    public CompletableFuture<GetHrisBankaccountResponse> getHrisBankaccount(@Nonnull GetHrisBankaccountRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetHrisBankaccountRequest, GetHrisBankaccountResponse> operation
-              = new GetHrisBankaccount.Async(sdkConfiguration, _headers);
+              = new GetHrisBankaccount.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -982,8 +1236,22 @@ public class AsyncHris {
      * @return {@code CompletableFuture<GetHrisBenefitResponse>} - The async response
      */
     public CompletableFuture<GetHrisBenefitResponse> getHrisBenefit(@Nonnull GetHrisBenefitRequest request) {
+        return getHrisBenefit(request, null);
+    }
+
+    /**
+     * Retrieve a benefit
+     * 
+     * <p>Retrieves a single HrisBenefit by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetHrisBenefitResponse>} - The async response
+     */
+    public CompletableFuture<GetHrisBenefitResponse> getHrisBenefit(@Nonnull GetHrisBenefitRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetHrisBenefitRequest, GetHrisBenefitResponse> operation
-              = new GetHrisBenefit.Async(sdkConfiguration, _headers);
+              = new GetHrisBenefit.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1011,8 +1279,22 @@ public class AsyncHris {
      * @return {@code CompletableFuture<GetHrisCompanyResponse>} - The async response
      */
     public CompletableFuture<GetHrisCompanyResponse> getHrisCompany(@Nonnull GetHrisCompanyRequest request) {
+        return getHrisCompany(request, null);
+    }
+
+    /**
+     * Retrieve a company
+     * 
+     * <p>Retrieves a single HrisCompany by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetHrisCompanyResponse>} - The async response
+     */
+    public CompletableFuture<GetHrisCompanyResponse> getHrisCompany(@Nonnull GetHrisCompanyRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetHrisCompanyRequest, GetHrisCompanyResponse> operation
-              = new GetHrisCompany.Async(sdkConfiguration, _headers);
+              = new GetHrisCompany.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1040,8 +1322,22 @@ public class AsyncHris {
      * @return {@code CompletableFuture<GetHrisDeductionResponse>} - The async response
      */
     public CompletableFuture<GetHrisDeductionResponse> getHrisDeduction(@Nonnull GetHrisDeductionRequest request) {
+        return getHrisDeduction(request, null);
+    }
+
+    /**
+     * Retrieve a deduction
+     * 
+     * <p>Retrieves a single HrisDeduction by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetHrisDeductionResponse>} - The async response
+     */
+    public CompletableFuture<GetHrisDeductionResponse> getHrisDeduction(@Nonnull GetHrisDeductionRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetHrisDeductionRequest, GetHrisDeductionResponse> operation
-              = new GetHrisDeduction.Async(sdkConfiguration, _headers);
+              = new GetHrisDeduction.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1069,8 +1365,22 @@ public class AsyncHris {
      * @return {@code CompletableFuture<GetHrisDeviceResponse>} - The async response
      */
     public CompletableFuture<GetHrisDeviceResponse> getHrisDevice(@Nonnull GetHrisDeviceRequest request) {
+        return getHrisDevice(request, null);
+    }
+
+    /**
+     * Retrieve a device
+     * 
+     * <p>Retrieves a single HrisDevice by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetHrisDeviceResponse>} - The async response
+     */
+    public CompletableFuture<GetHrisDeviceResponse> getHrisDevice(@Nonnull GetHrisDeviceRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetHrisDeviceRequest, GetHrisDeviceResponse> operation
-              = new GetHrisDevice.Async(sdkConfiguration, _headers);
+              = new GetHrisDevice.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1098,8 +1408,22 @@ public class AsyncHris {
      * @return {@code CompletableFuture<GetHrisDocumentResponse>} - The async response
      */
     public CompletableFuture<GetHrisDocumentResponse> getHrisDocument(@Nonnull GetHrisDocumentRequest request) {
+        return getHrisDocument(request, null);
+    }
+
+    /**
+     * Retrieve a document
+     * 
+     * <p>Retrieves a single HrisDocument by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetHrisDocumentResponse>} - The async response
+     */
+    public CompletableFuture<GetHrisDocumentResponse> getHrisDocument(@Nonnull GetHrisDocumentRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetHrisDocumentRequest, GetHrisDocumentResponse> operation
-              = new GetHrisDocument.Async(sdkConfiguration, _headers);
+              = new GetHrisDocument.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1127,8 +1451,22 @@ public class AsyncHris {
      * @return {@code CompletableFuture<GetHrisEarningResponse>} - The async response
      */
     public CompletableFuture<GetHrisEarningResponse> getHrisEarning(@Nonnull GetHrisEarningRequest request) {
+        return getHrisEarning(request, null);
+    }
+
+    /**
+     * Retrieve an earning
+     * 
+     * <p>Retrieves a single HrisEarning by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetHrisEarningResponse>} - The async response
+     */
+    public CompletableFuture<GetHrisEarningResponse> getHrisEarning(@Nonnull GetHrisEarningRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetHrisEarningRequest, GetHrisEarningResponse> operation
-              = new GetHrisEarning.Async(sdkConfiguration, _headers);
+              = new GetHrisEarning.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1156,8 +1494,22 @@ public class AsyncHris {
      * @return {@code CompletableFuture<GetHrisEmployeeResponse>} - The async response
      */
     public CompletableFuture<GetHrisEmployeeResponse> getHrisEmployee(@Nonnull GetHrisEmployeeRequest request) {
+        return getHrisEmployee(request, null);
+    }
+
+    /**
+     * Retrieve an employee
+     * 
+     * <p>Retrieves a single HrisEmployee by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetHrisEmployeeResponse>} - The async response
+     */
+    public CompletableFuture<GetHrisEmployeeResponse> getHrisEmployee(@Nonnull GetHrisEmployeeRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetHrisEmployeeRequest, GetHrisEmployeeResponse> operation
-              = new GetHrisEmployee.Async(sdkConfiguration, _headers);
+              = new GetHrisEmployee.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1185,8 +1537,22 @@ public class AsyncHris {
      * @return {@code CompletableFuture<GetHrisGroupResponse>} - The async response
      */
     public CompletableFuture<GetHrisGroupResponse> getHrisGroup(@Nonnull GetHrisGroupRequest request) {
+        return getHrisGroup(request, null);
+    }
+
+    /**
+     * Retrieve a group
+     * 
+     * <p>Retrieves a single HrisGroup by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetHrisGroupResponse>} - The async response
+     */
+    public CompletableFuture<GetHrisGroupResponse> getHrisGroup(@Nonnull GetHrisGroupRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetHrisGroupRequest, GetHrisGroupResponse> operation
-              = new GetHrisGroup.Async(sdkConfiguration, _headers);
+              = new GetHrisGroup.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1214,8 +1580,22 @@ public class AsyncHris {
      * @return {@code CompletableFuture<GetHrisJobResponse>} - The async response
      */
     public CompletableFuture<GetHrisJobResponse> getHrisJob(@Nonnull GetHrisJobRequest request) {
+        return getHrisJob(request, null);
+    }
+
+    /**
+     * Retrieve a job
+     * 
+     * <p>Retrieves a single HrisJob by its `id`. Obtain `id` values from the corresponding list endpoint. Use
+     * `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetHrisJobResponse>} - The async response
+     */
+    public CompletableFuture<GetHrisJobResponse> getHrisJob(@Nonnull GetHrisJobRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetHrisJobRequest, GetHrisJobResponse> operation
-              = new GetHrisJob.Async(sdkConfiguration, _headers);
+              = new GetHrisJob.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1243,8 +1623,22 @@ public class AsyncHris {
      * @return {@code CompletableFuture<GetHrisLocationResponse>} - The async response
      */
     public CompletableFuture<GetHrisLocationResponse> getHrisLocation(@Nonnull GetHrisLocationRequest request) {
+        return getHrisLocation(request, null);
+    }
+
+    /**
+     * Retrieve a location
+     * 
+     * <p>Retrieves a single HrisLocation by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetHrisLocationResponse>} - The async response
+     */
+    public CompletableFuture<GetHrisLocationResponse> getHrisLocation(@Nonnull GetHrisLocationRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetHrisLocationRequest, GetHrisLocationResponse> operation
-              = new GetHrisLocation.Async(sdkConfiguration, _headers);
+              = new GetHrisLocation.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1272,8 +1666,22 @@ public class AsyncHris {
      * @return {@code CompletableFuture<GetHrisPaycodeResponse>} - The async response
      */
     public CompletableFuture<GetHrisPaycodeResponse> getHrisPaycode(@Nonnull GetHrisPaycodeRequest request) {
+        return getHrisPaycode(request, null);
+    }
+
+    /**
+     * Retrieve a paycode
+     * 
+     * <p>Retrieves a single HrisPaycode by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetHrisPaycodeResponse>} - The async response
+     */
+    public CompletableFuture<GetHrisPaycodeResponse> getHrisPaycode(@Nonnull GetHrisPaycodeRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetHrisPaycodeRequest, GetHrisPaycodeResponse> operation
-              = new GetHrisPaycode.Async(sdkConfiguration, _headers);
+              = new GetHrisPaycode.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1301,8 +1709,22 @@ public class AsyncHris {
      * @return {@code CompletableFuture<GetHrisPayrollResponse>} - The async response
      */
     public CompletableFuture<GetHrisPayrollResponse> getHrisPayroll(@Nonnull GetHrisPayrollRequest request) {
+        return getHrisPayroll(request, null);
+    }
+
+    /**
+     * Retrieve a payroll
+     * 
+     * <p>Retrieves a single HrisPayroll by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetHrisPayrollResponse>} - The async response
+     */
+    public CompletableFuture<GetHrisPayrollResponse> getHrisPayroll(@Nonnull GetHrisPayrollRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetHrisPayrollRequest, GetHrisPayrollResponse> operation
-              = new GetHrisPayroll.Async(sdkConfiguration, _headers);
+              = new GetHrisPayroll.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1330,8 +1752,22 @@ public class AsyncHris {
      * @return {@code CompletableFuture<GetHrisPayslipResponse>} - The async response
      */
     public CompletableFuture<GetHrisPayslipResponse> getHrisPayslip(@Nonnull GetHrisPayslipRequest request) {
+        return getHrisPayslip(request, null);
+    }
+
+    /**
+     * Retrieve a payslip
+     * 
+     * <p>Retrieves a single HrisPayslip by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetHrisPayslipResponse>} - The async response
+     */
+    public CompletableFuture<GetHrisPayslipResponse> getHrisPayslip(@Nonnull GetHrisPayslipRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetHrisPayslipRequest, GetHrisPayslipResponse> operation
-              = new GetHrisPayslip.Async(sdkConfiguration, _headers);
+              = new GetHrisPayslip.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1359,8 +1795,22 @@ public class AsyncHris {
      * @return {@code CompletableFuture<GetHrisTaxonomyResponse>} - The async response
      */
     public CompletableFuture<GetHrisTaxonomyResponse> getHrisTaxonomy(@Nonnull GetHrisTaxonomyRequest request) {
+        return getHrisTaxonomy(request, null);
+    }
+
+    /**
+     * Retrieve a taxonomy
+     * 
+     * <p>Retrieves a single HrisTaxonomy by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetHrisTaxonomyResponse>} - The async response
+     */
+    public CompletableFuture<GetHrisTaxonomyResponse> getHrisTaxonomy(@Nonnull GetHrisTaxonomyRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetHrisTaxonomyRequest, GetHrisTaxonomyResponse> operation
-              = new GetHrisTaxonomy.Async(sdkConfiguration, _headers);
+              = new GetHrisTaxonomy.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1388,8 +1838,22 @@ public class AsyncHris {
      * @return {@code CompletableFuture<GetHrisTaxwithholdingResponse>} - The async response
      */
     public CompletableFuture<GetHrisTaxwithholdingResponse> getHrisTaxwithholding(@Nonnull GetHrisTaxwithholdingRequest request) {
+        return getHrisTaxwithholding(request, null);
+    }
+
+    /**
+     * Retrieve a taxwithholding
+     * 
+     * <p>Retrieves a single HrisTaxwithholding by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetHrisTaxwithholdingResponse>} - The async response
+     */
+    public CompletableFuture<GetHrisTaxwithholdingResponse> getHrisTaxwithholding(@Nonnull GetHrisTaxwithholdingRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetHrisTaxwithholdingRequest, GetHrisTaxwithholdingResponse> operation
-              = new GetHrisTaxwithholding.Async(sdkConfiguration, _headers);
+              = new GetHrisTaxwithholding.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1417,8 +1881,22 @@ public class AsyncHris {
      * @return {@code CompletableFuture<GetHrisTimeoffResponse>} - The async response
      */
     public CompletableFuture<GetHrisTimeoffResponse> getHrisTimeoff(@Nonnull GetHrisTimeoffRequest request) {
+        return getHrisTimeoff(request, null);
+    }
+
+    /**
+     * Retrieve a timeoff
+     * 
+     * <p>Retrieves a single HrisTimeoff by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetHrisTimeoffResponse>} - The async response
+     */
+    public CompletableFuture<GetHrisTimeoffResponse> getHrisTimeoff(@Nonnull GetHrisTimeoffRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetHrisTimeoffRequest, GetHrisTimeoffResponse> operation
-              = new GetHrisTimeoff.Async(sdkConfiguration, _headers);
+              = new GetHrisTimeoff.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1446,8 +1924,22 @@ public class AsyncHris {
      * @return {@code CompletableFuture<GetHrisTimeshiftResponse>} - The async response
      */
     public CompletableFuture<GetHrisTimeshiftResponse> getHrisTimeshift(@Nonnull GetHrisTimeshiftRequest request) {
+        return getHrisTimeshift(request, null);
+    }
+
+    /**
+     * Retrieve a timeshift
+     * 
+     * <p>Retrieves a single HrisTimeshift by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetHrisTimeshiftResponse>} - The async response
+     */
+    public CompletableFuture<GetHrisTimeshiftResponse> getHrisTimeshift(@Nonnull GetHrisTimeshiftRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetHrisTimeshiftRequest, GetHrisTimeshiftResponse> operation
-              = new GetHrisTimeshift.Async(sdkConfiguration, _headers);
+              = new GetHrisTimeshift.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1483,8 +1975,26 @@ public class AsyncHris {
      * @return {@code CompletableFuture<ListHrisAttendancesResponse>} - The async response
      */
     public CompletableFuture<ListHrisAttendancesResponse> listHrisAttendances(@Nonnull ListHrisAttendancesRequest request) {
+        return listHrisAttendances(request, null);
+    }
+
+    /**
+     * List all attendances
+     * 
+     * <p>Returns a list of HrisAttendances. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListHrisAttendancesResponse>} - The async response
+     */
+    public CompletableFuture<ListHrisAttendancesResponse> listHrisAttendances(@Nonnull ListHrisAttendancesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListHrisAttendancesRequest, ListHrisAttendancesResponse> operation
-              = new ListHrisAttendances.Async(sdkConfiguration, _headers);
+              = new ListHrisAttendances.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1520,8 +2030,26 @@ public class AsyncHris {
      * @return {@code CompletableFuture<ListHrisBankaccountsResponse>} - The async response
      */
     public CompletableFuture<ListHrisBankaccountsResponse> listHrisBankaccounts(@Nonnull ListHrisBankaccountsRequest request) {
+        return listHrisBankaccounts(request, null);
+    }
+
+    /**
+     * List all bankaccounts
+     * 
+     * <p>Returns a list of HrisBankaccounts. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListHrisBankaccountsResponse>} - The async response
+     */
+    public CompletableFuture<ListHrisBankaccountsResponse> listHrisBankaccounts(@Nonnull ListHrisBankaccountsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListHrisBankaccountsRequest, ListHrisBankaccountsResponse> operation
-              = new ListHrisBankaccounts.Async(sdkConfiguration, _headers);
+              = new ListHrisBankaccounts.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1557,8 +2085,26 @@ public class AsyncHris {
      * @return {@code CompletableFuture<ListHrisBenefitsResponse>} - The async response
      */
     public CompletableFuture<ListHrisBenefitsResponse> listHrisBenefits(@Nonnull ListHrisBenefitsRequest request) {
+        return listHrisBenefits(request, null);
+    }
+
+    /**
+     * List all benefits
+     * 
+     * <p>Returns a list of HrisBenefits. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListHrisBenefitsResponse>} - The async response
+     */
+    public CompletableFuture<ListHrisBenefitsResponse> listHrisBenefits(@Nonnull ListHrisBenefitsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListHrisBenefitsRequest, ListHrisBenefitsResponse> operation
-              = new ListHrisBenefits.Async(sdkConfiguration, _headers);
+              = new ListHrisBenefits.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1594,8 +2140,26 @@ public class AsyncHris {
      * @return {@code CompletableFuture<ListHrisCompaniesResponse>} - The async response
      */
     public CompletableFuture<ListHrisCompaniesResponse> listHrisCompanies(@Nonnull ListHrisCompaniesRequest request) {
+        return listHrisCompanies(request, null);
+    }
+
+    /**
+     * List all companies
+     * 
+     * <p>Returns a list of HrisCompanies. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListHrisCompaniesResponse>} - The async response
+     */
+    public CompletableFuture<ListHrisCompaniesResponse> listHrisCompanies(@Nonnull ListHrisCompaniesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListHrisCompaniesRequest, ListHrisCompaniesResponse> operation
-              = new ListHrisCompanies.Async(sdkConfiguration, _headers);
+              = new ListHrisCompanies.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1631,8 +2195,26 @@ public class AsyncHris {
      * @return {@code CompletableFuture<ListHrisDeductionsResponse>} - The async response
      */
     public CompletableFuture<ListHrisDeductionsResponse> listHrisDeductions(@Nonnull ListHrisDeductionsRequest request) {
+        return listHrisDeductions(request, null);
+    }
+
+    /**
+     * List all deductions
+     * 
+     * <p>Returns a list of HrisDeductions. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListHrisDeductionsResponse>} - The async response
+     */
+    public CompletableFuture<ListHrisDeductionsResponse> listHrisDeductions(@Nonnull ListHrisDeductionsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListHrisDeductionsRequest, ListHrisDeductionsResponse> operation
-              = new ListHrisDeductions.Async(sdkConfiguration, _headers);
+              = new ListHrisDeductions.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1668,8 +2250,26 @@ public class AsyncHris {
      * @return {@code CompletableFuture<ListHrisDevicesResponse>} - The async response
      */
     public CompletableFuture<ListHrisDevicesResponse> listHrisDevices(@Nonnull ListHrisDevicesRequest request) {
+        return listHrisDevices(request, null);
+    }
+
+    /**
+     * List all devices
+     * 
+     * <p>Returns a list of HrisDevices. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListHrisDevicesResponse>} - The async response
+     */
+    public CompletableFuture<ListHrisDevicesResponse> listHrisDevices(@Nonnull ListHrisDevicesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListHrisDevicesRequest, ListHrisDevicesResponse> operation
-              = new ListHrisDevices.Async(sdkConfiguration, _headers);
+              = new ListHrisDevices.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1705,8 +2305,26 @@ public class AsyncHris {
      * @return {@code CompletableFuture<ListHrisDocumentsResponse>} - The async response
      */
     public CompletableFuture<ListHrisDocumentsResponse> listHrisDocuments(@Nonnull ListHrisDocumentsRequest request) {
+        return listHrisDocuments(request, null);
+    }
+
+    /**
+     * List all documents
+     * 
+     * <p>Returns a list of HrisDocuments. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListHrisDocumentsResponse>} - The async response
+     */
+    public CompletableFuture<ListHrisDocumentsResponse> listHrisDocuments(@Nonnull ListHrisDocumentsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListHrisDocumentsRequest, ListHrisDocumentsResponse> operation
-              = new ListHrisDocuments.Async(sdkConfiguration, _headers);
+              = new ListHrisDocuments.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1742,8 +2360,26 @@ public class AsyncHris {
      * @return {@code CompletableFuture<ListHrisEarningsResponse>} - The async response
      */
     public CompletableFuture<ListHrisEarningsResponse> listHrisEarnings(@Nonnull ListHrisEarningsRequest request) {
+        return listHrisEarnings(request, null);
+    }
+
+    /**
+     * List all earnings
+     * 
+     * <p>Returns a list of HrisEarnings. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListHrisEarningsResponse>} - The async response
+     */
+    public CompletableFuture<ListHrisEarningsResponse> listHrisEarnings(@Nonnull ListHrisEarningsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListHrisEarningsRequest, ListHrisEarningsResponse> operation
-              = new ListHrisEarnings.Async(sdkConfiguration, _headers);
+              = new ListHrisEarnings.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1779,8 +2415,26 @@ public class AsyncHris {
      * @return {@code CompletableFuture<ListHrisEmployeesResponse>} - The async response
      */
     public CompletableFuture<ListHrisEmployeesResponse> listHrisEmployees(@Nonnull ListHrisEmployeesRequest request) {
+        return listHrisEmployees(request, null);
+    }
+
+    /**
+     * List all employees
+     * 
+     * <p>Returns a list of HrisEmployees. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListHrisEmployeesResponse>} - The async response
+     */
+    public CompletableFuture<ListHrisEmployeesResponse> listHrisEmployees(@Nonnull ListHrisEmployeesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListHrisEmployeesRequest, ListHrisEmployeesResponse> operation
-              = new ListHrisEmployees.Async(sdkConfiguration, _headers);
+              = new ListHrisEmployees.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1816,8 +2470,26 @@ public class AsyncHris {
      * @return {@code CompletableFuture<ListHrisGroupsResponse>} - The async response
      */
     public CompletableFuture<ListHrisGroupsResponse> listHrisGroups(@Nonnull ListHrisGroupsRequest request) {
+        return listHrisGroups(request, null);
+    }
+
+    /**
+     * List all groups
+     * 
+     * <p>Returns a list of HrisGroups. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListHrisGroupsResponse>} - The async response
+     */
+    public CompletableFuture<ListHrisGroupsResponse> listHrisGroups(@Nonnull ListHrisGroupsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListHrisGroupsRequest, ListHrisGroupsResponse> operation
-              = new ListHrisGroups.Async(sdkConfiguration, _headers);
+              = new ListHrisGroups.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1853,8 +2525,26 @@ public class AsyncHris {
      * @return {@code CompletableFuture<ListHrisJobsResponse>} - The async response
      */
     public CompletableFuture<ListHrisJobsResponse> listHrisJobs(@Nonnull ListHrisJobsRequest request) {
+        return listHrisJobs(request, null);
+    }
+
+    /**
+     * List all jobs
+     * 
+     * <p>Returns a list of HrisJobs. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListHrisJobsResponse>} - The async response
+     */
+    public CompletableFuture<ListHrisJobsResponse> listHrisJobs(@Nonnull ListHrisJobsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListHrisJobsRequest, ListHrisJobsResponse> operation
-              = new ListHrisJobs.Async(sdkConfiguration, _headers);
+              = new ListHrisJobs.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1890,8 +2580,26 @@ public class AsyncHris {
      * @return {@code CompletableFuture<ListHrisLocationsResponse>} - The async response
      */
     public CompletableFuture<ListHrisLocationsResponse> listHrisLocations(@Nonnull ListHrisLocationsRequest request) {
+        return listHrisLocations(request, null);
+    }
+
+    /**
+     * List all locations
+     * 
+     * <p>Returns a list of HrisLocations. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListHrisLocationsResponse>} - The async response
+     */
+    public CompletableFuture<ListHrisLocationsResponse> listHrisLocations(@Nonnull ListHrisLocationsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListHrisLocationsRequest, ListHrisLocationsResponse> operation
-              = new ListHrisLocations.Async(sdkConfiguration, _headers);
+              = new ListHrisLocations.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1927,8 +2635,26 @@ public class AsyncHris {
      * @return {@code CompletableFuture<ListHrisPaycodesResponse>} - The async response
      */
     public CompletableFuture<ListHrisPaycodesResponse> listHrisPaycodes(@Nonnull ListHrisPaycodesRequest request) {
+        return listHrisPaycodes(request, null);
+    }
+
+    /**
+     * List all paycodes
+     * 
+     * <p>Returns a list of HrisPaycodes. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListHrisPaycodesResponse>} - The async response
+     */
+    public CompletableFuture<ListHrisPaycodesResponse> listHrisPaycodes(@Nonnull ListHrisPaycodesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListHrisPaycodesRequest, ListHrisPaycodesResponse> operation
-              = new ListHrisPaycodes.Async(sdkConfiguration, _headers);
+              = new ListHrisPaycodes.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1964,8 +2690,26 @@ public class AsyncHris {
      * @return {@code CompletableFuture<ListHrisPayrollsResponse>} - The async response
      */
     public CompletableFuture<ListHrisPayrollsResponse> listHrisPayrolls(@Nonnull ListHrisPayrollsRequest request) {
+        return listHrisPayrolls(request, null);
+    }
+
+    /**
+     * List all payrolls
+     * 
+     * <p>Returns a list of HrisPayrolls. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListHrisPayrollsResponse>} - The async response
+     */
+    public CompletableFuture<ListHrisPayrollsResponse> listHrisPayrolls(@Nonnull ListHrisPayrollsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListHrisPayrollsRequest, ListHrisPayrollsResponse> operation
-              = new ListHrisPayrolls.Async(sdkConfiguration, _headers);
+              = new ListHrisPayrolls.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -2001,8 +2745,26 @@ public class AsyncHris {
      * @return {@code CompletableFuture<ListHrisPayslipsResponse>} - The async response
      */
     public CompletableFuture<ListHrisPayslipsResponse> listHrisPayslips(@Nonnull ListHrisPayslipsRequest request) {
+        return listHrisPayslips(request, null);
+    }
+
+    /**
+     * List all payslips
+     * 
+     * <p>Returns a list of HrisPayslips. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListHrisPayslipsResponse>} - The async response
+     */
+    public CompletableFuture<ListHrisPayslipsResponse> listHrisPayslips(@Nonnull ListHrisPayslipsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListHrisPayslipsRequest, ListHrisPayslipsResponse> operation
-              = new ListHrisPayslips.Async(sdkConfiguration, _headers);
+              = new ListHrisPayslips.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -2038,8 +2800,26 @@ public class AsyncHris {
      * @return {@code CompletableFuture<ListHrisTaxonomiesResponse>} - The async response
      */
     public CompletableFuture<ListHrisTaxonomiesResponse> listHrisTaxonomies(@Nonnull ListHrisTaxonomiesRequest request) {
+        return listHrisTaxonomies(request, null);
+    }
+
+    /**
+     * List all taxonomies
+     * 
+     * <p>Returns a list of HrisTaxonomies. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListHrisTaxonomiesResponse>} - The async response
+     */
+    public CompletableFuture<ListHrisTaxonomiesResponse> listHrisTaxonomies(@Nonnull ListHrisTaxonomiesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListHrisTaxonomiesRequest, ListHrisTaxonomiesResponse> operation
-              = new ListHrisTaxonomies.Async(sdkConfiguration, _headers);
+              = new ListHrisTaxonomies.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -2075,8 +2855,26 @@ public class AsyncHris {
      * @return {@code CompletableFuture<ListHrisTaxwithholdingsResponse>} - The async response
      */
     public CompletableFuture<ListHrisTaxwithholdingsResponse> listHrisTaxwithholdings(@Nonnull ListHrisTaxwithholdingsRequest request) {
+        return listHrisTaxwithholdings(request, null);
+    }
+
+    /**
+     * List all taxwithholdings
+     * 
+     * <p>Returns a list of HrisTaxwithholdings. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListHrisTaxwithholdingsResponse>} - The async response
+     */
+    public CompletableFuture<ListHrisTaxwithholdingsResponse> listHrisTaxwithholdings(@Nonnull ListHrisTaxwithholdingsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListHrisTaxwithholdingsRequest, ListHrisTaxwithholdingsResponse> operation
-              = new ListHrisTaxwithholdings.Async(sdkConfiguration, _headers);
+              = new ListHrisTaxwithholdings.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -2112,8 +2910,26 @@ public class AsyncHris {
      * @return {@code CompletableFuture<ListHrisTimeoffsResponse>} - The async response
      */
     public CompletableFuture<ListHrisTimeoffsResponse> listHrisTimeoffs(@Nonnull ListHrisTimeoffsRequest request) {
+        return listHrisTimeoffs(request, null);
+    }
+
+    /**
+     * List all timeoffs
+     * 
+     * <p>Returns a list of HrisTimeoffs. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListHrisTimeoffsResponse>} - The async response
+     */
+    public CompletableFuture<ListHrisTimeoffsResponse> listHrisTimeoffs(@Nonnull ListHrisTimeoffsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListHrisTimeoffsRequest, ListHrisTimeoffsResponse> operation
-              = new ListHrisTimeoffs.Async(sdkConfiguration, _headers);
+              = new ListHrisTimeoffs.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -2149,8 +2965,26 @@ public class AsyncHris {
      * @return {@code CompletableFuture<ListHrisTimeshiftsResponse>} - The async response
      */
     public CompletableFuture<ListHrisTimeshiftsResponse> listHrisTimeshifts(@Nonnull ListHrisTimeshiftsRequest request) {
+        return listHrisTimeshifts(request, null);
+    }
+
+    /**
+     * List all timeshifts
+     * 
+     * <p>Returns a list of HrisTimeshifts. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListHrisTimeshiftsResponse>} - The async response
+     */
+    public CompletableFuture<ListHrisTimeshiftsResponse> listHrisTimeshifts(@Nonnull ListHrisTimeshiftsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListHrisTimeshiftsRequest, ListHrisTimeshiftsResponse> operation
-              = new ListHrisTimeshifts.Async(sdkConfiguration, _headers);
+              = new ListHrisTimeshifts.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -2178,8 +3012,22 @@ public class AsyncHris {
      * @return {@code CompletableFuture<PatchHrisAttendanceResponse>} - The async response
      */
     public CompletableFuture<PatchHrisAttendanceResponse> patchHrisAttendance(@Nonnull PatchHrisAttendanceRequest request) {
+        return patchHrisAttendance(request, null);
+    }
+
+    /**
+     * Update an attendance
+     * 
+     * <p>Updates the HrisAttendance identified by `id`. Provide the unified HrisAttendance fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchHrisAttendanceResponse>} - The async response
+     */
+    public CompletableFuture<PatchHrisAttendanceResponse> patchHrisAttendance(@Nonnull PatchHrisAttendanceRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchHrisAttendanceRequest, PatchHrisAttendanceResponse> operation
-              = new PatchHrisAttendance.Async(sdkConfiguration, _headers);
+              = new PatchHrisAttendance.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -2207,8 +3055,22 @@ public class AsyncHris {
      * @return {@code CompletableFuture<PatchHrisBankaccountResponse>} - The async response
      */
     public CompletableFuture<PatchHrisBankaccountResponse> patchHrisBankaccount(@Nonnull PatchHrisBankaccountRequest request) {
+        return patchHrisBankaccount(request, null);
+    }
+
+    /**
+     * Update a bankaccount
+     * 
+     * <p>Updates the HrisBankaccount identified by `id`. Provide the unified HrisBankaccount fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchHrisBankaccountResponse>} - The async response
+     */
+    public CompletableFuture<PatchHrisBankaccountResponse> patchHrisBankaccount(@Nonnull PatchHrisBankaccountRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchHrisBankaccountRequest, PatchHrisBankaccountResponse> operation
-              = new PatchHrisBankaccount.Async(sdkConfiguration, _headers);
+              = new PatchHrisBankaccount.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -2236,8 +3098,22 @@ public class AsyncHris {
      * @return {@code CompletableFuture<PatchHrisBenefitResponse>} - The async response
      */
     public CompletableFuture<PatchHrisBenefitResponse> patchHrisBenefit(@Nonnull PatchHrisBenefitRequest request) {
+        return patchHrisBenefit(request, null);
+    }
+
+    /**
+     * Update a benefit
+     * 
+     * <p>Updates the HrisBenefit identified by `id`. Provide the unified HrisBenefit fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchHrisBenefitResponse>} - The async response
+     */
+    public CompletableFuture<PatchHrisBenefitResponse> patchHrisBenefit(@Nonnull PatchHrisBenefitRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchHrisBenefitRequest, PatchHrisBenefitResponse> operation
-              = new PatchHrisBenefit.Async(sdkConfiguration, _headers);
+              = new PatchHrisBenefit.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -2265,8 +3141,22 @@ public class AsyncHris {
      * @return {@code CompletableFuture<PatchHrisCompanyResponse>} - The async response
      */
     public CompletableFuture<PatchHrisCompanyResponse> patchHrisCompany(@Nonnull PatchHrisCompanyRequest request) {
+        return patchHrisCompany(request, null);
+    }
+
+    /**
+     * Update a company
+     * 
+     * <p>Updates the HrisCompany identified by `id`. Provide the unified HrisCompany fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchHrisCompanyResponse>} - The async response
+     */
+    public CompletableFuture<PatchHrisCompanyResponse> patchHrisCompany(@Nonnull PatchHrisCompanyRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchHrisCompanyRequest, PatchHrisCompanyResponse> operation
-              = new PatchHrisCompany.Async(sdkConfiguration, _headers);
+              = new PatchHrisCompany.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -2294,8 +3184,22 @@ public class AsyncHris {
      * @return {@code CompletableFuture<PatchHrisDeductionResponse>} - The async response
      */
     public CompletableFuture<PatchHrisDeductionResponse> patchHrisDeduction(@Nonnull PatchHrisDeductionRequest request) {
+        return patchHrisDeduction(request, null);
+    }
+
+    /**
+     * Update a deduction
+     * 
+     * <p>Updates the HrisDeduction identified by `id`. Provide the unified HrisDeduction fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchHrisDeductionResponse>} - The async response
+     */
+    public CompletableFuture<PatchHrisDeductionResponse> patchHrisDeduction(@Nonnull PatchHrisDeductionRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchHrisDeductionRequest, PatchHrisDeductionResponse> operation
-              = new PatchHrisDeduction.Async(sdkConfiguration, _headers);
+              = new PatchHrisDeduction.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -2323,8 +3227,22 @@ public class AsyncHris {
      * @return {@code CompletableFuture<PatchHrisDeviceResponse>} - The async response
      */
     public CompletableFuture<PatchHrisDeviceResponse> patchHrisDevice(@Nonnull PatchHrisDeviceRequest request) {
+        return patchHrisDevice(request, null);
+    }
+
+    /**
+     * Update a device
+     * 
+     * <p>Updates the HrisDevice identified by `id`. Provide the unified HrisDevice fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchHrisDeviceResponse>} - The async response
+     */
+    public CompletableFuture<PatchHrisDeviceResponse> patchHrisDevice(@Nonnull PatchHrisDeviceRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchHrisDeviceRequest, PatchHrisDeviceResponse> operation
-              = new PatchHrisDevice.Async(sdkConfiguration, _headers);
+              = new PatchHrisDevice.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -2352,8 +3270,22 @@ public class AsyncHris {
      * @return {@code CompletableFuture<PatchHrisDocumentResponse>} - The async response
      */
     public CompletableFuture<PatchHrisDocumentResponse> patchHrisDocument(@Nonnull PatchHrisDocumentRequest request) {
+        return patchHrisDocument(request, null);
+    }
+
+    /**
+     * Update a document
+     * 
+     * <p>Updates the HrisDocument identified by `id`. Provide the unified HrisDocument fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchHrisDocumentResponse>} - The async response
+     */
+    public CompletableFuture<PatchHrisDocumentResponse> patchHrisDocument(@Nonnull PatchHrisDocumentRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchHrisDocumentRequest, PatchHrisDocumentResponse> operation
-              = new PatchHrisDocument.Async(sdkConfiguration, _headers);
+              = new PatchHrisDocument.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -2381,8 +3313,22 @@ public class AsyncHris {
      * @return {@code CompletableFuture<PatchHrisEarningResponse>} - The async response
      */
     public CompletableFuture<PatchHrisEarningResponse> patchHrisEarning(@Nonnull PatchHrisEarningRequest request) {
+        return patchHrisEarning(request, null);
+    }
+
+    /**
+     * Update an earning
+     * 
+     * <p>Updates the HrisEarning identified by `id`. Provide the unified HrisEarning fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchHrisEarningResponse>} - The async response
+     */
+    public CompletableFuture<PatchHrisEarningResponse> patchHrisEarning(@Nonnull PatchHrisEarningRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchHrisEarningRequest, PatchHrisEarningResponse> operation
-              = new PatchHrisEarning.Async(sdkConfiguration, _headers);
+              = new PatchHrisEarning.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -2410,8 +3356,22 @@ public class AsyncHris {
      * @return {@code CompletableFuture<PatchHrisEmployeeResponse>} - The async response
      */
     public CompletableFuture<PatchHrisEmployeeResponse> patchHrisEmployee(@Nonnull PatchHrisEmployeeRequest request) {
+        return patchHrisEmployee(request, null);
+    }
+
+    /**
+     * Update an employee
+     * 
+     * <p>Updates the HrisEmployee identified by `id`. Provide the unified HrisEmployee fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchHrisEmployeeResponse>} - The async response
+     */
+    public CompletableFuture<PatchHrisEmployeeResponse> patchHrisEmployee(@Nonnull PatchHrisEmployeeRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchHrisEmployeeRequest, PatchHrisEmployeeResponse> operation
-              = new PatchHrisEmployee.Async(sdkConfiguration, _headers);
+              = new PatchHrisEmployee.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -2439,8 +3399,22 @@ public class AsyncHris {
      * @return {@code CompletableFuture<PatchHrisGroupResponse>} - The async response
      */
     public CompletableFuture<PatchHrisGroupResponse> patchHrisGroup(@Nonnull PatchHrisGroupRequest request) {
+        return patchHrisGroup(request, null);
+    }
+
+    /**
+     * Update a group
+     * 
+     * <p>Updates the HrisGroup identified by `id`. Provide the unified HrisGroup fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchHrisGroupResponse>} - The async response
+     */
+    public CompletableFuture<PatchHrisGroupResponse> patchHrisGroup(@Nonnull PatchHrisGroupRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchHrisGroupRequest, PatchHrisGroupResponse> operation
-              = new PatchHrisGroup.Async(sdkConfiguration, _headers);
+              = new PatchHrisGroup.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -2468,8 +3442,22 @@ public class AsyncHris {
      * @return {@code CompletableFuture<PatchHrisJobResponse>} - The async response
      */
     public CompletableFuture<PatchHrisJobResponse> patchHrisJob(@Nonnull PatchHrisJobRequest request) {
+        return patchHrisJob(request, null);
+    }
+
+    /**
+     * Update a job
+     * 
+     * <p>Updates the HrisJob identified by `id`. Provide the unified HrisJob fields to change in the request
+     * body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchHrisJobResponse>} - The async response
+     */
+    public CompletableFuture<PatchHrisJobResponse> patchHrisJob(@Nonnull PatchHrisJobRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchHrisJobRequest, PatchHrisJobResponse> operation
-              = new PatchHrisJob.Async(sdkConfiguration, _headers);
+              = new PatchHrisJob.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -2497,8 +3485,22 @@ public class AsyncHris {
      * @return {@code CompletableFuture<PatchHrisLocationResponse>} - The async response
      */
     public CompletableFuture<PatchHrisLocationResponse> patchHrisLocation(@Nonnull PatchHrisLocationRequest request) {
+        return patchHrisLocation(request, null);
+    }
+
+    /**
+     * Update a location
+     * 
+     * <p>Updates the HrisLocation identified by `id`. Provide the unified HrisLocation fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchHrisLocationResponse>} - The async response
+     */
+    public CompletableFuture<PatchHrisLocationResponse> patchHrisLocation(@Nonnull PatchHrisLocationRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchHrisLocationRequest, PatchHrisLocationResponse> operation
-              = new PatchHrisLocation.Async(sdkConfiguration, _headers);
+              = new PatchHrisLocation.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -2526,8 +3528,22 @@ public class AsyncHris {
      * @return {@code CompletableFuture<PatchHrisTaxonomyResponse>} - The async response
      */
     public CompletableFuture<PatchHrisTaxonomyResponse> patchHrisTaxonomy(@Nonnull PatchHrisTaxonomyRequest request) {
+        return patchHrisTaxonomy(request, null);
+    }
+
+    /**
+     * Update a taxonomy
+     * 
+     * <p>Updates the HrisTaxonomy identified by `id`. Provide the unified HrisTaxonomy fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchHrisTaxonomyResponse>} - The async response
+     */
+    public CompletableFuture<PatchHrisTaxonomyResponse> patchHrisTaxonomy(@Nonnull PatchHrisTaxonomyRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchHrisTaxonomyRequest, PatchHrisTaxonomyResponse> operation
-              = new PatchHrisTaxonomy.Async(sdkConfiguration, _headers);
+              = new PatchHrisTaxonomy.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -2555,8 +3571,22 @@ public class AsyncHris {
      * @return {@code CompletableFuture<PatchHrisTaxwithholdingResponse>} - The async response
      */
     public CompletableFuture<PatchHrisTaxwithholdingResponse> patchHrisTaxwithholding(@Nonnull PatchHrisTaxwithholdingRequest request) {
+        return patchHrisTaxwithholding(request, null);
+    }
+
+    /**
+     * Update a taxwithholding
+     * 
+     * <p>Updates the HrisTaxwithholding identified by `id`. Provide the unified HrisTaxwithholding fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchHrisTaxwithholdingResponse>} - The async response
+     */
+    public CompletableFuture<PatchHrisTaxwithholdingResponse> patchHrisTaxwithholding(@Nonnull PatchHrisTaxwithholdingRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchHrisTaxwithholdingRequest, PatchHrisTaxwithholdingResponse> operation
-              = new PatchHrisTaxwithholding.Async(sdkConfiguration, _headers);
+              = new PatchHrisTaxwithholding.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -2584,8 +3614,22 @@ public class AsyncHris {
      * @return {@code CompletableFuture<PatchHrisTimeoffResponse>} - The async response
      */
     public CompletableFuture<PatchHrisTimeoffResponse> patchHrisTimeoff(@Nonnull PatchHrisTimeoffRequest request) {
+        return patchHrisTimeoff(request, null);
+    }
+
+    /**
+     * Update a timeoff
+     * 
+     * <p>Updates the HrisTimeoff identified by `id`. Provide the unified HrisTimeoff fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchHrisTimeoffResponse>} - The async response
+     */
+    public CompletableFuture<PatchHrisTimeoffResponse> patchHrisTimeoff(@Nonnull PatchHrisTimeoffRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchHrisTimeoffRequest, PatchHrisTimeoffResponse> operation
-              = new PatchHrisTimeoff.Async(sdkConfiguration, _headers);
+              = new PatchHrisTimeoff.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -2613,8 +3657,22 @@ public class AsyncHris {
      * @return {@code CompletableFuture<PatchHrisTimeshiftResponse>} - The async response
      */
     public CompletableFuture<PatchHrisTimeshiftResponse> patchHrisTimeshift(@Nonnull PatchHrisTimeshiftRequest request) {
+        return patchHrisTimeshift(request, null);
+    }
+
+    /**
+     * Update a timeshift
+     * 
+     * <p>Updates the HrisTimeshift identified by `id`. Provide the unified HrisTimeshift fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchHrisTimeshiftResponse>} - The async response
+     */
+    public CompletableFuture<PatchHrisTimeshiftResponse> patchHrisTimeshift(@Nonnull PatchHrisTimeshiftRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchHrisTimeshiftRequest, PatchHrisTimeshiftResponse> operation
-              = new PatchHrisTimeshift.Async(sdkConfiguration, _headers);
+              = new PatchHrisTimeshift.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -2640,8 +3698,21 @@ public class AsyncHris {
      * @return {@code CompletableFuture<RemoveHrisAttendanceResponse>} - The async response
      */
     public CompletableFuture<RemoveHrisAttendanceResponse> removeHrisAttendance(@Nonnull RemoveHrisAttendanceRequest request) {
+        return removeHrisAttendance(request, null);
+    }
+
+    /**
+     * Remove an attendance
+     * 
+     * <p>Deletes the HrisAttendance identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveHrisAttendanceResponse>} - The async response
+     */
+    public CompletableFuture<RemoveHrisAttendanceResponse> removeHrisAttendance(@Nonnull RemoveHrisAttendanceRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveHrisAttendanceRequest, RemoveHrisAttendanceResponse> operation
-              = new RemoveHrisAttendance.Async(sdkConfiguration, _headers);
+              = new RemoveHrisAttendance.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -2667,8 +3738,21 @@ public class AsyncHris {
      * @return {@code CompletableFuture<RemoveHrisBankaccountResponse>} - The async response
      */
     public CompletableFuture<RemoveHrisBankaccountResponse> removeHrisBankaccount(@Nonnull RemoveHrisBankaccountRequest request) {
+        return removeHrisBankaccount(request, null);
+    }
+
+    /**
+     * Remove a bankaccount
+     * 
+     * <p>Deletes the HrisBankaccount identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveHrisBankaccountResponse>} - The async response
+     */
+    public CompletableFuture<RemoveHrisBankaccountResponse> removeHrisBankaccount(@Nonnull RemoveHrisBankaccountRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveHrisBankaccountRequest, RemoveHrisBankaccountResponse> operation
-              = new RemoveHrisBankaccount.Async(sdkConfiguration, _headers);
+              = new RemoveHrisBankaccount.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -2694,8 +3778,21 @@ public class AsyncHris {
      * @return {@code CompletableFuture<RemoveHrisBenefitResponse>} - The async response
      */
     public CompletableFuture<RemoveHrisBenefitResponse> removeHrisBenefit(@Nonnull RemoveHrisBenefitRequest request) {
+        return removeHrisBenefit(request, null);
+    }
+
+    /**
+     * Remove a benefit
+     * 
+     * <p>Deletes the HrisBenefit identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveHrisBenefitResponse>} - The async response
+     */
+    public CompletableFuture<RemoveHrisBenefitResponse> removeHrisBenefit(@Nonnull RemoveHrisBenefitRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveHrisBenefitRequest, RemoveHrisBenefitResponse> operation
-              = new RemoveHrisBenefit.Async(sdkConfiguration, _headers);
+              = new RemoveHrisBenefit.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -2721,8 +3818,21 @@ public class AsyncHris {
      * @return {@code CompletableFuture<RemoveHrisCompanyResponse>} - The async response
      */
     public CompletableFuture<RemoveHrisCompanyResponse> removeHrisCompany(@Nonnull RemoveHrisCompanyRequest request) {
+        return removeHrisCompany(request, null);
+    }
+
+    /**
+     * Remove a company
+     * 
+     * <p>Deletes the HrisCompany identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveHrisCompanyResponse>} - The async response
+     */
+    public CompletableFuture<RemoveHrisCompanyResponse> removeHrisCompany(@Nonnull RemoveHrisCompanyRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveHrisCompanyRequest, RemoveHrisCompanyResponse> operation
-              = new RemoveHrisCompany.Async(sdkConfiguration, _headers);
+              = new RemoveHrisCompany.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -2748,8 +3858,21 @@ public class AsyncHris {
      * @return {@code CompletableFuture<RemoveHrisDeductionResponse>} - The async response
      */
     public CompletableFuture<RemoveHrisDeductionResponse> removeHrisDeduction(@Nonnull RemoveHrisDeductionRequest request) {
+        return removeHrisDeduction(request, null);
+    }
+
+    /**
+     * Remove a deduction
+     * 
+     * <p>Deletes the HrisDeduction identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveHrisDeductionResponse>} - The async response
+     */
+    public CompletableFuture<RemoveHrisDeductionResponse> removeHrisDeduction(@Nonnull RemoveHrisDeductionRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveHrisDeductionRequest, RemoveHrisDeductionResponse> operation
-              = new RemoveHrisDeduction.Async(sdkConfiguration, _headers);
+              = new RemoveHrisDeduction.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -2775,8 +3898,21 @@ public class AsyncHris {
      * @return {@code CompletableFuture<RemoveHrisDeviceResponse>} - The async response
      */
     public CompletableFuture<RemoveHrisDeviceResponse> removeHrisDevice(@Nonnull RemoveHrisDeviceRequest request) {
+        return removeHrisDevice(request, null);
+    }
+
+    /**
+     * Remove a device
+     * 
+     * <p>Deletes the HrisDevice identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveHrisDeviceResponse>} - The async response
+     */
+    public CompletableFuture<RemoveHrisDeviceResponse> removeHrisDevice(@Nonnull RemoveHrisDeviceRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveHrisDeviceRequest, RemoveHrisDeviceResponse> operation
-              = new RemoveHrisDevice.Async(sdkConfiguration, _headers);
+              = new RemoveHrisDevice.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -2802,8 +3938,21 @@ public class AsyncHris {
      * @return {@code CompletableFuture<RemoveHrisDocumentResponse>} - The async response
      */
     public CompletableFuture<RemoveHrisDocumentResponse> removeHrisDocument(@Nonnull RemoveHrisDocumentRequest request) {
+        return removeHrisDocument(request, null);
+    }
+
+    /**
+     * Remove a document
+     * 
+     * <p>Deletes the HrisDocument identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveHrisDocumentResponse>} - The async response
+     */
+    public CompletableFuture<RemoveHrisDocumentResponse> removeHrisDocument(@Nonnull RemoveHrisDocumentRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveHrisDocumentRequest, RemoveHrisDocumentResponse> operation
-              = new RemoveHrisDocument.Async(sdkConfiguration, _headers);
+              = new RemoveHrisDocument.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -2829,8 +3978,21 @@ public class AsyncHris {
      * @return {@code CompletableFuture<RemoveHrisEarningResponse>} - The async response
      */
     public CompletableFuture<RemoveHrisEarningResponse> removeHrisEarning(@Nonnull RemoveHrisEarningRequest request) {
+        return removeHrisEarning(request, null);
+    }
+
+    /**
+     * Remove an earning
+     * 
+     * <p>Deletes the HrisEarning identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveHrisEarningResponse>} - The async response
+     */
+    public CompletableFuture<RemoveHrisEarningResponse> removeHrisEarning(@Nonnull RemoveHrisEarningRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveHrisEarningRequest, RemoveHrisEarningResponse> operation
-              = new RemoveHrisEarning.Async(sdkConfiguration, _headers);
+              = new RemoveHrisEarning.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -2856,8 +4018,21 @@ public class AsyncHris {
      * @return {@code CompletableFuture<RemoveHrisEmployeeResponse>} - The async response
      */
     public CompletableFuture<RemoveHrisEmployeeResponse> removeHrisEmployee(@Nonnull RemoveHrisEmployeeRequest request) {
+        return removeHrisEmployee(request, null);
+    }
+
+    /**
+     * Remove an employee
+     * 
+     * <p>Deletes the HrisEmployee identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveHrisEmployeeResponse>} - The async response
+     */
+    public CompletableFuture<RemoveHrisEmployeeResponse> removeHrisEmployee(@Nonnull RemoveHrisEmployeeRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveHrisEmployeeRequest, RemoveHrisEmployeeResponse> operation
-              = new RemoveHrisEmployee.Async(sdkConfiguration, _headers);
+              = new RemoveHrisEmployee.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -2883,8 +4058,21 @@ public class AsyncHris {
      * @return {@code CompletableFuture<RemoveHrisGroupResponse>} - The async response
      */
     public CompletableFuture<RemoveHrisGroupResponse> removeHrisGroup(@Nonnull RemoveHrisGroupRequest request) {
+        return removeHrisGroup(request, null);
+    }
+
+    /**
+     * Remove a group
+     * 
+     * <p>Deletes the HrisGroup identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveHrisGroupResponse>} - The async response
+     */
+    public CompletableFuture<RemoveHrisGroupResponse> removeHrisGroup(@Nonnull RemoveHrisGroupRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveHrisGroupRequest, RemoveHrisGroupResponse> operation
-              = new RemoveHrisGroup.Async(sdkConfiguration, _headers);
+              = new RemoveHrisGroup.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -2910,8 +4098,21 @@ public class AsyncHris {
      * @return {@code CompletableFuture<RemoveHrisJobResponse>} - The async response
      */
     public CompletableFuture<RemoveHrisJobResponse> removeHrisJob(@Nonnull RemoveHrisJobRequest request) {
+        return removeHrisJob(request, null);
+    }
+
+    /**
+     * Remove a job
+     * 
+     * <p>Deletes the HrisJob identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveHrisJobResponse>} - The async response
+     */
+    public CompletableFuture<RemoveHrisJobResponse> removeHrisJob(@Nonnull RemoveHrisJobRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveHrisJobRequest, RemoveHrisJobResponse> operation
-              = new RemoveHrisJob.Async(sdkConfiguration, _headers);
+              = new RemoveHrisJob.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -2937,8 +4138,21 @@ public class AsyncHris {
      * @return {@code CompletableFuture<RemoveHrisLocationResponse>} - The async response
      */
     public CompletableFuture<RemoveHrisLocationResponse> removeHrisLocation(@Nonnull RemoveHrisLocationRequest request) {
+        return removeHrisLocation(request, null);
+    }
+
+    /**
+     * Remove a location
+     * 
+     * <p>Deletes the HrisLocation identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveHrisLocationResponse>} - The async response
+     */
+    public CompletableFuture<RemoveHrisLocationResponse> removeHrisLocation(@Nonnull RemoveHrisLocationRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveHrisLocationRequest, RemoveHrisLocationResponse> operation
-              = new RemoveHrisLocation.Async(sdkConfiguration, _headers);
+              = new RemoveHrisLocation.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -2964,8 +4178,21 @@ public class AsyncHris {
      * @return {@code CompletableFuture<RemoveHrisTaxonomyResponse>} - The async response
      */
     public CompletableFuture<RemoveHrisTaxonomyResponse> removeHrisTaxonomy(@Nonnull RemoveHrisTaxonomyRequest request) {
+        return removeHrisTaxonomy(request, null);
+    }
+
+    /**
+     * Remove a taxonomy
+     * 
+     * <p>Deletes the HrisTaxonomy identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveHrisTaxonomyResponse>} - The async response
+     */
+    public CompletableFuture<RemoveHrisTaxonomyResponse> removeHrisTaxonomy(@Nonnull RemoveHrisTaxonomyRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveHrisTaxonomyRequest, RemoveHrisTaxonomyResponse> operation
-              = new RemoveHrisTaxonomy.Async(sdkConfiguration, _headers);
+              = new RemoveHrisTaxonomy.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -2991,8 +4218,21 @@ public class AsyncHris {
      * @return {@code CompletableFuture<RemoveHrisTaxwithholdingResponse>} - The async response
      */
     public CompletableFuture<RemoveHrisTaxwithholdingResponse> removeHrisTaxwithholding(@Nonnull RemoveHrisTaxwithholdingRequest request) {
+        return removeHrisTaxwithholding(request, null);
+    }
+
+    /**
+     * Remove a taxwithholding
+     * 
+     * <p>Deletes the HrisTaxwithholding identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveHrisTaxwithholdingResponse>} - The async response
+     */
+    public CompletableFuture<RemoveHrisTaxwithholdingResponse> removeHrisTaxwithholding(@Nonnull RemoveHrisTaxwithholdingRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveHrisTaxwithholdingRequest, RemoveHrisTaxwithholdingResponse> operation
-              = new RemoveHrisTaxwithholding.Async(sdkConfiguration, _headers);
+              = new RemoveHrisTaxwithholding.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -3018,8 +4258,21 @@ public class AsyncHris {
      * @return {@code CompletableFuture<RemoveHrisTimeoffResponse>} - The async response
      */
     public CompletableFuture<RemoveHrisTimeoffResponse> removeHrisTimeoff(@Nonnull RemoveHrisTimeoffRequest request) {
+        return removeHrisTimeoff(request, null);
+    }
+
+    /**
+     * Remove a timeoff
+     * 
+     * <p>Deletes the HrisTimeoff identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveHrisTimeoffResponse>} - The async response
+     */
+    public CompletableFuture<RemoveHrisTimeoffResponse> removeHrisTimeoff(@Nonnull RemoveHrisTimeoffRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveHrisTimeoffRequest, RemoveHrisTimeoffResponse> operation
-              = new RemoveHrisTimeoff.Async(sdkConfiguration, _headers);
+              = new RemoveHrisTimeoff.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -3045,8 +4298,21 @@ public class AsyncHris {
      * @return {@code CompletableFuture<RemoveHrisTimeshiftResponse>} - The async response
      */
     public CompletableFuture<RemoveHrisTimeshiftResponse> removeHrisTimeshift(@Nonnull RemoveHrisTimeshiftRequest request) {
+        return removeHrisTimeshift(request, null);
+    }
+
+    /**
+     * Remove a timeshift
+     * 
+     * <p>Deletes the HrisTimeshift identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveHrisTimeshiftResponse>} - The async response
+     */
+    public CompletableFuture<RemoveHrisTimeshiftResponse> removeHrisTimeshift(@Nonnull RemoveHrisTimeshiftRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveHrisTimeshiftRequest, RemoveHrisTimeshiftResponse> operation
-              = new RemoveHrisTimeshift.Async(sdkConfiguration, _headers);
+              = new RemoveHrisTimeshift.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -3074,8 +4340,22 @@ public class AsyncHris {
      * @return {@code CompletableFuture<UpdateHrisAttendanceResponse>} - The async response
      */
     public CompletableFuture<UpdateHrisAttendanceResponse> updateHrisAttendance(@Nonnull UpdateHrisAttendanceRequest request) {
+        return updateHrisAttendance(request, null);
+    }
+
+    /**
+     * Update an attendance
+     * 
+     * <p>Updates the HrisAttendance identified by `id`. Provide the unified HrisAttendance fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateHrisAttendanceResponse>} - The async response
+     */
+    public CompletableFuture<UpdateHrisAttendanceResponse> updateHrisAttendance(@Nonnull UpdateHrisAttendanceRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateHrisAttendanceRequest, UpdateHrisAttendanceResponse> operation
-              = new UpdateHrisAttendance.Async(sdkConfiguration, _headers);
+              = new UpdateHrisAttendance.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -3103,8 +4383,22 @@ public class AsyncHris {
      * @return {@code CompletableFuture<UpdateHrisBankaccountResponse>} - The async response
      */
     public CompletableFuture<UpdateHrisBankaccountResponse> updateHrisBankaccount(@Nonnull UpdateHrisBankaccountRequest request) {
+        return updateHrisBankaccount(request, null);
+    }
+
+    /**
+     * Update a bankaccount
+     * 
+     * <p>Updates the HrisBankaccount identified by `id`. Provide the unified HrisBankaccount fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateHrisBankaccountResponse>} - The async response
+     */
+    public CompletableFuture<UpdateHrisBankaccountResponse> updateHrisBankaccount(@Nonnull UpdateHrisBankaccountRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateHrisBankaccountRequest, UpdateHrisBankaccountResponse> operation
-              = new UpdateHrisBankaccount.Async(sdkConfiguration, _headers);
+              = new UpdateHrisBankaccount.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -3132,8 +4426,22 @@ public class AsyncHris {
      * @return {@code CompletableFuture<UpdateHrisBenefitResponse>} - The async response
      */
     public CompletableFuture<UpdateHrisBenefitResponse> updateHrisBenefit(@Nonnull UpdateHrisBenefitRequest request) {
+        return updateHrisBenefit(request, null);
+    }
+
+    /**
+     * Update a benefit
+     * 
+     * <p>Updates the HrisBenefit identified by `id`. Provide the unified HrisBenefit fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateHrisBenefitResponse>} - The async response
+     */
+    public CompletableFuture<UpdateHrisBenefitResponse> updateHrisBenefit(@Nonnull UpdateHrisBenefitRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateHrisBenefitRequest, UpdateHrisBenefitResponse> operation
-              = new UpdateHrisBenefit.Async(sdkConfiguration, _headers);
+              = new UpdateHrisBenefit.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -3161,8 +4469,22 @@ public class AsyncHris {
      * @return {@code CompletableFuture<UpdateHrisCompanyResponse>} - The async response
      */
     public CompletableFuture<UpdateHrisCompanyResponse> updateHrisCompany(@Nonnull UpdateHrisCompanyRequest request) {
+        return updateHrisCompany(request, null);
+    }
+
+    /**
+     * Update a company
+     * 
+     * <p>Updates the HrisCompany identified by `id`. Provide the unified HrisCompany fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateHrisCompanyResponse>} - The async response
+     */
+    public CompletableFuture<UpdateHrisCompanyResponse> updateHrisCompany(@Nonnull UpdateHrisCompanyRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateHrisCompanyRequest, UpdateHrisCompanyResponse> operation
-              = new UpdateHrisCompany.Async(sdkConfiguration, _headers);
+              = new UpdateHrisCompany.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -3190,8 +4512,22 @@ public class AsyncHris {
      * @return {@code CompletableFuture<UpdateHrisDeductionResponse>} - The async response
      */
     public CompletableFuture<UpdateHrisDeductionResponse> updateHrisDeduction(@Nonnull UpdateHrisDeductionRequest request) {
+        return updateHrisDeduction(request, null);
+    }
+
+    /**
+     * Update a deduction
+     * 
+     * <p>Updates the HrisDeduction identified by `id`. Provide the unified HrisDeduction fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateHrisDeductionResponse>} - The async response
+     */
+    public CompletableFuture<UpdateHrisDeductionResponse> updateHrisDeduction(@Nonnull UpdateHrisDeductionRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateHrisDeductionRequest, UpdateHrisDeductionResponse> operation
-              = new UpdateHrisDeduction.Async(sdkConfiguration, _headers);
+              = new UpdateHrisDeduction.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -3219,8 +4555,22 @@ public class AsyncHris {
      * @return {@code CompletableFuture<UpdateHrisDeviceResponse>} - The async response
      */
     public CompletableFuture<UpdateHrisDeviceResponse> updateHrisDevice(@Nonnull UpdateHrisDeviceRequest request) {
+        return updateHrisDevice(request, null);
+    }
+
+    /**
+     * Update a device
+     * 
+     * <p>Updates the HrisDevice identified by `id`. Provide the unified HrisDevice fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateHrisDeviceResponse>} - The async response
+     */
+    public CompletableFuture<UpdateHrisDeviceResponse> updateHrisDevice(@Nonnull UpdateHrisDeviceRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateHrisDeviceRequest, UpdateHrisDeviceResponse> operation
-              = new UpdateHrisDevice.Async(sdkConfiguration, _headers);
+              = new UpdateHrisDevice.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -3248,8 +4598,22 @@ public class AsyncHris {
      * @return {@code CompletableFuture<UpdateHrisDocumentResponse>} - The async response
      */
     public CompletableFuture<UpdateHrisDocumentResponse> updateHrisDocument(@Nonnull UpdateHrisDocumentRequest request) {
+        return updateHrisDocument(request, null);
+    }
+
+    /**
+     * Update a document
+     * 
+     * <p>Updates the HrisDocument identified by `id`. Provide the unified HrisDocument fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateHrisDocumentResponse>} - The async response
+     */
+    public CompletableFuture<UpdateHrisDocumentResponse> updateHrisDocument(@Nonnull UpdateHrisDocumentRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateHrisDocumentRequest, UpdateHrisDocumentResponse> operation
-              = new UpdateHrisDocument.Async(sdkConfiguration, _headers);
+              = new UpdateHrisDocument.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -3277,8 +4641,22 @@ public class AsyncHris {
      * @return {@code CompletableFuture<UpdateHrisEarningResponse>} - The async response
      */
     public CompletableFuture<UpdateHrisEarningResponse> updateHrisEarning(@Nonnull UpdateHrisEarningRequest request) {
+        return updateHrisEarning(request, null);
+    }
+
+    /**
+     * Update an earning
+     * 
+     * <p>Updates the HrisEarning identified by `id`. Provide the unified HrisEarning fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateHrisEarningResponse>} - The async response
+     */
+    public CompletableFuture<UpdateHrisEarningResponse> updateHrisEarning(@Nonnull UpdateHrisEarningRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateHrisEarningRequest, UpdateHrisEarningResponse> operation
-              = new UpdateHrisEarning.Async(sdkConfiguration, _headers);
+              = new UpdateHrisEarning.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -3306,8 +4684,22 @@ public class AsyncHris {
      * @return {@code CompletableFuture<UpdateHrisEmployeeResponse>} - The async response
      */
     public CompletableFuture<UpdateHrisEmployeeResponse> updateHrisEmployee(@Nonnull UpdateHrisEmployeeRequest request) {
+        return updateHrisEmployee(request, null);
+    }
+
+    /**
+     * Update an employee
+     * 
+     * <p>Updates the HrisEmployee identified by `id`. Provide the unified HrisEmployee fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateHrisEmployeeResponse>} - The async response
+     */
+    public CompletableFuture<UpdateHrisEmployeeResponse> updateHrisEmployee(@Nonnull UpdateHrisEmployeeRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateHrisEmployeeRequest, UpdateHrisEmployeeResponse> operation
-              = new UpdateHrisEmployee.Async(sdkConfiguration, _headers);
+              = new UpdateHrisEmployee.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -3335,8 +4727,22 @@ public class AsyncHris {
      * @return {@code CompletableFuture<UpdateHrisGroupResponse>} - The async response
      */
     public CompletableFuture<UpdateHrisGroupResponse> updateHrisGroup(@Nonnull UpdateHrisGroupRequest request) {
+        return updateHrisGroup(request, null);
+    }
+
+    /**
+     * Update a group
+     * 
+     * <p>Updates the HrisGroup identified by `id`. Provide the unified HrisGroup fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateHrisGroupResponse>} - The async response
+     */
+    public CompletableFuture<UpdateHrisGroupResponse> updateHrisGroup(@Nonnull UpdateHrisGroupRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateHrisGroupRequest, UpdateHrisGroupResponse> operation
-              = new UpdateHrisGroup.Async(sdkConfiguration, _headers);
+              = new UpdateHrisGroup.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -3364,8 +4770,22 @@ public class AsyncHris {
      * @return {@code CompletableFuture<UpdateHrisJobResponse>} - The async response
      */
     public CompletableFuture<UpdateHrisJobResponse> updateHrisJob(@Nonnull UpdateHrisJobRequest request) {
+        return updateHrisJob(request, null);
+    }
+
+    /**
+     * Update a job
+     * 
+     * <p>Updates the HrisJob identified by `id`. Provide the unified HrisJob fields to change in the request
+     * body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateHrisJobResponse>} - The async response
+     */
+    public CompletableFuture<UpdateHrisJobResponse> updateHrisJob(@Nonnull UpdateHrisJobRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateHrisJobRequest, UpdateHrisJobResponse> operation
-              = new UpdateHrisJob.Async(sdkConfiguration, _headers);
+              = new UpdateHrisJob.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -3393,8 +4813,22 @@ public class AsyncHris {
      * @return {@code CompletableFuture<UpdateHrisLocationResponse>} - The async response
      */
     public CompletableFuture<UpdateHrisLocationResponse> updateHrisLocation(@Nonnull UpdateHrisLocationRequest request) {
+        return updateHrisLocation(request, null);
+    }
+
+    /**
+     * Update a location
+     * 
+     * <p>Updates the HrisLocation identified by `id`. Provide the unified HrisLocation fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateHrisLocationResponse>} - The async response
+     */
+    public CompletableFuture<UpdateHrisLocationResponse> updateHrisLocation(@Nonnull UpdateHrisLocationRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateHrisLocationRequest, UpdateHrisLocationResponse> operation
-              = new UpdateHrisLocation.Async(sdkConfiguration, _headers);
+              = new UpdateHrisLocation.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -3422,8 +4856,22 @@ public class AsyncHris {
      * @return {@code CompletableFuture<UpdateHrisTaxonomyResponse>} - The async response
      */
     public CompletableFuture<UpdateHrisTaxonomyResponse> updateHrisTaxonomy(@Nonnull UpdateHrisTaxonomyRequest request) {
+        return updateHrisTaxonomy(request, null);
+    }
+
+    /**
+     * Update a taxonomy
+     * 
+     * <p>Updates the HrisTaxonomy identified by `id`. Provide the unified HrisTaxonomy fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateHrisTaxonomyResponse>} - The async response
+     */
+    public CompletableFuture<UpdateHrisTaxonomyResponse> updateHrisTaxonomy(@Nonnull UpdateHrisTaxonomyRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateHrisTaxonomyRequest, UpdateHrisTaxonomyResponse> operation
-              = new UpdateHrisTaxonomy.Async(sdkConfiguration, _headers);
+              = new UpdateHrisTaxonomy.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -3451,8 +4899,22 @@ public class AsyncHris {
      * @return {@code CompletableFuture<UpdateHrisTaxwithholdingResponse>} - The async response
      */
     public CompletableFuture<UpdateHrisTaxwithholdingResponse> updateHrisTaxwithholding(@Nonnull UpdateHrisTaxwithholdingRequest request) {
+        return updateHrisTaxwithholding(request, null);
+    }
+
+    /**
+     * Update a taxwithholding
+     * 
+     * <p>Updates the HrisTaxwithholding identified by `id`. Provide the unified HrisTaxwithholding fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateHrisTaxwithholdingResponse>} - The async response
+     */
+    public CompletableFuture<UpdateHrisTaxwithholdingResponse> updateHrisTaxwithholding(@Nonnull UpdateHrisTaxwithholdingRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateHrisTaxwithholdingRequest, UpdateHrisTaxwithholdingResponse> operation
-              = new UpdateHrisTaxwithholding.Async(sdkConfiguration, _headers);
+              = new UpdateHrisTaxwithholding.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -3480,8 +4942,22 @@ public class AsyncHris {
      * @return {@code CompletableFuture<UpdateHrisTimeoffResponse>} - The async response
      */
     public CompletableFuture<UpdateHrisTimeoffResponse> updateHrisTimeoff(@Nonnull UpdateHrisTimeoffRequest request) {
+        return updateHrisTimeoff(request, null);
+    }
+
+    /**
+     * Update a timeoff
+     * 
+     * <p>Updates the HrisTimeoff identified by `id`. Provide the unified HrisTimeoff fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateHrisTimeoffResponse>} - The async response
+     */
+    public CompletableFuture<UpdateHrisTimeoffResponse> updateHrisTimeoff(@Nonnull UpdateHrisTimeoffRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateHrisTimeoffRequest, UpdateHrisTimeoffResponse> operation
-              = new UpdateHrisTimeoff.Async(sdkConfiguration, _headers);
+              = new UpdateHrisTimeoff.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -3509,8 +4985,22 @@ public class AsyncHris {
      * @return {@code CompletableFuture<UpdateHrisTimeshiftResponse>} - The async response
      */
     public CompletableFuture<UpdateHrisTimeshiftResponse> updateHrisTimeshift(@Nonnull UpdateHrisTimeshiftRequest request) {
+        return updateHrisTimeshift(request, null);
+    }
+
+    /**
+     * Update a timeshift
+     * 
+     * <p>Updates the HrisTimeshift identified by `id`. Provide the unified HrisTimeshift fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateHrisTimeshiftResponse>} - The async response
+     */
+    public CompletableFuture<UpdateHrisTimeshiftResponse> updateHrisTimeshift(@Nonnull UpdateHrisTimeshiftRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateHrisTimeshiftRequest, UpdateHrisTimeshiftResponse> operation
-              = new UpdateHrisTimeshift.Async(sdkConfiguration, _headers);
+              = new UpdateHrisTimeshift.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

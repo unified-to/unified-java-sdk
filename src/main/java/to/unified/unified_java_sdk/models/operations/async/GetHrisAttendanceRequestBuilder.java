@@ -6,20 +6,30 @@ package to.unified.unified_java_sdk.models.operations.async;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.GetHrisAttendanceRequest;
 import to.unified.unified_java_sdk.operations.GetHrisAttendance;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetHrisAttendanceRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private GetHrisAttendanceRequest request;
+    private final Options.Builder optionsBuilder;
 
     public GetHrisAttendanceRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public GetHrisAttendanceRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public GetHrisAttendanceRequestBuilder request(@Nonnull GetHrisAttendanceRequest request) {
@@ -44,8 +54,9 @@ public class GetHrisAttendanceRequestBuilder {
     * @return The response from the server.
     */
     public CompletableFuture<GetHrisAttendanceResponse> call() {
+        Options options = optionsBuilder.build();
         AsyncRequestOperation<GetHrisAttendanceRequest, GetHrisAttendanceResponse> operation
-              = new GetHrisAttendance.Async(sdkConfiguration, _headers);
+              = new GetHrisAttendance.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

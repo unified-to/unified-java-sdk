@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.GetAnalyticsSessionRequest;
 import to.unified.unified_java_sdk.models.operations.GetAnalyticsSessionRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetAnalyticsSessionResponse;
@@ -15,6 +16,7 @@ import to.unified.unified_java_sdk.models.operations.ListAnalyticsSessionsRespon
 import to.unified.unified_java_sdk.operations.GetAnalyticsSession;
 import to.unified.unified_java_sdk.operations.ListAnalyticsSessions;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Session {
@@ -59,8 +61,23 @@ public class Session {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAnalyticsSessionResponse getAnalyticsSession(@Nonnull GetAnalyticsSessionRequest request) {
+        return getAnalyticsSession(request, null);
+    }
+
+    /**
+     * Retrieve a session
+     * 
+     * <p>Retrieves a single AnalyticsSession by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAnalyticsSessionResponse getAnalyticsSession(@Nonnull GetAnalyticsSessionRequest request, @Nullable Options options) {
         RequestOperation<GetAnalyticsSessionRequest, GetAnalyticsSessionResponse> operation
-              = new GetAnalyticsSession.Sync(sdkConfiguration, _headers);
+              = new GetAnalyticsSession.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -95,8 +112,27 @@ public class Session {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAnalyticsSessionsResponse listAnalyticsSessions(@Nonnull ListAnalyticsSessionsRequest request) {
+        return listAnalyticsSessions(request, null);
+    }
+
+    /**
+     * List all sessions
+     * 
+     * <p>Returns a list of AnalyticsSessions. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAnalyticsSessionsResponse listAnalyticsSessions(@Nonnull ListAnalyticsSessionsRequest request, @Nullable Options options) {
         RequestOperation<ListAnalyticsSessionsRequest, ListAnalyticsSessionsResponse> operation
-              = new ListAnalyticsSessions.Sync(sdkConfiguration, _headers);
+              = new ListAnalyticsSessions.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

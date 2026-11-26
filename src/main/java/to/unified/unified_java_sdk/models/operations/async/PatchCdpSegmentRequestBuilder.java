@@ -6,20 +6,30 @@ package to.unified.unified_java_sdk.models.operations.async;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.PatchCdpSegmentRequest;
 import to.unified.unified_java_sdk.operations.PatchCdpSegment;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class PatchCdpSegmentRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private PatchCdpSegmentRequest request;
+    private final Options.Builder optionsBuilder;
 
     public PatchCdpSegmentRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public PatchCdpSegmentRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public PatchCdpSegmentRequestBuilder request(@Nonnull PatchCdpSegmentRequest request) {
@@ -44,8 +54,9 @@ public class PatchCdpSegmentRequestBuilder {
     * @return The response from the server.
     */
     public CompletableFuture<PatchCdpSegmentResponse> call() {
+        Options options = optionsBuilder.build();
         AsyncRequestOperation<PatchCdpSegmentRequest, PatchCdpSegmentResponse> operation
-              = new PatchCdpSegment.Async(sdkConfiguration, _headers);
+              = new PatchCdpSegment.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

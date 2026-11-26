@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceLocationRequest;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceLocationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceLocationResponse;
@@ -79,6 +80,7 @@ import to.unified.unified_java_sdk.operations.RemoveHrisLocation;
 import to.unified.unified_java_sdk.operations.UpdateCommerceLocation;
 import to.unified.unified_java_sdk.operations.UpdateHrisLocation;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Location {
@@ -123,8 +125,23 @@ public class Location {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateCommerceLocationResponse createCommerceLocation(@Nonnull CreateCommerceLocationRequest request) {
+        return createCommerceLocation(request, null);
+    }
+
+    /**
+     * Create a location
+     * 
+     * <p>Creates a CommerceLocation. Provide the unified CommerceLocation fields in the request body; they
+     * are mapped to the provider's API. Returns the created CommerceLocation.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateCommerceLocationResponse createCommerceLocation(@Nonnull CreateCommerceLocationRequest request, @Nullable Options options) {
         RequestOperation<CreateCommerceLocationRequest, CreateCommerceLocationResponse> operation
-              = new CreateCommerceLocation.Sync(sdkConfiguration, _headers);
+              = new CreateCommerceLocation.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -151,8 +168,23 @@ public class Location {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateHrisLocationResponse createHrisLocation(@Nonnull CreateHrisLocationRequest request) {
+        return createHrisLocation(request, null);
+    }
+
+    /**
+     * Create a location
+     * 
+     * <p>Creates a HrisLocation. Provide the unified HrisLocation fields in the request body; they are mapped
+     * to the provider's API. Returns the created HrisLocation.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateHrisLocationResponse createHrisLocation(@Nonnull CreateHrisLocationRequest request, @Nullable Options options) {
         RequestOperation<CreateHrisLocationRequest, CreateHrisLocationResponse> operation
-              = new CreateHrisLocation.Sync(sdkConfiguration, _headers);
+              = new CreateHrisLocation.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -179,8 +211,23 @@ public class Location {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetCalendarLocationResponse getCalendarLocation(@Nonnull GetCalendarLocationRequest request) {
+        return getCalendarLocation(request, null);
+    }
+
+    /**
+     * Retrieve a location
+     * 
+     * <p>Retrieves a single CalendarLocation by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetCalendarLocationResponse getCalendarLocation(@Nonnull GetCalendarLocationRequest request, @Nullable Options options) {
         RequestOperation<GetCalendarLocationRequest, GetCalendarLocationResponse> operation
-              = new GetCalendarLocation.Sync(sdkConfiguration, _headers);
+              = new GetCalendarLocation.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -207,8 +254,23 @@ public class Location {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetClubsLocationResponse getClubsLocation(@Nonnull GetClubsLocationRequest request) {
+        return getClubsLocation(request, null);
+    }
+
+    /**
+     * Retrieve a location
+     * 
+     * <p>Retrieves a single ClubsLocation by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetClubsLocationResponse getClubsLocation(@Nonnull GetClubsLocationRequest request, @Nullable Options options) {
         RequestOperation<GetClubsLocationRequest, GetClubsLocationResponse> operation
-              = new GetClubsLocation.Sync(sdkConfiguration, _headers);
+              = new GetClubsLocation.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -235,8 +297,23 @@ public class Location {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetCommerceLocationResponse getCommerceLocation(@Nonnull GetCommerceLocationRequest request) {
+        return getCommerceLocation(request, null);
+    }
+
+    /**
+     * Retrieve a location
+     * 
+     * <p>Retrieves a single CommerceLocation by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetCommerceLocationResponse getCommerceLocation(@Nonnull GetCommerceLocationRequest request, @Nullable Options options) {
         RequestOperation<GetCommerceLocationRequest, GetCommerceLocationResponse> operation
-              = new GetCommerceLocation.Sync(sdkConfiguration, _headers);
+              = new GetCommerceLocation.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -263,8 +340,23 @@ public class Location {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetHealthcareLocationResponse getHealthcareLocation(@Nonnull GetHealthcareLocationRequest request) {
+        return getHealthcareLocation(request, null);
+    }
+
+    /**
+     * Retrieve a location
+     * 
+     * <p>Retrieves a single HealthcareLocation by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetHealthcareLocationResponse getHealthcareLocation(@Nonnull GetHealthcareLocationRequest request, @Nullable Options options) {
         RequestOperation<GetHealthcareLocationRequest, GetHealthcareLocationResponse> operation
-              = new GetHealthcareLocation.Sync(sdkConfiguration, _headers);
+              = new GetHealthcareLocation.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -291,8 +383,23 @@ public class Location {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetHrisLocationResponse getHrisLocation(@Nonnull GetHrisLocationRequest request) {
+        return getHrisLocation(request, null);
+    }
+
+    /**
+     * Retrieve a location
+     * 
+     * <p>Retrieves a single HrisLocation by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetHrisLocationResponse getHrisLocation(@Nonnull GetHrisLocationRequest request, @Nullable Options options) {
         RequestOperation<GetHrisLocationRequest, GetHrisLocationResponse> operation
-              = new GetHrisLocation.Sync(sdkConfiguration, _headers);
+              = new GetHrisLocation.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -327,8 +434,27 @@ public class Location {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListCalendarLocationsResponse listCalendarLocations(@Nonnull ListCalendarLocationsRequest request) {
+        return listCalendarLocations(request, null);
+    }
+
+    /**
+     * List all locations
+     * 
+     * <p>Returns a list of CalendarLocations. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListCalendarLocationsResponse listCalendarLocations(@Nonnull ListCalendarLocationsRequest request, @Nullable Options options) {
         RequestOperation<ListCalendarLocationsRequest, ListCalendarLocationsResponse> operation
-              = new ListCalendarLocations.Sync(sdkConfiguration, _headers);
+              = new ListCalendarLocations.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -363,8 +489,27 @@ public class Location {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListClubsLocationsResponse listClubsLocations(@Nonnull ListClubsLocationsRequest request) {
+        return listClubsLocations(request, null);
+    }
+
+    /**
+     * List all locations
+     * 
+     * <p>Returns a list of ClubsLocations. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListClubsLocationsResponse listClubsLocations(@Nonnull ListClubsLocationsRequest request, @Nullable Options options) {
         RequestOperation<ListClubsLocationsRequest, ListClubsLocationsResponse> operation
-              = new ListClubsLocations.Sync(sdkConfiguration, _headers);
+              = new ListClubsLocations.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -399,8 +544,27 @@ public class Location {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListCommerceLocationsResponse listCommerceLocations(@Nonnull ListCommerceLocationsRequest request) {
+        return listCommerceLocations(request, null);
+    }
+
+    /**
+     * List all locations
+     * 
+     * <p>Returns a list of CommerceLocations. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListCommerceLocationsResponse listCommerceLocations(@Nonnull ListCommerceLocationsRequest request, @Nullable Options options) {
         RequestOperation<ListCommerceLocationsRequest, ListCommerceLocationsResponse> operation
-              = new ListCommerceLocations.Sync(sdkConfiguration, _headers);
+              = new ListCommerceLocations.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -435,8 +599,27 @@ public class Location {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListHealthcareLocationsResponse listHealthcareLocations(@Nonnull ListHealthcareLocationsRequest request) {
+        return listHealthcareLocations(request, null);
+    }
+
+    /**
+     * List all locations
+     * 
+     * <p>Returns a list of HealthcareLocations. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListHealthcareLocationsResponse listHealthcareLocations(@Nonnull ListHealthcareLocationsRequest request, @Nullable Options options) {
         RequestOperation<ListHealthcareLocationsRequest, ListHealthcareLocationsResponse> operation
-              = new ListHealthcareLocations.Sync(sdkConfiguration, _headers);
+              = new ListHealthcareLocations.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -471,8 +654,27 @@ public class Location {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListHrisLocationsResponse listHrisLocations(@Nonnull ListHrisLocationsRequest request) {
+        return listHrisLocations(request, null);
+    }
+
+    /**
+     * List all locations
+     * 
+     * <p>Returns a list of HrisLocations. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListHrisLocationsResponse listHrisLocations(@Nonnull ListHrisLocationsRequest request, @Nullable Options options) {
         RequestOperation<ListHrisLocationsRequest, ListHrisLocationsResponse> operation
-              = new ListHrisLocations.Sync(sdkConfiguration, _headers);
+              = new ListHrisLocations.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -499,8 +701,23 @@ public class Location {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchCommerceLocationResponse patchCommerceLocation(@Nonnull PatchCommerceLocationRequest request) {
+        return patchCommerceLocation(request, null);
+    }
+
+    /**
+     * Update a location
+     * 
+     * <p>Updates the CommerceLocation identified by `id`. Provide the unified CommerceLocation fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchCommerceLocationResponse patchCommerceLocation(@Nonnull PatchCommerceLocationRequest request, @Nullable Options options) {
         RequestOperation<PatchCommerceLocationRequest, PatchCommerceLocationResponse> operation
-              = new PatchCommerceLocation.Sync(sdkConfiguration, _headers);
+              = new PatchCommerceLocation.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -527,8 +744,23 @@ public class Location {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchHrisLocationResponse patchHrisLocation(@Nonnull PatchHrisLocationRequest request) {
+        return patchHrisLocation(request, null);
+    }
+
+    /**
+     * Update a location
+     * 
+     * <p>Updates the HrisLocation identified by `id`. Provide the unified HrisLocation fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchHrisLocationResponse patchHrisLocation(@Nonnull PatchHrisLocationRequest request, @Nullable Options options) {
         RequestOperation<PatchHrisLocationRequest, PatchHrisLocationResponse> operation
-              = new PatchHrisLocation.Sync(sdkConfiguration, _headers);
+              = new PatchHrisLocation.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -553,8 +785,22 @@ public class Location {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveCommerceLocationResponse removeCommerceLocation(@Nonnull RemoveCommerceLocationRequest request) {
+        return removeCommerceLocation(request, null);
+    }
+
+    /**
+     * Remove a location
+     * 
+     * <p>Deletes the CommerceLocation identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveCommerceLocationResponse removeCommerceLocation(@Nonnull RemoveCommerceLocationRequest request, @Nullable Options options) {
         RequestOperation<RemoveCommerceLocationRequest, RemoveCommerceLocationResponse> operation
-              = new RemoveCommerceLocation.Sync(sdkConfiguration, _headers);
+              = new RemoveCommerceLocation.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -579,8 +825,22 @@ public class Location {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveHrisLocationResponse removeHrisLocation(@Nonnull RemoveHrisLocationRequest request) {
+        return removeHrisLocation(request, null);
+    }
+
+    /**
+     * Remove a location
+     * 
+     * <p>Deletes the HrisLocation identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveHrisLocationResponse removeHrisLocation(@Nonnull RemoveHrisLocationRequest request, @Nullable Options options) {
         RequestOperation<RemoveHrisLocationRequest, RemoveHrisLocationResponse> operation
-              = new RemoveHrisLocation.Sync(sdkConfiguration, _headers);
+              = new RemoveHrisLocation.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -607,8 +867,23 @@ public class Location {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateCommerceLocationResponse updateCommerceLocation(@Nonnull UpdateCommerceLocationRequest request) {
+        return updateCommerceLocation(request, null);
+    }
+
+    /**
+     * Update a location
+     * 
+     * <p>Updates the CommerceLocation identified by `id`. Provide the unified CommerceLocation fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateCommerceLocationResponse updateCommerceLocation(@Nonnull UpdateCommerceLocationRequest request, @Nullable Options options) {
         RequestOperation<UpdateCommerceLocationRequest, UpdateCommerceLocationResponse> operation
-              = new UpdateCommerceLocation.Sync(sdkConfiguration, _headers);
+              = new UpdateCommerceLocation.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -635,8 +910,23 @@ public class Location {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateHrisLocationResponse updateHrisLocation(@Nonnull UpdateHrisLocationRequest request) {
+        return updateHrisLocation(request, null);
+    }
+
+    /**
+     * Update a location
+     * 
+     * <p>Updates the HrisLocation identified by `id`. Provide the unified HrisLocation fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateHrisLocationResponse updateHrisLocation(@Nonnull UpdateHrisLocationRequest request, @Nullable Options options) {
         RequestOperation<UpdateHrisLocationRequest, UpdateHrisLocationResponse> operation
-              = new UpdateHrisLocation.Sync(sdkConfiguration, _headers);
+              = new UpdateHrisLocation.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

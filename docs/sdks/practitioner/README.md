@@ -4,8 +4,68 @@
 
 ### Available Operations
 
+* [getFhirPractitioner](#getfhirpractitioner) - Read a Practitioner
 * [getHealthcarePractitioner](#gethealthcarepractitioner) - Retrieve a practitioner
+* [listFhirPractitioners](#listfhirpractitioners) - Search Practitioner resources
 * [listHealthcarePractitioners](#listhealthcarepractitioners) - List all practitioners
+
+## getFhirPractitioner
+
+Responses use the application/fhir+json media type; errors are OperationOutcome resources. Read-only (FHIR R4 4.0.1).
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="getFhirPractitioner" method="get" path="/fhir/{connection_id}/Practitioner/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetFhirPractitionerRequest;
+import to.unified.unified_java_sdk.models.operations.GetFhirPractitionerResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        GetFhirPractitionerRequest req = GetFhirPractitionerRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetFhirPractitionerResponse res = sdk.practitioner().getFhirPractitioner()
+                .request(req)
+                .call();
+
+        if (res.fhirPractitioner().isPresent()) {
+            System.out.println(res.fhirPractitioner().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [GetFhirPractitionerRequest](../../models/operations/GetFhirPractitionerRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+
+### Response
+
+**[GetFhirPractitionerResponse](../../models/operations/GetFhirPractitionerResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## getHealthcarePractitioner
 
@@ -58,6 +118,63 @@ public class Application {
 ### Response
 
 **[GetHealthcarePractitionerResponse](../../models/operations/GetHealthcarePractitionerResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## listFhirPractitioners
+
+Returns a searchset Bundle; follow its next link for more pages. Responses use the application/fhir+json media type; errors are OperationOutcome resources. Read-only (FHIR R4 4.0.1).
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listFhirPractitioners" method="get" path="/fhir/{connection_id}/Practitioner" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListFhirPractitionersRequest;
+import to.unified.unified_java_sdk.models.operations.ListFhirPractitionersResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListFhirPractitionersRequest req = ListFhirPractitionersRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListFhirPractitionersResponse res = sdk.practitioner().listFhirPractitioners()
+                .request(req)
+                .call();
+
+        if (res.fhirBundle().isPresent()) {
+            System.out.println(res.fhirBundle().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [ListFhirPractitionersRequest](../../models/operations/ListFhirPractitionersRequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
+
+### Response
+
+**[ListFhirPractitionersResponse](../../models/operations/ListFhirPractitionersResponse.md)**
 
 ### Errors
 

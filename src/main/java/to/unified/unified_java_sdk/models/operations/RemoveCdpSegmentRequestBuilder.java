@@ -6,18 +6,28 @@ package to.unified.unified_java_sdk.models.operations;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.RemoveCdpSegment;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveCdpSegmentRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private RemoveCdpSegmentRequest request;
+    private final Options.Builder optionsBuilder;
 
     public RemoveCdpSegmentRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public RemoveCdpSegmentRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public RemoveCdpSegmentRequestBuilder request(@Nonnull RemoveCdpSegmentRequest request) {
@@ -42,8 +52,9 @@ public class RemoveCdpSegmentRequestBuilder {
     * @return The response from the server.
     */
     public RemoveCdpSegmentResponse call() {
+        Options options = optionsBuilder.build();
         RequestOperation<RemoveCdpSegmentRequest, RemoveCdpSegmentResponse> operation
-              = new RemoveCdpSegment.Sync(sdkConfiguration, _headers);
+              = new RemoveCdpSegment.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

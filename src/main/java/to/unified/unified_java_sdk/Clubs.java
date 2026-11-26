@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.GetClubsActivityRequest;
 import to.unified.unified_java_sdk.models.operations.GetClubsActivityRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetClubsActivityResponse;
@@ -47,6 +48,7 @@ import to.unified.unified_java_sdk.operations.ListClubsGroups;
 import to.unified.unified_java_sdk.operations.ListClubsLocations;
 import to.unified.unified_java_sdk.operations.ListClubsMembers;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Clubs {
@@ -91,8 +93,23 @@ public class Clubs {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetClubsActivityResponse getClubsActivity(@Nonnull GetClubsActivityRequest request) {
+        return getClubsActivity(request, null);
+    }
+
+    /**
+     * Retrieve an activity
+     * 
+     * <p>Retrieves a single ClubsActivity by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetClubsActivityResponse getClubsActivity(@Nonnull GetClubsActivityRequest request, @Nullable Options options) {
         RequestOperation<GetClubsActivityRequest, GetClubsActivityResponse> operation
-              = new GetClubsActivity.Sync(sdkConfiguration, _headers);
+              = new GetClubsActivity.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -119,8 +136,23 @@ public class Clubs {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetClubsEventResponse getClubsEvent(@Nonnull GetClubsEventRequest request) {
+        return getClubsEvent(request, null);
+    }
+
+    /**
+     * Retrieve an event
+     * 
+     * <p>Retrieves a single ClubsEvent by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetClubsEventResponse getClubsEvent(@Nonnull GetClubsEventRequest request, @Nullable Options options) {
         RequestOperation<GetClubsEventRequest, GetClubsEventResponse> operation
-              = new GetClubsEvent.Sync(sdkConfiguration, _headers);
+              = new GetClubsEvent.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -147,8 +179,23 @@ public class Clubs {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetClubsGroupResponse getClubsGroup(@Nonnull GetClubsGroupRequest request) {
+        return getClubsGroup(request, null);
+    }
+
+    /**
+     * Retrieve a group
+     * 
+     * <p>Retrieves a single ClubsGroup by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetClubsGroupResponse getClubsGroup(@Nonnull GetClubsGroupRequest request, @Nullable Options options) {
         RequestOperation<GetClubsGroupRequest, GetClubsGroupResponse> operation
-              = new GetClubsGroup.Sync(sdkConfiguration, _headers);
+              = new GetClubsGroup.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -175,8 +222,23 @@ public class Clubs {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetClubsLocationResponse getClubsLocation(@Nonnull GetClubsLocationRequest request) {
+        return getClubsLocation(request, null);
+    }
+
+    /**
+     * Retrieve a location
+     * 
+     * <p>Retrieves a single ClubsLocation by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetClubsLocationResponse getClubsLocation(@Nonnull GetClubsLocationRequest request, @Nullable Options options) {
         RequestOperation<GetClubsLocationRequest, GetClubsLocationResponse> operation
-              = new GetClubsLocation.Sync(sdkConfiguration, _headers);
+              = new GetClubsLocation.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -203,8 +265,23 @@ public class Clubs {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetClubsMemberResponse getClubsMember(@Nonnull GetClubsMemberRequest request) {
+        return getClubsMember(request, null);
+    }
+
+    /**
+     * Retrieve a member
+     * 
+     * <p>Retrieves a single ClubsMember by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetClubsMemberResponse getClubsMember(@Nonnull GetClubsMemberRequest request, @Nullable Options options) {
         RequestOperation<GetClubsMemberRequest, GetClubsMemberResponse> operation
-              = new GetClubsMember.Sync(sdkConfiguration, _headers);
+              = new GetClubsMember.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -239,8 +316,27 @@ public class Clubs {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListClubsActivitiesResponse listClubsActivities(@Nonnull ListClubsActivitiesRequest request) {
+        return listClubsActivities(request, null);
+    }
+
+    /**
+     * List all activities
+     * 
+     * <p>Returns a list of ClubsActivities. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListClubsActivitiesResponse listClubsActivities(@Nonnull ListClubsActivitiesRequest request, @Nullable Options options) {
         RequestOperation<ListClubsActivitiesRequest, ListClubsActivitiesResponse> operation
-              = new ListClubsActivities.Sync(sdkConfiguration, _headers);
+              = new ListClubsActivities.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -275,8 +371,27 @@ public class Clubs {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListClubsEventsResponse listClubsEvents(@Nonnull ListClubsEventsRequest request) {
+        return listClubsEvents(request, null);
+    }
+
+    /**
+     * List all events
+     * 
+     * <p>Returns a list of ClubsEvents. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListClubsEventsResponse listClubsEvents(@Nonnull ListClubsEventsRequest request, @Nullable Options options) {
         RequestOperation<ListClubsEventsRequest, ListClubsEventsResponse> operation
-              = new ListClubsEvents.Sync(sdkConfiguration, _headers);
+              = new ListClubsEvents.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -311,8 +426,27 @@ public class Clubs {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListClubsGroupsResponse listClubsGroups(@Nonnull ListClubsGroupsRequest request) {
+        return listClubsGroups(request, null);
+    }
+
+    /**
+     * List all groups
+     * 
+     * <p>Returns a list of ClubsGroups. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListClubsGroupsResponse listClubsGroups(@Nonnull ListClubsGroupsRequest request, @Nullable Options options) {
         RequestOperation<ListClubsGroupsRequest, ListClubsGroupsResponse> operation
-              = new ListClubsGroups.Sync(sdkConfiguration, _headers);
+              = new ListClubsGroups.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -347,8 +481,27 @@ public class Clubs {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListClubsLocationsResponse listClubsLocations(@Nonnull ListClubsLocationsRequest request) {
+        return listClubsLocations(request, null);
+    }
+
+    /**
+     * List all locations
+     * 
+     * <p>Returns a list of ClubsLocations. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListClubsLocationsResponse listClubsLocations(@Nonnull ListClubsLocationsRequest request, @Nullable Options options) {
         RequestOperation<ListClubsLocationsRequest, ListClubsLocationsResponse> operation
-              = new ListClubsLocations.Sync(sdkConfiguration, _headers);
+              = new ListClubsLocations.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -383,8 +536,27 @@ public class Clubs {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListClubsMembersResponse listClubsMembers(@Nonnull ListClubsMembersRequest request) {
+        return listClubsMembers(request, null);
+    }
+
+    /**
+     * List all members
+     * 
+     * <p>Returns a list of ClubsMembers. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListClubsMembersResponse listClubsMembers(@Nonnull ListClubsMembersRequest request, @Nullable Options options) {
         RequestOperation<ListClubsMembersRequest, ListClubsMembersResponse> operation
-              = new ListClubsMembers.Sync(sdkConfiguration, _headers);
+              = new ListClubsMembers.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

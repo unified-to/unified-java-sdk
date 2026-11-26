@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateSocialCommentRequest;
 import to.unified.unified_java_sdk.models.operations.CreateSocialCommentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateSocialCommentResponse;
@@ -87,6 +88,7 @@ import to.unified.unified_java_sdk.operations.UpdateSocialComment;
 import to.unified.unified_java_sdk.operations.UpdateSocialPost;
 import to.unified.unified_java_sdk.operations.UpdateSocialReview;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Social {
@@ -131,8 +133,23 @@ public class Social {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateSocialCommentResponse createSocialComment(@Nonnull CreateSocialCommentRequest request) {
+        return createSocialComment(request, null);
+    }
+
+    /**
+     * Create a comment
+     * 
+     * <p>Creates a SocialComment. Provide the unified SocialComment fields in the request body; they are
+     * mapped to the provider's API. Returns the created SocialComment.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateSocialCommentResponse createSocialComment(@Nonnull CreateSocialCommentRequest request, @Nullable Options options) {
         RequestOperation<CreateSocialCommentRequest, CreateSocialCommentResponse> operation
-              = new CreateSocialComment.Sync(sdkConfiguration, _headers);
+              = new CreateSocialComment.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -159,8 +176,23 @@ public class Social {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateSocialPostResponse createSocialPost(@Nonnull CreateSocialPostRequest request) {
+        return createSocialPost(request, null);
+    }
+
+    /**
+     * Create a post
+     * 
+     * <p>Creates a SocialPost. Provide the unified SocialPost fields in the request body; they are mapped to
+     * the provider's API. Returns the created SocialPost.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateSocialPostResponse createSocialPost(@Nonnull CreateSocialPostRequest request, @Nullable Options options) {
         RequestOperation<CreateSocialPostRequest, CreateSocialPostResponse> operation
-              = new CreateSocialPost.Sync(sdkConfiguration, _headers);
+              = new CreateSocialPost.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -187,8 +219,23 @@ public class Social {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetSocialCommentResponse getSocialComment(@Nonnull GetSocialCommentRequest request) {
+        return getSocialComment(request, null);
+    }
+
+    /**
+     * Retrieve a comment
+     * 
+     * <p>Retrieves a single SocialComment by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetSocialCommentResponse getSocialComment(@Nonnull GetSocialCommentRequest request, @Nullable Options options) {
         RequestOperation<GetSocialCommentRequest, GetSocialCommentResponse> operation
-              = new GetSocialComment.Sync(sdkConfiguration, _headers);
+              = new GetSocialComment.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -215,8 +262,23 @@ public class Social {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetSocialInsightResponse getSocialInsight(@Nonnull GetSocialInsightRequest request) {
+        return getSocialInsight(request, null);
+    }
+
+    /**
+     * Retrieve an insight
+     * 
+     * <p>Retrieves a single SocialInsight by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetSocialInsightResponse getSocialInsight(@Nonnull GetSocialInsightRequest request, @Nullable Options options) {
         RequestOperation<GetSocialInsightRequest, GetSocialInsightResponse> operation
-              = new GetSocialInsight.Sync(sdkConfiguration, _headers);
+              = new GetSocialInsight.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -243,8 +305,23 @@ public class Social {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetSocialPostResponse getSocialPost(@Nonnull GetSocialPostRequest request) {
+        return getSocialPost(request, null);
+    }
+
+    /**
+     * Retrieve a post
+     * 
+     * <p>Retrieves a single SocialPost by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetSocialPostResponse getSocialPost(@Nonnull GetSocialPostRequest request, @Nullable Options options) {
         RequestOperation<GetSocialPostRequest, GetSocialPostResponse> operation
-              = new GetSocialPost.Sync(sdkConfiguration, _headers);
+              = new GetSocialPost.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -271,8 +348,23 @@ public class Social {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetSocialProfileResponse getSocialProfile(@Nonnull GetSocialProfileRequest request) {
+        return getSocialProfile(request, null);
+    }
+
+    /**
+     * Retrieve a profile
+     * 
+     * <p>Retrieves a single SocialProfile by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetSocialProfileResponse getSocialProfile(@Nonnull GetSocialProfileRequest request, @Nullable Options options) {
         RequestOperation<GetSocialProfileRequest, GetSocialProfileResponse> operation
-              = new GetSocialProfile.Sync(sdkConfiguration, _headers);
+              = new GetSocialProfile.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -299,8 +391,23 @@ public class Social {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetSocialReviewResponse getSocialReview(@Nonnull GetSocialReviewRequest request) {
+        return getSocialReview(request, null);
+    }
+
+    /**
+     * Retrieve a review
+     * 
+     * <p>Retrieves a single SocialReview by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetSocialReviewResponse getSocialReview(@Nonnull GetSocialReviewRequest request, @Nullable Options options) {
         RequestOperation<GetSocialReviewRequest, GetSocialReviewResponse> operation
-              = new GetSocialReview.Sync(sdkConfiguration, _headers);
+              = new GetSocialReview.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -335,8 +442,27 @@ public class Social {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListSocialCommentsResponse listSocialComments(@Nonnull ListSocialCommentsRequest request) {
+        return listSocialComments(request, null);
+    }
+
+    /**
+     * List all comments
+     * 
+     * <p>Returns a list of SocialComments. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListSocialCommentsResponse listSocialComments(@Nonnull ListSocialCommentsRequest request, @Nullable Options options) {
         RequestOperation<ListSocialCommentsRequest, ListSocialCommentsResponse> operation
-              = new ListSocialComments.Sync(sdkConfiguration, _headers);
+              = new ListSocialComments.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -371,8 +497,27 @@ public class Social {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListSocialInsightsResponse listSocialInsights(@Nonnull ListSocialInsightsRequest request) {
+        return listSocialInsights(request, null);
+    }
+
+    /**
+     * List all insights
+     * 
+     * <p>Returns a list of SocialInsights. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListSocialInsightsResponse listSocialInsights(@Nonnull ListSocialInsightsRequest request, @Nullable Options options) {
         RequestOperation<ListSocialInsightsRequest, ListSocialInsightsResponse> operation
-              = new ListSocialInsights.Sync(sdkConfiguration, _headers);
+              = new ListSocialInsights.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -407,8 +552,27 @@ public class Social {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListSocialPostsResponse listSocialPosts(@Nonnull ListSocialPostsRequest request) {
+        return listSocialPosts(request, null);
+    }
+
+    /**
+     * List all posts
+     * 
+     * <p>Returns a list of SocialPosts. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListSocialPostsResponse listSocialPosts(@Nonnull ListSocialPostsRequest request, @Nullable Options options) {
         RequestOperation<ListSocialPostsRequest, ListSocialPostsResponse> operation
-              = new ListSocialPosts.Sync(sdkConfiguration, _headers);
+              = new ListSocialPosts.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -443,8 +607,27 @@ public class Social {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListSocialProfilesResponse listSocialProfiles(@Nonnull ListSocialProfilesRequest request) {
+        return listSocialProfiles(request, null);
+    }
+
+    /**
+     * List all profiles
+     * 
+     * <p>Returns a list of SocialProfiles. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListSocialProfilesResponse listSocialProfiles(@Nonnull ListSocialProfilesRequest request, @Nullable Options options) {
         RequestOperation<ListSocialProfilesRequest, ListSocialProfilesResponse> operation
-              = new ListSocialProfiles.Sync(sdkConfiguration, _headers);
+              = new ListSocialProfiles.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -479,8 +662,27 @@ public class Social {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListSocialReviewsResponse listSocialReviews(@Nonnull ListSocialReviewsRequest request) {
+        return listSocialReviews(request, null);
+    }
+
+    /**
+     * List all reviews
+     * 
+     * <p>Returns a list of SocialReviews. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListSocialReviewsResponse listSocialReviews(@Nonnull ListSocialReviewsRequest request, @Nullable Options options) {
         RequestOperation<ListSocialReviewsRequest, ListSocialReviewsResponse> operation
-              = new ListSocialReviews.Sync(sdkConfiguration, _headers);
+              = new ListSocialReviews.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -507,8 +709,23 @@ public class Social {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchSocialCommentResponse patchSocialComment(@Nonnull PatchSocialCommentRequest request) {
+        return patchSocialComment(request, null);
+    }
+
+    /**
+     * Update a comment
+     * 
+     * <p>Updates the SocialComment identified by `id`. Provide the unified SocialComment fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchSocialCommentResponse patchSocialComment(@Nonnull PatchSocialCommentRequest request, @Nullable Options options) {
         RequestOperation<PatchSocialCommentRequest, PatchSocialCommentResponse> operation
-              = new PatchSocialComment.Sync(sdkConfiguration, _headers);
+              = new PatchSocialComment.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -535,8 +752,23 @@ public class Social {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchSocialPostResponse patchSocialPost(@Nonnull PatchSocialPostRequest request) {
+        return patchSocialPost(request, null);
+    }
+
+    /**
+     * Update a post
+     * 
+     * <p>Updates the SocialPost identified by `id`. Provide the unified SocialPost fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchSocialPostResponse patchSocialPost(@Nonnull PatchSocialPostRequest request, @Nullable Options options) {
         RequestOperation<PatchSocialPostRequest, PatchSocialPostResponse> operation
-              = new PatchSocialPost.Sync(sdkConfiguration, _headers);
+              = new PatchSocialPost.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -563,8 +795,23 @@ public class Social {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchSocialReviewResponse patchSocialReview(@Nonnull PatchSocialReviewRequest request) {
+        return patchSocialReview(request, null);
+    }
+
+    /**
+     * Update a review
+     * 
+     * <p>Updates the SocialReview identified by `id`. Provide the unified SocialReview fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchSocialReviewResponse patchSocialReview(@Nonnull PatchSocialReviewRequest request, @Nullable Options options) {
         RequestOperation<PatchSocialReviewRequest, PatchSocialReviewResponse> operation
-              = new PatchSocialReview.Sync(sdkConfiguration, _headers);
+              = new PatchSocialReview.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -589,8 +836,22 @@ public class Social {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveSocialCommentResponse removeSocialComment(@Nonnull RemoveSocialCommentRequest request) {
+        return removeSocialComment(request, null);
+    }
+
+    /**
+     * Remove a comment
+     * 
+     * <p>Deletes the SocialComment identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveSocialCommentResponse removeSocialComment(@Nonnull RemoveSocialCommentRequest request, @Nullable Options options) {
         RequestOperation<RemoveSocialCommentRequest, RemoveSocialCommentResponse> operation
-              = new RemoveSocialComment.Sync(sdkConfiguration, _headers);
+              = new RemoveSocialComment.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -615,8 +876,22 @@ public class Social {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveSocialPostResponse removeSocialPost(@Nonnull RemoveSocialPostRequest request) {
+        return removeSocialPost(request, null);
+    }
+
+    /**
+     * Remove a post
+     * 
+     * <p>Deletes the SocialPost identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveSocialPostResponse removeSocialPost(@Nonnull RemoveSocialPostRequest request, @Nullable Options options) {
         RequestOperation<RemoveSocialPostRequest, RemoveSocialPostResponse> operation
-              = new RemoveSocialPost.Sync(sdkConfiguration, _headers);
+              = new RemoveSocialPost.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -643,8 +918,23 @@ public class Social {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateSocialCommentResponse updateSocialComment(@Nonnull UpdateSocialCommentRequest request) {
+        return updateSocialComment(request, null);
+    }
+
+    /**
+     * Update a comment
+     * 
+     * <p>Updates the SocialComment identified by `id`. Provide the unified SocialComment fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateSocialCommentResponse updateSocialComment(@Nonnull UpdateSocialCommentRequest request, @Nullable Options options) {
         RequestOperation<UpdateSocialCommentRequest, UpdateSocialCommentResponse> operation
-              = new UpdateSocialComment.Sync(sdkConfiguration, _headers);
+              = new UpdateSocialComment.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -671,8 +961,23 @@ public class Social {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateSocialPostResponse updateSocialPost(@Nonnull UpdateSocialPostRequest request) {
+        return updateSocialPost(request, null);
+    }
+
+    /**
+     * Update a post
+     * 
+     * <p>Updates the SocialPost identified by `id`. Provide the unified SocialPost fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateSocialPostResponse updateSocialPost(@Nonnull UpdateSocialPostRequest request, @Nullable Options options) {
         RequestOperation<UpdateSocialPostRequest, UpdateSocialPostResponse> operation
-              = new UpdateSocialPost.Sync(sdkConfiguration, _headers);
+              = new UpdateSocialPost.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -699,8 +1004,23 @@ public class Social {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateSocialReviewResponse updateSocialReview(@Nonnull UpdateSocialReviewRequest request) {
+        return updateSocialReview(request, null);
+    }
+
+    /**
+     * Update a review
+     * 
+     * <p>Updates the SocialReview identified by `id`. Provide the unified SocialReview fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateSocialReviewResponse updateSocialReview(@Nonnull UpdateSocialReviewRequest request, @Nullable Options options) {
         RequestOperation<UpdateSocialReviewRequest, UpdateSocialReviewResponse> operation
-              = new UpdateSocialReview.Sync(sdkConfiguration, _headers);
+              = new UpdateSocialReview.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

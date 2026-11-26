@@ -6,18 +6,28 @@ package to.unified.unified_java_sdk.models.operations;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.UpdateUnifiedWebhookTrigger;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class UpdateUnifiedWebhookTriggerRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private UpdateUnifiedWebhookTriggerRequest request;
+    private final Options.Builder optionsBuilder;
 
     public UpdateUnifiedWebhookTriggerRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public UpdateUnifiedWebhookTriggerRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public UpdateUnifiedWebhookTriggerRequestBuilder request(@Nonnull UpdateUnifiedWebhookTriggerRequest request) {
@@ -42,8 +52,9 @@ public class UpdateUnifiedWebhookTriggerRequestBuilder {
     * @return The response from the server.
     */
     public UpdateUnifiedWebhookTriggerResponse call() {
+        Options options = optionsBuilder.build();
         RequestOperation<UpdateUnifiedWebhookTriggerRequest, UpdateUnifiedWebhookTriggerResponse> operation
-              = new UpdateUnifiedWebhookTrigger.Sync(sdkConfiguration, _headers);
+              = new UpdateUnifiedWebhookTrigger.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

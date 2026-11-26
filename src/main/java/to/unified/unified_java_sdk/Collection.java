@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceCollectionRequest;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceCollectionRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceCollectionResponse;
@@ -55,6 +56,7 @@ import to.unified.unified_java_sdk.operations.RemoveLmsCollection;
 import to.unified.unified_java_sdk.operations.UpdateCommerceCollection;
 import to.unified.unified_java_sdk.operations.UpdateLmsCollection;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Collection {
@@ -99,8 +101,23 @@ public class Collection {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateCommerceCollectionResponse createCommerceCollection(@Nonnull CreateCommerceCollectionRequest request) {
+        return createCommerceCollection(request, null);
+    }
+
+    /**
+     * Create a collection
+     * 
+     * <p>Creates a CommerceCollection. Provide the unified CommerceCollection fields in the request body;
+     * they are mapped to the provider's API. Returns the created CommerceCollection.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateCommerceCollectionResponse createCommerceCollection(@Nonnull CreateCommerceCollectionRequest request, @Nullable Options options) {
         RequestOperation<CreateCommerceCollectionRequest, CreateCommerceCollectionResponse> operation
-              = new CreateCommerceCollection.Sync(sdkConfiguration, _headers);
+              = new CreateCommerceCollection.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -127,8 +144,23 @@ public class Collection {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateLmsCollectionResponse createLmsCollection(@Nonnull CreateLmsCollectionRequest request) {
+        return createLmsCollection(request, null);
+    }
+
+    /**
+     * Create a collection
+     * 
+     * <p>Creates a LmsCollection. Provide the unified LmsCollection fields in the request body; they are
+     * mapped to the provider's API. Returns the created LmsCollection.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateLmsCollectionResponse createLmsCollection(@Nonnull CreateLmsCollectionRequest request, @Nullable Options options) {
         RequestOperation<CreateLmsCollectionRequest, CreateLmsCollectionResponse> operation
-              = new CreateLmsCollection.Sync(sdkConfiguration, _headers);
+              = new CreateLmsCollection.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -155,8 +187,23 @@ public class Collection {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetCommerceCollectionResponse getCommerceCollection(@Nonnull GetCommerceCollectionRequest request) {
+        return getCommerceCollection(request, null);
+    }
+
+    /**
+     * Retrieve a collection
+     * 
+     * <p>Retrieves a single CommerceCollection by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetCommerceCollectionResponse getCommerceCollection(@Nonnull GetCommerceCollectionRequest request, @Nullable Options options) {
         RequestOperation<GetCommerceCollectionRequest, GetCommerceCollectionResponse> operation
-              = new GetCommerceCollection.Sync(sdkConfiguration, _headers);
+              = new GetCommerceCollection.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -183,8 +230,23 @@ public class Collection {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetLmsCollectionResponse getLmsCollection(@Nonnull GetLmsCollectionRequest request) {
+        return getLmsCollection(request, null);
+    }
+
+    /**
+     * Retrieve a collection
+     * 
+     * <p>Retrieves a single LmsCollection by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetLmsCollectionResponse getLmsCollection(@Nonnull GetLmsCollectionRequest request, @Nullable Options options) {
         RequestOperation<GetLmsCollectionRequest, GetLmsCollectionResponse> operation
-              = new GetLmsCollection.Sync(sdkConfiguration, _headers);
+              = new GetLmsCollection.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -219,8 +281,27 @@ public class Collection {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListCommerceCollectionsResponse listCommerceCollections(@Nonnull ListCommerceCollectionsRequest request) {
+        return listCommerceCollections(request, null);
+    }
+
+    /**
+     * List all collections
+     * 
+     * <p>Returns a list of CommerceCollections. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListCommerceCollectionsResponse listCommerceCollections(@Nonnull ListCommerceCollectionsRequest request, @Nullable Options options) {
         RequestOperation<ListCommerceCollectionsRequest, ListCommerceCollectionsResponse> operation
-              = new ListCommerceCollections.Sync(sdkConfiguration, _headers);
+              = new ListCommerceCollections.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -255,8 +336,27 @@ public class Collection {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListLmsCollectionsResponse listLmsCollections(@Nonnull ListLmsCollectionsRequest request) {
+        return listLmsCollections(request, null);
+    }
+
+    /**
+     * List all collections
+     * 
+     * <p>Returns a list of LmsCollections. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListLmsCollectionsResponse listLmsCollections(@Nonnull ListLmsCollectionsRequest request, @Nullable Options options) {
         RequestOperation<ListLmsCollectionsRequest, ListLmsCollectionsResponse> operation
-              = new ListLmsCollections.Sync(sdkConfiguration, _headers);
+              = new ListLmsCollections.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -283,8 +383,23 @@ public class Collection {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchCommerceCollectionResponse patchCommerceCollection(@Nonnull PatchCommerceCollectionRequest request) {
+        return patchCommerceCollection(request, null);
+    }
+
+    /**
+     * Update a collection
+     * 
+     * <p>Updates the CommerceCollection identified by `id`. Provide the unified CommerceCollection fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchCommerceCollectionResponse patchCommerceCollection(@Nonnull PatchCommerceCollectionRequest request, @Nullable Options options) {
         RequestOperation<PatchCommerceCollectionRequest, PatchCommerceCollectionResponse> operation
-              = new PatchCommerceCollection.Sync(sdkConfiguration, _headers);
+              = new PatchCommerceCollection.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -311,8 +426,23 @@ public class Collection {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchLmsCollectionResponse patchLmsCollection(@Nonnull PatchLmsCollectionRequest request) {
+        return patchLmsCollection(request, null);
+    }
+
+    /**
+     * Update a collection
+     * 
+     * <p>Updates the LmsCollection identified by `id`. Provide the unified LmsCollection fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchLmsCollectionResponse patchLmsCollection(@Nonnull PatchLmsCollectionRequest request, @Nullable Options options) {
         RequestOperation<PatchLmsCollectionRequest, PatchLmsCollectionResponse> operation
-              = new PatchLmsCollection.Sync(sdkConfiguration, _headers);
+              = new PatchLmsCollection.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -337,8 +467,22 @@ public class Collection {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveCommerceCollectionResponse removeCommerceCollection(@Nonnull RemoveCommerceCollectionRequest request) {
+        return removeCommerceCollection(request, null);
+    }
+
+    /**
+     * Remove a collection
+     * 
+     * <p>Deletes the CommerceCollection identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveCommerceCollectionResponse removeCommerceCollection(@Nonnull RemoveCommerceCollectionRequest request, @Nullable Options options) {
         RequestOperation<RemoveCommerceCollectionRequest, RemoveCommerceCollectionResponse> operation
-              = new RemoveCommerceCollection.Sync(sdkConfiguration, _headers);
+              = new RemoveCommerceCollection.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -363,8 +507,22 @@ public class Collection {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveLmsCollectionResponse removeLmsCollection(@Nonnull RemoveLmsCollectionRequest request) {
+        return removeLmsCollection(request, null);
+    }
+
+    /**
+     * Remove a collection
+     * 
+     * <p>Deletes the LmsCollection identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveLmsCollectionResponse removeLmsCollection(@Nonnull RemoveLmsCollectionRequest request, @Nullable Options options) {
         RequestOperation<RemoveLmsCollectionRequest, RemoveLmsCollectionResponse> operation
-              = new RemoveLmsCollection.Sync(sdkConfiguration, _headers);
+              = new RemoveLmsCollection.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -391,8 +549,23 @@ public class Collection {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateCommerceCollectionResponse updateCommerceCollection(@Nonnull UpdateCommerceCollectionRequest request) {
+        return updateCommerceCollection(request, null);
+    }
+
+    /**
+     * Update a collection
+     * 
+     * <p>Updates the CommerceCollection identified by `id`. Provide the unified CommerceCollection fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateCommerceCollectionResponse updateCommerceCollection(@Nonnull UpdateCommerceCollectionRequest request, @Nullable Options options) {
         RequestOperation<UpdateCommerceCollectionRequest, UpdateCommerceCollectionResponse> operation
-              = new UpdateCommerceCollection.Sync(sdkConfiguration, _headers);
+              = new UpdateCommerceCollection.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -419,8 +592,23 @@ public class Collection {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateLmsCollectionResponse updateLmsCollection(@Nonnull UpdateLmsCollectionRequest request) {
+        return updateLmsCollection(request, null);
+    }
+
+    /**
+     * Update a collection
+     * 
+     * <p>Updates the LmsCollection identified by `id`. Provide the unified LmsCollection fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateLmsCollectionResponse updateLmsCollection(@Nonnull UpdateLmsCollectionRequest request, @Nullable Options options) {
         RequestOperation<UpdateLmsCollectionRequest, UpdateLmsCollectionResponse> operation
-              = new UpdateLmsCollection.Sync(sdkConfiguration, _headers);
+              = new UpdateLmsCollection.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

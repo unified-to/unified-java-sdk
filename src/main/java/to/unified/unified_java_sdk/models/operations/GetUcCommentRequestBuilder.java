@@ -6,18 +6,28 @@ package to.unified.unified_java_sdk.models.operations;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.GetUcComment;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetUcCommentRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private GetUcCommentRequest request;
+    private final Options.Builder optionsBuilder;
 
     public GetUcCommentRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public GetUcCommentRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public GetUcCommentRequestBuilder request(@Nonnull GetUcCommentRequest request) {
@@ -42,8 +52,9 @@ public class GetUcCommentRequestBuilder {
     * @return The response from the server.
     */
     public GetUcCommentResponse call() {
+        Options options = optionsBuilder.build();
         RequestOperation<GetUcCommentRequest, GetUcCommentResponse> operation
-              = new GetUcComment.Sync(sdkConfiguration, _headers);
+              = new GetUcComment.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

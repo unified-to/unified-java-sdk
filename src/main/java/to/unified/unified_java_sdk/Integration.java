@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.GetUnifiedIntegrationAuthRequest;
 import to.unified.unified_java_sdk.models.operations.GetUnifiedIntegrationAuthRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetUnifiedIntegrationAuthResponse;
@@ -19,6 +20,7 @@ import to.unified.unified_java_sdk.operations.GetUnifiedIntegrationAuth;
 import to.unified.unified_java_sdk.operations.ListUnifiedIntegrationWorkspaces;
 import to.unified.unified_java_sdk.operations.ListUnifiedIntegrations;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Integration {
@@ -65,8 +67,24 @@ public class Integration {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetUnifiedIntegrationAuthResponse getUnifiedIntegrationAuth(@Nonnull GetUnifiedIntegrationAuthRequest request) {
+        return getUnifiedIntegrationAuth(request, null);
+    }
+
+    /**
+     * Authorize or re-authorize a connection
+     * 
+     * <p>Returns an authorization URL for the specified integration. After successful authorization, a new
+     * connection is created unless connection_id and reauth_token are provided, in which case the existing
+     * connection is updated in place.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetUnifiedIntegrationAuthResponse getUnifiedIntegrationAuth(@Nonnull GetUnifiedIntegrationAuthRequest request, @Nullable Options options) {
         RequestOperation<GetUnifiedIntegrationAuthRequest, GetUnifiedIntegrationAuthResponse> operation
-              = new GetUnifiedIntegrationAuth.Sync(sdkConfiguration, _headers);
+              = new GetUnifiedIntegrationAuth.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -91,8 +109,22 @@ public class Integration {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListUnifiedIntegrationWorkspacesResponse listUnifiedIntegrationWorkspaces(@Nonnull ListUnifiedIntegrationWorkspacesRequest request) {
+        return listUnifiedIntegrationWorkspaces(request, null);
+    }
+
+    /**
+     * Returns all activated integrations in a workspace
+     * 
+     * <p>No authentication required as this is to be used by front-end interface
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListUnifiedIntegrationWorkspacesResponse listUnifiedIntegrationWorkspaces(@Nonnull ListUnifiedIntegrationWorkspacesRequest request, @Nullable Options options) {
         RequestOperation<ListUnifiedIntegrationWorkspacesRequest, ListUnifiedIntegrationWorkspacesResponse> operation
-              = new ListUnifiedIntegrationWorkspaces.Sync(sdkConfiguration, _headers);
+              = new ListUnifiedIntegrationWorkspaces.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -113,8 +145,20 @@ public class Integration {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListUnifiedIntegrationsResponse listUnifiedIntegrations(@Nonnull ListUnifiedIntegrationsRequest request) {
+        return listUnifiedIntegrations(request, null);
+    }
+
+    /**
+     * Returns all integrations
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListUnifiedIntegrationsResponse listUnifiedIntegrations(@Nonnull ListUnifiedIntegrationsRequest request, @Nullable Options options) {
         RequestOperation<ListUnifiedIntegrationsRequest, ListUnifiedIntegrationsResponse> operation
-              = new ListUnifiedIntegrations.Sync(sdkConfiguration, _headers);
+              = new ListUnifiedIntegrations.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

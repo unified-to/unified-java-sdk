@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingPurchaseorderRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingPurchaseorderRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingPurchaseorderResponse;
@@ -31,6 +32,7 @@ import to.unified.unified_java_sdk.operations.PatchAccountingPurchaseorder;
 import to.unified.unified_java_sdk.operations.RemoveAccountingPurchaseorder;
 import to.unified.unified_java_sdk.operations.UpdateAccountingPurchaseorder;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Purchaseorder {
@@ -75,8 +77,23 @@ public class Purchaseorder {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateAccountingPurchaseorderResponse createAccountingPurchaseorder(@Nonnull CreateAccountingPurchaseorderRequest request) {
+        return createAccountingPurchaseorder(request, null);
+    }
+
+    /**
+     * Create a purchaseorder
+     * 
+     * <p>Creates a AccountingPurchaseorder. Provide the unified AccountingPurchaseorder fields in the request
+     * body; they are mapped to the provider's API. Returns the created AccountingPurchaseorder.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateAccountingPurchaseorderResponse createAccountingPurchaseorder(@Nonnull CreateAccountingPurchaseorderRequest request, @Nullable Options options) {
         RequestOperation<CreateAccountingPurchaseorderRequest, CreateAccountingPurchaseorderResponse> operation
-              = new CreateAccountingPurchaseorder.Sync(sdkConfiguration, _headers);
+              = new CreateAccountingPurchaseorder.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -103,8 +120,23 @@ public class Purchaseorder {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAccountingPurchaseorderResponse getAccountingPurchaseorder(@Nonnull GetAccountingPurchaseorderRequest request) {
+        return getAccountingPurchaseorder(request, null);
+    }
+
+    /**
+     * Retrieve a purchaseorder
+     * 
+     * <p>Retrieves a single AccountingPurchaseorder by its `id`. Obtain `id` values from the corresponding
+     * list endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAccountingPurchaseorderResponse getAccountingPurchaseorder(@Nonnull GetAccountingPurchaseorderRequest request, @Nullable Options options) {
         RequestOperation<GetAccountingPurchaseorderRequest, GetAccountingPurchaseorderResponse> operation
-              = new GetAccountingPurchaseorder.Sync(sdkConfiguration, _headers);
+              = new GetAccountingPurchaseorder.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -139,8 +171,27 @@ public class Purchaseorder {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAccountingPurchaseordersResponse listAccountingPurchaseorders(@Nonnull ListAccountingPurchaseordersRequest request) {
+        return listAccountingPurchaseorders(request, null);
+    }
+
+    /**
+     * List all purchaseorders
+     * 
+     * <p>Returns a list of AccountingPurchaseorders. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAccountingPurchaseordersResponse listAccountingPurchaseorders(@Nonnull ListAccountingPurchaseordersRequest request, @Nullable Options options) {
         RequestOperation<ListAccountingPurchaseordersRequest, ListAccountingPurchaseordersResponse> operation
-              = new ListAccountingPurchaseorders.Sync(sdkConfiguration, _headers);
+              = new ListAccountingPurchaseorders.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +218,23 @@ public class Purchaseorder {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchAccountingPurchaseorderResponse patchAccountingPurchaseorder(@Nonnull PatchAccountingPurchaseorderRequest request) {
+        return patchAccountingPurchaseorder(request, null);
+    }
+
+    /**
+     * Update a purchaseorder
+     * 
+     * <p>Updates the AccountingPurchaseorder identified by `id`. Provide the unified AccountingPurchaseorder
+     * fields to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchAccountingPurchaseorderResponse patchAccountingPurchaseorder(@Nonnull PatchAccountingPurchaseorderRequest request, @Nullable Options options) {
         RequestOperation<PatchAccountingPurchaseorderRequest, PatchAccountingPurchaseorderResponse> operation
-              = new PatchAccountingPurchaseorder.Sync(sdkConfiguration, _headers);
+              = new PatchAccountingPurchaseorder.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -193,8 +259,22 @@ public class Purchaseorder {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveAccountingPurchaseorderResponse removeAccountingPurchaseorder(@Nonnull RemoveAccountingPurchaseorderRequest request) {
+        return removeAccountingPurchaseorder(request, null);
+    }
+
+    /**
+     * Remove a purchaseorder
+     * 
+     * <p>Deletes the AccountingPurchaseorder identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveAccountingPurchaseorderResponse removeAccountingPurchaseorder(@Nonnull RemoveAccountingPurchaseorderRequest request, @Nullable Options options) {
         RequestOperation<RemoveAccountingPurchaseorderRequest, RemoveAccountingPurchaseorderResponse> operation
-              = new RemoveAccountingPurchaseorder.Sync(sdkConfiguration, _headers);
+              = new RemoveAccountingPurchaseorder.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -221,8 +301,23 @@ public class Purchaseorder {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateAccountingPurchaseorderResponse updateAccountingPurchaseorder(@Nonnull UpdateAccountingPurchaseorderRequest request) {
+        return updateAccountingPurchaseorder(request, null);
+    }
+
+    /**
+     * Update a purchaseorder
+     * 
+     * <p>Updates the AccountingPurchaseorder identified by `id`. Provide the unified AccountingPurchaseorder
+     * fields to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateAccountingPurchaseorderResponse updateAccountingPurchaseorder(@Nonnull UpdateAccountingPurchaseorderRequest request, @Nullable Options options) {
         RequestOperation<UpdateAccountingPurchaseorderRequest, UpdateAccountingPurchaseorderResponse> operation
-              = new UpdateAccountingPurchaseorder.Sync(sdkConfiguration, _headers);
+              = new UpdateAccountingPurchaseorder.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

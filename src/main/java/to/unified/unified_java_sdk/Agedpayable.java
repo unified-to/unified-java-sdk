@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.GetAccountingAgedpayableRequest;
 import to.unified.unified_java_sdk.models.operations.GetAccountingAgedpayableRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetAccountingAgedpayableResponse;
@@ -15,6 +16,7 @@ import to.unified.unified_java_sdk.models.operations.ListAccountingAgedpayablesR
 import to.unified.unified_java_sdk.operations.GetAccountingAgedpayable;
 import to.unified.unified_java_sdk.operations.ListAccountingAgedpayables;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Agedpayable {
@@ -59,8 +61,23 @@ public class Agedpayable {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAccountingAgedpayableResponse getAccountingAgedpayable(@Nonnull GetAccountingAgedpayableRequest request) {
+        return getAccountingAgedpayable(request, null);
+    }
+
+    /**
+     * Retrieve an agedpayable
+     * 
+     * <p>Retrieves a single AccountingAgedpayable by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAccountingAgedpayableResponse getAccountingAgedpayable(@Nonnull GetAccountingAgedpayableRequest request, @Nullable Options options) {
         RequestOperation<GetAccountingAgedpayableRequest, GetAccountingAgedpayableResponse> operation
-              = new GetAccountingAgedpayable.Sync(sdkConfiguration, _headers);
+              = new GetAccountingAgedpayable.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -95,8 +112,27 @@ public class Agedpayable {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAccountingAgedpayablesResponse listAccountingAgedpayables(@Nonnull ListAccountingAgedpayablesRequest request) {
+        return listAccountingAgedpayables(request, null);
+    }
+
+    /**
+     * List all agedpayables
+     * 
+     * <p>Returns a list of AccountingAgedpayables. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAccountingAgedpayablesResponse listAccountingAgedpayables(@Nonnull ListAccountingAgedpayablesRequest request, @Nullable Options options) {
         RequestOperation<ListAccountingAgedpayablesRequest, ListAccountingAgedpayablesResponse> operation
-              = new ListAccountingAgedpayables.Sync(sdkConfiguration, _headers);
+              = new ListAccountingAgedpayables.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

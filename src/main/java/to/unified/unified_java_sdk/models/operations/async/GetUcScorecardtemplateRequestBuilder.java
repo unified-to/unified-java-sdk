@@ -6,20 +6,30 @@ package to.unified.unified_java_sdk.models.operations.async;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.GetUcScorecardtemplateRequest;
 import to.unified.unified_java_sdk.operations.GetUcScorecardtemplate;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetUcScorecardtemplateRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private GetUcScorecardtemplateRequest request;
+    private final Options.Builder optionsBuilder;
 
     public GetUcScorecardtemplateRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public GetUcScorecardtemplateRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public GetUcScorecardtemplateRequestBuilder request(@Nonnull GetUcScorecardtemplateRequest request) {
@@ -44,8 +54,9 @@ public class GetUcScorecardtemplateRequestBuilder {
     * @return The response from the server.
     */
     public CompletableFuture<GetUcScorecardtemplateResponse> call() {
+        Options options = optionsBuilder.build();
         AsyncRequestOperation<GetUcScorecardtemplateRequest, GetUcScorecardtemplateResponse> operation
-              = new GetUcScorecardtemplate.Async(sdkConfiguration, _headers);
+              = new GetUcScorecardtemplate.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

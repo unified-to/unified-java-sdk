@@ -6,18 +6,28 @@ package to.unified.unified_java_sdk.models.operations;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.GetPerformanceFeedback;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetPerformanceFeedbackRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private GetPerformanceFeedbackRequest request;
+    private final Options.Builder optionsBuilder;
 
     public GetPerformanceFeedbackRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public GetPerformanceFeedbackRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public GetPerformanceFeedbackRequestBuilder request(@Nonnull GetPerformanceFeedbackRequest request) {
@@ -42,8 +52,9 @@ public class GetPerformanceFeedbackRequestBuilder {
     * @return The response from the server.
     */
     public GetPerformanceFeedbackResponse call() {
+        Options options = optionsBuilder.build();
         RequestOperation<GetPerformanceFeedbackRequest, GetPerformanceFeedbackResponse> operation
-              = new GetPerformanceFeedback.Sync(sdkConfiguration, _headers);
+              = new GetPerformanceFeedback.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

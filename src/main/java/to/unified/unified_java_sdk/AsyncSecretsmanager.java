@@ -7,6 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestlessOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.GetUnifiedSecretsmanagerRequest;
 import to.unified.unified_java_sdk.models.operations.ListUnifiedSecretsmanagerSecretsRequest;
@@ -40,6 +41,7 @@ import to.unified.unified_java_sdk.operations.PatchUnifiedSecretsmanager;
 import to.unified.unified_java_sdk.operations.RemoveUnifiedSecretsmanager;
 import to.unified.unified_java_sdk.operations.UpdateUnifiedSecretsmanager;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncSecretsmanager {
@@ -78,8 +80,19 @@ public class AsyncSecretsmanager {
      * @return {@code CompletableFuture<CreateUnifiedSecretsmanagerResponse>} - The async response
      */
     public CompletableFuture<CreateUnifiedSecretsmanagerResponse> createUnifiedSecretsmanager(@Nonnull SecretsManager request) {
+        return createUnifiedSecretsmanager(request, null);
+    }
+
+    /**
+     * Create secrets manager
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateUnifiedSecretsmanagerResponse>} - The async response
+     */
+    public CompletableFuture<CreateUnifiedSecretsmanagerResponse> createUnifiedSecretsmanager(@Nonnull SecretsManager request, @Nullable Options options) {
         AsyncRequestOperation<SecretsManager, CreateUnifiedSecretsmanagerResponse> operation
-              = new CreateUnifiedSecretsmanager.Async(sdkConfiguration, _headers);
+              = new CreateUnifiedSecretsmanager.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -101,8 +114,19 @@ public class AsyncSecretsmanager {
      * @return {@code CompletableFuture<GetUnifiedSecretsmanagerResponse>} - The async response
      */
     public CompletableFuture<GetUnifiedSecretsmanagerResponse> getUnifiedSecretsmanager(@Nonnull GetUnifiedSecretsmanagerRequest request) {
+        return getUnifiedSecretsmanager(request, null);
+    }
+
+    /**
+     * Retrieve secrets manager
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetUnifiedSecretsmanagerResponse>} - The async response
+     */
+    public CompletableFuture<GetUnifiedSecretsmanagerResponse> getUnifiedSecretsmanager(@Nonnull GetUnifiedSecretsmanagerRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetUnifiedSecretsmanagerRequest, GetUnifiedSecretsmanagerResponse> operation
-              = new GetUnifiedSecretsmanager.Async(sdkConfiguration, _headers);
+              = new GetUnifiedSecretsmanager.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -123,8 +147,18 @@ public class AsyncSecretsmanager {
      * @return {@code CompletableFuture<ListUnifiedSecretsmanagerInstructionsResponse>} - The async response
      */
     public CompletableFuture<ListUnifiedSecretsmanagerInstructionsResponse> listUnifiedSecretsmanagerInstructionsDirect() {
+        return listUnifiedSecretsmanagerInstructions(null);
+    }
+
+    /**
+     * List secrets manager setup instructions
+     * 
+     * @param options additional options
+     * @return {@code CompletableFuture<ListUnifiedSecretsmanagerInstructionsResponse>} - The async response
+     */
+    public CompletableFuture<ListUnifiedSecretsmanagerInstructionsResponse> listUnifiedSecretsmanagerInstructions(@Nullable Options options) {
         AsyncRequestlessOperation<ListUnifiedSecretsmanagerInstructionsResponse> operation
-            = new ListUnifiedSecretsmanagerInstructions.Async(sdkConfiguration, _headers);
+            = new ListUnifiedSecretsmanagerInstructions.Async(sdkConfiguration, options, _headers);
         return operation.doRequest()
             .thenCompose(operation::handleResponse);
     }
@@ -146,8 +180,19 @@ public class AsyncSecretsmanager {
      * @return {@code CompletableFuture<ListUnifiedSecretsmanagerSecretsResponse>} - The async response
      */
     public CompletableFuture<ListUnifiedSecretsmanagerSecretsResponse> listUnifiedSecretsmanagerSecrets(@Nonnull ListUnifiedSecretsmanagerSecretsRequest request) {
+        return listUnifiedSecretsmanagerSecrets(request, null);
+    }
+
+    /**
+     * List secrets in a secrets manager
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListUnifiedSecretsmanagerSecretsResponse>} - The async response
+     */
+    public CompletableFuture<ListUnifiedSecretsmanagerSecretsResponse> listUnifiedSecretsmanagerSecrets(@Nonnull ListUnifiedSecretsmanagerSecretsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListUnifiedSecretsmanagerSecretsRequest, ListUnifiedSecretsmanagerSecretsResponse> operation
-              = new ListUnifiedSecretsmanagerSecrets.Async(sdkConfiguration, _headers);
+              = new ListUnifiedSecretsmanagerSecrets.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -169,8 +214,19 @@ public class AsyncSecretsmanager {
      * @return {@code CompletableFuture<ListUnifiedSecretsmanagersResponse>} - The async response
      */
     public CompletableFuture<ListUnifiedSecretsmanagersResponse> listUnifiedSecretsmanagers(@Nonnull ListUnifiedSecretsmanagersRequest request) {
+        return listUnifiedSecretsmanagers(request, null);
+    }
+
+    /**
+     * List secrets managers
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListUnifiedSecretsmanagersResponse>} - The async response
+     */
+    public CompletableFuture<ListUnifiedSecretsmanagersResponse> listUnifiedSecretsmanagers(@Nonnull ListUnifiedSecretsmanagersRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListUnifiedSecretsmanagersRequest, ListUnifiedSecretsmanagersResponse> operation
-              = new ListUnifiedSecretsmanagers.Async(sdkConfiguration, _headers);
+              = new ListUnifiedSecretsmanagers.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -192,8 +248,19 @@ public class AsyncSecretsmanager {
      * @return {@code CompletableFuture<PatchUnifiedSecretsmanagerResponse>} - The async response
      */
     public CompletableFuture<PatchUnifiedSecretsmanagerResponse> patchUnifiedSecretsmanager(@Nonnull PatchUnifiedSecretsmanagerRequest request) {
+        return patchUnifiedSecretsmanager(request, null);
+    }
+
+    /**
+     * Update secrets manager
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchUnifiedSecretsmanagerResponse>} - The async response
+     */
+    public CompletableFuture<PatchUnifiedSecretsmanagerResponse> patchUnifiedSecretsmanager(@Nonnull PatchUnifiedSecretsmanagerRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchUnifiedSecretsmanagerRequest, PatchUnifiedSecretsmanagerResponse> operation
-              = new PatchUnifiedSecretsmanager.Async(sdkConfiguration, _headers);
+              = new PatchUnifiedSecretsmanager.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -215,8 +282,19 @@ public class AsyncSecretsmanager {
      * @return {@code CompletableFuture<RemoveUnifiedSecretsmanagerResponse>} - The async response
      */
     public CompletableFuture<RemoveUnifiedSecretsmanagerResponse> removeUnifiedSecretsmanager(@Nonnull RemoveUnifiedSecretsmanagerRequest request) {
+        return removeUnifiedSecretsmanager(request, null);
+    }
+
+    /**
+     * Remove secrets manager
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveUnifiedSecretsmanagerResponse>} - The async response
+     */
+    public CompletableFuture<RemoveUnifiedSecretsmanagerResponse> removeUnifiedSecretsmanager(@Nonnull RemoveUnifiedSecretsmanagerRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveUnifiedSecretsmanagerRequest, RemoveUnifiedSecretsmanagerResponse> operation
-              = new RemoveUnifiedSecretsmanager.Async(sdkConfiguration, _headers);
+              = new RemoveUnifiedSecretsmanager.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -238,8 +316,19 @@ public class AsyncSecretsmanager {
      * @return {@code CompletableFuture<UpdateUnifiedSecretsmanagerResponse>} - The async response
      */
     public CompletableFuture<UpdateUnifiedSecretsmanagerResponse> updateUnifiedSecretsmanager(@Nonnull UpdateUnifiedSecretsmanagerRequest request) {
+        return updateUnifiedSecretsmanager(request, null);
+    }
+
+    /**
+     * Update secrets manager
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateUnifiedSecretsmanagerResponse>} - The async response
+     */
+    public CompletableFuture<UpdateUnifiedSecretsmanagerResponse> updateUnifiedSecretsmanager(@Nonnull UpdateUnifiedSecretsmanagerRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateUnifiedSecretsmanagerRequest, UpdateUnifiedSecretsmanagerResponse> operation
-              = new UpdateUnifiedSecretsmanager.Async(sdkConfiguration, _headers);
+              = new UpdateUnifiedSecretsmanager.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

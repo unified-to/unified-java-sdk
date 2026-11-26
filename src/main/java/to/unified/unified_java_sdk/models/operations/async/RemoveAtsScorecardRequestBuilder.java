@@ -6,20 +6,30 @@ package to.unified.unified_java_sdk.models.operations.async;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.RemoveAtsScorecardRequest;
 import to.unified.unified_java_sdk.operations.RemoveAtsScorecard;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveAtsScorecardRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private RemoveAtsScorecardRequest request;
+    private final Options.Builder optionsBuilder;
 
     public RemoveAtsScorecardRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public RemoveAtsScorecardRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public RemoveAtsScorecardRequestBuilder request(@Nonnull RemoveAtsScorecardRequest request) {
@@ -44,8 +54,9 @@ public class RemoveAtsScorecardRequestBuilder {
     * @return The response from the server.
     */
     public CompletableFuture<RemoveAtsScorecardResponse> call() {
+        Options options = optionsBuilder.build();
         AsyncRequestOperation<RemoveAtsScorecardRequest, RemoveAtsScorecardResponse> operation
-              = new RemoveAtsScorecard.Async(sdkConfiguration, _headers);
+              = new RemoveAtsScorecard.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

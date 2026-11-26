@@ -6,18 +6,28 @@ package to.unified.unified_java_sdk.models.operations;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.PatchLegalPracticearea;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class PatchLegalPracticeareaRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private PatchLegalPracticeareaRequest request;
+    private final Options.Builder optionsBuilder;
 
     public PatchLegalPracticeareaRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public PatchLegalPracticeareaRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public PatchLegalPracticeareaRequestBuilder request(@Nonnull PatchLegalPracticeareaRequest request) {
@@ -42,8 +52,9 @@ public class PatchLegalPracticeareaRequestBuilder {
     * @return The response from the server.
     */
     public PatchLegalPracticeareaResponse call() {
+        Options options = optionsBuilder.build();
         RequestOperation<PatchLegalPracticeareaRequest, PatchLegalPracticeareaResponse> operation
-              = new PatchLegalPracticearea.Sync(sdkConfiguration, _headers);
+              = new PatchLegalPracticearea.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

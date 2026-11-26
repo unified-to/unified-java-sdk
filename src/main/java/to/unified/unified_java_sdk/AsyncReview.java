@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceReviewRequest;
 import to.unified.unified_java_sdk.models.operations.GetCommerceReviewRequest;
@@ -72,6 +73,7 @@ import to.unified.unified_java_sdk.operations.UpdateCommerceReview;
 import to.unified.unified_java_sdk.operations.UpdatePropertyReview;
 import to.unified.unified_java_sdk.operations.UpdateSocialReview;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncReview {
@@ -116,8 +118,22 @@ public class AsyncReview {
      * @return {@code CompletableFuture<CreateCommerceReviewResponse>} - The async response
      */
     public CompletableFuture<CreateCommerceReviewResponse> createCommerceReview(@Nonnull CreateCommerceReviewRequest request) {
+        return createCommerceReview(request, null);
+    }
+
+    /**
+     * Create a review
+     * 
+     * <p>Creates a CommerceReview. Provide the unified CommerceReview fields in the request body; they are
+     * mapped to the provider's API. Returns the created CommerceReview.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateCommerceReviewResponse>} - The async response
+     */
+    public CompletableFuture<CreateCommerceReviewResponse> createCommerceReview(@Nonnull CreateCommerceReviewRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateCommerceReviewRequest, CreateCommerceReviewResponse> operation
-              = new CreateCommerceReview.Async(sdkConfiguration, _headers);
+              = new CreateCommerceReview.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -145,8 +161,22 @@ public class AsyncReview {
      * @return {@code CompletableFuture<GetCommerceReviewResponse>} - The async response
      */
     public CompletableFuture<GetCommerceReviewResponse> getCommerceReview(@Nonnull GetCommerceReviewRequest request) {
+        return getCommerceReview(request, null);
+    }
+
+    /**
+     * Retrieve a review
+     * 
+     * <p>Retrieves a single CommerceReview by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetCommerceReviewResponse>} - The async response
+     */
+    public CompletableFuture<GetCommerceReviewResponse> getCommerceReview(@Nonnull GetCommerceReviewRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetCommerceReviewRequest, GetCommerceReviewResponse> operation
-              = new GetCommerceReview.Async(sdkConfiguration, _headers);
+              = new GetCommerceReview.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -174,8 +204,22 @@ public class AsyncReview {
      * @return {@code CompletableFuture<GetPerformanceReviewResponse>} - The async response
      */
     public CompletableFuture<GetPerformanceReviewResponse> getPerformanceReview(@Nonnull GetPerformanceReviewRequest request) {
+        return getPerformanceReview(request, null);
+    }
+
+    /**
+     * Retrieve a review
+     * 
+     * <p>Retrieves a single PerformanceReview by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetPerformanceReviewResponse>} - The async response
+     */
+    public CompletableFuture<GetPerformanceReviewResponse> getPerformanceReview(@Nonnull GetPerformanceReviewRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetPerformanceReviewRequest, GetPerformanceReviewResponse> operation
-              = new GetPerformanceReview.Async(sdkConfiguration, _headers);
+              = new GetPerformanceReview.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -203,8 +247,22 @@ public class AsyncReview {
      * @return {@code CompletableFuture<GetPropertyReviewResponse>} - The async response
      */
     public CompletableFuture<GetPropertyReviewResponse> getPropertyReview(@Nonnull GetPropertyReviewRequest request) {
+        return getPropertyReview(request, null);
+    }
+
+    /**
+     * Retrieve a review
+     * 
+     * <p>Retrieves a single PropertyReview by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetPropertyReviewResponse>} - The async response
+     */
+    public CompletableFuture<GetPropertyReviewResponse> getPropertyReview(@Nonnull GetPropertyReviewRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetPropertyReviewRequest, GetPropertyReviewResponse> operation
-              = new GetPropertyReview.Async(sdkConfiguration, _headers);
+              = new GetPropertyReview.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -232,8 +290,22 @@ public class AsyncReview {
      * @return {@code CompletableFuture<GetSocialReviewResponse>} - The async response
      */
     public CompletableFuture<GetSocialReviewResponse> getSocialReview(@Nonnull GetSocialReviewRequest request) {
+        return getSocialReview(request, null);
+    }
+
+    /**
+     * Retrieve a review
+     * 
+     * <p>Retrieves a single SocialReview by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetSocialReviewResponse>} - The async response
+     */
+    public CompletableFuture<GetSocialReviewResponse> getSocialReview(@Nonnull GetSocialReviewRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetSocialReviewRequest, GetSocialReviewResponse> operation
-              = new GetSocialReview.Async(sdkConfiguration, _headers);
+              = new GetSocialReview.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -269,8 +341,26 @@ public class AsyncReview {
      * @return {@code CompletableFuture<ListCommerceReviewsResponse>} - The async response
      */
     public CompletableFuture<ListCommerceReviewsResponse> listCommerceReviews(@Nonnull ListCommerceReviewsRequest request) {
+        return listCommerceReviews(request, null);
+    }
+
+    /**
+     * List all reviews
+     * 
+     * <p>Returns a list of CommerceReviews. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListCommerceReviewsResponse>} - The async response
+     */
+    public CompletableFuture<ListCommerceReviewsResponse> listCommerceReviews(@Nonnull ListCommerceReviewsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListCommerceReviewsRequest, ListCommerceReviewsResponse> operation
-              = new ListCommerceReviews.Async(sdkConfiguration, _headers);
+              = new ListCommerceReviews.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -306,8 +396,26 @@ public class AsyncReview {
      * @return {@code CompletableFuture<ListPerformanceReviewsResponse>} - The async response
      */
     public CompletableFuture<ListPerformanceReviewsResponse> listPerformanceReviews(@Nonnull ListPerformanceReviewsRequest request) {
+        return listPerformanceReviews(request, null);
+    }
+
+    /**
+     * List all reviews
+     * 
+     * <p>Returns a list of PerformanceReviews. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListPerformanceReviewsResponse>} - The async response
+     */
+    public CompletableFuture<ListPerformanceReviewsResponse> listPerformanceReviews(@Nonnull ListPerformanceReviewsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListPerformanceReviewsRequest, ListPerformanceReviewsResponse> operation
-              = new ListPerformanceReviews.Async(sdkConfiguration, _headers);
+              = new ListPerformanceReviews.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -343,8 +451,26 @@ public class AsyncReview {
      * @return {@code CompletableFuture<ListPropertyReviewsResponse>} - The async response
      */
     public CompletableFuture<ListPropertyReviewsResponse> listPropertyReviews(@Nonnull ListPropertyReviewsRequest request) {
+        return listPropertyReviews(request, null);
+    }
+
+    /**
+     * List all reviews
+     * 
+     * <p>Returns a list of PropertyReviews. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListPropertyReviewsResponse>} - The async response
+     */
+    public CompletableFuture<ListPropertyReviewsResponse> listPropertyReviews(@Nonnull ListPropertyReviewsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListPropertyReviewsRequest, ListPropertyReviewsResponse> operation
-              = new ListPropertyReviews.Async(sdkConfiguration, _headers);
+              = new ListPropertyReviews.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -380,8 +506,26 @@ public class AsyncReview {
      * @return {@code CompletableFuture<ListSocialReviewsResponse>} - The async response
      */
     public CompletableFuture<ListSocialReviewsResponse> listSocialReviews(@Nonnull ListSocialReviewsRequest request) {
+        return listSocialReviews(request, null);
+    }
+
+    /**
+     * List all reviews
+     * 
+     * <p>Returns a list of SocialReviews. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListSocialReviewsResponse>} - The async response
+     */
+    public CompletableFuture<ListSocialReviewsResponse> listSocialReviews(@Nonnull ListSocialReviewsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListSocialReviewsRequest, ListSocialReviewsResponse> operation
-              = new ListSocialReviews.Async(sdkConfiguration, _headers);
+              = new ListSocialReviews.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -409,8 +553,22 @@ public class AsyncReview {
      * @return {@code CompletableFuture<PatchCommerceReviewResponse>} - The async response
      */
     public CompletableFuture<PatchCommerceReviewResponse> patchCommerceReview(@Nonnull PatchCommerceReviewRequest request) {
+        return patchCommerceReview(request, null);
+    }
+
+    /**
+     * Update a review
+     * 
+     * <p>Updates the CommerceReview identified by `id`. Provide the unified CommerceReview fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchCommerceReviewResponse>} - The async response
+     */
+    public CompletableFuture<PatchCommerceReviewResponse> patchCommerceReview(@Nonnull PatchCommerceReviewRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchCommerceReviewRequest, PatchCommerceReviewResponse> operation
-              = new PatchCommerceReview.Async(sdkConfiguration, _headers);
+              = new PatchCommerceReview.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -438,8 +596,22 @@ public class AsyncReview {
      * @return {@code CompletableFuture<PatchPropertyReviewResponse>} - The async response
      */
     public CompletableFuture<PatchPropertyReviewResponse> patchPropertyReview(@Nonnull PatchPropertyReviewRequest request) {
+        return patchPropertyReview(request, null);
+    }
+
+    /**
+     * Update a review
+     * 
+     * <p>Updates the PropertyReview identified by `id`. Provide the unified PropertyReview fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchPropertyReviewResponse>} - The async response
+     */
+    public CompletableFuture<PatchPropertyReviewResponse> patchPropertyReview(@Nonnull PatchPropertyReviewRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchPropertyReviewRequest, PatchPropertyReviewResponse> operation
-              = new PatchPropertyReview.Async(sdkConfiguration, _headers);
+              = new PatchPropertyReview.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -467,8 +639,22 @@ public class AsyncReview {
      * @return {@code CompletableFuture<PatchSocialReviewResponse>} - The async response
      */
     public CompletableFuture<PatchSocialReviewResponse> patchSocialReview(@Nonnull PatchSocialReviewRequest request) {
+        return patchSocialReview(request, null);
+    }
+
+    /**
+     * Update a review
+     * 
+     * <p>Updates the SocialReview identified by `id`. Provide the unified SocialReview fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchSocialReviewResponse>} - The async response
+     */
+    public CompletableFuture<PatchSocialReviewResponse> patchSocialReview(@Nonnull PatchSocialReviewRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchSocialReviewRequest, PatchSocialReviewResponse> operation
-              = new PatchSocialReview.Async(sdkConfiguration, _headers);
+              = new PatchSocialReview.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -494,8 +680,21 @@ public class AsyncReview {
      * @return {@code CompletableFuture<RemoveCommerceReviewResponse>} - The async response
      */
     public CompletableFuture<RemoveCommerceReviewResponse> removeCommerceReview(@Nonnull RemoveCommerceReviewRequest request) {
+        return removeCommerceReview(request, null);
+    }
+
+    /**
+     * Remove a review
+     * 
+     * <p>Deletes the CommerceReview identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveCommerceReviewResponse>} - The async response
+     */
+    public CompletableFuture<RemoveCommerceReviewResponse> removeCommerceReview(@Nonnull RemoveCommerceReviewRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveCommerceReviewRequest, RemoveCommerceReviewResponse> operation
-              = new RemoveCommerceReview.Async(sdkConfiguration, _headers);
+              = new RemoveCommerceReview.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -523,8 +722,22 @@ public class AsyncReview {
      * @return {@code CompletableFuture<UpdateCommerceReviewResponse>} - The async response
      */
     public CompletableFuture<UpdateCommerceReviewResponse> updateCommerceReview(@Nonnull UpdateCommerceReviewRequest request) {
+        return updateCommerceReview(request, null);
+    }
+
+    /**
+     * Update a review
+     * 
+     * <p>Updates the CommerceReview identified by `id`. Provide the unified CommerceReview fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateCommerceReviewResponse>} - The async response
+     */
+    public CompletableFuture<UpdateCommerceReviewResponse> updateCommerceReview(@Nonnull UpdateCommerceReviewRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateCommerceReviewRequest, UpdateCommerceReviewResponse> operation
-              = new UpdateCommerceReview.Async(sdkConfiguration, _headers);
+              = new UpdateCommerceReview.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -552,8 +765,22 @@ public class AsyncReview {
      * @return {@code CompletableFuture<UpdatePropertyReviewResponse>} - The async response
      */
     public CompletableFuture<UpdatePropertyReviewResponse> updatePropertyReview(@Nonnull UpdatePropertyReviewRequest request) {
+        return updatePropertyReview(request, null);
+    }
+
+    /**
+     * Update a review
+     * 
+     * <p>Updates the PropertyReview identified by `id`. Provide the unified PropertyReview fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdatePropertyReviewResponse>} - The async response
+     */
+    public CompletableFuture<UpdatePropertyReviewResponse> updatePropertyReview(@Nonnull UpdatePropertyReviewRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdatePropertyReviewRequest, UpdatePropertyReviewResponse> operation
-              = new UpdatePropertyReview.Async(sdkConfiguration, _headers);
+              = new UpdatePropertyReview.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -581,8 +808,22 @@ public class AsyncReview {
      * @return {@code CompletableFuture<UpdateSocialReviewResponse>} - The async response
      */
     public CompletableFuture<UpdateSocialReviewResponse> updateSocialReview(@Nonnull UpdateSocialReviewRequest request) {
+        return updateSocialReview(request, null);
+    }
+
+    /**
+     * Update a review
+     * 
+     * <p>Updates the SocialReview identified by `id`. Provide the unified SocialReview fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateSocialReviewResponse>} - The async response
+     */
+    public CompletableFuture<UpdateSocialReviewResponse> updateSocialReview(@Nonnull UpdateSocialReviewRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateSocialReviewRequest, UpdateSocialReviewResponse> operation
-              = new UpdateSocialReview.Async(sdkConfiguration, _headers);
+              = new UpdateSocialReview.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

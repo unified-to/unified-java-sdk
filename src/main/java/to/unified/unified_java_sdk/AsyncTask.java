@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateGenaiTaskRequest;
 import to.unified.unified_java_sdk.models.operations.CreateTaskCommentRequest;
@@ -112,6 +113,7 @@ import to.unified.unified_java_sdk.operations.UpdateTaskComment;
 import to.unified.unified_java_sdk.operations.UpdateTaskProject;
 import to.unified.unified_java_sdk.operations.UpdateTaskTask;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncTask {
@@ -156,8 +158,22 @@ public class AsyncTask {
      * @return {@code CompletableFuture<CreateGenaiTaskResponse>} - The async response
      */
     public CompletableFuture<CreateGenaiTaskResponse> createGenaiTask(@Nonnull CreateGenaiTaskRequest request) {
+        return createGenaiTask(request, null);
+    }
+
+    /**
+     * Create a task
+     * 
+     * <p>Creates a GenaiTask. Provide the unified GenaiTask fields in the request body; they are mapped to
+     * the provider's API. Returns the created GenaiTask.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateGenaiTaskResponse>} - The async response
+     */
+    public CompletableFuture<CreateGenaiTaskResponse> createGenaiTask(@Nonnull CreateGenaiTaskRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateGenaiTaskRequest, CreateGenaiTaskResponse> operation
-              = new CreateGenaiTask.Async(sdkConfiguration, _headers);
+              = new CreateGenaiTask.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -185,8 +201,22 @@ public class AsyncTask {
      * @return {@code CompletableFuture<CreateTaskCommentResponse>} - The async response
      */
     public CompletableFuture<CreateTaskCommentResponse> createTaskComment(@Nonnull CreateTaskCommentRequest request) {
+        return createTaskComment(request, null);
+    }
+
+    /**
+     * Create a comment
+     * 
+     * <p>Creates a TaskComment. Provide the unified TaskComment fields in the request body; they are mapped
+     * to the provider's API. Returns the created TaskComment.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateTaskCommentResponse>} - The async response
+     */
+    public CompletableFuture<CreateTaskCommentResponse> createTaskComment(@Nonnull CreateTaskCommentRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateTaskCommentRequest, CreateTaskCommentResponse> operation
-              = new CreateTaskComment.Async(sdkConfiguration, _headers);
+              = new CreateTaskComment.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -214,8 +244,22 @@ public class AsyncTask {
      * @return {@code CompletableFuture<CreateTaskProjectResponse>} - The async response
      */
     public CompletableFuture<CreateTaskProjectResponse> createTaskProject(@Nonnull CreateTaskProjectRequest request) {
+        return createTaskProject(request, null);
+    }
+
+    /**
+     * Create a project
+     * 
+     * <p>Creates a TaskProject. Provide the unified TaskProject fields in the request body; they are mapped
+     * to the provider's API. Returns the created TaskProject.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateTaskProjectResponse>} - The async response
+     */
+    public CompletableFuture<CreateTaskProjectResponse> createTaskProject(@Nonnull CreateTaskProjectRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateTaskProjectRequest, CreateTaskProjectResponse> operation
-              = new CreateTaskProject.Async(sdkConfiguration, _headers);
+              = new CreateTaskProject.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -243,8 +287,22 @@ public class AsyncTask {
      * @return {@code CompletableFuture<CreateTaskTaskResponse>} - The async response
      */
     public CompletableFuture<CreateTaskTaskResponse> createTaskTask(@Nonnull CreateTaskTaskRequest request) {
+        return createTaskTask(request, null);
+    }
+
+    /**
+     * Create a task
+     * 
+     * <p>Creates a TaskTask. Provide the unified TaskTask fields in the request body; they are mapped to the
+     * provider's API. Returns the created TaskTask.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateTaskTaskResponse>} - The async response
+     */
+    public CompletableFuture<CreateTaskTaskResponse> createTaskTask(@Nonnull CreateTaskTaskRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateTaskTaskRequest, CreateTaskTaskResponse> operation
-              = new CreateTaskTask.Async(sdkConfiguration, _headers);
+              = new CreateTaskTask.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -272,8 +330,22 @@ public class AsyncTask {
      * @return {@code CompletableFuture<GetGenaiTaskResponse>} - The async response
      */
     public CompletableFuture<GetGenaiTaskResponse> getGenaiTask(@Nonnull GetGenaiTaskRequest request) {
+        return getGenaiTask(request, null);
+    }
+
+    /**
+     * Retrieve a task
+     * 
+     * <p>Retrieves a single GenaiTask by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetGenaiTaskResponse>} - The async response
+     */
+    public CompletableFuture<GetGenaiTaskResponse> getGenaiTask(@Nonnull GetGenaiTaskRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetGenaiTaskRequest, GetGenaiTaskResponse> operation
-              = new GetGenaiTask.Async(sdkConfiguration, _headers);
+              = new GetGenaiTask.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -301,8 +373,22 @@ public class AsyncTask {
      * @return {@code CompletableFuture<GetTaskChangeResponse>} - The async response
      */
     public CompletableFuture<GetTaskChangeResponse> getTaskChange(@Nonnull GetTaskChangeRequest request) {
+        return getTaskChange(request, null);
+    }
+
+    /**
+     * Retrieve a change
+     * 
+     * <p>Retrieves a single TaskChange by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetTaskChangeResponse>} - The async response
+     */
+    public CompletableFuture<GetTaskChangeResponse> getTaskChange(@Nonnull GetTaskChangeRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetTaskChangeRequest, GetTaskChangeResponse> operation
-              = new GetTaskChange.Async(sdkConfiguration, _headers);
+              = new GetTaskChange.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -330,8 +416,22 @@ public class AsyncTask {
      * @return {@code CompletableFuture<GetTaskCommentResponse>} - The async response
      */
     public CompletableFuture<GetTaskCommentResponse> getTaskComment(@Nonnull GetTaskCommentRequest request) {
+        return getTaskComment(request, null);
+    }
+
+    /**
+     * Retrieve a comment
+     * 
+     * <p>Retrieves a single TaskComment by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetTaskCommentResponse>} - The async response
+     */
+    public CompletableFuture<GetTaskCommentResponse> getTaskComment(@Nonnull GetTaskCommentRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetTaskCommentRequest, GetTaskCommentResponse> operation
-              = new GetTaskComment.Async(sdkConfiguration, _headers);
+              = new GetTaskComment.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -359,8 +459,22 @@ public class AsyncTask {
      * @return {@code CompletableFuture<GetTaskProjectResponse>} - The async response
      */
     public CompletableFuture<GetTaskProjectResponse> getTaskProject(@Nonnull GetTaskProjectRequest request) {
+        return getTaskProject(request, null);
+    }
+
+    /**
+     * Retrieve a project
+     * 
+     * <p>Retrieves a single TaskProject by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetTaskProjectResponse>} - The async response
+     */
+    public CompletableFuture<GetTaskProjectResponse> getTaskProject(@Nonnull GetTaskProjectRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetTaskProjectRequest, GetTaskProjectResponse> operation
-              = new GetTaskProject.Async(sdkConfiguration, _headers);
+              = new GetTaskProject.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -388,8 +502,22 @@ public class AsyncTask {
      * @return {@code CompletableFuture<GetTaskTaskResponse>} - The async response
      */
     public CompletableFuture<GetTaskTaskResponse> getTaskTask(@Nonnull GetTaskTaskRequest request) {
+        return getTaskTask(request, null);
+    }
+
+    /**
+     * Retrieve a task
+     * 
+     * <p>Retrieves a single TaskTask by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetTaskTaskResponse>} - The async response
+     */
+    public CompletableFuture<GetTaskTaskResponse> getTaskTask(@Nonnull GetTaskTaskRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetTaskTaskRequest, GetTaskTaskResponse> operation
-              = new GetTaskTask.Async(sdkConfiguration, _headers);
+              = new GetTaskTask.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -425,8 +553,26 @@ public class AsyncTask {
      * @return {@code CompletableFuture<ListGenaiTasksResponse>} - The async response
      */
     public CompletableFuture<ListGenaiTasksResponse> listGenaiTasks(@Nonnull ListGenaiTasksRequest request) {
+        return listGenaiTasks(request, null);
+    }
+
+    /**
+     * List all tasks
+     * 
+     * <p>Returns a list of GenaiTasks. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListGenaiTasksResponse>} - The async response
+     */
+    public CompletableFuture<ListGenaiTasksResponse> listGenaiTasks(@Nonnull ListGenaiTasksRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListGenaiTasksRequest, ListGenaiTasksResponse> operation
-              = new ListGenaiTasks.Async(sdkConfiguration, _headers);
+              = new ListGenaiTasks.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -462,8 +608,26 @@ public class AsyncTask {
      * @return {@code CompletableFuture<ListTaskChangesResponse>} - The async response
      */
     public CompletableFuture<ListTaskChangesResponse> listTaskChanges(@Nonnull ListTaskChangesRequest request) {
+        return listTaskChanges(request, null);
+    }
+
+    /**
+     * List all changes
+     * 
+     * <p>Returns a list of TaskChanges. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListTaskChangesResponse>} - The async response
+     */
+    public CompletableFuture<ListTaskChangesResponse> listTaskChanges(@Nonnull ListTaskChangesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListTaskChangesRequest, ListTaskChangesResponse> operation
-              = new ListTaskChanges.Async(sdkConfiguration, _headers);
+              = new ListTaskChanges.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -499,8 +663,26 @@ public class AsyncTask {
      * @return {@code CompletableFuture<ListTaskCommentsResponse>} - The async response
      */
     public CompletableFuture<ListTaskCommentsResponse> listTaskComments(@Nonnull ListTaskCommentsRequest request) {
+        return listTaskComments(request, null);
+    }
+
+    /**
+     * List all comments
+     * 
+     * <p>Returns a list of TaskComments. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListTaskCommentsResponse>} - The async response
+     */
+    public CompletableFuture<ListTaskCommentsResponse> listTaskComments(@Nonnull ListTaskCommentsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListTaskCommentsRequest, ListTaskCommentsResponse> operation
-              = new ListTaskComments.Async(sdkConfiguration, _headers);
+              = new ListTaskComments.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -536,8 +718,26 @@ public class AsyncTask {
      * @return {@code CompletableFuture<ListTaskProjectsResponse>} - The async response
      */
     public CompletableFuture<ListTaskProjectsResponse> listTaskProjects(@Nonnull ListTaskProjectsRequest request) {
+        return listTaskProjects(request, null);
+    }
+
+    /**
+     * List all projects
+     * 
+     * <p>Returns a list of TaskProjects. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListTaskProjectsResponse>} - The async response
+     */
+    public CompletableFuture<ListTaskProjectsResponse> listTaskProjects(@Nonnull ListTaskProjectsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListTaskProjectsRequest, ListTaskProjectsResponse> operation
-              = new ListTaskProjects.Async(sdkConfiguration, _headers);
+              = new ListTaskProjects.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -573,8 +773,26 @@ public class AsyncTask {
      * @return {@code CompletableFuture<ListTaskTasksResponse>} - The async response
      */
     public CompletableFuture<ListTaskTasksResponse> listTaskTasks(@Nonnull ListTaskTasksRequest request) {
+        return listTaskTasks(request, null);
+    }
+
+    /**
+     * List all tasks
+     * 
+     * <p>Returns a list of TaskTasks. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListTaskTasksResponse>} - The async response
+     */
+    public CompletableFuture<ListTaskTasksResponse> listTaskTasks(@Nonnull ListTaskTasksRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListTaskTasksRequest, ListTaskTasksResponse> operation
-              = new ListTaskTasks.Async(sdkConfiguration, _headers);
+              = new ListTaskTasks.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -602,8 +820,22 @@ public class AsyncTask {
      * @return {@code CompletableFuture<PatchGenaiTaskResponse>} - The async response
      */
     public CompletableFuture<PatchGenaiTaskResponse> patchGenaiTask(@Nonnull PatchGenaiTaskRequest request) {
+        return patchGenaiTask(request, null);
+    }
+
+    /**
+     * Update a task
+     * 
+     * <p>Updates the GenaiTask identified by `id`. Provide the unified GenaiTask fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchGenaiTaskResponse>} - The async response
+     */
+    public CompletableFuture<PatchGenaiTaskResponse> patchGenaiTask(@Nonnull PatchGenaiTaskRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchGenaiTaskRequest, PatchGenaiTaskResponse> operation
-              = new PatchGenaiTask.Async(sdkConfiguration, _headers);
+              = new PatchGenaiTask.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -631,8 +863,22 @@ public class AsyncTask {
      * @return {@code CompletableFuture<PatchTaskCommentResponse>} - The async response
      */
     public CompletableFuture<PatchTaskCommentResponse> patchTaskComment(@Nonnull PatchTaskCommentRequest request) {
+        return patchTaskComment(request, null);
+    }
+
+    /**
+     * Update a comment
+     * 
+     * <p>Updates the TaskComment identified by `id`. Provide the unified TaskComment fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchTaskCommentResponse>} - The async response
+     */
+    public CompletableFuture<PatchTaskCommentResponse> patchTaskComment(@Nonnull PatchTaskCommentRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchTaskCommentRequest, PatchTaskCommentResponse> operation
-              = new PatchTaskComment.Async(sdkConfiguration, _headers);
+              = new PatchTaskComment.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -660,8 +906,22 @@ public class AsyncTask {
      * @return {@code CompletableFuture<PatchTaskProjectResponse>} - The async response
      */
     public CompletableFuture<PatchTaskProjectResponse> patchTaskProject(@Nonnull PatchTaskProjectRequest request) {
+        return patchTaskProject(request, null);
+    }
+
+    /**
+     * Update a project
+     * 
+     * <p>Updates the TaskProject identified by `id`. Provide the unified TaskProject fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchTaskProjectResponse>} - The async response
+     */
+    public CompletableFuture<PatchTaskProjectResponse> patchTaskProject(@Nonnull PatchTaskProjectRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchTaskProjectRequest, PatchTaskProjectResponse> operation
-              = new PatchTaskProject.Async(sdkConfiguration, _headers);
+              = new PatchTaskProject.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -689,8 +949,22 @@ public class AsyncTask {
      * @return {@code CompletableFuture<PatchTaskTaskResponse>} - The async response
      */
     public CompletableFuture<PatchTaskTaskResponse> patchTaskTask(@Nonnull PatchTaskTaskRequest request) {
+        return patchTaskTask(request, null);
+    }
+
+    /**
+     * Update a task
+     * 
+     * <p>Updates the TaskTask identified by `id`. Provide the unified TaskTask fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchTaskTaskResponse>} - The async response
+     */
+    public CompletableFuture<PatchTaskTaskResponse> patchTaskTask(@Nonnull PatchTaskTaskRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchTaskTaskRequest, PatchTaskTaskResponse> operation
-              = new PatchTaskTask.Async(sdkConfiguration, _headers);
+              = new PatchTaskTask.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -716,8 +990,21 @@ public class AsyncTask {
      * @return {@code CompletableFuture<RemoveGenaiTaskResponse>} - The async response
      */
     public CompletableFuture<RemoveGenaiTaskResponse> removeGenaiTask(@Nonnull RemoveGenaiTaskRequest request) {
+        return removeGenaiTask(request, null);
+    }
+
+    /**
+     * Remove a task
+     * 
+     * <p>Deletes the GenaiTask identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveGenaiTaskResponse>} - The async response
+     */
+    public CompletableFuture<RemoveGenaiTaskResponse> removeGenaiTask(@Nonnull RemoveGenaiTaskRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveGenaiTaskRequest, RemoveGenaiTaskResponse> operation
-              = new RemoveGenaiTask.Async(sdkConfiguration, _headers);
+              = new RemoveGenaiTask.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -743,8 +1030,21 @@ public class AsyncTask {
      * @return {@code CompletableFuture<RemoveTaskCommentResponse>} - The async response
      */
     public CompletableFuture<RemoveTaskCommentResponse> removeTaskComment(@Nonnull RemoveTaskCommentRequest request) {
+        return removeTaskComment(request, null);
+    }
+
+    /**
+     * Remove a comment
+     * 
+     * <p>Deletes the TaskComment identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveTaskCommentResponse>} - The async response
+     */
+    public CompletableFuture<RemoveTaskCommentResponse> removeTaskComment(@Nonnull RemoveTaskCommentRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveTaskCommentRequest, RemoveTaskCommentResponse> operation
-              = new RemoveTaskComment.Async(sdkConfiguration, _headers);
+              = new RemoveTaskComment.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -770,8 +1070,21 @@ public class AsyncTask {
      * @return {@code CompletableFuture<RemoveTaskProjectResponse>} - The async response
      */
     public CompletableFuture<RemoveTaskProjectResponse> removeTaskProject(@Nonnull RemoveTaskProjectRequest request) {
+        return removeTaskProject(request, null);
+    }
+
+    /**
+     * Remove a project
+     * 
+     * <p>Deletes the TaskProject identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveTaskProjectResponse>} - The async response
+     */
+    public CompletableFuture<RemoveTaskProjectResponse> removeTaskProject(@Nonnull RemoveTaskProjectRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveTaskProjectRequest, RemoveTaskProjectResponse> operation
-              = new RemoveTaskProject.Async(sdkConfiguration, _headers);
+              = new RemoveTaskProject.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -797,8 +1110,21 @@ public class AsyncTask {
      * @return {@code CompletableFuture<RemoveTaskTaskResponse>} - The async response
      */
     public CompletableFuture<RemoveTaskTaskResponse> removeTaskTask(@Nonnull RemoveTaskTaskRequest request) {
+        return removeTaskTask(request, null);
+    }
+
+    /**
+     * Remove a task
+     * 
+     * <p>Deletes the TaskTask identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveTaskTaskResponse>} - The async response
+     */
+    public CompletableFuture<RemoveTaskTaskResponse> removeTaskTask(@Nonnull RemoveTaskTaskRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveTaskTaskRequest, RemoveTaskTaskResponse> operation
-              = new RemoveTaskTask.Async(sdkConfiguration, _headers);
+              = new RemoveTaskTask.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -826,8 +1152,22 @@ public class AsyncTask {
      * @return {@code CompletableFuture<UpdateGenaiTaskResponse>} - The async response
      */
     public CompletableFuture<UpdateGenaiTaskResponse> updateGenaiTask(@Nonnull UpdateGenaiTaskRequest request) {
+        return updateGenaiTask(request, null);
+    }
+
+    /**
+     * Update a task
+     * 
+     * <p>Updates the GenaiTask identified by `id`. Provide the unified GenaiTask fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateGenaiTaskResponse>} - The async response
+     */
+    public CompletableFuture<UpdateGenaiTaskResponse> updateGenaiTask(@Nonnull UpdateGenaiTaskRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateGenaiTaskRequest, UpdateGenaiTaskResponse> operation
-              = new UpdateGenaiTask.Async(sdkConfiguration, _headers);
+              = new UpdateGenaiTask.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -855,8 +1195,22 @@ public class AsyncTask {
      * @return {@code CompletableFuture<UpdateTaskCommentResponse>} - The async response
      */
     public CompletableFuture<UpdateTaskCommentResponse> updateTaskComment(@Nonnull UpdateTaskCommentRequest request) {
+        return updateTaskComment(request, null);
+    }
+
+    /**
+     * Update a comment
+     * 
+     * <p>Updates the TaskComment identified by `id`. Provide the unified TaskComment fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateTaskCommentResponse>} - The async response
+     */
+    public CompletableFuture<UpdateTaskCommentResponse> updateTaskComment(@Nonnull UpdateTaskCommentRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateTaskCommentRequest, UpdateTaskCommentResponse> operation
-              = new UpdateTaskComment.Async(sdkConfiguration, _headers);
+              = new UpdateTaskComment.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -884,8 +1238,22 @@ public class AsyncTask {
      * @return {@code CompletableFuture<UpdateTaskProjectResponse>} - The async response
      */
     public CompletableFuture<UpdateTaskProjectResponse> updateTaskProject(@Nonnull UpdateTaskProjectRequest request) {
+        return updateTaskProject(request, null);
+    }
+
+    /**
+     * Update a project
+     * 
+     * <p>Updates the TaskProject identified by `id`. Provide the unified TaskProject fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateTaskProjectResponse>} - The async response
+     */
+    public CompletableFuture<UpdateTaskProjectResponse> updateTaskProject(@Nonnull UpdateTaskProjectRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateTaskProjectRequest, UpdateTaskProjectResponse> operation
-              = new UpdateTaskProject.Async(sdkConfiguration, _headers);
+              = new UpdateTaskProject.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -913,8 +1281,22 @@ public class AsyncTask {
      * @return {@code CompletableFuture<UpdateTaskTaskResponse>} - The async response
      */
     public CompletableFuture<UpdateTaskTaskResponse> updateTaskTask(@Nonnull UpdateTaskTaskRequest request) {
+        return updateTaskTask(request, null);
+    }
+
+    /**
+     * Update a task
+     * 
+     * <p>Updates the TaskTask identified by `id`. Provide the unified TaskTask fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateTaskTaskResponse>} - The async response
+     */
+    public CompletableFuture<UpdateTaskTaskResponse> updateTaskTask(@Nonnull UpdateTaskTaskRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateTaskTaskRequest, UpdateTaskTaskResponse> operation
-              = new UpdateTaskTask.Async(sdkConfiguration, _headers);
+              = new UpdateTaskTask.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

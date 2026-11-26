@@ -6,18 +6,28 @@ package to.unified.unified_java_sdk.models.operations;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.CreatePassthroughJson;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class CreatePassthroughJsonRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private CreatePassthroughJsonRequest request;
+    private final Options.Builder optionsBuilder;
 
     public CreatePassthroughJsonRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public CreatePassthroughJsonRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public CreatePassthroughJsonRequestBuilder request(@Nonnull CreatePassthroughJsonRequest request) {
@@ -42,8 +52,9 @@ public class CreatePassthroughJsonRequestBuilder {
     * @return The response from the server.
     */
     public CreatePassthroughJsonResponse call() {
+        Options options = optionsBuilder.build();
         RequestOperation<CreatePassthroughJsonRequest, CreatePassthroughJsonResponse> operation
-              = new CreatePassthroughJson.Sync(sdkConfiguration, _headers);
+              = new CreatePassthroughJson.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

@@ -6,20 +6,30 @@ package to.unified.unified_java_sdk.models.operations.async;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.RemoveCrmPipelineRequest;
 import to.unified.unified_java_sdk.operations.RemoveCrmPipeline;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveCrmPipelineRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private RemoveCrmPipelineRequest request;
+    private final Options.Builder optionsBuilder;
 
     public RemoveCrmPipelineRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public RemoveCrmPipelineRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public RemoveCrmPipelineRequestBuilder request(@Nonnull RemoveCrmPipelineRequest request) {
@@ -44,8 +54,9 @@ public class RemoveCrmPipelineRequestBuilder {
     * @return The response from the server.
     */
     public CompletableFuture<RemoveCrmPipelineResponse> call() {
+        Options options = optionsBuilder.build();
         AsyncRequestOperation<RemoveCrmPipelineRequest, RemoveCrmPipelineResponse> operation
-              = new RemoveCrmPipeline.Async(sdkConfiguration, _headers);
+              = new RemoveCrmPipeline.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

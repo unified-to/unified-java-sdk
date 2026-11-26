@@ -6,18 +6,28 @@ package to.unified.unified_java_sdk.models.operations;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.GetLegalMatter;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetLegalMatterRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private GetLegalMatterRequest request;
+    private final Options.Builder optionsBuilder;
 
     public GetLegalMatterRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public GetLegalMatterRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public GetLegalMatterRequestBuilder request(@Nonnull GetLegalMatterRequest request) {
@@ -42,8 +52,9 @@ public class GetLegalMatterRequestBuilder {
     * @return The response from the server.
     */
     public GetLegalMatterResponse call() {
+        Options options = optionsBuilder.build();
         RequestOperation<GetLegalMatterRequest, GetLegalMatterResponse> operation
-              = new GetLegalMatter.Sync(sdkConfiguration, _headers);
+              = new GetLegalMatter.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

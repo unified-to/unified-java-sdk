@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateComputeKeyRequest;
 import to.unified.unified_java_sdk.models.operations.CreateComputeKeyRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateComputeKeyResponse;
@@ -31,6 +32,7 @@ import to.unified.unified_java_sdk.operations.PatchComputeKey;
 import to.unified.unified_java_sdk.operations.RemoveComputeKey;
 import to.unified.unified_java_sdk.operations.UpdateComputeKey;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Key {
@@ -75,8 +77,23 @@ public class Key {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateComputeKeyResponse createComputeKey(@Nonnull CreateComputeKeyRequest request) {
+        return createComputeKey(request, null);
+    }
+
+    /**
+     * Create a key
+     * 
+     * <p>Creates a ComputeKey. Provide the unified ComputeKey fields in the request body; they are mapped to
+     * the provider's API. Returns the created ComputeKey.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateComputeKeyResponse createComputeKey(@Nonnull CreateComputeKeyRequest request, @Nullable Options options) {
         RequestOperation<CreateComputeKeyRequest, CreateComputeKeyResponse> operation
-              = new CreateComputeKey.Sync(sdkConfiguration, _headers);
+              = new CreateComputeKey.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -103,8 +120,23 @@ public class Key {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetComputeKeyResponse getComputeKey(@Nonnull GetComputeKeyRequest request) {
+        return getComputeKey(request, null);
+    }
+
+    /**
+     * Retrieve a key
+     * 
+     * <p>Retrieves a single ComputeKey by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetComputeKeyResponse getComputeKey(@Nonnull GetComputeKeyRequest request, @Nullable Options options) {
         RequestOperation<GetComputeKeyRequest, GetComputeKeyResponse> operation
-              = new GetComputeKey.Sync(sdkConfiguration, _headers);
+              = new GetComputeKey.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -139,8 +171,27 @@ public class Key {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListComputeKeysResponse listComputeKeys(@Nonnull ListComputeKeysRequest request) {
+        return listComputeKeys(request, null);
+    }
+
+    /**
+     * List all keys
+     * 
+     * <p>Returns a list of ComputeKeys. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListComputeKeysResponse listComputeKeys(@Nonnull ListComputeKeysRequest request, @Nullable Options options) {
         RequestOperation<ListComputeKeysRequest, ListComputeKeysResponse> operation
-              = new ListComputeKeys.Sync(sdkConfiguration, _headers);
+              = new ListComputeKeys.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +218,23 @@ public class Key {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchComputeKeyResponse patchComputeKey(@Nonnull PatchComputeKeyRequest request) {
+        return patchComputeKey(request, null);
+    }
+
+    /**
+     * Update a key
+     * 
+     * <p>Updates the ComputeKey identified by `id`. Provide the unified ComputeKey fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchComputeKeyResponse patchComputeKey(@Nonnull PatchComputeKeyRequest request, @Nullable Options options) {
         RequestOperation<PatchComputeKeyRequest, PatchComputeKeyResponse> operation
-              = new PatchComputeKey.Sync(sdkConfiguration, _headers);
+              = new PatchComputeKey.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -193,8 +259,22 @@ public class Key {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveComputeKeyResponse removeComputeKey(@Nonnull RemoveComputeKeyRequest request) {
+        return removeComputeKey(request, null);
+    }
+
+    /**
+     * Remove a key
+     * 
+     * <p>Deletes the ComputeKey identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveComputeKeyResponse removeComputeKey(@Nonnull RemoveComputeKeyRequest request, @Nullable Options options) {
         RequestOperation<RemoveComputeKeyRequest, RemoveComputeKeyResponse> operation
-              = new RemoveComputeKey.Sync(sdkConfiguration, _headers);
+              = new RemoveComputeKey.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -221,8 +301,23 @@ public class Key {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateComputeKeyResponse updateComputeKey(@Nonnull UpdateComputeKeyRequest request) {
+        return updateComputeKey(request, null);
+    }
+
+    /**
+     * Update a key
+     * 
+     * <p>Updates the ComputeKey identified by `id`. Provide the unified ComputeKey fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateComputeKeyResponse updateComputeKey(@Nonnull UpdateComputeKeyRequest request, @Nullable Options options) {
         RequestOperation<UpdateComputeKeyRequest, UpdateComputeKeyResponse> operation
-              = new UpdateComputeKey.Sync(sdkConfiguration, _headers);
+              = new UpdateComputeKey.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

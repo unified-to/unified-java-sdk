@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateTicketingNoteRequest;
 import to.unified.unified_java_sdk.models.operations.GetTicketingNoteRequest;
@@ -32,6 +33,7 @@ import to.unified.unified_java_sdk.operations.PatchTicketingNote;
 import to.unified.unified_java_sdk.operations.RemoveTicketingNote;
 import to.unified.unified_java_sdk.operations.UpdateTicketingNote;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncNote {
@@ -76,8 +78,22 @@ public class AsyncNote {
      * @return {@code CompletableFuture<CreateTicketingNoteResponse>} - The async response
      */
     public CompletableFuture<CreateTicketingNoteResponse> createTicketingNote(@Nonnull CreateTicketingNoteRequest request) {
+        return createTicketingNote(request, null);
+    }
+
+    /**
+     * Create a note
+     * 
+     * <p>Creates a TicketingNote. Provide the unified TicketingNote fields in the request body; they are
+     * mapped to the provider's API. Returns the created TicketingNote.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateTicketingNoteResponse>} - The async response
+     */
+    public CompletableFuture<CreateTicketingNoteResponse> createTicketingNote(@Nonnull CreateTicketingNoteRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateTicketingNoteRequest, CreateTicketingNoteResponse> operation
-              = new CreateTicketingNote.Async(sdkConfiguration, _headers);
+              = new CreateTicketingNote.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -105,8 +121,22 @@ public class AsyncNote {
      * @return {@code CompletableFuture<GetTicketingNoteResponse>} - The async response
      */
     public CompletableFuture<GetTicketingNoteResponse> getTicketingNote(@Nonnull GetTicketingNoteRequest request) {
+        return getTicketingNote(request, null);
+    }
+
+    /**
+     * Retrieve a note
+     * 
+     * <p>Retrieves a single TicketingNote by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetTicketingNoteResponse>} - The async response
+     */
+    public CompletableFuture<GetTicketingNoteResponse> getTicketingNote(@Nonnull GetTicketingNoteRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetTicketingNoteRequest, GetTicketingNoteResponse> operation
-              = new GetTicketingNote.Async(sdkConfiguration, _headers);
+              = new GetTicketingNote.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -142,8 +172,26 @@ public class AsyncNote {
      * @return {@code CompletableFuture<ListTicketingNotesResponse>} - The async response
      */
     public CompletableFuture<ListTicketingNotesResponse> listTicketingNotes(@Nonnull ListTicketingNotesRequest request) {
+        return listTicketingNotes(request, null);
+    }
+
+    /**
+     * List all notes
+     * 
+     * <p>Returns a list of TicketingNotes. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListTicketingNotesResponse>} - The async response
+     */
+    public CompletableFuture<ListTicketingNotesResponse> listTicketingNotes(@Nonnull ListTicketingNotesRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListTicketingNotesRequest, ListTicketingNotesResponse> operation
-              = new ListTicketingNotes.Async(sdkConfiguration, _headers);
+              = new ListTicketingNotes.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -171,8 +219,22 @@ public class AsyncNote {
      * @return {@code CompletableFuture<PatchTicketingNoteResponse>} - The async response
      */
     public CompletableFuture<PatchTicketingNoteResponse> patchTicketingNote(@Nonnull PatchTicketingNoteRequest request) {
+        return patchTicketingNote(request, null);
+    }
+
+    /**
+     * Update a note
+     * 
+     * <p>Updates the TicketingNote identified by `id`. Provide the unified TicketingNote fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchTicketingNoteResponse>} - The async response
+     */
+    public CompletableFuture<PatchTicketingNoteResponse> patchTicketingNote(@Nonnull PatchTicketingNoteRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchTicketingNoteRequest, PatchTicketingNoteResponse> operation
-              = new PatchTicketingNote.Async(sdkConfiguration, _headers);
+              = new PatchTicketingNote.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -198,8 +260,21 @@ public class AsyncNote {
      * @return {@code CompletableFuture<RemoveTicketingNoteResponse>} - The async response
      */
     public CompletableFuture<RemoveTicketingNoteResponse> removeTicketingNote(@Nonnull RemoveTicketingNoteRequest request) {
+        return removeTicketingNote(request, null);
+    }
+
+    /**
+     * Remove a note
+     * 
+     * <p>Deletes the TicketingNote identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveTicketingNoteResponse>} - The async response
+     */
+    public CompletableFuture<RemoveTicketingNoteResponse> removeTicketingNote(@Nonnull RemoveTicketingNoteRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveTicketingNoteRequest, RemoveTicketingNoteResponse> operation
-              = new RemoveTicketingNote.Async(sdkConfiguration, _headers);
+              = new RemoveTicketingNote.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -227,8 +302,22 @@ public class AsyncNote {
      * @return {@code CompletableFuture<UpdateTicketingNoteResponse>} - The async response
      */
     public CompletableFuture<UpdateTicketingNoteResponse> updateTicketingNote(@Nonnull UpdateTicketingNoteRequest request) {
+        return updateTicketingNote(request, null);
+    }
+
+    /**
+     * Update a note
+     * 
+     * <p>Updates the TicketingNote identified by `id`. Provide the unified TicketingNote fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateTicketingNoteResponse>} - The async response
+     */
+    public CompletableFuture<UpdateTicketingNoteResponse> updateTicketingNote(@Nonnull UpdateTicketingNoteRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateTicketingNoteRequest, UpdateTicketingNoteResponse> operation
-              = new UpdateTicketingNote.Async(sdkConfiguration, _headers);
+              = new UpdateTicketingNote.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

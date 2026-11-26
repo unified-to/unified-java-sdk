@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateAtsActivityRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAtsActivityRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateAtsActivityResponse;
@@ -207,6 +208,7 @@ import to.unified.unified_java_sdk.operations.UpdateAtsInterview;
 import to.unified.unified_java_sdk.operations.UpdateAtsJob;
 import to.unified.unified_java_sdk.operations.UpdateAtsScorecard;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Ats {
@@ -251,8 +253,23 @@ public class Ats {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateAtsActivityResponse createAtsActivity(@Nonnull CreateAtsActivityRequest request) {
+        return createAtsActivity(request, null);
+    }
+
+    /**
+     * Create an activity
+     * 
+     * <p>Creates a AtsActivity. Provide the unified AtsActivity fields in the request body; they are mapped
+     * to the provider's API. Returns the created AtsActivity.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateAtsActivityResponse createAtsActivity(@Nonnull CreateAtsActivityRequest request, @Nullable Options options) {
         RequestOperation<CreateAtsActivityRequest, CreateAtsActivityResponse> operation
-              = new CreateAtsActivity.Sync(sdkConfiguration, _headers);
+              = new CreateAtsActivity.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -279,8 +296,23 @@ public class Ats {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateAtsApplicationResponse createAtsApplication(@Nonnull CreateAtsApplicationRequest request) {
+        return createAtsApplication(request, null);
+    }
+
+    /**
+     * Create an application
+     * 
+     * <p>Creates a AtsApplication. Provide the unified AtsApplication fields in the request body; they are
+     * mapped to the provider's API. Returns the created AtsApplication.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateAtsApplicationResponse createAtsApplication(@Nonnull CreateAtsApplicationRequest request, @Nullable Options options) {
         RequestOperation<CreateAtsApplicationRequest, CreateAtsApplicationResponse> operation
-              = new CreateAtsApplication.Sync(sdkConfiguration, _headers);
+              = new CreateAtsApplication.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -307,8 +339,23 @@ public class Ats {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateAtsCandidateResponse createAtsCandidate(@Nonnull CreateAtsCandidateRequest request) {
+        return createAtsCandidate(request, null);
+    }
+
+    /**
+     * Create a candidate
+     * 
+     * <p>Creates a AtsCandidate. Provide the unified AtsCandidate fields in the request body; they are mapped
+     * to the provider's API. Returns the created AtsCandidate.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateAtsCandidateResponse createAtsCandidate(@Nonnull CreateAtsCandidateRequest request, @Nullable Options options) {
         RequestOperation<CreateAtsCandidateRequest, CreateAtsCandidateResponse> operation
-              = new CreateAtsCandidate.Sync(sdkConfiguration, _headers);
+              = new CreateAtsCandidate.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -335,8 +382,23 @@ public class Ats {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateAtsCompanyResponse createAtsCompany(@Nonnull CreateAtsCompanyRequest request) {
+        return createAtsCompany(request, null);
+    }
+
+    /**
+     * Create a company
+     * 
+     * <p>Creates a AtsCompany. Provide the unified AtsCompany fields in the request body; they are mapped to
+     * the provider's API. Returns the created AtsCompany.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateAtsCompanyResponse createAtsCompany(@Nonnull CreateAtsCompanyRequest request, @Nullable Options options) {
         RequestOperation<CreateAtsCompanyRequest, CreateAtsCompanyResponse> operation
-              = new CreateAtsCompany.Sync(sdkConfiguration, _headers);
+              = new CreateAtsCompany.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -363,8 +425,23 @@ public class Ats {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateAtsDocumentResponse createAtsDocument(@Nonnull CreateAtsDocumentRequest request) {
+        return createAtsDocument(request, null);
+    }
+
+    /**
+     * Create a document
+     * 
+     * <p>Creates a AtsDocument. Provide the unified AtsDocument fields in the request body; they are mapped
+     * to the provider's API. Returns the created AtsDocument.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateAtsDocumentResponse createAtsDocument(@Nonnull CreateAtsDocumentRequest request, @Nullable Options options) {
         RequestOperation<CreateAtsDocumentRequest, CreateAtsDocumentResponse> operation
-              = new CreateAtsDocument.Sync(sdkConfiguration, _headers);
+              = new CreateAtsDocument.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -391,8 +468,23 @@ public class Ats {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateAtsInterviewResponse createAtsInterview(@Nonnull CreateAtsInterviewRequest request) {
+        return createAtsInterview(request, null);
+    }
+
+    /**
+     * Create an interview
+     * 
+     * <p>Creates a AtsInterview. Provide the unified AtsInterview fields in the request body; they are mapped
+     * to the provider's API. Returns the created AtsInterview.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateAtsInterviewResponse createAtsInterview(@Nonnull CreateAtsInterviewRequest request, @Nullable Options options) {
         RequestOperation<CreateAtsInterviewRequest, CreateAtsInterviewResponse> operation
-              = new CreateAtsInterview.Sync(sdkConfiguration, _headers);
+              = new CreateAtsInterview.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -419,8 +511,23 @@ public class Ats {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateAtsJobResponse createAtsJob(@Nonnull CreateAtsJobRequest request) {
+        return createAtsJob(request, null);
+    }
+
+    /**
+     * Create a job
+     * 
+     * <p>Creates a AtsJob. Provide the unified AtsJob fields in the request body; they are mapped to the
+     * provider's API. Returns the created AtsJob.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateAtsJobResponse createAtsJob(@Nonnull CreateAtsJobRequest request, @Nullable Options options) {
         RequestOperation<CreateAtsJobRequest, CreateAtsJobResponse> operation
-              = new CreateAtsJob.Sync(sdkConfiguration, _headers);
+              = new CreateAtsJob.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -447,8 +554,23 @@ public class Ats {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateAtsScorecardResponse createAtsScorecard(@Nonnull CreateAtsScorecardRequest request) {
+        return createAtsScorecard(request, null);
+    }
+
+    /**
+     * Create a scorecard
+     * 
+     * <p>Creates a AtsScorecard. Provide the unified AtsScorecard fields in the request body; they are mapped
+     * to the provider's API. Returns the created AtsScorecard.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateAtsScorecardResponse createAtsScorecard(@Nonnull CreateAtsScorecardRequest request, @Nullable Options options) {
         RequestOperation<CreateAtsScorecardRequest, CreateAtsScorecardResponse> operation
-              = new CreateAtsScorecard.Sync(sdkConfiguration, _headers);
+              = new CreateAtsScorecard.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -475,8 +597,23 @@ public class Ats {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAtsActivityResponse getAtsActivity(@Nonnull GetAtsActivityRequest request) {
+        return getAtsActivity(request, null);
+    }
+
+    /**
+     * Retrieve an activity
+     * 
+     * <p>Retrieves a single AtsActivity by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAtsActivityResponse getAtsActivity(@Nonnull GetAtsActivityRequest request, @Nullable Options options) {
         RequestOperation<GetAtsActivityRequest, GetAtsActivityResponse> operation
-              = new GetAtsActivity.Sync(sdkConfiguration, _headers);
+              = new GetAtsActivity.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -503,8 +640,23 @@ public class Ats {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAtsApplicationResponse getAtsApplication(@Nonnull GetAtsApplicationRequest request) {
+        return getAtsApplication(request, null);
+    }
+
+    /**
+     * Retrieve an application
+     * 
+     * <p>Retrieves a single AtsApplication by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAtsApplicationResponse getAtsApplication(@Nonnull GetAtsApplicationRequest request, @Nullable Options options) {
         RequestOperation<GetAtsApplicationRequest, GetAtsApplicationResponse> operation
-              = new GetAtsApplication.Sync(sdkConfiguration, _headers);
+              = new GetAtsApplication.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -531,8 +683,23 @@ public class Ats {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAtsApplicationstatusResponse getAtsApplicationstatus(@Nonnull GetAtsApplicationstatusRequest request) {
+        return getAtsApplicationstatus(request, null);
+    }
+
+    /**
+     * Retrieve an applicationstatus
+     * 
+     * <p>Retrieves a single AtsStatus by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAtsApplicationstatusResponse getAtsApplicationstatus(@Nonnull GetAtsApplicationstatusRequest request, @Nullable Options options) {
         RequestOperation<GetAtsApplicationstatusRequest, GetAtsApplicationstatusResponse> operation
-              = new GetAtsApplicationstatus.Sync(sdkConfiguration, _headers);
+              = new GetAtsApplicationstatus.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -559,8 +726,23 @@ public class Ats {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAtsCandidateResponse getAtsCandidate(@Nonnull GetAtsCandidateRequest request) {
+        return getAtsCandidate(request, null);
+    }
+
+    /**
+     * Retrieve a candidate
+     * 
+     * <p>Retrieves a single AtsCandidate by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAtsCandidateResponse getAtsCandidate(@Nonnull GetAtsCandidateRequest request, @Nullable Options options) {
         RequestOperation<GetAtsCandidateRequest, GetAtsCandidateResponse> operation
-              = new GetAtsCandidate.Sync(sdkConfiguration, _headers);
+              = new GetAtsCandidate.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -587,8 +769,23 @@ public class Ats {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAtsCompanyResponse getAtsCompany(@Nonnull GetAtsCompanyRequest request) {
+        return getAtsCompany(request, null);
+    }
+
+    /**
+     * Retrieve a company
+     * 
+     * <p>Retrieves a single AtsCompany by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAtsCompanyResponse getAtsCompany(@Nonnull GetAtsCompanyRequest request, @Nullable Options options) {
         RequestOperation<GetAtsCompanyRequest, GetAtsCompanyResponse> operation
-              = new GetAtsCompany.Sync(sdkConfiguration, _headers);
+              = new GetAtsCompany.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -615,8 +812,23 @@ public class Ats {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAtsDocumentResponse getAtsDocument(@Nonnull GetAtsDocumentRequest request) {
+        return getAtsDocument(request, null);
+    }
+
+    /**
+     * Retrieve a document
+     * 
+     * <p>Retrieves a single AtsDocument by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAtsDocumentResponse getAtsDocument(@Nonnull GetAtsDocumentRequest request, @Nullable Options options) {
         RequestOperation<GetAtsDocumentRequest, GetAtsDocumentResponse> operation
-              = new GetAtsDocument.Sync(sdkConfiguration, _headers);
+              = new GetAtsDocument.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -643,8 +855,23 @@ public class Ats {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAtsInterviewResponse getAtsInterview(@Nonnull GetAtsInterviewRequest request) {
+        return getAtsInterview(request, null);
+    }
+
+    /**
+     * Retrieve an interview
+     * 
+     * <p>Retrieves a single AtsInterview by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAtsInterviewResponse getAtsInterview(@Nonnull GetAtsInterviewRequest request, @Nullable Options options) {
         RequestOperation<GetAtsInterviewRequest, GetAtsInterviewResponse> operation
-              = new GetAtsInterview.Sync(sdkConfiguration, _headers);
+              = new GetAtsInterview.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -671,8 +898,23 @@ public class Ats {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAtsJobResponse getAtsJob(@Nonnull GetAtsJobRequest request) {
+        return getAtsJob(request, null);
+    }
+
+    /**
+     * Retrieve a job
+     * 
+     * <p>Retrieves a single AtsJob by its `id`. Obtain `id` values from the corresponding list endpoint. Use
+     * `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAtsJobResponse getAtsJob(@Nonnull GetAtsJobRequest request, @Nullable Options options) {
         RequestOperation<GetAtsJobRequest, GetAtsJobResponse> operation
-              = new GetAtsJob.Sync(sdkConfiguration, _headers);
+              = new GetAtsJob.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -699,8 +941,23 @@ public class Ats {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAtsScorecardResponse getAtsScorecard(@Nonnull GetAtsScorecardRequest request) {
+        return getAtsScorecard(request, null);
+    }
+
+    /**
+     * Retrieve a scorecard
+     * 
+     * <p>Retrieves a single AtsScorecard by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAtsScorecardResponse getAtsScorecard(@Nonnull GetAtsScorecardRequest request, @Nullable Options options) {
         RequestOperation<GetAtsScorecardRequest, GetAtsScorecardResponse> operation
-              = new GetAtsScorecard.Sync(sdkConfiguration, _headers);
+              = new GetAtsScorecard.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -735,8 +992,27 @@ public class Ats {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAtsActivitiesResponse listAtsActivities(@Nonnull ListAtsActivitiesRequest request) {
+        return listAtsActivities(request, null);
+    }
+
+    /**
+     * List all activities
+     * 
+     * <p>Returns a list of AtsActivities. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAtsActivitiesResponse listAtsActivities(@Nonnull ListAtsActivitiesRequest request, @Nullable Options options) {
         RequestOperation<ListAtsActivitiesRequest, ListAtsActivitiesResponse> operation
-              = new ListAtsActivities.Sync(sdkConfiguration, _headers);
+              = new ListAtsActivities.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -771,8 +1047,27 @@ public class Ats {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAtsApplicationsResponse listAtsApplications(@Nonnull ListAtsApplicationsRequest request) {
+        return listAtsApplications(request, null);
+    }
+
+    /**
+     * List all applications
+     * 
+     * <p>Returns a list of AtsApplications. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAtsApplicationsResponse listAtsApplications(@Nonnull ListAtsApplicationsRequest request, @Nullable Options options) {
         RequestOperation<ListAtsApplicationsRequest, ListAtsApplicationsResponse> operation
-              = new ListAtsApplications.Sync(sdkConfiguration, _headers);
+              = new ListAtsApplications.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -807,8 +1102,27 @@ public class Ats {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAtsApplicationstatusesResponse listAtsApplicationstatuses(@Nonnull ListAtsApplicationstatusesRequest request) {
+        return listAtsApplicationstatuses(request, null);
+    }
+
+    /**
+     * List all applicationstatuses
+     * 
+     * <p>Returns a list of AtsStatuses. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAtsApplicationstatusesResponse listAtsApplicationstatuses(@Nonnull ListAtsApplicationstatusesRequest request, @Nullable Options options) {
         RequestOperation<ListAtsApplicationstatusesRequest, ListAtsApplicationstatusesResponse> operation
-              = new ListAtsApplicationstatuses.Sync(sdkConfiguration, _headers);
+              = new ListAtsApplicationstatuses.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -843,8 +1157,27 @@ public class Ats {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAtsCandidatesResponse listAtsCandidates(@Nonnull ListAtsCandidatesRequest request) {
+        return listAtsCandidates(request, null);
+    }
+
+    /**
+     * List all candidates
+     * 
+     * <p>Returns a list of AtsCandidates. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAtsCandidatesResponse listAtsCandidates(@Nonnull ListAtsCandidatesRequest request, @Nullable Options options) {
         RequestOperation<ListAtsCandidatesRequest, ListAtsCandidatesResponse> operation
-              = new ListAtsCandidates.Sync(sdkConfiguration, _headers);
+              = new ListAtsCandidates.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -879,8 +1212,27 @@ public class Ats {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAtsCompaniesResponse listAtsCompanies(@Nonnull ListAtsCompaniesRequest request) {
+        return listAtsCompanies(request, null);
+    }
+
+    /**
+     * List all companies
+     * 
+     * <p>Returns a list of AtsCompanies. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAtsCompaniesResponse listAtsCompanies(@Nonnull ListAtsCompaniesRequest request, @Nullable Options options) {
         RequestOperation<ListAtsCompaniesRequest, ListAtsCompaniesResponse> operation
-              = new ListAtsCompanies.Sync(sdkConfiguration, _headers);
+              = new ListAtsCompanies.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -915,8 +1267,27 @@ public class Ats {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAtsDocumentsResponse listAtsDocuments(@Nonnull ListAtsDocumentsRequest request) {
+        return listAtsDocuments(request, null);
+    }
+
+    /**
+     * List all documents
+     * 
+     * <p>Returns a list of AtsDocuments. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAtsDocumentsResponse listAtsDocuments(@Nonnull ListAtsDocumentsRequest request, @Nullable Options options) {
         RequestOperation<ListAtsDocumentsRequest, ListAtsDocumentsResponse> operation
-              = new ListAtsDocuments.Sync(sdkConfiguration, _headers);
+              = new ListAtsDocuments.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -951,8 +1322,27 @@ public class Ats {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAtsInterviewsResponse listAtsInterviews(@Nonnull ListAtsInterviewsRequest request) {
+        return listAtsInterviews(request, null);
+    }
+
+    /**
+     * List all interviews
+     * 
+     * <p>Returns a list of AtsInterviews. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAtsInterviewsResponse listAtsInterviews(@Nonnull ListAtsInterviewsRequest request, @Nullable Options options) {
         RequestOperation<ListAtsInterviewsRequest, ListAtsInterviewsResponse> operation
-              = new ListAtsInterviews.Sync(sdkConfiguration, _headers);
+              = new ListAtsInterviews.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -987,8 +1377,27 @@ public class Ats {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAtsJobsResponse listAtsJobs(@Nonnull ListAtsJobsRequest request) {
+        return listAtsJobs(request, null);
+    }
+
+    /**
+     * List all jobs
+     * 
+     * <p>Returns a list of AtsJobs. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAtsJobsResponse listAtsJobs(@Nonnull ListAtsJobsRequest request, @Nullable Options options) {
         RequestOperation<ListAtsJobsRequest, ListAtsJobsResponse> operation
-              = new ListAtsJobs.Sync(sdkConfiguration, _headers);
+              = new ListAtsJobs.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1023,8 +1432,27 @@ public class Ats {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAtsScorecardsResponse listAtsScorecards(@Nonnull ListAtsScorecardsRequest request) {
+        return listAtsScorecards(request, null);
+    }
+
+    /**
+     * List all scorecards
+     * 
+     * <p>Returns a list of AtsScorecards. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAtsScorecardsResponse listAtsScorecards(@Nonnull ListAtsScorecardsRequest request, @Nullable Options options) {
         RequestOperation<ListAtsScorecardsRequest, ListAtsScorecardsResponse> operation
-              = new ListAtsScorecards.Sync(sdkConfiguration, _headers);
+              = new ListAtsScorecards.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1051,8 +1479,23 @@ public class Ats {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchAtsActivityResponse patchAtsActivity(@Nonnull PatchAtsActivityRequest request) {
+        return patchAtsActivity(request, null);
+    }
+
+    /**
+     * Update an activity
+     * 
+     * <p>Updates the AtsActivity identified by `id`. Provide the unified AtsActivity fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchAtsActivityResponse patchAtsActivity(@Nonnull PatchAtsActivityRequest request, @Nullable Options options) {
         RequestOperation<PatchAtsActivityRequest, PatchAtsActivityResponse> operation
-              = new PatchAtsActivity.Sync(sdkConfiguration, _headers);
+              = new PatchAtsActivity.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1079,8 +1522,23 @@ public class Ats {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchAtsApplicationResponse patchAtsApplication(@Nonnull PatchAtsApplicationRequest request) {
+        return patchAtsApplication(request, null);
+    }
+
+    /**
+     * Update an application
+     * 
+     * <p>Updates the AtsApplication identified by `id`. Provide the unified AtsApplication fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchAtsApplicationResponse patchAtsApplication(@Nonnull PatchAtsApplicationRequest request, @Nullable Options options) {
         RequestOperation<PatchAtsApplicationRequest, PatchAtsApplicationResponse> operation
-              = new PatchAtsApplication.Sync(sdkConfiguration, _headers);
+              = new PatchAtsApplication.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1107,8 +1565,23 @@ public class Ats {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchAtsCandidateResponse patchAtsCandidate(@Nonnull PatchAtsCandidateRequest request) {
+        return patchAtsCandidate(request, null);
+    }
+
+    /**
+     * Update a candidate
+     * 
+     * <p>Updates the AtsCandidate identified by `id`. Provide the unified AtsCandidate fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchAtsCandidateResponse patchAtsCandidate(@Nonnull PatchAtsCandidateRequest request, @Nullable Options options) {
         RequestOperation<PatchAtsCandidateRequest, PatchAtsCandidateResponse> operation
-              = new PatchAtsCandidate.Sync(sdkConfiguration, _headers);
+              = new PatchAtsCandidate.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1135,8 +1608,23 @@ public class Ats {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchAtsCompanyResponse patchAtsCompany(@Nonnull PatchAtsCompanyRequest request) {
+        return patchAtsCompany(request, null);
+    }
+
+    /**
+     * Update a company
+     * 
+     * <p>Updates the AtsCompany identified by `id`. Provide the unified AtsCompany fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchAtsCompanyResponse patchAtsCompany(@Nonnull PatchAtsCompanyRequest request, @Nullable Options options) {
         RequestOperation<PatchAtsCompanyRequest, PatchAtsCompanyResponse> operation
-              = new PatchAtsCompany.Sync(sdkConfiguration, _headers);
+              = new PatchAtsCompany.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1163,8 +1651,23 @@ public class Ats {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchAtsDocumentResponse patchAtsDocument(@Nonnull PatchAtsDocumentRequest request) {
+        return patchAtsDocument(request, null);
+    }
+
+    /**
+     * Update a document
+     * 
+     * <p>Updates the AtsDocument identified by `id`. Provide the unified AtsDocument fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchAtsDocumentResponse patchAtsDocument(@Nonnull PatchAtsDocumentRequest request, @Nullable Options options) {
         RequestOperation<PatchAtsDocumentRequest, PatchAtsDocumentResponse> operation
-              = new PatchAtsDocument.Sync(sdkConfiguration, _headers);
+              = new PatchAtsDocument.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1191,8 +1694,23 @@ public class Ats {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchAtsInterviewResponse patchAtsInterview(@Nonnull PatchAtsInterviewRequest request) {
+        return patchAtsInterview(request, null);
+    }
+
+    /**
+     * Update an interview
+     * 
+     * <p>Updates the AtsInterview identified by `id`. Provide the unified AtsInterview fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchAtsInterviewResponse patchAtsInterview(@Nonnull PatchAtsInterviewRequest request, @Nullable Options options) {
         RequestOperation<PatchAtsInterviewRequest, PatchAtsInterviewResponse> operation
-              = new PatchAtsInterview.Sync(sdkConfiguration, _headers);
+              = new PatchAtsInterview.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1219,8 +1737,23 @@ public class Ats {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchAtsJobResponse patchAtsJob(@Nonnull PatchAtsJobRequest request) {
+        return patchAtsJob(request, null);
+    }
+
+    /**
+     * Update a job
+     * 
+     * <p>Updates the AtsJob identified by `id`. Provide the unified AtsJob fields to change in the request
+     * body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchAtsJobResponse patchAtsJob(@Nonnull PatchAtsJobRequest request, @Nullable Options options) {
         RequestOperation<PatchAtsJobRequest, PatchAtsJobResponse> operation
-              = new PatchAtsJob.Sync(sdkConfiguration, _headers);
+              = new PatchAtsJob.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1247,8 +1780,23 @@ public class Ats {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchAtsScorecardResponse patchAtsScorecard(@Nonnull PatchAtsScorecardRequest request) {
+        return patchAtsScorecard(request, null);
+    }
+
+    /**
+     * Update a scorecard
+     * 
+     * <p>Updates the AtsScorecard identified by `id`. Provide the unified AtsScorecard fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchAtsScorecardResponse patchAtsScorecard(@Nonnull PatchAtsScorecardRequest request, @Nullable Options options) {
         RequestOperation<PatchAtsScorecardRequest, PatchAtsScorecardResponse> operation
-              = new PatchAtsScorecard.Sync(sdkConfiguration, _headers);
+              = new PatchAtsScorecard.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1273,8 +1821,22 @@ public class Ats {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveAtsActivityResponse removeAtsActivity(@Nonnull RemoveAtsActivityRequest request) {
+        return removeAtsActivity(request, null);
+    }
+
+    /**
+     * Remove an activity
+     * 
+     * <p>Deletes the AtsActivity identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveAtsActivityResponse removeAtsActivity(@Nonnull RemoveAtsActivityRequest request, @Nullable Options options) {
         RequestOperation<RemoveAtsActivityRequest, RemoveAtsActivityResponse> operation
-              = new RemoveAtsActivity.Sync(sdkConfiguration, _headers);
+              = new RemoveAtsActivity.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1299,8 +1861,22 @@ public class Ats {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveAtsApplicationResponse removeAtsApplication(@Nonnull RemoveAtsApplicationRequest request) {
+        return removeAtsApplication(request, null);
+    }
+
+    /**
+     * Remove an application
+     * 
+     * <p>Deletes the AtsApplication identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveAtsApplicationResponse removeAtsApplication(@Nonnull RemoveAtsApplicationRequest request, @Nullable Options options) {
         RequestOperation<RemoveAtsApplicationRequest, RemoveAtsApplicationResponse> operation
-              = new RemoveAtsApplication.Sync(sdkConfiguration, _headers);
+              = new RemoveAtsApplication.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1325,8 +1901,22 @@ public class Ats {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveAtsCandidateResponse removeAtsCandidate(@Nonnull RemoveAtsCandidateRequest request) {
+        return removeAtsCandidate(request, null);
+    }
+
+    /**
+     * Remove a candidate
+     * 
+     * <p>Deletes the AtsCandidate identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveAtsCandidateResponse removeAtsCandidate(@Nonnull RemoveAtsCandidateRequest request, @Nullable Options options) {
         RequestOperation<RemoveAtsCandidateRequest, RemoveAtsCandidateResponse> operation
-              = new RemoveAtsCandidate.Sync(sdkConfiguration, _headers);
+              = new RemoveAtsCandidate.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1351,8 +1941,22 @@ public class Ats {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveAtsCompanyResponse removeAtsCompany(@Nonnull RemoveAtsCompanyRequest request) {
+        return removeAtsCompany(request, null);
+    }
+
+    /**
+     * Remove a company
+     * 
+     * <p>Deletes the AtsCompany identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveAtsCompanyResponse removeAtsCompany(@Nonnull RemoveAtsCompanyRequest request, @Nullable Options options) {
         RequestOperation<RemoveAtsCompanyRequest, RemoveAtsCompanyResponse> operation
-              = new RemoveAtsCompany.Sync(sdkConfiguration, _headers);
+              = new RemoveAtsCompany.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1377,8 +1981,22 @@ public class Ats {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveAtsDocumentResponse removeAtsDocument(@Nonnull RemoveAtsDocumentRequest request) {
+        return removeAtsDocument(request, null);
+    }
+
+    /**
+     * Remove a document
+     * 
+     * <p>Deletes the AtsDocument identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveAtsDocumentResponse removeAtsDocument(@Nonnull RemoveAtsDocumentRequest request, @Nullable Options options) {
         RequestOperation<RemoveAtsDocumentRequest, RemoveAtsDocumentResponse> operation
-              = new RemoveAtsDocument.Sync(sdkConfiguration, _headers);
+              = new RemoveAtsDocument.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1403,8 +2021,22 @@ public class Ats {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveAtsInterviewResponse removeAtsInterview(@Nonnull RemoveAtsInterviewRequest request) {
+        return removeAtsInterview(request, null);
+    }
+
+    /**
+     * Remove an interview
+     * 
+     * <p>Deletes the AtsInterview identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveAtsInterviewResponse removeAtsInterview(@Nonnull RemoveAtsInterviewRequest request, @Nullable Options options) {
         RequestOperation<RemoveAtsInterviewRequest, RemoveAtsInterviewResponse> operation
-              = new RemoveAtsInterview.Sync(sdkConfiguration, _headers);
+              = new RemoveAtsInterview.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1429,8 +2061,22 @@ public class Ats {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveAtsJobResponse removeAtsJob(@Nonnull RemoveAtsJobRequest request) {
+        return removeAtsJob(request, null);
+    }
+
+    /**
+     * Remove a job
+     * 
+     * <p>Deletes the AtsJob identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveAtsJobResponse removeAtsJob(@Nonnull RemoveAtsJobRequest request, @Nullable Options options) {
         RequestOperation<RemoveAtsJobRequest, RemoveAtsJobResponse> operation
-              = new RemoveAtsJob.Sync(sdkConfiguration, _headers);
+              = new RemoveAtsJob.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1455,8 +2101,22 @@ public class Ats {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveAtsScorecardResponse removeAtsScorecard(@Nonnull RemoveAtsScorecardRequest request) {
+        return removeAtsScorecard(request, null);
+    }
+
+    /**
+     * Remove a scorecard
+     * 
+     * <p>Deletes the AtsScorecard identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveAtsScorecardResponse removeAtsScorecard(@Nonnull RemoveAtsScorecardRequest request, @Nullable Options options) {
         RequestOperation<RemoveAtsScorecardRequest, RemoveAtsScorecardResponse> operation
-              = new RemoveAtsScorecard.Sync(sdkConfiguration, _headers);
+              = new RemoveAtsScorecard.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1483,8 +2143,23 @@ public class Ats {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateAtsActivityResponse updateAtsActivity(@Nonnull UpdateAtsActivityRequest request) {
+        return updateAtsActivity(request, null);
+    }
+
+    /**
+     * Update an activity
+     * 
+     * <p>Updates the AtsActivity identified by `id`. Provide the unified AtsActivity fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateAtsActivityResponse updateAtsActivity(@Nonnull UpdateAtsActivityRequest request, @Nullable Options options) {
         RequestOperation<UpdateAtsActivityRequest, UpdateAtsActivityResponse> operation
-              = new UpdateAtsActivity.Sync(sdkConfiguration, _headers);
+              = new UpdateAtsActivity.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1511,8 +2186,23 @@ public class Ats {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateAtsApplicationResponse updateAtsApplication(@Nonnull UpdateAtsApplicationRequest request) {
+        return updateAtsApplication(request, null);
+    }
+
+    /**
+     * Update an application
+     * 
+     * <p>Updates the AtsApplication identified by `id`. Provide the unified AtsApplication fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateAtsApplicationResponse updateAtsApplication(@Nonnull UpdateAtsApplicationRequest request, @Nullable Options options) {
         RequestOperation<UpdateAtsApplicationRequest, UpdateAtsApplicationResponse> operation
-              = new UpdateAtsApplication.Sync(sdkConfiguration, _headers);
+              = new UpdateAtsApplication.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1539,8 +2229,23 @@ public class Ats {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateAtsCandidateResponse updateAtsCandidate(@Nonnull UpdateAtsCandidateRequest request) {
+        return updateAtsCandidate(request, null);
+    }
+
+    /**
+     * Update a candidate
+     * 
+     * <p>Updates the AtsCandidate identified by `id`. Provide the unified AtsCandidate fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateAtsCandidateResponse updateAtsCandidate(@Nonnull UpdateAtsCandidateRequest request, @Nullable Options options) {
         RequestOperation<UpdateAtsCandidateRequest, UpdateAtsCandidateResponse> operation
-              = new UpdateAtsCandidate.Sync(sdkConfiguration, _headers);
+              = new UpdateAtsCandidate.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1567,8 +2272,23 @@ public class Ats {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateAtsCompanyResponse updateAtsCompany(@Nonnull UpdateAtsCompanyRequest request) {
+        return updateAtsCompany(request, null);
+    }
+
+    /**
+     * Update a company
+     * 
+     * <p>Updates the AtsCompany identified by `id`. Provide the unified AtsCompany fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateAtsCompanyResponse updateAtsCompany(@Nonnull UpdateAtsCompanyRequest request, @Nullable Options options) {
         RequestOperation<UpdateAtsCompanyRequest, UpdateAtsCompanyResponse> operation
-              = new UpdateAtsCompany.Sync(sdkConfiguration, _headers);
+              = new UpdateAtsCompany.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1595,8 +2315,23 @@ public class Ats {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateAtsDocumentResponse updateAtsDocument(@Nonnull UpdateAtsDocumentRequest request) {
+        return updateAtsDocument(request, null);
+    }
+
+    /**
+     * Update a document
+     * 
+     * <p>Updates the AtsDocument identified by `id`. Provide the unified AtsDocument fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateAtsDocumentResponse updateAtsDocument(@Nonnull UpdateAtsDocumentRequest request, @Nullable Options options) {
         RequestOperation<UpdateAtsDocumentRequest, UpdateAtsDocumentResponse> operation
-              = new UpdateAtsDocument.Sync(sdkConfiguration, _headers);
+              = new UpdateAtsDocument.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1623,8 +2358,23 @@ public class Ats {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateAtsInterviewResponse updateAtsInterview(@Nonnull UpdateAtsInterviewRequest request) {
+        return updateAtsInterview(request, null);
+    }
+
+    /**
+     * Update an interview
+     * 
+     * <p>Updates the AtsInterview identified by `id`. Provide the unified AtsInterview fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateAtsInterviewResponse updateAtsInterview(@Nonnull UpdateAtsInterviewRequest request, @Nullable Options options) {
         RequestOperation<UpdateAtsInterviewRequest, UpdateAtsInterviewResponse> operation
-              = new UpdateAtsInterview.Sync(sdkConfiguration, _headers);
+              = new UpdateAtsInterview.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1651,8 +2401,23 @@ public class Ats {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateAtsJobResponse updateAtsJob(@Nonnull UpdateAtsJobRequest request) {
+        return updateAtsJob(request, null);
+    }
+
+    /**
+     * Update a job
+     * 
+     * <p>Updates the AtsJob identified by `id`. Provide the unified AtsJob fields to change in the request
+     * body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateAtsJobResponse updateAtsJob(@Nonnull UpdateAtsJobRequest request, @Nullable Options options) {
         RequestOperation<UpdateAtsJobRequest, UpdateAtsJobResponse> operation
-              = new UpdateAtsJob.Sync(sdkConfiguration, _headers);
+              = new UpdateAtsJob.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1679,8 +2444,23 @@ public class Ats {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateAtsScorecardResponse updateAtsScorecard(@Nonnull UpdateAtsScorecardRequest request) {
+        return updateAtsScorecard(request, null);
+    }
+
+    /**
+     * Update a scorecard
+     * 
+     * <p>Updates the AtsScorecard identified by `id`. Provide the unified AtsScorecard fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateAtsScorecardResponse updateAtsScorecard(@Nonnull UpdateAtsScorecardRequest request, @Nullable Options options) {
         RequestOperation<UpdateAtsScorecardRequest, UpdateAtsScorecardResponse> operation
-              = new UpdateAtsScorecard.Sync(sdkConfiguration, _headers);
+              = new UpdateAtsScorecard.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.GetAccountingProfitlossRequest;
 import to.unified.unified_java_sdk.models.operations.GetAccountingProfitlossRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetAccountingProfitlossResponse;
@@ -15,6 +16,7 @@ import to.unified.unified_java_sdk.models.operations.ListAccountingProfitlossesR
 import to.unified.unified_java_sdk.operations.GetAccountingProfitloss;
 import to.unified.unified_java_sdk.operations.ListAccountingProfitlosses;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Profitloss {
@@ -59,8 +61,23 @@ public class Profitloss {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetAccountingProfitlossResponse getAccountingProfitloss(@Nonnull GetAccountingProfitlossRequest request) {
+        return getAccountingProfitloss(request, null);
+    }
+
+    /**
+     * Retrieve a profitloss
+     * 
+     * <p>Retrieves a single AccountingProfitloss by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAccountingProfitlossResponse getAccountingProfitloss(@Nonnull GetAccountingProfitlossRequest request, @Nullable Options options) {
         RequestOperation<GetAccountingProfitlossRequest, GetAccountingProfitlossResponse> operation
-              = new GetAccountingProfitloss.Sync(sdkConfiguration, _headers);
+              = new GetAccountingProfitloss.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -95,8 +112,27 @@ public class Profitloss {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListAccountingProfitlossesResponse listAccountingProfitlosses(@Nonnull ListAccountingProfitlossesRequest request) {
+        return listAccountingProfitlosses(request, null);
+    }
+
+    /**
+     * List all profitlosses
+     * 
+     * <p>Returns a list of AccountingProfitlosses. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAccountingProfitlossesResponse listAccountingProfitlosses(@Nonnull ListAccountingProfitlossesRequest request, @Nullable Options options) {
         RequestOperation<ListAccountingProfitlossesRequest, ListAccountingProfitlossesResponse> operation
-              = new ListAccountingProfitlosses.Sync(sdkConfiguration, _headers);
+              = new ListAccountingProfitlosses.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

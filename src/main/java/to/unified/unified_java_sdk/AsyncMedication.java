@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.GetHealthcareMedicationRequest;
 import to.unified.unified_java_sdk.models.operations.ListHealthcareMedicationsRequest;
@@ -16,6 +17,7 @@ import to.unified.unified_java_sdk.models.operations.async.ListHealthcareMedicat
 import to.unified.unified_java_sdk.operations.GetHealthcareMedication;
 import to.unified.unified_java_sdk.operations.ListHealthcareMedications;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncMedication {
@@ -60,8 +62,22 @@ public class AsyncMedication {
      * @return {@code CompletableFuture<GetHealthcareMedicationResponse>} - The async response
      */
     public CompletableFuture<GetHealthcareMedicationResponse> getHealthcareMedication(@Nonnull GetHealthcareMedicationRequest request) {
+        return getHealthcareMedication(request, null);
+    }
+
+    /**
+     * Retrieve a medication
+     * 
+     * <p>Retrieves a single HealthcareMedication by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetHealthcareMedicationResponse>} - The async response
+     */
+    public CompletableFuture<GetHealthcareMedicationResponse> getHealthcareMedication(@Nonnull GetHealthcareMedicationRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetHealthcareMedicationRequest, GetHealthcareMedicationResponse> operation
-              = new GetHealthcareMedication.Async(sdkConfiguration, _headers);
+              = new GetHealthcareMedication.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -97,8 +113,26 @@ public class AsyncMedication {
      * @return {@code CompletableFuture<ListHealthcareMedicationsResponse>} - The async response
      */
     public CompletableFuture<ListHealthcareMedicationsResponse> listHealthcareMedications(@Nonnull ListHealthcareMedicationsRequest request) {
+        return listHealthcareMedications(request, null);
+    }
+
+    /**
+     * List all medications
+     * 
+     * <p>Returns a list of HealthcareMedications. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListHealthcareMedicationsResponse>} - The async response
+     */
+    public CompletableFuture<ListHealthcareMedicationsResponse> listHealthcareMedications(@Nonnull ListHealthcareMedicationsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListHealthcareMedicationsRequest, ListHealthcareMedicationsResponse> operation
-              = new ListHealthcareMedications.Async(sdkConfiguration, _headers);
+              = new ListHealthcareMedications.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

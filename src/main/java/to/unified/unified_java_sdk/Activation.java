@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.CreateCdpActivationRequest;
 import to.unified.unified_java_sdk.models.operations.CreateCdpActivationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateCdpActivationResponse;
@@ -31,6 +32,7 @@ import to.unified.unified_java_sdk.operations.PatchCdpActivation;
 import to.unified.unified_java_sdk.operations.RemoveCdpActivation;
 import to.unified.unified_java_sdk.operations.UpdateCdpActivation;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Activation {
@@ -75,8 +77,23 @@ public class Activation {
      * @throws RuntimeException subclass if the API call fails
      */
     public CreateCdpActivationResponse createCdpActivation(@Nonnull CreateCdpActivationRequest request) {
+        return createCdpActivation(request, null);
+    }
+
+    /**
+     * Create an activation
+     * 
+     * <p>Creates a CdpActivation. Provide the unified CdpActivation fields in the request body; they are
+     * mapped to the provider's API. Returns the created CdpActivation.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateCdpActivationResponse createCdpActivation(@Nonnull CreateCdpActivationRequest request, @Nullable Options options) {
         RequestOperation<CreateCdpActivationRequest, CreateCdpActivationResponse> operation
-              = new CreateCdpActivation.Sync(sdkConfiguration, _headers);
+              = new CreateCdpActivation.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -103,8 +120,23 @@ public class Activation {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetCdpActivationResponse getCdpActivation(@Nonnull GetCdpActivationRequest request) {
+        return getCdpActivation(request, null);
+    }
+
+    /**
+     * Retrieve an activation
+     * 
+     * <p>Retrieves a single CdpActivation by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetCdpActivationResponse getCdpActivation(@Nonnull GetCdpActivationRequest request, @Nullable Options options) {
         RequestOperation<GetCdpActivationRequest, GetCdpActivationResponse> operation
-              = new GetCdpActivation.Sync(sdkConfiguration, _headers);
+              = new GetCdpActivation.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -139,8 +171,27 @@ public class Activation {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListCdpActivationsResponse listCdpActivations(@Nonnull ListCdpActivationsRequest request) {
+        return listCdpActivations(request, null);
+    }
+
+    /**
+     * List all activations
+     * 
+     * <p>Returns a list of CdpActivations. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListCdpActivationsResponse listCdpActivations(@Nonnull ListCdpActivationsRequest request, @Nullable Options options) {
         RequestOperation<ListCdpActivationsRequest, ListCdpActivationsResponse> operation
-              = new ListCdpActivations.Sync(sdkConfiguration, _headers);
+              = new ListCdpActivations.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +218,23 @@ public class Activation {
      * @throws RuntimeException subclass if the API call fails
      */
     public PatchCdpActivationResponse patchCdpActivation(@Nonnull PatchCdpActivationRequest request) {
+        return patchCdpActivation(request, null);
+    }
+
+    /**
+     * Update an activation
+     * 
+     * <p>Updates the CdpActivation identified by `id`. Provide the unified CdpActivation fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchCdpActivationResponse patchCdpActivation(@Nonnull PatchCdpActivationRequest request, @Nullable Options options) {
         RequestOperation<PatchCdpActivationRequest, PatchCdpActivationResponse> operation
-              = new PatchCdpActivation.Sync(sdkConfiguration, _headers);
+              = new PatchCdpActivation.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -193,8 +259,22 @@ public class Activation {
      * @throws RuntimeException subclass if the API call fails
      */
     public RemoveCdpActivationResponse removeCdpActivation(@Nonnull RemoveCdpActivationRequest request) {
+        return removeCdpActivation(request, null);
+    }
+
+    /**
+     * Remove an activation
+     * 
+     * <p>Deletes the CdpActivation identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveCdpActivationResponse removeCdpActivation(@Nonnull RemoveCdpActivationRequest request, @Nullable Options options) {
         RequestOperation<RemoveCdpActivationRequest, RemoveCdpActivationResponse> operation
-              = new RemoveCdpActivation.Sync(sdkConfiguration, _headers);
+              = new RemoveCdpActivation.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -221,8 +301,23 @@ public class Activation {
      * @throws RuntimeException subclass if the API call fails
      */
     public UpdateCdpActivationResponse updateCdpActivation(@Nonnull UpdateCdpActivationRequest request) {
+        return updateCdpActivation(request, null);
+    }
+
+    /**
+     * Update an activation
+     * 
+     * <p>Updates the CdpActivation identified by `id`. Provide the unified CdpActivation fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateCdpActivationResponse updateCdpActivation(@Nonnull UpdateCdpActivationRequest request, @Nullable Options options) {
         RequestOperation<UpdateCdpActivationRequest, UpdateCdpActivationResponse> operation
-              = new UpdateCdpActivation.Sync(sdkConfiguration, _headers);
+              = new UpdateCdpActivation.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

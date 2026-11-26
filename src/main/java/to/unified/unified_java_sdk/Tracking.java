@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import to.unified.unified_java_sdk.models.operations.GetShippingTrackingRequest;
 import to.unified.unified_java_sdk.models.operations.GetShippingTrackingRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetShippingTrackingResponse;
@@ -15,6 +16,7 @@ import to.unified.unified_java_sdk.models.operations.ListShippingTrackingsRespon
 import to.unified.unified_java_sdk.operations.GetShippingTracking;
 import to.unified.unified_java_sdk.operations.ListShippingTrackings;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class Tracking {
@@ -59,8 +61,23 @@ public class Tracking {
      * @throws RuntimeException subclass if the API call fails
      */
     public GetShippingTrackingResponse getShippingTracking(@Nonnull GetShippingTrackingRequest request) {
+        return getShippingTracking(request, null);
+    }
+
+    /**
+     * Retrieve a tracking
+     * 
+     * <p>Retrieves a single ShippingTracking by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetShippingTrackingResponse getShippingTracking(@Nonnull GetShippingTrackingRequest request, @Nullable Options options) {
         RequestOperation<GetShippingTrackingRequest, GetShippingTrackingResponse> operation
-              = new GetShippingTracking.Sync(sdkConfiguration, _headers);
+              = new GetShippingTracking.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -95,8 +112,27 @@ public class Tracking {
      * @throws RuntimeException subclass if the API call fails
      */
     public ListShippingTrackingsResponse listShippingTrackings(@Nonnull ListShippingTrackingsRequest request) {
+        return listShippingTrackings(request, null);
+    }
+
+    /**
+     * List all trackings
+     * 
+     * <p>Returns a list of ShippingTrackings. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListShippingTrackingsResponse listShippingTrackings(@Nonnull ListShippingTrackingsRequest request, @Nullable Options options) {
         RequestOperation<ListShippingTrackingsRequest, ListShippingTrackingsResponse> operation
-              = new ListShippingTrackings.Sync(sdkConfiguration, _headers);
+              = new ListShippingTrackings.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

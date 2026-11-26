@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateComputeDeploymentRequest;
 import to.unified.unified_java_sdk.models.operations.GetComputeDeploymentRequest;
@@ -32,6 +33,7 @@ import to.unified.unified_java_sdk.operations.PatchComputeDeployment;
 import to.unified.unified_java_sdk.operations.RemoveComputeDeployment;
 import to.unified.unified_java_sdk.operations.UpdateComputeDeployment;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncDeployment {
@@ -76,8 +78,22 @@ public class AsyncDeployment {
      * @return {@code CompletableFuture<CreateComputeDeploymentResponse>} - The async response
      */
     public CompletableFuture<CreateComputeDeploymentResponse> createComputeDeployment(@Nonnull CreateComputeDeploymentRequest request) {
+        return createComputeDeployment(request, null);
+    }
+
+    /**
+     * Create a deployment
+     * 
+     * <p>Creates a ComputeDeployment. Provide the unified ComputeDeployment fields in the request body; they
+     * are mapped to the provider's API. Returns the created ComputeDeployment.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<CreateComputeDeploymentResponse>} - The async response
+     */
+    public CompletableFuture<CreateComputeDeploymentResponse> createComputeDeployment(@Nonnull CreateComputeDeploymentRequest request, @Nullable Options options) {
         AsyncRequestOperation<CreateComputeDeploymentRequest, CreateComputeDeploymentResponse> operation
-              = new CreateComputeDeployment.Async(sdkConfiguration, _headers);
+              = new CreateComputeDeployment.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -105,8 +121,22 @@ public class AsyncDeployment {
      * @return {@code CompletableFuture<GetComputeDeploymentResponse>} - The async response
      */
     public CompletableFuture<GetComputeDeploymentResponse> getComputeDeployment(@Nonnull GetComputeDeploymentRequest request) {
+        return getComputeDeployment(request, null);
+    }
+
+    /**
+     * Retrieve a deployment
+     * 
+     * <p>Retrieves a single ComputeDeployment by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetComputeDeploymentResponse>} - The async response
+     */
+    public CompletableFuture<GetComputeDeploymentResponse> getComputeDeployment(@Nonnull GetComputeDeploymentRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetComputeDeploymentRequest, GetComputeDeploymentResponse> operation
-              = new GetComputeDeployment.Async(sdkConfiguration, _headers);
+              = new GetComputeDeployment.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -142,8 +172,26 @@ public class AsyncDeployment {
      * @return {@code CompletableFuture<ListComputeDeploymentsResponse>} - The async response
      */
     public CompletableFuture<ListComputeDeploymentsResponse> listComputeDeployments(@Nonnull ListComputeDeploymentsRequest request) {
+        return listComputeDeployments(request, null);
+    }
+
+    /**
+     * List all deployments
+     * 
+     * <p>Returns a list of ComputeDeployments. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListComputeDeploymentsResponse>} - The async response
+     */
+    public CompletableFuture<ListComputeDeploymentsResponse> listComputeDeployments(@Nonnull ListComputeDeploymentsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListComputeDeploymentsRequest, ListComputeDeploymentsResponse> operation
-              = new ListComputeDeployments.Async(sdkConfiguration, _headers);
+              = new ListComputeDeployments.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -171,8 +219,22 @@ public class AsyncDeployment {
      * @return {@code CompletableFuture<PatchComputeDeploymentResponse>} - The async response
      */
     public CompletableFuture<PatchComputeDeploymentResponse> patchComputeDeployment(@Nonnull PatchComputeDeploymentRequest request) {
+        return patchComputeDeployment(request, null);
+    }
+
+    /**
+     * Update a deployment
+     * 
+     * <p>Updates the ComputeDeployment identified by `id`. Provide the unified ComputeDeployment fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<PatchComputeDeploymentResponse>} - The async response
+     */
+    public CompletableFuture<PatchComputeDeploymentResponse> patchComputeDeployment(@Nonnull PatchComputeDeploymentRequest request, @Nullable Options options) {
         AsyncRequestOperation<PatchComputeDeploymentRequest, PatchComputeDeploymentResponse> operation
-              = new PatchComputeDeployment.Async(sdkConfiguration, _headers);
+              = new PatchComputeDeployment.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -198,8 +260,21 @@ public class AsyncDeployment {
      * @return {@code CompletableFuture<RemoveComputeDeploymentResponse>} - The async response
      */
     public CompletableFuture<RemoveComputeDeploymentResponse> removeComputeDeployment(@Nonnull RemoveComputeDeploymentRequest request) {
+        return removeComputeDeployment(request, null);
+    }
+
+    /**
+     * Remove a deployment
+     * 
+     * <p>Deletes the ComputeDeployment identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveComputeDeploymentResponse>} - The async response
+     */
+    public CompletableFuture<RemoveComputeDeploymentResponse> removeComputeDeployment(@Nonnull RemoveComputeDeploymentRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveComputeDeploymentRequest, RemoveComputeDeploymentResponse> operation
-              = new RemoveComputeDeployment.Async(sdkConfiguration, _headers);
+              = new RemoveComputeDeployment.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -227,8 +302,22 @@ public class AsyncDeployment {
      * @return {@code CompletableFuture<UpdateComputeDeploymentResponse>} - The async response
      */
     public CompletableFuture<UpdateComputeDeploymentResponse> updateComputeDeployment(@Nonnull UpdateComputeDeploymentRequest request) {
+        return updateComputeDeployment(request, null);
+    }
+
+    /**
+     * Update a deployment
+     * 
+     * <p>Updates the ComputeDeployment identified by `id`. Provide the unified ComputeDeployment fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<UpdateComputeDeploymentResponse>} - The async response
+     */
+    public CompletableFuture<UpdateComputeDeploymentResponse> updateComputeDeployment(@Nonnull UpdateComputeDeploymentRequest request, @Nullable Options options) {
         AsyncRequestOperation<UpdateComputeDeploymentRequest, UpdateComputeDeploymentResponse> operation
-              = new UpdateComputeDeployment.Async(sdkConfiguration, _headers);
+              = new UpdateComputeDeployment.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

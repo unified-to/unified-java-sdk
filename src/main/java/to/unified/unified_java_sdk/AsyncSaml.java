@@ -6,12 +6,14 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.GetUnifiedIntegrationSamlRequest;
 import to.unified.unified_java_sdk.models.operations.async.GetUnifiedIntegrationSamlRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetUnifiedIntegrationSamlResponse;
 import to.unified.unified_java_sdk.operations.GetUnifiedIntegrationSaml;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 
 
 public class AsyncSaml {
@@ -58,8 +60,23 @@ public class AsyncSaml {
      * @return {@code CompletableFuture<GetUnifiedIntegrationSamlResponse>} - The async response
      */
     public CompletableFuture<GetUnifiedIntegrationSamlResponse> getUnifiedIntegrationSaml(@Nonnull GetUnifiedIntegrationSamlRequest request) {
+        return getUnifiedIntegrationSaml(request, null);
+    }
+
+    /**
+     * Sign in a user via SAML
+     * 
+     * <p>Returns a SAML authentication URL for the specified integration. Once a successful authentication
+     * occurs, the name and email are returned inside a jwt parameter, which is a JSON web token that is
+     * base-64 encoded.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetUnifiedIntegrationSamlResponse>} - The async response
+     */
+    public CompletableFuture<GetUnifiedIntegrationSamlResponse> getUnifiedIntegrationSaml(@Nonnull GetUnifiedIntegrationSamlRequest request, @Nullable Options options) {
         AsyncRequestOperation<GetUnifiedIntegrationSamlRequest, GetUnifiedIntegrationSamlResponse> operation
-              = new GetUnifiedIntegrationSaml.Async(sdkConfiguration, _headers);
+              = new GetUnifiedIntegrationSaml.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

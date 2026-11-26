@@ -6,18 +6,28 @@ package to.unified.unified_java_sdk.models.operations;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.GetSocialComment;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetSocialCommentRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private GetSocialCommentRequest request;
+    private final Options.Builder optionsBuilder;
 
     public GetSocialCommentRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public GetSocialCommentRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public GetSocialCommentRequestBuilder request(@Nonnull GetSocialCommentRequest request) {
@@ -42,8 +52,9 @@ public class GetSocialCommentRequestBuilder {
     * @return The response from the server.
     */
     public GetSocialCommentResponse call() {
+        Options options = optionsBuilder.build();
         RequestOperation<GetSocialCommentRequest, GetSocialCommentResponse> operation
-              = new GetSocialComment.Sync(sdkConfiguration, _headers);
+              = new GetSocialComment.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

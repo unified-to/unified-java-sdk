@@ -6,18 +6,28 @@ package to.unified.unified_java_sdk.models.operations;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.time.Duration;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.UpdateQmsAudit;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Options;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class UpdateQmsAuditRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
     private UpdateQmsAuditRequest request;
+    private final Options.Builder optionsBuilder;
 
     public UpdateQmsAuditRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
+        this.optionsBuilder = Options.builder();
+    }
+
+    public UpdateQmsAuditRequestBuilder timeout(Duration timeout) {
+        this.optionsBuilder.timeout(timeout);
+        return this;
     }
 
     public UpdateQmsAuditRequestBuilder request(@Nonnull UpdateQmsAuditRequest request) {
@@ -42,8 +52,9 @@ public class UpdateQmsAuditRequestBuilder {
     * @return The response from the server.
     */
     public UpdateQmsAuditResponse call() {
+        Options options = optionsBuilder.build();
         RequestOperation<UpdateQmsAuditRequest, UpdateQmsAuditResponse> operation
-              = new UpdateQmsAudit.Sync(sdkConfiguration, _headers);
+              = new UpdateQmsAudit.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

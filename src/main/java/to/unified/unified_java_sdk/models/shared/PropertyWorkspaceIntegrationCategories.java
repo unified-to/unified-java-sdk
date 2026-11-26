@@ -61,6 +61,9 @@ public class PropertyWorkspaceIntegrationCategories {
     public static final PropertyWorkspaceIntegrationCategories PROPERTY = new PropertyWorkspaceIntegrationCategories("property");
     public static final PropertyWorkspaceIntegrationCategories PLM = new PropertyWorkspaceIntegrationCategories("plm");
     public static final PropertyWorkspaceIntegrationCategories QMS = new PropertyWorkspaceIntegrationCategories("qms");
+    public static final PropertyWorkspaceIntegrationCategories DMS = new PropertyWorkspaceIntegrationCategories("dms");
+    public static final PropertyWorkspaceIntegrationCategories FHIR = new PropertyWorkspaceIntegrationCategories("fhir");
+    public static final PropertyWorkspaceIntegrationCategories PRINTING = new PropertyWorkspaceIntegrationCategories("printing");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -175,6 +178,9 @@ public class PropertyWorkspaceIntegrationCategories {
         map.put("property", PROPERTY);
         map.put("plm", PLM);
         map.put("qms", QMS);
+        map.put("dms", DMS);
+        map.put("fhir", FHIR);
+        map.put("printing", PRINTING);
         return map;
     }
 
@@ -221,6 +227,9 @@ public class PropertyWorkspaceIntegrationCategories {
         map.put("property", PropertyWorkspaceIntegrationCategoriesEnum.PROPERTY);
         map.put("plm", PropertyWorkspaceIntegrationCategoriesEnum.PLM);
         map.put("qms", PropertyWorkspaceIntegrationCategoriesEnum.QMS);
+        map.put("dms", PropertyWorkspaceIntegrationCategoriesEnum.DMS);
+        map.put("fhir", PropertyWorkspaceIntegrationCategoriesEnum.FHIR);
+        map.put("printing", PropertyWorkspaceIntegrationCategoriesEnum.PRINTING);
         return map;
     }
     
@@ -267,7 +276,10 @@ public class PropertyWorkspaceIntegrationCategories {
         HEALTHCARE("healthcare"),
         PROPERTY("property"),
         PLM("plm"),
-        QMS("qms"),;
+        QMS("qms"),
+        DMS("dms"),
+        FHIR("fhir"),
+        PRINTING("printing"),;
 
         private final String value;
 
