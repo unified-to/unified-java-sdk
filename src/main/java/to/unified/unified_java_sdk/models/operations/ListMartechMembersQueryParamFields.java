@@ -21,7 +21,8 @@ public enum ListMartechMembersQueryParamFields {
     TAGS("tags"),
     STATUS("status"),
     METADATA("metadata"),
-    RAW("raw");
+    RAW("raw"),
+    UNIFIED_PERSON_IDS("__unified_person_ids");
 
     @JsonValue
     private final String value;

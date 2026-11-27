@@ -21,6 +21,14 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 public class HealthcarePractitioner {
     /**
+     * Global unified person ids: the current id first, then every id merged into it. Two records are the
+     * same person when these arrays intersect. Only returned when requested in fields
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("__unified_person_ids")
+    private List<String> unifiedPersonIds;
+
+    /**
      * Work address of the practitioner
      */
     @JsonInclude(Include.NON_ABSENT)
@@ -162,6 +170,7 @@ public class HealthcarePractitioner {
 
     @JsonCreator
     public HealthcarePractitioner(
+            @JsonProperty("__unified_person_ids") @Nullable List<String> unifiedPersonIds,
             @JsonProperty("address") @Nullable PropertyHealthcarePractitionerAddress address,
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
             @JsonProperty("emails") @Nullable List<HealthcareEmail> emails,
@@ -182,6 +191,7 @@ public class HealthcarePractitioner {
             @JsonProperty("telephones") @Nullable List<HealthcareTelephone> telephones,
             @JsonProperty("title") @Nullable String title,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
+        this.unifiedPersonIds = unifiedPersonIds;
         this.address = address;
         this.createdAt = createdAt;
         this.emails = emails;
@@ -211,7 +221,15 @@ public class HealthcarePractitioner {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null, null, null);
+    }
+
+    /**
+     * Global unified person ids: the current id first, then every id merged into it. Two records are the
+     * same person when these arrays intersect. Only returned when requested in fields
+     */
+    public Optional<List<String>> unifiedPersonIds() {
+        return Optional.ofNullable(this.unifiedPersonIds);
     }
 
     /**
@@ -356,6 +374,16 @@ public class HealthcarePractitioner {
 
     public static Builder builder() {
         return new Builder();
+    }
+
+
+    /**
+     * Global unified person ids: the current id first, then every id merged into it. Two records are the
+     * same person when these arrays intersect. Only returned when requested in fields
+     */
+    public HealthcarePractitioner withUnifiedPersonIds(@Nullable List<String> unifiedPersonIds) {
+        this.unifiedPersonIds = unifiedPersonIds;
+        return this;
     }
 
 
@@ -549,6 +577,7 @@ public class HealthcarePractitioner {
         }
         HealthcarePractitioner other = (HealthcarePractitioner) o;
         return 
+            Utils.enhancedDeepEquals(this.unifiedPersonIds, other.unifiedPersonIds) &&
             Utils.enhancedDeepEquals(this.address, other.address) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.emails, other.emails) &&
@@ -574,18 +603,19 @@ public class HealthcarePractitioner {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            address, createdAt, emails,
-            firstName, gender, id,
-            identifiers, imageUrl, isActive,
-            languages, lastName, locationIds,
-            metadata, name, qualifications,
-            raw, specialties, telephones,
-            title, updatedAt);
+            unifiedPersonIds, address, createdAt,
+            emails, firstName, gender,
+            id, identifiers, imageUrl,
+            isActive, languages, lastName,
+            locationIds, metadata, name,
+            qualifications, raw, specialties,
+            telephones, title, updatedAt);
     }
     
     @Override
     public String toString() {
         return Utils.toString(HealthcarePractitioner.class,
+                "unifiedPersonIds", unifiedPersonIds,
                 "address", address,
                 "createdAt", createdAt,
                 "emails", emails,
@@ -610,6 +640,8 @@ public class HealthcarePractitioner {
 
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
+
+        private List<String> unifiedPersonIds;
 
         private PropertyHealthcarePractitionerAddress address;
 
@@ -653,6 +685,15 @@ public class HealthcarePractitioner {
 
         private Builder() {
           // force use of static builder() method
+        }
+
+        /**
+         * Global unified person ids: the current id first, then every id merged into it. Two records are the
+         * same person when these arrays intersect. Only returned when requested in fields
+         */
+        public Builder unifiedPersonIds(@Nullable List<String> unifiedPersonIds) {
+            this.unifiedPersonIds = unifiedPersonIds;
+            return this;
         }
 
         /**
@@ -817,13 +858,13 @@ public class HealthcarePractitioner {
 
         public HealthcarePractitioner build() {
             return new HealthcarePractitioner(
-                address, createdAt, emails,
-                firstName, gender, id,
-                identifiers, imageUrl, isActive,
-                languages, lastName, locationIds,
-                metadata, name, qualifications,
-                raw, specialties, telephones,
-                title, updatedAt);
+                unifiedPersonIds, address, createdAt,
+                emails, firstName, gender,
+                id, identifiers, imageUrl,
+                isActive, languages, lastName,
+                locationIds, metadata, name,
+                qualifications, raw, specialties,
+                telephones, title, updatedAt);
         }
 
     }

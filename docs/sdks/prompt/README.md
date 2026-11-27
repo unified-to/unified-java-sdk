@@ -52,6 +52,8 @@ public class Application {
                             .score(0.05974147981032729)
                             .value("vilicus")
                             .build()))
+                    .hasThread(false)
+                    .id("lGiOgAB6MLc1sMVUZnBJtXQG")
                     .maxTokens(0.4677782787475735)
                     .mcpAuthorizationToken("45c837a2-ed2d-458f-b4bc-782f4a6b065b")
                     .mcpDeferredTools(List.of())

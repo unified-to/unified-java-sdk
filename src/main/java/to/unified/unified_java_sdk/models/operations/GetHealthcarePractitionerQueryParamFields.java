@@ -28,7 +28,8 @@ public enum GetHealthcarePractitionerQueryParamFields {
     LOCATION_IDS("location_ids"),
     IS_ACTIVE("is_active"),
     METADATA("metadata"),
-    RAW("raw");
+    RAW("raw"),
+    UNIFIED_PERSON_IDS("__unified_person_ids");
 
     @JsonValue
     private final String value;

@@ -17,6 +17,7 @@ import to.unified.unified_java_sdk.models.operations.GetUnifiedApicallRequest;
 import to.unified.unified_java_sdk.models.operations.GetUnifiedConnectionRequest;
 import to.unified.unified_java_sdk.models.operations.GetUnifiedIntegrationAuthRequest;
 import to.unified.unified_java_sdk.models.operations.GetUnifiedIssueRequest;
+import to.unified.unified_java_sdk.models.operations.GetUnifiedPersonRequest;
 import to.unified.unified_java_sdk.models.operations.GetUnifiedSecretsmanagerRequest;
 import to.unified.unified_java_sdk.models.operations.GetUnifiedWebhookRequest;
 import to.unified.unified_java_sdk.models.operations.GetUnifiedWorkspaceintegrationRequest;
@@ -26,6 +27,7 @@ import to.unified.unified_java_sdk.models.operations.ListUnifiedIntegrationWorks
 import to.unified.unified_java_sdk.models.operations.ListUnifiedIntegrationsRequest;
 import to.unified.unified_java_sdk.models.operations.ListUnifiedIssuesRequest;
 import to.unified.unified_java_sdk.models.operations.ListUnifiedNotificationsRequest;
+import to.unified.unified_java_sdk.models.operations.ListUnifiedPeopleRequest;
 import to.unified.unified_java_sdk.models.operations.ListUnifiedSecretsmanagerSecretsRequest;
 import to.unified.unified_java_sdk.models.operations.ListUnifiedSecretsmanagersRequest;
 import to.unified.unified_java_sdk.models.operations.ListUnifiedWebhooksRequest;
@@ -38,6 +40,7 @@ import to.unified.unified_java_sdk.models.operations.PatchUnifiedWebhookTriggerR
 import to.unified.unified_java_sdk.models.operations.PatchUnifiedWorkspaceintegrationRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveUnifiedConnectionRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveUnifiedEnvironmentRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveUnifiedPersonRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveUnifiedSecretsmanagerRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveUnifiedWebhookRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveUnifiedWorkspaceintegrationRequest;
@@ -67,6 +70,8 @@ import to.unified.unified_java_sdk.models.operations.async.GetUnifiedIntegration
 import to.unified.unified_java_sdk.models.operations.async.GetUnifiedIntegrationAuthResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetUnifiedIssueRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetUnifiedIssueResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetUnifiedPersonRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetUnifiedPersonResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetUnifiedSecretsmanagerRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetUnifiedSecretsmanagerResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetUnifiedWebhookRequestBuilder;
@@ -87,6 +92,8 @@ import to.unified.unified_java_sdk.models.operations.async.ListUnifiedIssuesRequ
 import to.unified.unified_java_sdk.models.operations.async.ListUnifiedIssuesResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListUnifiedNotificationsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListUnifiedNotificationsResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListUnifiedPeopleRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListUnifiedPeopleResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListUnifiedSecretsmanagerInstructionsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListUnifiedSecretsmanagerInstructionsResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListUnifiedSecretsmanagerSecretsRequestBuilder;
@@ -113,6 +120,8 @@ import to.unified.unified_java_sdk.models.operations.async.RemoveUnifiedConnecti
 import to.unified.unified_java_sdk.models.operations.async.RemoveUnifiedConnectionResponse;
 import to.unified.unified_java_sdk.models.operations.async.RemoveUnifiedEnvironmentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.RemoveUnifiedEnvironmentResponse;
+import to.unified.unified_java_sdk.models.operations.async.RemoveUnifiedPersonRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveUnifiedPersonResponse;
 import to.unified.unified_java_sdk.models.operations.async.RemoveUnifiedSecretsmanagerRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.RemoveUnifiedSecretsmanagerResponse;
 import to.unified.unified_java_sdk.models.operations.async.RemoveUnifiedWebhookRequestBuilder;
@@ -144,6 +153,7 @@ import to.unified.unified_java_sdk.operations.GetUnifiedApicall;
 import to.unified.unified_java_sdk.operations.GetUnifiedConnection;
 import to.unified.unified_java_sdk.operations.GetUnifiedIntegrationAuth;
 import to.unified.unified_java_sdk.operations.GetUnifiedIssue;
+import to.unified.unified_java_sdk.operations.GetUnifiedPerson;
 import to.unified.unified_java_sdk.operations.GetUnifiedSecretsmanager;
 import to.unified.unified_java_sdk.operations.GetUnifiedWebhook;
 import to.unified.unified_java_sdk.operations.GetUnifiedWorkspaceintegration;
@@ -154,6 +164,7 @@ import to.unified.unified_java_sdk.operations.ListUnifiedIntegrationWorkspaces;
 import to.unified.unified_java_sdk.operations.ListUnifiedIntegrations;
 import to.unified.unified_java_sdk.operations.ListUnifiedIssues;
 import to.unified.unified_java_sdk.operations.ListUnifiedNotifications;
+import to.unified.unified_java_sdk.operations.ListUnifiedPeople;
 import to.unified.unified_java_sdk.operations.ListUnifiedSecretsmanagerInstructions;
 import to.unified.unified_java_sdk.operations.ListUnifiedSecretsmanagerSecrets;
 import to.unified.unified_java_sdk.operations.ListUnifiedSecretsmanagers;
@@ -167,6 +178,7 @@ import to.unified.unified_java_sdk.operations.PatchUnifiedWebhookTrigger;
 import to.unified.unified_java_sdk.operations.PatchUnifiedWorkspaceintegration;
 import to.unified.unified_java_sdk.operations.RemoveUnifiedConnection;
 import to.unified.unified_java_sdk.operations.RemoveUnifiedEnvironment;
+import to.unified.unified_java_sdk.operations.RemoveUnifiedPerson;
 import to.unified.unified_java_sdk.operations.RemoveUnifiedSecretsmanager;
 import to.unified.unified_java_sdk.operations.RemoveUnifiedWebhook;
 import to.unified.unified_java_sdk.operations.RemoveUnifiedWorkspaceintegration;
@@ -589,6 +601,40 @@ public class AsyncUnified {
 
 
     /**
+     * Retrieve a person by ID
+     * 
+     * @return The async call builder
+     */
+    public GetUnifiedPersonRequestBuilder getUnifiedPerson() {
+        return new GetUnifiedPersonRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a person by ID
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<GetUnifiedPersonResponse>} - The async response
+     */
+    public CompletableFuture<GetUnifiedPersonResponse> getUnifiedPerson(@Nonnull GetUnifiedPersonRequest request) {
+        return getUnifiedPerson(request, null);
+    }
+
+    /**
+     * Retrieve a person by ID
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetUnifiedPersonResponse>} - The async response
+     */
+    public CompletableFuture<GetUnifiedPersonResponse> getUnifiedPerson(@Nonnull GetUnifiedPersonRequest request, @Nullable Options options) {
+        AsyncRequestOperation<GetUnifiedPersonRequest, GetUnifiedPersonResponse> operation
+              = new GetUnifiedPerson.Async(sdkConfiguration, options, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
      * Retrieve secrets manager
      * 
      * @return The async call builder
@@ -927,6 +973,40 @@ public class AsyncUnified {
     public CompletableFuture<ListUnifiedNotificationsResponse> listUnifiedNotifications(@Nonnull ListUnifiedNotificationsRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListUnifiedNotificationsRequest, ListUnifiedNotificationsResponse> operation
               = new ListUnifiedNotifications.Async(sdkConfiguration, options, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Search for persons by email addresses
+     * 
+     * @return The async call builder
+     */
+    public ListUnifiedPeopleRequestBuilder listUnifiedPeople() {
+        return new ListUnifiedPeopleRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Search for persons by email addresses
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<ListUnifiedPeopleResponse>} - The async response
+     */
+    public CompletableFuture<ListUnifiedPeopleResponse> listUnifiedPeople(@Nonnull ListUnifiedPeopleRequest request) {
+        return listUnifiedPeople(request, null);
+    }
+
+    /**
+     * Search for persons by email addresses
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListUnifiedPeopleResponse>} - The async response
+     */
+    public CompletableFuture<ListUnifiedPeopleResponse> listUnifiedPeople(@Nonnull ListUnifiedPeopleRequest request, @Nullable Options options) {
+        AsyncRequestOperation<ListUnifiedPeopleRequest, ListUnifiedPeopleResponse> operation
+              = new ListUnifiedPeople.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1409,6 +1489,40 @@ public class AsyncUnified {
     public CompletableFuture<RemoveUnifiedEnvironmentResponse> removeUnifiedEnvironment(@Nonnull RemoveUnifiedEnvironmentRequest request, @Nullable Options options) {
         AsyncRequestOperation<RemoveUnifiedEnvironmentRequest, RemoveUnifiedEnvironmentResponse> operation
               = new RemoveUnifiedEnvironment.Async(sdkConfiguration, options, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Erase email addresses from the unified persons
+     * 
+     * @return The async call builder
+     */
+    public RemoveUnifiedPersonRequestBuilder removeUnifiedPerson() {
+        return new RemoveUnifiedPersonRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Erase email addresses from the unified persons
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<RemoveUnifiedPersonResponse>} - The async response
+     */
+    public CompletableFuture<RemoveUnifiedPersonResponse> removeUnifiedPerson(@Nonnull RemoveUnifiedPersonRequest request) {
+        return removeUnifiedPerson(request, null);
+    }
+
+    /**
+     * Erase email addresses from the unified persons
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveUnifiedPersonResponse>} - The async response
+     */
+    public CompletableFuture<RemoveUnifiedPersonResponse> removeUnifiedPerson(@Nonnull RemoveUnifiedPersonRequest request, @Nullable Options options) {
+        AsyncRequestOperation<RemoveUnifiedPersonRequest, RemoveUnifiedPersonResponse> operation
+              = new RemoveUnifiedPerson.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

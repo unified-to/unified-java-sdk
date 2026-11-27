@@ -36,6 +36,9 @@ import to.unified.unified_java_sdk.models.operations.GetUnifiedIntegrationAuthRe
 import to.unified.unified_java_sdk.models.operations.GetUnifiedIssueRequest;
 import to.unified.unified_java_sdk.models.operations.GetUnifiedIssueRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetUnifiedIssueResponse;
+import to.unified.unified_java_sdk.models.operations.GetUnifiedPersonRequest;
+import to.unified.unified_java_sdk.models.operations.GetUnifiedPersonRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetUnifiedPersonResponse;
 import to.unified.unified_java_sdk.models.operations.GetUnifiedSecretsmanagerRequest;
 import to.unified.unified_java_sdk.models.operations.GetUnifiedSecretsmanagerRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetUnifiedSecretsmanagerResponse;
@@ -65,6 +68,9 @@ import to.unified.unified_java_sdk.models.operations.ListUnifiedIssuesResponse;
 import to.unified.unified_java_sdk.models.operations.ListUnifiedNotificationsRequest;
 import to.unified.unified_java_sdk.models.operations.ListUnifiedNotificationsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListUnifiedNotificationsResponse;
+import to.unified.unified_java_sdk.models.operations.ListUnifiedPeopleRequest;
+import to.unified.unified_java_sdk.models.operations.ListUnifiedPeopleRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListUnifiedPeopleResponse;
 import to.unified.unified_java_sdk.models.operations.ListUnifiedSecretsmanagerInstructionsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListUnifiedSecretsmanagerInstructionsResponse;
 import to.unified.unified_java_sdk.models.operations.ListUnifiedSecretsmanagerSecretsRequest;
@@ -103,6 +109,9 @@ import to.unified.unified_java_sdk.models.operations.RemoveUnifiedConnectionResp
 import to.unified.unified_java_sdk.models.operations.RemoveUnifiedEnvironmentRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveUnifiedEnvironmentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.RemoveUnifiedEnvironmentResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveUnifiedPersonRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveUnifiedPersonRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveUnifiedPersonResponse;
 import to.unified.unified_java_sdk.models.operations.RemoveUnifiedSecretsmanagerRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveUnifiedSecretsmanagerRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.RemoveUnifiedSecretsmanagerResponse;
@@ -143,6 +152,7 @@ import to.unified.unified_java_sdk.operations.GetUnifiedApicall;
 import to.unified.unified_java_sdk.operations.GetUnifiedConnection;
 import to.unified.unified_java_sdk.operations.GetUnifiedIntegrationAuth;
 import to.unified.unified_java_sdk.operations.GetUnifiedIssue;
+import to.unified.unified_java_sdk.operations.GetUnifiedPerson;
 import to.unified.unified_java_sdk.operations.GetUnifiedSecretsmanager;
 import to.unified.unified_java_sdk.operations.GetUnifiedWebhook;
 import to.unified.unified_java_sdk.operations.GetUnifiedWorkspaceintegration;
@@ -153,6 +163,7 @@ import to.unified.unified_java_sdk.operations.ListUnifiedIntegrationWorkspaces;
 import to.unified.unified_java_sdk.operations.ListUnifiedIntegrations;
 import to.unified.unified_java_sdk.operations.ListUnifiedIssues;
 import to.unified.unified_java_sdk.operations.ListUnifiedNotifications;
+import to.unified.unified_java_sdk.operations.ListUnifiedPeople;
 import to.unified.unified_java_sdk.operations.ListUnifiedSecretsmanagerInstructions;
 import to.unified.unified_java_sdk.operations.ListUnifiedSecretsmanagerSecrets;
 import to.unified.unified_java_sdk.operations.ListUnifiedSecretsmanagers;
@@ -166,6 +177,7 @@ import to.unified.unified_java_sdk.operations.PatchUnifiedWebhookTrigger;
 import to.unified.unified_java_sdk.operations.PatchUnifiedWorkspaceintegration;
 import to.unified.unified_java_sdk.operations.RemoveUnifiedConnection;
 import to.unified.unified_java_sdk.operations.RemoveUnifiedEnvironment;
+import to.unified.unified_java_sdk.operations.RemoveUnifiedPerson;
 import to.unified.unified_java_sdk.operations.RemoveUnifiedSecretsmanager;
 import to.unified.unified_java_sdk.operations.RemoveUnifiedWebhook;
 import to.unified.unified_java_sdk.operations.RemoveUnifiedWorkspaceintegration;
@@ -587,6 +599,40 @@ public class Unified {
     }
 
     /**
+     * Retrieve a person by ID
+     * 
+     * @return The call builder
+     */
+    public GetUnifiedPersonRequestBuilder getUnifiedPerson() {
+        return new GetUnifiedPersonRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a person by ID
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetUnifiedPersonResponse getUnifiedPerson(@Nonnull GetUnifiedPersonRequest request) {
+        return getUnifiedPerson(request, null);
+    }
+
+    /**
+     * Retrieve a person by ID
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetUnifiedPersonResponse getUnifiedPerson(@Nonnull GetUnifiedPersonRequest request, @Nullable Options options) {
+        RequestOperation<GetUnifiedPersonRequest, GetUnifiedPersonResponse> operation
+              = new GetUnifiedPerson.Sync(sdkConfiguration, options, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
      * Retrieve secrets manager
      * 
      * @return The call builder
@@ -927,6 +973,40 @@ public class Unified {
     public ListUnifiedNotificationsResponse listUnifiedNotifications(@Nonnull ListUnifiedNotificationsRequest request, @Nullable Options options) {
         RequestOperation<ListUnifiedNotificationsRequest, ListUnifiedNotificationsResponse> operation
               = new ListUnifiedNotifications.Sync(sdkConfiguration, options, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Search for persons by email addresses
+     * 
+     * @return The call builder
+     */
+    public ListUnifiedPeopleRequestBuilder listUnifiedPeople() {
+        return new ListUnifiedPeopleRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Search for persons by email addresses
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListUnifiedPeopleResponse listUnifiedPeople(@Nonnull ListUnifiedPeopleRequest request) {
+        return listUnifiedPeople(request, null);
+    }
+
+    /**
+     * Search for persons by email addresses
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListUnifiedPeopleResponse listUnifiedPeople(@Nonnull ListUnifiedPeopleRequest request, @Nullable Options options) {
+        RequestOperation<ListUnifiedPeopleRequest, ListUnifiedPeopleResponse> operation
+              = new ListUnifiedPeople.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1409,6 +1489,40 @@ public class Unified {
     public RemoveUnifiedEnvironmentResponse removeUnifiedEnvironment(@Nonnull RemoveUnifiedEnvironmentRequest request, @Nullable Options options) {
         RequestOperation<RemoveUnifiedEnvironmentRequest, RemoveUnifiedEnvironmentResponse> operation
               = new RemoveUnifiedEnvironment.Sync(sdkConfiguration, options, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Erase email addresses from the unified persons
+     * 
+     * @return The call builder
+     */
+    public RemoveUnifiedPersonRequestBuilder removeUnifiedPerson() {
+        return new RemoveUnifiedPersonRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Erase email addresses from the unified persons
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveUnifiedPersonResponse removeUnifiedPerson(@Nonnull RemoveUnifiedPersonRequest request) {
+        return removeUnifiedPerson(request, null);
+    }
+
+    /**
+     * Erase email addresses from the unified persons
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveUnifiedPersonResponse removeUnifiedPerson(@Nonnull RemoveUnifiedPersonRequest request, @Nullable Options options) {
+        RequestOperation<RemoveUnifiedPersonRequest, RemoveUnifiedPersonResponse> operation
+              = new RemoveUnifiedPerson.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

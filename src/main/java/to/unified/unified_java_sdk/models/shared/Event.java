@@ -40,6 +40,7 @@ public class Event {
     public static final Event WEBHOOK_UNHEALTHY = new Event("WEBHOOK_UNHEALTHY");
     public static final Event WEBHOOK_PAUSED = new Event("WEBHOOK_PAUSED");
     public static final Event WEBHOOK_UNPAUSED = new Event("WEBHOOK_UNPAUSED");
+    public static final Event UNIFIED_PERSON_MERGED = new Event("UNIFIED_PERSON_MERGED");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -133,6 +134,7 @@ public class Event {
         map.put("WEBHOOK_UNHEALTHY", WEBHOOK_UNHEALTHY);
         map.put("WEBHOOK_PAUSED", WEBHOOK_PAUSED);
         map.put("WEBHOOK_UNPAUSED", WEBHOOK_UNPAUSED);
+        map.put("UNIFIED_PERSON_MERGED", UNIFIED_PERSON_MERGED);
         return map;
     }
 
@@ -158,6 +160,7 @@ public class Event {
         map.put("WEBHOOK_UNHEALTHY", EventEnum.WEBHOOK_UNHEALTHY);
         map.put("WEBHOOK_PAUSED", EventEnum.WEBHOOK_PAUSED);
         map.put("WEBHOOK_UNPAUSED", EventEnum.WEBHOOK_UNPAUSED);
+        map.put("UNIFIED_PERSON_MERGED", EventEnum.UNIFIED_PERSON_MERGED);
         return map;
     }
     
@@ -183,7 +186,8 @@ public class Event {
         WEBHOOK_DELETED("WEBHOOK_DELETED"),
         WEBHOOK_UNHEALTHY("WEBHOOK_UNHEALTHY"),
         WEBHOOK_PAUSED("WEBHOOK_PAUSED"),
-        WEBHOOK_UNPAUSED("WEBHOOK_UNPAUSED"),;
+        WEBHOOK_UNPAUSED("WEBHOOK_UNPAUSED"),
+        UNIFIED_PERSON_MERGED("UNIFIED_PERSON_MERGED"),;
 
         private final String value;
 

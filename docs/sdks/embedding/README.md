@@ -42,7 +42,7 @@ public class Application {
                     .dimension(423d)
                     .embeddings("Venia tutis cernuus viscus officiis utilis porro utique.")
                     .encodingFormat(EncodingFormat.FLOAT)
-                    .id("4a5f6e4d-d88c-48d3-b820-16e100426e7a")
+                    .id("46010533-689a-403e-bed0-7921bace9ef5")
                     .maxTokens(223d)
                     .tokensUsed(836d)
                     .type("classification")

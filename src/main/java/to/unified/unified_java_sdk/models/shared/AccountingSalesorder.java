@@ -27,6 +27,13 @@ public class AccountingSalesorder {
     @JsonProperty("account_id")
     private String accountId;
 
+    /**
+     * amount still owed on the order (total_amount - paid_amount)
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("balance_amount")
+    private Double balanceAmount;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billing_address")
@@ -228,6 +235,7 @@ public class AccountingSalesorder {
     @JsonCreator
     public AccountingSalesorder(
             @JsonProperty("account_id") @Nullable String accountId,
+            @JsonProperty("balance_amount") @Nullable Double balanceAmount,
             @JsonProperty("billing_address") @Nullable PropertyAccountingSalesorderBillingAddress billingAddress,
             @JsonProperty("category_ids") @Nullable List<String> categoryIds,
             @JsonProperty("closed_at") @Nullable OffsetDateTime closedAt,
@@ -263,6 +271,7 @@ public class AccountingSalesorder {
             @JsonProperty("total_amount") @Nullable Double totalAmount,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
         this.accountId = accountId;
+        this.balanceAmount = balanceAmount;
         this.billingAddress = billingAddress;
         this.categoryIds = categoryIds;
         this.closedAt = closedAt;
@@ -311,7 +320,7 @@ public class AccountingSalesorder {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null, null, null);
     }
 
     /**
@@ -319,6 +328,13 @@ public class AccountingSalesorder {
      */
     public Optional<String> accountId() {
         return Optional.ofNullable(this.accountId);
+    }
+
+    /**
+     * amount still owed on the order (total_amount - paid_amount)
+     */
+    public Optional<Double> balanceAmount() {
+        return Optional.ofNullable(this.balanceAmount);
     }
 
     public Optional<PropertyAccountingSalesorderBillingAddress> billingAddress() {
@@ -509,6 +525,15 @@ public class AccountingSalesorder {
      */
     public AccountingSalesorder withAccountId(@Nullable String accountId) {
         this.accountId = accountId;
+        return this;
+    }
+
+
+    /**
+     * amount still owed on the order (total_amount - paid_amount)
+     */
+    public AccountingSalesorder withBalanceAmount(@Nullable Double balanceAmount) {
+        this.balanceAmount = balanceAmount;
         return this;
     }
 
@@ -770,6 +795,7 @@ public class AccountingSalesorder {
         AccountingSalesorder other = (AccountingSalesorder) o;
         return 
             Utils.enhancedDeepEquals(this.accountId, other.accountId) &&
+            Utils.enhancedDeepEquals(this.balanceAmount, other.balanceAmount) &&
             Utils.enhancedDeepEquals(this.billingAddress, other.billingAddress) &&
             Utils.enhancedDeepEquals(this.categoryIds, other.categoryIds) &&
             Utils.enhancedDeepEquals(this.closedAt, other.closedAt) &&
@@ -809,24 +835,25 @@ public class AccountingSalesorder {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            accountId, billingAddress, categoryIds,
-            closedAt, contactId, createdAt,
-            currency, deviceId, discountAmount,
-            employeeUserId, fees, fulfillmentType,
-            guestCount, id, lineitems,
-            locationId, metadata, orderNumber,
-            organizationId, paidAmount, payments,
-            postedAt, raw, refundedAmount,
-            salesChannel, serviceChargeAmount, shippingAddress,
-            status, subscriptionId, subtotalAmount,
-            tableId, taxAmount, tipAmount,
-            totalAmount, updatedAt);
+            accountId, balanceAmount, billingAddress,
+            categoryIds, closedAt, contactId,
+            createdAt, currency, deviceId,
+            discountAmount, employeeUserId, fees,
+            fulfillmentType, guestCount, id,
+            lineitems, locationId, metadata,
+            orderNumber, organizationId, paidAmount,
+            payments, postedAt, raw,
+            refundedAmount, salesChannel, serviceChargeAmount,
+            shippingAddress, status, subscriptionId,
+            subtotalAmount, tableId, taxAmount,
+            tipAmount, totalAmount, updatedAt);
     }
     
     @Override
     public String toString() {
         return Utils.toString(AccountingSalesorder.class,
                 "accountId", accountId,
+                "balanceAmount", balanceAmount,
                 "billingAddress", billingAddress,
                 "categoryIds", categoryIds,
                 "closedAt", closedAt,
@@ -867,6 +894,8 @@ public class AccountingSalesorder {
     public final static class Builder {
 
         private String accountId;
+
+        private Double balanceAmount;
 
         private PropertyAccountingSalesorderBillingAddress billingAddress;
 
@@ -945,6 +974,14 @@ public class AccountingSalesorder {
          */
         public Builder accountId(@Nullable String accountId) {
             this.accountId = accountId;
+            return this;
+        }
+
+        /**
+         * amount still owed on the order (total_amount - paid_amount)
+         */
+        public Builder balanceAmount(@Nullable Double balanceAmount) {
+            this.balanceAmount = balanceAmount;
             return this;
         }
 
@@ -1162,18 +1199,18 @@ public class AccountingSalesorder {
 
         public AccountingSalesorder build() {
             return new AccountingSalesorder(
-                accountId, billingAddress, categoryIds,
-                closedAt, contactId, createdAt,
-                currency, deviceId, discountAmount,
-                employeeUserId, fees, fulfillmentType,
-                guestCount, id, lineitems,
-                locationId, metadata, orderNumber,
-                organizationId, paidAmount, payments,
-                postedAt, raw, refundedAmount,
-                salesChannel, serviceChargeAmount, shippingAddress,
-                status, subscriptionId, subtotalAmount,
-                tableId, taxAmount, tipAmount,
-                totalAmount, updatedAt);
+                accountId, balanceAmount, billingAddress,
+                categoryIds, closedAt, contactId,
+                createdAt, currency, deviceId,
+                discountAmount, employeeUserId, fees,
+                fulfillmentType, guestCount, id,
+                lineitems, locationId, metadata,
+                orderNumber, organizationId, paidAmount,
+                payments, postedAt, raw,
+                refundedAmount, salesChannel, serviceChargeAmount,
+                shippingAddress, status, subscriptionId,
+                subtotalAmount, tableId, taxAmount,
+                tipAmount, totalAmount, updatedAt);
         }
 
     }

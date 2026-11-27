@@ -17,7 +17,8 @@ public enum UpdateTicketingCustomerQueryParamFields {
     TELEPHONES("telephones"),
     TAGS("tags"),
     METADATA("metadata"),
-    RAW("raw");
+    RAW("raw"),
+    UNIFIED_PERSON_IDS("__unified_person_ids");
 
     @JsonValue
     private final String value;

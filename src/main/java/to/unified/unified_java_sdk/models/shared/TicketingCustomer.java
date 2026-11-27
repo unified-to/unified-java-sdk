@@ -20,6 +20,14 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 public class TicketingCustomer {
     /**
+     * Global unified person ids: the current id first, then every id merged into it. Two records are the
+     * same person when these arrays intersect. Only returned when requested in fields
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("__unified_person_ids")
+    private List<String> unifiedPersonIds;
+
+    /**
      * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     @JsonInclude(Include.NON_ABSENT)
@@ -70,6 +78,7 @@ public class TicketingCustomer {
 
     @JsonCreator
     public TicketingCustomer(
+            @JsonProperty("__unified_person_ids") @Nullable List<String> unifiedPersonIds,
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
             @JsonProperty("emails") @Nullable List<TicketingEmail> emails,
             @JsonProperty("id") @Nullable String id,
@@ -79,6 +88,7 @@ public class TicketingCustomer {
             @JsonProperty("tags") @Nullable List<String> tags,
             @JsonProperty("telephones") @Nullable List<TicketingTelephone> telephones,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
+        this.unifiedPersonIds = unifiedPersonIds;
         this.createdAt = createdAt;
         this.emails = emails;
         this.id = id;
@@ -93,7 +103,16 @@ public class TicketingCustomer {
     public TicketingCustomer() {
         this(null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
+    }
+
+    /**
+     * Global unified person ids: the current id first, then every id merged into it. Two records are the
+     * same person when these arrays intersect. Only returned when requested in fields
+     */
+    public Optional<List<String>> unifiedPersonIds() {
+        return Optional.ofNullable(this.unifiedPersonIds);
     }
 
     /**
@@ -140,6 +159,16 @@ public class TicketingCustomer {
 
     public static Builder builder() {
         return new Builder();
+    }
+
+
+    /**
+     * Global unified person ids: the current id first, then every id merged into it. Two records are the
+     * same person when these arrays intersect. Only returned when requested in fields
+     */
+    public TicketingCustomer withUnifiedPersonIds(@Nullable List<String> unifiedPersonIds) {
+        this.unifiedPersonIds = unifiedPersonIds;
+        return this;
     }
 
 
@@ -213,6 +242,7 @@ public class TicketingCustomer {
         }
         TicketingCustomer other = (TicketingCustomer) o;
         return 
+            Utils.enhancedDeepEquals(this.unifiedPersonIds, other.unifiedPersonIds) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.emails, other.emails) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
@@ -227,14 +257,16 @@ public class TicketingCustomer {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            createdAt, emails, id,
-            metadata, name, raw,
-            tags, telephones, updatedAt);
+            unifiedPersonIds, createdAt, emails,
+            id, metadata, name,
+            raw, tags, telephones,
+            updatedAt);
     }
     
     @Override
     public String toString() {
         return Utils.toString(TicketingCustomer.class,
+                "unifiedPersonIds", unifiedPersonIds,
                 "createdAt", createdAt,
                 "emails", emails,
                 "id", id,
@@ -248,6 +280,8 @@ public class TicketingCustomer {
 
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
+
+        private List<String> unifiedPersonIds;
 
         private OffsetDateTime createdAt;
 
@@ -269,6 +303,15 @@ public class TicketingCustomer {
 
         private Builder() {
           // force use of static builder() method
+        }
+
+        /**
+         * Global unified person ids: the current id first, then every id merged into it. Two records are the
+         * same person when these arrays intersect. Only returned when requested in fields
+         */
+        public Builder unifiedPersonIds(@Nullable List<String> unifiedPersonIds) {
+            this.unifiedPersonIds = unifiedPersonIds;
+            return this;
         }
 
         /**
@@ -324,9 +367,10 @@ public class TicketingCustomer {
 
         public TicketingCustomer build() {
             return new TicketingCustomer(
-                createdAt, emails, id,
-                metadata, name, raw,
-                tags, telephones, updatedAt);
+                unifiedPersonIds, createdAt, emails,
+                id, metadata, name,
+                raw, tags, telephones,
+                updatedAt);
         }
 
     }

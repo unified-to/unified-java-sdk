@@ -39,7 +39,7 @@ The samples below show how a published SDK artifact is used:
 
 Gradle:
 ```groovy
-implementation 'to.unified:unified-java-sdk:0.50.30'
+implementation 'to.unified:unified-java-sdk:0.50.31'
 ```
 
 Maven:
@@ -47,7 +47,7 @@ Maven:
 <dependency>
     <groupId>to.unified</groupId>
     <artifactId>unified-java-sdk</artifactId>
-    <version>0.50.30</version>
+    <version>0.50.31</version>
 </dependency>
 ```
 
@@ -99,7 +99,7 @@ public class Application {
                     .currency("CAD")
                     .customerDefinedCode("6170")
                     .description("Comedo vilitas harum cupiditate animus quo iste.")
-                    .id("926fabf4-6cc0-44df-a63c-7b44d67d1db4")
+                    .id("6f1c380e-9b29-4fb5-b49c-2a7ce0ee5fe1")
                     .isPayable(false)
                     .metadata(List.of())
                     .name("Savings Account")
@@ -111,7 +111,7 @@ public class Application {
                             .originalType("peccatus")
                             .build()))
                     .type(Type.ACCOUNTS_RECEIVABLE)
-                    .updatedAt(OffsetDateTime.parse("2023-08-16T01:01:05.981Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-16T07:31:30.623Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -158,7 +158,7 @@ public class Application {
                     .currency("CAD")
                     .customerDefinedCode("6170")
                     .description("Comedo vilitas harum cupiditate animus quo iste.")
-                    .id("926fabf4-6cc0-44df-a63c-7b44d67d1db4")
+                    .id("6f1c380e-9b29-4fb5-b49c-2a7ce0ee5fe1")
                     .isPayable(false)
                     .metadata(List.of())
                     .name("Savings Account")
@@ -170,7 +170,7 @@ public class Application {
                             .originalType("peccatus")
                             .build()))
                     .type(Type.ACCOUNTS_RECEIVABLE)
-                    .updatedAt(OffsetDateTime.parse("2023-08-16T01:01:05.981Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-16T07:31:30.623Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -2406,7 +2406,10 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 
 ### [Person](docs/sdks/person/README.md)
 
+* [getUnifiedPerson](docs/sdks/person/README.md#getunifiedperson) - Retrieve a person by ID
 * [listEnrichPeople](docs/sdks/person/README.md#listenrichpeople) - Retrieve enrichment information for a person
+* [listUnifiedPeople](docs/sdks/person/README.md#listunifiedpeople) - Search for persons by email addresses
+* [removeUnifiedPerson](docs/sdks/person/README.md#removeunifiedperson) - Erase email addresses from the unified persons
 
 ### [Pipeline](docs/sdks/pipeline/README.md)
 
@@ -3234,6 +3237,7 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [getUnifiedConnection](docs/sdks/unified/README.md#getunifiedconnection) - Retrieve connection
 * [getUnifiedIntegrationAuth](docs/sdks/unified/README.md#getunifiedintegrationauth) - Authorize or re-authorize a connection
 * [getUnifiedIssue](docs/sdks/unified/README.md#getunifiedissue) - Retrieve support issue
+* [getUnifiedPerson](docs/sdks/unified/README.md#getunifiedperson) - Retrieve a person by ID
 * [getUnifiedSecretsmanager](docs/sdks/unified/README.md#getunifiedsecretsmanager) - Retrieve secrets manager
 * [getUnifiedWebhook](docs/sdks/unified/README.md#getunifiedwebhook) - Retrieve webhook by its ID
 * [getUnifiedWorkspaceintegration](docs/sdks/unified/README.md#getunifiedworkspaceintegration) - Retrieve workspace integration
@@ -3244,6 +3248,7 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [listUnifiedIntegrations](docs/sdks/unified/README.md#listunifiedintegrations) - Returns all integrations
 * [listUnifiedIssues](docs/sdks/unified/README.md#listunifiedissues) - List support issues
 * [listUnifiedNotifications](docs/sdks/unified/README.md#listunifiednotifications) - List event notifications
+* [listUnifiedPeople](docs/sdks/unified/README.md#listunifiedpeople) - Search for persons by email addresses
 * [listUnifiedSecretsmanagerInstructions](docs/sdks/unified/README.md#listunifiedsecretsmanagerinstructions) - List secrets manager setup instructions
 * [listUnifiedSecretsmanagerSecrets](docs/sdks/unified/README.md#listunifiedsecretsmanagersecrets) - List secrets in a secrets manager
 * [listUnifiedSecretsmanagers](docs/sdks/unified/README.md#listunifiedsecretsmanagers) - List secrets managers
@@ -3257,6 +3262,7 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [patchUnifiedWorkspaceintegration](docs/sdks/unified/README.md#patchunifiedworkspaceintegration) - Update workspace integration
 * [removeUnifiedConnection](docs/sdks/unified/README.md#removeunifiedconnection) - Remove connection
 * [removeUnifiedEnvironment](docs/sdks/unified/README.md#removeunifiedenvironment) - Remove an environment
+* [removeUnifiedPerson](docs/sdks/unified/README.md#removeunifiedperson) - Erase email addresses from the unified persons
 * [removeUnifiedSecretsmanager](docs/sdks/unified/README.md#removeunifiedsecretsmanager) - Remove secrets manager
 * [removeUnifiedWebhook](docs/sdks/unified/README.md#removeunifiedwebhook) - Remove webhook subscription
 * [removeUnifiedWorkspaceintegration](docs/sdks/unified/README.md#removeunifiedworkspaceintegration) - Remove workspace integration
@@ -3419,7 +3425,7 @@ public class Application {
                     .currency("CAD")
                     .customerDefinedCode("6170")
                     .description("Comedo vilitas harum cupiditate animus quo iste.")
-                    .id("926fabf4-6cc0-44df-a63c-7b44d67d1db4")
+                    .id("6f1c380e-9b29-4fb5-b49c-2a7ce0ee5fe1")
                     .isPayable(false)
                     .metadata(List.of())
                     .name("Savings Account")
@@ -3431,7 +3437,7 @@ public class Application {
                             .originalType("peccatus")
                             .build()))
                     .type(Type.ACCOUNTS_RECEIVABLE)
-                    .updatedAt(OffsetDateTime.parse("2023-08-16T01:01:05.981Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-16T07:31:30.623Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -3479,7 +3485,7 @@ public class Application {
                     .currency("CAD")
                     .customerDefinedCode("6170")
                     .description("Comedo vilitas harum cupiditate animus quo iste.")
-                    .id("926fabf4-6cc0-44df-a63c-7b44d67d1db4")
+                    .id("6f1c380e-9b29-4fb5-b49c-2a7ce0ee5fe1")
                     .isPayable(false)
                     .metadata(List.of())
                     .name("Savings Account")
@@ -3491,7 +3497,7 @@ public class Application {
                             .originalType("peccatus")
                             .build()))
                     .type(Type.ACCOUNTS_RECEIVABLE)
-                    .updatedAt(OffsetDateTime.parse("2023-08-16T01:01:05.981Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-16T07:31:30.623Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -3558,7 +3564,7 @@ public class Application {
                         .currency("CAD")
                         .customerDefinedCode("6170")
                         .description("Comedo vilitas harum cupiditate animus quo iste.")
-                        .id("926fabf4-6cc0-44df-a63c-7b44d67d1db4")
+                        .id("6f1c380e-9b29-4fb5-b49c-2a7ce0ee5fe1")
                         .isPayable(false)
                         .metadata(List.of())
                         .name("Savings Account")
@@ -3570,7 +3576,7 @@ public class Application {
                                 .originalType("peccatus")
                                 .build()))
                         .type(Type.ACCOUNTS_RECEIVABLE)
-                        .updatedAt(OffsetDateTime.parse("2023-08-16T01:01:05.981Z"))
+                        .updatedAt(OffsetDateTime.parse("2023-08-16T07:31:30.623Z"))
                         .build())
                     .connectionId("<id>")
                     .build();
@@ -3725,7 +3731,7 @@ public class Application {
                     .currency("CAD")
                     .customerDefinedCode("6170")
                     .description("Comedo vilitas harum cupiditate animus quo iste.")
-                    .id("926fabf4-6cc0-44df-a63c-7b44d67d1db4")
+                    .id("6f1c380e-9b29-4fb5-b49c-2a7ce0ee5fe1")
                     .isPayable(false)
                     .metadata(List.of())
                     .name("Savings Account")
@@ -3737,7 +3743,7 @@ public class Application {
                             .originalType("peccatus")
                             .build()))
                     .type(Type.ACCOUNTS_RECEIVABLE)
-                    .updatedAt(OffsetDateTime.parse("2023-08-16T01:01:05.981Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-16T07:31:30.623Z"))
                     .build())
                 .connectionId("<id>")
                 .build();

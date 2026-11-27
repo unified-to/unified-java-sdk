@@ -23,6 +23,14 @@ import to.unified.unified_java_sdk.utils.Utils;
  * <p>A contact represents a person that optionally is associated with a deal and/or a company
  */
 public class CrmContact {
+    /**
+     * Global unified person ids: the current id first, then every id merged into it. Two records are the
+     * same person when these arrays intersect. Only returned when requested in fields
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("__unified_person_ids")
+    private List<String> unifiedPersonIds;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
@@ -150,6 +158,7 @@ public class CrmContact {
 
     @JsonCreator
     public CrmContact(
+            @JsonProperty("__unified_person_ids") @Nullable List<String> unifiedPersonIds,
             @JsonProperty("address") @Nullable PropertyCrmContactAddress address,
             @JsonProperty("company") @Nullable String company,
             @JsonProperty("company_ids") @Nullable List<String> companyIds,
@@ -169,6 +178,7 @@ public class CrmContact {
             @JsonProperty("title") @Nullable String title,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
             @JsonProperty("user_id") @Nullable String userId) {
+        this.unifiedPersonIds = unifiedPersonIds;
         this.address = address;
         this.company = company;
         this.companyIds = companyIds;
@@ -197,7 +207,15 @@ public class CrmContact {
             null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null);
+    }
+
+    /**
+     * Global unified person ids: the current id first, then every id merged into it. Two records are the
+     * same person when these arrays intersect. Only returned when requested in fields
+     */
+    public Optional<List<String>> unifiedPersonIds() {
+        return Optional.ofNullable(this.unifiedPersonIds);
     }
 
     public Optional<PropertyCrmContactAddress> address() {
@@ -323,6 +341,16 @@ public class CrmContact {
 
     public static Builder builder() {
         return new Builder();
+    }
+
+
+    /**
+     * Global unified person ids: the current id first, then every id merged into it. Two records are the
+     * same person when these arrays intersect. Only returned when requested in fields
+     */
+    public CrmContact withUnifiedPersonIds(@Nullable List<String> unifiedPersonIds) {
+        this.unifiedPersonIds = unifiedPersonIds;
+        return this;
     }
 
 
@@ -495,6 +523,7 @@ public class CrmContact {
         }
         CrmContact other = (CrmContact) o;
         return 
+            Utils.enhancedDeepEquals(this.unifiedPersonIds, other.unifiedPersonIds) &&
             Utils.enhancedDeepEquals(this.address, other.address) &&
             Utils.enhancedDeepEquals(this.company, other.company) &&
             Utils.enhancedDeepEquals(this.companyIds, other.companyIds) &&
@@ -519,18 +548,19 @@ public class CrmContact {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            address, company, companyIds,
-            createdAt, dealIds, department,
-            emails, firstName, id,
-            imageUrl, lastName, linkUrls,
-            metadata, name, raw,
-            telephones, title, updatedAt,
-            userId);
+            unifiedPersonIds, address, company,
+            companyIds, createdAt, dealIds,
+            department, emails, firstName,
+            id, imageUrl, lastName,
+            linkUrls, metadata, name,
+            raw, telephones, title,
+            updatedAt, userId);
     }
     
     @Override
     public String toString() {
         return Utils.toString(CrmContact.class,
+                "unifiedPersonIds", unifiedPersonIds,
                 "address", address,
                 "company", company,
                 "companyIds", companyIds,
@@ -554,6 +584,8 @@ public class CrmContact {
 
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
+
+        private List<String> unifiedPersonIds;
 
         private PropertyCrmContactAddress address;
 
@@ -595,6 +627,15 @@ public class CrmContact {
 
         private Builder() {
           // force use of static builder() method
+        }
+
+        /**
+         * Global unified person ids: the current id first, then every id merged into it. Two records are the
+         * same person when these arrays intersect. Only returned when requested in fields
+         */
+        public Builder unifiedPersonIds(@Nullable List<String> unifiedPersonIds) {
+            this.unifiedPersonIds = unifiedPersonIds;
+            return this;
         }
 
         public Builder address(@Nullable PropertyCrmContactAddress address) {
@@ -739,13 +780,13 @@ public class CrmContact {
 
         public CrmContact build() {
             return new CrmContact(
-                address, company, companyIds,
-                createdAt, dealIds, department,
-                emails, firstName, id,
-                imageUrl, lastName, linkUrls,
-                metadata, name, raw,
-                telephones, title, updatedAt,
-                userId);
+                unifiedPersonIds, address, company,
+                companyIds, createdAt, dealIds,
+                department, emails, firstName,
+                id, imageUrl, lastName,
+                linkUrls, metadata, name,
+                raw, telephones, title,
+                updatedAt, userId);
         }
 
     }

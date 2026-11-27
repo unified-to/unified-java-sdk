@@ -8,10 +8,22 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 import jakarta.annotation.Nonnull;
 import jakarta.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
+import to.unified.unified_java_sdk.models.operations.GetUnifiedPersonRequest;
 import to.unified.unified_java_sdk.models.operations.ListEnrichPeopleRequest;
+import to.unified.unified_java_sdk.models.operations.ListUnifiedPeopleRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveUnifiedPersonRequest;
+import to.unified.unified_java_sdk.models.operations.async.GetUnifiedPersonRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetUnifiedPersonResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListEnrichPeopleRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListEnrichPeopleResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListUnifiedPeopleRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListUnifiedPeopleResponse;
+import to.unified.unified_java_sdk.models.operations.async.RemoveUnifiedPersonRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveUnifiedPersonResponse;
+import to.unified.unified_java_sdk.operations.GetUnifiedPerson;
 import to.unified.unified_java_sdk.operations.ListEnrichPeople;
+import to.unified.unified_java_sdk.operations.ListUnifiedPeople;
+import to.unified.unified_java_sdk.operations.RemoveUnifiedPerson;
 import to.unified.unified_java_sdk.utils.Headers;
 import to.unified.unified_java_sdk.utils.Options;
 
@@ -33,6 +45,40 @@ public class AsyncPerson {
      */
     public Person sync() {
         return syncSDK;
+    }
+
+
+    /**
+     * Retrieve a person by ID
+     * 
+     * @return The async call builder
+     */
+    public GetUnifiedPersonRequestBuilder getUnifiedPerson() {
+        return new GetUnifiedPersonRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a person by ID
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<GetUnifiedPersonResponse>} - The async response
+     */
+    public CompletableFuture<GetUnifiedPersonResponse> getUnifiedPerson(@Nonnull GetUnifiedPersonRequest request) {
+        return getUnifiedPerson(request, null);
+    }
+
+    /**
+     * Retrieve a person by ID
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<GetUnifiedPersonResponse>} - The async response
+     */
+    public CompletableFuture<GetUnifiedPersonResponse> getUnifiedPerson(@Nonnull GetUnifiedPersonRequest request, @Nullable Options options) {
+        AsyncRequestOperation<GetUnifiedPersonRequest, GetUnifiedPersonResponse> operation
+              = new GetUnifiedPerson.Async(sdkConfiguration, options, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
     }
 
 
@@ -65,6 +111,74 @@ public class AsyncPerson {
     public CompletableFuture<ListEnrichPeopleResponse> listEnrichPeople(@Nonnull ListEnrichPeopleRequest request, @Nullable Options options) {
         AsyncRequestOperation<ListEnrichPeopleRequest, ListEnrichPeopleResponse> operation
               = new ListEnrichPeople.Async(sdkConfiguration, options, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Search for persons by email addresses
+     * 
+     * @return The async call builder
+     */
+    public ListUnifiedPeopleRequestBuilder listUnifiedPeople() {
+        return new ListUnifiedPeopleRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Search for persons by email addresses
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<ListUnifiedPeopleResponse>} - The async response
+     */
+    public CompletableFuture<ListUnifiedPeopleResponse> listUnifiedPeople(@Nonnull ListUnifiedPeopleRequest request) {
+        return listUnifiedPeople(request, null);
+    }
+
+    /**
+     * Search for persons by email addresses
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<ListUnifiedPeopleResponse>} - The async response
+     */
+    public CompletableFuture<ListUnifiedPeopleResponse> listUnifiedPeople(@Nonnull ListUnifiedPeopleRequest request, @Nullable Options options) {
+        AsyncRequestOperation<ListUnifiedPeopleRequest, ListUnifiedPeopleResponse> operation
+              = new ListUnifiedPeople.Async(sdkConfiguration, options, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Erase email addresses from the unified persons
+     * 
+     * @return The async call builder
+     */
+    public RemoveUnifiedPersonRequestBuilder removeUnifiedPerson() {
+        return new RemoveUnifiedPersonRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Erase email addresses from the unified persons
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<RemoveUnifiedPersonResponse>} - The async response
+     */
+    public CompletableFuture<RemoveUnifiedPersonResponse> removeUnifiedPerson(@Nonnull RemoveUnifiedPersonRequest request) {
+        return removeUnifiedPerson(request, null);
+    }
+
+    /**
+     * Erase email addresses from the unified persons
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return {@code CompletableFuture<RemoveUnifiedPersonResponse>} - The async response
+     */
+    public CompletableFuture<RemoveUnifiedPersonResponse> removeUnifiedPerson(@Nonnull RemoveUnifiedPersonRequest request, @Nullable Options options) {
+        AsyncRequestOperation<RemoveUnifiedPersonRequest, RemoveUnifiedPersonResponse> operation
+              = new RemoveUnifiedPerson.Async(sdkConfiguration, options, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

@@ -8,6 +8,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.annotation.Nullable;
+import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Object;
 import java.lang.Override;
@@ -25,6 +26,22 @@ public class GenaiPrompt {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("answers")
     private List<GenaiAnswer> answers;
+
+    /**
+     * Ask the LLM API to keep this conversation so that a later prompt can continue it with parent_id (eg.
+     * Anthropic message threads, which are kept for about 5 minutes).
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("has_thread")
+    private Boolean hasThread;
+
+    /**
+     * The id of this prompt, returned by the LLM API. Send it as parent_id on the next prompt to continue
+     * the conversation.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("id")
+    private String id;
 
     /**
      * a float between 0-1
@@ -68,6 +85,17 @@ public class GenaiPrompt {
     private String modelId;
 
     /**
+     * The id of the previous prompt (genai_prompt) that this prompt continues. When set, messages holds
+     * only the new messages; the LLM API keeps the earlier ones (eg. Anthropic message threads, OpenAI
+     * previous_response_id).
+     * 
+     * <p>If the LLM API no longer has that prompt, send the full conversation again without parent_id.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("parent_id")
+    private String parentId;
+
+    /**
      * Typed questions to evaluate against the messages (for decision models such as TypeSafe Jev).
      */
     @JsonInclude(Include.NON_ABSENT)
@@ -106,12 +134,15 @@ public class GenaiPrompt {
     @JsonCreator
     public GenaiPrompt(
             @JsonProperty("answers") @Nullable List<GenaiAnswer> answers,
+            @JsonProperty("has_thread") @Nullable Boolean hasThread,
+            @JsonProperty("id") @Nullable String id,
             @JsonProperty("max_tokens") @Nullable Double maxTokens,
             @JsonProperty("mcp_authorization_token") @Nullable String mcpAuthorizationToken,
             @JsonProperty("mcp_deferred_tools") @Nullable List<String> mcpDeferredTools,
             @JsonProperty("mcp_url") @Nullable String mcpUrl,
             @JsonProperty("messages") @Nullable List<GenaiContent> messages,
             @JsonProperty("model_id") @Nullable String modelId,
+            @JsonProperty("parent_id") @Nullable String parentId,
             @JsonProperty("questions") @Nullable List<GenaiQuestion> questions,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("responses") @Nullable List<String> responses,
@@ -119,12 +150,15 @@ public class GenaiPrompt {
             @JsonProperty("temperature") @Nullable Double temperature,
             @JsonProperty("tokens_used") @Nullable Double tokensUsed) {
         this.answers = answers;
+        this.hasThread = hasThread;
+        this.id = id;
         this.maxTokens = maxTokens;
         this.mcpAuthorizationToken = mcpAuthorizationToken;
         this.mcpDeferredTools = mcpDeferredTools;
         this.mcpUrl = mcpUrl;
         this.messages = messages;
         this.modelId = modelId;
+        this.parentId = parentId;
         this.questions = questions;
         this.raw = raw;
         this.responses = responses;
@@ -138,6 +172,7 @@ public class GenaiPrompt {
             null, null, null,
             null, null, null,
             null, null, null,
+            null, null, null,
             null);
     }
 
@@ -146,6 +181,22 @@ public class GenaiPrompt {
      */
     public Optional<List<GenaiAnswer>> answers() {
         return Optional.ofNullable(this.answers);
+    }
+
+    /**
+     * Ask the LLM API to keep this conversation so that a later prompt can continue it with parent_id (eg.
+     * Anthropic message threads, which are kept for about 5 minutes).
+     */
+    public Optional<Boolean> hasThread() {
+        return Optional.ofNullable(this.hasThread);
+    }
+
+    /**
+     * The id of this prompt, returned by the LLM API. Send it as parent_id on the next prompt to continue
+     * the conversation.
+     */
+    public Optional<String> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -186,6 +237,17 @@ public class GenaiPrompt {
      */
     public Optional<String> modelId() {
         return Optional.ofNullable(this.modelId);
+    }
+
+    /**
+     * The id of the previous prompt (genai_prompt) that this prompt continues. When set, messages holds
+     * only the new messages; the LLM API keeps the earlier ones (eg. Anthropic message threads, OpenAI
+     * previous_response_id).
+     * 
+     * <p>If the LLM API no longer has that prompt, send the full conversation again without parent_id.
+     */
+    public Optional<String> parentId() {
+        return Optional.ofNullable(this.parentId);
     }
 
     /**
@@ -231,6 +293,26 @@ public class GenaiPrompt {
      */
     public GenaiPrompt withAnswers(@Nullable List<GenaiAnswer> answers) {
         this.answers = answers;
+        return this;
+    }
+
+
+    /**
+     * Ask the LLM API to keep this conversation so that a later prompt can continue it with parent_id (eg.
+     * Anthropic message threads, which are kept for about 5 minutes).
+     */
+    public GenaiPrompt withHasThread(@Nullable Boolean hasThread) {
+        this.hasThread = hasThread;
+        return this;
+    }
+
+
+    /**
+     * The id of this prompt, returned by the LLM API. Send it as parent_id on the next prompt to continue
+     * the conversation.
+     */
+    public GenaiPrompt withId(@Nullable String id) {
+        this.id = id;
         return this;
     }
 
@@ -283,6 +365,19 @@ public class GenaiPrompt {
      */
     public GenaiPrompt withModelId(@Nullable String modelId) {
         this.modelId = modelId;
+        return this;
+    }
+
+
+    /**
+     * The id of the previous prompt (genai_prompt) that this prompt continues. When set, messages holds
+     * only the new messages; the LLM API keeps the earlier ones (eg. Anthropic message threads, OpenAI
+     * previous_response_id).
+     * 
+     * <p>If the LLM API no longer has that prompt, send the full conversation again without parent_id.
+     */
+    public GenaiPrompt withParentId(@Nullable String parentId) {
+        this.parentId = parentId;
         return this;
     }
 
@@ -343,12 +438,15 @@ public class GenaiPrompt {
         GenaiPrompt other = (GenaiPrompt) o;
         return 
             Utils.enhancedDeepEquals(this.answers, other.answers) &&
+            Utils.enhancedDeepEquals(this.hasThread, other.hasThread) &&
+            Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.maxTokens, other.maxTokens) &&
             Utils.enhancedDeepEquals(this.mcpAuthorizationToken, other.mcpAuthorizationToken) &&
             Utils.enhancedDeepEquals(this.mcpDeferredTools, other.mcpDeferredTools) &&
             Utils.enhancedDeepEquals(this.mcpUrl, other.mcpUrl) &&
             Utils.enhancedDeepEquals(this.messages, other.messages) &&
             Utils.enhancedDeepEquals(this.modelId, other.modelId) &&
+            Utils.enhancedDeepEquals(this.parentId, other.parentId) &&
             Utils.enhancedDeepEquals(this.questions, other.questions) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.responses, other.responses) &&
@@ -360,9 +458,10 @@ public class GenaiPrompt {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            answers, maxTokens, mcpAuthorizationToken,
-            mcpDeferredTools, mcpUrl, messages,
-            modelId, questions, raw,
+            answers, hasThread, id,
+            maxTokens, mcpAuthorizationToken, mcpDeferredTools,
+            mcpUrl, messages, modelId,
+            parentId, questions, raw,
             responses, skillIds, temperature,
             tokensUsed);
     }
@@ -371,12 +470,15 @@ public class GenaiPrompt {
     public String toString() {
         return Utils.toString(GenaiPrompt.class,
                 "answers", answers,
+                "hasThread", hasThread,
+                "id", id,
                 "maxTokens", maxTokens,
                 "mcpAuthorizationToken", mcpAuthorizationToken,
                 "mcpDeferredTools", mcpDeferredTools,
                 "mcpUrl", mcpUrl,
                 "messages", messages,
                 "modelId", modelId,
+                "parentId", parentId,
                 "questions", questions,
                 "raw", raw,
                 "responses", responses,
@@ -390,6 +492,10 @@ public class GenaiPrompt {
 
         private List<GenaiAnswer> answers;
 
+        private Boolean hasThread;
+
+        private String id;
+
         private Double maxTokens;
 
         private String mcpAuthorizationToken;
@@ -401,6 +507,8 @@ public class GenaiPrompt {
         private List<GenaiContent> messages;
 
         private String modelId;
+
+        private String parentId;
 
         private List<GenaiQuestion> questions;
 
@@ -423,6 +531,24 @@ public class GenaiPrompt {
          */
         public Builder answers(@Nullable List<GenaiAnswer> answers) {
             this.answers = answers;
+            return this;
+        }
+
+        /**
+         * Ask the LLM API to keep this conversation so that a later prompt can continue it with parent_id (eg.
+         * Anthropic message threads, which are kept for about 5 minutes).
+         */
+        public Builder hasThread(@Nullable Boolean hasThread) {
+            this.hasThread = hasThread;
+            return this;
+        }
+
+        /**
+         * The id of this prompt, returned by the LLM API. Send it as parent_id on the next prompt to continue
+         * the conversation.
+         */
+        public Builder id(@Nullable String id) {
+            this.id = id;
             return this;
         }
 
@@ -473,6 +599,18 @@ public class GenaiPrompt {
         }
 
         /**
+         * The id of the previous prompt (genai_prompt) that this prompt continues. When set, messages holds
+         * only the new messages; the LLM API keeps the earlier ones (eg. Anthropic message threads, OpenAI
+         * previous_response_id).
+         * 
+         * <p>If the LLM API no longer has that prompt, send the full conversation again without parent_id.
+         */
+        public Builder parentId(@Nullable String parentId) {
+            this.parentId = parentId;
+            return this;
+        }
+
+        /**
          * Typed questions to evaluate against the messages (for decision models such as TypeSafe Jev).
          */
         public Builder questions(@Nullable List<GenaiQuestion> questions) {
@@ -513,9 +651,10 @@ public class GenaiPrompt {
 
         public GenaiPrompt build() {
             return new GenaiPrompt(
-                answers, maxTokens, mcpAuthorizationToken,
-                mcpDeferredTools, mcpUrl, messages,
-                modelId, questions, raw,
+                answers, hasThread, id,
+                maxTokens, mcpAuthorizationToken, mcpDeferredTools,
+                mcpUrl, messages, modelId,
+                parentId, questions, raw,
                 responses, skillIds, temperature,
                 tokensUsed);
         }

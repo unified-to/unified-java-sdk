@@ -14,6 +14,7 @@
 * [getUnifiedConnection](#getunifiedconnection) - Retrieve connection
 * [getUnifiedIntegrationAuth](#getunifiedintegrationauth) - Authorize or re-authorize a connection
 * [getUnifiedIssue](#getunifiedissue) - Retrieve support issue
+* [getUnifiedPerson](#getunifiedperson) - Retrieve a person by ID
 * [getUnifiedSecretsmanager](#getunifiedsecretsmanager) - Retrieve secrets manager
 * [getUnifiedWebhook](#getunifiedwebhook) - Retrieve webhook by its ID
 * [getUnifiedWorkspaceintegration](#getunifiedworkspaceintegration) - Retrieve workspace integration
@@ -24,6 +25,7 @@
 * [listUnifiedIntegrations](#listunifiedintegrations) - Returns all integrations
 * [listUnifiedIssues](#listunifiedissues) - List support issues
 * [listUnifiedNotifications](#listunifiednotifications) - List event notifications
+* [listUnifiedPeople](#listunifiedpeople) - Search for persons by email addresses
 * [listUnifiedSecretsmanagerInstructions](#listunifiedsecretsmanagerinstructions) - List secrets manager setup instructions
 * [listUnifiedSecretsmanagerSecrets](#listunifiedsecretsmanagersecrets) - List secrets in a secrets manager
 * [listUnifiedSecretsmanagers](#listunifiedsecretsmanagers) - List secrets managers
@@ -37,6 +39,7 @@
 * [patchUnifiedWorkspaceintegration](#patchunifiedworkspaceintegration) - Update workspace integration
 * [removeUnifiedConnection](#removeunifiedconnection) - Remove connection
 * [removeUnifiedEnvironment](#removeunifiedenvironment) - Remove an environment
+* [removeUnifiedPerson](#removeunifiedperson) - Erase email addresses from the unified persons
 * [removeUnifiedSecretsmanager](#removeunifiedsecretsmanager) - Remove secrets manager
 * [removeUnifiedWebhook](#removeunifiedwebhook) - Remove webhook subscription
 * [removeUnifiedWorkspaceintegration](#removeunifiedworkspaceintegration) - Remove workspace integration
@@ -629,6 +632,63 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## getUnifiedPerson
+
+Retrieve a person by ID
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="getUnifiedPerson" method="get" path="/unified/person/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetUnifiedPersonRequest;
+import to.unified.unified_java_sdk.models.operations.GetUnifiedPersonResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        GetUnifiedPersonRequest req = GetUnifiedPersonRequest.builder()
+                .id("<id>")
+                .build();
+
+        GetUnifiedPersonResponse res = sdk.unified().getUnifiedPerson()
+                .request(req)
+                .call();
+
+        if (res.person().isPresent()) {
+            System.out.println(res.person().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [GetUnifiedPersonRequest](../../models/operations/GetUnifiedPersonRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+
+### Response
+
+**[GetUnifiedPersonResponse](../../models/operations/GetUnifiedPersonResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## getUnifiedSecretsmanager
 
 Retrieve secrets manager
@@ -1150,6 +1210,63 @@ public class Application {
 ### Response
 
 **[ListUnifiedNotificationsResponse](../../models/operations/ListUnifiedNotificationsResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## listUnifiedPeople
+
+Search for persons by email addresses
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listUnifiedPeople" method="get" path="/unified/person" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListUnifiedPeopleRequest;
+import to.unified.unified_java_sdk.models.operations.ListUnifiedPeopleResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListUnifiedPeopleRequest req = ListUnifiedPeopleRequest.builder()
+                .query("<value>")
+                .build();
+
+        ListUnifiedPeopleResponse res = sdk.unified().listUnifiedPeople()
+                .request(req)
+                .call();
+
+        if (res.people().isPresent()) {
+            System.out.println(res.people().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [ListUnifiedPeopleRequest](../../models/operations/ListUnifiedPeopleRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+
+### Response
+
+**[ListUnifiedPeopleResponse](../../models/operations/ListUnifiedPeopleResponse.md)**
 
 ### Errors
 
@@ -1880,6 +1997,61 @@ public class Application {
 ### Response
 
 **[RemoveUnifiedEnvironmentResponse](../../models/operations/RemoveUnifiedEnvironmentResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## removeUnifiedPerson
+
+Erase email addresses from the unified persons
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="removeUnifiedPerson" method="delete" path="/unified/person" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveUnifiedPersonRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveUnifiedPersonResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemoveUnifiedPersonRequest req = RemoveUnifiedPersonRequest.builder()
+                .query("<value>")
+                .build();
+
+        RemoveUnifiedPersonResponse res = sdk.unified().removeUnifiedPerson()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [RemoveUnifiedPersonRequest](../../models/operations/RemoveUnifiedPersonRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+
+### Response
+
+**[RemoveUnifiedPersonResponse](../../models/operations/RemoveUnifiedPersonResponse.md)**
 
 ### Errors
 

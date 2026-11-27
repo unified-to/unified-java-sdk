@@ -20,6 +20,14 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 public class LmsInstructor {
     /**
+     * Global unified person ids: the current id first, then every id merged into it. Two records are the
+     * same person when these arrays intersect. Only returned when requested in fields
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("__unified_person_ids")
+    private List<String> unifiedPersonIds;
+
+    /**
      * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     @JsonInclude(Include.NON_ABSENT)
@@ -85,6 +93,7 @@ public class LmsInstructor {
 
     @JsonCreator
     public LmsInstructor(
+            @JsonProperty("__unified_person_ids") @Nullable List<String> unifiedPersonIds,
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
             @JsonProperty("emails") @Nullable List<LmsEmail> emails,
             @JsonProperty("first_name") @Nullable String firstName,
@@ -97,6 +106,7 @@ public class LmsInstructor {
             @JsonProperty("telephones") @Nullable List<LmsTelephone> telephones,
             @JsonProperty("title") @Nullable String title,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
+        this.unifiedPersonIds = unifiedPersonIds;
         this.createdAt = createdAt;
         this.emails = emails;
         this.firstName = firstName;
@@ -115,7 +125,16 @@ public class LmsInstructor {
         this(null, null, null,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
+    }
+
+    /**
+     * Global unified person ids: the current id first, then every id merged into it. Two records are the
+     * same person when these arrays intersect. Only returned when requested in fields
+     */
+    public Optional<List<String>> unifiedPersonIds() {
+        return Optional.ofNullable(this.unifiedPersonIds);
     }
 
     /**
@@ -174,6 +193,16 @@ public class LmsInstructor {
 
     public static Builder builder() {
         return new Builder();
+    }
+
+
+    /**
+     * Global unified person ids: the current id first, then every id merged into it. Two records are the
+     * same person when these arrays intersect. Only returned when requested in fields
+     */
+    public LmsInstructor withUnifiedPersonIds(@Nullable List<String> unifiedPersonIds) {
+        this.unifiedPersonIds = unifiedPersonIds;
+        return this;
     }
 
 
@@ -265,6 +294,7 @@ public class LmsInstructor {
         }
         LmsInstructor other = (LmsInstructor) o;
         return 
+            Utils.enhancedDeepEquals(this.unifiedPersonIds, other.unifiedPersonIds) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.emails, other.emails) &&
             Utils.enhancedDeepEquals(this.firstName, other.firstName) &&
@@ -282,15 +312,17 @@ public class LmsInstructor {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            createdAt, emails, firstName,
-            id, imageUrl, lastName,
-            metadata, name, raw,
-            telephones, title, updatedAt);
+            unifiedPersonIds, createdAt, emails,
+            firstName, id, imageUrl,
+            lastName, metadata, name,
+            raw, telephones, title,
+            updatedAt);
     }
     
     @Override
     public String toString() {
         return Utils.toString(LmsInstructor.class,
+                "unifiedPersonIds", unifiedPersonIds,
                 "createdAt", createdAt,
                 "emails", emails,
                 "firstName", firstName,
@@ -307,6 +339,8 @@ public class LmsInstructor {
 
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
+
+        private List<String> unifiedPersonIds;
 
         private OffsetDateTime createdAt;
 
@@ -334,6 +368,15 @@ public class LmsInstructor {
 
         private Builder() {
           // force use of static builder() method
+        }
+
+        /**
+         * Global unified person ids: the current id first, then every id merged into it. Two records are the
+         * same person when these arrays intersect. Only returned when requested in fields
+         */
+        public Builder unifiedPersonIds(@Nullable List<String> unifiedPersonIds) {
+            this.unifiedPersonIds = unifiedPersonIds;
+            return this;
         }
 
         /**
@@ -404,10 +447,11 @@ public class LmsInstructor {
 
         public LmsInstructor build() {
             return new LmsInstructor(
-                createdAt, emails, firstName,
-                id, imageUrl, lastName,
-                metadata, name, raw,
-                telephones, title, updatedAt);
+                unifiedPersonIds, createdAt, emails,
+                firstName, id, imageUrl,
+                lastName, metadata, name,
+                raw, telephones, title,
+                updatedAt);
         }
 
     }

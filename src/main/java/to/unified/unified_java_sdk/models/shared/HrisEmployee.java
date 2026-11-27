@@ -21,6 +21,14 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class HrisEmployee {
+    /**
+     * Global unified person ids: the current id first, then every id merged into it. Two records are the
+     * same person when these arrays intersect. Only returned when requested in fields
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("__unified_person_ids")
+    private List<String> unifiedPersonIds;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
@@ -335,6 +343,7 @@ public class HrisEmployee {
 
     @JsonCreator
     public HrisEmployee(
+            @JsonProperty("__unified_person_ids") @Nullable List<String> unifiedPersonIds,
             @JsonProperty("address") @Nullable PropertyHrisEmployeeAddress address,
             @JsonProperty("bio") @Nullable String bio,
             @JsonProperty("company_id") @Nullable String companyId,
@@ -386,6 +395,7 @@ public class HrisEmployee {
             @JsonProperty("timezone") @Nullable String timezone,
             @JsonProperty("title") @Nullable String title,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
+        this.unifiedPersonIds = unifiedPersonIds;
         this.address = address;
         this.bio = bio;
         this.companyId = companyId;
@@ -456,7 +466,16 @@ public class HrisEmployee {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
+    }
+
+    /**
+     * Global unified person ids: the current id first, then every id merged into it. Two records are the
+     * same person when these arrays intersect. Only returned when requested in fields
+     */
+    public Optional<List<String>> unifiedPersonIds() {
+        return Optional.ofNullable(this.unifiedPersonIds);
     }
 
     public Optional<PropertyHrisEmployeeAddress> address() {
@@ -749,6 +768,16 @@ public class HrisEmployee {
 
     public static Builder builder() {
         return new Builder();
+    }
+
+
+    /**
+     * Global unified person ids: the current id first, then every id merged into it. Two records are the
+     * same person when these arrays intersect. Only returned when requested in fields
+     */
+    public HrisEmployee withUnifiedPersonIds(@Nullable List<String> unifiedPersonIds) {
+        this.unifiedPersonIds = unifiedPersonIds;
+        return this;
     }
 
 
@@ -1152,6 +1181,7 @@ public class HrisEmployee {
         }
         HrisEmployee other = (HrisEmployee) o;
         return 
+            Utils.enhancedDeepEquals(this.unifiedPersonIds, other.unifiedPersonIds) &&
             Utils.enhancedDeepEquals(this.address, other.address) &&
             Utils.enhancedDeepEquals(this.bio, other.bio) &&
             Utils.enhancedDeepEquals(this.companyId, other.companyId) &&
@@ -1208,28 +1238,30 @@ public class HrisEmployee {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            address, bio, companyId,
-            compensation, createdAt, currency,
-            dateOfBirth, emails, employeeNumber,
-            employeeRoles, employmentStatus, employmentStatusReason,
-            employmentType, firstName, flsaStatus,
-            gender, groups, hasMfa,
-            hiredAt, id, imageUrl,
-            jobId, languageLocale, lastName,
-            leaveEndAt, leaveStartAt, locations,
-            managerId, maritalStatus, metadata,
-            name, payFrequency, pronouns,
-            raw, rehiredAt, relationships,
-            salutation, seniorityStartedAt, serviceStartedAt,
-            ssnSin, storageQuotaAllocated, storageQuotaAvailable,
-            storageQuotaUsed, telephones, terminatedAt,
-            terminationReason, timeoffDaysTotal, timeoffDaysUsed,
-            timezone, title, updatedAt);
+            unifiedPersonIds, address, bio,
+            companyId, compensation, createdAt,
+            currency, dateOfBirth, emails,
+            employeeNumber, employeeRoles, employmentStatus,
+            employmentStatusReason, employmentType, firstName,
+            flsaStatus, gender, groups,
+            hasMfa, hiredAt, id,
+            imageUrl, jobId, languageLocale,
+            lastName, leaveEndAt, leaveStartAt,
+            locations, managerId, maritalStatus,
+            metadata, name, payFrequency,
+            pronouns, raw, rehiredAt,
+            relationships, salutation, seniorityStartedAt,
+            serviceStartedAt, ssnSin, storageQuotaAllocated,
+            storageQuotaAvailable, storageQuotaUsed, telephones,
+            terminatedAt, terminationReason, timeoffDaysTotal,
+            timeoffDaysUsed, timezone, title,
+            updatedAt);
     }
     
     @Override
     public String toString() {
         return Utils.toString(HrisEmployee.class,
+                "unifiedPersonIds", unifiedPersonIds,
                 "address", address,
                 "bio", bio,
                 "companyId", companyId,
@@ -1285,6 +1317,8 @@ public class HrisEmployee {
 
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
+
+        private List<String> unifiedPersonIds;
 
         private PropertyHrisEmployeeAddress address;
 
@@ -1390,6 +1424,15 @@ public class HrisEmployee {
 
         private Builder() {
           // force use of static builder() method
+        }
+
+        /**
+         * Global unified person ids: the current id first, then every id merged into it. Two records are the
+         * same person when these arrays intersect. Only returned when requested in fields
+         */
+        public Builder unifiedPersonIds(@Nullable List<String> unifiedPersonIds) {
+            this.unifiedPersonIds = unifiedPersonIds;
+            return this;
         }
 
         public Builder address(@Nullable PropertyHrisEmployeeAddress address) {
@@ -1733,23 +1776,24 @@ public class HrisEmployee {
 
         public HrisEmployee build() {
             return new HrisEmployee(
-                address, bio, companyId,
-                compensation, createdAt, currency,
-                dateOfBirth, emails, employeeNumber,
-                employeeRoles, employmentStatus, employmentStatusReason,
-                employmentType, firstName, flsaStatus,
-                gender, groups, hasMfa,
-                hiredAt, id, imageUrl,
-                jobId, languageLocale, lastName,
-                leaveEndAt, leaveStartAt, locations,
-                managerId, maritalStatus, metadata,
-                name, payFrequency, pronouns,
-                raw, rehiredAt, relationships,
-                salutation, seniorityStartedAt, serviceStartedAt,
-                ssnSin, storageQuotaAllocated, storageQuotaAvailable,
-                storageQuotaUsed, telephones, terminatedAt,
-                terminationReason, timeoffDaysTotal, timeoffDaysUsed,
-                timezone, title, updatedAt);
+                unifiedPersonIds, address, bio,
+                companyId, compensation, createdAt,
+                currency, dateOfBirth, emails,
+                employeeNumber, employeeRoles, employmentStatus,
+                employmentStatusReason, employmentType, firstName,
+                flsaStatus, gender, groups,
+                hasMfa, hiredAt, id,
+                imageUrl, jobId, languageLocale,
+                lastName, leaveEndAt, leaveStartAt,
+                locations, managerId, maritalStatus,
+                metadata, name, payFrequency,
+                pronouns, raw, rehiredAt,
+                relationships, salutation, seniorityStartedAt,
+                serviceStartedAt, ssnSin, storageQuotaAllocated,
+                storageQuotaAvailable, storageQuotaUsed, telephones,
+                terminatedAt, terminationReason, timeoffDaysTotal,
+                timeoffDaysUsed, timezone, title,
+                updatedAt);
         }
 
     }

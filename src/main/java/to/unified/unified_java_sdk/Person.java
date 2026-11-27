@@ -7,10 +7,22 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import jakarta.annotation.Nonnull;
 import jakarta.annotation.Nullable;
+import to.unified.unified_java_sdk.models.operations.GetUnifiedPersonRequest;
+import to.unified.unified_java_sdk.models.operations.GetUnifiedPersonRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetUnifiedPersonResponse;
 import to.unified.unified_java_sdk.models.operations.ListEnrichPeopleRequest;
 import to.unified.unified_java_sdk.models.operations.ListEnrichPeopleRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListEnrichPeopleResponse;
+import to.unified.unified_java_sdk.models.operations.ListUnifiedPeopleRequest;
+import to.unified.unified_java_sdk.models.operations.ListUnifiedPeopleRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListUnifiedPeopleResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveUnifiedPersonRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveUnifiedPersonRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveUnifiedPersonResponse;
+import to.unified.unified_java_sdk.operations.GetUnifiedPerson;
 import to.unified.unified_java_sdk.operations.ListEnrichPeople;
+import to.unified.unified_java_sdk.operations.ListUnifiedPeople;
+import to.unified.unified_java_sdk.operations.RemoveUnifiedPerson;
 import to.unified.unified_java_sdk.utils.Headers;
 import to.unified.unified_java_sdk.utils.Options;
 
@@ -32,6 +44,40 @@ public class Person {
      */
     public AsyncPerson async() {
         return asyncSDK;
+    }
+
+    /**
+     * Retrieve a person by ID
+     * 
+     * @return The call builder
+     */
+    public GetUnifiedPersonRequestBuilder getUnifiedPerson() {
+        return new GetUnifiedPersonRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a person by ID
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetUnifiedPersonResponse getUnifiedPerson(@Nonnull GetUnifiedPersonRequest request) {
+        return getUnifiedPerson(request, null);
+    }
+
+    /**
+     * Retrieve a person by ID
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetUnifiedPersonResponse getUnifiedPerson(@Nonnull GetUnifiedPersonRequest request, @Nullable Options options) {
+        RequestOperation<GetUnifiedPersonRequest, GetUnifiedPersonResponse> operation
+              = new GetUnifiedPerson.Sync(sdkConfiguration, options, _headers);
+        return operation.handleResponse(operation.doRequest(request));
     }
 
     /**
@@ -65,6 +111,74 @@ public class Person {
     public ListEnrichPeopleResponse listEnrichPeople(@Nonnull ListEnrichPeopleRequest request, @Nullable Options options) {
         RequestOperation<ListEnrichPeopleRequest, ListEnrichPeopleResponse> operation
               = new ListEnrichPeople.Sync(sdkConfiguration, options, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Search for persons by email addresses
+     * 
+     * @return The call builder
+     */
+    public ListUnifiedPeopleRequestBuilder listUnifiedPeople() {
+        return new ListUnifiedPeopleRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Search for persons by email addresses
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListUnifiedPeopleResponse listUnifiedPeople(@Nonnull ListUnifiedPeopleRequest request) {
+        return listUnifiedPeople(request, null);
+    }
+
+    /**
+     * Search for persons by email addresses
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListUnifiedPeopleResponse listUnifiedPeople(@Nonnull ListUnifiedPeopleRequest request, @Nullable Options options) {
+        RequestOperation<ListUnifiedPeopleRequest, ListUnifiedPeopleResponse> operation
+              = new ListUnifiedPeople.Sync(sdkConfiguration, options, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Erase email addresses from the unified persons
+     * 
+     * @return The call builder
+     */
+    public RemoveUnifiedPersonRequestBuilder removeUnifiedPerson() {
+        return new RemoveUnifiedPersonRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Erase email addresses from the unified persons
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveUnifiedPersonResponse removeUnifiedPerson(@Nonnull RemoveUnifiedPersonRequest request) {
+        return removeUnifiedPerson(request, null);
+    }
+
+    /**
+     * Erase email addresses from the unified persons
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @param options additional options
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveUnifiedPersonResponse removeUnifiedPerson(@Nonnull RemoveUnifiedPersonRequest request, @Nullable Options options) {
+        RequestOperation<RemoveUnifiedPersonRequest, RemoveUnifiedPersonResponse> operation
+              = new RemoveUnifiedPerson.Sync(sdkConfiguration, options, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

@@ -20,7 +20,8 @@ public enum UpdateLmsStudentQueryParamFields {
     ADDRESS("address"),
     IMAGE_URL("image_url"),
     METADATA("metadata"),
-    RAW("raw");
+    RAW("raw"),
+    UNIFIED_PERSON_IDS("__unified_person_ids");
 
     @JsonValue
     private final String value;

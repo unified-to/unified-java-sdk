@@ -31,7 +31,8 @@ public enum ListHealthcarePatientsQueryParamFields {
     MARITAL_STATUS("marital_status"),
     CONTACTS("contacts"),
     METADATA("metadata"),
-    RAW("raw");
+    RAW("raw"),
+    UNIFIED_PERSON_IDS("__unified_person_ids");
 
     @JsonValue
     private final String value;

@@ -25,6 +25,14 @@ import to.unified.unified_java_sdk.utils.Utils;
  */
 public class EnrichPerson {
     /**
+     * Global unified person ids: the current id first, then every id merged into it. Two records are the
+     * same person when these arrays intersect. Only returned when requested in fields
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("__unified_person_ids")
+    private List<String> unifiedPersonIds;
+
+    /**
      * The address of the person
      */
     @JsonInclude(Include.NON_ABSENT)
@@ -202,6 +210,7 @@ public class EnrichPerson {
 
     @JsonCreator
     public EnrichPerson(
+            @JsonProperty("__unified_person_ids") @Nullable List<String> unifiedPersonIds,
             @JsonProperty("address") @Nullable PropertyEnrichPersonAddress address,
             @JsonProperty("bio") @Nullable String bio,
             @JsonProperty("birthdate") @Nullable String birthdate,
@@ -228,6 +237,7 @@ public class EnrichPerson {
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
             @JsonProperty("utc_offset") @Nullable Double utcOffset,
             @JsonProperty("work_histories") @Nullable List<EnrichPersonWorkHistory> workHistories) {
+        this.unifiedPersonIds = unifiedPersonIds;
         this.address = address;
         this.bio = bio;
         this.birthdate = birthdate;
@@ -265,7 +275,15 @@ public class EnrichPerson {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null, null, null);
+    }
+
+    /**
+     * Global unified person ids: the current id first, then every id merged into it. Two records are the
+     * same person when these arrays intersect. Only returned when requested in fields
+     */
+    public Optional<List<String>> unifiedPersonIds() {
+        return Optional.ofNullable(this.unifiedPersonIds);
     }
 
     /**
@@ -443,6 +461,16 @@ public class EnrichPerson {
 
     public static Builder builder() {
         return new Builder();
+    }
+
+
+    /**
+     * Global unified person ids: the current id first, then every id merged into it. Two records are the
+     * same person when these arrays intersect. Only returned when requested in fields
+     */
+    public EnrichPerson withUnifiedPersonIds(@Nullable List<String> unifiedPersonIds) {
+        this.unifiedPersonIds = unifiedPersonIds;
+        return this;
     }
 
 
@@ -681,6 +709,7 @@ public class EnrichPerson {
         }
         EnrichPerson other = (EnrichPerson) o;
         return 
+            Utils.enhancedDeepEquals(this.unifiedPersonIds, other.unifiedPersonIds) &&
             Utils.enhancedDeepEquals(this.address, other.address) &&
             Utils.enhancedDeepEquals(this.bio, other.bio) &&
             Utils.enhancedDeepEquals(this.birthdate, other.birthdate) &&
@@ -712,20 +741,21 @@ public class EnrichPerson {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            address, bio, birthdate,
-            company, companyDomain, createdAt,
-            emails, facebookUrl, firstName,
-            gender, githubUrl, githubUsername,
-            id, imageUrl, lastName,
-            linkedinUrl, name, raw,
-            telephones, timezone, title,
-            twitterHandle, twitterUrl, updatedAt,
-            utcOffset, workHistories);
+            unifiedPersonIds, address, bio,
+            birthdate, company, companyDomain,
+            createdAt, emails, facebookUrl,
+            firstName, gender, githubUrl,
+            githubUsername, id, imageUrl,
+            lastName, linkedinUrl, name,
+            raw, telephones, timezone,
+            title, twitterHandle, twitterUrl,
+            updatedAt, utcOffset, workHistories);
     }
     
     @Override
     public String toString() {
         return Utils.toString(EnrichPerson.class,
+                "unifiedPersonIds", unifiedPersonIds,
                 "address", address,
                 "bio", bio,
                 "birthdate", birthdate,
@@ -756,6 +786,8 @@ public class EnrichPerson {
 
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
+
+        private List<String> unifiedPersonIds;
 
         private PropertyEnrichPersonAddress address;
 
@@ -811,6 +843,15 @@ public class EnrichPerson {
 
         private Builder() {
           // force use of static builder() method
+        }
+
+        /**
+         * Global unified person ids: the current id first, then every id merged into it. Two records are the
+         * same person when these arrays intersect. Only returned when requested in fields
+         */
+        public Builder unifiedPersonIds(@Nullable List<String> unifiedPersonIds) {
+            this.unifiedPersonIds = unifiedPersonIds;
+            return this;
         }
 
         /**
@@ -1014,15 +1055,15 @@ public class EnrichPerson {
 
         public EnrichPerson build() {
             return new EnrichPerson(
-                address, bio, birthdate,
-                company, companyDomain, createdAt,
-                emails, facebookUrl, firstName,
-                gender, githubUrl, githubUsername,
-                id, imageUrl, lastName,
-                linkedinUrl, name, raw,
-                telephones, timezone, title,
-                twitterHandle, twitterUrl, updatedAt,
-                utcOffset, workHistories);
+                unifiedPersonIds, address, bio,
+                birthdate, company, companyDomain,
+                createdAt, emails, facebookUrl,
+                firstName, gender, githubUrl,
+                githubUsername, id, imageUrl,
+                lastName, linkedinUrl, name,
+                raw, telephones, timezone,
+                title, twitterHandle, twitterUrl,
+                updatedAt, utcOffset, workHistories);
         }
 
     }

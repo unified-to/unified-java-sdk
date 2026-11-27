@@ -23,6 +23,14 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class AccountingContact {
+    /**
+     * Global unified person ids: the current id first, then every id merged into it. Two records are the
+     * same person when these arrays intersect. Only returned when requested in fields
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("__unified_person_ids")
+    private List<String> unifiedPersonIds;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("associated_contacts")
@@ -188,6 +196,7 @@ public class AccountingContact {
 
     @JsonCreator
     public AccountingContact(
+            @JsonProperty("__unified_person_ids") @Nullable List<String> unifiedPersonIds,
             @JsonProperty("associated_contacts") @Nullable List<AccountingAssociatedContact> associatedContacts,
             @JsonProperty("balance_amount") @Nullable Double balanceAmount,
             @JsonProperty("billing_address") @Nullable PropertyAccountingContactBillingAddress billingAddress,
@@ -217,6 +226,7 @@ public class AccountingContact {
             @JsonProperty("telephones") @Nullable List<AccountingTelephone> telephones,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
             @JsonProperty("website") @Nullable String website) {
+        this.unifiedPersonIds = unifiedPersonIds;
         this.associatedContacts = associatedContacts;
         this.balanceAmount = balanceAmount;
         this.billingAddress = billingAddress;
@@ -259,7 +269,15 @@ public class AccountingContact {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null, null, null);
+    }
+
+    /**
+     * Global unified person ids: the current id first, then every id merged into it. Two records are the
+     * same person when these arrays intersect. Only returned when requested in fields
+     */
+    public Optional<List<String>> unifiedPersonIds() {
+        return Optional.ofNullable(this.unifiedPersonIds);
     }
 
     public Optional<List<AccountingAssociatedContact>> associatedContacts() {
@@ -406,6 +424,16 @@ public class AccountingContact {
 
     public static Builder builder() {
         return new Builder();
+    }
+
+
+    /**
+     * Global unified person ids: the current id first, then every id merged into it. Two records are the
+     * same person when these arrays intersect. Only returned when requested in fields
+     */
+    public AccountingContact withUnifiedPersonIds(@Nullable List<String> unifiedPersonIds) {
+        this.unifiedPersonIds = unifiedPersonIds;
+        return this;
     }
 
 
@@ -619,6 +647,7 @@ public class AccountingContact {
         }
         AccountingContact other = (AccountingContact) o;
         return 
+            Utils.enhancedDeepEquals(this.unifiedPersonIds, other.unifiedPersonIds) &&
             Utils.enhancedDeepEquals(this.associatedContacts, other.associatedContacts) &&
             Utils.enhancedDeepEquals(this.balanceAmount, other.balanceAmount) &&
             Utils.enhancedDeepEquals(this.billingAddress, other.billingAddress) &&
@@ -653,21 +682,22 @@ public class AccountingContact {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            associatedContacts, balanceAmount, billingAddress,
-            companyName, createdAt, currency,
-            emails, firstName, id,
-            identification, isActive, isCustomer,
-            isSupplier, lastName, metadata,
-            name, notes, organizationId,
-            paymentMethods, paymentTerms, paymenttermId,
-            portalUrl, raw, shippingAddress,
-            taxExemption, taxNumber, telephones,
-            updatedAt, website);
+            unifiedPersonIds, associatedContacts, balanceAmount,
+            billingAddress, companyName, createdAt,
+            currency, emails, firstName,
+            id, identification, isActive,
+            isCustomer, isSupplier, lastName,
+            metadata, name, notes,
+            organizationId, paymentMethods, paymentTerms,
+            paymenttermId, portalUrl, raw,
+            shippingAddress, taxExemption, taxNumber,
+            telephones, updatedAt, website);
     }
     
     @Override
     public String toString() {
         return Utils.toString(AccountingContact.class,
+                "unifiedPersonIds", unifiedPersonIds,
                 "associatedContacts", associatedContacts,
                 "balanceAmount", balanceAmount,
                 "billingAddress", billingAddress,
@@ -701,6 +731,8 @@ public class AccountingContact {
 
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
+
+        private List<String> unifiedPersonIds;
 
         private List<AccountingAssociatedContact> associatedContacts;
 
@@ -762,6 +794,15 @@ public class AccountingContact {
 
         private Builder() {
           // force use of static builder() method
+        }
+
+        /**
+         * Global unified person ids: the current id first, then every id merged into it. Two records are the
+         * same person when these arrays intersect. Only returned when requested in fields
+         */
+        public Builder unifiedPersonIds(@Nullable List<String> unifiedPersonIds) {
+            this.unifiedPersonIds = unifiedPersonIds;
+            return this;
         }
 
         public Builder associatedContacts(@Nullable List<AccountingAssociatedContact> associatedContacts) {
@@ -937,16 +978,16 @@ public class AccountingContact {
 
         public AccountingContact build() {
             return new AccountingContact(
-                associatedContacts, balanceAmount, billingAddress,
-                companyName, createdAt, currency,
-                emails, firstName, id,
-                identification, isActive, isCustomer,
-                isSupplier, lastName, metadata,
-                name, notes, organizationId,
-                paymentMethods, paymentTerms, paymenttermId,
-                portalUrl, raw, shippingAddress,
-                taxExemption, taxNumber, telephones,
-                updatedAt, website);
+                unifiedPersonIds, associatedContacts, balanceAmount,
+                billingAddress, companyName, createdAt,
+                currency, emails, firstName,
+                id, identification, isActive,
+                isCustomer, isSupplier, lastName,
+                metadata, name, notes,
+                organizationId, paymentMethods, paymentTerms,
+                paymenttermId, portalUrl, raw,
+                shippingAddress, taxExemption, taxNumber,
+                telephones, updatedAt, website);
         }
 
 

@@ -37,7 +37,7 @@ public class Application {
         CreateShippingRateRequest req = CreateShippingRateRequest.builder()
                 .shippingRate(ShippingRate.builder()
                     .currency("USD")
-                    .id("f9c1622c-65c4-4df7-a191-10c19d3695e5")
+                    .id("aa40ec45-d72f-4796-a654-20f710923c5b")
                     .metadata(List.of())
                     .rates(List.of(
                         ShippingRateRate.builder()

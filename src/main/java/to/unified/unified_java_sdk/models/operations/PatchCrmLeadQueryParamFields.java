@@ -30,7 +30,8 @@ public enum PatchCrmLeadQueryParamFields {
     LINK_URLS("link_urls"),
     METADATA("metadata"),
     VEHICLE_IDS("vehicle_ids"),
-    RAW("raw");
+    RAW("raw"),
+    UNIFIED_PERSON_IDS("__unified_person_ids");
 
     @JsonValue
     private final String value;
