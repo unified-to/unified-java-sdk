@@ -50,7 +50,7 @@ public class Application {
                     .description("Urbs tergiversatio admitto summa accusator.")
                     .hasRedirectUrl(true)
                     .hasTargetUrl(false)
-                    .id("5167e406-469e-4322-9476-35919be17a59")
+                    .id("1a94c321-296e-4717-930b-a63b2125afb3")
                     .infoUrl("https://unkempt-habit.net")
                     .integrationTypes(List.of(
                         "tabesco"))
@@ -62,7 +62,7 @@ public class Application {
                     .regions(List.of())
                     .tags(List.of(
                         "eos"))
-                    .updatedAt(OffsetDateTime.parse("2023-10-03T09:53:58.476Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-10-03T15:00:45.090Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -361,7 +361,7 @@ public class Application {
                     .description("Urbs tergiversatio admitto summa accusator.")
                     .hasRedirectUrl(true)
                     .hasTargetUrl(false)
-                    .id("533ba276-8d4d-4ea5-bef8-dac377b0ff75")
+                    .id("d147e2ae-fc23-4f04-b73e-256c9fe4f088")
                     .infoUrl("https://unkempt-habit.net")
                     .integrationTypes(List.of(
                         "tabesco"))
@@ -373,7 +373,7 @@ public class Application {
                     .regions(List.of())
                     .tags(List.of(
                         "eos"))
-                    .updatedAt(OffsetDateTime.parse("2023-10-03T09:53:58.480Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-10-03T15:00:45.095Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -499,7 +499,7 @@ public class Application {
                     .description("Urbs tergiversatio admitto summa accusator.")
                     .hasRedirectUrl(true)
                     .hasTargetUrl(false)
-                    .id("533ba276-8d4d-4ea5-bef8-dac377b0ff75")
+                    .id("d147e2ae-fc23-4f04-b73e-256c9fe4f088")
                     .infoUrl("https://unkempt-habit.net")
                     .integrationTypes(List.of(
                         "tabesco"))
@@ -511,7 +511,7 @@ public class Application {
                     .regions(List.of())
                     .tags(List.of(
                         "eos"))
-                    .updatedAt(OffsetDateTime.parse("2023-10-03T09:53:58.480Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-10-03T15:00:45.095Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

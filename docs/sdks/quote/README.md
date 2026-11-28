@@ -106,7 +106,7 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2019-01-02T03:42:06.944Z"))
                     .currency("USD")
                     .discountAmount(0d)
-                    .id("328f9a75-1063-4cd6-a751-79e8a748867c")
+                    .id("ea40b139-e088-40dd-8e3f-b02e0baa1411")
                     .lineitems(List.of(
                         PrintingLineitem.builder()
                             .files(List.of(
@@ -237,9 +237,9 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2020-12-18T19:14:11.415Z"))
                     .currency("USD")
                     .depositAmount(594.54)
-                    .endAt(OffsetDateTime.parse("2026-12-11"))
+                    .endAt(OffsetDateTime.parse("2026-12-12"))
                     .guests(2d)
-                    .id("89757bd7-9b45-418f-97d3-a42e6374e1fd")
+                    .id("dda36991-2d94-4969-90d3-9104e31f2bf9")
                     .lineItems(List.of(
                         PropertyLineitem.builder()
                             .amount(1665d)
@@ -260,7 +260,7 @@ public class Application {
                             .name("Lodging tax")
                             .type(PropertyLineitemType.TAX)
                             .build()))
-                    .startAt(OffsetDateTime.parse("2026-12-02"))
+                    .startAt(OffsetDateTime.parse("2026-12-03"))
                     .totalAmount(1981.8)
                     .build())
                 .connectionId("<id>")

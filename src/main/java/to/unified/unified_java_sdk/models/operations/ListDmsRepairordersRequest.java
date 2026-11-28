@@ -29,6 +29,12 @@ public class ListDmsRepairordersRequest {
     private String contactId;
 
     /**
+     * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_lt")
+    private String endLt;
+
+    /**
      * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
@@ -64,6 +70,12 @@ public class ListDmsRepairordersRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     private String sort;
 
+    /**
+     * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_gte")
+    private String startGte;
+
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
     private String status;
@@ -91,6 +103,7 @@ public class ListDmsRepairordersRequest {
     public ListDmsRepairordersRequest(
             @Nonnull String connectionId,
             @Nullable String contactId,
+            @Nullable String endLt,
             @Nullable List<ListDmsRepairordersQueryParamFields> fields,
             @Nullable Double limit,
             @Nullable Double offset,
@@ -98,6 +111,7 @@ public class ListDmsRepairordersRequest {
             @Nullable String query,
             @Nullable String raw,
             @Nullable String sort,
+            @Nullable String startGte,
             @Nullable String status,
             @Nullable String updatedGte,
             @Nullable String userId,
@@ -105,6 +119,7 @@ public class ListDmsRepairordersRequest {
         this.connectionId = Optional.ofNullable(connectionId)
             .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
         this.contactId = contactId;
+        this.endLt = endLt;
         this.fields = fields;
         this.limit = limit;
         this.offset = offset;
@@ -112,6 +127,7 @@ public class ListDmsRepairordersRequest {
         this.query = query;
         this.raw = raw;
         this.sort = sort;
+        this.startGte = startGte;
         this.status = status;
         this.updatedGte = updatedGte;
         this.userId = userId;
@@ -124,7 +140,7 @@ public class ListDmsRepairordersRequest {
             null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null, null);
     }
 
     /**
@@ -139,6 +155,13 @@ public class ListDmsRepairordersRequest {
      */
     public Optional<String> contactId() {
         return Optional.ofNullable(this.contactId);
+    }
+
+    /**
+     * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
+    public Optional<String> endLt() {
+        return Optional.ofNullable(this.endLt);
     }
 
     /**
@@ -178,6 +201,13 @@ public class ListDmsRepairordersRequest {
 
     public Optional<String> sort() {
         return Optional.ofNullable(this.sort);
+    }
+
+    /**
+     * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
+    public Optional<String> startGte() {
+        return Optional.ofNullable(this.startGte);
     }
 
     public Optional<String> status() {
@@ -225,6 +255,15 @@ public class ListDmsRepairordersRequest {
      */
     public ListDmsRepairordersRequest withContactId(@Nullable String contactId) {
         this.contactId = contactId;
+        return this;
+    }
+
+
+    /**
+     * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
+    public ListDmsRepairordersRequest withEndLt(@Nullable String endLt) {
+        this.endLt = endLt;
         return this;
     }
 
@@ -282,6 +321,15 @@ public class ListDmsRepairordersRequest {
     }
 
 
+    /**
+     * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
+    public ListDmsRepairordersRequest withStartGte(@Nullable String startGte) {
+        this.startGte = startGte;
+        return this;
+    }
+
+
     public ListDmsRepairordersRequest withStatus(@Nullable String status) {
         this.status = status;
         return this;
@@ -328,6 +376,7 @@ public class ListDmsRepairordersRequest {
         return 
             Utils.enhancedDeepEquals(this.connectionId, other.connectionId) &&
             Utils.enhancedDeepEquals(this.contactId, other.contactId) &&
+            Utils.enhancedDeepEquals(this.endLt, other.endLt) &&
             Utils.enhancedDeepEquals(this.fields, other.fields) &&
             Utils.enhancedDeepEquals(this.limit, other.limit) &&
             Utils.enhancedDeepEquals(this.offset, other.offset) &&
@@ -335,6 +384,7 @@ public class ListDmsRepairordersRequest {
             Utils.enhancedDeepEquals(this.query, other.query) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.sort, other.sort) &&
+            Utils.enhancedDeepEquals(this.startGte, other.startGte) &&
             Utils.enhancedDeepEquals(this.status, other.status) &&
             Utils.enhancedDeepEquals(this.updatedGte, other.updatedGte) &&
             Utils.enhancedDeepEquals(this.userId, other.userId) &&
@@ -344,11 +394,11 @@ public class ListDmsRepairordersRequest {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            connectionId, contactId, fields,
-            limit, offset, order,
-            query, raw, sort,
-            status, updatedGte, userId,
-            vehicleId);
+            connectionId, contactId, endLt,
+            fields, limit, offset,
+            order, query, raw,
+            sort, startGte, status,
+            updatedGte, userId, vehicleId);
     }
     
     @Override
@@ -356,6 +406,7 @@ public class ListDmsRepairordersRequest {
         return Utils.toString(ListDmsRepairordersRequest.class,
                 "connectionId", connectionId,
                 "contactId", contactId,
+                "endLt", endLt,
                 "fields", fields,
                 "limit", limit,
                 "offset", offset,
@@ -363,6 +414,7 @@ public class ListDmsRepairordersRequest {
                 "query", query,
                 "raw", raw,
                 "sort", sort,
+                "startGte", startGte,
                 "status", status,
                 "updatedGte", updatedGte,
                 "userId", userId,
@@ -375,6 +427,8 @@ public class ListDmsRepairordersRequest {
         private String connectionId;
 
         private String contactId;
+
+        private String endLt;
 
         private List<ListDmsRepairordersQueryParamFields> fields;
 
@@ -389,6 +443,8 @@ public class ListDmsRepairordersRequest {
         private String raw;
 
         private String sort;
+
+        private String startGte;
 
         private String status;
 
@@ -415,6 +471,14 @@ public class ListDmsRepairordersRequest {
          */
         public Builder contactId(@Nullable String contactId) {
             this.contactId = contactId;
+            return this;
+        }
+
+        /**
+         * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
+        public Builder endLt(@Nullable String endLt) {
+            this.endLt = endLt;
             return this;
         }
 
@@ -464,6 +528,14 @@ public class ListDmsRepairordersRequest {
             return this;
         }
 
+        /**
+         * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
+        public Builder startGte(@Nullable String startGte) {
+            this.startGte = startGte;
+            return this;
+        }
+
         public Builder status(@Nullable String status) {
             this.status = status;
             return this;
@@ -496,11 +568,11 @@ public class ListDmsRepairordersRequest {
 
         public ListDmsRepairordersRequest build() {
             return new ListDmsRepairordersRequest(
-                connectionId, contactId, fields,
-                limit, offset, order,
-                query, raw, sort,
-                status, updatedGte, userId,
-                vehicleId);
+                connectionId, contactId, endLt,
+                fields, limit, offset,
+                order, query, raw,
+                sort, startGte, status,
+                updatedGte, userId, vehicleId);
         }
 
     }

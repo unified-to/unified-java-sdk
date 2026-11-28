@@ -47,7 +47,7 @@ public class Application {
                     .description("Adflicto despecto suppellex socius cresco.")
                     .difficulty("Beginner")
                     .durationMinutes(19d)
-                    .id("fe1ad914-67ce-4900-bbd9-1807fd6f1c62")
+                    .id("47c56baa-33fc-481d-ae91-ebd030cf7831")
                     .instructors(List.of())
                     .isActive(true)
                     .languages(List.of(
@@ -101,7 +101,7 @@ public class Application {
                     .metadata(List.of())
                     .name("laboriosam")
                     .providerName("Mraz - Keeling")
-                    .publishedAt(OffsetDateTime.parse("2022-09-14T18:25:33.374Z"))
+                    .publishedAt(OffsetDateTime.parse("2022-09-15T01:45:13.634Z"))
                     .shortDescription("Videlicet pauci.")
                     .skills(List.of(
                         "soleo"))
@@ -113,7 +113,7 @@ public class Application {
                             .build()))
                     .tags(List.of(
                         "audio"))
-                    .updatedAt(OffsetDateTime.parse("2022-10-16T05:15:01.227Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-10-16T12:54:40.750Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -296,7 +296,7 @@ public class Application {
                     .description("Adflicto despecto suppellex socius cresco.")
                     .difficulty("Beginner")
                     .durationMinutes(19d)
-                    .id("7c699388-ed1b-4295-88ab-d5d6ba1b694a")
+                    .id("58d8d1de-7369-4c75-884d-8686f2952da7")
                     .instructors(List.of())
                     .isActive(true)
                     .languages(List.of(
@@ -350,7 +350,7 @@ public class Application {
                     .metadata(List.of())
                     .name("laboriosam")
                     .providerName("Mraz - Keeling")
-                    .publishedAt(OffsetDateTime.parse("2022-09-14T18:25:33.381Z"))
+                    .publishedAt(OffsetDateTime.parse("2022-09-15T01:45:13.644Z"))
                     .shortDescription("Videlicet pauci.")
                     .skills(List.of(
                         "soleo"))
@@ -362,7 +362,7 @@ public class Application {
                             .build()))
                     .tags(List.of(
                         "audio"))
-                    .updatedAt(OffsetDateTime.parse("2022-10-16T05:15:01.233Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-10-16T12:54:40.760Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -487,7 +487,7 @@ public class Application {
                     .description("Adflicto despecto suppellex socius cresco.")
                     .difficulty("Beginner")
                     .durationMinutes(19d)
-                    .id("7c699388-ed1b-4295-88ab-d5d6ba1b694a")
+                    .id("58d8d1de-7369-4c75-884d-8686f2952da7")
                     .instructors(List.of())
                     .isActive(true)
                     .languages(List.of(
@@ -541,7 +541,7 @@ public class Application {
                     .metadata(List.of())
                     .name("laboriosam")
                     .providerName("Mraz - Keeling")
-                    .publishedAt(OffsetDateTime.parse("2022-09-14T18:25:33.381Z"))
+                    .publishedAt(OffsetDateTime.parse("2022-09-15T01:45:13.644Z"))
                     .shortDescription("Videlicet pauci.")
                     .skills(List.of(
                         "soleo"))
@@ -553,7 +553,7 @@ public class Application {
                             .build()))
                     .tags(List.of(
                         "audio"))
-                    .updatedAt(OffsetDateTime.parse("2022-10-16T05:15:01.233Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-10-16T12:54:40.760Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

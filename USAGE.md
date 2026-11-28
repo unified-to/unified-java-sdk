@@ -27,7 +27,7 @@ public class Application {
                     .currency("CAD")
                     .customerDefinedCode("6170")
                     .description("Comedo vilitas harum cupiditate animus quo iste.")
-                    .id("6f1c380e-9b29-4fb5-b49c-2a7ce0ee5fe1")
+                    .id("646409ec-476e-42e3-9ad0-21ce04f7c097")
                     .isPayable(false)
                     .metadata(List.of())
                     .name("Savings Account")
@@ -39,7 +39,7 @@ public class Application {
                             .originalType("peccatus")
                             .build()))
                     .type(Type.ACCOUNTS_RECEIVABLE)
-                    .updatedAt(OffsetDateTime.parse("2023-08-16T07:31:30.623Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-16T13:31:08.004Z"))
                     .build())
                 .connectionId("<id>")
                 .build();

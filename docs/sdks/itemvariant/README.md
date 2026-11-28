@@ -46,7 +46,7 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-01-20T13:49:12.968Z"))
                     .description("Our dog-friendly Bacon ensures pessimistic comfort for your pets")
                     .height(54d)
-                    .id("cd9f8b44-cb99-4ab1-a4bc-54e391270d9d")
+                    .id("c2495dad-a219-4f0b-809e-0539e181f318")
                     .isActive(true)
                     .isFeatured(false)
                     .isVisible(false)
@@ -56,10 +56,10 @@ public class Application {
                             .url("https://picsum.photos/seed/u0YdHqlRu/3208/3394")
                             .alt("Calcar delibero cursim summisse.")
                             .height(961d)
-                            .id("661622d9-6aa8-4ec2-a9cf-18e4fffc17ee")
+                            .id("44b84797-a53f-44f2-8351-166052c2a00d")
                             .metadata(List.of(
                                 CommerceMetadata.builder()
-                                    .id("cf16a3a2-3786-40ff-a55d-726aced6ba28")
+                                    .id("8a5aba8a-d5b5-4778-b119-7095db8027db")
                                     .slug("illo")
                                     .value(CommerceMetadataValue.of("quia"))
                                     .build()))
@@ -72,7 +72,7 @@ public class Application {
                             .extraData(CommerceMetadataExtraData.of(Map.ofEntries(
                                 Map.entry("display_name", "Custom Property"))))
                             .format(CommerceMetadataFormat.TEXT)
-                            .id("2da69df2-ee76-4baf-9387-6dd7e772537e")
+                            .id("86b3d5c4-07e0-409a-b9da-9ea32814fd0e")
                             .namespace("custom")
                             .slug("custom_property")
                             .value(CommerceMetadataValue.of("colligo"))
@@ -83,14 +83,14 @@ public class Application {
                             .name("Color")
                             .values(List.of(
                                 "purple"))
-                            .id("df4d713d-af3e-4a08-98d8-12e914a4c259")
+                            .id("7b81f9ef-d9ff-4c27-bbc9-9194c231f61a")
                             .position(1d)
                             .build(),
                         CommerceItemOption.builder()
                             .name("Size")
                             .values(List.of(
                                 "S"))
-                            .id("52efc9a6-b205-4030-8724-0d96124d8fee")
+                            .id("169b6a6a-8da9-4145-a3e4-755c3731f952")
                             .position(2d)
                             .build()))
                     .prices(List.of(
@@ -106,7 +106,7 @@ public class Application {
                     .tags(List.of(
                         "labore"))
                     .totalStock(436d)
-                    .updatedAt(OffsetDateTime.parse("2026-04-10T21:22:47.207Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-04-11T17:53:43.673Z"))
                     .weight(46d)
                     .weightUnit(CommerceItemvariantWeightUnit.OZ)
                     .width(40d)
@@ -291,7 +291,7 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-01-20T13:49:12.968Z"))
                     .description("Our dog-friendly Bacon ensures pessimistic comfort for your pets")
                     .height(54d)
-                    .id("0107d303-36d9-4202-81e6-e20852ce5feb")
+                    .id("c73ec5e5-67e3-4c08-99da-7e8052229b21")
                     .isActive(true)
                     .isFeatured(false)
                     .isVisible(false)
@@ -301,10 +301,10 @@ public class Application {
                             .url("https://picsum.photos/seed/u0YdHqlRu/3208/3394")
                             .alt("Calcar delibero cursim summisse.")
                             .height(961d)
-                            .id("0fc6b770-0dac-4d37-ac39-2a69fedd0806")
+                            .id("3f19c482-faa8-4df1-a1db-a49cf14c1a6d")
                             .metadata(List.of(
                                 CommerceMetadata.builder()
-                                    .id("baab798e-bcd0-46fe-88be-da56d0c934d5")
+                                    .id("a5456b31-b836-4cb6-aa5a-de5093d603a1")
                                     .slug("illo")
                                     .value(CommerceMetadataValue.of("quia"))
                                     .build()))
@@ -317,7 +317,7 @@ public class Application {
                             .extraData(CommerceMetadataExtraData.of(Map.ofEntries(
                                 Map.entry("display_name", "Custom Property"))))
                             .format(CommerceMetadataFormat.TEXT)
-                            .id("c11d83eb-b62d-491f-be35-f807890fbf9d")
+                            .id("9594837b-e0ae-412a-b0de-b8ab976f62f3")
                             .namespace("custom")
                             .slug("custom_property")
                             .value(CommerceMetadataValue.of("colligo"))
@@ -328,14 +328,14 @@ public class Application {
                             .name("Color")
                             .values(List.of(
                                 "purple"))
-                            .id("31891a7f-a0c8-43bf-8add-c4bccb511698")
+                            .id("eec01b91-8f24-4eea-8834-222912ba8df2")
                             .position(1d)
                             .build(),
                         CommerceItemOption.builder()
                             .name("Size")
                             .values(List.of(
                                 "S"))
-                            .id("cb04efeb-55e3-493c-ac25-7e3efcba5ec2")
+                            .id("d9d5aa5c-ae24-4bf4-a144-d699011eaba5")
                             .position(2d)
                             .build()))
                     .prices(List.of(
@@ -351,7 +351,7 @@ public class Application {
                     .tags(List.of(
                         "labore"))
                     .totalStock(436d)
-                    .updatedAt(OffsetDateTime.parse("2026-04-10T21:22:47.230Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-04-11T17:53:43.694Z"))
                     .weight(46d)
                     .weightUnit(CommerceItemvariantWeightUnit.OZ)
                     .width(40d)
@@ -478,7 +478,7 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-01-20T13:49:12.968Z"))
                     .description("Our dog-friendly Bacon ensures pessimistic comfort for your pets")
                     .height(54d)
-                    .id("0107d303-36d9-4202-81e6-e20852ce5feb")
+                    .id("c73ec5e5-67e3-4c08-99da-7e8052229b21")
                     .isActive(true)
                     .isFeatured(false)
                     .isVisible(false)
@@ -488,10 +488,10 @@ public class Application {
                             .url("https://picsum.photos/seed/u0YdHqlRu/3208/3394")
                             .alt("Calcar delibero cursim summisse.")
                             .height(961d)
-                            .id("0fc6b770-0dac-4d37-ac39-2a69fedd0806")
+                            .id("3f19c482-faa8-4df1-a1db-a49cf14c1a6d")
                             .metadata(List.of(
                                 CommerceMetadata.builder()
-                                    .id("baab798e-bcd0-46fe-88be-da56d0c934d5")
+                                    .id("a5456b31-b836-4cb6-aa5a-de5093d603a1")
                                     .slug("illo")
                                     .value(CommerceMetadataValue.of("quia"))
                                     .build()))
@@ -504,7 +504,7 @@ public class Application {
                             .extraData(CommerceMetadataExtraData.of(Map.ofEntries(
                                 Map.entry("display_name", "Custom Property"))))
                             .format(CommerceMetadataFormat.TEXT)
-                            .id("c11d83eb-b62d-491f-be35-f807890fbf9d")
+                            .id("9594837b-e0ae-412a-b0de-b8ab976f62f3")
                             .namespace("custom")
                             .slug("custom_property")
                             .value(CommerceMetadataValue.of("colligo"))
@@ -515,14 +515,14 @@ public class Application {
                             .name("Color")
                             .values(List.of(
                                 "purple"))
-                            .id("31891a7f-a0c8-43bf-8add-c4bccb511698")
+                            .id("eec01b91-8f24-4eea-8834-222912ba8df2")
                             .position(1d)
                             .build(),
                         CommerceItemOption.builder()
                             .name("Size")
                             .values(List.of(
                                 "S"))
-                            .id("cb04efeb-55e3-493c-ac25-7e3efcba5ec2")
+                            .id("d9d5aa5c-ae24-4bf4-a144-d699011eaba5")
                             .position(2d)
                             .build()))
                     .prices(List.of(
@@ -538,7 +538,7 @@ public class Application {
                     .tags(List.of(
                         "labore"))
                     .totalStock(436d)
-                    .updatedAt(OffsetDateTime.parse("2026-04-10T21:22:47.230Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-04-11T17:53:43.694Z"))
                     .weight(46d)
                     .weightUnit(CommerceItemvariantWeightUnit.OZ)
                     .width(40d)

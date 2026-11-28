@@ -70,7 +70,7 @@ public class Application {
                     .currency("USD")
                     .description("Cruentus demoror censura caveo sponte statim. Cursim angulus arbitro barba summopere subnecto curto vulticulus comparo surgo. Carmen deputo defluo abscido conatus arbustum sequi abbas complectus demum.")
                     .houseRules("No smoking. No parties or events.")
-                    .id("f8481bb6-6400-448c-a1b8-7ddb2d280b14")
+                    .id("367cc0e2-89c2-49c5-a299-a4f4e06cdbb5")
                     .imageUrls(List.of(
                         "https://picsum.photos/seed/cCdY57x3Vw/2822/2061",
                         "https://picsum.photos/seed/nH6zsBCr/1004/2259"))
@@ -86,7 +86,7 @@ public class Application {
                     .startPriceAmount(470d)
                     .timezone("America/Los_Angeles")
                     .type(PropertyListingType.ROOM)
-                    .updatedAt(OffsetDateTime.parse("2026-10-04T04:21:19.467Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-10-05T03:20:35.859Z"))
                     .webUrl("https://oval-junior.info")
                     .build())
                 .connectionId("<id>")
@@ -293,7 +293,7 @@ public class Application {
                     .currency("USD")
                     .description("Cruentus demoror censura caveo sponte statim. Cursim angulus arbitro barba summopere subnecto curto vulticulus comparo surgo. Carmen deputo defluo abscido conatus arbustum sequi abbas complectus demum.")
                     .houseRules("No smoking. No parties or events.")
-                    .id("e63ac854-f175-4812-9620-acf5c2feffbe")
+                    .id("3232b24a-c6b3-45ac-be66-672823da825e")
                     .imageUrls(List.of(
                         "https://picsum.photos/seed/cCdY57x3Vw/2822/2061",
                         "https://picsum.photos/seed/nH6zsBCr/1004/2259"))
@@ -309,7 +309,7 @@ public class Application {
                     .startPriceAmount(470d)
                     .timezone("America/Los_Angeles")
                     .type(PropertyListingType.ROOM)
-                    .updatedAt(OffsetDateTime.parse("2026-10-04T04:21:19.498Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-10-05T03:20:35.892Z"))
                     .webUrl("https://oval-junior.info")
                     .build())
                 .connectionId("<id>")
@@ -458,7 +458,7 @@ public class Application {
                     .currency("USD")
                     .description("Cruentus demoror censura caveo sponte statim. Cursim angulus arbitro barba summopere subnecto curto vulticulus comparo surgo. Carmen deputo defluo abscido conatus arbustum sequi abbas complectus demum.")
                     .houseRules("No smoking. No parties or events.")
-                    .id("e63ac854-f175-4812-9620-acf5c2feffbe")
+                    .id("3232b24a-c6b3-45ac-be66-672823da825e")
                     .imageUrls(List.of(
                         "https://picsum.photos/seed/cCdY57x3Vw/2822/2061",
                         "https://picsum.photos/seed/nH6zsBCr/1004/2259"))
@@ -474,7 +474,7 @@ public class Application {
                     .startPriceAmount(470d)
                     .timezone("America/Los_Angeles")
                     .type(PropertyListingType.ROOM)
-                    .updatedAt(OffsetDateTime.parse("2026-10-04T04:21:19.498Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-10-05T03:20:35.892Z"))
                     .webUrl("https://oval-junior.info")
                     .build())
                 .connectionId("<id>")
